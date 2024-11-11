@@ -1,0 +1,29 @@
+<config>
+
+<insertAfter xpath="/paints/paint[@id='100']">
+<!-- <paint id="101" name="txName_GlossGrey">
+	<property name="TextureId" value="176"/>
+	<property name="Group" value="txGroupMasonry"/>
+	<property name="PaintCost" value="1" />
+</paint>
+
+<paint id="102" name="txName_Delete">
+	<property name="TextureId" value="176"/>
+	<property name="Group" value="txGroupExcluded"/>
+	<property name="Hidden" value="true"/>
+</paint> -->
+
+<paint id="214" name="txName_Delete2">
+	<property name="TextureId" value="0"/>
+	<property name="Group" value="txGroupMasonry"/>
+	<property name="Hidden" value="true"/>
+</paint>
+
+<paint id="215" name="txName_Delete3">
+	<property name="TextureId" value="0"/>
+	<property name="Group" value="txGroupMasonry"/>
+	<property name="Hidden" value="true"/>
+</paint>
+</insertAfter>
+
+</config>

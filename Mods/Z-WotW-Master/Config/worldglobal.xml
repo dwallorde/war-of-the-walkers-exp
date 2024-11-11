@@ -1,0 +1,99 @@
+<configs>
+<append xpath="/worldglobal">
+		<microsplat-voxel name="voxelCopperOre0">
+			<texture name="copper0" weight="1"/>
+		</microsplat-voxel>
+		<microsplat-voxel name="voxelTungstenOre0">
+			<texture name="tungsten0" weight="1"/>
+		</microsplat-voxel>
+		<microsplat-voxel name="voxelSilverOre0">
+			<texture name="silver0" weight="1"/>
+		</microsplat-voxel>
+		<microsplat-voxel name="voxelGoldOre0">
+			<texture name="gold0" weight="1"/>
+		</microsplat-voxel>
+		<microsplat-voxel name="voxelDiamondOre0">
+			<texture name="diamond0" weight="1"/>
+		</microsplat-voxel>
+		<microsplat-voxel name="voxelSulfurOre0">
+			<texture name="sulfur0" weight="1"/>
+		</microsplat-voxel>
+		<microsplat-voxel name="voxelLava0">
+			<texture name="lava0" weight="1"/>
+		</microsplat-voxel>
+		<microsplat-voxel name="voxelOre0">
+			<texture name="ore0" weight="1"/>
+		</microsplat-voxel>
+		
+		<microsplat-texture name="copper0">
+			<property name="Diffuse" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_diff_tarray[0]"/>
+			<property name="Normal" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_norm_tarray[0]"/>
+			<property name="Specular" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_shao_tarray[0]"/>
+			<property name="SwitchNormal" value="false"/>
+			<property name="SplatUVScale" value="4,4"/>
+			<property name="Metallic" value="0.5"/>
+		</microsplat-texture>
+		
+		<microsplat-texture name="tungsten0">
+			<property name="Diffuse" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_diff_tarray[1]"/>
+			<property name="Normal" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_norm_tarray[1]"/>
+			<property name="Specular" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_shao_tarray[1]"/>
+			<property name="SwitchNormal" value="false"/>
+			<property name="SplatUVScale" value="4,4"/>
+			<property name="Metallic" value="0.3"/>
+		</microsplat-texture>
+		
+		<microsplat-texture name="silver0">
+			<property name="Diffuse" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_diff_tarray[2]"/>
+			<property name="Normal" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_norm_tarray[2]"/>
+			<property name="Specular" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_shao_tarray[2]"/>
+			<property name="SwitchNormal" value="false"/>
+			<property name="SplatUVScale" value="4,4"/>
+			<property name="Metallic" value="0.3"/>
+		</microsplat-texture>
+		
+		<microsplat-texture name="gold0">
+			<property name="Diffuse" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_diff_tarray[3]"/>
+			<property name="Normal" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_norm_tarray[3]"/>
+			<property name="Specular" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_shao_tarray[3]"/>
+			<property name="SwitchNormal" value="false"/>
+			<property name="SplatUVScale" value="4,4"/>
+			<property name="Metallic" value="0.3"/>
+		</microsplat-texture>
+		
+		<microsplat-texture name="diamond0">
+			<property name="Diffuse" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_diff_tarray[4]"/>
+			<property name="Normal" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_norm_tarray[4]"/>
+			<property name="Specular" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_shao_tarray[4]"/>
+			<property name="SwitchNormal" value="false"/>
+			<property name="SplatUVScale" value="4,4"/>
+			<property name="Metallic" value="0.3"/>
+		</microsplat-texture>
+		
+		<microsplat-texture name="sulfur0">
+			<property name="Diffuse" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_diff_tarray[5]"/>
+			<property name="Normal" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_norm_tarray[5]"/>
+			<property name="Specular" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_shao_tarray[5]"/>
+			<property name="SwitchNormal" value="false"/>
+			<property name="SplatUVScale" value="4,4"/>
+			<property name="Metallic" value="0.3"/>
+		</microsplat-texture>
+		
+		<microsplat-texture name="lava0">
+			<property name="Diffuse" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_diff_tarray[6]"/>
+			<property name="Normal" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_norm_tarray[6]"/>
+			<property name="Specular" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_shao_tarray[6]"/>
+			<property name="SwitchNormal" value="false"/>
+			<property name="SplatUVScale" value="4,4"/>
+		</microsplat-texture>
+		
+		<microsplat-texture name="ore0">
+			<property name="Diffuse" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_diff_tarray[7]"/>
+			<property name="Normal" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_norm_tarray[7]"/>
+			<property name="Specular" value="#@modfolder:Resources/OreTextures.unity3d?WotWTextures_shao_tarray[7]"/>
+			<property name="SwitchNormal" value="false"/>
+			<property name="SplatUVScale" value="4,4"/>
+			<property name="Metallic" value="0.7"/>
+		</microsplat-texture>
+</append>
+</configs>

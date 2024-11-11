@@ -1,0 +1,105 @@
+<config>
+
+<append xpath="/controls">
+		<wotw_backpack_item_stack controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
+			<rect controller="${controller}" style="wotw_itemStack, hover" collider_scale="1.0" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" >
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="53" height="53" color="[black]" type="sliced" fillcenter="false" /> <!-- 53, 53 -->
+				<sprite depth="3" name="background" sprite="menu_empty3px" width="48" height="48" color="{selectionbordercolor}" type="sliced" globalopacity="true" fillcenter="false"/> <!-- 48, 48 -->
+				<sprite depth="2" name="highlightOverlay" width="47" height="47" color="{backgroundcolor}" pos="0,0" type="sliced" globalopacity="true"/> <!-- 57, 47 -->
+
+				<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored" size="48,48" globalopacity="true"/> <!-- 48,48 -->
+				<sprite depth="8" name="favoriteIcon" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+				<sprite depth="6" name="itemIcon" width="40" height="40" atlas="ItemIconAtlas" sprite="{itemicon}" pos="20,-25" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+				<sprite depth="8" name="lockTypeIcon" width="7" height="7" sprite="{locktypeicon}" pos="2,-2" foregroundlayer="true"/>
+				<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+
+				<sprite depth="3" name="durabilityBackground" width="46" height="5" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1, -42" foregroundlayer="true" visible="{hasdurability}" />
+				<filledsprite depth="4" name="durability" width="46" height="5" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" pos="1, -42" foregroundlayer="true" visible="{hasdurability}" />
+
+				<sprite depth="5" name="disabledOverlay" width="47" height="47" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+
+				<label depth="7" name="stackValue" pos="-2,-30" width="45" height="16" text="{itemcount}" font_size="18" effect="outline" justify="{#hasdurability ? 'Center' : 'Right'}" />
+				<label depth="7" name="timer" pos="35,-33" width="45" height="16" font_size="18" justify="center" pivot="center" effect="outline" color="[beige]"/>
+				<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="45" height="45" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+				<sprite depth="13" name="assembleIcon" size="28,28" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true"/>
+			</rect>
+		</wotw_backpack_item_stack>
+		
+	<wotw_recipe_stack>
+		<rect controller="RecipeStack" width="60" height="60" collider_scale="1.1">
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="63" height="63" color="[black]" type="sliced" fillcenter="false"/>	
+				<sprite name="background" color="[mediumGrey]" type="sliced" style="press" on_hover="true"/>
+				<sprite depth="1" name="itemIcon" width="53" height="53" atlas="ItemIconAtlas" sprite="" pos="0,-5" pivot="topleft" foregroundlayer="true"/>
+				<sprite depth="4" name="lockIcon" width="16" height="16" sprite="ui_game_symbol_hammer" pos="2,-2" visible="false" foregroundlayer="true"/>
+				<label depth="4" name="count" pos="4,-42" width="53" height="16" text="Test" font_size="16" justify="right" effect="outline" />
+				<label depth="4" name="timer" pos="34,-38" width="55" height="16" font_size="16" justify="center" pivot="center" color="[beige]"/>
+				<sprite depth="2" name="overlay" width="55" height="55" color="32,32,32,128" type="sliced"/>
+				<sprite depth="3" name="cancel" sprite="ui_game_symbol_x" width="55" height="55" color="255,0,0,0" type="sliced" visible="false" foregroundlayer="true"/>
+			</rect>
+	</wotw_recipe_stack>
+</append>
+
+<set xpath="/controls/ingredient_header/rect[@name='header']/@height">43</set>
+<set xpath="/controls/ingredient_header/rect[@name='header']/rect/@height">41</set>
+<set xpath="/controls/ingredient_header/rect[@name='header']/rect/sprite[@name='backgroundMain']/@height">47</set>
+
+<set xpath="/controls/ingredient_row/rect[@name='row']/@height">43</set>
+<set xpath="/controls/ingredient_row/rect[@name='row']/rect/@height">41</set>
+<set xpath="/controls/ingredient_row/rect[@name='row']/rect/sprite[@name='backgroundMain']/@height">47</set>
+<set xpath="/controls/ingredient_row/rect[@name='row']/rect/sprite[@name='icon']/@width">35</set>
+<set xpath="/controls/ingredient_row/rect[@name='row']/rect/sprite[@name='icon']/@height">35</set>
+
+<set xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']/rect/label[@name='stackValue']/@font_size">13</set>
+<set xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']/rect/label[@name='stackValue']/@width">70</set>
+<set xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']/rect/label[@name='stackValue']/@height">28</set>
+<!-- <set xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']/rect/label[@name='timer']/@font_size">250</set> -->
+
+<!-- <set xpath="/controls/smxui_ingredient_row/rect[@name='row']/rect[@name='smxui_slot_frame']/sprite[@name='frameTop']/@pos">-37,30</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/rect[@name='smxui_slot_frame']/sprite[@name='frameBottom']/@pos">-37,-25</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/sprite[@name='slotBackground']/@height">46</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/sprite[@name='itemBackgroundNormal']/@height">38</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/sprite[@name='itemIcon']/@size">40,40</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/label[@name='itemName']/@height">18</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/label[@name='itemName']/@font_size">18</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/label[@name='itemName']/@pos">155,10</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/label[@name='needCount']/@height">24</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/label[@name='needCount']/@font_size">24</set>
+<set xpath="/controls/smxui_ingredient_row/rect[@name='row']/label[@name='needCount']/@pos">155,-10</set>
+
+<set xpath="/controls/smxui_skill_perk_level/rect[@controller='SMXcore.SkillPerkLevel, SMXcore']/label[@name='smxui_attribute_number']/@font_size">30</set> -->
+
+<!-- <set xpath="/controls/smxui_toolbelt_item_stack/rect/label[@name='stackValue'][@pos='0,${-cell_height/2+12}']/@width">${cell_width-10}</set>
+<set xpath="/controls/smxui_toolbelt_item_stack/rect/label[@name='stackValue'][@pos='0,${-cell_height/2+12}']/@height">${cell_height-60}</set>
+<set xpath="/controls/smxui_toolbelt_item_stack/rect/label[@name='stackValue'][@pos='0,${-cell_height/2+12}']/@font_size">30</set>
+<append xpath="/controls/smxui_toolbelt_item_stack/rect">
+					<label name="stackValue" depth="7" pos="0,${-cell_height/2+17}" width="${cell_width-10}" height="${cell_height-60}" style="smxcore_label_normal" text="{itemcount}" font_size="30" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxhud_element_labelcolor_1]" visible="{hasdurability}" />
+</append> -->
+
+<!-- <append xpath="/controls/smxui_drag_item_stack/rect">
+					<label name="stackValue" depth="7" pos="0,-28" width="73" height="28" style="smxcore_label_normal" text="{itemcount}" font_size="20" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxui_element_labelcolor_1]" visible="{hasdurability}" />
+</append>
+
+<append xpath="/controls/smxui_backpack_item_stack/rect">
+					<label name="stackValue" depth="7" pos="0,${-cell_height/2+17}" width="${cell_width-12}" height="18" style="smxcore_label_normal" text="{itemcount}" font_size="20" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxhud_element_labelcolor_1]" visible="{hasdurability}" />
+</append>
+
+<append xpath="/controls/smxui_looting_item_stack/rect">
+					<label name="stackValue" depth="7" pos="-1,-23" width="60" height="18" style="smxcore_label_normal" text="{itemcount}" font_size="20" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxui_element_labelcolor_1]" visible="{hasdurability}" />
+</append>
+
+<append xpath="/controls/smxui_item_stack/rect">
+					<label name="stackValue" depth="7" pos="-1,-12" width="60" height="18" style="smxcore_label_normal" text="{itemcount}" font_size="20" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxui_element_labelcolor_1]" visible="{hasdurability}" />
+</append>
+
+<append xpath="/controls/smxui_preview_item_stack/rect">
+					<label name="stackValue" depth="7" pos="-1,-23" width="60" height="18" style="smxcore_label_normal" text="{itemcount}" font_size="20" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxui_element_labelcolor_1]" visible="{hasdurability}" />
+</append>
+
+<append xpath="/controls/smxui_output_item_stack/rect">
+					<label name="stackValue" depth="7" pos="-1,-23" width="60" height="18" style="smxcore_label_normal" text="{itemcount}" font_size="20" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxui_element_labelcolor_1]" visible="{hasdurability}" />
+</append>
+
+<append xpath="/controls/smxui_tool_item_stack/rect">
+					<label name="stackValue" depth="7" pos="-1,-23" width="60" height="18" style="smxcore_label_normal" text="{itemcount}" font_size="20" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxui_element_labelcolor_1]" visible="{hasdurability}" />
+</append> -->
+</config>

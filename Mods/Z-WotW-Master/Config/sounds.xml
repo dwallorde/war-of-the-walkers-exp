@@ -1,0 +1,877 @@
+<config>
+
+<append xpath="/Sounds" >
+<SoundDataNode name="minibike_hornmine"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+	<Noise ID="4" noise="60" time="2" heat_map_strength="0.2" heat_map_time="90"/>
+	<!-- <AudioClip ClipName="#@modfolder:Resources/Mine3.unity3d?Mine1"/> -->
+	<!-- <AudioClip ClipName="#@modfolder:Resources/Mine3.unity3d?Mine2"/> -->
+	<AudioClip ClipName="#@modfolder:Resources/Mine3.unity3d?Mine3"/>
+	<LocalCrouchVolumeScale name="1.0"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="3"/> <MaxEntities name="6"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="minibike_hornquack"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+	<Noise ID="4" noise="60" time="1" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/QuackHorn.unity3d?cannard"/>
+	<LocalCrouchVolumeScale name="1.0"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="3"/> <MaxEntities name="6"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="4x4_horn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+	<Noise ID="4" noise="20" time="3" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/HornTruck1.unity3d?General_Lee"/>
+	<LocalCrouchVolumeScale name="1.0"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="3"/> <MaxEntities name="6"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="gyro_horn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+	<Noise ID="4" noise="20" time="7" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/HornGyro.unity3d?Valkyries"/>
+	<LocalCrouchVolumeScale name="1.0"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="3"/> <MaxEntities name="6"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="fantasyChestOpen"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?FantasyChestOpenSFPrefab"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="fantasyChestClose"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?FantasyChestCloseSFPrefab"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="labeledChestOpen"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?LabeledChestOpenPrefab"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="labeledChestClose"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?LabeledChestClosePrefab"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="lootChestOpen"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?lootChestOpenPrefab"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="lootChestClose"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?lootChestClosePrefab"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="playerChestOpen"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?ChestOpen2"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="playerChestClose"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?ChestClose2"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<!-- Brewery Station Sounds -->
+<SoundDataNode name="brewery_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3.25" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?brewery_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="brewery_item_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?brewery_item_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="brewery_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2.25" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?brewery_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="brewery_smelt_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?brewery_smelt_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Gun Smithing Station Sounds -->
+<SoundDataNode name="gsmithing_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?gsmithing_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="gsmithing_item_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?gsmithing_item_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="gsmithing_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?gsmithing_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="gsmithing_smelt_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?gsmithing_smelt_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Tungsten Forge Sounds -->
+<SoundDataNode name="tforge_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?tforge_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="tforge_item_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?tforge_item_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="tforge_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?tforge_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="tforge_smelt_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?tforge_smelt_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Ammo Workstation Sounds -->
+<SoundDataNode name="ammoworkstation_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?ammoworkstation_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="ammoworkstation_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?ammoworkstation_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="ammoworkstation_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?ammoworkstation_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="ammoworkstation_smelt_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?ammoworkstation_smelt_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Mechanic Bench Sounds -->
+<SoundDataNode name="mechanicbench_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanicbench_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="mechanicbench_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanicbench_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="mechanicbench_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.4" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanicbench_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="mechanicbench_smelt_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mechanicbench_smelt_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Mortar and Pestle Sounds -->
+<SoundDataNode name="mortar_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="0.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mortar_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="mortar_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mortar_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="mortar_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="0.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mortar_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="mortar_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?mortar_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Armor Smithing Station Sounds -->
+<SoundDataNode name="armoursmithingstation_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.25" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?armoursmithingstation_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="armoursmithingstation_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?armoursmithingstation_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="armoursmithingstation_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?armoursmithingstation_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="armoursmithingstation_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?armoursmithingstation_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Tool Workbench Sounds -->
+<SoundDataNode name="toolworkbench_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.15" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?toolworkbench_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="toolworkbench_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?toolworkbench_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="toolworkbench_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?toolworkbench_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="toolworkbench_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?toolworkbench_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Builders Workbench Sounds -->
+<SoundDataNode name="buildersworkbench_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?buildersworkbench_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="buildersworkbench_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?buildersworkbench_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="buildersworkbench_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?buildersworkbench_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="buildersworkbench_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?buildersworkbench_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Oil Pump Sounds -->
+<SoundDataNode name="oilpump_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?oilpump_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="oilpump_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?oilpump_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="oilpump_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?oilpump_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="oilpump_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?oilpump_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Fabrication Station Sounds -->
+<SoundDataNode name="fabricationstation_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?fabricationstation_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="fabricationstation_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?fabricationstation_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="fabricationstation_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?fabricationstation_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="fabricationstation_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?fabricationstation_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Blueprint Station Sounds -->
+<SoundDataNode name="blueprintstation_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?blueprintstation_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="blueprintstation_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?blueprintstation_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="blueprintstation_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?blueprintstation_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="blueprintstation_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?blueprintstation_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Food Processing Table Sounds -->
+<SoundDataNode name="foodprocessing_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="0.88" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?foodprocessing_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="foodprocessing_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?foodprocessing_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="foodprocessing_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?foodprocessing_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="foodprocessing_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?foodprocessing_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Player Oven Sounds -->
+<SoundDataNode name="poven_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="0.4" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?poven_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="poven_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?poven_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="poven_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="0.65" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?poven_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="poven_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?poven_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Microwave Sounds -->
+<SoundDataNode name="microwave_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.05" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?microwave_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="microwave_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?microwave_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="microwave_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?microwave_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="microwave_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?microwave_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Coffee Maker Sounds -->
+<SoundDataNode name="coffeemaker_close"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2.2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?coffeemaker_closePrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="coffeemaker_complete"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?coffeemaker_completePrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="coffeemaker_open"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.22" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?coffeemaker_openPrefab"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="coffeemaker_craft_click"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?coffeemaker_craft_clickPrefab"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<!-- Santa Claus Christmas Zombie -->
+<SoundDataNode name="santaClausRoam"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+	<Noise ID="1" noise="7" time="30" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChristmasItems.unity3d?XmasLoop"/>
+	<Channel name="Mouth"/>
+	<Priority name="5"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="3"/> </SoundDataNode>
+
+<!-- Auger Brushless Motor Mod -->
+
+<SoundDataNode name="auger_equipBM"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+	<AudioClip ClipName="#@modfolder:Resources/AugerSound.unity3d?auger_equip1"/>
+	<LocalCrouchVolumeScale name="1"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="Auger_IdleBM">
+	<Noise ID="3" noise="15" time="2" muffled_when_crouched="0.65"/>
+	<AudioClip ClipName="#@modfolder:Resources/AugerSound.unity3d?auger_idle1" AudioSourceName="Sounds/Weapons/Motorized/Auger/AugerAudioSourceLoop"/>
+	<LocalCrouchVolumeScale name="1"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="Auger_ReloadBM">
+	<Noise ID="2" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/AugerSound.unity3d?auger_reload1" AudioSourceName="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="Auger_Fire_StartBM"> <AudioSource name="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/>
+	<Noise ID="4" noise="30" time="2" heat_map_strength="0.25" heat_map_time="90"/>
+	<Sequence/>
+	<AudioClip ClipName="#@modfolder:Resources/AugerSound.unity3d?auger_fire_start1"/>
+	<AudioClip ClipName="#@modfolder:Resources/AugerSound.unity3d?auger_fire_lp1" Loop="true"/>
+	<AudioClip ClipName="#@modfolder:Resources/AugerSound.unity3d?auger_fire_end1"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<!-- Chainsaw Brushless Motor Mod -->
+
+<SoundDataNode name="chainsaw_emptyBM"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+	<Noise ID="2" time="4" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_empty1"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="chainsaw_equipBM"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_equip1"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="chainsaw_idleBM">
+	<Noise ID="3" noise="15" time="2" muffled_when_crouched="0.65"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_idle1" AudioSourceName="Sounds/Weapons/Motorized/Auger/AugerAudioSourceLoop"/>
+	<LocalCrouchVolumeScale name="1"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="chainsaw_fire_startBM"> <AudioSource name="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="4" noise="30" time="2" heat_map_strength="0.25" heat_map_time="90"/>
+	<Sequence/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_fire_start1"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_fire_lp1" Loop="true"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_fire_end1"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="chainsaw_fire_revBM"> <AudioSource name="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="4" noise="30" time="2"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_fire_rev11"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_fire_rev21"/>
+	<LocalCrouchVolumeScale name="1"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="3"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="chainsaw_reloadBM"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="2" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/ChainsawSound.unity3d?chainsaw_reload1"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="1"/> <NoiseScale name="1"/> <MaxVoices name="2"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="open_door_elevator">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/ZTelevatorMaster.unity3d?eSilence"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="close_door_elevator">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/ZTelevatorMaster.unity3d?eSilence"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="open_door_glass">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?doorOpenGlass"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="close_door_glass">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?doorCloseGlass"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="open_door_glass2">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?GlassDoor_Open"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="close_door_glass2">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?GlassDoor_Close"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="open_door_rollup">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?Rollup_Open"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="close_door_rollup">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?Rollup_Close"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="open_door_trapdoor">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?TrapDoor_Open"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="close_door_trapdoor">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?TrapDoor_Close"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="open_door_rustic">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?Door_Rustic_Open"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="close_door_rustic">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Doors.unity3d?Door_Rustic_Close"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="screameralarm1">
+	<Noise ID="5" noise="54" heat_map_strength="100" heat_map_time="60"/>
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<AudioClip ClipName="#@modfolder:Resources/HordeBlockSounds.unity3d?purge_siren"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="screameralarm2">
+	<Noise ID="5" noise="54"/>
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<AudioClip ClipName="#@modfolder:Resources/HordeBlockSounds.unity3d?purge_siren" Loop="true"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="screamerblock_toggle"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2.2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HordeBlockSounds.unity3d?ScreamerBlockToggle"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="healthDeploy_toggle"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2.2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HealthDeployToggle.unity3d?HealthDeployToggle"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="fogHorn"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="4.3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HordeBlockSounds.unity3d?fogHorn"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="hordeComplete"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="33.9" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HordeBlockSounds.unity3d?GOTHordeComplete"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="hordeAnnouncement"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="16" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HordeBlockSounds.unity3d?HordeAnnouncement"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="silentHorn"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="10.1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HordeBlockSounds.unity3d?SilentHillSiren"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="SinisterNight"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="124.0" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds1.unity3d?Halloween1-SinisterNight"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="DarkandMysterious"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="95.6" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds1.unity3d?Halloween2-DarkandMysterious"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="MonstersandZombies"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="81.1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds1.unity3d?Halloween3-MonstersandZombies"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="HalloweenDance"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="71.1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds1.unity3d?Halloween4-HalloweenDance"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="BlackAngel"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="147.5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds2.unity3d?Halloween5-BlackAngel"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="UnfoldingMystery"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="125.6" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds2.unity3d?Halloween6-UnfoldingMystery"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="Mischief"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="131.2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds2.unity3d?Halloween7-Mischief"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="SlowCalmandDark"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="112.6" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds2.unity3d?Halloween8-SlowCalmandDark"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="HellsJanitorAlertSound"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2.8" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HellsJanitorAlertSound.unity3d?YouSausageAlert"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="WitchLaugh"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="2.1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds3.unity3d?WitchLaugh"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="HalloweenJumpScare1"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="7.1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds3.unity3d?HalloweenJumpScare1"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="HalloweenJumpScare2"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="6.4" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds3.unity3d?HalloweenJumpScare2"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="HalloweenJumpScare3"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="8.1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds3.unity3d?HalloweenJumpScare3"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="PieceofCandy"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="1.1" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HalloweenSounds3.unity3d?pieceofcandy"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="prisonDoorOpenClose">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/PrisonDoors.unity3d?jailDoorSound"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<SoundDataNode name="spikeTrapTrip">
+	<AudioSource name="Sounds/AudioSource_Interact"/>
+	<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/SpeedTrap.unity3d?SpikesSound"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
+</SoundDataNode>
+
+<!-- gunPistol1911 Fire Sounds -->
+<SoundDataNode name="gunPistol1911_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="52" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Gun1911.unity3d?1911Fire1"/>
+	<AudioClip ClipName="#@modfolder:Resources/Gun1911.unity3d?1911Fire2"/>
+	<AudioClip ClipName="#@modfolder:Resources/Gun1911.unity3d?1911Fire3"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<SoundDataNode name="gunPistol1911_reload"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Gun1911.unity3d?1911Reload"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<!-- wotwGunShotgunRemington870 Fire Sounds -->
+<SoundDataNode name="gunShotgunRemington870_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="81" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunRemington870.unity3d?Remington870Fire1"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunRemington870.unity3d?Remington870Fire2"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunRemington870.unity3d?Remington870Fire3"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunRemington870.unity3d?Remington870Fire4"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<!-- wotwGunRifleFNScar Fire Sounds -->
+<SoundDataNode name="wotwGunRifleFNScar_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunFNScar.unity3d?FNScarFire1"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunFNScar.unity3d?FNScarFire2"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunFNScar.unity3d?FNScarFire3"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<!-- wotwGunRifleSVDDragunov Fire Sounds -->
+<SoundDataNode name="wotwGunRifleSVDDragunov_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="108" time="2" muffled_when_crouched="0.8" heat_map_strength="0.5" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunSVDDragunov.unity3d?SVDDragunovFire1"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunSVDDragunov.unity3d?SVDDragunovFire2"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunSVDDragunov.unity3d?SVDDragunovFire3"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<!-- wotwGunMGUMP45 Fire Sounds -->
+<SoundDataNode name="wotwGunMGUMP45_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="54" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunUMP45.unity3d?UMP45Fire2"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/>  <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<SoundDataNode name="wotwGunMGUMP45_reload"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunUMP45.unity3d?UMP45Reload"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<!-- wotwGunMGP90 Fire Sounds -->
+<SoundDataNode name="wotwGunMGP90_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="54" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+	<!-- <AudioClip ClipName="#@modfolder:Resources/GunP90.unity3d?P90Fire1"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunP90.unity3d?P90Fire2"/> -->
+	<AudioClip ClipName="#@modfolder:Resources/GunP90.unity3d?P90Fire3"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/>  <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<SoundDataNode name="wotwGunMGP90_reload"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/GunP90.unity3d?P90Reload"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<SoundDataNode name="wotwGeode_Open"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/GeodeBreak.unity3d?GeodeBreak"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="wotwSlotMachinePlay"> <AudioSource name="Sounds/AudioSource_UseAction"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/SlotMachinePlay.unity3d?slotMachine"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+</append>
+
+<set xpath="/Sounds/SoundDataNode[@name='vwheel_bounce']/MaxRepeatRate/@value">10</set>
+<set xpath="/Sounds/SoundDataNode[@name='vwheel_bounce']/Noise[@ID='0']/@noise">10</set>
+
+<append xpath="/Sounds">
+<SoundDataNode name="hind_start"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HindSounds.unity3d?hind_start"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="hind_stop"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/HindSounds.unity3d?hind_stop"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="hind_flying"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<AudioClip ClipName="#@modfolder:Resources/HindSounds.unity3d?hind_flying" Loop="true"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+</append>
+
+<set xpath="/Sounds/SoundDataNode[@name='vwheel_bounce']/MaxRepeatRate/@value">10</set>
+<set xpath="/Sounds/SoundDataNode[@name='vwheel_bounce']/Noise[@ID='0']/@noise">10</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_fire']/Noise[@ID='0']/@heat_map_strength">0.1</set>
+<set xpath="/Sounds/SoundDataNode[@name='pipe_smg_fire']/Noise[@ID='0']/@heat_map_strength">0.1</set>
+<set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/Noise[@ID='0']/@heat_map_strength">0.1</set>
+<set xpath="/Sounds/SoundDataNode[@name='pipe_rifle_fire']/Noise[@ID='0']/@heat_map_strength">0.1</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_fire']/Noise[@ID='0']/@heat_map_strength">0.2</set>
+<set xpath="/Sounds/SoundDataNode[@name='Pistol_Fire']/Noise[@ID='0']/@heat_map_strength">0.2</set>
+<set xpath="/Sounds/SoundDataNode[@name='pistol_s_fire']/Noise[@ID='0']/@heat_map_strength">0.1</set>
+<set xpath="/Sounds/SoundDataNode[@name='desertvulture_fire']/Noise[@ID='0']/@heat_map_strength">0.2</set>
+<set xpath="/Sounds/SoundDataNode[@name='smg_fire']/Noise[@ID='0']/@heat_map_strength">0.2</set>
+<set xpath="/Sounds/SoundDataNode[@name='smg_s_fire']/Noise[@ID='0']/@heat_map_strength">0.1</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='44magnum_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+<set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+<set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_s_fire']/Noise[@ID='0']/@heat_map_strength">0.2</set>
+<set xpath="/Sounds/SoundDataNode[@name='sawed_off_shotgun_fire']/Noise[@ID='5']/@heat_map_strength">0.3</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+<set xpath="/Sounds/SoundDataNode[@name='autoshotgun_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+<set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+<set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_s_fire']/Noise[@ID='0']/@heat_map_strength">0.2</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='tacticalar_fire']/Noise[@ID='0']/@heat_map_strength">0.4</set>
+<set xpath="/Sounds/SoundDataNode[@name='sniperrifle_fire']/Noise[@ID='0']/@heat_map_strength">0.4</set>
+<set xpath="/Sounds/SoundDataNode[@name='sniperrifle_s_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='sharpshooter_fire']/Noise[@ID='0']/@heat_map_strength">0.4</set>
+<set xpath="/Sounds/SoundDataNode[@name='sharpshooter_s_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/Noise[@ID='0']/@heat_map_strength">0.4</set>
+<set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='m60_fire']/Noise[@ID='0']/@heat_map_strength">0.4</set>
+<set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/Noise[@ID='0']/@heat_map_strength">0.3</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='bullethitstone']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitstone1']/@ClipName">#@modfolder:Resources/Sounds.unity3d?bullethitstone1wotw</set>
+<set xpath="/Sounds/SoundDataNode[@name='bullethitstone']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitstone2']/@ClipName">#@modfolder:Resources/Sounds.unity3d?bullethitstone2wotw</set>
+<set xpath="/Sounds/SoundDataNode[@name='bullethitstone']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitstone3']/@ClipName">#@modfolder:Resources/Sounds.unity3d?bullethitstone3wotw</set>
+
+<set xpath="/Sounds/SoundDataNode[@name='bullethitmetal']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitmetal1']/@ClipName">#@modfolder:Resources/Sounds.unity3d?bullethitmetal1wotw</set>
+<set xpath="/Sounds/SoundDataNode[@name='bullethitmetal']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitmetal2']/@ClipName">#@modfolder:Resources/Sounds.unity3d?bullethitmetal2wotw</set>
+<set xpath="/Sounds/SoundDataNode[@name='bullethitmetal']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitmetal3']/@ClipName">#@modfolder:Resources/Sounds.unity3d?bullethitmetal3wotw</set>
+
+<append xpath="/Sounds">
+	<SoundDataNode name="gupFireBBQ"> <AudioSource name="Sounds/AudioSource_Amb_Small"/>
+		<AudioClip ClipName="Sounds/Ambient_Loops/a_fire_zombiebbq_lp" Loop="false"/>
+		<LocalCrouchVolumeScale value="1.0"/> 
+		<CrouchNoiseScale value="0.5"/> 
+		<NoiseScale value="1"/> 
+		<MaxVoices value="18"/> 
+		<MaxRepeatRate value="0.001"/> 
+	</SoundDataNode>
+
+	<SoundDataNode name="gupWaterSplash"> <AudioSource name="Sounds/AudioSource_Amb_Small"/>
+		<AudioClip ClipName="#@modfolder:Resources/guppySmallSplash.unity3d?gupSmallSplash" Loop="false"/>
+		<LocalCrouchVolumeScale value="1.0"/> 
+		<CrouchNoiseScale value="0.5"/> 
+		<NoiseScale value="1"/> 
+		<MaxVoices value="18"/> 
+		<MaxRepeatRate value="0.001"/>
+	</SoundDataNode>
+</append>
+
+<append xpath="/Sounds">
+<SoundDataNode name="FanBoat_Startup"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" />
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?FanBoat_Startup" />
+<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<SoundDataNode name="FanBoat_accel1"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="1" heat_map_time="60" /> <!--Attracting Zombies 0.05-->
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?FanBoat_accel1" />
+<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<SoundDataNode name="FanBoat_accel2"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="1" heat_map_time="60" />
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?FanBoat_accel2" />
+<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<SoundDataNode name="FanBoat_accel3"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="1" heat_map_time="60" />
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?FanBoat_accel3" />
+<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<SoundDataNode name="FanBoat_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?FanBoat_idle_lp" Loop="true" heat_map_strength="100" heat_map_time="60"/> <!--Attracting Zombies 0.05-->
+<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<SoundDataNode name="FanBoat_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?FanBoat_max_speed_lp" Loop="true" />
+<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<SoundDataNode name="FanBoat_decel1"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="1" heat_map_time="60" />
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?FanBoat_decel1" />
+<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<SoundDataNode name="FanBoat_decel2"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="1" heat_map_time="60" />
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?FanBoat_decel2" />
+<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<SoundDataNode name="StrangeHorn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+<Noise ID="4" range="30" volume="60" time="3" heat_map_strength="1" heat_map_time="90"/><!--Attracting Zombies 0.05-->
+<AudioClip ClipName="#@modfolder:Resources/FBSounds.unity3d?HornBattle"/>
+<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxEntities name="6"/> <MaxRepeatRate value="0.01"/> 
+</SoundDataNode>
+</append>
+
+</config>

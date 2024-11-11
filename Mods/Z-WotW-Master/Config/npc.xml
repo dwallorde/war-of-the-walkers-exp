@@ -1,0 +1,26 @@
+<config>
+
+<append xpath="/npc" >
+	<npc_info
+		id="traitorbill"
+		name="Trader Bill"
+		name_key="npc_traitorJoel"
+		faction="whiteriver"
+		portrait="npc_joel"
+		greeting_type="nearby"
+		stance="Like" voice_set="trader"
+		trader_id="70" dialog_id="trader" quest_faction="6" 
+		localization_id="npcTraderBill"/>
+	<npc_info
+		id="traderjay"
+		name="Trader Jay"
+		name_key="npc_traderJen"
+		faction="whiteriver"
+		portrait="npc_jen"
+		greeting_type="nearby"
+		stance="Like" voice_set="trader_jen"
+		trader_id="71" dialog_id="trader" quest_faction="7" 
+		localization_id="npcTraderJay"/>
+</append>
+
+</config>

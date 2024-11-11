@@ -1,0 +1,480 @@
+<configs>
+
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='Basics']/@icon">ui_game_symbol_basics</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='Building']/@icon">ui_game_symbol_building</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='Ammo/Weapons']/@icon">ui_game_symbol_weapons</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='Tools/Traps']/@icon">ui_game_symbol_tools</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='Food/Cooking']/@icon">ui_game_symbol_food2</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='Clothing']/@icon">ui_game_symbol_clothing</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='Decor/Miscellaneous']/@icon">ui_game_symbol_decor</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='CFFood/Cooking']/@icon">ui_game_symbol_food</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='CFDrink/Cooking']/@icon">ui_game_symbol_drink</set>
+<set xpath="/ui_display_info/crafting_category_display/crafting_category_list/crafting_category[@name='Mods']/@icon">ui_game_symbol_mods</set>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="mortarandPestle">
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_food" display_name="lblCategoryFood" />
+			<crafting_category name="Seeds" icon="ui_game_symbol_seeds" display_name="lblCategorySeeds" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_drink" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+			<crafting_category name="Medical" icon="ui_game_symbol_medical" display_name="lblCategoryMedicine" />
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="armourSmithingWorkstation">
+			<!-- <crafting_category name="Mods" icon="ui_game_symbol_mods" display_name="lblCategoryMods" /> -->
+			<crafting_category name="Clothing" icon="ui_game_symbol_shirt" display_name="lblCategoryClothing" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="toolWorkstation">
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" />
+			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tools" display_name="lblCategoryToolsTraps" />
+			<crafting_category name="Mods" icon="ui_game_symbol_mods" display_name="lblCategoryMods" />
+			<crafting_category name="Parts" icon="ui_game_symbol_assemble" display_name="lblCategoryParts" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="buildersWorkstation">
+			<crafting_category name="Building" icon="ui_game_symbol_building" display_name="lblCategoryBuilding" />
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="blueprintWorkStation">
+			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />
+			<crafting_category name="Mods" icon="ui_game_symbol_mods" display_name="lblCategoryMods" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="gunSmithingWorkstation">
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" />
+			<!-- <crafting_category name="Mods" icon="ui_game_symbol_mods" display_name="lblCategoryMods" /> -->
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="oilPump">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="wallTorchStation">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="screamerBlock">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="deployHealth">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="coffeemaker">
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_drink" display_name="lblCategoryDrink" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="microwave">
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_food" display_name="lblCategoryFood" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="playerOven">
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_food" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_drink" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="convectionOven">
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_food" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_drink" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="foodProcessingTable">
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_food" display_name="lblCategoryFood" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="breweryStation">
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_drink" display_name="lblCategoryDrink" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="tungstenForge">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Building" icon="ui_game_symbol_building" display_name="lblCategoryBuilding" />
+			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tools" display_name="lblCategoryToolsTraps" />
+		</crafting_category_list>
+</append>
+
+<remove xpath="/ui_display_info/crafting_category_display/crafting_category_list[@display_type='forge']/crafting_category[@name='Ammo/Weapons']"/>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="forgeStone">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Building" icon="ui_game_symbol_building" display_name="lblCategoryBuilding" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="forgeAmmo">
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="fabricationStation">
+			<crafting_category name="Bathroom" icon="ui_game_symbol_bathroom" display_name="lblCategoryBathroom" />
+			<crafting_category name="Bedroom" icon="ui_game_symbol_bedroom" display_name="lblCategoryBedroom" />
+			<crafting_category name="DiningRoom/Kitchen" icon="ui_game_symbol_dining" display_name="lblCategoryDiningKitchen" />
+			<crafting_category name="LivingRoom" icon="ui_game_symbol_livingroom" display_name="lblCategoryLivingRoom" />
+			<crafting_category name="Office" icon="ui_game_symbol_office" display_name="lblCategoryOffice" />
+			<crafting_category name="OutdoorLiving" icon="ui_game_symbol_outdoorliving" display_name="lblCategoryOutdoorLiving" />
+			<crafting_category name="Storage" icon="ui_game_symbol_storage" display_name="lblCategoryStorage" />
+			<crafting_category name="Decor/Miscellaneous" icon="ui_game_symbol_chair" display_name="lblCategoryDecorMisc" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="ammoWorkstation">
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="mechanicBench">
+			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="recyclerWorkstation">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="wotwTablesawWorkstation">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/crafting_category_display">
+		<crafting_category_list display_type="wotwTanningWorkstation">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+</append>
+
+<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="pillEnergy" display_group="groupConsumables">
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+		
+		<item_display_info display_type="chocolateCovered" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+		</item_display_info>
+		
+		<item_display_info display_type="expGain" display_group="groupConsumables">
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+			<display_entry name="dExperienceGain" title_key="statExperienceGain" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="expEarned" display_group="groupConsumables">
+			<display_entry name="dExperience" title_key="statExperienceEarned"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillPointsEarned" display_group="groupConsumables">
+			<display_entry name="dSkillPoints" title_key="statSkillPointsEarned"/>
+		</item_display_info>
+		
+		<item_display_info display_type="actionPointsEarned" display_group="groupConsumables">
+			<display_entry name="dActionPoints" title_key="statActionPointsEarned"/>
+		</item_display_info>
+		
+		<item_display_info display_type="foodBuff" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+			<display_entry name="dHypothermalResist" title_key="statHypothermalResist" display_leading_plus="true"/>
+			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="foodWaterBuff" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+			<display_entry name="dHypothermalResist" title_key="statHypothermalResist" display_leading_plus="true"/>
+			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="waterIcedCoffee" display_group="groupConsumables">
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+		
+		<item_display_info display_type="medicalVitaminsA" display_group="groupConsumables">
+			<display_entry name="dInfectionResist" title_key="statInfectionResist" display_type="Percent"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+		
+		<item_display_info display_type="medicalVitaminsB" display_group="groupConsumables">
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+		
+		<item_display_info display_type="medicalVitaminsC" display_group="groupConsumables">
+			<display_entry name="dDysenteryResist" title_key="statDysenteryResist" display_type="Percent"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+		
+		<item_display_info display_type="medicalVitaminsD" display_group="groupConsumables">
+			<display_entry name="dHypothermalResist" title_key="statHypothermalResist" display_leading_plus="true"/>
+			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist" display_leading_plus="true"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+		
+		<item_display_info display_type="medicalESPainkillers" display_group="groupConsumables">
+			<display_entry name="dInstantHealth" title_key="statShowInstantHealth"/>
+			<display_entry name="dHealthLoss" title_key="statHealthLoss" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dStunResist" title_key="statStunResist" display_type="Percent" />
+			<display_entry name="dStopsConcussion" title_key="statStopsConcussion" display_type="Percent"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+		
+		<item_display_info display_type="ammoFlare" display_group="groupAmmo">
+			<display_entry name="dFuseTime" title_key="statFuseTime" display_type="Time" negative_preferred="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolAdvancedPestle" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeMortarandPestle" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolSmoothJawPliers" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeArmourSmithingStation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolScrewGun" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeToolSmithingWorkstation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolTapeMeasure" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeBuildersWorkstation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolPortableCNC" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeBlueprintWorkstation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolBrassHammer" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeGunSmithingWorkstation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolFryingPan" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimePlayerOven" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolSharpKnife" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeFoodPrep" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolSewingMachine" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeFabricator" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolReloadingPress" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeAmmoWorkstation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolSocketSet" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeMechanicWorkstation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="shades" display_group="groupAttire">
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toolEngineBattery" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingEngineBattery" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="toughGuySunglasses" display_group="groupAttire">
+			<display_entry name="dMeleeSpeed" title_key="statMeleeSpeed" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skiGoggles" display_group="groupAttire">
+			<display_entry name="dSwimSpeed" title_key="statSwimSpeed" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
+		<item_display_info display_type="nerdGlasses" display_group="groupAttire">
+			<!-- <display_entry name="dToolSpeed" title_key="statToolSpeed" display_type="Percent" display_leading_plus="true" negative_preferred="false"/> -->
+			<display_entry name="dCraftingTime" title_key="statCraftingTime" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+			<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="cigar" display_group="groupAttire">
+			<display_entry name="BarteringBuying" title_key="statBarteringSellBuy" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillAmmo" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineAmmo" title_key="statShowAmmo" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillConstruction" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineConstruction" title_key="statShowConstruction" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillResources" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineResources" title_key="statShowResources" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillHarvestingTools" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineHarvestingTools" title_key="statShowHarvestingTools" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillRepairTools" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineRepairTools" title_key="statShowRepairTools" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillSalvageTools" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineSalvageTools" title_key="statShowSalvageTools" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillKnuckles" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineKnuckles" title_key="statShowKnuckles" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillBlades" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineBlades" title_key="statShowBlades" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillClubs" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineClubs" title_key="statShowClubs" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillSledgehammers" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineSledgehammers" title_key="statShowSledgehammers" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillBows" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineBows" title_key="statShowBows" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillSpears" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineSpears" title_key="statShowSpears" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillHandguns" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineHadnguns" title_key="statShowHandguns" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillShotguns" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineShotguns" title_key="statShowShotguns" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="skillRifles" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineRifles" title_key="statShowRifles" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statMachineGuns" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineMachineGuns" title_key="statShowMachineGuns" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statExplosives" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineExplosives" title_key="statShowExplosives" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statRobotics" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineRobotics" title_key="statShowRobotics" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statArmor" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineArmor" title_key="statShowArmor" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statMedical" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineMedical" title_key="statShowMedical" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statFood" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineFood" title_key="statShowFood" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statFarming" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineFarming" title_key="statShowFarming" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statElectrician" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineElectrician" title_key="statShowElectrician" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statTraps" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineTraps" title_key="statShowTraps" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statWorkstations" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineWorkstations" title_key="statShowWorkstations" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="statVehicles" display_group="groupAttire">
+			<display_entry name="PerkLevel" tags="perkBonusMagazineVehicles" title_key="statShowVehicles" display_leading_plus="true"/>
+		</item_display_info>
+</append>
+
+<remove xpath="/ui_display_info/crafting_category_display/crafting_category_list[@display_type='']/crafting_category[@name='Basics']"/>
+<append xpath="/ui_display_info/crafting_category_display/crafting_category_list[@display_type='']">
+			<crafting_category name="Mods" icon="ui_game_symbol_assemble" display_name="lblCategoryMods" />
+</append>
+
+<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="armorHunterHelmet" display_group="groupAttire" extends="armorMediumNew" >
+			<display_entry name="dStaminaMax" title_key="statMaxStaminaBonus" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorHunterOutfit" display_group="groupAttire" extends="armorMediumNew" >
+			<display_entry name="dHealthMax" title_key="statMaxHealthBonus" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorHunterGloves" display_group="groupAttire" extends="armorMediumNew" >
+			<display_entry name="dRangerDamage" title_key="statHunterDamage" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorHunterBoots" display_group="groupAttire" extends="armorMediumNew" >
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+</append>
+
+</configs>

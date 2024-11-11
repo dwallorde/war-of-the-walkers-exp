@@ -1,0 +1,1219 @@
+<config>
+
+<!-- <set xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddQuest']/property[@name='quest']/@value">quest_WOTWSurvival1</set>
+
+<set xpath="/gameevents/action_sequence[@name='game_on_respawn_permanent']/action[@class='AddQuest']/property[@name='quest']/@value">quest_WOTWSurvival1</set> -->
+
+<insertAfter xpath="/gameevents/category[@name='poi']">
+	<category name="player" display_name="GameEventCategory_Player" icon="ui_game_symbol_players" />
+</insertAfter>
+
+<append xpath="/gameevents">
+	<action_sequence name="wotw_game_gambling">
+		<property name="action_type" value="Game" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+		<property name="target_type" value="Block" />
+		<property name="allow_while_dead" value="false" />
+		
+		<loop class="For">
+			<property name="phase" value="1" />
+			<property name="loop_count" value="1" />
+			
+			<action class="AddItems">
+				<property name="added_items" value="casinoCoin" />
+				<property name="added_item_counts" value="150-250" />
+				<property name="phase" value="1" />
+				
+				<requirement class="RandomRoll">
+					<property name="min_max" value="0,100" />
+					<property name="operation" value="LTE" />
+					<property name="value" value="90" />
+				</requirement>
+			</action>
+			
+			<action class="AddItems">
+				<property name="added_items" value="casinoCoin" />
+				<property name="added_item_counts" value="100-200" />
+				<property name="phase" value="1" />
+				
+				<requirement class="RandomRoll">
+					<property name="min_max" value="0,100" />
+					<property name="operation" value="LTE" />
+					<property name="value" value="40" />
+				</requirement>
+			</action>
+			
+			<action class="AddItems">
+				<property name="added_items" value="casinoCoin" />
+				<property name="added_item_counts" value="200-400" />
+				<property name="phase" value="1" />
+				
+				<requirement class="RandomRoll">
+					<property name="min_max" value="0,100" />
+					<property name="operation" value="LTE" />
+					<property name="value" value="30" />
+				</requirement>
+			</action>
+			
+			<action class="AddItems">
+				<property name="added_items" value="casinoCoin" />
+				<property name="added_item_counts" value="400-600" />
+				<property name="phase" value="1" />
+				
+				<requirement class="RandomRoll">
+					<property name="min_max" value="0,100" />
+					<property name="operation" value="LTE" />
+					<property name="value" value="25" />
+				</requirement>
+			</action>
+			
+			<action class="AddItems">
+				<property name="added_items" value="casinoCoin" />
+				<property name="added_item_counts" value="600-800" />
+				<property name="phase" value="1" />
+				
+				<requirement class="RandomRoll">
+					<property name="min_max" value="0,100" />
+					<property name="operation" value="LTE" />
+					<property name="value" value="15" />
+				</requirement>
+			</action>
+			
+			<!-- <action class="AddItems">
+				<property name="added_items" value="casinoCoin" />
+				<property name="added_item_counts" value="800-1000" />
+				<property name="phase" value="1" />
+				
+				<requirement class="RandomRoll">
+					<property name="min_max" value="0,100" />
+					<property name="operation" value="LTE" />
+					<property name="value" value="10" />
+				</requirement>
+			</action> -->
+			
+			<action class="AddItems">
+				<property name="added_items" value="casinoCoin" />
+				<property name="added_item_counts" value="2000-3000" />
+				<property name="phase" value="1" />
+				
+				<requirement class="RandomRoll">
+					<property name="min_max" value="0,100" />
+					<property name="operation" value="LTE" />
+					<property name="value" value="5" />
+				</requirement>
+			</action>
+		</loop>
+		
+		<action class="PlaySound">
+			<property name="phase" value="1" />
+			<property name="sound" value="wotwSlotMachinePlay" />
+		</action>
+		
+		<!-- <action class="Delay">
+			<property name="time" value="6" />
+			<property name="phase" value="2" />
+		</action> -->
+		
+		<!-- <action class="BlockAnimateBlock">
+			<property name="animation_trigger" value="downgrade" />
+			<property name="phase" value="3" />
+		</action> -->
+		
+		<!-- <action class="BlockDowngrade">
+			<property name="phase" value="3" />
+		</action> -->
+	</action_sequence>
+	
+	<action_sequence name="action_give_points1">
+		<action class="AddSkillPoints">
+			<property name="skill_points" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="action_give_points2">
+		<action class="AddSkillPoints">
+			<property name="skill_points" value="2" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="action_give_points3">
+		<action class="AddSkillPoints">
+			<property name="skill_points" value="3" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="action_give_points4">
+		<action class="AddSkillPoints">
+			<property name="skill_points" value="4" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="action_give_points5">
+		<action class="AddSkillPoints">
+			<property name="skill_points" value="5" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_General">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="true" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareGeneral" />
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<property name="min_distance" value="0" />
+			<property name="max_distance" value="6" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_Building">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareBuilding" />
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<property name="min_distance" value="3" />
+			<property name="max_distance" value="6" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_HealthnArmour">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareHealthnArmour" />
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<property name="min_distance" value="3" />
+			<property name="max_distance" value="6" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_FoodnDrink">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareFoodnDrink" />
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<property name="min_distance" value="3" />
+			<property name="max_distance" value="6" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_Ammo">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareAmmo" />
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<property name="min_distance" value="3" />
+			<property name="max_distance" value="6" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_SmallWeapons">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareSmallWeapons" />
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<property name="min_distance" value="3" />
+			<property name="max_distance" value="6" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_MedWeapons">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareMedWeapons" />
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<property name="min_distance" value="3" />
+			<property name="max_distance" value="6" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_LargeWeapons">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareLargeWeapons" />
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<property name="min_distance" value="3" />
+			<property name="max_distance" value="6" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="spawn_Airdrop_Books">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="Delay">
+			<property name="time" value="1.5" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Parachute_Opens" />
+			<property name="phase" value="0" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="SupplyDrops/Supply_Crate_Land" param1="alertsound" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="SpawnContainer">
+			<property name="entity_names" value="SupplyFlareBooks" />
+			<!-- <property name="single_choice" value="true" /> -->
+			<property name="spawn_count" value="1" />
+			<property name="phase" value="1" />
+			<!-- <property name="spawn_type" value="NearTarget" /> -->
+			<property name="min_distance" value="3" />
+			<property name="max_distance" value="6" />
+			<!-- <property name="air_spawn" value="true" param1="airspawn" />
+			<property name="yOffset" value="5" /> -->
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="horde_SpawnTrigger">
+		<property name="action_type" value="Game" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+		<!-- <property name="target_type" value="Block" /> -->
+		<property name="allow_while_dead" value="false" />
+		
+		<action class="PlaySound">
+			<property name="sound" value="screamerblock_toggle"/>
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="hordeAnnouncement"/>
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="Delay">
+			<property name="time" value="18" />
+			<property name="phase" value="0" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="screameralarm2"/>
+			<property name="phase" value="1" />
+			<property name="loop_duration" value="10"/>
+		</action>
+		
+		<action class="Delay">
+			<property name="time" value="2" />
+			<property name="phase" value="2" />
+		</action>
+
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="6"  />
+			<property name="air_spawn" value="false" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="spawn_type" value="WanderingHorde" />
+			<property name="phase" value="3" />
+			<!-- <property name="attack_target" value="true" /> -->
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="2" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="3" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="50" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="4" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="3" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="100" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="5" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="3" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="150" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="7" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="3" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="250" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="9" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="3" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="350" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="11" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="3" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="450" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="buff_name" value="event_give_navobject" />
+			<property name="phase" value="4" />
+			<property name="target_group" value="zombies" />
+		</action>
+		
+		<action class="RageZombies">
+			<property name="phase" value="4" />
+			<property name="time" value="60" />
+			<property name="speed_percent" value="1.2" />
+			<property name="target_group" value="zombies" />
+		</action>
+		
+		<action class="WaitForDead">
+			<property name="target_group" value="zombies" />
+			<property name="phase" value="5" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="silentHorn"/>
+			<property name="phase" value="6" />
+		</action>
+
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="8"  />
+			<property name="air_spawn" value="false" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="spawn_type" value="WanderingHorde" />
+			<property name="phase" value="7" />
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="3" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="7" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="50" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="5" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="7" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="100" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="6" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="7" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="150" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="8" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="7" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="250" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="10" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="7" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="350" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="12" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="7" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="450" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="buff_name" value="event_give_navobject2" />
+			<property name="phase" value="8" />
+			<property name="target_group" value="zombies" />
+		</action>
+		
+		<action class="RageZombies">
+			<property name="phase" value="8" />
+			<property name="time" value="60" />
+			<property name="speed_percent" value="1.2" />
+			<property name="target_group" value="zombies" />
+		</action>
+		
+		<action class="WaitForDead">
+			<property name="target_group" value="zombies" />
+			<property name="phase" value="9" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="fogHorn"/>
+			<property name="phase" value="10" />
+			<property name="loop_duration" value="10"/>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="10"  />
+			<property name="air_spawn" value="false" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="spawn_type" value="WanderingHorde" />
+			<property name="phase" value="11" />
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="4" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="11" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="50" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="6" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="11" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="100" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="7" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="11" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="150" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="9" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="11" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="250" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="11" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="11" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="350" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="SpawnEntity">
+			<property name="entity_group" value="SleeperGSList" />
+			<property name="spawn_count" value="13" param1="spawncount_extra1" />
+			<property name="add_to_group" value="zombies" />
+			<property name="safe_spawn" value="true" />
+			<property name="min_distance" value="15" />
+			<property name="max_distance" value="20" />
+			<property name="phase" value="11" />
+
+			<requirement class="Gamestage">
+				<property name="operation" value="GTE" />
+				<property name="game_stage" value="450" param1="gamestage_extra1" />
+			</requirement>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="buff_name" value="event_give_navobject3" />
+			<property name="phase" value="12" />
+			<property name="target_group" value="zombies" />
+		</action>
+		
+		<action class="RageZombies">
+			<property name="phase" value="12" />
+			<property name="time" value="60" />
+			<property name="speed_percent" value="1.2" />
+			<property name="target_group" value="zombies" />
+		</action>
+		
+		<action class="WaitForDead">
+			<property name="target_group" value="zombies" />
+			<property name="phase" value="13" />
+		</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="hordeComplete"/>
+			<property name="phase" value="14" />
+		</action>
+		
+		<action class="BeltTooltip">
+			<property name="text" value="Horde Waves Complete!" />
+			<property name="phase" value="14" />
+		</action>
+		
+	</action_sequence>
+	
+	<action_sequence name="halloweenJukebox">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+
+		<action class="PlaySound">
+			<property name="sound" value="SinisterNight,DarkandMysterious,MonstersandZombies,HalloweenDance,BlackAngel,UnfoldingMystery,Mischief,SlowCalmandDark" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="halloween_Trick1">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+
+		<action class="SpawnEntity">
+			<property name="entity_names" value="zombieWhiteClown" />
+			<property name="spawn_count" value="1" />
+			<property name="air_spawn" value="false" />
+			<property name="safe_spawn" value="true" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="WitchLaugh" />
+			<property name="phase" value="1" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="zombiemalealert" />
+			<property name="phase" value="1" />
+		</action>
+
+	</action_sequence>
+	
+	<action_sequence name="halloween_Trick2">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+
+		<action class="SpawnEntity">
+			<property name="entity_names" value="zombieWarZombie" />
+			<property name="spawn_count" value="1" />
+			<property name="air_spawn" value="false" />
+			<property name="safe_spawn" value="true" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="WitchLaugh" />
+			<property name="phase" value="1" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="zombiemalealert" />
+			<property name="phase" value="1" />
+		</action>
+
+	</action_sequence>
+	
+	<action_sequence name="halloween_Trick3">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+		
+		<action class="PlaySound">
+			<property name="sound" value="WitchLaugh" />
+			<property name="phase" value="1" />
+		</action>
+		
+		<action class="Delay">
+				<property name="time" value="2" />
+				<property name="phase" value="2" />
+			</action>
+		
+		<action class="PlaySound">
+			<property name="sound" value="HalloweenJumpScare1,HalloweenJumpScare2,HalloweenJumpScare3" />
+			<property name="phase" value="3" />
+		</action>
+
+	</action_sequence>
+	
+	<action_sequence name="halloween_Trick4">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="halloween_buffTrick1" />
+			<property name="check_already_exists" value="false" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="WitchLaugh" />
+			<property name="phase" value="1" />
+		</action>
+
+	</action_sequence>
+	
+	<action_sequence name="halloween_Treat1">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="halloween_buffTreat1" />
+			<property name="check_already_exists" value="false" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="PieceofCandy" />
+			<property name="phase" value="1" />
+		</action>
+
+	</action_sequence>
+	
+	<action_sequence name="halloween_Treat2">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="halloween_buffTreat2" />
+			<property name="check_already_exists" value="false" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="PieceofCandy" />
+			<property name="phase" value="1" />
+		</action>
+
+	</action_sequence>
+	
+	<action_sequence name="halloween_Treat3">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="halloween_buffTreat3" />
+			<property name="check_already_exists" value="false" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="PieceofCandy" />
+			<property name="phase" value="1" />
+		</action>
+
+	</action_sequence>
+	
+	<action_sequence name="halloween_Treat4">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+
+		<action class="AddItems">
+			<property name="added_items" value="casinoCoin" />
+			<property name="added_item_counts" value="5000-25000" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="PieceofCandy" />
+			<property name="phase" value="1" />
+		</action>
+
+	</action_sequence>
+	
+	<action_sequence name="halloween_TrickorTreat">
+		<property name="action_type" value="Game" />
+		<property name="allow_while_dead" value="false" />
+		<property name="allow_user_trigger" value="true" />
+		<property name="category" value="player" />
+
+		<action class="CallGameEvent">
+			<property name="game_events" value="halloween_Trick1,halloween_Treat1,halloween_Trick2,halloween_Treat2,halloween_Trick3,halloween_Treat3,halloween_Trick4,halloween_Treat4" />
+		</action>
+
+	</action_sequence>
+	
+	<!-- Air Drop Horde -->
+	<action_sequence name="block_air_drop_horde_start">
+		<property name="action_type" value="Game"/>
+		<!-- <property name="target_type" value="Entity"/> -->
+		<property name="allow_while_dead" value="false"/>
+		<requirement class="RandomRoll">
+			<property name="min_max" value="0,100"/>
+			<property name="operation" value="LTE"/>
+			<property name="value" value="80"/>
+		</requirement>
+		<action class="SpawnEntity">
+			<property name="entity_group" value="WanderingHorde"/>
+			<property name="spawn_count" value="6"/>
+			<property name="air_spawn" value="false"/>
+			<property name="add_to_group" value="zombies"/>
+			<property name="safe_spawn" value="true"/>
+			<property name="min_distance" value="10"/>
+			<property name="max_distance" value="20"/>
+			<property name="spawn_type" value="WanderingHorde"/>
+			<property name="is_aggressive" value="false" />
+		</action>
+		<action class="PlaySound">
+			<property name="sound" value="screameralarm1" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Covert_REWARD -->
+	<action_sequence name="reward_covertClassCompletion">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreCovert" param1="quest" />
+			<property name="notify" value="true" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Covert_Point_REWARD -->
+	<action_sequence name="reward_covertClassPoint">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreCovertPoint" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Soldier_REWARD -->
+	<action_sequence name="reward_soldierClassCompletion">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreSoldier" param1="quest" />
+			<property name="notify" value="true" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Soldier_Point_REWARD -->
+	<action_sequence name="reward_soldierClassPoint">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreSoldierPoint" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Survivalist_REWARD -->
+	<action_sequence name="reward_survivalistClassCompletion">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreSurvivalist" param1="quest" />
+			<property name="notify" value="true" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Survivalist_Point_REWARD -->
+	<action_sequence name="reward_survivalistClassPoint">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreSurvivalistPoint" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Technician_REWARD -->
+	<action_sequence name="reward_technicianClassCompletion">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreTechnician" param1="quest" />
+			<property name="notify" value="true" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Technician_Point_REWARD -->
+	<action_sequence name="reward_technicianClassPoint">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreTechnicianPoint" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Tradesman_REWARD -->
+	<action_sequence name="reward_tradesmanClassCompletion">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreTradesman" param1="quest" />
+			<property name="notify" value="true" />
+		</action>
+	</action_sequence>
+	
+	<!-- Class_Tradesman_Point_REWARD -->
+	<action_sequence name="reward_tradesmanClassPoint">
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="0wotwQuestClass_PreTradesmanPoint" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Progression_Armour_and_Tools_REWARD -->
+	<action_sequence name="reward_ArmourandTools">
+		<property name="action_type" value="Game" />
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Progression_Melee_and_Guns_REWARD -->
+	<action_sequence name="reward_MeleeandGuns">
+		<property name="action_type" value="Game" />
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Progression_Food_and_Medical_REWARD -->
+	<action_sequence name="reward_FoodandMedical">
+		<property name="action_type" value="Game" />
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Progression_Resource_Gathering_REWARD -->
+	<action_sequence name="reward_ResourceGathering">
+		<property name="action_type" value="Game" />
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Progression_Zombie_Hunting_REWARD -->
+	<action_sequence name="reward_ZombieHunting">
+		<property name="action_type" value="Game" />
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+	
+	<!-- Progression_Animal_Hunting_REWARD -->
+	<action_sequence name="reward_AnimalHunting">
+		<property name="action_type" value="Game" />
+		<action class="AddXP">
+			<property name="xp_amount" value="5000" />
+		</action>
+	</action_sequence>
+</append>
+
+</config>

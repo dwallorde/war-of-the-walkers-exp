@@ -1,0 +1,8 @@
+<config>
+<!-- <append xpath="/xui/ruleset[@name='default']/window_group[@name='mainMenu']">
+		<window name="btnDiscord" anchor="RightCenter" />
+</append> -->
+
+<set xpath="/xui/ruleset[@name='default']/window_group[@name='newContinueGame']/window[@name='newContinueGame']/@name">WOTWnewContinueGame</set>
+
+</config>

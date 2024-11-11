@@ -1,0 +1,1741 @@
+<config>
+<!-- <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='motorTorque']/@value">1, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='brakeTorque']/@value">6000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='motorTorque']/@value">700, 200</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">7, 5</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='brakeTorque']/@value">4000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='motorTorque']/@value">1000, 250</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">8, 6</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='brakeTorque']/@value">5000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='motorTorque']/@value">1500, 550</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">9, 7</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='brakeTorque']/@value">6000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@name='brakeTorque']/@value">7000</set> -->
+
+<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='hornSound']/@value">gyro_horn</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='hornSound']/@value">minibike_hornquack</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='hornSound']/@value">minibike_hornmine</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='hornSound']/@value">minibike_hornmine</set>
+<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@name='hornSound']/@value">4x4_horn</set>
+
+<!-- Ragsy Boats/Vehicles -->
+<append xpath="/vehicles">
+<vehicle name="vehicleFlatBoat">
+<property name="cameraDistance" value="6, 6"/>
+<property name="cameraTurnRate" value=".3, .35"/>
+<property name="steerRate" value="150"/>
+<property name="steerCenteringRate" value="70"/>
+<property name="upAngleMax" value="10"/>
+<property name="upForce" value="20"/>
+<property name="downAngleMax" value="10"/>
+<property name="downForce" value="10"/>
+<property name="tiltAngleMax" value=".15"/>
+<property name="tiltThreshold" value=".2"/>
+<property name="tiltDampening" value=".91"/>
+<property name="tiltDampenThreshold" value=".4"/>
+<property name="tiltUpForce" value="5"/>
+<property name="hopForce" value="0,0"/>
+<property name="unstickForce" value="1"/>
+<property name="airDrag_velScale_angVelScale" value=".929, .97"/>
+<property name="waterLift_y_depth_force" value=".33, 0.42, .3"/>
+<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+<property name="waterY_VelMaxScale" value="5, .5"/>
+
+<property name="hornSound" value="vehicle/minibike/minibike_horn"/>
+
+<property class="chassis">
+<property name="class" value="Chassis"/>
+<property name="display_name" value="chassis"/>
+<property name="slot_type" value="chassis"/>
+<property name="mesh" value="chassis"/>
+<property name="transform" value="Origin"/>
+<property name="paint" value="boat_mesh"/>
+</property>
+
+<property class="engine">
+<property name="class" value="Engine"/>
+<property name="slot_type" value="engine"/>
+<property name="particleOn" value="p_on"/>
+<property name="particleDamaged" value="p_damaged"/>
+<property name="particleBroken" value="p_broken"/>
+<property name="fuelKmPerL" value=".2"/>
+<property name="foodDrain" value=".002,.00811"/><!-- driving/turbo, truck -->
+<property name="gear1" value="
+500,2500, -1400,800,0, 1500,9999,9999,
+Vehicles/Minibike/minibike_accel_OFF,
+,
+0, .5,  .45, .1,  -9, .1, .1, Vehicles/Minibike/minibike_idle_lp_,
+-.1, .1,  .65, .7,  0, 9, .1, Vehicles/Minibike/minibike_run_lp_
+"/>
+<property name="sound_start" value="Vehicles/Minibike/minibike_start_"/>
+<property name="sound_shut_off" value="Vehicles/Minibike/minibike_shutoff_"/>
+<property name="sound_no_fuel_shut_off" value="Vehicles/Minibike/minibike_empty_"/>
+<property name="parent_part" value="chassis"/>
+</property>
+
+<property class="motor0">
+<property name="engine" value="engine"/>
+<property name="engineOffPer" value=".02"/>
+<property name="rpmAccel_min_max" value="0.0001, .01"/>
+<property name="rpmMax" value="4"/>
+<property name="rpmDrag" value=".997"/>
+<property name="trigger" value="relative"/>
+<property name="type" value="spin"/> 
+<property name="axis" value="1"/>
+</property>
+
+<property class="motor1">
+<property name="engine" value="engine"/>
+<property name="turbo" value="1.35"/> 
+<property name="rpmAccel_min_max" value="0.001, .1"/>
+<property name="rpmMax" value="8"/>
+<property name="rpmDrag" value=".993"/>
+<property name="trigger" value="inputForward"/>
+<property name="type" value="spin"/>
+<property name="transform" value="Origin/BoatPropeller_Joint"/>
+<property name="axis" value="2"/>
+</property>
+
+<property class="force0">
+<property name="trigger" value="motor0"/>
+<property name="type" value="relative"/>
+<property name="force" value="0, 0, 0"/>
+<property name="ceiling" value="40, 40"/>
+</property>
+
+<property class="force1">
+<property name="trigger" value="motor1"/>
+<property name="type" value="relative"/>
+<property name="force" value="0, 0, .36"/>
+</property>
+
+<property class="force2">
+<property name="trigger" value="inputForward"/>
+<property name="type" value="relative"/>
+<property name="force" value="0 ,0, .010"/>
+</property>
+
+<property class="force3">
+<property name="trigger" value="inputStrafe"/>
+<property name="type" value="relativeTorque"/>
+<property name="force" value="0, .04, 0"/>
+</property>
+
+<property class="force4">
+<property name="trigger" value="inputUp"/>
+<property name="type" value="relativeTorque"/>
+<property name="force" value="-.0016, 0, 0"/>
+</property>
+
+<property class="force5">
+<property name="trigger" value="inputDown"/>
+<property name="type" value="relativeTorque"/>
+<property name="force" value=".0016, 0, 0"/>
+</property> 
+
+<property class="fuelTank">
+<property name="class" value="FuelTank"/>
+<property name="parent_part" value="engine"/>
+<property name="capacity" value="300"/>
+</property>
+
+<property class="handlebars">
+<property name="class" value="Steering"/>
+<property name="slot_type" value="handlebars"/>
+<property name="mesh" value="handlebar"/>
+<property name="transform" value="Origin/steering_joint"/>
+<property name="steerMaxAngle" value="0"/>
+<property name="IKHandLPosition" value="-1, -.83, -.77"/>
+<property name="IKHandRPosition" value="-0.0673, -0.021 , -.9 "/>
+<property name="IKHandLRotation" value="47.305, -15.59375, 65"/>
+<property name="IKHandRRotation" value="0, 0, 0"/>
+<property name="parent_part" value="chassis"/>
+</property>
+
+<property class="seat0">
+<property name="class" value="Seat"/>
+<property name="position" value="-0.45, .005, -.87"/>
+<property name="rotation" value="-37, 0,  0"/>
+<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="IKFootLPosition" value="-.21, .11, .08"/>
+<property name="IKFootLRotation" value="22.5, 0, 0"/>
+<property name="IKFootRPosition" value=".21, .11, .08"/>
+<property name="IKFootRRotation" value="22.5, 0, 0"/>
+</property>
+
+<property class="seat1">
+<property name="class" value="Seat"/>
+<property name="position" value=" .42, -.138, 0.18"/>
+<property name="rotation" value="-39, 180,  0"/>
+<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="IKFootLPosition" value="-.12, .28, .1"/>
+<property name="IKFootLRotation" value="22.5, 0, 0"/>
+<property name="IKFootRPosition" value=".12, .28, .1"/>
+<property name="IKFootRRotation" value="22.5, 0, 0"/>
+<property name="IKHandLPosition" value="-.33, .87, -.03"/>
+<property name="IKHandLRotation" value="41, -30, 18"/>
+<property name="IKHandRPosition" value=".19, .87, .13"/>
+<property name="IKHandRRotation" value="41, 30, -18"/>
+</property>
+
+<property class="seat2">
+<property name="class" value="Seat"/>
+<property name="position" value=" -.42, -.138, 0.18"/>
+<property name="rotation" value="-39, 180,  0"/>
+<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="mod" value="1"/>
+<property name="IKFootLPosition" value="-.12, .28, .1"/>
+<property name="IKFootLRotation" value="22.5, 0, 0"/>
+<property name="IKFootRPosition" value=".12, .28, .1"/>
+<property name="IKFootRRotation" value="22.5, 0, 0"/>
+<property name="IKHandLPosition" value="-.22, .87, .1"/>
+<property name="IKHandLRotation" value="41, -30, 18"/>
+<property name="IKHandRPosition" value=".33, .87, -.03"/>
+<property name="IKHandRRotation" value="41, 30, -18"/>
+</property>
+
+<property class="wheel0">
+<property name="steerTransform" value="Origin/handlebar_joint"/>
+<property name="tireSuspensionPercent" value="1"/>
+<property name="torqueScale_motor_brake" value="1, .1"/>
+</property>
+
+<property class="wheel1">
+<property name="steerTransform" value="Origin/handlebar_joint"/>
+<property name="tireSuspensionPercent" value="1"/>
+<property name="torqueScale_motor_brake" value="1, .1"/>
+</property>
+
+<property class="wheel2">
+<property name="parent_part" value="chassis"/>
+<property name="tireSuspensionPercent" value="1"/>
+<property name="torqueScale_motor_brake" value="1, .1"/>
+</property>
+
+<property class="wheel3">
+<property name="parent_part" value="chassis"/>
+<property name="tireSuspensionPercent" value="1"/>
+<property name="torqueScale_motor_brake" value="1, .1"/>
+</property>
+
+<property class="headlight">
+<property name="class" value="Headlight"/>
+<property name="parent_part" value="chassis"/>
+<property name="transform" value="Origin/headlight"/>
+<property name="bright" value=".85"/>
+</property>
+
+<property class="storage">
+<property name="class" value="Storage"/>
+<property name="display_name" value="basket"/>
+<property name="slot_type" value="basket"/>
+<property name="mesh" value="basket"/>
+<property name="transform" value="basket"/>
+<property name="parent_part" value="chassis"/>
+</property>
+</vehicle>
+	
+	<!-- Adds A Rubber Dingy -->	
+	
+	<vehicle name="vehicleDinghy">
+<property name="cameraDistance" value="4.5, 5.5"/>
+<property name="cameraTurnRate" value=".2, .35"/>
+<property name="steerRate" value="150"/>
+<property name="steerCenteringRate" value="70"/>
+<property name="upAngleMax" value="10"/>
+<property name="upForce" value="20"/>
+<property name="downAngleMax" value="10"/>
+<property name="downForce" value="10"/>
+<property name="tiltAngleMax" value=".5"/>
+<property name="tiltThreshold" value=".2"/>
+<property name="tiltDampening" value=".91"/>
+<property name="tiltDampenThreshold" value=".4"/>
+<property name="tiltUpForce" value="5"/>
+<property name="hopForce" value="0,0"/>
+<property name="unstickForce" value="1"/>
+<property name="airDrag_velScale_angVelScale" value=".929, .97"/>
+<property name="waterLift_y_depth_force" value=".4, 0.9, .3"/>
+<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+<property name="waterY_VelMaxScale" value="5, .5"/>
+
+<property name="hornSound" value="vehicle/minibike/minibike_horn"/>
+
+<property class="chassis">
+<property name="class" value="Chassis"/>
+<property name="display_name" value="chassis"/>
+<property name="slot_type" value="chassis"/>
+<property name="mesh" value="chassis"/>
+<property name="transform" value="Origin"/>
+<property name="paint" value="boat_mesh"/>
+</property>
+
+<property class="engine">
+<property name="class" value="Engine"/>
+<property name="slot_type" value="engine"/>
+<property name="particleOn" value="p_on"/>
+<property name="particleDamaged" value="p_damaged"/>
+<property name="particleBroken" value="p_broken"/>
+<property name="foodDrain" value=".002,.00811"/><!-- driving/turbo, truck -->
+<property name="fuelKmPerL" value=".2"/>
+<property name="gear1" value="
+500,2500, -1400,800,0, 1500,9999,9999,
+Vehicles/Minibike/minibike_accel_OFF,
+,
+0, .5,  .45, .1,  -9, .1, .1, Vehicles/Minibike/minibike_idle_lp_,
+-.1, .1,  .65, .7,  0, 9, .1, Vehicles/Minibike/minibike_run_lp_
+"/>
+<property name="sound_start" value="Vehicles/Minibike/minibike_start_"/>
+<property name="sound_shut_off" value="Vehicles/Minibike/minibike_shutoff_"/>
+<property name="sound_no_fuel_shut_off" value="Vehicles/Minibike/minibike_empty_"/>
+<property name="parent_part" value="chassis"/>
+</property>
+
+<property class="motor0">
+<property name="engine" value="engine"/>
+<property name="engineOffPer" value=".02"/>
+<property name="rpmAccel_min_max" value="0.0001, .01"/>
+<property name="rpmMax" value="4"/>
+<property name="rpmDrag" value=".997"/>
+<property name="trigger" value="relative"/>
+<property name="type" value="spin"/> 
+<property name="axis" value="1"/>
+</property>
+
+<property class="motor1">
+<property name="engine" value="engine"/>
+<property name="turbo" value="1.35"/> 
+<property name="rpmAccel_min_max" value="0.001, .1"/>
+<property name="rpmMax" value="8"/>
+<property name="rpmDrag" value=".993"/>
+<property name="trigger" value="inputForward"/>
+<property name="type" value="spin"/>
+<property name="transform" value="Origin/BoatPropeller_Joint"/>
+<property name="axis" value="2"/>
+</property>
+
+<property class="force0">
+<property name="trigger" value="motor0"/>
+<property name="type" value="relative"/>
+<property name="force" value="0, 0, 0"/>
+<property name="ceiling" value="40, 40"/>
+</property>
+
+<property class="force1">
+<property name="trigger" value="motor1"/>
+<property name="type" value="relative"/>
+<property name="force" value="0, 0, .43"/>
+</property>
+
+<property class="force2">
+<property name="trigger" value="inputForward"/>
+<property name="type" value="relative"/>
+<property name="force" value="0 ,0, .010"/>
+</property>
+
+<property class="force3">
+<property name="trigger" value="inputStrafe"/>
+<property name="type" value="relativeTorque"/>
+<property name="force" value="0, .04, 0"/>
+</property>
+
+<property class="force4">
+<property name="trigger" value="inputUp"/>
+<property name="type" value="relativeTorque"/>
+<property name="force" value="-.0018, 0, 0"/>
+</property>
+
+<property class="force5">
+<property name="trigger" value="inputDown"/>
+<property name="type" value="relativeTorque"/>
+<property name="force" value=".0018, 0, 0"/>
+</property> 
+
+<property class="fuelTank">
+<property name="class" value="FuelTank"/>
+<property name="parent_part" value="engine"/>
+<property name="capacity" value="300"/>
+</property>
+
+<property class="handlebars">
+<property name="class" value="Steering"/>
+<property name="slot_type" value="handlebars"/>
+<property name="mesh" value="handlebar"/>
+<property name="transform" value="Origin/steering_joint"/>
+<property name="steerMaxAngle" value="0"/>
+<property name="IKHandLPosition" value="-1.23, -1.23, -1.92"/>
+<property name="IKHandRPosition" value=".2, -.40, 0"/>
+<property name="IKHandLRotation" value="85.305, 0, 0"/>
+<property name="IKHandRRotation" value="185, -45, -75"/>
+</property>
+
+<property class="seat0">
+<property name="class" value="Seat"/>
+<property name="position" value=" -0.03, .31, -.52 "/>
+<property name="rotation" value="-39, 55,  0"/>
+<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="IKFootLPosition" value="-.11, .47, .38"/>
+<property name="IKFootRPosition" value=".11, .24, .11"/>
+<property name="IKFootLRotation" value="23.5, 0, 0"/>
+<property name="IKFootRRotation" value="22.5, 0, 0"/>
+</property>
+
+<property class="seat1">
+<property name="class" value="Seat"/>
+<property name="position" value=" 0.2, .26, .85 "/>
+<property name="rotation" value="-34, 0,  0"/>
+<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="mod" value="1"/>
+<property name="IKHandLPosition" value="-.4329, 0, -.358"/>
+<property name="IKHandRPosition" value=".4329, 0, -.358"/>
+<property name="IKHandLRotation" value="40, -15.59375, 8.961643"/>
+<property name="IKHandRRotation" value="40, 15.59375, -8.961643"/>
+<property name="IKFootLPosition" value="-.11, .32, .34"/>
+<property name="IKFootRPosition" value=".11, .32, .34"/>
+<property name="IKFootLRotation" value="22.5, 0, 0"/>
+<property name="IKFootRRotation" value="22.5, 0, 0"/>
+</property>
+
+<property class="wheel0">
+<property name="steerTransform" value="Origin/handlebar_joint"/>
+<property name="tireSuspensionPercent" value="1"/>
+<property name="torqueScale_motor_brake" value="1, .1"/>
+</property>
+
+<property class="wheel1">
+<property name="steerTransform" value="Origin/handlebar_joint"/>
+<property name="tireSuspensionPercent" value="1"/>
+<property name="torqueScale_motor_brake" value="1, .1"/>
+</property>
+
+<property class="wheel2">
+<property name="parent_part" value="chassis"/>
+<property name="tireSuspensionPercent" value="1"/>
+<property name="torqueScale_motor_brake" value="1, .1"/>
+</property>
+
+<property class="wheel3">
+<property name="parent_part" value="chassis"/>
+<property name="tireSuspensionPercent" value="1"/>
+<property name="torqueScale_motor_brake" value="1, .1"/>
+</property>
+
+<property class="headlight">
+<property name="class" value="Headlight"/>
+<property name="parent_part" value="chassis"/>
+<property name="transform" value="Origin/headlight"/>
+<property name="bright" value=".75"/>
+</property>
+
+<property class="storage">
+<property name="class" value="Storage"/>
+<property name="display_name" value="basket"/>
+<property name="slot_type" value="basket"/>
+<property name="mesh" value="basket"/>
+<property name="transform" value="basket"/>
+<property name="parent_part" value="chassis"/>
+</property>
+</vehicle>
+
+<vehicle name="vehicleHind"><!--6 Seater - 3 are mod ones-->
+<property name="cameraDistance" value="15, 18"/>
+<property name="cameraTurnRate" value=".2, .2"/>
+
+<property name="steerRate" value="140"/>
+<property name="steerCenteringRate" value="60"/>
+
+<property name="tiltAngleMax" value="40"/>
+<property name="tiltThreshold" value="2"/>
+<property name="tiltDampening" value=".01"/>
+<property name="tiltDampenThreshold" value="1"/>
+<property name="tiltUpForce" value="1"/>
+
+<property name="upAngleMax" value="60"/>
+<property name="upForce" value=".5"/>
+
+<property name="motorTorque" value="1800, 800"/>
+<property name="turboScale" value="1.6, 1.3"/>
+<property name="velocityMax" value="10.33, 10"/>
+<property name="brakeTorque" value="400"/>
+
+<property name="airDrag_velScale_angVelScale" value=".998, .97"/>
+<property name="waterDrag_y_velScale_velMaxScale" value="1.5, .9, 1"/>
+<property name="waterLift_y_depth_force" value="1, .5, .1"/>
+
+<property name="hornSound" value="vehicle/minibike/minibike_horn"/>
+
+<property class="engine">
+<property name="class" value="Engine"/>
+<property name="slot_type" value="engine"/>
+<property name="particleOn" value="p_on"/>
+<property name="particleDamaged" value="p_damaged"/>
+<property name="particleBroken" value="p_broken"/>
+<property name="foodDrain" value=".003,.003"/>
+<property name="fuelKmPerL" value="0.05"/>
+<property name="gear1" value="
+500,2500, -1400,800,0, 1500,9999,9999,
+,
+,
+0, .5,  .45, .1,  -9, .1, .1, hind_flying,
+-.1, .1,  .65, .7,  0, 9, .1, hind_flying
+"/>
+<property name="sound_start" value="hind_start"/>
+<property name="sound_shut_off" value="hind_stop"/>
+<property name="sound_no_fuel_shut_off" value="Vehicles/Gyrocopter/gyrocopter_sputter"/>
+<property name="parent_part" value="chassis"/>
+</property>
+
+<property class="motor0">
+<property name="engine" value="engine"/>
+<property name="engineOffPer" value=".02"/>
+<property name="rpmAccel_min_max" value="0.01, .2"/>
+<property name="rpmMax" value="8"/>
+<property name="rpmDrag" value=".993"/>
+<property name="trigger" value="relative"/> 
+<property name="type" value="spin"/> 
+<property name="transform" value="Origin/TopPropellerJoint"/>
+<property name="axis" value="1"/>
+</property>
+<property class="motor1">
+<property name="engine" value="engine"/>
+<property name="turbo" value="1.35"/>
+<property name="rpmAccel_min_max" value="0.01, .2"/>
+<property name="rpmMax" value="8"/>
+<property name="rpmDrag" value=".991"/>
+<property name="trigger" value="inputForward"/>
+<property name="type" value="spin"/>
+<property name="transform" value="Origin/BackPropellerJoint"/>
+<property name="axis" value="2"/>
+</property>
+<property class="motor2">
+<property name="engine" value="engine"/>
+<property name="engineOffPer" value=".02"/>
+<property name="turbo" value="1.35"/>
+<property name="rpmAccel_min_max" value="0.01, .2"/>
+<property name="rpmMax" value="8"/>
+<property name="rpmDrag" value=".991"/>
+<property name="trigger" value="relative"/>
+<property name="type" value="spin"/>
+<property name="transform" value="Origin/BackPropellerJoint"/>
+<property name="axis" value="2"/>
+</property>
+
+<property class="force0">
+<property name="trigger" value="motor0"/>
+<property name="type" value="relative"/>
+<property name="force" value="0, .1938 , 0"/>
+<property name="ceiling" value="260, 280"/>
+</property>
+
+<property class="force1">
+<property name="trigger" value="motor1"/>
+<property name="type" value="relative"/>
+<property name="force" value="0, 0, 0.12"/>
+</property>
+
+<property class="force2">
+<property name="trigger" value="inputForward"/>
+<property name="type" value="relative"/>
+<property name="force" value="0, 0, 0.1"/>
+</property>
+
+<property class="force3">
+<property name="trigger" value="inputStrafe"/>
+<property name="type" value="relativeTorque"/>
+<property name="force" value="0, .03, 0"/>
+</property>
+<property class="force4">
+<property name="trigger" value="inputUp"/>
+<property name="type" value="relative"/>
+<property name="force" value="-.0005, .042, .0006"/>
+</property>
+<property class="force5">
+<property name="trigger" value="inputDown"/>
+<property name="type" value="relative"/>
+<property name="force" value=".0006, -.042 , -.0005"/>
+</property>
+
+<property class="handlebars">
+<property name="parent_part" value="chassis"/>
+<property name="class" value="Steering"/>
+<property name="slot_type" value="handlebars"/>
+<property name="transform" value="Origin/steering_joint"/>
+<property name="steerMaxAngle" value="0.1"/>
+<property name="IKHandLPosition" value="-.25, 0, 0"/>
+<property name="IKHandRPosition" value="-.27, 0,0"/>
+<property name="IKHandLRotation" value="0, 17.2, 90"/>
+<property name="IKHandRRotation" value="0, -17.2, -90"/>
+</property>
+
+<property class="seat0">
+<property name="class" value="Seat"/>
+<property name="position" value="0, 1.5, 6"/>
+<property name="rotation" value="-35, 0, 0"/>
+<property name="exit" value="-3.9,0,0 ~ 3.9,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="IKFootLPosition" value="-.19, .27, .30"/>
+<property name="IKFootRPosition" value=".19, .27, .30"/>
+<property name="IKFootLRotation" value="-30, 0, 0"/>
+<property name="IKFootRRotation" value="-30, 0, 0"/>
+</property>
+<property class="seat1">
+<property name="class" value="Seat"/>
+<property name="position" value="0, 1.52, 4"/>
+<property name="rotation" value="-35, 0, 0"/>
+<property name="exit" value=" 4.9,0,0 ~ 4.9,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="IKHandLPosition" value="-.37, .527, .04"/>
+<property name="IKHandRPosition" value=".37, .27, .04"/>
+<property name="IKHandLRotation" value="41, -30, 18"/>
+<property name="IKHandRRotation" value="41, 30, -18"/>
+</property>
+<property class="seat2">
+<property name="class" value="Seat"/>
+<property name="position" value="0, 1.52, 2"/>
+<property name="rotation" value="-28, -90, 0"/>
+<property name="exit" value="3.6,0,0 ~ 3.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="IKHandLPosition" value="-.37, .27, .04"/>
+<property name="IKHandRPosition" value=".37, .27, .04"/>
+<property name="IKHandLRotation" value="41, -30, 18"/>
+<property name="IKHandRRotation" value="41, 30, -18"/>
+</property>
+<property class="seat3">
+<property name="class" value="Seat"/>
+<property name="position" value="0,  1.6, 0"/>
+<property name="rotation" value="-25, 90, 0"/>
+<property name="exit" value="-3.6,0,0 ~ 3.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="mod" value="1"/>
+<property name="IKHandLPosition" value="-.37, .27, .04"/>
+<property name="IKHandRPosition" value=".37, .27, .04"/>
+<property name="IKHandLRotation" value="41, -30, 18"/>
+<property name="IKHandRRotation" value="41, 30, -18"/>
+</property>
+<property class="seat4">
+<property name="class" value="Seat"/>
+<property name="position" value=".5, 1.6, -2"/>
+<property name="rotation" value="-28, -90, 0"/>
+<property name="mod" value="1"/>
+<property name="exit" value="3.6,0,0 ~ 3.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="IKHandLPosition" value="-.37, .27, .04"/>
+<property name="IKHandRPosition" value=".37, .27, .04"/>
+<property name="IKHandLRotation" value="41, -30, 18"/>
+<property name="IKHandRRotation" value="41, 30, -18"/>
+</property>
+<property class="seat5">
+<property name="class" value="Seat"/>
+<property name="position" value="-0,  1.55, -.4"/>
+<property name="rotation" value="-25, 90, 0"/>
+<property name="exit" value="-3.6,0,0 ~ 3.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+<property name="mod" value="1"/>
+<property name="IKHandLPosition" value="-.37, .27, .04"/>
+<property name="IKHandRPosition" value=".37, .27, .04"/>
+<property name="IKHandLRotation" value="41, -30, 18"/>
+<property name="IKHandRRotation" value="41, 30, -18"/>
+</property>
+<property class="fuelTank">
+<property name="class" value="FuelTank"/>
+<property name="capacity" value="500"/>
+</property>
+<property class="headlight">
+<property name="class" value="Headlight"/>
+<property name="parent_part" value="chassis"/>
+<property name="transform" value="Origin/headlight"/>
+<property name="bright" value=".75"/>
+</property>
+<property class="storage">
+<property name="class" value="Storage"/>
+<property name="display_name" value="basket"/>
+<property name="slot_type" value="basket"/>
+<property name="mesh" value="basket"/>
+<property name="transform" value="basket"/>
+</property>
+</vehicle>
+
+<vehicle name="vehicleJetSki">
+ 	<property name="cameraDistance" value="7, 7"/>
+	<property name="cameraTurnRate" value=".2, .2"/>
+	<property name="steerRate" value="160"/>
+	<property name="steerCenteringRate" value="80"/>
+	<property name="upAngleMax" value="7"/>
+	<property name="upForce" value="7"/>
+	<property name="downAngleMax" value="10"/>
+	<property name="downForce" value="10"/>
+	<property name="tiltAngleMax" value=".5"/>
+	<property name="tiltThreshold" value=".2"/>
+	<property name="tiltDampening" value=".91"/>
+	<property name="tiltDampenThreshold" value=".4"/>
+	<property name="tiltUpForce" value="5"/>
+	<property name="unstickForce" value="1"/>
+	<property name="airDrag_velScale_angVelScale" value=".976,.27 "/>
+	<property name="waterLift_y_depth_force" value=".26, .49 , .3"/>
+	<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+	<property name="waterY_VelMaxScale" value="5, .5"/>
+	<property name="hornSound" value="vehicle/minibike/minibike_horn"/>
+
+		<property class="battery">
+			<property name="class" value="Battery"/>
+			<property name="slot_type" value="battery"/>
+			<property name="mesh" value="battery"/>
+			<property name="transform" value="battery"/>
+		</property>
+
+		<property class="chassis">
+			<property name="class" value="Chassis"/>
+			<property name="display_name" value="chassis"/>
+			<property name="slot_type" value="chassis"/>
+			<property name="mesh" value="chassis"/>
+			<property name="transform" value="Origin"/>
+			<property name="part_damage_reduction" value="0.5"/>
+			<property name="paint" value="boat_mesh"/>
+		</property>
+
+		<property class="engine">
+			<property name="class" value="Engine"/>
+			<property name="slot_type" value="engine"/>
+			<property name="mesh" value="engine_small"/>
+			<property name="transform" value="engine_small"/>
+			<property name="particle_transform" value="engine_small/MinibikeParticles/p_engine_fire"/>
+			<property name="foodDrain" value=".002,.00811"/>
+			<property name="fuelKmPerL" value=".4"/>
+			<property name="gear1" value="
+								500,2500, -1400,800,0, 700,2000,900,
+								Vehicles/Motorbike/motorbike_accel_1,
+								,
+								0, .7, 1, .1, -9, .15, .1, Vehicles/Motorbike/motorbike_idle_lp,
+								-.3, .1, .1, .4, -.05, 9, .2, Vehicles/Motorbike/motorbike_run_lp
+								"/>
+			<property name="gear2" value="
+								500,2500, -2000,1000,2000, 500,9999,9999,
+								,
+								Vehicles/Motorbike/motorbike_decel,
+								-.25, -.08, .55, .45, -1, 1, .1, Vehicles/Motorbike/motorbike_run_lp
+								"/>
+			<property name="sound_start" value="Vehicles/Motorbike/minibike_start_"/>
+			<property name="sound_shut_off" value="Vehicles/Motorbike/minibike_shutoff_"/>
+			<property name="sound_no_fuel_shut_off" value="Vehicles/Motorbike/motorbike_empty"/>
+	</property>
+
+		<property class="motor0">
+			<property name="engine" value="engine"/>
+			<property name="engineOffPer" value=".02"/>
+			<property name="rpmAccel_min_max" value="0.0001, .01"/>
+			<property name="rpmMax" value="4"/>
+			<property name="rpmDrag" value=".997"/>
+			<property name="trigger" value="relative"/>
+			<property name="type" value="spin"/> 
+			<property name="axis" value="1"/>
+		</property>
+
+		<property class="motor1">
+			<property name="engine" value="engine"/>
+			<property name="turbo" value="1.35"/> 
+			<property name="rpmAccel_min_max" value="0.001, .1"/>
+			<property name="rpmMax" value="8"/>
+			<property name="rpmDrag" value=".993"/>
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="spin"/>
+			<property name="axis" value="2"/>
+		</property>
+
+		<property class="exhaust"> 
+				<property name="class" value="Exhaust"/>
+				<property name="parent_part" value="engine"/>
+				<property name="particle_transform" value="engine_small/MinibikeParticles/p_engine"/>
+		</property>
+
+		<property class="force0">
+			<property name="trigger" value="motor0"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0, 0"/>
+			<property name="ceiling" value="40, 40"/>
+		</property> 
+		
+		<property class="force1">
+			<property name="trigger" value="motor1"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0,.56"/>
+		</property> 
+
+		<property class="force2">
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0, 0"/>
+		</property>
+
+		<property class="force3">
+			<property name="trigger" value="inputStrafe"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value="0, .47, 0"/>
+		</property>
+
+		<property class="force4">
+			<property name="trigger" value="inputUp"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value="-.007, 0, 0"/> 
+		</property>
+
+		<property class="force5">
+			<property name="trigger" value="inputDown"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value=".007, 0, 0"/> 
+		</property>
+	
+		<property class="fuelTank">
+			<property name="class" value="FuelTank"/>
+			<property name="parent_part" value="engine"/>
+			<property name="capacity" value="200"/>
+		</property>
+	
+		<property class="handlebars">
+			<property name="class" value="Steering"/>
+			<property name="slot_type" value="handlebars"/>
+			<property name="mesh" value="handlebar"/>
+			<property name="transform" value="Origin/steering_joint"/>
+			<property name="steerMaxAngle" value="10"/>
+			<property name="IKHandLPosition" value="-.428, -.49, -.06"/>
+			<property name="IKHandRPosition" value=".428, -.49, -.06"/>
+			<property name="IKHandLRotation" value="37.55, -13.433, 0"/>
+			<property name="IKHandRRotation" value="37.55, 13.433, 0"/>
+		</property>
+
+		<property class="seat0">
+			<property name="class" value="Seat"/>
+			<property name="position" value=" 0 , 0.1 , .464"/>
+			<property name="rotation" value="-32 , 0,  0"/>
+			<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+			<property name="IKFootLPosition" value="-.31, .48, -.23"/>
+			<property name="IKFootLRotation" value="20, 0, 0"/>
+			<property name="IKFootRPosition" value=".31, .48, -.23"/>
+			<property name="IKFootRRotation" value="20, 0, 0"/>
+		</property>
+		
+		<property class="seat1">
+			<property name="class" value="Seat"/>
+			<property name="position" value=" 0 , .15 , -.26"/>
+			<property name="rotation" value="-21 , 0,  0"/>
+			<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+			<property name="mod" value="1"/>
+			<property name="IKHandLPosition" value="-.22, .47, 0.18"/>
+			<property name="IKHandLRotation" value="41, -30, 18"/>
+			<property name="IKHandRPosition" value=".22, .47, 0.18"/>
+			<property name="IKHandRRotation" value="41, 30, -18"/>
+		</property>
+		
+		<property class="wheel0">
+			<property name="steerTransform" value="Origin/frontLeftWheelStear_joint"/>
+			<property name="tireTransform" value="Origin/frontLeftWheelStear_joint/frontLeftWheel_joint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .8"/>
+		</property>
+
+		<property class="wheel1">
+			<property name="steerTransform" value="Origin/frontRightWheelStear_joint"/>
+			<property name="tireTransform" value="Origin/frontRightWheelStear_joint/frontRightWheel_joint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .8"/>
+		</property>
+
+		<property class="wheel2">
+			<property name="tireTransform" value="Origin/backLeftWheelJoint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, 1"/>
+		</property>
+
+		<property class="wheel3">
+			<property name="tireTransform" value="Origin/backRightWheelJoint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, 1"/>
+		</property>
+
+		<property class="headlight">
+			<property name="class" value="Headlight"/>
+			<property name="parent_part" value="chassis"/>
+			<property name="transform" value="Origin/headlight"/>
+			<property name="bright" value=".75"/>
+		</property>
+</vehicle>
+
+<vehicle name="vehicleWindSurfer">
+ 	<property name="cameraDistance" value="7.2, 7.2"/>
+	<property name="cameraTurnRate" value=".2, .35"/>
+	<property name="steerRate" value="140"/>
+	<property name="steerCenteringRate" value="70"/>
+	<property name="upAngleMax" value="10"/>
+	<property name="upForce" value="10"/>
+	<property name="downAngleMax" value="10"/>
+	<property name="downForce" value="10"/>
+	<property name="tiltAngleMax" value="1"/>
+	<property name="tiltThreshold" value=".3"/>
+	<property name="tiltDampening" value=".88"/>
+	<property name="tiltDampenThreshold" value="1"/>
+	<property name="tiltUpForce" value="2"/>
+	<property name="unstickForce" value="1"/>
+	<property name="airDrag_velScale_angVelScale" value=".956, .47"/>
+	<property name="waterLift_y_depth_force" value=".2, .4, .31"/>
+	<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+	<property name="waterY_VelMaxScale" value=".02, 9.3"/>
+			
+	<property name="hornSound" value="vehicle/minibike/minibike_horn"/>
+	
+	<property class="chassis">
+		<property name="class" value="Chassis"/>
+		<property name="display_name" value="chassis"/>
+		<property name="slot_type" value="chassis"/>
+		<property name="mesh" value="chassis"/>
+		<property name="transform" value="Origin"/>
+		<property name="part_damage_reduction" value="0.5"/>
+	</property>
+	
+		<property class="motor0">
+			<property name="engine" value="engine"/>
+			<property name="engineOffPer" value=".02"/>
+			<property name="rpmAccel_min_max" value="0.0001, .01"/>
+			<property name="rpmMax" value="4"/>
+			<property name="rpmDrag" value=".997"/>
+			<property name="trigger" value="relative"/>
+			<property name="type" value="spin"/> 
+			<property name="transform" value=""/>
+			<property name="axis" value="1"/>
+		</property>
+
+		<property class="motor1">
+			<property name="engine" value="engine"/>
+			<property name="turbo" value="1.35"/> 
+			<property name="rpmAccel_min_max" value="0.001, .1"/>
+			<property name="rpmMax" value="8"/>
+			<property name="rpmDrag" value=".993"/>
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="spin"/>
+			<property name="transform" value=""/>
+			<property name="axis" value="2"/>
+		</property>
+						
+		<property class="force0">
+			<property name="trigger" value="motor0"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0, 0"/>
+			<property name="ceiling" value="40, 40"/>
+		</property>
+		
+		<property class="force1"><!-- Speed Control -->
+			<property name="trigger" value="motor1"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0, .13"/> 
+		</property>
+
+		<property class="force2">
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0 ,0, .010"/>
+		</property>
+
+		<property class="force3">
+			<property name="trigger" value="inputStrafe"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value="0, .13, 0"/>
+		</property>
+
+		<property class="force4">
+			<property name="trigger" value="inputUp"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value="-.006, 0, 0"/>
+		</property>
+
+		<property class="force5">
+			<property name="trigger" value="inputDown"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value=".006, 0, 0"/>
+		</property>
+
+		<property class="handlebars">
+			<property name="class" value="Steering"/>
+			<property name="slot_type" value="handlebars"/>
+			<property name="transform" value="Origin/handlebar_joint"/>
+			<property name="steerMaxAngle" value="0"/>
+			<property name="IKHandLPosition" value="0.4205, 0.6422 , -0.0433"/> 
+			<property name="IKHandLRotation" value="62.50001, -26.92984, -12.41"/>
+			<property name="IKHandRPosition" value="0.4205, 0.4422, -0.0433"/>
+			<property name="IKHandRRotation" value="52.90001, 8.37004, 6.400046"/>
+			</property>
+			 
+		<property class="seat0">
+			<property name="position" value=" 0.1, 0.04, -.52"/>
+			<property name="rotation" value="-29 , 80,  -11"/>
+			<property name="exit" value="1.6,0,0 ~ 1.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>	
+		
+		<property class="wheel0">
+			<property name="steerTransform" value="Origin/frontLeftWheelStear_joint"/>
+			<property name="tireSuspensionPercent" value=".1"/>
+			<property name="torqueScale_motor_brake" value="1, .8"/>
+		</property>
+
+		<property class="wheel1">
+			<property name="steerTransform" value="Origin/frontRightWheelStear_joint"/>
+			<property name="tireSuspensionPercent" value=".1"/>
+			<property name="torqueScale_motor_brake" value="1, .8"/>
+		</property>
+
+		<property class="wheel2">
+			<property name="tireSuspensionPercent" value=".1"/>
+			<property name="torqueScale_motor_brake" value="1, 1"/>
+		</property>
+
+		<property class="wheel3">
+			<property name="tireSuspensionPercent" value=".1"/>
+			<property name="torqueScale_motor_brake" value="1, 1"/>
+		</property>
+		
+		<property class="headlight">
+			<property name="class" value="Headlight"/>
+			<property name="parent_part" value="chassis"/>
+			<property name="transform" value="Origin/headlight"/>
+			<property name="bright" value=".95"/>
+		</property>
+</vehicle>
+
+<vehicle name="TFPRaft">
+		<property name="cameraDistance" value="7, 8"/>
+		<property name="cameraTurnRate" value=".5, .65"/>
+		<property name="steerRate" value="130"/>
+		<property name="steerCenteringRate" value="90"/>
+		<property name="upAngleMax" value="10"/>
+		<property name="upForce" value="10"/>
+		<property name="downAngleMax" value="10"/>
+		<property name="downForce" value="10"/>
+		<property name="tiltAngleMax" value="1"/>
+		<property name="tiltThreshold" value=".3"/>
+		<property name="tiltDampening" value=".88"/>
+		<property name="tiltDampenThreshold" value="1"/>
+		<property name="tiltUpForce" value="5"/>
+		<property name="unstickForce" value="0"/>
+		<property name="airDrag_velScale_angVelScale" value=".929, .97"/>
+		<property name="waterLift_y_depth_force" value=".4, .54, .3"/>
+		<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+		<property name="waterY_VelMaxScale" value=".001, .0001"/>
+		
+		<property name="hornSound" value="vehicle/minibike/minibike_horn"/>
+
+		<property class="chassis">
+			<property name="class" value="Chassis"/>
+			<property name="display_name" value="chassis"/>
+			<property name="slot_type" value="chassis"/>
+			<property name="mesh" value="chassis"/>
+			<property name="transform" value="Origin"/>
+		</property>
+		
+		<property class="handlebars">
+			<property name="parent_part" value="chassis"/>
+			<property name="class" value="Steering"/>
+			<property name="slot_type" value="handlebars"/>
+			<property name="transform" value="Origin/steering_joint"/>
+			<property name="IKHandLPosition" value="0, .11, -1"/>
+			<property name="IKHandLRotation" value="45, 110,0"/>
+			<property name="IKHandRPosition" value="9,-.05, -5"/>
+			<property name="IKHandRRotation" value="0,90,0"/>
+		</property>
+
+		<property class="seat0">
+			<property name="position" value="-.32, 0.1, -1.31"/>
+			<property name="rotation" value="-34, 80, 0 "/>
+			<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+				
+		<property class="seat1">
+			<property name="position" value="0, 0, 2.4"/> <!--Pass1 Front-->
+			<property name="rotation" value=" -34, 0, 0 "/>
+			<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+						
+		<property class="seat2">
+			<property name="position" value="-2.5, 0, 0.1"/> <!--Side-->
+			<property name="rotation" value=" -34, -90, 0 "/>
+			<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+		
+		<property class="seat3">
+			<property name="position" value="2.5, 0, 0.1"/> <!--Side-->
+			<property name="rotation" value=" -34, 90, 0 "/>
+			<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+				
+		<property class="motor0">
+			<property name="engine" value="engine"/>
+			<property name="engineOffPer" value=".02"/>
+			<property name="rpmAccel_min_max" value="0.0001, .01"/>
+			<property name="rpmMax" value="8"/>
+			<property name="rpmDrag" value=".993"/>
+			<property name="trigger" value="relative"/>
+			<property name="type" value="spin"/> 
+			<property name="transform" value="Origin/TopPropellerJoint"/>
+			<property name="axis" value="1"/>
+		</property>
+
+		<property class="motor1">
+			<property name="engine" value="engine"/>
+			<property name="turbo" value="1.35"/> 
+			<property name="rpmAccel_min_max" value="0.001, .1"/>
+			<property name="rpmMax" value="8"/>
+			<property name="rpmDrag" value=".993"/>
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="spin"/>
+			<property name="transform" value="Origin/BackPropellerJoint"/>
+			<property name="axis" value="2"/>
+		</property>
+						
+		<property class="force0">
+			<property name="trigger" value="motor0"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0, 0"/>
+			<property name="ceiling" value="35, 38"/>
+		</property>
+		
+		<property class="force1">
+			<property name="trigger" value="motor1"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0, .17"/>
+		</property>
+
+		<property class="force2">
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0 ,0, .004"/>
+		</property>
+
+		<property class="force3">
+			<property name="trigger" value="inputStrafe"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value="0, .008, 0"/>
+		</property>
+
+		<property class="force4">
+			<property name="trigger" value="inputUp"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value="-.0012, 0, 0"/>
+		</property>
+
+		<property class="force5">
+			<property name="trigger" value="inputDown"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value=".0012, 0, 0"/>
+		</property> 
+				
+		<property class="wheel0">
+			<property name="parent_part" value="chassis"/>
+			<property name="steerTransform" value="Origin/frontLeftWheelStear_joint"/>
+			<property name="tireTransform" value="Origin/frontLeftWheelStear_joint/frontLeftWheel_joint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .18"/>
+		</property>
+
+		<property class="wheel1">
+			<property name="parent_part" value="chassis"/>
+			<property name="steerTransform" value="Origin/frontRightWheelStear_joint"/>
+			<property name="tireTransform" value="Origin/frontRightWheelStear_joint/frontRightWheel_joint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .18"/>
+		</property>
+
+		<property class="wheel2">
+			<property name="parent_part" value="chassis"/>
+			<property name="tireTransform" value="Origin/backLeftWheelJoint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .1"/>
+		</property>
+
+		<property class="wheel3">
+			<property name="parent_part" value="chassis"/>
+			<property name="tireTransform" value="Origin/backRightWheelJoint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .1"/>
+		</property>
+
+		<property class="storage">
+			<property name="class" value="Storage"/>
+			<property name="display_name" value="basket"/>
+			<property name="slot_type" value="basket"/>
+			<property name="mesh" value="basket"/>
+			<property name="transform" value="basket"/>
+			<property name="parent_part" value="chassis"/>
+		</property>
+
+</vehicle>
+</append>
+
+<append xpath="/vehicles">
+	<vehicle name="vehicleFanBoat">
+ 	<property name="cameraDistance" value="8, 8"/>
+	<property name="cameraTurnRate" value=".2, .35"/>
+	<property name="steerRate" value="150"/>
+	<property name="steerCenteringRate" value="70"/>
+	<property name="upAngleMax" value="10"/>
+	<property name="upForce" value="40"/>
+	<property name="downAngleMax" value="10"/>
+	<property name="downForce" value="20"/>
+	<property name="tiltAngleMax" value=".5"/>
+	<property name="tiltThreshold" value=".4"/>
+	<property name="tiltDampening" value=".22"/>
+	<property name="tiltDampenThreshold" value=".35"/>
+	<property name="tiltUpForce" value="5"/>
+	<property name="unstickForce" value="1"/>
+	<property name="airDrag_velScale_angVelScale" value=".929, .97"/>
+	<property name="waterLift_y_depth_force" value=".2, .82 , .3"/>
+	<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+	<property name="waterY_VelMaxScale" value="5, .05"/>
+	
+	<property name="hornSound" value="StrangeHorn"/>
+	
+	<property class="chassis">
+			<property name="class" value="Chassis"/>
+			<property name="display_name" value="chassis"/>
+			<property name="slot_type" value="chassis"/>
+			<property name="mesh" value="chassis"/>
+			<property name="transform" value="Origin"/>
+			<property name="paint" value="car_mesh"/>
+		</property>
+
+	<property class="engine">
+			<property name="class" value="Engine"/>
+			<property name="slot_type" value="engine"/>
+			<property name="fuelKmPerL" value="0.2"/>
+			<property name="foodDrain" value=".002,.00811"/><!-- driving/turbo, gyro -->
+			<property name="particle_transform" value="engine_small/MinibikeParticles/p_engine_fire"/>
+			<property name="gear1" value="
+								500,2500, -1400,800,0, 700,2200,900,
+								Vehicles/FanBoat_accel1,
+								FanBoat_decel1,
+								0, .7, 1, .1, -9, .12, .1, Vehicles/FanBoat_idle_lp,
+								-.4, -.02, .7, .7, -.2, 9, .2, Vehicles/FanBoat_max_speed_lp
+								"/>
+			<property name="gear2" value="
+								500,2500, -2000,1000,2000, 600,2200,800,
+								Vehicles/FanBoat_accel2,
+								FanBoat_decel1,
+								-.25, -.05, .2, .4, -1, 1, .1, Vehicles/FanBoat_max_speed_lp
+								"/>
+			<property name="gear3" value="
+								500,2500, -2000,1000,2000, 500,2200,1000,
+								Vehicles/FanBoat_accel3,
+								FanBoat_decel2,
+								-.28, -.07, .3, .6, -1, 1, .1, Vehicles/FanBoat_max_speed_lp
+								"/>
+			<property name="gear4" value="
+								500,2500, -2000,1000,2000, 500,9999,9999,
+								,
+								FanBoat_decel2,
+								-.31, -.08, .6, .9, -1, 1, .1, Vehicles/FanBoat_max_speed_lp
+								"/>
+			<property name="sound_start" value="Vehicles/FanBoat_Startup"/>
+			<property name="sound_shut_off" value="Vehicles/Gyrocopter/gyrocopter_shutoff"/>
+			<property name="sound_no_fuel_shut_off" value="Vehicles/Gyrocopter/gyrocopter_sputter"/>
+		</property>
+		
+		<property class="exhaust"> 
+				<property name="class" value="Exhaust"/>
+				<property name="parent_part" value="engine"/>
+				<property name="particle_transform" value="engine_small/MinibikeParticles/p_engine"/>
+		</property>
+		
+		<property class="fuelTank">
+			<property name="class" value="FuelTank"/>
+			<property name="parent_part" value="engine"/>
+			<property name="capacity" value="600"/>
+		</property>
+
+		<property class="handlebars">
+			<property name="class" value="Steering"/>
+			<property name="slot_type" value="handlebars"/>
+			<property name="mesh" value="handlebar"/>
+			<property name="transform" value="Origin/steering_joint"/>
+			<property name="steerMaxAngle" value="7"/>
+			<property name="IKHandLPosition" value="-.63, -.51, -.11"/>
+			<property name="IKHandRPosition" value=".63, -.51, -.82"/>
+			<property name="IKHandLRotation" value="45, -65, 0"/> 
+			<property name="IKHandRRotation" value="55, 0, 0"/>
+		</property>
+		
+		<property class="seat0">
+			<property name="position" value=" -.52, .3, 2.2"/>
+			<property name="rotation" value="-39, 0,  0"/>
+			<property name="exit" value="0,4,0 ~ 0,4,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>	
+		
+		<property class="seat1">
+			<property name="position" value=" .52, .3, 2.2"/>
+			<property name="rotation" value="-39, 0,  0"/>
+			<property name="exit" value="0,4,0 ~ 0,4,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+		
+		<property class="seat2">
+			<property name="position" value=" -.52, .3, 1.2"/>
+			<property name="rotation" value="-39, 0,  0"/>
+			<property name="exit" value="0,4,0 ~ 0,4,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+		
+		<property class="seat3">
+			<property name="position" value=" .52, .3, 1.2"/>
+			<property name="rotation" value="-39, 0,  0"/>
+			<property name="exit" value="0,4,0 ~ 0,4,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+		
+		<property class="seat4">
+			<property name="position" value=" -.52, .3, 0"/>
+			<property name="rotation" value="-39, 0,  0"/>
+			<property name="exit" value="0,4,0 ~ 0,4,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+		
+		<property class="seat5">
+			<property name="position" value=" .52, .3, 0"/>
+			<property name="rotation" value="-39, 0,  0"/>
+			<property name="exit" value="0,4,0 ~ 0,4,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+	
+		<property class="motor0">
+			<property name="engine" value="engine"/>
+			<property name="engineOffPer" value=".02"/>
+			<property name="rpmAccel_min_max" value="0.0001, .01"/>
+			<property name="rpmMax" value="4"/>
+			<property name="rpmDrag" value=".997"/>
+			<property name="trigger" value="relative"/>
+			<property name="type" value="spin"/> 
+			<property name="axis" value="1"/>
+		</property>
+
+		<property class="motor1">
+			<property name="engine" value="engine"/>
+			<property name="turbo" value="1.35"/> 
+			<property name="rpmAccel_min_max" value="0.001, .1"/>
+			<property name="rpmMax" value="8"/>
+			<property name="rpmDrag" value=".993"/>
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="spin"/>
+			<property name="transform" value="Origin/BoatPropeller_Joint"/>
+			<property name="axis" value="2"/>
+		</property>
+		
+		<property class="force0">
+			<property name="trigger" value="motor0"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0 , 0"/>
+			<property name="ceiling" value="40, 40"/>
+		</property>
+		
+		<property class="force1">
+			<property name="trigger" value="motor1"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0, 0, .6"/>
+		</property>
+
+		<property class="force2">
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="relative"/>
+			<property name="force" value="0 ,0, .001"/>
+		</property>
+
+		<property class="force3">
+			<property name="trigger" value="inputStrafe"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value="0, .017, 0"/>
+		</property>
+
+		<property class="force4">
+			<property name="trigger" value="inputUp"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value="-.003, 0, 0"/>
+		</property>
+
+		<property class="force5">
+			<property name="trigger" value="inputDown"/>
+			<property name="type" value="relativeTorque"/>
+			<property name="force" value=".003, 0, 0"/>
+		</property> 
+		
+		<property class="wheel0">
+			<property name="steerTransform" value="Origin/handlebar_joint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .1"/>
+		</property>
+
+		<property class="wheel1">
+			<property name="steerTransform" value="Origin/handlebar_joint"/>
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .1"/>
+		</property>
+   
+		<property class="wheel2">
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .1"/>
+		</property>
+
+		<property class="wheel3">
+			<property name="tireSuspensionPercent" value="1"/>
+			<property name="torqueScale_motor_brake" value="1, .1"/>
+		</property>
+
+		<property class="headlight">
+			<property name="class" value="Headlight"/>
+			<property name="transform" value="Origin/headlight"/>
+			<property name="bright" value=".75"/>
+		</property>
+
+		<property class="storage">
+			<property name="class" value="Storage"/>
+			<property name="display_name" value="basket"/>
+			<property name="slot_type" value="basket"/>
+			<property name="mesh" value="basket"/>
+			<property name="transform" value="basket"/>
+			<property name="parent_part" value="chassis"/>
+		</property>
+	</vehicle>
+</append>
+
+<!-- Bdub Vehicle Update -->
+<!-- <set xpath="/vehicles/vehicle[@name='vehicleBoxTruckPlain']/property[@name='motorTorque']/@value">1500, 550</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBoxTruckPlain']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBoxTruckPlain']/property[@name='velocityMax']/@value">9, 7</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBoxTruckPlain']/property[@name='brakeTorque']/@value">6000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleBoxTruckHostess']/property[@name='motorTorque']/@value">1500, 550</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBoxTruckHostess']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBoxTruckHostess']/property[@name='velocityMax']/@value">9, 7</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBoxTruckHostess']/property[@name='brakeTorque']/@value">6000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleBRDM2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBRDM2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBRDM2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBRDM2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleBRDM2desert']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBRDM2desert']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBRDM2desert']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBRDM2desert']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleBuggy']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBuggy']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBuggy']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleBuggy']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargerblack']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerblack']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerblack']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerblack']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargerblack2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerblack2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerblack2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerblack2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargerorange']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerorange']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerorange']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerorange']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargerorange2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerorange2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerorange2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerorange2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargeryellow']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargeryellow']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargeryellow']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargeryellow']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargeryellow2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargeryellow2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargeryellow2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargeryellow2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargergreen']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargergreen']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargergreen']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargergreen']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargergreen2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargergreen2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargergreen2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargergreen2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargerteal']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerteal']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerteal']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerteal']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargerteal2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerteal2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerteal2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerteal2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargerrust']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerrust']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerrust']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerrust']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleChargerrust2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerrust2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerrust2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleChargerrust2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleCruiser']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleCruiser']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleCruiser']/property[@name='velocityMax']/@value">15, 12</set>
+<set xpath="/vehicles/vehicle[@name='vehicleCruiser']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleCruiser2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleCruiser2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleCruiser2']/property[@name='velocityMax']/@value">15, 12</set>
+<set xpath="/vehicles/vehicle[@name='vehicleCruiser2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleDirtBike']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleDirtBike']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleDirtBike']/property[@name='velocityMax']/@value">15, 12</set>
+<set xpath="/vehicles/vehicle[@name='vehicleDirtBike']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleDuster']/property[@name='motorTorque']/@value">500, 100</set>
+<set xpath="/vehicles/vehicle[@name='vehicleDuster']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleDuster']/property[@name='velocityMax']/@value">15, 15</set>
+<set xpath="/vehicles/vehicle[@name='vehicleDuster']/property[@name='brakeTorque']/@value">200</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleGNXBlack']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGNXBlack']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGNXBlack']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGNXBlack']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleGNXRed']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGNXRed']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGNXRed']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGNXRed']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleGolfCart']/property[@name='motorTorque']/@value">1000, 800</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGolfCart']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGolfCart']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleGolfCart']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod1']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod1']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod1']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod1']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod3']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod3']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod3']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod3']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod4']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod4']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod4']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod4']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod5']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod5']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod5']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod5']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod6']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod6']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod6']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHotRod6']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleHumvee']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHumvee']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHumvee']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHumvee']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleHumveeTopless']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHumveeTopless']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHumveeTopless']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleHumveeTopless']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleJunker']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleJunker']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleJunker']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleJunker']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleJunker2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleJunker2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleJunker2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleJunker2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleLMTV']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleLMTV']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleLMTV']/property[@name='velocityMax']/@value">13, 10</set>
+<set xpath="/vehicles/vehicle[@name='vehicleLMTV']/property[@name='brakeTorque']/@value">2000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleMarauder']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMarauder']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMarauder']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMarauder']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleMarauderblack']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMarauderblack']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMarauderblack']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMarauderblack']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleMD500']/property[@name='motorTorque']/@value">1400, 200</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMD500']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMD500']/property[@name='velocityMax']/@value">30, 30</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMD500']/property[@name='brakeTorque']/@value">40</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleMRAP']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMRAP']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMRAP']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMRAP']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleMRAP2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMRAP2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMRAP2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleMRAP2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleNova']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNova']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNova']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNova']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleNovared']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNovared']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNovared']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNovared']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleNovablack']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNovablack']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNovablack']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleNovablack']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleOldSemi']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleOldSemi']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleOldSemi']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleOldSemi']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehiclePickup']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehiclePickup']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehiclePickup']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehiclePickup']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleRat']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleRat']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleRat']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleRat']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleRat2']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleRat2']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleRat2']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleRat2']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleSHERP']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleSHERP']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleSHERP']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleSHERP']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleStalliongreen']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStalliongreen']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStalliongreen']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStalliongreen']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleStallionred']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionred']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionred']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionred']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleStallionblue']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionblue']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionblue']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionblue']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleStallionwhite']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionwhite']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionwhite']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleStallionwhite']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleUAZ452']/property[@name='motorTorque']/@value">2000, 900</set>
+<set xpath="/vehicles/vehicle[@name='vehicleUAZ452']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleUAZ452']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleUAZ452']/property[@name='brakeTorque']/@value">3000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleUH60']/property[@name='motorTorque']/@value">1500, 550</set>
+<set xpath="/vehicles/vehicle[@name='vehicleUH60']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleUH60']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleUH60']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeep']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeep']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeep']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeep']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepTopless']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepTopless']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepTopless']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepTopless']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepBlack']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepBlack']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepBlack']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepBlack']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessBlack']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessBlack']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessBlack']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessBlack']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepBlue']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepBlue']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepBlue']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepBlue']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessBlue']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessBlue']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessBlue']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessBlue']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepGreen']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepGreen']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepGreen']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepGreen']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepOrange']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepOrange']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepOrange']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepOrange']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessOrange']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessOrange']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessOrange']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessOrange']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepPurple']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepPurple']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepPurple']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepPurple']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessPurple']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessPurple']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessPurple']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessPurple']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepRed']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepRed']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepRed']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepRed']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessRed']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessRed']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessRed']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWillyJeepToplessRed']/property[@name='brakeTorque']/@value">7000</set>
+
+<set xpath="/vehicles/vehicle[@name='vehicleWorkTruck']/property[@name='motorTorque']/@value">2000, 1050</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWorkTruck']/property[@name='turboScale']/@value">2, 1</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWorkTruck']/property[@name='velocityMax']/@value">10, 8</set>
+<set xpath="/vehicles/vehicle[@name='vehicleWorkTruck']/property[@name='brakeTorque']/@value">7000</set> -->
+</config>

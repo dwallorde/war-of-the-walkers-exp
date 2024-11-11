@@ -1,0 +1,386 @@
+<configs>
+
+<append xpath="nav_object_classes">
+	<nav_object_class name="MotorBoat" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+			<compass_settings>
+				<property name="sprite_name" value="MotorBoat"/>
+			</compass_settings>
+			<onscreen_settings>
+				<property name="sprite_name" value="MotorBoat"/>
+			</onscreen_settings>
+	</nav_object_class>
+	
+	<nav_object_class name="JetSki" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+			<compass_settings>
+				<property name="sprite_name" value="JetSki_UI"/>
+			</compass_settings>
+			<onscreen_settings>
+				<property name="sprite_name" value="JetSki_UI"/>
+			</onscreen_settings>
+	</nav_object_class>
+	
+	<nav_object_class name="Fanboat">
+		<property name="requirement_type" value="IsVehicleOwner" />
+
+		<compass_settings>
+			<property name="sprite_name" value="Fanboat_UI"/>
+			<property name="min_distance" value="0"/>
+			<property name="max_distance" value="-1"/>
+			<property name="max_scale_distance" value="1024"/>
+			<property name="color" value="0,0,255,255"/>
+			<property name="has_pulse" value="true"/>
+			<property name="icon_clamped" value="false" />
+		</compass_settings>
+
+		<onscreen_settings>
+			<property name="sprite_name" value="Fanboat_UI"/>
+			<property name="min_distance" value="0"/>
+			<property name="max_distance" value="20"/>
+			<property name="max_scale_distance" value="64"/>
+			<property name="color" value="255,255,0,255"/>
+			<property name="has_pulse" value="false"/>
+		</onscreen_settings>
+	</nav_object_class>
+	
+		<nav_object_class name="zombietracking_zombie" extends="animaltracking_hostile">
+			<property name="requirement_type" value="Tracking" />
+			<property name="use_override_icon" value="true" />
+			
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie01"/>
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie02"/>
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie03"/>
+				<property name="offset" value="0,1.75,0"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="zombietracking_horde" extends="animaltracking_hostile">
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie01"/>
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie02"/>
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie03"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="64"/>
+				<property name="color" value="255,255,255,255"/>
+				<property name="use_head_offset" value="true"/>
+				<property name="offset" value="0,1,0" />
+				<property name="sprite_size" value="48" />
+				<property name="sprite_fill_type" value="Health" />
+				<property name="sprite_fill_name" value="ui_game_symbol_twitch_overhead_hp_ring" />
+				<property name="sprite_fill_color" value="0,0,250,255" />
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="zombietracking_horde2" extends="animaltracking_hostile">
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie01"/>
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie02"/>
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie03"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="64"/>
+				<property name="color" value="255,255,255,255"/>
+				<property name="use_head_offset" value="true"/>
+				<property name="offset" value="0,1,0" />
+				<property name="sprite_size" value="48" />
+				<property name="sprite_fill_type" value="Health" />
+				<property name="sprite_fill_name" value="ui_game_symbol_twitch_overhead_hp_ring" />
+				<property name="sprite_fill_color" value="250,187,0,255" />
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="zombietracking_horde3" extends="animaltracking_hostile">
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie01"/>
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie02"/>
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie03"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="64"/>
+				<property name="color" value="255,255,255,255"/>
+				<property name="use_head_offset" value="true"/>
+				<property name="offset" value="0,1,0" />
+				<property name="sprite_size" value="48" />
+				<property name="sprite_fill_type" value="Health" />
+				<property name="sprite_fill_name" value="ui_game_symbol_twitch_overhead_hp_ring" />
+				<property name="sprite_fill_color" value="250,0,0,255" />
+			</onscreen_settings>
+		</nav_object_class>
+</append>
+
+<append xpath="nav_object_classes">
+		<nav_object_class name="MotorBoatUI" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+			<compass_settings>
+				<property name="sprite_name" value="MotorBoatUI"/>
+			</compass_settings>
+			<onscreen_settings>
+				<property name="sprite_name" value="MotorBoatUI"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="flareGeneralSupply">
+
+			<map_settings>
+				<property name="sprite_name" value="flareGeneralSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="-1"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+			</map_settings>
+
+			<compass_settings>
+				<property name="sprite_name" value="flareGeneralSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="4096"/>
+				<property name="max_scale_distance" value="1024"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false" />
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="flareGeneralSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="500"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="text_type" value="Distance"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="flareBuildingSupply">
+
+			<map_settings>
+				<property name="sprite_name" value="flareBuildingSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="-1"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+			</map_settings>
+
+			<compass_settings>
+				<property name="sprite_name" value="flareBuildingSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="4096"/>
+				<property name="max_scale_distance" value="1024"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false" />
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="flareBuildingSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="500"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="text_type" value="Distance"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="flareHealthandArmorSupply">
+
+			<map_settings>
+				<property name="sprite_name" value="flareHealthandArmorSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="-1"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+			</map_settings>
+
+			<compass_settings>
+				<property name="sprite_name" value="flareHealthandArmorSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="4096"/>
+				<property name="max_scale_distance" value="1024"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false" />
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="flareHealthandArmorSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="500"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="text_type" value="Distance"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="flareFoodandDrinkSupply">
+
+			<map_settings>
+				<property name="sprite_name" value="flareFoodandDrinkSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="-1"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+			</map_settings>
+
+			<compass_settings>
+				<property name="sprite_name" value="flareFoodandDrinkSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="4096"/>
+				<property name="max_scale_distance" value="1024"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false" />
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="flareFoodandDrinkSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="500"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="text_type" value="Distance"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="flareAmmoSupply">
+
+			<map_settings>
+				<property name="sprite_name" value="flareAmmoSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="-1"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+			</map_settings>
+
+			<compass_settings>
+				<property name="sprite_name" value="flareAmmoSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="4096"/>
+				<property name="max_scale_distance" value="1024"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false" />
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="flareAmmoSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="500"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="text_type" value="Distance"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="flareSmallWeaponsSupply">
+
+			<map_settings>
+				<property name="sprite_name" value="flareSmallWeaponsSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="-1"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+			</map_settings>
+
+			<compass_settings>
+				<property name="sprite_name" value="flareSmallWeaponsSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="4096"/>
+				<property name="max_scale_distance" value="1024"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false" />
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="flareSmallWeaponsSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="500"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="text_type" value="Distance"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="flareMediumWeaponSupply">
+
+			<map_settings>
+				<property name="sprite_name" value="flareMediumWeaponSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="-1"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+			</map_settings>
+
+			<compass_settings>
+				<property name="sprite_name" value="flareMediumWeaponSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="4096"/>
+				<property name="max_scale_distance" value="1024"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false" />
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="flareMediumWeaponSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="500"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="text_type" value="Distance"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="flareLargeWeaponsSupply">
+
+			<map_settings>
+				<property name="sprite_name" value="flareLargeWeaponsSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="-1"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+			</map_settings>
+
+			<compass_settings>
+				<property name="sprite_name" value="flareLargeWeaponsSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="4096"/>
+				<property name="max_scale_distance" value="1024"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false" />
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="flareLargeWeaponsSupply"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="500"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="text_type" value="Distance"/>
+			</onscreen_settings>
+		</nav_object_class>
+</append>
+</configs>

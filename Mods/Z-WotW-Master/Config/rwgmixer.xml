@@ -1,0 +1,77 @@
+<config>
+
+<append xpath="/rwgmixer">
+	<prefab_spawn_adjust partial_name="wotw_Settlement_ClassStore" biomeTags="wasteland" bias="20" min_count="2" max_count="4"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderLand" biomeTags="snow" bias="20" min_count="2" max_count="4"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderBob" biomeTags="desert" bias="20" min_count="2" max_count="4"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderBob2" biomeTags="desert" bias="20" min_count="2" max_count="4"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderHugh" biomeTags="snow" bias="20" min_count="2" max_count="4"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJen" biomeTags="burntforest" bias="20" min_count="2" max_count="4"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJen2" biomeTags="burntforest" bias="20" min_count="2" max_count="4"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJoel" biomeTags="wasteland" bias="20" min_count="2" max_count="4"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderRekt" biomeTags="forest" bias="20" min_count="2" max_count="4"/>
+</append>
+
+<!-- <set xpath="/rwgmixer/world[@name='medium']/property[@name='world_size']/@value">8000,10000</set> -->
+
+<!-- <set xpath="/rwgmixer/world[@name='medium']/property[@class='rivers']/property[@name='scale']/@value">2,3.5</set>
+
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='oldwest']/property[@name='few']/@value">1</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='oldwest']/property[@name='default']/@value">2</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='oldwest']/property[@name='many']/@value">3</set>
+
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='countrytown']/property[@name='few']/@value">4</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='countrytown']/property[@name='default']/@value">5</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='countrytown']/property[@name='many']/@value">6</set>
+
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='few']/@value">3</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='default']/@value">5</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='many']/@value">7</set>
+
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='mintiles']/@value">10</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='maxtiles']/@value">12</set>
+
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='few']/@value">4</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='default']/@value">6</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='many']/@value">8</set>
+
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='mintiles']/@value">18</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='maxtiles']/@value">22</set> -->
+
+<!-- <set xpath="/rwgmixer/world[@name='large']/property[@name='world_size']/@value">13000,16000</set> -->
+
+<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='rivers']/property[@name='scale']/@value">4,7</set> -->
+<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='rivers']/property[@name='few']/@value">3</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='rivers']/property[@name='default']/@value">6</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='rivers']/property[@name='many']/@value">12</set> -->
+
+<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='lakes']/property[@name='scale']/@value">4,8</set> -->
+<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='lakes']/property[@name='few']/@value">3</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='lakes']/property[@name='default']/@value">4</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='lakes']/property[@name='many']/@value">6</set> -->
+
+<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='oldwest']/property[@name='few']/@value">2</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='oldwest']/property[@name='default']/@value">3</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='oldwest']/property[@name='many']/@value">4</set>
+
+<set xpath="/rwgmixer/world[@name='large']/property[@class='countrytown']/property[@name='few']/@value">3</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='countrytown']/property[@name='default']/@value">5</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='countrytown']/property[@name='many']/@value">6</set>
+
+<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='few']/@value">6</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='default']/@value">7</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='many']/@value">8</set>
+
+<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='mintiles']/@value">10</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='maxtiles']/@value">14</set>
+
+<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='few']/@value">8</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='default']/@value">10</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='many']/@value">11</set>
+
+<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='mintiles']/@value">20</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='maxtiles']/@value">24</set>
+
+<set xpath="/rwgmixer/district[@name='industrial']/property[@name='district_spawn_weight']/@value">0.6</set> -->
+
+</config>

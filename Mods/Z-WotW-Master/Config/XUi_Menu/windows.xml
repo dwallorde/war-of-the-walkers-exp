@@ -1,0 +1,292 @@
+<config>
+<append xpath="/windows/window[@name='mainMenu']">
+	<rect name="wotwmenu_version_control">
+		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Exp Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
+		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.1.1.0" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
+	</rect>
+	<rect name="npcmenu_background">
+		<!-- <texture depth="2" color="[white]" texture="@modfolder(WaroftheWalkersMod):Textures\Menu\wotw_POWERED_LOGO.png" name="npcModLogo" pos="1375,350" size="1200,158" pivot="bottomright" keep_aspect_ratio="BasedOnHeight" aspect_ratio="1.8" /> -->
+		<texture depth="2" color="[white]" texture="@modfolder(WaroftheWalkersMod):Textures\Menu\wotw_POWERED_LOGO.png" name="npcModLogo" pos="1375,400" size="500,100" pivot="bottomright" />
+	</rect>
+</append>
+
+<append xpath="/windows">
+	<window name="btnDiscord" controller="ServerInfo" anchor="CenterCenter" pos="-100,475">
+		<panel name="header" pos="0,0" height="0" depth="3" backgroundspritename="ui_game_panel_header" bordercolor="[transparent]" borderthickness="0" >
+			<texture name="ItemBackground" depth="2" size="75, 75" texture="@modfolder(WaroftheWalkersMod):Textures\Menu\discord-logo.png" pos="0,0" />
+			<label name="ServerDescription" />
+			<label depth="1" pos="0,-20" height="75" width="75" name="ServerWebsiteURL" text="https://discord.gg/bQdP6cH" justify="center" style="press, hover" font_size="40" upper_case="false" />
+		</panel>
+	</window>
+</append>
+
+<set xpath="/windows/window[@name='mainMenuLogo']/texture/@texture">@modfolder(WaroftheWalkersMod):Textures\Menu\wwmenulogo.png</set>
+<set xpath="/windows/window[@name='mainMenuLogo']/texture/@anchor_left">#cam,0,140</set>
+<set xpath="/windows/window[@name='mainMenuLogo']/texture/@anchor_bottom">#cam,0.25,150</set>
+<set xpath="/windows/window[@name='mainMenuLogo']/texture/@anchor_right">#cam,0.0125,675</set>
+<set xpath="/windows/window[@name='mainMenuLogo']/texture/@anchor_top">#cam,0.5,450</set>
+<set xpath="/windows/window[@name='mainMenuLogo']/texture/@aspect_ratio">1.8</set>
+
+<append xpath="/windows/window[@name='loadingScreen']">
+							<texture name="wotwPopOutArt" depth="10" pos="0,325" width="293" height="358" pivot="center" texture="@modfolder(WaroftheWalkersMod):Textures/Menu/wwloadinglogo.png" />
+</append>
+
+<remove xpath="/windows/window[@name='loadingScreen']/texture[@name='smxMumpfyTag']"/>
+
+<append xpath="/windows">
+		
+	<window name="WOTWnewContinueGame" pos="0,400" width="1185" height="780" anchor="CenterCenter" controller="NewContinueGame" cursor_area="true">
+
+		<texture name="bgTexture" depth="0" texture="Textures/UI/news_background" color="255,255,255,240" anchor_left="#cam,0,-5" anchor_right="#cam,1,5" anchor_bottom="#cam,0,-5" anchor_top="#cam,1,5" />
+
+		<sprite name="smx_window_top_background" depth="1" pos="0,118" width="1844" height="57" sprite="smx_title_background" flip="vertically" color="7,7,7,500" anchor_left="#cam,0,-5" anchor_right="#cam,1,5" />
+		<sprite name="smx_window_top_separator" depth="2" pos="0,70" width="1844" height="3" sprite="smx_sepline_1" flip="vertically" color="255,255,255,500" anchor_left="#cam,0,-5" anchor_right="#cam,1,5" />
+		<sprite name="smx_window_top_title_background" depth="4" pos="0,90" width="415" height="88" pivot="center" sprite="smx_button_background" color="175,30,25,500" />
+
+		<label name="windowheader" depth="5" pos="0,85" size="1000,40" pivot="center" style="smx_label_normal" text_key="xuiNewContinueGame" font_size="42" justify="center" upper_case="true" overflow="ShrinkContent" />
+
+		<sprite name="smx_menu_separation" depth="2" pos="-610,-750" width="301" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+		<sprite name="smx_menu_separation" depth="2" pos="610,-750" width="301" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" visible="{isnewgame}" />
+
+		<rect name="leftPanel" pos="-600,-50" height="650" width="590" >
+			<rect name="newContent" visible="{isnewgame}">
+
+				<sprite name="smx_panel_background" depth="1" pos="-40,0" width="650" pivot="center" sprite="smx_menu_background" type="sliced" color="7,7,7,219" anchor_top="#cam,0.5,467" anchor_bottom="#cam,0.5,-600" />
+
+				<rect pos="-340,-40">
+
+					<label name="newWorldSelect" depth="4" pos="315,70" width="590" height="50" pivot="center" style="smx_label_outline" text="New World Selection" font_size="50" spacing_x="2" justify="center" upper_case="true" color="255,255,255,255" visible="{isnewgame}" />
+					<sprite name="smx_panel_separation" depth="4" pos="320,25" width="500" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+
+					<grid pos="150,-93" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
+						<rect>
+							<label name="gameName" depth="4" width="250" height="30" pivot="center" style="smx_label_outline, hover" text_key="goGameName" font_size="24" justify="right" color="255,255,255,255" tooltip_key="goGameNameDesc" />
+							<smx_textfield_default name="txtGameName" depth="5" pos="289,0" width="232" height="32" pivot="center" on_hover="true" font_size="24" character_limit="50"/>
+						</rect>
+						<rect visible="{false}">
+							<label name="gameMode" depth="4" width="250" height="30" pivot="center" style="smx_label_outline, hover" text_key="goGameMode" font_size="24" justify="right" color="255,255,255,255" tooltip_key="goGameModeDesc" />
+							<smx_combobox_default name="cbxGameMode" pos="255,0" width="300" height="32" pivot="center" font_size="24" type="ComboBoxList`1[GameMode]" value_wrap="false" />
+						</rect>
+						<rect>
+							<label name="gameWorld" depth="4" width="250" height="30" pivot="center" style="smx_label_outline, hover" text_key="goGameWorld" font_size="24" justify="right" color="255,255,255,255" tooltip_key="goGameWorldDesc" />
+							<smx_combobox_default name="cbxWorldName" pos="140,16" width="300" height="32" pivot="center" font_size="24" type="ComboBoxList`1[XUiC_NewContinueGame+LevelInfo]" value_wrap="false" />  <!-- localization_prefix="xuiWorldName" -->
+						</rect>
+						<rect visible="{isnotgenerateworld}">
+							<label depth="4" width="250" height="30" pivot="center" style="smx_label_outline, hover" text_key="xuiMapSize" font_size="24" justify="right" color="255,255,255,255" />
+							<sprite name="backgroundMain" depth="3" pos="289,0" width="232" height="32" pivot="center" sprite="menu_empty3px" color="[darkGrey]" type="sliced" fillcenter="true" />
+							<label name="countyName" depth="4" pos="289,-2" width="232" height="32" pivot="center" style="smx_label_outline, hover" text="{mapsize}" font_size="24" justify="center" color="255,255,255,255" />
+						</rect>
+						<rect visible="{isnotgenerateworld}">
+							<label depth="4" width="250" height="30" pivot="center" style="smx_label_outline, hover" text_key="xuiSaveDataLimit" font_size="24" justify="right" color="255,255,255,255" tooltip_key="xuiSaveDataLimitDesc" />
+							<smx_combobox_default name="cbxSaveDataLimit" depth="108" pos="140,16" width="300" height="32" pivot="center" localization_prefix="xuiSaveDataLimitOptions" font_size="24" type="ComboBoxEnum`1[SaveDataLimitType]" value_wrap="true" />
+						</rect>
+						<rect visible="{differentworldversion}">
+							<label depth="4" width="250" height="30" pivot="center" style="smx_label_outline, hover" text_key="xuiWorldDifferentGameVersion" font_size="24" justify="right" color="255,255,255,255" />
+							<sprite name="backgroundMain" depth="3" pos="289,0" width="232" height="32" pivot="center" sprite="menu_empty3px" color="[darkGrey]" type="sliced" fillcenter="true" />
+							<label depth="4" pos="289,-2" width="232" height="32" pivot="center" style="smx_label_outline, hover" text="{worldgameversion}" font_size="24" justify="center" color="[red]" tooltip_key="xuiWorldDifferentVersionTooltip" />
+						</rect>
+					</grid>
+				</rect>
+
+				<rect pos="-190,-223" controller="WorldGenerationWindowGroup" visible="{isgenerateworld}">
+					<grid rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical">
+						<rect>
+							<label depth="4" pos="0,0" width="250" height="30" pivot="center" style="smx_label_outline, hover" text="Seed" text_key="xuiRwgCountyName" font_size="24" justify="right" color="[white]" tooltip_key="xuiRwgCountyNameDesc" />
+							<sprite name="backgroundMain" depth="3" pos="289,0" width="232" height="32" pivot="center" sprite="menu_empty3px" color="[darkGrey]" type="sliced" fillcenter="true" />
+							<label name="countyName" depth="4" pos="289,-2" width="232" height="32" pivot="center" style="smx_label_outline, hover" font_size="24" justify="center" color="[white]" />
+						</rect>
+						<rect>
+							<label depth="4" pos="0,0" width="250" height="30" pivot="center" style="smx_label_outline, hover" text="Seed" text_key="xuiRwgWorldSeed" font_size="24" justify="right" color="[white]" tooltip_key="xuiRwgWorldSeedDesc" />
+							<smx_textfield_default name="seedInput" depth="5" pos="289,0" width="232" height="32" pivot="center" on_hover="true" font_size="24" />
+						</rect>
+						<rect>
+							<label depth="4" pos="0,0" width="250" height="30" pivot="center" style="smx_label_outline, hover" text="World Size" text_key="xuiRwgWorldSize" font_size="24" justify="right" color="[white]" tooltip_key="xuiRwgWorldSizeDesc" />
+							<smx_combobox_default name="WorldSize" depth="108" pos="140,15" width="300" height="32" pivot="center" font_size="24" type="ComboBoxList`1[System.String]" values="6144,8192,10240" value_wrap="false" />
+						</rect>
+						<rect>
+							<label depth="4" pos="0,0" width="250" height="30" pivot="center" style="smx_label_outline, hover" text_key="xuiSaveDataLimit" font_size="24" justify="right" color="[white]" tooltip_key="xuiSaveDataLimitDesc" />
+							<smx_combobox_default name="SaveDataLimitComboBox" depth="108" pos="140,15" width="300" height="32" pivot="center" localization_prefix="xuiSaveDataLimitOptions" font_size="24" type="ComboBoxEnum`1[SaveDataLimitType]" value_wrap="true" />
+						</rect>
+						<rect/>
+						<rect>
+							<smx_menu_button name="btnGenerateWorld" pos="170,30" width="230" height="65" pivot="center" text="Advanced Generation" caption_key="btnAdvancedGeneration" font_size="20" />
+						</rect>
+					</grid>
+				</rect>
+				
+			</rect>
+
+			<rect name="continueContent" visible="{iscontinuegame}">
+
+				<sprite name="smx_panel_background" depth="1" pos="-40,0" width="650" pivot="center" sprite="smx_menu_background" type="sliced" color="7,7,7,219" anchor_top="#cam,0.5,467" anchor_bottom="#cam,0.5,-600" />
+
+				<rect name="saves" pos="-370,-40" height="650" width="590" controller="SavegamesList" matching_version_color="[smx_element_accentcolor_green]" compatible_version_color="255,216,0" incompatible_version_color="[smx_element_accentcolor_1]" clear_selection_on_open="false" clear_searchtext_on_open="true">
+
+					<label name="saveGameSelect" depth="4" pos="345,70" width="590" height="50" pivot="center" style="smx_label_outline" text="Save Games" font_size="50" spacing_x="2" justify="center" upper_case="true" color="255,255,255,255" visible="{iscontinuegame}"/>
+					<sprite name="smx_panel_separation" depth="4" pos="350,25" width="500" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+
+					<rect name="searchControls" depth="4" pos="75,2" height="42" width="400">
+						<sprite name="searchIcon" depth="4" pos="75,-27" size="25,25" pivot="center" sprite="ui_game_symbol_search" />
+						<smx_textfield_outline name="searchInput" depth="5" pos="192,-25" width="275" height="40" font_size="18" search_field="true" />
+					</rect>
+
+					<rect name="pagerControls" depth="4" pos="310,-600" height="44" width="550">
+						<smx_pager_controls name="pager" pos="1,-6" font_size="18" contents_parent="saves" />
+					</rect>
+
+					<grid name="list" depth="2" pos="125,-75" height="490" rows="5" cols="1" cell_width="470" cell_height="95" repeat_content="true" arrangement="vertical" >
+						<smx_savegames_list_entry width="450" height="90" />
+					</grid>
+
+					<smx_menu_button name="btnDeleteSave" pos="502,-3" width="130" height="45" pivot="center" caption_key="btnDelete" font_size="20" foregroundlayer="false" />
+				</rect>
+			</rect>
+		</rect>
+
+		<rect name="tabs" controller="TabSelector" pos="0,-90" width="590" height="650" select_tab_contents_on_open="false">
+
+			<sprite name="smx_panel_background" depth="1" pos="640,0" width="650" pivot="center" sprite="smx_menu_background" type="sliced" color="7,7,7,219" anchor_top="#cam,0.5,467" anchor_bottom="#cam,0.5,-600" />
+
+			<rect name="tabsHeader" height="39" depth="0">
+
+				<label name="newGameOptions" depth="4" pos="620,70" width="590" height="50" pivot="center" style="smx_label_outline" text="New Game Options" font_size="50" spacing_x="2" justify="center" upper_case="true" color="255,255,255,255" visible="{isnewgame}" />
+				<label name="saveGameOptions" depth="4" pos="620,70" width="590" height="50" pivot="center" style="smx_label_outline" text="Save Game Options" font_size="50" spacing_x="2" justify="center" upper_case="true" color="255,255,255,255" visible="{iscontinuegame}" />
+
+				<sprite name="smx_panel_separation" depth="4" pos="625,25" width="500" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+
+				<grid name="tabButtons" depth="2" pos="395,-3" rows="1" cols="4" cell_width="145" cell_height="90" repeat_content="true" arrangement="horizontal">
+					<rect>
+						<smx_menu_button name="tabButton" depth="2" pos="-1,0" width="130" height="45" pivot="center" caption_key="xuiBack" font_size="20" foregroundlayer="false" />
+					</rect>
+				</grid>
+			</rect>
+
+			<rect name="tabsContents" depth="2" pos="300,0">
+
+				<rect tab_key="xuiGameSettingsGeneral">
+					<grid pos="6,-77" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical">
+						<smx_game_option name="ServerEnabled" title="goServerEnabled" value_wrap="false" value_type="bool" values="" display_names="goServerEnabledOff,goServerEnabledOn" value_localization_prefix="" />
+						<smx_game_option name="Region" title="goRegion" value_wrap="true" value_type="string" values="NorthAmericaEast,NorthAmericaWest,CentralAmerica,SouthAmerica,Europe,Russia,Asia,MiddleEast,Africa,Oceania" display_names="" value_localization_prefix="goRegionName" has_default="false" always_show="true" />
+						<smx_game_option name="ServerVisibility" title="goServerVisibility" value_wrap="false" value_type="int" values="" display_names="goServerVisibility0,goServerVisibility1,goServerVisibility2" value_localization_prefix="" />
+						<smx_game_option name="ServerPassword" title="goPassword" value_wrap="false" value_type="string" values="" display_names="" value_localization_prefix="" is_textinput="true" password_field="true" character_limit="30" />
+						
+						<!--ServerMaxPlayerCount gameoptions, some are for console platforms.-->
+						<smx_game_option name="ServerMaxPlayerCount" title="goMaxPlayers" value_wrap="false" value_type="int" values="2, 4, 8, 16" display_names="" value_localization_prefix="goPlayer" platform="!PS5,!XBOX_S,!XBOX_X"/>
+						<smx_game_option name="ServerMaxPlayerCount" title="goMaxPlayers" value_wrap="false" value_type="int" values="2, 3, 4" values_enforced="true" display_names="" value_localization_prefix="goPlayer" platform="PS5,XBOX_X"/>
+						<smx_game_option name="ServerMaxPlayerCount" title="goMaxPlayers" value_wrap="false" value_type="int" values="2" values_enforced="true" display_names="" value_localization_prefix="goPlayer" platform="XBOX_S"/>
+
+						<rect/>
+						
+						<smx_game_option name="GameDifficulty" title="goDifficulty" value_wrap="false" value_type="int" values="" display_names="goDifficulty1,goDifficulty2,goDifficulty3,goDifficulty4,goDifficulty5,goDifficulty6" value_localization_prefix="" />
+						<smx_game_option name="PersistentPlayerProfiles" title="goPersistentCharacters" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" />
+						<smx_game_option name="XPMultiplier" title="goXPMultiplier" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300, 400, 500" display_names="" value_localization_prefix="goXPMultiplierValue" />
+
+						<rect/>
+
+						<smx_game_option name="DayNightLength" title="goDayLength" value_wrap="false" value_type="int" values="10, 20, 30, 40, 50, 60, 90, 120, 180" display_names="" value_localization_prefix="goMinute" />
+						<smx_game_option name="DayLightLength" title="goDayLightLength" value_wrap="false" value_type="int" values="12, 14, 16, 18, 20" display_names="" value_localization_prefix="goDayLightLengthValue" />
+					</grid>
+				</rect>
+
+				<rect tab_key="xuiGameSettingsBasic">
+					<grid pos="6,-77" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical">
+						<smx_game_option name="BloodMoonFrequency" title="goBloodMoonFrequency" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 20, 30" display_names="goDisabled" value_localization_prefix="goDay" />
+						<smx_game_option name="BloodMoonRange" title="goBloodMoonRange" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 7, 10, 14, 20" display_names="" value_localization_prefix="goDay" />
+						<smx_game_option name="BloodMoonWarning" title="goBloodMoonWarning" value_wrap="false" value_type="int" values="-1, 8, 12, 18" display_names="goDisabled,goMorning,goAfternoon,goEvening" value_localization_prefix="" />
+						<smx_game_option name="BloodMoonEnemyCount" title="goBloodMoonEnemyCount" value_wrap="false" value_type="int" values="4, 6, 8, 10, 12, 16, 24, 32, 64" display_names="" value_localization_prefix="goEnemie" />
+						<smx_game_option name="ZombieMove" title="goZombieMove" value_wrap="false" value_type="int" values="" display_names="goZMWalk,goZMJog,goZMRun,goZMSprint,goZMNightmare" value_localization_prefix="" />
+						<smx_game_option name="ZombieMoveNight" title="goZombieMoveNight" value_wrap="false" value_type="int" values="" display_names="goZMWalk,goZMJog,goZMRun,goZMSprint,goZMNightmare" value_localization_prefix="" />
+						<smx_game_option name="ZombieFeralMove" title="goZombieFeralMove" value_wrap="false" value_type="int" values="" display_names="goZMWalk,goZMJog,goZMRun,goZMSprint,goZMNightmare" value_localization_prefix="" />
+						<smx_game_option name="ZombieBMMove" title="goZombieBMMove" value_wrap="false" value_type="int" values="" display_names="goZMWalk,goZMJog,goZMRun,goZMSprint,goZMNightmare" value_localization_prefix="" />
+						<smx_game_option name="ZombieFeralSense" title="goZombieFeralSense" value_wrap="false" value_type="int" values="" display_names="goOff,goZMDay,goZMNight,goZMAll" value_localization_prefix="" />
+
+						<rect/>
+
+						<!--
+						<smx_game_option name="MaxSpawnedZombies" title="goMaxSpawnedZombies" value_wrap="false" value_type="int" values="0, 10, 30, 60" display_names="" value_localization_prefix="" />
+						<smx_game_option name="MaxSpawnedAnimals" title="goMaxSpawnedAnimals" value_wrap="false" value_type="int" values="0, 10, 30, 50" display_names="" value_localization_prefix="" />
+						-->
+						<smx_game_option name="AirDropFrequency" title="goAirDropFrequency" value_wrap="false" value_type="int" values="0, 12, 24, 48, 72, 168" display_names="goDisabled" value_localization_prefix="goAirDropValue" />
+						<smx_game_option name="AirDropMarker" title="goMarkAirDrops" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" />
+					</grid>
+				</rect>
+
+				<rect tab_key="xuiGameSettingsAdvanced">
+					<grid pos="6,-77" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical">
+						<!--<smx_game_option name="BlockDurabilityModifier" title="goBlockDurability" value_wrap="false" value_type="int" values="25, 50, 100, 200" display_names="" value_localization_prefix="goBlockDurabilityValue" />-->
+						<smx_game_option name="BlockDamagePlayer" title="goBlockDamagePlayer" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+						<smx_game_option name="BlockDamageAI" title="goBlockDamageAI" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+						<smx_game_option name="BlockDamageAIBM" title="goBlockDamageAIBM" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+						<smx_game_option name="LootAbundance" title="goLootAbundance" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goLootAbundanceValue" />
+						<smx_game_option name="LootRespawnDays" title="goLootRespawnDays" value_wrap="false" value_type="int" values="-1, 5, 7, 10, 15, 20, 30, 40, 50" display_names="goDisabled" value_localization_prefix="goLootRespawnDaysValue" />
+						<smx_game_option name="MaxChunkAge" title="goMaxChunkAge" value_wrap="false" value_type="int" values="-1, 10, 20, 30, 40, 50, 75, 100" display_names="goDisabled" value_localization_prefix="goDay" />
+						<smx_game_option name="DeathPenalty" title="goDeathPenalty" value_wrap="false" value_type="int" values="" display_names="goNone,goXPOnly,goInjured,goPermaDeath" value_localization_prefix="" />
+						<smx_game_option name="DropOnDeath" title="goDropOnDeath" value_wrap="false" value_type="int" values="" display_names="goNone,goAll,goToolbelt,goBackpack,goDeleteAll" value_localization_prefix="" />
+						<smx_game_option name="DropOnQuit" title="goDropOnQuit" value_wrap="false" value_type="int" values="" display_names="goNone,goAll,goToolbelt,goBackpack" value_localization_prefix="" />
+						<smx_game_option name="EnemySpawnMode" title="goEnemySpawn" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" />
+						<!--BuildCreate gameoptions, some are for console platforms.-->
+						<smx_game_option name="BuildCreate" title="goBuildCreate" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" platform="!PS5,!XBOX"/>
+						<smx_game_option name="BuildCreate" title="goBuildCreate" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" tooltip_key="goBuildCreateDescPS5" platform="PS5" />
+						<smx_game_option name="BuildCreate" title="goBuildCreate" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" tooltip_key="goBuildCreateDescXBOX" platform="XBOX" />
+						<smx_game_option name="QuestProgressionDailyLimit" title="goQuestProgressionDailyLimit" value_wrap="false" value_type="int" values="-1,1,2,3,4,5,6,7,8,9,10" display_names="goUnlimited"/>
+					</grid>
+				</rect>
+
+				<rect tab_key="xuiGameSettingsMultiplayer">
+					<grid pos="6,-77" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical">
+						<smx_game_option name="PlayerKillingMode" title="goPlayerKillingMode" value_wrap="false" value_type="int" values="" display_names="goPlayerKillingModeNoKilling,goPlayerKillingModeKillAlliesOnly,goPlayerKillingModeKillStrangersOnly,goPlayerKillingModeKillEveryone" value_localization_prefix="" />
+						<smx_game_option name="LandClaimSize" title="goLandClaimSize" value_wrap="false" value_type="int" values="21, 31, 41, 51, 71" display_names="" value_localization_prefix="goLandClaimSizeValue" />
+						<smx_game_option name="LandClaimDeadZone" title="goLandClaimDeadZone" value_wrap="false" value_type="int" values="0, 5, 10, 15, 20, 30, 40, 50" display_names="goLandClaimNoDeadzone" value_localization_prefix="goLandClaimDeadZoneValue" />
+						<smx_game_option name="LandClaimExpiryTime" title="goLandClaimExpiryTime" value_wrap="false" value_type="int" values="1, 2, 3, 4, 5, 7, 10, 30" display_names="" value_localization_prefix="goLandClaimExpiryTimeValue" />
+						<smx_game_option name="LandClaimDecayMode" title="goLandClaimDecayMode" value_wrap="false" value_type="int" values="" display_names="goLandClaimDecayModeSlow,goLandClaimDecayModeFast,goLandClaimDecayModeNone" value_localization_prefix="" />
+						<smx_game_option name="LandClaimOnlineDurabilityModifier" title="goLandClaimOnlineDurabilityModifier" value_wrap="false" value_type="int" values="0, 1, 2, 4, 8, 16, 32, 64, 128, 256" display_names="goInfinite" value_localization_prefix="goLandClaimOnlineDurabilityModifierValue" />
+						<smx_game_option name="LandClaimOfflineDurabilityModifier" title="goLandClaimOfflineDurabilityModifier" value_wrap="false" value_type="int" values="0, 1, 2, 4, 8, 16, 32, 64, 128, 256" display_names="goInfinite" value_localization_prefix="goLandClaimOfflineDurabilityModifierValue" />
+						<smx_game_option name="LandClaimOfflineDelay" title="goLandClaimOfflineDelay" value_wrap="false" value_type="int" values="0, 1, 5, 10, 20, 30, 60" display_names="" value_localization_prefix="goMinute" />
+						<smx_game_option name="BedrollDeadZoneSize" title="goBedrollDeadZoneSize" value_wrap="false" value_type="int" values="0, 5, 15, 30" display_names="goLandClaimNoDeadzone" value_localization_prefix="goLandClaimDeadZoneValue" />
+						<smx_game_option name="BedrollExpiryTime" title="goBedrollExpiryTime" value_wrap="false" value_type="int" values="3, 7, 15, 30, 45, 60" display_names="" value_localization_prefix="goLandClaimExpiryTimeValue" />
+						<smx_game_option name="PartySharedKillRange" title="goPartySharedKillRange" value_wrap="false" value_type="int" values="0, 100, 500, 1000, 5000, 10000" display_names="goDisabled" value_localization_prefix="goPartySharedKillRangeValue" />
+						<smx_game_option name="ServerPort" title="goPort" value_wrap="false" value_type="int" values="" display_names="" value_localization_prefix="" is_textinput="true" character_limit="5"/>
+						<smx_game_option name="DayCount" title="goDayCount" value_wrap="false" value_type="int" values="0, 1, 3, 5, 7, 9" display_names="goUnlimited" value_localization_prefix="goDay" />
+						<smx_game_option name="FragLimit" title="goFragLimit" value_wrap="false" value_type="int" values="0, 1, 5, 10, 15, 20, 25, 50" display_names="goUnlimited" value_localization_prefix="goFrag" />
+						<smx_game_option name="MatchLength" title="goMatchLength" value_wrap="false" value_type="int" values="0, 5, 10, 15, 20, 30, 60" display_names="goUnlimited" value_localization_prefix="goMinute" />
+						<smx_game_option name="RebuildMap" title="goRebuildMap" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" />
+						<smx_game_option name="ZombiePlayers" title="goZombiePlayers" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" />
+					</grid>
+				</rect>
+			</rect>
+		</rect>
+
+		<smx_back_button name="btnBack" depth="3" pos="820,96" width="55" height="55" tooltip_key="xuiBack" />
+		<smx_menu_button name="btnDataManagement" depth="3" pos="-620,-800" width="230" height="65" pivot="center" caption_key="xuiDmManageSaves" font_size="28" />
+		<smx_menu_button name="btnDefaults" depth="3" pos="602,-800" width="230" height="65" pivot="center" caption_key="xuiDefaults" font_size="28" visible="{isnewgame}" upper_case="true" />
+		<smx_menu_button name="btnStart" depth="3" pos="-10,-790" width="300" height="85" pivot="center" caption_key="xuiStart" font_size="40" sound="[start]" parse_actions="true" />
+
+		<rect name="dm_bar_enabled" visible="{showbar}">
+			<dm_data_bar pos="0, -800" width="1185" />
+		</rect>
+
+		<panel name="deleteSavePanel" pos="0,0" width="1185" height="780" anchor="CenterCenter" cursor_area="true" createuipanel="true" on_hover="true" disableautobackground="true">
+			<panel depth="20000" createuipanel="true" disableautobackground="true">
+				<panel name="outclick" depth="1" pos="-2000,2000" width="8000" height="8000" on_press="true" createuipanel="true" disableautobackground="true" gamepad_selectable="false" />
+				
+				<panel name="noclick" depth="2" pos="-2000,2000" width="8000" height="8000" on_press="true" createuipanel="true" disableautobackground="true" gamepad_selectable="false">
+					<texture name="bgTexture" depth="0" texture="Textures/UI/news_background" color="255,255,255,240" anchor_left="#cam,0,-5" anchor_right="#cam,1,5" anchor_bottom="#cam,0,-5" anchor_top="#cam,1,5" />
+				</panel>
+
+				<panel name="content" pos="0,-350" width="400" height="600" depth="3" pivot="center" createuipanel="true" disableautobackground="true">
+					<sprite name="smxPopOutBG" depth="9" height="700" pivot="center" sprite="smx_menu_background" type="sliced" color="7,7,7,295" />
+					<texture name="smxPopOutArt" depth="10" pos="0,140" width="350" height="350" pivot="center" texture="@modfolder(SMXcore)://textures/misc/password_zombie.png" />
+
+					<label name="deleteText" depth="11" pos="0,-120" width="350" height="150" pivot="center" style="smx_label_outline" text="{msgText}" font_size="24" justify="center" upper_case="true" overflow="ClampContent" />
+				</panel>
+
+				<panel name="buttons" depth="6" pos="-10,-560" height="32" borderthickness="3" createuipanel="true" disableautobackground="true" >
+					<smx_back_button name="btnCancel" depth="3" pos="170,550" width="55" height="55" pivot="center" caption_key="" font_size="32" upper_case="true" tooltip_key="xuiBack" />
+					<smx_menu_button name="btnConfirm" depth="3" pos="0,0" width="230" height="65" pivot="center" caption_key="btnConfirm" font_size="28" upper_case="true" />
+				</panel>
+			</panel>
+		</panel>
+
+	</window>
+</append>
+</config>
