@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+  <property name="CopyAirBlocks" value="True" />
+  <property name="ExcludeDistantPOIMesh" value="False" />
+  <property name="ExcludePOICulling" value="False" />
+  <property name="DistantPOIYOffset" value="0" />
+  <property name="AllowTopSoilDecorations" value="False" />
+  <property name="DifficultyTier" value="4" />
+  <property name="QuestTags" value="clear, fetch, infested" />
+  <property name="ShowQuestClearCount" value="1" />
+  <property name="TraderArea" value="False" />
+  <property name="RotationToFaceNorth" value="2" />
+  <property name="Zoning" value="Industrial" />
+  <property name="YOffset" value="-5" />
+  <property name="SleeperVolumeSize" value="44, 3, 34#15, 3, 10#15, 3, 22" />
+  <property name="SleeperVolumeStart" value="1, 5, 23#44, 5, 24#44, 5, 35" />
+  <property name="SleeperVolumeGroupId" value="0,0,0" />
+  <property name="SleeperVolumeGroup" value="S_-Group_Generic_Zombie,9,10,S_-Group_Generic_Zombie,7,8,S_-Group_Generic_Zombie,8,9" />
+  <property name="SleeperIsLootVolume" value="False,True,False" />
+  <property name="SleeperIsQuestExclude" value="False,False,False" />
+  <property name="SleeperVolumeFlags" value="0,0,0" />
+  <property name="PrefabSize" value="60, 15, 60" />
+  <property name="EditorGroups" value="industrial" />
+  <property name="Tags" value="industrial" />
+  <property name="POIMarkerSize" value="7, 13, 1" />
+  <property name="POIMarkerStart" value="53, 4, -1" />
+  <property name="POIMarkerGroup" value="Drive-M" />
+  <property name="POIMarkerTags" value="" />
+  <property name="POIMarkerType" value="PartSpawn" />
+  <property name="POIMarkerPartToSpawn" value="part_driveway_industrial_01" />
+  <property name="POIMarkerPartRotations" value="2" />
+  <property name="POIMarkerPartSpawnChance" value="1" />
+  <property name="SleeperVolumeTriggeredBy" value=" # # " />
+  <property class="Stats">
+    <property name="TotalVertices" value="1038070" />
+    <property name="TotalTriangles" value="374002" />
+    <property class="BlockEntities">
+      <property name="Vertices" value="975134" />
+      <property name="Triangles" value="329192" />
+    </property>
+    <property class="ChunkMeshes0">
+      <property name="Vertices" value="52716" />
+      <property name="Triangles" value="27982" />
+    </property>
+    <property class="ChunkMeshes1">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes2">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes3">
+      <property name="Vertices" value="360" />
+      <property name="Triangles" value="180" />
+    </property>
+    <property class="ChunkMeshes4">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes5">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes6">
+      <property name="Vertices" value="9860" />
+      <property name="Triangles" value="16648" />
+    </property>
+  </property>
+  <property class="IndexedBlockOffsets">
+    <property class="POILight">
+      <property name="0" value="48, 9, 49" />
+      <property name="1" value="52, 9, 49" />
+      <property name="2" value="56, 9, 49" />
+      <property name="3" value="48, 9, 54" />
+      <property name="4" value="52, 9, 54" />
+      <property name="5" value="56, 9, 54" />
+      <property name="6" value="46, 7, 58" />
+      <property name="7" value="49, 9, 58" />
+      <property name="8" value="54, 9, 58" />
+    </property>
+    <property class="FetchContainer">
+      <property name="0" value="52, 4, 55" />
+    </property>
+    <property class="Rally">
+      <property name="0" value="20, 5, 18" />
+    </property>
+    <property class="TraderOnOff">
+      <property name="0" value="56, 5, 46" />
+    </property>
+  </property>
+</prefab>

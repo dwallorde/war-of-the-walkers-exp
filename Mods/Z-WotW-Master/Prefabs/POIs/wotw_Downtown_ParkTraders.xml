@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+  <property name="CopyAirBlocks" value="True" />
+  <property name="ExcludeDistantPOIMesh" value="False" />
+  <property name="ExcludePOICulling" value="False" />
+  <property name="DistantPOIYOffset" value="0" />
+  <property name="AllowTopSoilDecorations" value="False" />
+  <property name="DifficultyTier" value="0" />
+  <property name="ShowQuestClearCount" value="1" />
+  <property name="TraderArea" value="False" />
+  <property name="PrefabSize" value="25, 29, 25" />
+  <property name="RotationToFaceNorth" value="2" />
+  <property name="Zoning" value="Downtown" />
+  <property name="YOffset" value="-5" />
+  <property name="EditorGroups" value="downtown" />
+  <property name="Tags" value="downtown" />
+  <property class="Stats">
+    <property name="TotalVertices" value="144234" />
+    <property name="TotalTriangles" value="60173" />
+    <property class="BlockEntities">
+      <property name="Vertices" value="139746" />
+      <property name="Triangles" value="55149" />
+    </property>
+    <property class="ChunkMeshes0">
+      <property name="Vertices" value="2500" />
+      <property name="Triangles" value="1528" />
+    </property>
+    <property class="ChunkMeshes1">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes2">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes3">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes4">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes5">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes6">
+      <property name="Vertices" value="1988" />
+      <property name="Triangles" value="3496" />
+    </property>
+  </property>
+  <property class="IndexedBlockOffsets">
+    <property class="POILight">
+      <property name="0" value="22, 5, 12" />
+      <property name="1" value="15, 5, 19" />
+      <property name="2" value="22, 5, 22" />
+    </property>
+    <property class="TraderOnOff">
+      <property name="0" value="16, 7, 4" />
+    </property>
+  </property>
+</prefab>
