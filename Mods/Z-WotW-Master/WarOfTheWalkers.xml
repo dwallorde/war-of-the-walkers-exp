@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servers>
+	
+	
+	<ServerGroup Name="War of the Walkers" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png" Description="War of the Walkers">
+		
+		<!-- <Server Name="War of the Walkers v21.x.x.x Stable" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png">
+			<Description>The War of the Walkers v21.x.x.x - Stable Branch
+			Latest Stable Version of the War of the Walkers Mod.  Release Notes Link will take you to the official discord for the mod.
+			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
+			Contains the following modlets:
+						-0-SCore 		-Author: Xyth Community Project
+						-0-XNPCCore 		-Author: Xyth Community Project
+						-1-GansSpecialZombies 		-Author: GanTheGrey
+						-1-GansStandardZombies 		-Author: GanTheGrey
+						-1-DarksCleanerz		-Author: Darkstardragon
+						-1-DarksRaiderGurlzFriendly		-Author: Darkstardragon
+						-1-DarksRaiderz		-Author: Darkstardragon
+						-1-SoldierPack 		-Author: Darkstardragon
+						-1-DarksZombiez		-Author: Darkstardragon
+						-1-FantasticBeastz		-Author: Darkstardragon
+						-1-ZombiezPack		-Author: Darkstardragon
+						-AdventureQuest		-Author: Bowa
+						-Bdubs Vehicles		-Author: bdubyah
+						-CCTV		-Author: Xyth
+						-IDCCore	-Author: I don't Care
+						-KHA20-15SlotToolbelt		-Author: Khaine
+						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbPinRecipes		-Author: ocbMaurice
+						-OcbStopFuelWaste		-Author: ocbMaurice
+						-SMXcore	-Author: Sirillion
+						-SMXhud		-Author: Sirillion
+						-SMXlib		-Author: Sirillion
+						-SMXui		-Author: Sirillion
+						-SMXmenu	-Author: Sirillion
+						-Ragsy Vehicles		-Author: Ragsy
+						-Ragsy Better Gryo Handling	-Author: Ragsy
+						-ZMXhudCPTB15		-Author: Robear
+						-ZMXhudCP			-Author: Sirillion
+			7DTD Version Required: A21.2
+			Current Mod Version: 21.2.2.7 Stable
+			</Description>
+			<Version/>
+			<DownloadMode>Clone</DownloadMode>
+			<ReleaseNotes>https://discord.gg/bQdP6cH</ReleaseNotes>
+			<Downloads>
+				<Download>https://gitlab.com/dwallorde/war-of-the-walkers-stable-v21/-/archive/master/war-of-the-walkers-stable-v21-master.zip</Download>
+			</Downloads>
+			<Discord>https://discord.gg/bQdP6cH</Discord>
+			<Twitter>https://twitter.com/WotWMod</Twitter>
+			<Donate>https://www.paypal.me/dwallorde</Donate>
+		</Server> -->
+		
+		<!-- <Server Name="War of the Walkers v20.x.x.x Stable NO-SMX" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png">
+			<Description>The War of the Walkers v20.x.x.x - Stable Branch Vanilla UI
+			Latest Stable Version of the War of the Walkers Mod with Vanilla UI with no SMX.  Release Notes Link will take you to the official discord for the mod.
+			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
+			Contains the following modlets:
+						-0-SCore 		-Author: Xyth Community Project
+						-0-XNPCCore 		-Author: Xyth Community Project
+						-1-GansSpecialZombies 		-Author: GanTheGrey
+						-1-GansStandardZombies 		-Author: GanTheGrey
+						-1-FantasticBeastz		-Author: Darkstardragon
+						-1-khzmusik_NPC_Rogues_and_Psychos	-Author: khzmusik
+						-1-khzmusik_NPC_Whisperers	-Author: khzmusik
+						-1-khzmusik_Zombies			-Author: khzmusik
+						-1-SoldierPack 		-Author: Darkstardragon
+						-1-OrczPackAlpha	-Author: Darkstardragon
+						-1-YeOldeUndeadPack		-Author: Darkstardragon
+						-1-ZombiezPack		-Author: Darkstardragon
+						-AdventureQuest		-Author: Bowa
+						-Bdubs Vehicles		-Author: bdubyah
+						-CCTV		-Author: Xyth
+						-KHA20-15SlotToolbelt		-Author: Khaine
+						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbPinRecipes		-Author: ocbMaurice
+						-TelricsFishingV2A20	-Author: Telric
+						-Ragsy Vehicles		-Author: Ragsy
+						-Ragsy Better Gryo Handling	-Author: Ragsy
+			7DTD Version Required: A20.7
+			Current Mod Version: 20.7.4.9 Stable
+			</Description>
+			<Version/>
+			<DownloadMode>Clone</DownloadMode>
+			<ReleaseNotes>https://discord.gg/bQdP6cH</ReleaseNotes>
+			<Downloads>
+				<Download>https://gitlab.com/dwallorde/war-of-the-walkers-stable-v21/-/archive/master/war-of-the-walkers-stable-v21-master.zip</Download>
+			</Downloads>
+		</Server> -->
+		
+		<!-- <Server Name="War of the Walkers v1.x.x.x Exp" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png">
+			<Description>The War of the Walkers v1.x.x.x - Experimental (Warning!  May contain game breaking bugs!)
+			Latest Experimental Version of the War of the Walkers Mod.  Release Notes Link will take you to the official discord for the mod.
+			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
+			Contains the following modlets:
+						-0-SCore 		-Author: Xyth Community Project
+						-0-XNPCCore 		-Author: Xyth Community Project
+						-1-GansSpecialZombies 		-Author: GanTheGrey
+						-1-GansStandardZombies 		-Author: GanTheGrey
+						-1-DarksCleanerz		-Author: Darkstardragon
+						-1-DarksRaiderGurlzFriendly		-Author: Darkstardragon
+						-1-DarksRaiderz		-Author: Darkstardragon
+						-1-SoldierPack 		-Author: Darkstardragon
+						-1-DarksZombiez		-Author: Darkstardragon
+						-1-FantasticBeastz		-Author: Darkstardragon
+						-1-ZombiezPack		-Author: Darkstardragon
+						-AdventureQuest		-Author: Bowa
+						-Bdubs Vehicles		-Author: bdubyah
+						-CCTV		-Author: Xyth
+						-IDCCore	-Author: I don't Care
+						-KHA20-15SlotToolbelt		-Author: Khaine
+						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbPinRecipes		-Author: ocbMaurice
+						-OcbStopFuelWaste		-Author: ocbMaurice
+						-SMXcore	-Author: Sirillion
+						-SMXhud		-Author: Sirillion
+						-SMXlib		-Author: Sirillion
+						-SMXui		-Author: Sirillion
+						-SMXmenu	-Author: Sirillion
+						-TelricsFishingV2A20	-Author: Telric
+						-Ragsy Vehicles		-Author: Ragsy
+						-Ragsy Better Gryo Handling	-Author: Ragsy
+						-ZMXhudCPTB15		-Author: Robear
+						-ZMXhudCP			-Author: Sirillion
+			7DTD Version Required: V1.1
+			Current Mod Version: 1.1.1.0 Exp
+			</Description>
+			<Version/>
+			<DownloadMode>Clone</DownloadMode>
+			<ReleaseNotes>https://discord.gg/bQdP6cH</ReleaseNotes>
+			<Downloads>
+				<Download>https://gitlab.com/dwallorde/war-of-the-walkers-exp-v21/-/archive/master/war-of-the-walkers-exp-v21-master.zip</Download>
+			</Downloads>
+			<Discord>https://discord.gg/bQdP6cH</Discord>
+			<Twitter>https://twitter.com/WotWMod</Twitter>
+			<Donate>https://www.paypal.me/dwallorde</Donate>
+		</Server> -->
+		
+		<Server Name="Client Files for Dwalls Server" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png">
+			<Description>The War of the Walkers v1.x.x.x - Client (For playing on Dwalls Official WotW Servers Only.  No SP)
+			NO SINGLE PLAYER
+			NOT FULL MOD (CANNOT BE USED TO INSTALL ON SERVER EITHER)
+			The War of the Walkers v21.x.x.x - Client (For playing on Dwalls Official WotW Servers Only.  No SP)
+			NO SINGLE PLAYER
+			NOT FULL MOD (CANNOT BE USED TO INSTALL ON SERVER EITHER)
+			The War of the Walkers v21.x.x.x - Client (For playing on Dwalls Official WotW Servers Only.  No SP)
+			NO SINGLE PLAYER
+			NOT FULL MOD (CANNOT BE USED TO INSTALL ON SERVER EITHER)
+			The War of the Walkers v21.x.x.x - Client (For playing on Dwalls Official WotW Servers Only.  No SP)
+			NO SINGLE PLAYER
+			NOT FULL MOD (CANNOT BE USED TO INSTALL ON SERVER EITHER)
+			Release Notes Link will take you to the official discord for the mod.
+			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
+			Contains the following modlets:
+						-0-SCore 		-Author: Xyth Community Project
+						-0-XNPCCore 		-Author: Xyth Community Project
+						-1-GansSpecialZombies 		-Author: GanTheGrey
+						-1-GansStandardZombies 		-Author: GanTheGrey
+						<!-- -1-khzmusik_NPC_Rogues_and_Psychos	-Author: khzmusik
+						-1-khzmusik_NPC_Whisperers	-Author: khzmusik
+						-1-khzmusik_Zombies			-Author: khzmusik -->
+						-1-DarksCleanerz		-Author: Darkstardragon
+						-1-DarksRaiderGurlzFriendly		-Author: Darkstardragon
+						-1-DarksRaiderz		-Author: Darkstardragon
+						-1-SoldierPack 		-Author: Darkstardragon
+						-1-DarksZombiez		-Author: Darkstardragon
+						-1-FantasticBeastz		-Author: Darkstardragon
+						<!-- -1-OrczPackAlpha	-Author: Darkstardragon
+						-1-YeOldeUndeadPack		-Author: Darkstardragon -->
+						-1-ZombiezPack		-Author: Darkstardragon
+						-AdventureQuest		-Author: Bowa
+						-Bdubs Vehicles		-Author: bdubyah
+						-CCTV		-Author: Xyth
+						-IDCCore	-Author: I don't Care
+						-KHA20-15SlotToolbelt		-Author: Khaine
+						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbPinRecipes		-Author: ocbMaurice
+						-OcbStopFuelWaste		-Author: ocbMaurice
+						-SMXcore	-Author: Sirillion
+						-SMXhud		-Author: Sirillion
+						-SMXlib		-Author: Sirillion
+						-SMXui		-Author: Sirillion
+						-SMXmenu	-Author: Sirillion
+						-TelricsFishing	-Author: Telric
+						-Ragsy Vehicles		-Author: Ragsy
+						-Ragsy Better Gryo Handling	-Author: Ragsy
+						-ZMXhudCPTB15		-Author: Robear
+						-ZMXhudCP			-Author: Sirillion
+			7DTD Version Required: V1.1
+			Current Mod Version: 1.1.1.0 Exp
+			</Description>
+			<Version/>
+			<DownloadMode>Clone</DownloadMode>
+			<ReleaseNotes>https://discord.gg/bQdP6cH</ReleaseNotes>
+			<Downloads>
+				<Download>https://github.com/dwallorde/war-of-the-walkers-client</Download>
+			</Downloads>
+			<Discord>https://discord.gg/bQdP6cH</Discord>
+			<Twitter>https://twitter.com/WotWMod</Twitter>
+			<Donate>https://www.paypal.me/dwallorde</Donate>
+		</Server>
+	</ServerGroup>
+</Servers>
