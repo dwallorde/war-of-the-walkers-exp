@@ -1,0 +1,16 @@
+﻿<configs>
+
+  <setattribute xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/property[@name='UnlockedBy']" name="value">attClassLaborer</setattribute>
+  <setattribute xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/effect_group/passive_effect[@tier='1,6']" name="tier">1,80</setattribute>
+  <setattribute xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/effect_group/passive_effect[@tier='2,6']" name="tier">2,80</setattribute>
+
+  <remove xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/effect_group[@name='meleeToolFarmT1IronDensityHoe']/passive_effect[@name='ModSlots']"/>
+  <append xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/effect_group[@name='meleeToolFarmT1IronDensityHoe']">
+    <passive_effect name="ModSlots" operation="base_set" value="1" tier="1,10"/>
+    <passive_effect name="ModSlots" operation="base_set" value="2" tier="11,20"/>
+    <passive_effect name="ModSlots" operation="base_set" value="3" tier="21,30"/>
+    <passive_effect name="ModSlots" operation="base_set" value="4" tier="31,80"/>
+  </append>
+
+</configs>
+

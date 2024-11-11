@@ -1,0 +1,19 @@
+﻿<configs>
+
+  <append xpath="/recipes">
+
+    <recipe name="meleeToolFarmT1IronDensityHoe" count="1"
+        tags="learnable,workbenchCrafting">
+      <ingredient name="resourceForgedIron" count="16"/>
+      <ingredient name="resourceWood" count="10"/>
+      <ingredient name="resourceLeather" count="2"/>
+      <ingredient name="resourceDuctTape" count="2"/>
+      <effect_group>
+        <passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5"
+            tags="resourceForgedIron,resourceWood,resourceLeather,resourceDuctTape"/>
+      </effect_group>
+    </recipe>
+
+  </append>
+
+</configs>

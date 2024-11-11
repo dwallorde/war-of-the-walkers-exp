@@ -1,0 +1,180 @@
+<configs>
+	<!-- adds to grass -->
+	<append xpath="/blocks/block[contains(@name, 'GrassDiagonal')]">
+		<drop event="Destroy" name="resourceBaitWorm" count="1" prob=".0325" tag="FishingBaitHarvestT0"/>
+		<drop event="Destroy" name="resourceBaitGrub" count="1" prob=".01" tag="FishingBaitHarvestT0"/>
+		<drop event="Destroy" name="resourceBaitDragonfly" count="1" prob=".006" tag="FishingBaitHarvestT0"/>
+
+		<drop event="Destroy" name="resourceBaitWorm" count="1" prob=".065" tag="FishingBaitHarvestT1"/>
+		<drop event="Destroy" name="resourceBaitGrub" count="1" prob=".02" tag="FishingBaitHarvestT1"/>
+		<drop event="Destroy" name="resourceBaitDragonfly" count="1" prob=".012" tag="FishingBaitHarvestT1"/>
+
+		<drop event="Destroy" name="resourceBaitWorm" count="1" prob=".08" tag="FishingBaitHarvestT2"/>
+		<drop event="Destroy" name="resourceBaitGrub" count="1" prob=".025" tag="FishingBaitHarvestT2"/>
+		<drop event="Destroy" name="resourceBaitDragonfly" count="1" prob=".018" tag="FishingBaitHarvestT2"/>
+
+		<drop event="Destroy" name="resourceBaitWorm" count="1" prob=".11" tag="FishingBaitHarvestT3"/>
+		<drop event="Destroy" name="resourceBaitGrub" count="1" prob=".035" tag="FishingBaitHarvestT3"/>
+		<drop event="Destroy" name="resourceBaitDragonfly" count="1" prob=".024" tag="FishingBaitHarvestT3"/>
+	</append>
+	<!-- new -->
+	<append xpath="/blocks">
+		<block name="woodChair1FishableLocation">
+			<property name="Extends" value="woodWeakNoUpgradeMaster" param1="DescriptionKey"/>
+			<property name="CustomIcon" value="woodChair1"/>
+			<property name="Texture" value="22"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="50"/>
+			<property name="Weight" value="23"/>
+			<property name="Shape" value="New"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="chair"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="UseGlobalUV" value="Local"/>
+			<property name="AllowAllRotations" value="true"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="woodChair1FishableLocationDesc"/>
+			<property name="CanPickup" value="true" param1="oldChair1VariantHelperFishableLocation"/>
+			<property name="FilterTags" value="MC_building,SC_decor,SC_industrial,SC_commercial,SC_residential"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+			<drop event="Fall" count="0" prob="0"/>
+			<property name="BuffsWhenWalkedOn" value="buffFishableWaterReadyTrigger"/>
+		</block>
+
+		<block name="oldChair1FishableLocation">
+			<property name="Extends" value="woodWeakNoUpgradeMaster" param1="DescriptionKey"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="50"/>
+			<property name="Weight" value="23"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="Entities/Furniture/chair01Prefab"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CanPickup" value="true" param1="oldChair1VariantHelperFishableLocation"/>
+			<property name="DescriptionKey" value="woodChair1FishableLocationDesc"/>
+			<drop event="Fall" count="0" prob="0"/>
+			<property name="FilterTags" value="MC_building,SC_decor,SC_industrial,SC_commercial,SC_residential"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+			<drop event="Destroy" name="resourceCloth" count="1,3"/>
+			<drop event="Destroy" name="resourceScrapIron" count="1,3"/>
+			<!-- Needed for placement preview -->
+			<property name="CustomIcon" value="oldChair1"/>
+			<property name="CustomIconTint" value="505050"/>
+			<property name="TintColor" value="505050"/>
+			<property name="BuffsWhenWalkedOn" value="buffFishableWaterReadyTrigger"/>
+		</block>
+
+		<block name="oldChair1BrownFishableLocation">
+			<property name="Extends" value="oldChair1FishableLocation"/>
+			<property name="CustomIcon" value="oldChair1"/>
+			<property name="CustomIconTint" value="1A0E04"/>
+			<property name="TintColor" value="1A0E04"/>
+			<property name="BuffsWhenWalkedOn" value="buffFishableWaterReadyTrigger"/>
+		</block>
+
+		<block name="oldChair1RedFishableLocation">
+			<property name="Extends" value="oldChair1FishableLocation"/>
+			<property name="CustomIcon" value="oldChair1"/>
+			<property name="CustomIconTint" value="4B1C1F"/>
+			<property name="TintColor" value="4B1C1F"/>
+			<property name="BuffsWhenWalkedOn" value="buffFishableWaterReadyTrigger"/>
+		</block>
+
+		<block name="oldChair1GreenFishableLocation">
+			<property name="Extends" value="oldChair1FishableLocation"/>
+			<property name="CustomIcon" value="oldChair1"/>
+			<property name="CustomIconTint" value="31452B"/>
+			<property name="TintColor" value="31452B"/>
+			<property name="BuffsWhenWalkedOn" value="buffFishableWaterReadyTrigger"/>
+		</block>
+
+		<block name="oldChair1BlueFishableLocation">
+			<property name="Extends" value="oldChair1FishableLocation"/>
+			<property name="CustomIcon" value="oldChair1"/>
+			<property name="CustomIconTint" value="235771"/>
+			<property name="TintColor" value="235771"/>
+			<property name="BuffsWhenWalkedOn" value="buffFishableWaterReadyTrigger"/>
+		</block>
+
+		<block name="oldChair1WhiteFishableLocation">
+			<property name="Extends" value="oldChair1FishableLocation"/>
+			<property name="CustomIcon" value="oldChair1"/>
+			<property name="CustomIconTint" value="858585"/>
+			<property name="TintColor" value="858585"/>
+			<property name="BuffsWhenWalkedOn" value="buffFishableWaterReadyTrigger"/>
+		</block>
+
+		<block name="oldChair1VariantHelperFishableLocation">
+			<property name="Extends" value="oldChair1"/>
+			<property name="CustomIcon" value="oldChair1"/>
+			<property name="CustomIconTint" value="505050"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="woodChair1FishableLocationDesc"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="woodChair1FishableLocation,oldChair1FishableLocation,oldChair1BrownFishableLocation,oldChair1RedFishableLocation,oldChair1GreenFishableLocation,oldChair1BlueFishableLocation,oldChair1WhiteFishableLocation"/>
+			<property name="PickupJournalEntry" value="shapeMenuTip"/>
+			<property name="FilterTags" value="MC_building,SC_decor,SC_industrial,SC_commercial,SC_residential"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+		</block>
+
+		<block name="DecorationTackleBoxRedLoot">
+			<property name="AllowAllRotations" value="true"/>
+			<property name="CustomIcon" value="TackleBoxIcon" />
+			<property name="Material" value="Mmetal"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/TelricsFishingA20.unity3d?DecorationTackleBoxRedPrefab"/>
+			<property name="Collide" value="melee"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Building,Building2"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="FilterTags" value="fdecor"/>
+			<property name="SortOrder2" value="0050"/>
+			<property name="MaxDamage" value="150"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="2"/>
+			</property>
+			<property name="Class" value="SecureLoot"/>
+			<property name="LootList" value="playerStorage"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="AllowAllRotations" value="true"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		</block>
+
+		<block name="DecorationTackleBoxBlueLoot">
+			<property name="AllowAllRotations" value="true"/>
+			<property name="CustomIcon" value="TackleBoxBlueIcon" />
+			<property name="Material" value="Mmetal"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/TelricsFishingA20.unity3d?DecorationTackleBoxBluePrefab"/>
+			<property name="Collide" value="melee"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Building,Building2"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="FilterTags" value="fdecor"/>
+			<property name="SortOrder2" value="0050"/>
+			<property name="MaxDamage" value="150"/>
+			<property name="resourceWood" value="2"/>
+			<property class="RepairItems">
+			</property>
+			<property name="Class" value="SecureLoot"/>
+			<property name="LootList" value="playerStorage"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="AllowAllRotations" value="true"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		</block>
+	</append>
+
+</configs>

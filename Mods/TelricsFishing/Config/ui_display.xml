@@ -1,0 +1,14 @@
+<configs>
+
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="FishingPoles" display_group="groupFishingItems">
+			<display_entry name="FishingBaseCatchChance" title_key="statFishingBaseCatchChance" display_type="Percent"/>
+		</item_display_info>
+
+		<item_display_info display_type="FishingBait" display_group="groupFishingItems">
+			<display_entry name="FishingCatchChance" title_key="statFishingCatchChance" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="FishingBaitConsumeChance" title_key="statFishingBaitConsumeChance" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+</configs>

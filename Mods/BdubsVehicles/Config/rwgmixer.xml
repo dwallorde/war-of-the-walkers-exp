@@ -1,0 +1,7 @@
+<configs>
+	<append xpath="/rwgmixer">
+		<prefab_spawn_adjust partial_name="Trader_Mechanic" min_count="1" max_count="1" bias="15"/>
+	</append>
+</configs>
+  
+ 

@@ -1,0 +1,23 @@
+<configs>
+
+  <append xpath="/items">
+
+    <item name="meleeToolFarmT1IronDensityHoeBlueprint">
+      <property name="Extends" value="schematicNoQualityMaster"/>
+      <property name="CustomIcon" value="meleeToolFarmT1IronHoe" />
+      <property name="CustomIconTint" value="248,120,160" />
+      <property name="Group" value="Schematics,BPMelee,Books,Items"/>
+      <property name="Unlocks" value="meleeToolFarmT1IronDensityHoe"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFarmT1IronDensityHoe" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+  </append>
+
+  <setattribute xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/property[@name='Material']" name="value">matIron</setattribute>
+  <setattribute xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/property[@name='UnlockedBy']" name="value">meleeToolFarmT1IronDensityHoeBlueprint</setattribute>
+  <append xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/property[@name='Tags']/@value">,Melee,Weapons/Tools,Items</append>
+  <append xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/property[@name='Group']/@value">,Melee,Weapons/Tools,Items</append>
+
+</configs>

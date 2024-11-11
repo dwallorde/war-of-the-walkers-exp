@@ -1,0 +1,15 @@
+﻿<configs>
+  
+  <append xpath="/buffs">    <!--
+		<buff name="buffBRDMArmor">
+			<duration value="0"/>
+			<damage_type value="heat"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleEntityDamage" operation="perc_add" value="5"/>
+				<passive_effect name="VehicleBlockDamage" operation="perc_add" value="4"/>
+				<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".01"/>
+			</effect_group>
+		</buff>-->
+  </append>
+  
+</configs>

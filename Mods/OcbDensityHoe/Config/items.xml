@@ -1,0 +1,20 @@
+<configs patcher-version="6">
+
+  <!-- 	<setattribute xpath="/items/item[@name='meleeToolFarmT1IronHoe']/property[@name='CreativeMode']" name="value">Player</setattribute> -->
+
+  <modif condition="UndeadLegacy_CoreModule">
+    <modinc path="items.a20.xml"/>
+    <modinc path="items.a20.ulm.xml"/>
+  </modif>
+  <modelsif condition="DarknessFallsCore">
+    <!-- unlock item via iron tool schematics -->
+    <!-- include the main item -->
+    <modinc path="items.a21.xml"/>
+    <modinc path="items.a21.df.xml"/>
+  </modelsif>
+  <modelse>
+    <!-- include the main item -->
+    <modinc path="items.a21.xml"/>
+  </modelse>
+
+</configs>

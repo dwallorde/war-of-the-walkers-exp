@@ -1,0 +1,290 @@
+<configs>
+	<append xpath="/lootcontainers">
+		<lootcontainer name="BDvehicleL1" count="0" size="9,6" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate"></lootcontainer>
+		<lootcontainer name="BDvehicleL2" count="0" size="9,8" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate"></lootcontainer>
+		<lootcontainer name="BDvehicleL3" count="0" size="9,9" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate"></lootcontainer>
+		<lootcontainer name="BDvehicleXL1" count="0" size="10,9" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate"></lootcontainer>
+		<lootcontainer name="BDvehicleXL2" count="0" size="10,9" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate"></lootcontainer>
+		<lootcontainer name="BDvehicleXL3" count="0" size="10,9" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate"></lootcontainer>
+	</append>
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
+		<lootgroup name="WorkTruckgroup">
+			<item name="vehicleWorkTruckchassis"/>
+			<item name="vehicleWorkTruckaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="UAZ452group">
+			<item name="vehicleUAZ452chassis"/>
+			<item name="vehicleUAZaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Novagroup">
+			<item name="vehicleNovachassis"/>
+			<item name="vehicleNovaaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="MRAPgroup">
+			<item name="vehicleMRAPparts"/>
+			<item name="vehicleMRAPaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="MD500group">
+			<item name="vehicleMD500chassis"/>
+			<item name="vehicleMD500accessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Maraudergroup">
+			<item name="vehicleMarauderchassis"/>
+			<item name="vehicleMarauderaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="GolfCartgroup">
+			<item name="vehicleGolfCartchassis"/>
+			<item name="vehicleGolfCartaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="GNXgroup">
+			<item name="vehicleGNXchassis"/>
+			<item name="vehicleGNXaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="BRDM2group">
+			<item name="vehicleBRDM2chassis"/>
+			<item name="vehicleBRDM2accessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Pickupgroup">
+			<item name="vehiclePickupchassis"/>
+			<item name="vehiclePickupaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Dustergroup">
+			<item name="vehicleDusterchassis"/>
+			<item name="vehicleDusteraccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Stalliongroup">
+			<item name="vehicleStallionchassis"/>
+			<item name="vehicleStallionaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Chargergroup">
+			<item name="vehicleChargerchassis"/>
+			<item name="vehicleChargeraccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="DirtBikegroup">
+			<item name="vehicleDirtBikeChassis"/>
+			<item name="vehicleDirtBikeParts"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Cruisergroup">
+			<item name="vehicleCruiserchassis"/>
+			<item name="vehicleCruiserbars"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Ratgroup">
+			<item name="vehicleRatChassis"/>
+			<item name="vehicleRatbars"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Junkergroup">
+			<item name="vehicleJunkerChassis"/>
+			<item name="vehicleJunkerbars"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="SHERPgroup">
+			<item name="vehicleSHERPchassis"/>
+			<item name="vehicleSHERPaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="UH60group">
+			<item name="vehicleUH60chassis"/>
+			<item name="vehicleUH60accessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="HotRodgroup">
+			<item name="vehicleHotRodchassis"/>
+			<item name="vehicleHotRodaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Buggygroup">
+			<item name="vehicleBuggychassis"/>
+			<item name="vehicleBuggyaccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="Humveegroup">
+			<item name="vehicleHumveechassis"/>
+			<item name="vehicleHumveebody"/>
+			<item name="modVehicleHumveeDoors"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="BoxTruckgroup">
+			<item name="vehicleBoxTruckchassis"/>
+			<item name="vehicleBoxTruckbody"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="LMTVgroup">
+			<item name="vehicleLMTVchassis"/>
+			<item name="vehicleLMTVbody"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="OldSemigroup">
+			<item name="vehicleOldSemichassis"/>
+			<item name="vehicleOldSemibody"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="groupQuestBoxTruckParts" count="all">
+			<item name="questRewardBoxTruckPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestBRDMParts" count="all">
+			<item name="questRewardBRDMPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestBuggyParts" count="all">
+			<item name="questRewardBuggyPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestChargerParts" count="all">
+			<item name="questRewardChargerPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestCruiserParts" count="all">
+			<item name="questRewardCruiserPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestDirtBikeParts" count="all">
+			<item name="questRewardDirtBikePartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestDusterParts" count="all">
+			<item name="questRewardDusterPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestGNXParts" count="all">
+			<item name="questRewardGNXPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestGolfCartParts" count="all">
+			<item name="questRewardGolfCartPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestHotRodParts" count="all">
+			<item name="questRewardHotRodPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestHumveeParts" count="all">
+			<item name="questRewardHumveePartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestJunkerParts" count="all">
+			<item name="questRewardJunkerPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestLMTVParts" count="all">
+			<item name="questRewardLMTVPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestMarauderParts" count="all">
+			<item name="questRewardMarauderPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestMD500Parts" count="all">
+			<item name="questRewardMD500PartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestMRAPParts" count="all">
+			<item name="questRewardMRAPPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestNovaParts" count="all">
+			<item name="questRewardNovaPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestOldSemiParts" count="all">
+			<item name="questRewardOldSemiPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestPickupParts" count="all">
+			<item name="questRewardPickupPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestRatParts" count="all">
+			<item name="questRewardRatPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestSHERPParts" count="all">
+			<item name="questRewardSHERPPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestStallionParts" count="all">
+			<item name="questRewardStallionPartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestUAZ452Parts" count="all">
+			<item name="questRewardUAZ452PartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestUH60Parts" count="all">
+			<item name="questRewardUH60PartsBundle"/>
+		</lootgroup>
+		<lootgroup name="groupQuestWorkTruckParts" count="all">
+			<item name="questRewardWorkTruckPartsBundle"/>
+		</lootgroup>
+	</insertBefore>
+	<append xpath="/lootcontainers/lootgroup[@name='vehiclePartsTiered']">
+		<item group="WorkTruckgroup" loot_prob_template="ProbT3"/>
+		<item group="UAZ452group" loot_prob_template="ProbT3"/>
+		<item group="Novagroup" loot_prob_template="ProbT3"/>
+		<item group="MRAPgroup" loot_prob_template="ProbT3"/>
+		<item group="MD500group" loot_prob_template="ProbT3"/>
+		<item group="Maraudergroup" loot_prob_template="ProbT3"/>
+		<item group="GolfCartgroup" loot_prob_template="ProbT1"/>
+		<item group="GNXgroup" loot_prob_template="ProbT2"/>
+		<item group="Pickupgroup" loot_prob_template="ProbT2"/>
+		<item group="BRDM2group" loot_prob_template="ProbT3"/>
+		<item group="Dustergroup" loot_prob_template="ProbT3"/>
+		<item group="Stalliongroup" loot_prob_template="ProbT2"/>
+		<item group="Chargergroup" loot_prob_template="ProbT2"/>
+		<item group="DirtBikegroup" loot_prob_template="ProbT2"/>
+		<item group="Cruisergroup" loot_prob_template="ProbT2"/>
+		<item group="Ratgroup" loot_prob_template="ProbT2"/>
+		<item group="Junkergroup" loot_prob_template="ProbT2"/>
+		<item group="SHERPgroup" loot_prob_template="ProbT3"/>
+		<item group="UH60group" loot_prob_template="ProbT3"/>
+		<item group="HotRodgroup" loot_prob_template="ProbT3"/>
+		<item group="Buggygroup" loot_prob_template="ProbT2"/>
+		<item group="Humveegroup" loot_prob_template="ProbT3"/>
+		<item group="BoxTruckgroup" loot_prob_template="ProbT3"/>
+		<item group="LMTVgroup" loot_prob_template="ProbT3"/>
+		<item group="OldSemigroup" loot_prob_template="ProbT3"/>
+	</append>
+</configs>

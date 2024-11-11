@@ -1,0 +1,23 @@
+<Ragsy_Gyro_Better_Gyro_handling>
+
+	 
+	
+<!--	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='cameraDistance' and @value='6, 8']/@value">5.4, 5.4</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='cameraTurnRate' and @value='.2, .35']/@value">0.4, 0.45</set> -->
+	
+	
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='brakeTorque']/@value">4000</set>
+	
+	
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='steerRate']/@value">70</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='steerCenteringRate']/@value">2</set>
+	
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='tiltAngleMax']/@value">4</set>
+	
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='upAngleMax']/@value">15</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='upForce']/@value">0.55</set>
+	
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='airDrag_velScale_angVelScale']/@value">.993, .93</set>
+	
+	
+</Ragsy_Gyro_Better_Gyro_handling>

@@ -1,0 +1,6 @@
+Key,english
+idcXuiCount,Count
+idcXuiItem,Item
+idcXuiOutputsLabel,Outputs
+idcHydroponicsTip,"Whether you're growing excess to feed all your friends and family or looking to sell your crops, hydroponics is the way to go.\n\nUsing the vertical hydroponic basin or hydroponic basin, you can grow your crops in the privacy of your own home, away from zombie influence. Each basin has 10 slots. You can only grow one crop at a time in the basin. You’ll need water and a car battery to get started.\n\nGrow lights can be added for faster growth times.\nFertilizer adds a 2X multiplier to the output of the crops.\nAdvanced basins increase the output to 40 slots.\n\nBasins must sit on an irrigation pipe, or directly above a water block.\n\nEach crop cycle will consume 50 water, 25 fertilizer, and 5 health of the battery."
+idcHydroponicsTip_title,Hydroponics

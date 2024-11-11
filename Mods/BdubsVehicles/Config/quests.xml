@@ -1,0 +1,37 @@
+<config>
+	<append xpath="/quests/quest[@id='quest_tier2complete']">
+		<reward type="LootItem" id="groupQuestGolfCartParts" ischosen="true" value="3"/>
+	</append>
+	<append xpath="/quests/quest[@id='quest_tier3complete']">
+		<reward type="LootItem" id="groupQuestDirtBikeParts" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestCruiserParts" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestJunkerParts" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestRatParts" ischosen="true" value="4"/>
+	</append>
+	<append xpath="/quests/quest[@id='quest_tier4complete']">
+		<reward type="LootItem" id="groupQuestBuggyParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestChargerParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestGNXParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestHotRodParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestNovaParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestOldSemiParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestPickupParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSHERPParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestStallionParts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestUAZ452Parts" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestWorkTruckParts" ischosen="true" value="5"/>
+	</append>
+	<append xpath="/quests/quest[@id='quest_tier5complete']">
+		<reward type="LootItem" id="groupQuestBoxTruckParts" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestBRDMParts" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestHumveeParts" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestLMTVParts" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestMarauderParts" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestMRAPParts" ischosen="true" value="6"/>
+	</append>
+	<append xpath="/quests/quest[@id='quest_tier6complete']">
+		<reward type="LootItem" id="groupQuestDusterParts" ischosen="true" value="7"/>
+		<reward type="LootItem" id="groupQuestMD500Parts" ischosen="true" value="7"/>
+		<reward type="LootItem" id="groupQuestUH60Parts" ischosen="true" value="7"/>
+	</append>
+</config>

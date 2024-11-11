@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="OcbDensityHoe" />
+	<DisplayName value="OCB Terrain Leveling Tool" />
+	<Description value="Terrain leveling Hoe to also align solid blocks with terrain." />
+	<Website value="https://github.com/OCB7D2D/OcbDensityHoe" />
+	<Author value="ocbMaurice" />
+	<Version value="0.5.1" />
+</xml>

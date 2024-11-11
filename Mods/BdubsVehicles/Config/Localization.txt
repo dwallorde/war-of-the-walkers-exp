@@ -1,0 +1,434 @@
+Key,English
+Trader_Mechanic,The Mechanic's Shop
+TraderMechanic_b,The Mechanic
+BVbillboard,Bdub's Vehicles Billboard
+
+vehicleBoxTruckbody,Box Truck Body
+vehicleBoxTruckbodyDesc,Parts needed to craft the Box Truck.
+vehicleBoxTruckchassis,Box Truck Chassis
+vehicleBoxTruckchassisDesc,Parts needed to craft the Box Truck.
+vehicleBoxTruckPlain,Box Truck
+vehicleBoxTruckPlainplaceable,Box Truck
+vehicleBoxTruckPlainplaceableDesc,An old Box Truck.
+vehicleBoxTruckHostess,Hostess Box Truck
+vehicleBoxTruckHostessplaceable,Hostess Box Truck
+vehicleBoxTruckHostessplaceableDesc,Tallahassee's favorite!
+
+vehicleGNXchassis,GNX Chassis
+vehicleGNXchassisDesc,Parts needed to craft the GNX.
+vehicleGNXaccessories,GNX Body
+vehicleGNXaccessoriesDesc,Parts needed to craft the GNX.
+vehicleGNX,GNX
+vehicleGNXplaceable,GNX
+vehicleGNXplaceableDesc,Cruise the wasteland in style!
+vehicleGNXRed,GNX
+vehicleGNXRedplaceable,GNX Red
+vehicleGNXRedplaceableDesc,Cruise the wasteland in style!
+
+vehicleGolfCart,Golf Cart
+vehicleGolfCartchassis,Golf Cart Chassis
+vehicleGolfCartchassisDesc,Parts needed to craft the Golf Cart.
+vehicleGolfCartaccessories,Golf Cart Accessories
+vehicleGolfCartaccessoriesDesc,Parts needed to craft the Golf Cart.
+vehicleGolfCartplaceable,Golf Cart
+vehicleGolfCartplaceableDesc,It might not be much but it's better than walking!
+meleeGolfClub,Golf Club
+meleeGolfClubDesc,No golf balls? There's always plenty of zombies to practice that swing on!
+
+vehicleWillyJeep,Willy Jeep
+vehicleWillyJeepplaceable,Willy Jeep
+vehicleWillyJeepplaceableDesc,If it survived WW2 surely it can handle this!
+vehicleWillyJeepTopless,Willy Jeep
+vehicleWillyJeepToplessplaceable,Willy Jeep
+vehicleWillyJeepToplessplaceableDesc,Now with even more wind-in-hair action!
+
+vehicleWillyJeepBlack,Willy Jeep (Black)
+vehicleWillyJeepBlackplaceable,Willy Jeep (Black)
+vehicleWillyJeepBlackplaceableDesc,If it survived WW2 surely it can handle this!
+vehicleWillyJeepToplessBlack,Willy Jeep (Black)
+vehicleWillyJeepToplessBlackplaceable,Willy Jeep (Black)
+vehicleWillyJeepToplessBlackplaceableDesc,Now with even more wind-in-hair action!
+
+vehicleWillyJeepBlue,Willy Jeep (Blue)
+vehicleWillyJeepBlueplaceable,Willy Jeep (Blue)
+vehicleWillyJeepBlueplaceableDesc,If it survived WW2 surely it can handle this!
+vehicleWillyJeepToplessBlue,Willy Jeep (Blue)
+vehicleWillyJeepToplessBlueplaceable,Willy Jeep (Blue)
+vehicleWillyJeepToplessBlueplaceableDesc,Now with even more wind-in-hair action!
+
+vehicleWillyJeepGreen,Willy Jeep (Green)
+vehicleWillyJeepGreenplaceable,Willy Jeep (Green)
+vehicleWillyJeepGreenplaceableDesc,If it survived WW2 surely it can handle this!
+vehicleWillyJeepToplessGreen,Willy Jeep (Green)
+vehicleWillyJeepToplessGreenplaceable,Willy Jeep (Green)
+vehicleWillyJeepToplessGreenplaceableDesc,Now with even more wind-in-hair action!
+
+vehicleWillyJeepOrange,Willy Jeep (Orange)
+vehicleWillyJeepOrangeplaceable,Willy Jeep (Orange)
+vehicleWillyJeepOrangeplaceableDesc,If it survived WW2 surely it can handle this!
+vehicleWillyJeepToplessOrange,Willy Jeep (Orange)
+vehicleWillyJeepToplessOrangeplaceable,Willy Jeep (Orange)
+vehicleWillyJeepToplessOrangeplaceableDesc,Now with even more wind-in-hair action!
+
+vehicleWillyJeepPurple,Willy Jeep (Purple)
+vehicleWillyJeepPurpleplaceable,Willy Jeep (Purple)
+vehicleWillyJeepPurpleplaceableDesc,If it survived WW2 surely it can handle this!
+vehicleWillyJeepToplessPurple,Willy Jeep (Purple)
+vehicleWillyJeepToplessPurpleplaceable,Willy Jeep (Purple)
+vehicleWillyJeepToplessPurpleplaceableDesc,Now with even more wind-in-hair action!
+
+vehicleWillyJeepRed,Willy Jeep (Red)
+vehicleWillyJeepRedplaceable,Willy Jeep (Red)
+vehicleWillyJeepRedplaceableDesc,If it survived WW2 surely it can handle this!
+vehicleWillyJeepToplessRed,Willy Jeep (Red)
+vehicleWillyJeepToplessRedplaceable,Willy Jeep (Red)
+vehicleWillyJeepToplessRedplaceableDesc,Now with even more wind-in-hair action!
+
+vehicleMRAP,MRAP
+vehicleMRAP2,MRAP
+vehicleMRAPplaceable,MRAP
+vehicleMRAP2placeableDesc,A MRAP military vehicle. What else could you want?
+vehicleMRAP2placeable,MRAP
+vehicleMRAPplaceableDesc,A MRAP military vehicle. What else could you want?
+vehicleMRAPaccessories,MRAP Accessories
+vehicleMRAPaccessoriesDesc,Accessories needed to craft the MRAP.
+vehicleMRAPparts,MRAP Parts
+vehicleMRAPpartsDesc,Parts needed to craft the MRAP.
+
+vehicleMarauder,Marauder
+vehicleMarauderplaceable,Marauder
+vehicleMarauderplaceableDesc,Those zombies will be jealous of this ride!
+vehicleMarauderblack,Marauder
+vehicleMarauderblackplaceable,Marauder
+vehicleMarauderblackplaceableDesc,Those zombies will be jealous of this ride!
+vehicleMarauderchassis,Marauder Chassis
+vehicleMarauderchassisDesc,Parts needed to craft the Marauder.
+vehicleMarauderaccessories,Marauder Accessories
+vehicleMarauderaccessoriesDesc,Parts needed to craft the Marauder.
+
+vehicleUAZaccessories,UAZ 452 Accessories
+vehicleUAZaccessoriesDesc,Parts needed to craft the UAZ 452.
+vehicleUAZ452chassis,UAZ 452 Chassis
+vehicleUAZ452chassisDesc,Parts needed to craft the UAZ 452.
+vehicleUAZ452,UAZ 452
+vehicleUAZ452placeable,UAZ 452
+vehicleUAZ452placeableDesc,Blend right in with the apocalypse!
+
+vehicleNovachassis,Nova Chassis
+vehicleNovachassisDesc,Parts needed to craft the Nova.
+vehicleNovaaccessories,Nova Accessories
+vehicleNovaaccessoriesDesc,Parts needed to craft the Nova.
+vehicleNova,Nova
+vehicleNovaplaceable,Nova
+vehicleNovaplaceableDesc,Classic...
+vehicleNovared,Nova Red
+vehicleNovaredplaceable,Nova Red
+vehicleNovaredplaceableDesc,Classic...
+vehicleNovablack,Nova Black
+vehicleNovablackplaceable,Nova Black
+vehicleNovablackplaceableDesc,Classic...
+
+vehicleWorkTruckchassis,Work Truck Chassis
+vehicleWorkTruckchassisDesc,Parts needed to craft the Work Truck.
+vehicleWorkTruckaccessories,Work Truck Accessories
+vehicleWorkTruckaccessoriesDesc,Parts needed to craft the Work Truck.
+vehicleWorkTruck,Work Truck
+vehicleWorkTruckplaceable,Work Truck
+vehicleWorkTruckplaceableDesc,Looks like it's been through more than just an apocalypse...
+
+vehicleBRDM2chassis,BRDM-2 Chassis
+vehicleBRDM2chassisDesc,Parts needed to craft the BRDM-2.
+vehicleBRDM2accessories,BRDM-2 Accessories
+vehicleBRDM2accessoriesDesc,Parts needed to craft the BRDM-2.
+vehicleBRDM2,BRDM-2
+vehicleBRDM2placeable,BRDM-2
+vehicleBRDM2placeableDesc,A surprisingly intact military vehicle.
+vehicleBRDM2desert,BRDM-2 Desert
+vehicleBRDM2desertplaceable,BRDM-2 Desert
+vehicleBRDM2desertplaceableDesc,A surprisingly intact military vehicle.
+
+vehiclePickupchassis,Pickup Chassis
+vehiclePickupchassisDesc,Parts needed to craft the Pickup.
+vehiclePickupaccessories,Pickup Accessories
+vehiclePickupaccessoriesDesc,Parts needed to craft the Pickup.
+vehiclePickup,Pickup
+vehiclePickupplaceable,Pickup
+vehiclePickupplaceableDesc,Make those zeds jealous with this stylish truck!
+
+vehicleMD500chassis,MD-500 Chassis
+vehicleMD500chassisDesc,Parts needed to craft the MD-500.
+vehicleMD500accessories,MD-500 Accessories
+vehicleMD500accessoriesDesc,Parts needed to craft the MD-500.
+vehicleMD500,MD-500
+vehicleMD500placeable,MD-500
+vehicleMD500placeableDesc,They can't kill you if they can't hit you!
+
+vehicleDusterchassis,Duster Chassis
+vehicleDusterchassisDesc,Parts needed to craft the Duster.
+vehicleDusteraccessories,Duster Accessories
+vehicleDusteraccessoriesDesc,Parts needed to craft the Duster.
+vehicleDuster,Duster
+vehicleDusterplaceable,Duster
+vehicleDusterplaceableDesc,It looks like it should fly...
+
+vehicleStallionchassis,Stallion Chassis
+vehicleStallionchassisDesc,Parts needed to craft the Stallion.
+vehicleStallionaccessories,Stallion Accessories
+vehicleStallionaccessoriesDesc,Parts needed to craft the Stallion.
+vehicleStalliongreen,Stallion
+vehicleStalliongreenplaceable,Stallion Green
+vehicleStalliongreenplaceableDesc,Classic...
+vehicleStallionred,Stallion
+vehicleStallionredplaceable,Stallion Red
+vehicleStallionredplaceableDesc,Classic...
+vehicleStallionblue,Stallion
+vehicleStallionblueplaceable,Stallion Blue
+vehicleStallionblueplaceableDesc,Classic...
+vehicleStallionwhite,Stallion
+vehicleStallionwhiteplaceable,Stallion White
+vehicleStallionwhiteplaceableDesc,Classic...
+vehicleStallion,Stallion
+vehicleStallionplaceable,Stallion 
+vehicleStallionplaceableDesc,Classic...
+
+vehicleDirtBike,Dirt Bike
+vehicleDirtBikeplaceable,Dirt Bike
+vehicleDirtBikeplaceableDesc,A dirt bike. And no neighbors to complain about it. Sweet!
+vehicleDirtBikeChassis,Dirt Bike Chassis
+vehicleDirtBikeChassisDesc,The beginning of something...awesome!
+vehicleDirtBikeParts,Dirt Bike Parts
+vehicleDirtBikePartsDesc,You might need these.
+
+vehicleChargerchassis,Charger Chassis
+vehicleChargerchassisDesc,Parts needed to craft the Charger.
+vehicleChargeraccessories,Charger Accessories
+vehicleChargeraccessoriesDesc,Parts needed to craft the Charger.
+vehicleChargerNew,Charger
+vehicleChargerNewplaceable,Charger
+vehicleChargerNewplaceableDesc,Classic...
+vehicleChargerOld,Charger
+vehicleChargerOldplaceable,Charger
+vehicleChargerOldplaceableDesc,Classic...
+vehicleChargerorange,Charger
+vehicleChargerorangeplaceable,Charger
+vehicleChargerorangeplaceableDesc,Classic...
+vehicleChargerorange2,Charger
+vehicleChargerorange2placeable,Charger
+vehicleChargerorange2placeableDesc,Classic...
+vehicleChargerblack,Charger
+vehicleChargerblackplaceable,Charger
+vehicleChargerblackplaceableDesc,Classic...
+vehicleChargerblack2,Charger
+vehicleChargerblack2placeable,Charger
+vehicleChargerblack2placeableDesc,Classic...
+vehicleChargeryellow,Charger
+vehicleChargeryellowplaceable,Charger
+vehicleChargeryellowplaceableDesc,Classic...
+vehicleChargeryellow2,Charger
+vehicleChargeryellow2placeable,Charger
+vehicleChargeryellow2placeableDesc,Classic...
+vehicleChargergreen,Charger
+vehicleChargergreenplaceable,Charger
+vehicleChargergreenplaceableDesc,Classic...
+vehicleChargergreen2,Charger
+vehicleChargergreen2placeable,Charger
+vehicleChargergreen2placeableDesc,Classic...
+vehicleChargerteal,Charger
+vehicleChargertealplaceable,Charger
+vehicleChargertealplaceableDesc,Classic...
+vehicleChargerteal2,Charger
+vehicleChargerteal2placeable,Charger
+vehicleChargerteal2placeableDesc,Classic...
+vehicleChargerrust,Charger
+vehicleChargerrustplaceable,Charger
+vehicleChargerrustplaceableDesc,Classic...
+vehicleChargerrust2,Charger
+vehicleChargerrust2placeable,Charger
+vehicleChargerrust2placeableDesc,Classic...
+
+vehicleJunker,Junker
+vehicleJunkerplaceable,Junker
+vehicleJunkerplaceableDesc,An old custom bike.
+vehicleJunker2,Junker
+vehicleJunker2placeable,Junker Purple
+vehicleJunker2placeableDesc,An old custom bike.
+vehicleJunkerChassis,Junker Chassis
+vehicleJunkerChassisDesc,The beginning of something...awesome!
+vehicleJunkerbars,Junker Handlebars
+vehicleJunkerbarsDesc,You might need these.
+
+vehicleCruiser,Cruiser
+vehicleCruiserplaceable,Cruiser
+vehicleCruiserplaceableDesc,A custom Cruiser. Sweet!
+vehicleCruiser2,Cruiser
+vehicleCruiser2placeable,Cruiser Faded
+vehicleCruiser2placeableDesc,A custom Cruiser. Sweet!
+vehicleCruiserchassis,Cruiser Chassis
+vehicleCruiserchassisDesc,The beginning of something...awesome!
+vehicleCruiserbars,Cruiser Handlebars
+vehicleCruiserbarsDesc,You might need these.
+
+vehicleRat,Rat
+vehicleRatplaceable,Rat
+vehicleRatplaceableDesc,A custom Rat bike.
+vehicleRat2,Rat
+vehicleRat2placeable,Rat Red
+vehicleRat2placeableDesc,A custom Rat bike.
+vehicleRatChassis,Rat Chassis
+vehicleRatChassisDesc,The beginning of something...awesome!
+vehicleRatbars,Rat Handlebars
+vehicleRatbarsDesc,You might need these.
+
+vehicleSHERPchassis,SHERP Chassis
+vehicleSHERPchassisDesc,Parts needed to craft the SHERP.
+vehicleSHERPaccessories,SHERP Accessories
+vehicleSHERPaccessoriesDesc,Parts needed to craft the SHERP.
+vehicleSHERP,SHERP
+vehicleSHERPplaceable,SHERP
+vehicleSHERPplaceableDesc,A custom offroad vehicle.
+
+vehicleUH60chassis,UH-60 Chassis
+vehicleUH60chassisDesc,Parts needed to craft the UH-60.
+vehicleUH60accessories,UH-60 Accessories
+vehicleUH60accessoriesDesc,Parts needed to craft the UH-60.
+vehicleUH60,UH-60
+vehicleUH60placeable,UH-60
+vehicleUH60placeableDesc,They can't kill you if they can't hit you!
+
+vehicleHotRodchassis,Hot Rod Chassis
+vehicleHotRodchassisDesc,Parts needed to craft the Hot Rod.
+vehicleHotRodaccessories,Hot Rod Accessories
+vehicleHotRodaccessoriesDesc,Parts needed to craft the Hot Rod.
+vehicleHotRod1,Hot Rod
+vehicleHotRod2,Hot Rod
+vehicleHotRod3,Hot Rod
+vehicleHotRod4,Hot Rod
+vehicleHotRod5,Hot Rod
+vehicleHotRod6,Hot Rod
+vehicleHotRod1placeable,Hot Rod
+vehicleHotRod1placeableDesc,A custom hot rod.
+vehicleHotRod2placeable,Hot Rod
+vehicleHotRod2placeableDesc,A custom hot rod.
+vehicleHotRod3placeable,Hot Rod
+vehicleHotRod3placeableDesc,A custom hot rod.
+vehicleHotRod4placeable,Hot Rod
+vehicleHotRod4placeableDesc,A custom hot rod.
+vehicleHotRod5placeable,Hot Rod
+vehicleHotRod5placeableDesc,A custom hot rod.
+vehicleHotRod6placeable,Hot Rod
+vehicleHotRod6placeableDesc,A custom hot rod.
+
+vehicleHumveechassis,Humvee Chassis
+vehicleHumveechassisDesc,Parts needed to craft the Humvee.
+vehicleHumveebody,Humvee Body
+vehicleHumveebodyDesc,Parts needed to craft the Humvee.
+vehicleHumvee,Humvee
+vehicleHumveeplaceable,Humvee
+vehicleHumveeplaceableDesc,Military surplus at its finest!
+vehicleHumveeTopless,Humvee
+vehicleHumveeToplessplaceable,Humvee (Topless)
+vehicleHumveeToplessplaceableDesc,Military surplus at its finest!
+modVehicleHumveeDoors,Humvee Doors
+modVehicleHumveeDoorsDesc,Equip this mod to your Humvee if you want it to have doors.
+
+vehicleBuggychassis,Buggy Chassis
+vehicleBuggychassisDesc,Parts needed to craft the Buggy.
+vehicleBuggyaccessories,Buggy Accessories
+vehicleBuggyaccessoriesDesc,Parts needed to craft the Buggy.
+vehicleBuggy,Buggy
+vehicleBuggyplaceable,Buggy
+vehicleBuggyplaceableDesc,An old offroad buggy.
+
+vehicleOldSemichassis,Old Semi Chassis
+vehicleOldSemichassisDesc,Parts needed to craft the Old Semi.
+vehicleOldSemibody,Old Semi Body
+vehicleOldSemibodyDesc,Parts needed to craft the Old Semi.
+vehicleOldSemi,Old Semi
+vehicleOldSemiplaceable,Old Semi
+vehicleOldSemiplaceableDesc,"You better watch your step, Arlene!"
+
+vehicleLMTVchassis,LMTV Chassis
+vehicleLMTVchassisDesc,Parts needed to craft the LMTV.
+vehicleLMTVbody,LMTV Body
+vehicleLMTVbodyDesc,Parts needed to craft the LMTV.
+vehicleLMTV,LMTV
+vehicleLMTVplaceable,LMTV
+vehicleLMTVplaceableDesc,Military transport vehicle. Holds 6 people.
+
+vehicleBoxTruckchassisSchematic,Box Truck Chassis Schematic
+vehicleBoxTruckbodySchematic,Box Truck Body Schematic
+vehicleBRDM2chassisSchematic,BRDM-2 Chassis Schematic
+vehicleBRDM2accessoriesSchematic,BRDM-2 Accessories Schematic
+vehicleBuggychassisSchematic,Buggy Chassis Schematic
+vehicleBuggyaccessoriesSchematic,Buggy Accessories Schematic
+vehicleChargerchassisSchematic,Charger Chassis Schematic
+vehicleChargeraccessoriesSchematic,Charger Accessories Schematic
+vehicleCruiserchassisSchematic,Cruiser Chassis Schematic
+vehicleCruiserbarsSchematic,Cruiser Handlebars Schematic
+vehicleDirtBikeChassisSchematic,Dirt Bike Chassis Schematic
+vehicleDirtBikePartsSchematic,Dirt Bike Parts Schematic
+vehicleDusterchassisSchematic,Duster Chassis Schematic
+vehicleDusteraccessoriesSchematic,Duster Accessories Schematic
+vehicleGNXchassisSchematic,GNX Chassis Schematic
+vehicleGNXaccessoriesSchematic,GNX Body Schematic
+vehicleGolfCartchassisSchematic,Golf Cart Chassis Schematic
+vehicleGolfCartaccessoriesSchematic,Golf Cart Accessories Schematic
+vehicleHotRodchassisSchematic,Hot Rod Chassis Schematic
+vehicleHotRodaccessoriesSchematic,Hot Rod Accessories Schematic
+vehicleHumveechassisSchematic,Humvee Chassis Schematic
+vehicleHumveebodySchematic,Humvee Body Schematic
+vehicleJunkerChassisSchematic,Junker Chassis Schematic
+vehicleJunkerbarsSchematic,Junker Handlebars Schematic
+vehicleLMTVchassisSchematic,LMTV Chassis Schematic
+vehicleLMTVbodySchematic,LMTV Body Schematic
+vehicleMarauderchassisSchematic,Marauder Chassis Schematic
+vehicleMarauderaccessoriesSchematic,Marauder Accessories Schematic
+vehicleMD500chassisSchematic,MD-500 Chassis Schematic
+vehicleMD500accessoriesSchematic,MD-500 Accessories Schematic
+vehicleMRAPpartsSchematic,MRAP Parts Schematic
+vehicleMRAPaccessoriesSchematic,MRAP Accessories Schematic
+vehicleNovachassisSchematic,Nova Chassis Schematic
+vehicleNovaaccessoriesSchematic,Nova Accessories Schematic
+vehicleOldSemichassisSchematic,Old Semi Chassis Schematic
+vehicleOldSemibodySchematic,Old Semi Body Schematic
+vehiclePickupchassisSchematic,Pickup Chassis Schematic
+vehiclePickupaccessoriesSchematic,Pickup Accessories Schematic
+vehicleRatChassisSchematic,Rat Chassis Schematic
+vehicleRatbarsSchematic,Rat Handlebars Schematic
+vehicleSHERPchassisSchematic,SHERP Chassis Schematic
+vehicleSHERPaccessoriesSchematic,SHERP Accessories Schematic
+vehicleStallionchassisSchematic,Stallion Chassis Schematic
+vehicleStallionaccessoriesSchematic,Stallion Accessories Schematic
+vehicleUAZ452chassisSchematic,UAZ 452 Chassis Schematic
+vehicleUH60chassisSchematic,UH-60 Chassis Schematic
+vehicleUH60accessoriesSchematic,UH-60 Accessories Schematic
+vehicleWorkTruckchassisSchematic,Work Truck Chassis Schematic
+vehicleWorkTruckaccessoriesSchematic,Work Truck Accessories Schematic
+
+questRewardBoxTruckPartsBundle,Box Truck Parts Bundle
+questRewardBRDMPartsBundle,BRDM-2 Parts Bundle
+questRewardBuggyPartsBundle,Buggy Parts Bundle
+questRewardChargerPartsBundle,Charger Parts Bundle
+questRewardCruiserPartsBundle,Cruiser Parts Bundle
+questRewardDirtBikePartsBundle,Dirt Bike Parts Bundle
+questRewardDusterPartsBundle,Duster Parts Bundle
+questRewardGNXPartsBundle,GNX Parts Bundle
+questRewardGolfCartPartsBundle,Golf Cart Parts Bundle
+questRewardHotRodPartsBundle,Hot Rod Parts Bundle
+questRewardHumveePartsBundle,Humvee Parts Bundle
+questRewardJunkerPartsBundle,Junker Parts Bundle
+questRewardLMTVPartsBundle,LMTV Parts Bundle
+questRewardMarauderPartsBundle,Marauder Parts Bundle
+questRewardMD500PartsBundle,MD-500 Parts Bundle
+questRewardMRAPPartsBundle,MRAP Parts Bundle
+questRewardNovaPartsBundle,Nova Parts Bundle
+questRewardOldSemiPartsBundle,Old Semi Parts Bundle
+questRewardPickupPartsBundle,Pickup Parts Bundle
+questRewardRatPartsBundle,Rat Parts Bundle
+questRewardSHERPPartsBundle,SHERP Parts Bundle
+questRewardStallionPartsBundle,Stallion Parts Bundle
+questRewardUAZ452PartsBundle,UAZ 452 Parts Bundle
+questRewardUH60PartsBundle,UH-60 Parts Bundle
+questRewardWorkTruckPartsBundle,Work Truck Parts Bundle
+
+modVehicleArmorDesc,"Reinforced armor for motorcycles and gyrocopters, as well as other select vehicles.\n\nReduces the damage taken when objects hit the vehicle. Increases damage to blocks and entities."

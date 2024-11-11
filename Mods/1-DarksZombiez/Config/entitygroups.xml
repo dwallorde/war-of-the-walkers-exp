@@ -1,0 +1,102 @@
+<configs>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125		
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125	
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntown']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125		
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125	
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDowntown']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125	
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125	
+	</csv>
+
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125	
+	</csv>
+
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandDowntown']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125	
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/text()" delim="\n" op="add" >
+		zombieParasite, 0.0125
+		zombieParasiteFeral, 0.0125
+		zombieFatParasite, 0.0125
+		zombieFatParasiteFeral, 0.0125
+		zombieExperimentZ, 0.0125
+		zombieExperimentZFeral, 0.0125
+		zombieArmy1, 0.0125
+		zombieArmy1Feral, 0.0125		
+	</csv>
+	
+</configs>

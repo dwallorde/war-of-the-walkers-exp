@@ -1,0 +1,9 @@
+<configs>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupFoodTrashCommon']">
+		<item name="resourceBaitWorm" prob=".05"/>
+		<item name="resourceBaitGrub" prob=".03"/>
+		<item name="resourceBaitDragonfly" prob=".009"/>
+	</append>
+
+</configs>

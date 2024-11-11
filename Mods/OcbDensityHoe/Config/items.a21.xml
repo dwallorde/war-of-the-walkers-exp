@@ -1,0 +1,118 @@
+﻿<configs>
+
+  <append xpath="/items">
+
+    <!-- Add main density hoe item -->
+    <!-- Old vanilla hoe with tinted icon -->
+    <!-- With two custom coded actions -->
+    <item name="meleeToolFarmT1IronDensityHoe">
+
+      <!-- <property name="CustomIconTint" value="255,255,255" /> -->
+
+      <property name="PickupJournalEntry" value="DensityHoeTip"/>
+
+      <property name="Tags" value="melee,medium,tool,repairTool,attStrength,perkMiner69r,canHaveCosmetic,repairingSkill"/>
+      <!-- It can still be used as a melee weapon -->
+      <property name="DisplayType" value="melee"/>
+      <!-- We re-use an old model that vanilla had used for the farming hoe -->
+      <property name="Meshfile" value="#@modfolder:Resources/OcbDensityHoe.unity3d?OcbHoePrefab"/>
+      <!-- Luckily all is neatly setup already -->
+      <property name="HoldType" value="17"/>
+
+      <property name="Weight" value="30"/>
+      <property name="Material" value="Mmetal"/>
+      <property name="RepairTools" value="resourceRepairKit"/>
+      <property name="DegradationBreaksAfter" value="false"/>
+      <property name="SoundJammed" value="ItemNeedsRepair"/>
+      <property name="SoundDestroy" value="wooddestroy1"/>
+      <property name="EconomicValue" value="200"/>
+      <property name="TraderStageTemplate" value="baseTier1"/>
+      <property name="ShowQuality" value="true"/>
+      <property name="Stacknumber" value="1"/>
+
+      <!--
+	    <property name="SoundUnholster" value="weapon_unholster"/>
+	    <property name="SoundHolster" value="weapon_holster"/>
+      -->
+      
+      <!-- Decided to still keep it a bit gated for now (make free to build?) -->
+      <property name="UnlockedBy" value="craftingRepairTools"/>
+
+      <!-- Properties for ULM compatibility -->
+      <property name="CarryWeight" value="2.5"/>
+      <property name="MaintenanceGroup" value="MG_Iron"/>
+
+      <property class="Action0">
+        <property name="Class" value="DensityHoe, DensityHoe"/>
+        <property name="ActionType" value="LevelArea"/>
+        <property name="Delay" value="0.75"/>
+        <property name="Sphere" value="0.15"/>
+        <!-- Action inherits from DynamicMelee -->
+        <!-- Doesn't seem it supports this option -->
+        <!-- Range is calculated by EffectManager -->
+        <!-- <property name="Block_range" value="4"/> -->
+        <property name="DamageBlock" value="1"/>
+        <property name="Sound_start" value="swoosh"/>
+        <property name="SoundHoe" value="ImpactSurface/metalhitearth"/>
+        <property name="ToolCategory.cropHarvest" value="1" param1="1"/>
+        <property name="UseGrazingHits" value="true"/>
+        <property name="GrazeStart" value=".5"/>
+        <property name="GrazeEnd" value=".55"/>
+        <property name="SwingDegrees" value="65"/>
+        <property name="SwingAngle" value="160"/>
+
+      </property>
+
+      <property class="Action1">
+        <property name="Class" value="DensityHoe, DensityHoe"/>
+        <property name="ActionType" value="FillDensity"/>
+        <property name="Delay" value="0.75"/>
+        <property name="Sphere" value="0.15"/>
+        <!-- Action inherits from DynamicMelee -->
+        <!-- Doesn't seem it supports this option -->
+        <!-- Range is calculated by EffectManager -->
+        <!-- <property name="Block_range" value="4"/> -->
+        <property name="DamageBlock" value="1"/>
+        <property name="Sound_start" value="swoosh"/>
+        <property name="SoundHoe" value="repair_block"/>
+        <property name="ToolCategory.cropHarvest" value="1" param1="1"/>
+        <property name="UseGrazingHits" value="true"/>
+        <property name="GrazeStart" value=".5"/>
+        <property name="GrazeEnd" value=".55"/>
+        <property name="SwingDegrees" value="65"/>
+        <property name="SwingAngle" value="160"/>
+      </property>
+
+      <!-- Pretty much copied 1to1 from meleeToolShovelT1IronShovel -->
+      <effect_group name="meleeToolFarmT1IronDensityHoe">
+        <passive_effect name="AttacksPerMinute" operation="base_set" value="50" tags="perkMiner69r"/>
+        <passive_effect name="StaminaLoss" operation="base_set" value="16.1" tags="primary"/>
+        <!-- secondary action is just a different action and not really a "power attack" -->
+        <passive_effect name="StaminaLoss" operation="base_set" value="16.1" tags="secondary"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="200,650" tier="1,6" tags="perkMiner69r"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+        <passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
+        <passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+        <passive_effect name="ModSlots" operation="base_set" value="2,2,2,3,3,4" tier="1,2,3,4,5,6"/>
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+        <passive_effect name="EntityDamage" operation="base_set" value="13.2" tags="perkMiner69r"/>
+        <passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/>
+        <passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/>
+        <passive_effect name="BlockDamage" operation="base_set" value="26" tags="perkMiner69r"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="wood"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+      </effect_group>
+
+      <property name="Group" value="Tools/Traps"/>
+      <property name="RepairExpMultiplier" value="5.5"/>
+
+    </item>
+
+  </append>
+
+</configs>
+

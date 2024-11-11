@@ -1,0 +1,13 @@
+<configs patcher-version="6">
+
+  <modif condition="UndeadLegacy_CoreModule">
+    <!-- unlocks items via schematics only -->
+  </modif>
+  <modelsif condition="DarknessFallsCore">
+    <modinc path="progression.a21.df.xml"/>
+  </modelsif>
+  <modelse>
+    <modinc path="progression.a21.xml"/>
+  </modelse>
+
+</configs>
