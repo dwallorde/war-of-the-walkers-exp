@@ -21,7 +21,7 @@
   <property name="POIMarkerPartToSpawn" value="part_driveway_rural_03,part_driveway_rural_03" />
   <property name="POIMarkerPartRotations" value="0,0" />
   <property name="POIMarkerPartSpawnChance" value="1,1" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="rural" />
   <property class="Stats">
     <property name="TotalVertices" value="949499" />
     <property name="TotalTriangles" value="976773" />

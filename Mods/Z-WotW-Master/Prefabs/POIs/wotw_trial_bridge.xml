@@ -18,7 +18,7 @@
   <property name="SleeperIsLootVolume" value="False,False,False,False,False,False,False,False,False" />
   <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False,False,False" />
   <property name="SleeperVolumeFlags" value="2,2,2,2,2,2,2,0,0" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="industrial" />
   <property name="EditorGroups" value="industrial" />
   <property name="Tags" value="industrial" />
   <property name="SleeperVolumeTriggeredBy" value=" # # # # # # # # " />

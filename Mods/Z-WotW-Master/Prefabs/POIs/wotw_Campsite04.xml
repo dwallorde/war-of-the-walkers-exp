@@ -11,7 +11,7 @@
   <property name="YOffset" value="-13" />
   <property name="PrefabSize" value="25, 20, 25" />
   <property name="RotationToFaceNorth" value="2" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="wilderness" />
   <property name="SleeperVolumeSize" value="23, 8, 13#23, 8, 10#3, 3, 3" />
   <property name="SleeperVolumeStart" value="1, 13, 1#1, 13, 14#11, 9, 9" />
   <property name="SleeperVolumeGroupId" value="0,0,0" />

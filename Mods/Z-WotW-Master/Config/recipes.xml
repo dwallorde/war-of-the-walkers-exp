@@ -4410,14 +4410,6 @@
 	<ingredient name="resourceOilShale" count="25"/>
 </recipe>
 
-<recipe name="resourceWaterFilter" count="1" craft_area="workbench" tags="workbenchCrafting,learnable">
-	<ingredient name="resourceAcid" count="5"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceCoal" count="50"/>
-	<ingredient name="resourcePotassiumNitratePowder" count="50"/>
-	<ingredient name="resourceScrapPolymers" count="150"/>
-</recipe>
-
 <recipe name="handlewood" count="1">
 	<ingredient name="resourceWood" count="20"/>
 	<ingredient name="resourceCloth" count="5"/>
@@ -5445,6 +5437,14 @@
 	<ingredient name="householdChemicals" count="25"/>
 </recipe>
 
+<recipe name="toolDewFilter" count="1" craft_area="workbench" tags="workbenchCrafting,learnable">
+	<ingredient name="resourceAcid" count="5"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceCoal" count="50"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="50"/>
+	<ingredient name="resourceScrapPolymers" count="150"/>
+</recipe>
+
 <recipe name="recyclerWorkstation" count="1" craft_area="workbench" tags="learnable">
 	<ingredient name="resourceForgedIron" count="40"/>
 	<ingredient name="resourceMechanicalParts" count="20"/>
@@ -5739,13 +5739,13 @@
 	<ingredient name="resourceSpring" count="4"/>
 </recipe>
 
-<recipe name="cntVendingMachineSellable" count="1" craft_area="workbench" craft_time="300" tags="learnable,workbenchCrafting">
+<!-- <recipe name="cntVendingMachineSellable" count="1" craft_area="workbench" craft_time="300" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="500"/>
 	<ingredient name="resourceForgedSteel" count="250"/>
 	<ingredient name="forgedTungsten" count="150"/>
 	<ingredient name="resourceMechanicalParts" count="200"/>
 	<ingredient name="resourceElectricParts" count="150"/>
-</recipe>
+</recipe> -->
 
 <recipe name="resourceGunPowderBundle" count="1" craft_time="5" craft_area="workbench" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceGunPowder" count="1000"/>
@@ -6100,7 +6100,7 @@
 	<ingredient name="resourceScrapLead" count="6000"/>
 </recipe> -->
 
-<recipe name="wotwCasinoCoinBundle" count="1" craft_time="1">
+<recipe name="wotwCasinoCoinBundle" count="1" craft_time="1" craft_exp_gain="0">
 	<ingredient name="casinoCoin" count="20000"/>
 </recipe>
 
@@ -9044,4 +9044,17 @@
 <remove xpath="/recipes/recipe[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@tags='resourceLegendaryParts']"/>
 <remove xpath="/recipes/recipe[@name='gunHandgunT0PipePistol']/ingredient[@name='resourceLegendaryParts']"/>
 <remove xpath="/recipes/recipe[@name='gunHandgunT0PipePistol']/effect_group/passive_effect[@tags='resourceLegendaryParts']"/>
+
+<remove xpath="/recipes/recipe[@name='resourceScopeLens']"/>
+<append xpath="/recipes">
+<recipe name="resourceScopeLens" count="1" craft_area="forge" tags="perkAdvancedEngineering">
+	<ingredient name="resourceCrushedSand" count="50"/>
+	<ingredient name="resourceRockSmall" count="25"/>
+	<ingredient name="resourceClayLump" count="25"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="resourceCrushedSand,resourceRockSmall,resourceClayLump"/>
+	</effect_group>
+</recipe>
+</append>
+
 </config>

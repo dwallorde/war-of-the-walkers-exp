@@ -12,7 +12,7 @@
   <property name="PrefabSize" value="60, 61, 60" />
   <property name="RotationToFaceNorth" value="0" />
   <property name="Zoning" value="Industrial" />
-  <property name="YOffset" value="-34" />
+  <property name="YOffset" value="-32" />
   <property name="SleeperVolumeSize" value="8, 3, 9#10, 6, 12#11, 3, 11#11, 3, 13#8, 3, 5#11, 3, 12#8, 3, 5#4, 3, 27#9, 5, 9#8, 3, 8#10, 9, 4#18, 3, 13#11, 6, 21#6, 3, 9#8, 3, 9#9, 3, 9#32, 3, 2#9, 6, 9#9, 3, 9#7, 3, 5#7, 3, 7#17, 2, 7#8, 3, 7#4, 3, 29#7, 3, 6#17, 3, 6#17, 3, 15#15, 3, 12#24, 3, 21#15, 18, 16#16, 18, 16" />
   <property name="SleeperVolumeStart" value="26, 54, 21#25, 46, 19#24, 42, 20#24, 38, 19#35, 38, 19#25, 34, 20#36, 34, 19#46, 39, 17#45, 51, 8#46, 51, 45#25, 34, 45#22, 34, 32#11, 34, 19#40, 34, 29#6, 51, 44#6, 51, 8#14, 35, 13#6, 43, 8#6, 39, 8#7, 43, 46#7, 47, 45#7, 39, 44#7, 35, 9#46, 35, 16#46, 35, 45#36, 39, 45#24, 27, 9#18, 27, 25#7, 14, 38#17, 2, 14#36, 2, 14" />
   <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" />
@@ -23,7 +23,7 @@
   <property name="EditorGroups" value="industrial" />
   <property name="Tags" value="industrial" />
   <property name="POIMarkerSize" value="20, 13, 1" />
-  <property name="POIMarkerStart" value="20, 33, 60" />
+  <property name="POIMarkerStart" value="20, 31, 60" />
   <property name="POIMarkerGroup" value="driveway" />
   <property name="POIMarkerTags" value="industrial" />
   <property name="POIMarkerType" value="PartSpawn" />
@@ -32,15 +32,15 @@
   <property name="POIMarkerPartSpawnChance" value="1" />
   <property name="SleeperVolumeTriggeredBy" value=" # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # " />
   <property class="Stats">
-    <property name="TotalVertices" value="5394889" />
-    <property name="TotalTriangles" value="3131914" />
+    <property name="TotalVertices" value="5397451" />
+    <property name="TotalTriangles" value="3133132" />
     <property class="BlockEntities">
       <property name="Vertices" value="5058458" />
       <property name="Triangles" value="2910956" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="255061" />
-      <property name="Triangles" value="144686" />
+      <property name="Vertices" value="257655" />
+      <property name="Triangles" value="145968" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="47936" />
@@ -59,8 +59,8 @@
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes5">
-      <property name="Vertices" value="32610" />
-      <property name="Triangles" value="51892" />
+      <property name="Vertices" value="32578" />
+      <property name="Triangles" value="51828" />
     </property>
   </property>
   <property class="IndexedBlockOffsets">

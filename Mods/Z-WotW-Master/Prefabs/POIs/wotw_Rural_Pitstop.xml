@@ -14,7 +14,7 @@
   <property name="RotationToFaceNorth" value="2" />
   <property name="Tags" value="rural" />
   <property name="QuestTags" value="clear, fetch, infested" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="rural" />
   <property name="POIMarkerSize" value="8, 13, 3#8, 13, 3" />
   <property name="POIMarkerStart" value="5, 9, -3#39, 9, -3" />
   <property name="POIMarkerGroup" value="driveway,driveway" />

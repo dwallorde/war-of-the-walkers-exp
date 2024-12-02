@@ -11,7 +11,7 @@
   <property name="YOffset" value="-6" />
   <property name="PrefabSize" value="40, 25, 40" />
   <property name="RotationToFaceNorth" value="2" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="wilderness" />
   <property name="EditorGroups" value="Wilderness" />
   <property name="Tags" value="wilderness" />
   <property class="IndexedBlockOffsets">

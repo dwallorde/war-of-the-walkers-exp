@@ -22,7 +22,7 @@
   <property name="EditorGroups" value="Wilderness" />
   <property name="PrefabSize" value="10, 15, 20" />
   <property name="Tags" value="wilderness" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="wilderness" />
   <property name="POIMarkerSize" value="1, 1, 1#1, 1, 1" />
   <property name="POIMarkerStart" value="-1, 5, 17#10, 5, 17" />
   <property name="POIMarkerGroup" value="1,2" />

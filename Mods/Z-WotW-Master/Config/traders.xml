@@ -864,7 +864,7 @@
 			<item name="slotMachineGamblingReady"/>
 			<item name="recyclerWorkstation"/>
 			<item name="tungstenForge"/>
-			<item name="cntVendingMachineSellable"/>
+			<!-- <item name="cntVendingMachineSellable"/> -->
 			<item name="mechanicBench"/>
 			<item name="gunSmithingWorkstation"/>
 			<item name="oilPump"/>
@@ -1284,8 +1284,6 @@
 		</trader_item_group>
 		
 		<trader_item_group name="covertQuests">
-			<item name="classChallenge_SilverArmorCraft"/>
-			<item name="classChallenge_SilverArmored"/>
 			<item name="classChallenge_Lockpicking"/>
 			<item name="classTreasure_armorcrate"/>
 		</trader_item_group>

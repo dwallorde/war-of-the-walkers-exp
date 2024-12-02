@@ -3,7 +3,7 @@
   <Global>
     <Tab name="Optionals" displayKey="" tooltipKey="">
       <Category name="General" displayKey="smxSettingGeneral" tooltipKey="smxSettingGeneralTooltip">
-        <Switch name="AnimatedBackground" displayKey="smxSettingAnimatedBackground" tooltipKey="smxSettingAnimatedBackgroundTooltip" value="On" defaultValue="Off" leftValue="Off" rightValue="On" />
+        <Switch name="AnimatedBackground" displayKey="smxSettingAnimatedBackground" tooltipKey="smxSettingAnimatedBackgroundTooltip" value="Off" defaultValue="Off" leftValue="Off" rightValue="On" />
       </Category>
     </Tab>
   </Global>

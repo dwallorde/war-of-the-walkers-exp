@@ -27,7 +27,7 @@
   <property name="TriggerVolumeSize" value="11, 3, 6#10, 2, 5#3, 2, 10#8, 2, 9#9, 2, 3#17, 3, 9#29, 3, 4" />
   <property name="TriggerVolumeStart" value="13, 34, 17#11, 34, 46#38, 34, 37#4, 29, 28#30, 26, 19#37, 20, 35#4, 21, 50" />
   <property name="TriggerVolumeTriggers" value="1#2#3#4#5#6#8" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="wilderness" />
   <property class="Stats">
     <property name="TotalVertices" value="1863821" />
     <property name="TotalTriangles" value="1108694" />

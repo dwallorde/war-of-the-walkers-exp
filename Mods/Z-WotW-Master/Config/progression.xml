@@ -4822,12 +4822,12 @@
 			<unlock_entry item="meleeToolAllSteelParts,meleeToolAxeT3ChainsawParts,meleeWpnBatonT2StunBatonParts,gunBotRoboticsParts,gunBowT1WoodenBowParts,gunExplosivesT3RocketLauncherParts,gunMGT1AK47Parts,gunRifleT1HuntingRifleParts,gunShotgunT1DoubleBarrelParts,gunHandgunT1PistolParts" unlock_tier="4" />
 			<unlock_entry item="oilBundle,ammoGasCanBundle,forgedIronBundle,forgedSteelBundle,forgedTungstenBundle,crushedSandBundle,headlightBundle,sewingKitBundle,paperBundle" unlock_tier="5" />
 		</display_entry>
-		<display_entry icon="calipers,wotwToolAdvancedPestle,toolPartsTungsten,resourceAcid,resourceWaterFilter" name_key="resources5-1,resources5-2,resources5-3,resources5-4,resources5-5" has_quality="false" unlock_level="100,110,120,130,140" >
+		<display_entry icon="calipers,wotwToolAdvancedPestle,toolPartsTungsten,resourceAcid,toolDewFilter" name_key="resources5-1,resources5-2,resources5-3,resources5-4,resources5-5" has_quality="false" unlock_level="100,110,120,130,140" >
 			<unlock_entry item="calipers,rebarBender,weldingTool,hammerRounding,toolAndDieSet,toolBeaker,fryingPan,roastingPan,loafPan,toolCuttingBoard" unlock_tier="1" />
 			<unlock_entry item="wotwToolAdvancedPestle,wotwToolSmoothJawPliers,wotwToolScrewGun,wotwToolTapeMeasure,wotwToolPortableCNC,wotwToolBrassHammer,wotwToolSharpKnife,wotwToolSewingMachine,wotwToolReloadingPress,wotwToolSocketSet,wotwToolWSCarbideBlade,wotwToolWSHeatedRack" unlock_tier="2" />
 			<unlock_entry item="toolPartsTungsten,toolPartsAdvancedMotor,meleeWpnTungstenSledgehammerParts,meleeWpnTungstenClubParts,meleeWpnTungstenSpearParts,meleeWpnTungstenMacheteParts,meleeWpnTungstenBatonParts" unlock_tier="3" />
 			<unlock_entry item="resourceAcid,wotwResourceKerosene" unlock_tier="4" />
-			<unlock_entry item="resourceWaterFilter,wotwResourceDieselBundle,wotwResourceKeroseneBundle" unlock_tier="5" />
+			<unlock_entry item="toolDewFilter,wotwResourceDieselBundle,wotwResourceKeroseneBundle" unlock_tier="5" />
 		</display_entry>
 		
 		<effect_group>
@@ -4860,7 +4860,7 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="110,140" value="1" tags="wotwToolAdvancedPestle,wotwToolSmoothJawPliers,wotwToolScrewGun,wotwToolTapeMeasure,wotwToolPortableCNC,wotwToolBrassHammer,wotwToolSharpKnife,wotwToolSewingMachine,wotwToolReloadingPress,wotwToolSocketSet,wotwToolWSCarbideBlade,wotwToolWSHeatedRack"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,140" value="1" tags="toolPartsTungsten,toolPartsAdvancedMotor,meleeWpnTungstenSledgehammerParts,meleeWpnTungstenClubParts,meleeWpnTungstenSpearParts,meleeWpnTungstenMacheteParts,meleeWpnTungstenBatonParts"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="130,140" value="1" tags="resourceAcid,wotwResourceKerosene"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="140,140" value="1" tags="resourceWaterFilter,wotwResourceDieselBundle,wotwResourceKeroseneBundle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="140,140" value="1" tags="toolDewFilter,wotwResourceDieselBundle,wotwResourceKeroseneBundle"/>
 		</effect_group>
 	</crafting_skill>
 	
@@ -5667,7 +5667,7 @@
 			<unlock_entry item="smallEngine,engineParts" unlock_tier="4" />
 			<!-- <unlock_entry item="carBattery" unlock_tier="5" /> -->
 			<unlock_entry item="motionsensor,electrictimerrelay,pressureplate,pressureplateLong,speaker" unlock_tier="5" />
-			<unlock_entry item="vaultDoor01Player_Powered,vaultDoor01PlayerDouble_Powered,vaultHatch_v3_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered" unlock_tier="6" />
+			<unlock_entry item="vaultDoor01Player_Powered,vaultDoor01PlayerDouble_Powered,vaultHatch_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered" unlock_tier="6" />
 		</display_entry>
 		<display_entry icon="carBattery" name_key="electricianT1-4" has_quality="true" unlock_level="30,34,38,42,46,50" >
 			<unlock_entry item="carBattery" unlock_tier="1" />
@@ -5706,7 +5706,7 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,150" value="1" tags="carBattery"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,150" value="1" tags="smallEngine,engineParts"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,150" value="1" tags="motionsensor,electrictimerrelay,pressureplate,pressureplateLong,speaker"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,150" value="1" tags="vaultDoor01_Powered,vaultDoor01Double_Powered,vaultHatch01_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,150" value="1" tags="vaultDoor01_Powered,vaultDoor01Double_Powered,vaultHatch_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,150" value="1" tags="ecoGeneratorbank"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,150" value="1" tags="ceilingLight02Brass_player,ceilingLight05Brass_player,ceilingLight04_player,ceilingLight05_player,signShopOpen_player,signNeonColdBeer_player,streetLight01_player,lightSconce_player,lanternOldBlockVariantHelper"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,150" value="1" tags="ecoSmallEngine,enginePartsECO"/>
@@ -5797,7 +5797,7 @@
 		</display_entry>
 		<display_entry icon="chemistryStation,tungstenForge,mechanicBench,gunSmithingWorkstation,oilPump" name_key="workstationsT4-1,workstationsT4-2,workstationsT4-3,workstationsT4-4,workstationsT4-5" has_quality="false" unlock_level="90,100,105,110,125" >
 			<unlock_entry item="chemistryStation,recyclerWorkstation" unlock_tier="1" />
-			<unlock_entry item="tungstenForge,cntVendingMachineSellable" unlock_tier="2" />
+			<unlock_entry item="tungstenForge" unlock_tier="2" />
 			<unlock_entry item="mechanicBench,wotwAdvDewCollector,adcBigBarrel,adcLargeCatcher,adcAdvancedFilter" unlock_tier="3" />
 			<unlock_entry item="gunSmithingWorkstation" unlock_tier="4" />
 			<unlock_entry item="oilPump,screamerBlock,wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor" unlock_tier="5" />
@@ -5823,7 +5823,7 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,125" value="1" tags="blueprintWorkStation,slotMachineGamblingReady"/>
 			
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,125" value="1" tags="chemistryStation,recyclerWorkstation"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="tungstenForge,cntVendingMachineSellable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="tungstenForge"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="105,125" value="1" tags="mechanicBench,wotwAdvDewCollector,adcBigBarrel,adcLargeCatcher,adcAdvancedFilter"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="110,125" value="1" tags="gunSmithingWorkstation"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="125,125" value="1" tags="oilPump,screamerBlock,wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor"/>

@@ -28,7 +28,7 @@
   <property name="POIMarkerPartToSpawn" value="part_driveway_rural_04" />
   <property name="POIMarkerPartRotations" value="2" />
   <property name="POIMarkerPartSpawnChance" value="1" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="Rural" />
   <property name="SleeperVolumeTriggeredBy" value=" # # " />
   <property name="QuestTags" value="clear, fetch" />
   <property class="IndexedBlockOffsets">

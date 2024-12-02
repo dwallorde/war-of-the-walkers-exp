@@ -22,7 +22,7 @@
   <property name="ShowQuestClearCount" value="1" />
   <property name="PrefabSize" value="6, 10, 20" />
   <property name="Tags" value="wilderness" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="wilderness" />
   <property name="POIMarkerSize" value="1, 1, 1#1, 1, 1" />
   <property name="POIMarkerStart" value="6, 4, 2#-1, 4, 2" />
   <property name="POIMarkerGroup" value="1,2" />

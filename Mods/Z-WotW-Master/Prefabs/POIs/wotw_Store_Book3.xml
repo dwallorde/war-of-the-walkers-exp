@@ -27,7 +27,7 @@
   <property name="POIMarkerPartRotations" value="2" />
   <property name="POIMarkerPartSpawnChance" value="1" />
   <property name="YOffset" value="-8" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="rural" />
   <property name="EditorGroups" value="rural" />
   <property name="Tags" value="rural" />
   <property name="QuestTags" value="clear, fetch, infested" />

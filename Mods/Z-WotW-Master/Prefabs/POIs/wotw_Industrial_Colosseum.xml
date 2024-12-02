@@ -29,7 +29,7 @@
   <property name="POIMarkerPartToSpawn" value="part_driveway_rural_12" />
   <property name="POIMarkerPartRotations" value="2" />
   <property name="POIMarkerPartSpawnChance" value="1" />
-  <property name="Zoning" value="none" />
+  <property name="Zoning" value="rural" />
   <property name="SleeperVolumeTriggeredBy" value=" # " />
   <property name="TriggerVolumeSize" value="13, 2, 14#3, 2, 2#4, 2, 3" />
   <property name="TriggerVolumeStart" value="15, 2, 13#30, 2, 19#5, 2, 19" />

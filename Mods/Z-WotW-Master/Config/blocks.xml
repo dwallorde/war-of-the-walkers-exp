@@ -21195,6 +21195,7 @@
 	<property name="Tag" value="Door"/>
 	<property name="PlaceEverywhere" value="true"/>
 	<property name="Place" value="Door"/>
+	<property name="AllowAllRotations" value="true"/>
 	<property name="OpenSound" value="open_door_vault"/>
 	<property name="CloseSound" value="close_door_vault"/>
 	<drop event="Destroy" count="0"/>
@@ -32621,6 +32622,24 @@
 <append xpath="/blocks/block[@name='palletCartonMilitaryTileCovered']">
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="militaryPallet"/>
+</append>
+
+<set xpath="/blocks/block[@name='electricwirerelay']/property[@name='TakeDelay']/@value">2</set>
+<set xpath="/blocks/block[@name='switch']/property[@name='TakeDelay']/@value">2</set>
+<set xpath="/blocks/block[@name='pressureplate']/property[@name='TakeDelay']/@value">2</set>
+<set xpath="/blocks/block[@name='pressureplateLong']/property[@name='TakeDelay']/@value">2</set>
+<set xpath="/blocks/block[@name='electrictimerrelay']/property[@name='TakeDelay']/@value">2</set>
+<set xpath="/blocks/block[@name='speaker']/property[@name='TakeDelay']/@value">2</set>
+<set xpath="/blocks/block[@name='dartTrap']/property[@name='TakeDelay']/@value">2</set>
+<set xpath="/blocks/block[@name='bladeTrap']/property[@name='TakeDelay']/@value">2</set>
+
+<append xpath="/blocks/block[@name='cntSteelWritableCrate']">
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="GenericStorageSignedXLarge"/>
+		<property name="Item" value="forgedTungsten"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="6"/>
+	</property>
 </append>
 
 </configs>

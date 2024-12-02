@@ -30,15 +30,15 @@
   <property name="POIMarkerPartRotations" value="3,3,3,1" />
   <property name="POIMarkerPartSpawnChance" value="1,1,1,1" />
   <property class="Stats">
-    <property name="TotalVertices" value="1113705" />
-    <property name="TotalTriangles" value="761487" />
+    <property name="TotalVertices" value="1108933" />
+    <property name="TotalTriangles" value="759815" />
     <property class="BlockEntities">
-      <property name="Vertices" value="1026639" />
-      <property name="Triangles" value="705567" />
+      <property name="Vertices" value="1021839" />
+      <property name="Triangles" value="703883" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="76988" />
-      <property name="Triangles" value="39056" />
+      <property name="Vertices" value="77016" />
+      <property name="Triangles" value="39068" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="0" />
@@ -70,11 +70,14 @@
       <property name="0" value="35, 8, 45" />
     </property>
     <property class="TraderOnOff">
-      <property name="0" value="35, 5, 30" />
-      <property name="1" value="36, 7, 30" />
+      <property name="0" value="36, 7, 30" />
     </property>
     <property class="challenge_mech_parts">
       <property name="0" value="13, 6, 37" />
+    </property>
+    <property class="challenge_steel">
+      <property name="0" value="9, 5, 37" />
+      <property name="1" value="9, 5, 35" />
     </property>
     <property class="Trader">
       <property name="0" value="15, 6, 26" />

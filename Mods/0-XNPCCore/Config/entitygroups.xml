@@ -209,7 +209,6 @@
 			npcHarleyMachete, .25 
 			npcHarleyPistol, .25 
 			npcHarleyPShotgun, .25 
-			npcHarleyRocketL, .25 
 			npcHarleySMG, .25 
 			npcHarleySRifle, .25 
 			npcHarleyTRifle, .25 
@@ -270,7 +269,6 @@
 			npcBakerMachete, .1 
 			npcBakerPistol, .1
 			npcBakerPShotgun, .1 
-			npcBakerRocketL, .05 
 			npcBakerSMG, .1
 			npcBakerSRifle, .1 
 			npcBakerTRifle, .1
@@ -285,7 +283,6 @@
 			npcNurseMachete, .1
 			npcNursePistol, .1
 			npcNursePShotgun, .1
-			npcNurseRocketL, .05
 			npcNurseSMG, .1
 			npcNurseSRifle, .1
 			npcNurseTRifle, .1
@@ -328,7 +325,6 @@
 			npcHarleyMachete, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -353,7 +349,6 @@
 			npcHarleyPipeShotgun, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySpear, 0.05 
 			npcHarleySRifle, 0.05 
@@ -379,7 +374,6 @@
 			npcHarleyPipeShotgun, 0.3 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySpear, 0.05 
 			npcHarleySRifle, 0.05 
@@ -399,7 +393,6 @@
 			npcHarleyPipeShotgun, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -492,7 +485,6 @@
 			npcHarleyPipeShotgun, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -511,7 +503,6 @@
 			npcHarleyPipeShotgun, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -530,7 +521,6 @@
 			npcHarleyPipeShotgun, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -549,7 +539,6 @@
 			npcHarleyPipeShotgun, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -566,7 +555,6 @@
 			npcHarleyPipePistol, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -592,7 +580,6 @@
 			npcHarleyM60, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -605,7 +592,6 @@
 			npcHarleyM60, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -618,7 +604,6 @@
 			npcHarleyM60, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -631,7 +616,6 @@
 			npcHarleyM60, 0.05 
 			npcHarleyPistol, 0.05 
 			npcHarleyPShotgun, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -642,7 +626,6 @@
 			npcHarleyAShotgun, 0.05 
 			npcHarleyDPistol, 0.05 
 			npcHarleyM60, 0.05 
-			npcHarleyRocketL, 0.05 
 			npcHarleySMG, 0.05 
 			npcHarleySRifle, 0.05 
 			npcHarleyTRifle, 0.05 
@@ -693,7 +676,6 @@
 			npcHarleyPipeShotgun, 0.007 
 			npcHarleyPistol, 0.005 
 			npcHarleyPShotgun, 0.005 
-			npcHarleyRocketL, 0.002 
 			npcHarleySMG, 0.005 
 			npcHarleySpear, 0.008 
 			npcHarleySRifle, 0.004 
@@ -719,7 +701,6 @@
 			npcHarleyPipeShotgun, 0.006 
 			npcHarleyPistol, 0.005 
 			npcHarleyPShotgun, 0.005 
-			npcHarleyRocketL, 0.004 
 			npcHarleySMG, 0.005 
 			npcHarleySpear, 0.006 
 			npcHarleySRifle, 0.005 
@@ -745,7 +726,6 @@
 			npcHarleyPipeShotgun, 0.004 
 			npcHarleyPistol, 0.005 
 			npcHarleyPShotgun, 0.005 
-			npcHarleyRocketL, 0.006 
 			npcHarleySMG, 0.005 
 			npcHarleySpear, 0.004 
 			npcHarleySRifle, 0.005 
@@ -771,7 +751,6 @@
 			npcHarleyPipeShotgun, 0.003 
 			npcHarleyPistol, 0.005 
 			npcHarleyPShotgun, 0.005 
-			npcHarleyRocketL, 0.008 
 			npcHarleySMG, 0.005 
 			npcHarleySpear, 0.002 
 			npcHarleySRifle, 0.006 
@@ -791,7 +770,6 @@
 			npcHarleyPipeShotgun, 0.002 
 			npcHarleyPistol, 0.004 
 			npcHarleyPShotgun, 0.004 
-			npcHarleyRocketL, 0.01 
 			npcHarleySMG, 0.005 
 			npcHarleySRifle, 0.006 
 			npcHarleyTRifle, 0.005 
@@ -884,7 +862,6 @@
 			npcHarleyPipeShotgun, 0.008 
 			npcHarleyPistol, 0.006 
 			npcHarleyPShotgun, 0.006 
-			npcHarleyRocketL, 0.002 
 			npcHarleySMG, 0.005 
 			npcHarleySRifle, 0.005 
 			npcHarleyTRifle, 0.006 
@@ -903,7 +880,6 @@
 			npcHarleyPipeShotgun, 0.006 
 			npcHarleyPistol, 0.005 
 			npcHarleyPShotgun, 0.005 
-			npcHarleyRocketL, 0.004 
 			npcHarleySMG, 0.005 
 			npcHarleySRifle, 0.005 
 			npcHarleyTRifle, 0.005 
@@ -922,7 +898,6 @@
 			npcHarleyPipeShotgun, 0.004 
 			npcHarleyPistol, 0.005 
 			npcHarleyPShotgun, 0.005 
-			npcHarleyRocketL, 0.006 
 			npcHarleySMG, 0.005 
 			npcHarleySRifle, 0.005 
 			npcHarleyTRifle, 0.005 
@@ -941,7 +916,6 @@
 			npcHarleyPipeShotgun, 0.002 
 			npcHarleyPistol, 0.004 
 			npcHarleyPShotgun, 0.004 
-			npcHarleyRocketL, 0.008 
 			npcHarleySMG, 0.005 
 			npcHarleySRifle, 0.005 
 			npcHarleyTRifle, 0.004 
@@ -958,7 +932,6 @@
 			npcHarleyPipePistol, 0.001 
 			npcHarleyPistol, 0.003 
 			npcHarleyPShotgun, 0.003 
-			npcHarleyRocketL, 0.01 
 			npcHarleySMG, 0.004 
 			npcHarleySRifle, 0.005 
 			npcHarleyTRifle, 0.004 
@@ -984,7 +957,6 @@
 			npcHarleyM60, 0.006 
 			npcHarleyPistol, 0.008 
 			npcHarleyPShotgun, 0.008 
-			npcHarleyRocketL, 0.002 
 			npcHarleySMG, 0.007 
 			npcHarleySRifle, 0.006 
 			npcHarleyTRifle, 0.007 
@@ -997,7 +969,6 @@
 			npcHarleyM60, 0.005 
 			npcHarleyPistol, 0.006 
 			npcHarleyPShotgun, 0.006 
-			npcHarleyRocketL, 0.004 
 			npcHarleySMG, 0.006 
 			npcHarleySRifle, 0.005 
 			npcHarleyTRifle, 0.006 
@@ -1010,7 +981,6 @@
 			npcHarleyM60, 0.005 
 			npcHarleyPistol, 0.004 
 			npcHarleyPShotgun, 0.004 
-			npcHarleyRocketL, 0.006 
 			npcHarleySMG, 0.004 
 			npcHarleySRifle, 0.005 
 			npcHarleyTRifle, 0.004 
@@ -1023,7 +993,6 @@
 			npcHarleyM60, 0.004 
 			npcHarleyPistol, 0.002 
 			npcHarleyPShotgun, 0.002 
-			npcHarleyRocketL, 0.008 
 			npcHarleySMG, 0.003 
 			npcHarleySRifle, 0.004 
 			npcHarleyTRifle, 0.003 
@@ -1034,7 +1003,6 @@
 			npcHarleyAShotgun, 0.003 
 			npcHarleyDPistol, 0.002 
 			npcHarleyM60, 0.003 
-			npcHarleyRocketL, 0.01 
 			npcHarleySMG, 0.002 
 			npcHarleySRifle, 0.003 
 			npcHarleyTRifle, 0.001 
@@ -1087,7 +1055,6 @@
 			npcNursePipeShotgun, 0.007 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.002 
 			npcNurseSMG, 0.005 
 			npcNurseSpear, 0.008 
 			npcNurseSRifle, 0.004 
@@ -1114,7 +1081,6 @@
 			npcNursePipeShotgun, 0.006 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.004 
 			npcNurseSMG, 0.005 
 			npcNurseSpear, 0.006 
 			npcNurseSRifle, 0.005 
@@ -1141,7 +1107,6 @@
 			npcNursePipeShotgun, 0.004 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.006 
 			npcNurseSMG, 0.005 
 			npcNurseSpear, 0.004 
 			npcNurseSRifle, 0.005 
@@ -1168,7 +1133,6 @@
 			npcNursePipeShotgun, 0.003 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.008 
 			npcNurseSMG, 0.005 
 			npcNurseSpear, 0.002 
 			npcNurseSRifle, 0.006 
@@ -1189,7 +1153,6 @@
 			npcNursePipeShotgun, 0.002 
 			npcNursePistol, 0.004 
 			npcNursePShotgun, 0.004 
-			npcNurseRocketL, 0.01 
 			npcNurseSMG, 0.005 
 			npcNurseSRifle, 0.006 
 			npcNurseTRifle, 0.005 
@@ -1284,7 +1247,6 @@
 			npcNursePipeShotgun, 0.008 
 			npcNursePistol, 0.006 
 			npcNursePShotgun, 0.006 
-			npcNurseRocketL, 0.002 
 			npcNurseSMG, 0.005 
 			npcNurseSRifle, 0.005 
 			npcNurseTRifle, 0.006 
@@ -1304,7 +1266,6 @@
 			npcNursePipeShotgun, 0.006 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.004 
 			npcNurseSMG, 0.005 
 			npcNurseSRifle, 0.005 
 			npcNurseTRifle, 0.005 
@@ -1324,7 +1285,6 @@
 			npcNursePipeShotgun, 0.004 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.006 
 			npcNurseSMG, 0.005 
 			npcNurseSRifle, 0.005 
 			npcNurseTRifle, 0.005 
@@ -1344,7 +1304,6 @@
 			npcNursePipeShotgun, 0.002 
 			npcNursePistol, 0.004 
 			npcNursePShotgun, 0.004 
-			npcNurseRocketL, 0.008 
 			npcNurseSMG, 0.005 
 			npcNurseSRifle, 0.005 
 			npcNurseTRifle, 0.004 
@@ -1361,7 +1320,6 @@
 			npcNursePipePistol, 0.001 
 			npcNursePistol, 0.003 
 			npcNursePShotgun, 0.003 
-			npcNurseRocketL, 0.01 
 			npcNurseSMG, 0.004 
 			npcNurseSRifle, 0.005 
 			npcNurseTRifle, 0.004 
@@ -1387,7 +1345,6 @@
 			npcNurseM60, 0.006 
 			npcNursePistol, 0.008 
 			npcNursePShotgun, 0.008 
-			npcNurseRocketL, 0.002 
 			npcNurseSMG, 0.007 
 			npcNurseSRifle, 0.006 
 			npcNurseTRifle, 0.007 
@@ -1400,7 +1357,6 @@
 			npcNurseM60, 0.005 
 			npcNursePistol, 0.006 
 			npcNursePShotgun, 0.006 
-			npcNurseRocketL, 0.004 
 			npcNurseSMG, 0.006 
 			npcNurseSRifle, 0.005 
 			npcNurseTRifle, 0.006 
@@ -1413,7 +1369,6 @@
 			npcNurseM60, 0.005 
 			npcNursePistol, 0.004 
 			npcNursePShotgun, 0.004 
-			npcNurseRocketL, 0.006 
 			npcNurseSMG, 0.004 
 			npcNurseSRifle, 0.005 
 			npcNurseTRifle, 0.004 
@@ -1426,7 +1381,6 @@
 			npcNurseM60, 0.004 
 			npcNursePistol, 0.002 
 			npcNursePShotgun, 0.002 
-			npcNurseRocketL, 0.008 
 			npcNurseSMG, 0.003 
 			npcNurseSRifle, 0.004 
 			npcNurseTRifle, 0.003 
@@ -1437,7 +1391,6 @@
 			npcNurseAShotgun, 0.003 
 			npcNurseDPistol, 0.002 
 			npcNurseM60, 0.003 
-			npcNurseRocketL, 0.01 
 			npcNurseSMG, 0.002 
 			npcNurseSRifle, 0.003 
 			npcNurseTRifle, 0.001 
@@ -1490,7 +1443,6 @@
 			npcNursePipeShotgun, 0.007 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.002 
 			npcNurseSMG, 0.005 
 			npcNurseSpear, 0.008 
 			npcNurseSRifle, 0.004 
@@ -1517,7 +1469,6 @@
 			npcNursePipeShotgun, 0.006 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.004 
 			npcNurseSMG, 0.005 
 			npcNurseSpear, 0.006 
 			npcNurseSRifle, 0.005 
@@ -1544,7 +1495,6 @@
 			npcNursePipeShotgun, 0.004 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.006 
 			npcNurseSMG, 0.005 
 			npcNurseSpear, 0.004 
 			npcNurseSRifle, 0.005 
@@ -1571,7 +1521,6 @@
 			npcNursePipeShotgun, 0.003 
 			npcNursePistol, 0.005 
 			npcNursePShotgun, 0.005 
-			npcNurseRocketL, 0.008 
 			npcNurseSMG, 0.005 
 			npcNurseSpear, 0.002 
 			npcNurseSRifle, 0.006 

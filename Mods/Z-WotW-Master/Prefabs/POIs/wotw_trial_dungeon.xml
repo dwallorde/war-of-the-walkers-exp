@@ -12,7 +12,7 @@
   <property name="YOffset" value="-29" />
   <property name="PrefabSize" value="25, 34, 25" />
   <property name="RotationToFaceNorth" value="3" />
-  <property name="Zoning" value="none, Industrial, Commercial" />
+  <property name="Zoning" value="Industrial, Commercial" />
   <property name="SleeperVolumeSize" value="19, 3, 9#15, 3, 9#15, 3, 9#15, 3, 9#18, 3, 9#19, 3, 9" />
   <property name="SleeperVolumeStart" value="4, 5, 8#1, 9, 8#8, 13, 8#1, 17, 8#5, 21, 8#1, 25, 8" />
   <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0" />

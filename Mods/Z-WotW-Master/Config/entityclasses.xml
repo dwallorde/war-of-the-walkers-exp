@@ -3260,4 +3260,11 @@
 <append xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'Feral')) and not(contains(@name, 'Radiated'))]/property[@name='Tags']/@value">,zombieStandard</append>
 <append xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'Radiated')) and(contains(@name, 'Feral'))]/property[@name='Tags']/@value">,zombieFeral</append>
 <append xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'Feral')) and(contains(@name, 'Radiated'))]/property[@name='Tags']/@value">,zombieRadiated</append>
+
+<set xpath="/entity_classes/entity_class[@name='npcRocketLTemplate']/property[@name='RightHandJointName']/@value">AShotgun</set>
+<set xpath="/entity_classes/entity_class[@name='npcRocketLTemplate']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">gunNPCAShotgun,ammoNPCShotgunShell</set>
+<set xpath="/entity_classes/entity_class[@name='npcRocketLTemplate']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">gunNPCAShotgun,ammoNPCShotgunShell</set>
+<set xpath="/entity_classes/entity_class[@name='npcRocketLTemplate']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">gunNPCAShotgun,ammoNPCShotgunShell</set>
+<set xpath="/entity_classes/entity_class[@name='npcRocketLTemplate']/property[@name='BagItems']/@value">gunShotgunT3AutoShotgun</set>
+<set xpath="/entity_classes/entity_class[@name='npcRocketLTemplate']/property[@name='LootDropEntityClass']/@value">EntityNPCLootContainerAShotgun</set>
 </config>

@@ -4466,10 +4466,10 @@
 	
 	<!-- Survivalist Class -->
 	<quest id="0wotwQuestClass_PreSurvivalistPoint">
-		<property name="name_key" value="0wotwQuestClass_SurvivalistPt4_name"/>
-		<property name="subtitle_key" value="0wotwQuestClass_SurvivalistPt4_subtitle"/>
-		<property name="description_key" value="0wotwQuestClass_SurvivalistPt4_desc"/>
-		<property name="offer_key" value="0wotwQuestClass_SurvivalistPt4_offer"/>
+		<property name="name_key" value="0wotwQuestClass_PreSurvivalistPoint_name"/>
+		<property name="subtitle_key" value="0wotwQuestClass_PreSurvivalistPoint_subtitle"/>
+		<property name="description_key" value="0wotwQuestClass_PreSurvivalistPoint_desc"/>
+		<property name="offer_key" value="0wotwQuestClass_PreSurvivalistPoint_offer"/>
 		<property name="icon" value="ui_game_symbol_classSurvivalist"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>
@@ -4480,10 +4480,10 @@
 	</quest>
 	
 	<quest id="0wotwQuestClass_PreSurvivalist">
-		<property name="name_key" value="0wotwQuestClass_PreSurvivalist_name"/>
-		<property name="subtitle_key" value="0wotwQuestClass_PreSurvivalist_subtitle"/>
-		<property name="description_key" value="0wotwQuestClass_PreSurvivalist_desc"/>
-		<property name="offer_key" value="0wotwQuestClass_PreSurvivalist_offer"/>
+		<property name="name_key" value="0wotwQuestClass_SurvivalistPt5_name"/>
+		<property name="subtitle_key" value="0wotwQuestClass_SurvivalistPt5_subtitle"/>
+		<property name="description_key" value="0wotwQuestClass_SurvivalistPt5_desc"/>
+		<property name="offer_key" value="0wotwQuestClass_SurvivalistPt5_offer"/>
 		<property name="icon" value="ui_game_symbol_classSurvivalist"/>
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="Quest"/>

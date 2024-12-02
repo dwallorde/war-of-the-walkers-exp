@@ -5433,4 +5433,13 @@
 
 <remove xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT5_07']/item[@name='drinkJarGrandpasForgettingElixir']"/>
 
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT1']/item[@group='groupAmmoMunitions']/@count">1</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT2']/item[@group='groupAmmoMunitions']/@count">2</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT3']/item[@group='groupAmmoMunitions']/@count">2</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT3']/item[@group='groupAmmoLarge']/@count">1</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']/item[@group='groupAmmoMunitions']/@count">3</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']/item[@group='groupAmmoLarge']/@count">2</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']/item[@group='groupAmmoMunitions']/@count">2</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']/item[@group='groupAmmoLarge']/@count">3</set>
+
 </config>
