@@ -5996,6 +5996,8 @@ treeBurntMaple01BFDesc,blocks,Block,,,Burnt Maple Tree (Softwood),
 treeBurntMaple02BFDesc,blocks,Block,,,Burnt Maple Tree (Softwood),
 treeBurntMaple03BFDesc,blocks,Block,,,Burnt Maple Tree (Softwood),
 treeDeadTree01BFDesc,blocks,Block,,,Dead Tree (Softwood),
+wotwCntTungstenWritableCrate,blocks,Block,,,Tungsten Storage Crate,
+wotwCntTungstenWritableCrateInsecure,blocks,Block,,,Tungsten Storage Crate Insecure,
 
 FirstAidDeployBuff,buffs,Buff,,,First Aid Deploy,
 FirstAidDeployBuffDesc,buffs,Buff,,,Your Health is replenishing from Health Deploy.,

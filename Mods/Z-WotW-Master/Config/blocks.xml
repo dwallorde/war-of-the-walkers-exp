@@ -32635,11 +32635,94 @@
 
 <append xpath="/blocks/block[@name='cntSteelWritableCrate']">
 	<property class="UpgradeBlock">
-		<property name="ToBlock" value="GenericStorageSignedXLarge"/>
+		<property name="ToBlock" value="wotwCntTungstenWritableCrate"/>
 		<property name="Item" value="forgedTungsten"/>
 		<property name="ItemCount" value="10"/>
 		<property name="UpgradeHitCount" value="6"/>
 	</property>
+</append>
+
+<append xpath="/blocks">
+<!-- XLarge Writable Storage Chest -->
+<block name="wotwCntTungstenWritableCrate">
+	<property name="CustomIcon" value="GenericStorageSignedXLarge" />
+	<property name="Class" value="CompositeTileEntity"/>
+	<property class="CompositeFeatures">
+		<property class="TEFeatureStorage">
+			<property name="LootList" value="playerStorageXL"/>
+		</property>
+		<property class="TEFeatureLockable"/>
+		<property class="TEFeatureSignable">
+			<property name="FontSize" value="90"/>
+			<property name="LineCount" value="3"/>
+			<property name="LineWidth" value="0.55"/>
+		</property>
+	</property>
+	
+	<property name="UnlockedBy" value="craftingConstruction"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Storage.unity3d?StorageXLargeSignedPrefab"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Path" value="solid"/>
+	<property name="AllowedRotations" value="Basic90"/>
+	<property name="DescriptionKey" value="GenericStorageSignedXLargeDesc"/>
+    <property name="Material" value="storageMetal" />
+	<property name="UseGlobalUV" value="L,L,L,L,L,L"/>
+	<property name="FuelValue" value="300"/>
+	<property name="Weight" value="40"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="RepairItems">
+	  <property name="forgedTungsten" value="20" />
+	</property>
+    <drop event="Destroy" count="0" />
+    <property name="DowngradeBlock" value="wotwCntTungstenWritableCrateInsecure" />
+	<property name="Group" value="Building,advBuilding" />
+	<property name="EconomicValue" value="6"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="SortOrder1" value="B106"/>
+	<property name="SortOrder2" value="0004"/>
+</block>
+
+<!-- XLarge Writable Storage Chest -->
+<block name="wotwCntTungstenWritableCrateInsecure">
+	<property name="CustomIcon" value="GenericStorageSignedXLarge" />
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Class" value="CompositeTileEntity"/>
+	<property class="CompositeFeatures">
+		<property class="TEFeatureStorage">
+			<property name="LootList" value="playerStorageXL"/>
+		</property>
+		<property class="TEFeatureSignable">
+			<property name="FontSize" value="90"/>
+			<property name="LineCount" value="3"/>
+			<property name="LineWidth" value="0.55"/>
+		</property>
+	</property>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Storage.unity3d?StorageXLargeSignedPrefab"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="AllowedRotations" value="Basic90"/>
+	<property name="Path" value="solid"/>
+	<property name="DescriptionKey" value="GenericStorageLargeDesc"/>
+    <property name="Material" value="storageMetalWeak" />
+	<property name="UseGlobalUV" value="L,L,G,G,G,G"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="RepairItems">
+	  <property name="forgedTungsten" value="101" />
+	</property>
+	<property class="UpgradeBlock">
+      <property name="ToBlock" value="wotwCntTungstenWritableCrate" />
+      <property name="Item" value="resourceNail" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="1" />
+    </property>
+	<drop event="Destroy" name="scrapTungsten" count="20,25"/>
+	<drop event="Destroy" name="resourceNail" count="8,12"/>
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="SortOrder1" value="B106"/>
+	<property name="SortOrder2" value="0005"/>
+</block>
 </append>
 
 </configs>
