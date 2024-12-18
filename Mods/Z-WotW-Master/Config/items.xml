@@ -23361,7 +23361,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceWood"/>
-	<property name="Weight" value="5"/>
+	<property name="Weight" value="0"/>
 	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
 	<property name="FuelValue" value="5"/>
 	<property name="EconomicValue" value="25"/>
@@ -24290,6 +24290,12 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingVehicles" level="200" show_message="false"/>
 	</effect_group>
 </item>
+</append>
+
+<set xpath="/items/item[@name='toolDewFilter']/property[@name='UnlockedBy']/@value">craftingResources</set>
+
+<append xpath="/items/item[@name='scoreOpenNPCWindow']">
+	<property name="Weight" value="0"/>
 </append>
 
 </config>

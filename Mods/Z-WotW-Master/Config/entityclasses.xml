@@ -2523,7 +2523,7 @@
 
 <!-- Christmas Zombies -->
 <append xpath="/entity_classes">
-	<entity_class name="EN_Zombie_Template" extends="zombieTemplateMale">
+	<!-- <entity_class name="EN_Zombie_Template" extends="zombieTemplateMale">
 		<property name="HideInSpawnMenu" value="true"/>
 		<property name="Prefab" value="NPC"/>
 		<property name="ModelType" value="ZombieUMA"/>
@@ -2546,7 +2546,6 @@
 	</entity_class>
 	
 	<entity_class name="enSnowSanta1" extends="EN_Zombie_Template">
-		<!-- <property name="UserSpawnType" value="Menu"/> -->
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="Archetype" value="en_snowSanta1"/>
 		<property name="SizeScale" value="0.95"/>
@@ -2570,7 +2569,7 @@
 	<property name="AITask-2" value="DestroyArea"/>
 	<property name="AITask-3" value="Territorial"/>
 	<property name="AITask-4" value="ApproachDistraction"/>
-	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
 	<property name="AITask-6" value="ApproachSpot"/>
 	<property name="AITask-7" value="Look"/>
 	<property name="AITask-8" value="Wander"/>
@@ -2578,10 +2577,6 @@
 	<property name="AITarget-2" value="BlockingTargetTask"/>
 	<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0"/>
-		<!-- <property name="AIPathCostScale" value="100, 100"/>
-		<property name="AITask-1" value="RunawayWhenHurt"/>
-		<property name="AITask-2" value="RunawayFromEntity" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>
-		<property name="AITask-3" value="Wander"/> -->
 		<property name="SoundRandom" value="santaClausRoam"/>
 		<property name="SoundAlert" value="santaClausRoam"/>
 		<property name="SoundAttack" value=""/>
@@ -2593,7 +2588,6 @@
 	</entity_class>
 	
 	<entity_class name="enSnowSantaHelper1" extends="EN_Zombie_Template_Female1">
-		<!-- <property name="UserSpawnType" value="Menu"/> -->
 		<property name="Tags" value="entity,zombie,walker,umazombie"/>
 		<property name="HandItem" value="enHand_santaHelper"/>
 		<property name="Archetype" value="en_snowSantaHelper1"/>
@@ -2617,7 +2611,7 @@
 	<property name="AITask-2" value="DestroyArea"/>
 	<property name="AITask-3" value="Territorial"/>
 	<property name="AITask-4" value="ApproachDistraction"/>
-	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
 	<property name="AITask-6" value="ApproachSpot"/>
 	<property name="AITask-7" value="Look"/>
 	<property name="AITask-8" value="Wander"/>
@@ -2625,17 +2619,6 @@
 	<property name="AITarget-2" value="BlockingTargetTask"/>
 	<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0"/>
-		<!-- <property name="AIGroupCircle" value="1"/>
-		<property name="AINoiseSeekDist" value="3"/>
-		<property name="AIPathCostScale" value=".4, .6"/> -->
-		<!-- <property name="AITask-1" value="BreakBlock"/>
-		<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityNPC,3,EntityPlayer,3"/>
-		<property name="AITask-3" value="RunawayWhenHurt"/>
-		<property name="AITask-4" value="Wander"/>
-		<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-		<property name="AITarget-2" value="BlockIf" data="condition=alert e 0"/>
-		<property name="AITarget-3" value="BlockingTargetTask"/>
-		<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,15,EntityNPC,15,10"/> -->
 		<property name="SoundRandom" value=""/>
 		<property name="SoundAlert" value=""/>
 		<property name="SoundSense" value=""/>
@@ -2644,7 +2627,7 @@
 		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
 		<property name="LootDropProb" value=".4"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerChristmas"/>
-	</entity_class>
+	</entity_class> -->
 	
 	<!-- Hells Janitor -->
 	<entity_class name="zombieHellsJanitor" extends="zombieRegularTemplate">

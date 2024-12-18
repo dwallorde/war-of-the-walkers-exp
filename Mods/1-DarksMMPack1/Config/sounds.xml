@@ -1,0 +1,97 @@
+<configs>
+	<append xpath="/Sounds">
+	
+		<!--NEW-->
+
+		<SoundDataNode name="MMZombieAlert">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_08" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_09" />
+                        <AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_10" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+
+		<SoundDataNode name="MMZombieAttack">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_01" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_02" />
+                        <AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_04" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_05" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+
+		<SoundDataNode name="MMZombieRandom">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_11" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_13" />
+                        <AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_14" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_15" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+
+		<SoundDataNode name="MMZombieHurt">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_03" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_12" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+
+		<SoundDataNode name="MMZombieSense">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_08" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_09" />
+                        <AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_10" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+
+		<SoundDataNode name="MMZombieDie">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_06" />
+                        <AudioClip ClipName="#@modfolder:Resources/ZombieSoundz.unity3d?Zombie 1_07" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+	
+	</append>
+</configs>

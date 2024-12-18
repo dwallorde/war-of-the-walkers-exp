@@ -101,9 +101,12 @@
 						-0-Quartz		-Author: Laydor
 						-0-SCore 		-Author: sphereii
 						-0-XNPCCore 		-Author: Xyth
+						-1-DarksCleanerz		-Author: Darkstardragon
+						-1-DarksMMPack1			-Author: Darkstardragon
 						-1-DarksRaiderGurlz		-Author: Darkstardragon
 						-1-DarksSoldierz		-Author: Darkstardragon
 						-1-DarksZombiez			-Author: Darkstardragon
+						-1-OaksZombieHeadHunters	-Author: Oakraven
 						-BdubsVehicles		-Author: bdubyah
 						-KHV1-15SlotToolbelt		-Author: Khaine
 						-KHV1-CustomMenuMusic		-Author: Khaine
@@ -116,8 +119,8 @@
 						-TelricsFishing		-Author: Telric
 						-zSMXhud		-Author: Sirillion
 						-zSMXmenu		-Author: Sirillion
-			7DTD Version Required: V1.1
-			Current Mod Version: 1.1.1.1b Exp
+			7DTD Version Required: V1.2
+			Current Mod Version: 1.2.1.2 Exp
 			</Description>
 			<Version/>
 			<DownloadMode>Clone</DownloadMode>
@@ -146,43 +149,32 @@
 			Release Notes Link will take you to the official discord for the mod.
 			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
 			Contains the following modlets:
-						-0-SCore 		-Author: Xyth Community Project
-						-0-XNPCCore 		-Author: Xyth Community Project
-						-1-GansSpecialZombies 		-Author: GanTheGrey
-						-1-GansStandardZombies 		-Author: GanTheGrey
-						<!-- -1-khzmusik_NPC_Rogues_and_Psychos	-Author: khzmusik
-						-1-khzmusik_NPC_Whisperers	-Author: khzmusik
-						-1-khzmusik_Zombies			-Author: khzmusik -->
+						-00000-Gears	-Author: Laydor
+						-0-AugmentedQuests 	-Author: jns
+						-0-IDCCore		-Author: I don't Care
+						-0-Quartz		-Author: Laydor
+						-0-SCore 		-Author: sphereii
+						-0-XNPCCore 		-Author: Xyth
 						-1-DarksCleanerz		-Author: Darkstardragon
-						-1-DarksRaiderGurlzFriendly		-Author: Darkstardragon
-						-1-DarksRaiderz		-Author: Darkstardragon
-						-1-SoldierPack 		-Author: Darkstardragon
-						-1-DarksZombiez		-Author: Darkstardragon
-						-1-FantasticBeastz		-Author: Darkstardragon
-						<!-- -1-OrczPackAlpha	-Author: Darkstardragon
-						-1-YeOldeUndeadPack		-Author: Darkstardragon -->
-						-1-ZombiezPack		-Author: Darkstardragon
-						-AdventureQuest		-Author: Bowa
-						-Bdubs Vehicles		-Author: bdubyah
-						-CCTV		-Author: Xyth
-						-IDCCore	-Author: I don't Care
-						-KHA20-15SlotToolbelt		-Author: Khaine
+						-1-DarksMMPack1			-Author: Darkstardragon
+						-1-DarksRaiderGurlz		-Author: Darkstardragon
+						-1-DarksSoldierz		-Author: Darkstardragon
+						-1-DarksZombiez			-Author: Darkstardragon
+						-1-OaksZombieHeadHunters	-Author: Oakraven
+						-BdubsVehicles		-Author: bdubyah
+						-KHV1-15SlotToolbelt		-Author: Khaine
+						-KHV1-CustomMenuMusic		-Author: Khaine
 						-Locks		-Author: Xyth/SphereII/Mumpfy
 						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbMicroSplat		-Author: ocbMaurice
 						-OcbPinRecipes		-Author: ocbMaurice
 						-OcbStopFuelWaste		-Author: ocbMaurice
-						-SMXcore	-Author: Sirillion
-						-SMXhud		-Author: Sirillion
-						-SMXlib		-Author: Sirillion
-						-SMXui		-Author: Sirillion
-						-SMXmenu	-Author: Sirillion
-						-TelricsFishing	-Author: Telric
-						-Ragsy Vehicles		-Author: Ragsy
-						-Ragsy Better Gryo Handling	-Author: Ragsy
-						-ZMXhudCPTB15		-Author: Robear
-						-ZMXhudCP			-Author: Sirillion
-			7DTD Version Required: V1.1
-			Current Mod Version: 1.1.1.1b Exp
+						-SMXcore		-Author: Sirillion
+						-TelricsFishing		-Author: Telric
+						-zSMXhud		-Author: Sirillion
+						-zSMXmenu		-Author: Sirillion
+			7DTD Version Required: V1.2
+			Current Mod Version: 1.2.1.2 Exp
 			</Description>
 			<Version/>
 			<DownloadMode>Clone</DownloadMode>

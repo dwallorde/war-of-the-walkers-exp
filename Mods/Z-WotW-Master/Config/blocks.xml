@@ -3635,7 +3635,7 @@
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
 	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCratePrefab.prefab"/> -->
-	<property name="ModelOffset" value="0,0,0"/>
+	<!-- <property name="ModelOffset" value="0,0,0"/> -->
 	<property name="Path" value="solid"/>
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas3Prefab" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
@@ -3660,7 +3660,7 @@
 	<property name="DisplayInfo" value="Name"/>
 	<property name="Shape" value="ModelEntity" />
 	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateSavagePrefab.prefab"/> -->
-	<property name="ModelOffset" value="0,0,0"/>
+	<!-- <property name="ModelOffset" value="0,0,0"/> -->
 	<property name="Path" value="solid"/>
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas6Prefab" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
@@ -3709,7 +3709,7 @@
 	<property name="DisplayInfo" value="Name"/>
 	<property name="Shape" value="ModelEntity"/>
 	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateShamwayPrefab.prefab"/> -->
-	<property name="ModelOffset" value="0,0,0"/>
+	<!-- <property name="ModelOffset" value="0,0,0"/> -->
 	<property name="Path" value="solid"/>
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas1Prefab" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
@@ -3734,7 +3734,7 @@
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
 	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/> -->
-	<property name="ModelOffset" value="0,0,0"/>
+	<!-- <property name="ModelOffset" value="0,0,0"/> -->
 	<property name="Path" value="solid"/>
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
@@ -3759,7 +3759,7 @@
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
 	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/> -->
-	<property name="ModelOffset" value="0,0,0"/>
+	<!-- <property name="ModelOffset" value="0,0,0"/> -->
 	<property name="Path" value="solid"/>
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
@@ -3784,7 +3784,7 @@
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
 	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/> -->
-	<property name="ModelOffset" value="0,0,0"/>
+	<!-- <property name="ModelOffset" value="0,0,0"/> -->
 	<property name="Path" value="solid"/>
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
@@ -3809,7 +3809,7 @@
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
 	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCratePrefab.prefab"/> -->
-	<property name="ModelOffset" value="0,0,0"/>
+	<!-- <property name="ModelOffset" value="0,0,0"/> -->
 	<property name="Path" value="solid"/>
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas3Prefab" />
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
@@ -30861,6 +30861,8 @@
 
 <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='BlockUpgradeRepair']/property[@name='ReadFromContainers']/@value">true</set>
 <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='BlockUpgradeRepair']/property[@name='Distance']/@value">50</set>
+
+<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedPlayerFeatures']/property[@name='OneBlockCrouch']/@value">true</set>
 
 <!-- <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedZombieFeatures']/property[@name='RandomSize']/@value">true</set> -->
 <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedZombieFeatures']/property[@name='RandomWalk']/@value">true</set>

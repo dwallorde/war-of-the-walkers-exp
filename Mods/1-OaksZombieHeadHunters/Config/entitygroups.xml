@@ -1,0 +1,33 @@
+<configs>
+
+	<append xpath="/entitygroups">
+
+	<!-- *** DAY -->	
+	<entitygroup name="OaksZombieHeadHuntersDay">
+		zombieOakNurse, 1
+		zombieOakFireNurse, 1
+		zombieOakRadNurse, 1
+		zombieOakHeadHunter1, 1
+		zombieOakHeadHunter2, 1
+		zombieOakHeadHunter3, 1
+		zombieOakHeadHunter4, 1
+		zombieOakHeadHunter5, 1
+		none, 92
+	</entitygroup>
+	
+	<!-- *** NIGHT -->	
+	<entitygroup name="OaksZombieHeadHuntersNight">
+		zombieOakNurse, 1.25
+		zombieOakFireNurse, 1.25
+		zombieOakRadNurse, 1.25
+		zombieOakHeadHunter1, 1.25
+		zombieOakHeadHunter2, 1.25
+		zombieOakHeadHunter3, 1.25
+		zombieOakHeadHunter4, 1.25
+		zombieOakHeadHunter5, 1.25
+		none, 90
+	</entitygroup>
+
+	</append>
+
+</configs>

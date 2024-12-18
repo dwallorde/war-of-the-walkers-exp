@@ -1,33 +1,33 @@
-﻿using SMXcore.HarmonyPatches;
+﻿using Quartz;
+using SMXcore.HarmonyPatches;
+using System;
 using System.Collections.Generic;
 
 //	Terms of Use: You can use this file as you want as long as this line and the credit lines are not removed or changed other than adding to them!
 //	Credits: The Fun Pimps.
 //	Tweaked: Laydor
 
-//	Changes the SkillWindowGroup XUiController to use the SMX SkillEntry and SkillSubEntry XUiControllers. Also replaces the CategoryList with SkillCategoryList
+//	Changes the SkillList XUiController is only track Attribute and Perk skills
 
 namespace SMXcore
 {
     public class XUiC_SkillList : XUiController
     {
         private List<ProgressionValue> skills = new List<ProgressionValue>();
+        private List<ProgressionValue> currentAttributeSkills = new List<ProgressionValue>();
+        private List<ProgressionValue> currentPerkSkills = new List<ProgressionValue>();
 
-        private List<ProgressionValue> currentSkills = new List<ProgressionValue>();
-
-        private XUiC_SkillEntry[] skillEntries;
-
-        private string filterText = "";
+        private XUiC_PerkSkillEntry[] perkEntries;
+        private XUiC_AttributeSkillEntry[] attributeEntries;
 
         private string selectName;
 
-        private XUiC_SkillSubEntry selectedEntry;
+        private XUiC_SkillEntry selectedEntry;
 
         private XUiC_TextInput txtInput;
 
-        private string category = "";
 
-        public XUiC_SkillSubEntry SelectedEntry
+        public XUiC_SkillEntry SelectedEntry
         {
             get
             {
@@ -50,282 +50,144 @@ namespace SMXcore
             }
         }
 
-        public XUiC_SkillCategoryList CategoryList { get; set; }
-
         public XUiC_SkillListWindow SkillListWindow { get; set; }
-
-        public string Category
-        {
-            get
-            {
-                return category;
-            }
-            set
-            {
-                if (category != value)
-                {
-                    category = value;
-                }
-            }
-        }
-
-        public bool IsBook => Category == "attbooks";
 
         public override void Init()
         {
             base.Init();
 
-            ItemActionEntryShowPerk_Patch.PatchOnActivatedMethod();
-
-            Category = "";
-            XUiController xUiController = parent.Parent;
-
-            txtInput = xUiController.GetChildByType<XUiC_TextInput>();
-            if (txtInput != null)
-            {
-                txtInput.OnChangeHandler += TxtInput_OnChangeHandler;
-                txtInput.Text = "";
-            }
-
-            XUiController grid = GetChildById("skills");
-            skillEntries = grid?.GetChildrenByType<XUiC_SkillEntry>();
-
-            XUiC_SkillSubEntry[] subEntries = grid?.GetChildrenByType<XUiC_SkillSubEntry>();
-            foreach (XUiC_SkillSubEntry entry in subEntries)
+            attributeEntries = GetChildrenByType<XUiC_AttributeSkillEntry>();
+            foreach(XUiC_SkillEntry entry in attributeEntries)
             {
                 entry.OnPress += XUiC_SkillEntry_OnPress;
+                entry.DisplayType = ProgressionClass.DisplayTypes.Standard;
+            }
+
+            perkEntries = GetChildrenByType<XUiC_PerkSkillEntry>();
+            foreach (XUiC_SkillEntry entry in perkEntries)
+            {
+                entry.OnPress += XUiC_SkillEntry_OnPress;
+                entry.DisplayType = ProgressionClass.DisplayTypes.Standard;
             }
 
         }
 
-        public override bool GetBindingValue(ref string value, string bindingName)
+        public void SelectFirstEntry()
         {
-            switch (bindingName)
-            {
-                case "smxskilllistrows":
-                    value = GetSkillListRowCount().ToString();
-                    return true;
-                default:
-                    return base.GetBindingValue(ref value, bindingName);
-            }
+            SelectedEntry = attributeEntries[0];
         }
 
-        public void SetSelectedByUnlockData(RecipeUnlockData unlockData)
+        private void XUiC_SkillEntry_OnPress(XUiController sender, int _mouseButton)
         {
-            switch (unlockData.UnlockType)
+            XUiC_SkillEntry skillEntry = sender as XUiC_SkillEntry;
+            if (skillEntry.Skill != null)
             {
-                case RecipeUnlockData.UnlockTypes.Perk:
-                    selectName = unlockData.Perk.Name;
-                    if (unlockData.Perk.IsPerk)
-                    {
-                        CategoryList.SetCategory(unlockData.Perk.Parent.ParentName);
-                    }
-
-                    break;
-                case RecipeUnlockData.UnlockTypes.Book:
-                    selectName = unlockData.Perk.ParentName;
-                    if (unlockData.Perk.IsPerk)
-                    {
-                        CategoryList.SetCategory(unlockData.Perk.Parent.ParentName);
-                    }
-
-                    break;
+                SelectedEntry = skillEntry;
+                selectName = "";
             }
         }
 
         internal int GetActiveCount()
         {
-            return currentSkills.Count;
+            return currentAttributeSkills.Count + currentPerkSkills.Count;
         }
 
-        public void SetFilterText(string _text)
-        {
-            if (txtInput != null)
-            {
-                txtInput.OnChangeHandler -= TxtInput_OnChangeHandler;
-                filterText = _text;
-                txtInput.Text = _text;
-                txtInput.OnChangeHandler += TxtInput_OnChangeHandler;
-            }
-        }
-
-        public void SelectFirstEntry()
-        {
-            SelectedEntry = skillEntries[0].GetFirstEntry();
-        }
-
-        private void XUiC_SkillEntry_OnPress(XUiController _sender, int _mouseButton)
-        {
-            XUiC_SkillSubEntry xUiC_SkillEntry = (XUiC_SkillSubEntry)_sender;
-            if (xUiC_SkillEntry.Skill != null && (xUiC_SkillEntry.Skill.ProgressionClass.Type != ProgressionType.Skill || IsBook))
-            {
-                SelectedEntry = xUiC_SkillEntry;
-                selectName = "";
-            }
-        }
-        
         public void RefreshSkillList()
         {
-            UpdateFilteredList();
+            UpdateSkillLists();
             RefreshSkillListEntries();
         }
 
-        private void TxtInput_OnChangeHandler(XUiController _sender, string _text, bool _changeFromCode)
+        private void UpdateSkillLists()
         {
-            filterText = _text.Trim();
-            if (filterText == "")
-            {
-                if (Category != "attbooks")
-                {
-                    CategoryList.SetCategoryToFirst();
-                }
-                else
-                {
-                    CategoryList.SetCategory(Category);
-                }
-            }
-            else
-            {
-                if (Category != "attbooks")
-                {
-                    CategoryList.CurrentCategory = null;
-                    Category = "";
-                    RefreshSkillList();
-                    SelectFirstEntry();
-                    WindowGroup.Controller.IsDirty = true;
-                }
-                else
-                {
-                    CategoryList.SetCategory(Category);
-                }
-            }
-        }
+            currentAttributeSkills.Clear();
+            currentPerkSkills.Clear();
 
-        private void UpdateFilteredList()
-        {
-            currentSkills.Clear();
-            string category = Category.Trim();
             foreach (ProgressionValue skill in skills)
             {
-
                 ProgressionClass progressionClass = skill?.ProgressionClass;
-                if (progressionClass == null || progressionClass.Name == null || progressionClass.Name.EqualsCaseInsensitive("attBooks"))
+                if (progressionClass == null || progressionClass.Name == null || !progressionClass.ValidDisplay(ProgressionClass.DisplayTypes.Standard))
                 {
                     continue;
                 }
 
-                //If ProgressionClass NameKey or Localized Name doesn't make filterText, continue
-                if (!progressionClass.NameKey.ContainsCaseInsensitive(filterText) && !Localization.Get(progressionClass.NameKey).ContainsCaseInsensitive(filterText) && !string.IsNullOrEmpty(filterText))
+
+                if (progressionClass.IsPerk)
                 {
+                    currentPerkSkills.Add(skill);
                     continue;
                 }
 
-                if (IsBook)
+                if (progressionClass.IsAttribute && !progressionClass.Name.Equals("attbooks") && !progressionClass.Name.Equals("attcrafting"))
                 {
-                    if(progressionClass.IsBook && !progressionClass.IsPerk && !progressionClass.IsAttribute)
-                    {
-                        currentSkills.Add(skill);
-                    }
+                    currentAttributeSkills.Add(skill);
                 }
-                else
-                {
-                    if((category == "" && !progressionClass.IsSkill && !progressionClass.IsBook)
-                        || (category.EqualsCaseInsensitive(progressionClass.Name) && progressionClass.IsAttribute) 
-                        || (progressionClass.Parent != null && progressionClass.Parent != progressionClass && progressionClass.IsPerk && category.EqualsCaseInsensitive(progressionClass.Parent.Parent.Name)))
-                    {
-                        currentSkills.Add(skill);
-                    }
-                }
-
-                //if (progressionClass != null 
-                //    && ((!IsBook && !progressionClass.IsBook) || (IsBook && !progressionClass.IsPerk && !progressionClass.IsAttribute && progressionClass.IsBook)) 
-                //    && progressionClass.Name != null 
-                //    && (progressionClass.NameKey.ContainsCaseInsensitive(filterText) || Localization.Get(progressionClass.NameKey).ContainsCaseInsensitive(filterText)) 
-                //    && !progressionClass.Name.EqualsCaseInsensitive("attBooks") 
-                //    && (filterText == "" || !progressionClass.IsSkill || progressionClass.IsBook) 
-                //    && (category == ""
-                //      || category.EqualsCaseInsensitive(progressionClass.Name)
-                //      || (progressionClass.Parent != null && progressionClass.Parent != progressionClass  && progressionClass.IsSkill && category.EqualsCaseInsensitive(progressionClass.Parent.Name)) 
-                //      || (progressionClass.Parent != null && progressionClass.Parent != progressionClass  && progressionClass.IsPerk  && category.EqualsCaseInsensitive(progressionClass.Parent.Parent.Name))))
-                //{
-                //    currentBooks.Add(skill);
-                //}
             }
 
-            currentSkills.Sort(ProgressionClass.ListSortOrderComparer.Instance);
+            currentAttributeSkills.Sort(ProgressionClass.ListSortOrderComparer.Instance);
+            currentPerkSkills.Sort(ProgressionClass.ListSortOrderComparer.Instance);
         }
 
         private void RefreshSkillListEntries()
         {
+            XUiView attributeInfoViewComponent = ((XUiC_SkillWindowGroup)WindowGroup.Controller).skillAttributeInfoWindow.GetChildById("0").ViewComponent;
+            XUiView perkInfoViewComponent = ((XUiC_SkillWindowGroup)WindowGroup.Controller).skillPerkInfoWindow.GetChildById("0").ViewComponent;
+
             SelectedEntry = null;
-            PopulateSkillEntry(skillEntries, currentSkills, IsBook);
+            PopulateSkillEntry(attributeEntries, currentAttributeSkills, attributeInfoViewComponent);
+            PopulateSkillEntry(perkEntries, currentPerkSkills, perkInfoViewComponent);
 
             if (SelectedEntry == null)
             {
-                SelectedEntry = skillEntries[0].GetFirstEntry();
+                SelectedEntry = attributeEntries[0];
+                SelectedEntry.RefreshBindings();
                 ((XUiC_SkillWindowGroup)WindowGroup.Controller).CurrentSkill = SelectedEntry.Skill;
             }
 
-            if (xui.selectedSkill == null)
-            {
-                if (selectedEntry != null)
-                {
-                    ((XUiC_SkillWindowGroup)WindowGroup.Controller).CurrentSkill = selectedEntry.Skill;
-                    xui.selectedSkill = selectedEntry.Skill;
-                }
-            }
+            //if (xui.selectedSkill == null)
+            //{
+            //    if (selectedEntry != null)
+            //    {
+            //        ((XUiC_SkillWindowGroup)WindowGroup.Controller).CurrentSkill = selectedEntry.Skill;
+            //        xui.selectedSkill = selectedEntry.Skill;
+            //    }
+            //}
 
             RefreshBindings();
             SkillListWindow.RefreshBindings();
         }
 
-        private void PopulateSkillEntry(XUiC_SkillEntry[] entries, List<ProgressionValue> progressionValues, bool isBook)
+        private void PopulateSkillEntry(XUiC_SkillEntry[] entries, List<ProgressionValue> progressionValues, XUiView navRightTarget)
         {
-            int skillIndex = 0;
             for (int i = 0; i < entries.Length; i++)
             {
                 XUiC_SkillEntry entry = entries[i];
-                if (skillIndex < progressionValues.Count && progressionValues[skillIndex] != null && Progression.ProgressionClasses.ContainsKey(progressionValues[skillIndex].Name))
+                if (i < progressionValues.Count && progressionValues[i] != null && Progression.ProgressionClasses.ContainsKey(progressionValues[i].Name))
                 {
-                    ProgressionValue skill = progressionValues[skillIndex];
-                    ProgressionValue skill2 = null;
-                    if (skill.ProgressionClass.IsAttribute)
+                    ProgressionValue skill = progressionValues[i];
+                    entry.Skill = skill;
+
+                    if (!string.IsNullOrEmpty(selectName) && skill.ProgressionClass.Name.Equals(selectName))
                     {
-                        entry.SetAttributeEntry(skill);
-                        skillIndex++;
-                    }
+                        SelectedEntry = entry;
+                        ((XUiC_SkillWindowGroup)WindowGroup.Controller).CurrentSkill = SelectedEntry.Skill;
+                    } 
                     else
                     {
-                        skillIndex++;
-                        if(skillIndex < progressionValues.Count && progressionValues[skillIndex] != null 
-                            && Progression.ProgressionClasses.ContainsKey(progressionValues[skillIndex].Name)
-                            && !progressionValues[skillIndex].ProgressionClass.IsAttribute)
-                        {
-                           skill2 = progressionValues[skillIndex];
-                           skillIndex++;
-                        }
-
-                        entry.SetSkillEntries(skill, skill2, isBook);
+                        entry.IsSelected = false;
                     }
+                    entry.ViewComponent.Enabled = true;
+                    entry.ViewComponent.NavRightTarget = navRightTarget;
+                    entry.RefreshBindings();
 
-                    if(!string.IsNullOrEmpty(selectName)) 
-                    {
-                        if (skill.ProgressionClass.Name == selectName)
-                        {
-                            SelectedEntry = entry.GetFirstEntry();
-                            ((XUiC_SkillWindowGroup)WindowGroup.Controller).CurrentSkill = SelectedEntry.Skill;
-                        }
-                        else if (skill2 != null && skill2.ProgressionClass.Name == selectName)
-                        {
-                            SelectedEntry = entry.GetSecondEntry();
-                            ((XUiC_SkillWindowGroup)WindowGroup.Controller).CurrentSkill = SelectedEntry.Skill;
-                        }
-                    }
-                   
                 }
                 else
                 {
-                    entry.ClearEntries();
+                    entry.Skill = null;
+                    entry.IsSelected = false;
+                    entry.ViewComponent.Enabled = false;
+                    entry.RefreshBindings();
+
                 }
             }
         }
@@ -344,31 +206,26 @@ namespace SMXcore
             selectName = "";
         }
 
-        private int GetSkillListRowCount()
+        public XUiC_SkillEntry GetEntryForSkill(ProgressionValue skill)
         {
-            int skillCount = 0;
-            int bookCount = 0;
-
-            foreach (ProgressionClass progressionClass in Progression.ProgressionClasses.Values)
+            XUiC_SkillEntry[] skillEntries = new XUiC_SkillEntry[0];
+            if(skill.ProgressionClass.IsAttribute)
             {
-                if (progressionClass == null || progressionClass.Name == null || progressionClass.Name.EqualsCaseInsensitive("attBooks"))
-                {
-                    continue;
-                }
+                skillEntries = attributeEntries;
+            } 
+            else if (skill.ProgressionClass.IsPerk)
+            {
+                skillEntries = perkEntries;
+            }
 
-                if (progressionClass.IsBook && !progressionClass.IsPerk && !progressionClass.IsAttribute)
+            foreach (XUiC_SkillEntry xuiC_SkillEntry in skillEntries)
+            {
+                if (xuiC_SkillEntry.Skill == skill)
                 {
-                    bookCount++;
-                }
-                else if ((!progressionClass.IsSkill && !progressionClass.IsBook)
-                        && (progressionClass.IsAttribute || (progressionClass.Parent != null && progressionClass.Parent != progressionClass && progressionClass.IsPerk)))
-                {
-                    skillCount++;
+                    return xuiC_SkillEntry;
                 }
             }
-            int rowCount = (MathUtils.Max(skillCount, bookCount) / 2) + 1;
-
-            return rowCount;
+            return null;
         }
     }
 }

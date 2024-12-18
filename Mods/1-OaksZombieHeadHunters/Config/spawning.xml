@@ -1,0 +1,48 @@
+<configs>
+
+	<append xpath="/spawning/biome[@name='pine_forest']">
+		<spawn id="doakszhhd01" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersDay" notags="commercial,industrial,downtown" />
+		<spawn id="noakszhhn01" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" notags="commercial,industrial,downtown" />
+		<spawn id="doakszhhd02" maxcount="1" respawndelay="3" time="Day" entitygroup="OaksZombieHeadHuntersDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="noakszhhn02" maxcount="1" respawndelay="3" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="doakszhhd03" maxcount="1" respawndelay="3" time="Day" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+		<spawn id="noakszhhn03" maxcount="1" respawndelay="3" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+	</append>
+	
+	<append xpath="/spawning/biome[@name='burnt_forest']">
+		<spawn id="doakszhhd01" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersDay" notags="commercial,industrial,downtown" />
+		<spawn id="noakszhhn01" maxcount="2" respawndelay="1.5" time="Night" entitygroup="OaksZombieHeadHuntersNight" notags="commercial,industrial,downtown" />
+		<spawn id="doakszhhd02" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="noakszhhn02" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="doakszhhd03" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+		<spawn id="noakszhhn03" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+	</append>
+	
+	<append xpath="/spawning/biome[@name='desert']">
+		<spawn id="doakszhhd01" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersDay" notags="commercial,industrial,downtown" />
+		<spawn id="noakszhhn01" maxcount="2" respawndelay="1.5" time="Night" entitygroup="OaksZombieHeadHuntersNight" notags="commercial,industrial,downtown" />
+		<spawn id="doakszhhd02" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="noakszhhn02" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="doakszhhd03" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+		<spawn id="noakszhhn03" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='snow']">
+		<spawn id="doakszhhd01" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersDay" notags="commercial,industrial,downtown" />
+		<spawn id="noakszhhn01" maxcount="2" respawndelay="1.5" time="Night" entitygroup="OaksZombieHeadHuntersNight" notags="commercial,industrial,downtown" />
+		<spawn id="doakszhhd02" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="noakszhhn02" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="doakszhhd03" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+		<spawn id="noakszhhn03" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='wasteland']">
+		<spawn id="doakszhhd01" maxcount="2" respawndelay="0.5" time="Day" entitygroup="OaksZombieHeadHuntersDay" notags="commercial,industrial,downtown" />
+		<spawn id="noakszhhn01" maxcount="2" respawndelay="0.25" time="Night" entitygroup="OaksZombieHeadHuntersNight" notags="commercial,industrial,downtown" />
+		<spawn id="doakszhhd02" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="noakszhhn02" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="doakszhhd03" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+		<spawn id="noakszhhn03" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersNight" tags="downtown" />
+	</append>	
+	
+</configs>

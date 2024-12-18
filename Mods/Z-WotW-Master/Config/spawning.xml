@@ -1,27 +1,27 @@
 <config>
 
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='2.9'][@time='Day']/@entitygroup">ForestZombies</set>
-<set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='3.3'][@time='Night']/@entitygroup">NightForestZombies</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='3.1'][@time='Night']/@entitygroup">NightForestZombies</set>
 
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='0.3'][@time='Day']/@entitygroup">ForestZombies</set>
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='0.15'][@time='Night']/@entitygroup">NightForestZombies</set>
 
-<set xpath="/spawning/biome[@name='pine_forest']/spawn[@maxcount='2'][@respawndelay='1'][@time='Any']/@entitygroup">WildGameForest2</set>
-<set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='3.2'][@time='Night']/@entitygroup">EnemyAnimalsForest2</set>
-<set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='3.2'][@time='Night']/@respawndelay">1.1</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@maxcount='1'][@respawndelay='1.5'][@time='Any']/@entitygroup">WildGameForest2</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='2.9'][@time='Night']/@entitygroup">EnemyAnimalsForest2</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='2.9'][@time='Night']/@respawndelay">1.1</set>
 
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@time='Day'][@tags='commercial,industrial'][@notags='downtown']/@maxcount">3</set>
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@time='Night'][@tags='commercial,industrial'][@notags='downtown']/@maxcount">4</set>
 
-<set xpath="/spawning/biome[@name='pine_forest']/spawn[@time='Day'][@tags='downtown']/@maxcount">4</set>
-<set xpath="/spawning/biome[@name='pine_forest']/spawn[@time='Night'][@tags='downtown']/@maxcount">4</set>
+<!-- <set xpath="/spawning/biome[@name='pine_forest']/spawn[@time='Day'][@tags='downtown']/@maxcount">4</set> -->
+<!-- <set xpath="/spawning/biome[@name='pine_forest']/spawn[@time='Night'][@tags='downtown']/@maxcount">4</set> -->
 
 <insertAfter xpath="/spawning/biome[@name='pine_forest']/spawn[@respawndelay='1.1']">
-		<spawn maxcount="1" respawndelay="5" time="Any" entitygroup="ForestNPCs" spawnDeadChance="0" />
+		<spawn id="be01" maxcount="1" respawndelay="5" time="Any" entitygroup="ForestNPCs" spawnDeadChance="0" />
 </insertAfter>
 
-<set xpath="/spawning/biome[@name='desert']/spawn[@respawndelay='1'][@time='Any']/@entitygroup">WildGameDesert1</set>
-<set xpath="/spawning/biome[@name='desert']/spawn[@respawndelay='3.5'][@time='Any']/@entitygroup">EnemyAnimalsDesert2</set>
+<set xpath="/spawning/biome[@name='desert']/spawn[@respawndelay='1.9'][@time='Any']/@entitygroup">WildGameDesert1</set>
+<set xpath="/spawning/biome[@name='desert']/spawn[@respawndelay='3.1'][@time='Any']/@entitygroup">EnemyAnimalsDesert2</set>
 
 <set xpath="/spawning/biome[@name='desert']/spawn[@time='Day'][@tags='commercial,industrial'][@notags='downtown']/@maxcount">4</set>
 <set xpath="/spawning/biome[@name='desert']/spawn[@time='Night'][@tags='commercial,industrial'][@notags='downtown']/@maxcount">5</set>
@@ -29,32 +29,32 @@
 <set xpath="/spawning/biome[@name='desert']/spawn[@time='Day'][@tags='downtown']/@maxcount">5</set>
 <set xpath="/spawning/biome[@name='desert']/spawn[@time='Night'][@tags='downtown']/@maxcount">5</set>
 
-<insertAfter xpath="/spawning/biome[@name='desert']/spawn[@respawndelay='3.5']">
-		<spawn maxcount="1" respawndelay="5" time="Any" entitygroup="DesertNPCs" spawnDeadChance="0" />
+<insertAfter xpath="/spawning/biome[@name='desert']/spawn[@respawndelay='1.8']">
+		<spawn id="be01" maxcount="1" respawndelay="5" time="Any" entitygroup="DesertNPCs" spawnDeadChance="0" />
 </insertAfter>
 
-<set xpath="/spawning/biome[@name='snow']/spawn[@respawndelay='1.7'][@time='Night']/@entitygroup">SnowZombiesNight</set>
-<set xpath="/spawning/biome[@name='snow']/spawn[@respawndelay='1'][@time='Any']/@entitygroup">WildGameSnow1</set>
-<set xpath="/spawning/biome[@name='snow']/spawn[@respawndelay='3.1'][@time='Any']/@entitygroup">EnemyAnimalsSnow2</set>
+<set xpath="/spawning/biome[@name='snow']/spawn[@respawndelay='1.3'][@time='Night']/@entitygroup">SnowZombiesNight</set>
+<set xpath="/spawning/biome[@name='snow']/spawn[@respawndelay='2.4'][@time='Any']/@entitygroup">WildGameSnow1</set>
+<set xpath="/spawning/biome[@name='snow']/spawn[@respawndelay='2.6'][@time='Any']/@entitygroup">EnemyAnimalsSnow2</set>
 
 <set xpath="/spawning/biome[@name='snow']/spawn[@time='Day'][@tags='commercial,industrial'][@notags='downtown']/@maxcount">5</set>
 <set xpath="/spawning/biome[@name='snow']/spawn[@time='Night'][@tags='commercial,industrial'][@notags='downtown']/@maxcount">5</set>
 
 <set xpath="/spawning/biome[@name='snow']/spawn[@time='Day'][@tags='downtown']/@maxcount">5</set>
 <set xpath="/spawning/biome[@name='snow']/spawn[@time='Night'][@tags='downtown']/@maxcount">5</set>
-<insertAfter xpath="/spawning/biome[@name='snow']/spawn[@respawndelay='3.1'][@time='Any']">
-		<spawn maxcount="1" respawndelay="5" time="Any" entitygroup="SnowNPCs" spawnDeadChance="0" />
+<insertAfter xpath="/spawning/biome[@name='snow']/spawn[@respawndelay='1.6'][@time='Night']">
+		<spawn id="be01" maxcount="1" respawndelay="5" time="Any" entitygroup="SnowNPCs" spawnDeadChance="0" />
 </insertAfter>
 
-<set xpath="/spawning/biome[@name='wasteland']/spawn[@respawndelay='0.3'][@time='Any']/@entitygroup">EnemyAnimalsWasteland2</set>
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@respawndelay='0.9'][@time='Any']/@entitygroup">EnemyAnimalsWasteland2</set>
 
 <set xpath="/spawning/biome[@name='wasteland']/spawn[@time='Day'][@tags='commercial,industrial'][@notags='downtown']/@maxcount">6</set>
 <set xpath="/spawning/biome[@name='wasteland']/spawn[@time='Night'][@tags='commercial,industrial'][@notags='downtown']/@maxcount">6</set>
 
 <set xpath="/spawning/biome[@name='wasteland']/spawn[@time='Day'][@tags='downtown']/@maxcount">6</set>
 <set xpath="/spawning/biome[@name='wasteland']/spawn[@time='Night'][@tags='downtown']/@maxcount">6</set>
-<insertAfter xpath="/spawning/biome[@name='wasteland']/spawn[@respawndelay='0.3'][@time='Any']">
-		<spawn maxcount="1" respawndelay="5" time="Any" entitygroup="WastelandNPCs" spawnDeadChance="0" />
+<insertAfter xpath="/spawning/biome[@name='wasteland']/spawn[@respawndelay='0.9'][@time='Any']">
+		<spawn id="be01" maxcount="1" respawndelay="5" time="Any" entitygroup="WastelandNPCs" spawnDeadChance="0" />
 </insertAfter>
 
 <append xpath="/spawning/entityspawner">

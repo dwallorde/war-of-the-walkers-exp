@@ -37,20 +37,18 @@
 		zombieHugh, .3
 		zombieCarl
 		zombieGirl -->
-		<!-- zombieSkeleton1
-		zombieSkeleton2
-		zombieSkeleton3
-		zombieSkeleton4 -->
 		<!-- MedievalZombie, .3
 		AxeZombie, .3
 		MaceZombie, .3
 		SwordZombie, .3
 		HelmetZombie, .3
-		ArmorZombie, .3
-		DeathKnight, .3
-		Skeleton, .3
-		SkeletonMonk, .3
-		SkeletonAxe, .3 -->
+		ArmorZombie, .3 -->
+		zombieDeathKnight, .1
+		zombieSkeleton, .5
+		zombieSkeletonAxe, .3
+		zombieSkeletonSword, .3
+		zombieArmor, .3
+		zombieHelm, .3
 		<!-- enSnowSanta1, .3
 		enSnowSantaHelper1, .3 -->
 	</entitygroup>
@@ -72,6 +70,9 @@
 		zombieNurseFeral, .25
 		zombieSteveCrawlerFeral, .25
 		zombieFatHawaiianFeral, .25
+		zombieSwordShield, .2
+		zombieGhoul, .1
+		GiantRat, .15
 		<!-- zombieRektFeral, .2
 		zombieHughFeral, .2
 		zombieCarl
@@ -185,13 +186,19 @@
 		MaceZombie, .3
 		SwordZombie, .3
 		HelmetZombie, .3
-		ArmorZombie, .3
-		DeathKnight, .3
-		Skeleton, .3
-		SkeletonMonk, .3
-		SkeletonAxe, .3
+		ArmorZombie, .3 -->
+		zombieDeathKnight, .1
+		zombieSkeleton, .3
+		zombieSkeletonAxe, .3
+		zombieSkeletonSword, .3
+		zombieAxe, .3
+		zombieArmor, .3
+		zombieHelm, .3
+		zombieSwordShield, .2
+		zombieGhoul, .1
+		GiantRat, .15
 		
-		npcWhispererFemale2KhzAK47, .01
+		<!-- npcWhispererFemale2KhzAK47, .01
 		npcWhispererFemale2KhzAShotgun, .01
 		npcWhispererFemale2KhzHRifle, .01
 		npcWhispererFemale2KhzLBow, .01
@@ -301,14 +308,20 @@
 		MaceZombieFeral, .15
 		SwordZombieFeral, .15
 		HelmetZombieFeral, .15
-		ArmorZombieFeral, .15
-		DeathKnightFeral, .15
-		SkeletonFeral, .15
-		SkeletonMonkFeral, .15
-		SkeletonAxeFeral, .15
+		ArmorZombieFeral, .15 -->
+		zombieDeathKnight, .1
+		zombieSkeleton, .3
+		zombieSkeletonAxe, .3
+		zombieSkeletonSword, .3
+		zombieAxe, .3
+		zombieArmor, .3
+		zombieHelm, .3
+		zombieSwordShield, .2
+		zombieGhoul, .1
+		GiantRat, .15
 		
 		
-		npcWhispererFemale2KhzAK47, .01
+		<!-- npcWhispererFemale2KhzAK47, .01
 		npcWhispererFemale2KhzAShotgun, .01
 		npcWhispererFemale2KhzHRifle, .01
 		npcWhispererFemale2KhzLBow, .01
@@ -421,13 +434,19 @@
 		MaceZombie, .3
 		SwordZombie, .3
 		HelmetZombie, .3
-		ArmorZombie, .3
-		DeathKnight, .3
-		Skeleton, .3
-		SkeletonMonk, .3
-		SkeletonAxe, .3
+		ArmorZombie, .3 -->
+		zombieDeathKnight, .1
+		zombieSkeleton, .3
+		zombieSkeletonAxe, .3
+		zombieSkeletonSword, .3
+		zombieAxe, .3
+		zombieArmor, .3
+		zombieHelm, .3
+		zombieSwordShield, .2
+		zombieGhoul, .1
+		GiantRat, .15
 		
-		npcWhispererFemaleLumberjackKhzAK47, .01
+		<!-- npcWhispererFemaleLumberjackKhzAK47, .01
 		npcWhispererFemaleLumberjackKhzAShotgun, .01
 		npcWhispererFemaleLumberjackKhzAxe, .01
 		npcWhispererFemaleLumberjackKhzBat, .01
@@ -511,13 +530,19 @@
 		MaceZombieFeral, .15
 		SwordZombieFeral, .15
 		HelmetZombieFeral, .15
-		ArmorZombieFeral, .15
-		DeathKnightFeral, .15
-		SkeletonFeral, .15
-		SkeletonMonkFeral, .15
-		SkeletonAxeFeral, .15
+		ArmorZombieFeral, .15 -->
+		zombieDeathKnight, .1
+		zombieSkeleton, .3
+		zombieSkeletonAxe, .3
+		zombieSkeletonSword, .3
+		zombieAxe, .3
+		zombieArmor, .3
+		zombieHelm, .3
+		zombieSwordShield, .2
+		zombieGhoul, .1
+		GiantRat, .15
 		
-		npcWhispererFemaleLumberjackKhzAK47, .01
+		<!-- npcWhispererFemaleLumberjackKhzAK47, .01
 		npcWhispererFemaleLumberjackKhzAShotgun, .01
 		npcWhispererFemaleLumberjackKhzAxe, .01
 		npcWhispererFemaleLumberjackKhzBat, .01
@@ -760,6 +785,15 @@
 		npcSoldierGHDTRifle, .1
 		npcSoldierHD1TRifle, .1
 		npcSoldierHD2TRifle, .1
+		<!-- JokerKnife, .1
+		JokerClub, .1
+		HazmatMachete, .1
+		HazmatKnife, .1
+		JuggBat, .1
+		JuggAxe, .1
+		RiotKnife, .1
+		RiotClub, .1
+		ScientistKnife, .1 -->
 		<!-- MyFarmer, .2 -->
 		
 		<!-- RaiderPestMachete, .05
@@ -782,6 +816,16 @@
         RaiderMrFriendlyM60, .05
         RaiderMrFriendlyPShotgun, .05
         RaiderMrFriendlySMG, .05 -->
+		
+		<!-- JokerPistol, .025
+		JokerTRifle, .025
+		HazmatPistol, .025
+		HazmatSMG, .025
+		JuggAShotgun, .025
+		JuggM60, .025
+		RiotPShotgun, .025
+		RiotPistol, .025
+		ScientistSMG, .025 -->
 		
 		<!-- RaiderGBDAxe, .025
 		RaiderGBDKnife, .025
@@ -814,6 +858,15 @@
 		npcSoldierGDM60, .1
 		npcSoldierGBDTRifle, .1
 		npcSoldierGDTRifle, .1
+		<!-- JokerKnife, .1
+		JokerClub, .1
+		HazmatMachete, .1
+		HazmatKnife, .1
+		JuggBat, .1
+		JuggAxe, .1
+		RiotKnife, .1
+		RiotClub, .1
+		ScientistKnife, .1 -->
 		<!-- MyFarmer, .1 -->
 		
 		npcRaiderJayneAxe, .025
@@ -846,6 +899,15 @@
 		npcRaiderBettyTRifle, .025
         npcRaiderBettySRifle, .025
 		npcRaiderBettySMG, .025
+		<!-- JokerPistol, .025
+		JokerTRifle, .025
+		HazmatPistol, .025
+		HazmatSMG, .025
+		JuggAShotgun, .025
+		JuggM60, .025
+		RiotPShotgun, .025
+		RiotPistol, .025
+		ScientistSMG, .025 -->
 		
 		<!-- RaiderPestAxe, .05
 		RaiderSluggerBat, .05
@@ -890,6 +952,15 @@
 		npcSoldierGDM60, .1
 		npcSoldierGBDTRifle, .1
 		npcSoldierGDTRifle, .1
+		<!-- JokerKnife, .1
+		JokerClub, .1
+		HazmatMachete, .1
+		HazmatKnife, .1
+		JuggBat, .1
+		JuggAxe, .1
+		RiotKnife, .1
+		RiotClub, .1
+		ScientistKnife, .1 -->
 		<!-- MyFarmer, .1 -->
 		
 		<!-- RaiderPestBat, .05
@@ -920,6 +991,16 @@
 		RaiderGHDPistol, .01
 		RaiderGHDTRifle, .01
 		RaiderGHDM60, .01 -->
+		
+		<!-- JokerPistol, .025
+		JokerTRifle, .025
+		HazmatPistol, .025
+		HazmatSMG, .025
+		JuggAShotgun, .025
+		JuggM60, .025
+		RiotPShotgun, .025
+		RiotPistol, .025
+		ScientistSMG, .025 -->
 		
 		none, 20
 	</entitygroup>
@@ -970,6 +1051,15 @@
 		RaiderGHDPistol, .01
 		RaiderGHDTRifle, .01
 		RaiderGHDM60, .01 -->
+		<!-- JokerKnife, .01
+		JokerClub, .01
+		HazmatMachete, .01
+		HazmatKnife, .01
+		JuggBat, .01
+		JuggAxe, .01
+		RiotKnife, .01
+		RiotClub, .01
+		ScientistKnife, .01 -->
 		
 		npcRaiderJayneAxe, .025
 		npcRaiderJayneBat, .025
@@ -1001,6 +1091,15 @@
 		npcRaiderBettyTRifle, .025
         npcRaiderBettySRifle, .025
 		npcRaiderBettySMG, .025
+		<!-- JokerPistol, .025
+		JokerTRifle, .025
+		HazmatPistol, .025
+		HazmatSMG, .025
+		JuggAShotgun, .025
+		JuggM60, .025
+		RiotPShotgun, .025
+		RiotPistol, .025
+		ScientistSMG, .025 -->
 		
 		<!-- RaiderPestAxe, .05
 		RaiderSluggerBat, .05

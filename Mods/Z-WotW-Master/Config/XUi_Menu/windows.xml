@@ -2,7 +2,7 @@
 <append xpath="/windows/window[@name='mainMenu']">
 	<rect name="wotwmenu_version_control">
 		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Exp Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
-		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.1.1.1b" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
+		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.2.1.2" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
 	</rect>
 	<rect name="npcmenu_background">
 		<!-- <texture depth="2" color="[white]" texture="@modfolder(WaroftheWalkersMod):Textures\Menu\wotw_POWERED_LOGO.png" name="npcModLogo" pos="1375,350" size="1200,158" pivot="bottomright" keep_aspect_ratio="BasedOnHeight" aspect_ratio="1.8" /> -->
@@ -168,6 +168,8 @@
 						<smx_game_option name="ServerEnabled" title="goServerEnabled" value_wrap="false" value_type="bool" values="" display_names="goServerEnabledOff,goServerEnabledOn" value_localization_prefix="" />
 						<smx_game_option name="Region" title="goRegion" value_wrap="true" value_type="string" values="NorthAmericaEast,NorthAmericaWest,CentralAmerica,SouthAmerica,Europe,Russia,Asia,MiddleEast,Africa,Oceania" display_names="" value_localization_prefix="goRegionName" has_default="false" always_show="true" />
 						<smx_game_option name="ServerVisibility" title="goServerVisibility" value_wrap="false" value_type="int" values="" display_names="goServerVisibility0,goServerVisibility1,goServerVisibility2" value_localization_prefix="" />
+						<smx_game_option name="ServerEACPeerToPeer" title="goEacEnabled" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" has_default="true" enabled="{servereacpeertopeer}" />
+						<smx_game_option name="ServerAllowCrossplay" title="goServerAllowCrossplay" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" tooltip_key="{crossplayTooltip}" />
 						<smx_game_option name="ServerPassword" title="goPassword" value_wrap="false" value_type="string" values="" display_names="" value_localization_prefix="" is_textinput="true" password_field="true" character_limit="30" />
 						
 						<!--ServerMaxPlayerCount gameoptions, some are for console platforms.-->

@@ -1,0 +1,12 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+zombieSkeleton,entityclasses,Entity,,,Skeleton,,,,,,,,,,,,,
+zombieSkeletonAxe,entityclasses,Entity,,,Skeleton,,,,,,,,,,,,,
+zombieSkeletonSword,entityclasses,Entity,,,Skeleton,,,,,,,,,,,,,
+zombieDeathKnight,entityclasses,Entity,,,Death Knight,,,,,,,,,,,,,
+zombieBase,entityclasses,Entity,,,Zombie,,,,,,,,,,,,,
+zombieAxe,entityclasses,Entity,,,Zombie,,,,,,,,,,,,,
+zombieArmor,entityclasses,Entity,,,Zombie,,,,,,,,,,,,,
+zombieHelm,entityclasses,Entity,,,Zombie,,,,,,,,,,,,,
+zombieSwordShield,entityclasses,Entity,,,Zombie,,,,,,,,,,,,,
+zombieGhoul,entityclasses,Entity,,,Ghoul,,,,,,,,,,,,,

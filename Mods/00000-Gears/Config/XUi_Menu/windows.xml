@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <GearsMenu name="XUi_Menu/windows.xml">
 
-
 	<!-- MainMenu replacement Window-->
 	<remove xpath="/windows/window[@name='mainMenu']" />
 
@@ -35,11 +34,13 @@
 				<sprite depth="8" name="border" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" />
 				<sprite depth="0" name="backgroundMain" pos="1,-1" height="654" width="588" sprite="menu_empty3px" color="[mediumGrey]" type="sliced" fillcenter="true" />
 
-				<rect depth="4" name="searchControls" height="44" pos="0,-0">
+				<rect depth="4" name="searchControls" height="44" pos="0,0">
 					<sprite depth="8" name="backgroundMain" sprite="menu_empty" color="[black]" type="sliced" fillcenter="false" />
 
 					<sprite depth="4" name="searchIcon" style="icon30px" pos="5,-22" sprite="ui_game_symbol_search" pivot="Left"/>
 					<textfield name="searchInput" depth="5" pos="40,-22" width="250" height="30" pivot="Left" search_field="true" />
+
+					<simplebutton name="btnSortList" depth="3" pos="583, -8" pivot="right" width="200" height="30" font_size="24" caption_key="xuiDefaults" visible="true" />
 				</rect>
 
 				<scrollbar	name="scrollbarModList" depth="6" pos="583,-349" width="12" height="614" padding="4" foregroundname="handler" backgroundname="background" pivot="center" globalopacitymod="1.8">
@@ -126,10 +127,9 @@
 						</scrollbar>
 
 						<scrollview name="scrollview" depth="5" pos="0,-52" height="555" width="590" scrollbar="scrollbar" reset_position="true" over_scroll="false" scroll_speed="2.5">
-
-							<grid name="settingsList" rows="{settingsCount}" cols="1" pos="16,0" cell_width="558" cell_height="46" repeat_content="true" arrangement="vertical">
-								<Gears_ModSettings_OptionCombined width="558" height="46" controller="Gears.UI.GlobalSettingsOption, Gears"/>
-							</grid>
+							<table name="settingsList" pos="16,0" repeat_content="true" repeat_count="{settingsCount}" arrangement="vertical" padding="0,3">
+								<Gears_ModSettings_OptionCombined width="558" height="40" controller="Gears.UI.GlobalSettingsOption, Gears"/>
+							</table>
 						</scrollview>
 					</rect>
 				</rect>
