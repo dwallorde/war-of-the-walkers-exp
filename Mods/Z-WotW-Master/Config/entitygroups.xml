@@ -1229,6 +1229,54 @@
 		animalZombieReindeer
 		<!-- zombieSanta, .2 -->
 	</entitygroup>
+	
+	<entitygroup name="OaksZombieHeadHuntersLightDay">
+		zombieOakNurseLight, 1
+		zombieOakFireNurseLight, 1
+		zombieOakRadNurseLight, 1
+		zombieOakHeadHunter1Light, 1
+		zombieOakHeadHunter2Light, 1
+		zombieOakHeadHunter3Light, 1
+		zombieOakHeadHunter4Light, 1
+		zombieOakHeadHunter5Light, 1
+		none, 92
+	</entitygroup>
+	
+	<entitygroup name="OaksZombieHeadHuntersLightNight">
+		zombieOakNurseLight, 1.25
+		zombieOakFireNurseLight, 1.25
+		zombieOakRadNurseLight, 1.25
+		zombieOakHeadHunter1Light, 1.25
+		zombieOakHeadHunter2Light, 1.25
+		zombieOakHeadHunter3Light, 1.25
+		zombieOakHeadHunter4Light, 1.25
+		zombieOakHeadHunter5Light, 1.25
+		none, 90
+	</entitygroup>
+	
+	<entitygroup name="OaksZombieHeadHuntersMedDay">
+		zombieOakNurseMed, 1
+		zombieOakFireNurseMed, 1
+		zombieOakRadNurseMed, 1
+		zombieOakHeadHunter1Med, 1
+		zombieOakHeadHunter2Med, 1
+		zombieOakHeadHunter3Med, 1
+		zombieOakHeadHunter4Med, 1
+		zombieOakHeadHunter5Med, 1
+		none, 92
+	</entitygroup>
+	
+	<entitygroup name="OaksZombieHeadHuntersMedNight">
+		zombieOakNurseMed, 1.25
+		zombieOakFireNurseMed, 1.25
+		zombieOakRadNurseMed, 1.25
+		zombieOakHeadHunter1Med, 1.25
+		zombieOakHeadHunter2Med, 1.25
+		zombieOakHeadHunter3Med, 1.25
+		zombieOakHeadHunter4Med, 1.25
+		zombieOakHeadHunter5Med, 1.25
+		none, 90
+	</entitygroup>
 </append>
 
 <!-- To Do A21 Update with Telric Fishing Mod then re-add -->

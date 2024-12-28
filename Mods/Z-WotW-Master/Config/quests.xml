@@ -213,7 +213,7 @@
 		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
 		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
 		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestSteel02" ischosen="true"/>
 		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
 	</quest>
 </insertAfter>

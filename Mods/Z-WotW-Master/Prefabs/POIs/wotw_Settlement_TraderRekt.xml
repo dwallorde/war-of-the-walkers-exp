@@ -30,23 +30,23 @@
   <property name="POIMarkerPartRotations" value="2,2,2" />
   <property name="POIMarkerPartSpawnChance" value="1,1,1" />
   <property class="Stats">
-    <property name="TotalVertices" value="877306" />
-    <property name="TotalTriangles" value="588430" />
+    <property name="TotalVertices" value="806858" />
+    <property name="TotalTriangles" value="481405" />
     <property class="BlockEntities">
-      <property name="Vertices" value="810205" />
-      <property name="Triangles" value="538671" />
+      <property name="Vertices" value="743077" />
+      <property name="Triangles" value="434650" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="55599" />
-      <property name="Triangles" value="32609" />
+      <property name="Vertices" value="54679" />
+      <property name="Triangles" value="31771" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="0" />
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes2">
-      <property name="Vertices" value="2616" />
-      <property name="Triangles" value="2274" />
+      <property name="Vertices" value="216" />
+      <property name="Triangles" value="108" />
     </property>
     <property class="ChunkMeshes3">
       <property name="Vertices" value="0" />
@@ -72,13 +72,16 @@
       <property name="0" value="47, 1, 26" />
     </property>
     <property class="challenge_cars">
-      <property name="0" value="42, 1, 24" />
-    </property>
-    <property class="challenge_mech_parts">
-      <property name="0" value="42, 2, 31" />
+      <property name="0" value="42, 1, 25" />
     </property>
     <property class="TraderOnOff">
       <property name="0" value="42, 8, 33" />
+      <property name="1" value="30, 2, 30" />
+      <property name="2" value="39, 2, 35" />
+      <property name="3" value="42, 2, 30" />
+    </property>
+    <property class="challenge_mech_parts">
+      <property name="0" value="42, 2, 31" />
     </property>
     <property class="challenge_steel">
       <property name="0" value="31, 2, 27" />

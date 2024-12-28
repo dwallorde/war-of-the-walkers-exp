@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="MoreQuests" />
+	<DisplayName value="MoreQuests" />
+	<Description value="Increases the amount of available quests at traders and adds other QoL changes related to quests." />
+	<Author value="jns0fficial" />
+	<Version value="1.2.1.0" />
+	<Website value="" />
+	<SkipWithAntiCheat value="true" />
+</xml>

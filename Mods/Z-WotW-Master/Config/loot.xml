@@ -2858,6 +2858,7 @@
 	<item name="modHDGunDrumMagazineExtender"/>
 	<item name="modHDGunMagazineExtender"/>
 	<item name="modHDGunBarrelExtender"/>
+	<item name="LMGBeltBag"/>
 </lootgroup>
 </insertAfter>
 
@@ -4446,6 +4447,7 @@
 
 <append xpath="/lootcontainers/lootgroup[@name='groupShotgunMessiahBooks']">
 	<item name="wotwAmmoSkillMagazine"/>
+	<item name="LMGBeltBagSchematic"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupShotgunMessiahCrate02']">
@@ -5441,5 +5443,13 @@
 <set xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']/item[@group='groupAmmoLarge']/@count">2</set>
 <set xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']/item[@group='groupAmmoMunitions']/@count">2</set>
 <set xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']/item[@group='groupAmmoLarge']/@count">3</set>
+
+<append xpath="lootcontainers/lootgroup[@name='groupWeaponsT3_Machinegunner']">
+	<item name="LMGBeltBag"/>
+</append>
+
+<append xpath="lootcontainers/lootgroup[@name='groupMilitaryBooks']">
+	<item name="LMGBeltBagSchematic"/>
+</append>
 
 </config>

@@ -1,5 +1,7 @@
 <config>
 
+	<!-- Add recipes for the two pill items that let the quests to be sorted either by name or by distance -->
+
 	<append xpath="/recipes">
 
 		<recipe name="sortQuestListByName" count="1" craft_time="1">

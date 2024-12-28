@@ -865,6 +865,14 @@
 	<ingredient name="resourceLegendaryParts" count="1"/>
 </recipe>
 
+<recipe name="LMGBeltBag" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
+	<ingredient name="carBattery" count="1"/>
+	<ingredient name="resourceForgedIron" count="35"/>
+	<ingredient name="resourceMechanicalParts" count="40"/>
+	<ingredient name="resourceScrapPolymers" count="80"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+
 <recipe name="calipers" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="50"/>
 	<ingredient name="resourceGlue" count="10"/>
@@ -1025,9 +1033,9 @@
 	<ingredient name="resourceSpring" count="2"/>
 </recipe>
 
-<!-- <recipe name="wotwCasinoGameToken" count="1" craft_time="5">
+<recipe name="wotwCasinoGameToken" count="1" craft_time="5">
 	<ingredient name="casinoCoin" count="500"/>
-</recipe> -->
+</recipe>
 </append>
 
 <!-- Storage Containers Recipes -->
@@ -5739,13 +5747,13 @@
 	<ingredient name="resourceSpring" count="4"/>
 </recipe>
 
-<!-- <recipe name="cntVendingMachineSellable" count="1" craft_area="workbench" craft_time="300" tags="learnable,workbenchCrafting">
+<recipe name="cntVendingMachineSellable" count="1" craft_area="workbench" craft_time="300" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="500"/>
 	<ingredient name="resourceForgedSteel" count="250"/>
 	<ingredient name="forgedTungsten" count="150"/>
 	<ingredient name="resourceMechanicalParts" count="200"/>
 	<ingredient name="resourceElectricParts" count="150"/>
-</recipe> -->
+</recipe>
 
 <recipe name="resourceGunPowderBundle" count="1" craft_time="5" craft_area="workbench" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceGunPowder" count="1000"/>
@@ -6292,7 +6300,7 @@
 </append>
 
 <set xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']/@craft_time">5</set>
-<set xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']/@tags">,learnable</set>
+<append xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']/@tags">,learnable</append>
 
 <set xpath="/recipes/recipe[@name='modArmorAdvancedMuffledConnectors']/@craft_area">toolWorkstation</set>
 <set xpath="/recipes/recipe[@name='modArmorBandolier']/@craft_area">toolWorkstation</set>

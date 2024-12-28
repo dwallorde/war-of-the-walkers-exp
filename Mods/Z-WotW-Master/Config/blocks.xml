@@ -4372,8 +4372,8 @@
 	<property name="Class" value="GameEvent"/>
     <property name="ActivateEvent" value="horde_SpawnTrigger"/>
 	<property name="DestroyOnEvent" value="false" />
-	<property name="DowngradeBlock" value="screamerBlockUsed"/>
-	<property name="DowngradeFX" value="impact_organic_on_metal,silencefiller"/>
+	<!-- <property name="DowngradeBlock" value="screamerBlockUsed"/> -->
+	<!-- <property name="DowngradeFX" value="impact_organic_on_metal,silencefiller"/> -->
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="50"/>
 		<property name="resourceGlue" value="4"/>
@@ -4381,7 +4381,7 @@
 		<property name="resourceWood" value="25"/>
 		<property name="resourceSpring" value="5"/>
 	</property>
-	<!-- <drop event="Destroy" name="screamerBlock" count="1"/> -->
+	<drop event="Destroy" name="screamerBlock" count="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
 	<property name="Group" value="Building,Science"/>
@@ -18412,13 +18412,12 @@
 	<property name="ModelOffset" value="-0.5,0.5,-0.5"/>
 	<property name="MultiBlockDim" value="2,2,2"/>
 	<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
-	<property class="UpgradeBlock">
+	<!-- <property class="UpgradeBlock">
 		<property name="ToBlock" value="slotMachineGamblingLoot"/>
 		<property name="Item" value="casinoCoin"/>
-		<!-- <property name="Item" value="wotwCasinoGameToken"/> -->
 		<property name="ItemCount" value="500"/>
 		<property name="UpgradeHitCount" value="4"/>
-	</property>
+	</property> -->
 	<property name="UpgradeSound" value="ui_vending_purchase"/>
 	<drop event="Destroy" name="slotMachineGamblingReady" count="1"/>
 	<property name="DescriptionKey" value="slotMachineGamblingReadyDesc"/>
@@ -31335,8 +31334,8 @@
 	<property name="Class" value="GameEvent"/>
     <property name="ActivateEvent" value="halloweenJukebox"/>
 	<property name="DestroyOnEvent" value="false" />
-	<property name="DowngradeBlock" value="wotwHalloweenJukeboxUsed"/>
-	<property name="DowngradeFX" value="impact_organic_on_metal,silencefiller"/>
+	<!-- <property name="DowngradeBlock" value="wotwHalloweenJukeboxUsed"/> -->
+	<!-- <property name="DowngradeFX" value="impact_organic_on_metal,silencefiller"/> -->
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="150"/>
 		<property name="resourceGlue" value="10"/>
@@ -31344,7 +31343,7 @@
 		<property name="resourceWood" value="150"/>
 		<property name="resourceSpring" value="20"/>
 	</property>
-	<drop event="Destroy" name="wotwHalloweenJukebox" count="0"/>
+	<drop event="Destroy" name="wotwHalloweenJukebox" count="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
 	<property name="Group" value="Building,Science"/>

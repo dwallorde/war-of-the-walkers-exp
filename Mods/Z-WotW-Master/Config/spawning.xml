@@ -57,6 +57,63 @@
 		<spawn id="be01" maxcount="1" respawndelay="5" time="Any" entitygroup="WastelandNPCs" spawnDeadChance="0" />
 </insertAfter>
 
+<!-- HeadHunter Zombie Spawn Adjustments/Additions -->
+
+<remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='doakszhhd01']"/>
+<remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='noakszhhn01']"/>
+<remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='doakszhhd02']"/>
+<remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='noakszhhn02']"/>
+<remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='doakszhhd03']"/>
+<remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='noakszhhn03']"/>
+
+<remove xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='doakszhhd01']"/>
+<remove xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='noakszhhn01']"/>
+<remove xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='doakszhhd02']"/>
+<remove xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='noakszhhn02']"/>
+<remove xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='doakszhhd03']"/>
+<remove xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='noakszhhn03']"/>
+
+<append xpath="/spawning/biome[@name='burnt_forest']">
+		<spawn id="doakszhhd01light" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersLightDay" notags="commercial,industrial,downtown" />
+		<spawn id="noakszhhn01light" maxcount="2" respawndelay="1.5" time="Night" entitygroup="OaksZombieHeadHuntersLightNight" notags="commercial,industrial,downtown" />
+		<spawn id="doakszhhd02light" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersLightDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="noakszhhn02light" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersLightNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="doakszhhd03light" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersLightNight" tags="downtown" />
+		<spawn id="noakszhhn03light" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersLightNight" tags="downtown" />
+</append>
+
+<remove xpath="/spawning/biome[@name='desert']/spawn[@id='doakszhhd01']"/>
+<remove xpath="/spawning/biome[@name='desert']/spawn[@id='noakszhhn01']"/>
+<remove xpath="/spawning/biome[@name='desert']/spawn[@id='doakszhhd02']"/>
+<remove xpath="/spawning/biome[@name='desert']/spawn[@id='noakszhhn02']"/>
+<remove xpath="/spawning/biome[@name='desert']/spawn[@id='doakszhhd03']"/>
+<remove xpath="/spawning/biome[@name='desert']/spawn[@id='noakszhhn03']"/>
+
+<append xpath="/spawning/biome[@name='desert']">
+		<spawn id="doakszhhd01light" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersLightDay" notags="commercial,industrial,downtown" />
+		<spawn id="noakszhhn01light" maxcount="2" respawndelay="1.5" time="Night" entitygroup="OaksZombieHeadHuntersLightNight" notags="commercial,industrial,downtown" />
+		<spawn id="doakszhhd02light" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersLightDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="noakszhhn02light" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersLightNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="doakszhhd03light" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersLightNight" tags="downtown" />
+		<spawn id="noakszhhn03light" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersLightNight" tags="downtown" />
+</append>
+
+<remove xpath="/spawning/biome[@name='snow']/spawn[@id='doakszhhd01']"/>
+<remove xpath="/spawning/biome[@name='snow']/spawn[@id='noakszhhn01']"/>
+<remove xpath="/spawning/biome[@name='snow']/spawn[@id='doakszhhd02']"/>
+<remove xpath="/spawning/biome[@name='snow']/spawn[@id='noakszhhn02']"/>
+<remove xpath="/spawning/biome[@name='snow']/spawn[@id='doakszhhd03']"/>
+<remove xpath="/spawning/biome[@name='snow']/spawn[@id='noakszhhn03']"/>
+
+<append xpath="/spawning/biome[@name='snow']">
+		<spawn id="doakszhhd01med" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersMedDay" notags="commercial,industrial,downtown" />
+		<spawn id="noakszhhn01med" maxcount="2" respawndelay="1.5" time="Night" entitygroup="OaksZombieHeadHuntersMedNight" notags="commercial,industrial,downtown" />
+		<spawn id="doakszhhd02med" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersMedDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="noakszhhn02med" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersMedNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="doakszhhd03med" maxcount="1" respawndelay="2" time="Day" entitygroup="OaksZombieHeadHuntersMedNight" tags="downtown" />
+		<spawn id="noakszhhn03med" maxcount="1" respawndelay="2" time="Night" entitygroup="OaksZombieHeadHuntersMedNight" tags="downtown" />
+</append>
+
 <append xpath="/spawning/entityspawner">
 	<!-- Dwalls Automotive Repair LTD Medium Spawns -->
     <entityspawner name="Dwalls_Automotive_Repair_LTD_Med_Territorial">

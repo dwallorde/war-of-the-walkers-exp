@@ -603,6 +603,7 @@
 			<item name="modHDGunDrumMagazineExtenderSchematic"/>
 			<item name="modHDGunMagazineExtenderSchematic"/>
 			<item name="modHDGunBarrelExtenderSchematic"/>
+			<item name="LMGBeltBagSchematic"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsVehiclesMods']">
@@ -864,7 +865,7 @@
 			<item name="slotMachineGamblingReady"/>
 			<item name="recyclerWorkstation"/>
 			<item name="tungstenForge"/>
-			<!-- <item name="cntVendingMachineSellable"/> -->
+			<item name="cntVendingMachineSellable"/>
 			<item name="mechanicBench"/>
 			<item name="gunSmithingWorkstation"/>
 			<item name="oilPump"/>

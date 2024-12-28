@@ -1684,7 +1684,7 @@
 		<requirement name="PlayerLevel" target="self" operation="GTE" value="70" desc_key="reqPlayer70"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,5" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
+			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
 
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3" value="1,1,2" tags="cropHarvest,wildCropsHarvest"/>
 			<passive_effect name="HarvestCount" operation="base_set" level="2,3" value="1,1" tags="bonusCropHarvest"/>
@@ -5797,7 +5797,7 @@
 		</display_entry>
 		<display_entry icon="chemistryStation,tungstenForge,mechanicBench,gunSmithingWorkstation,oilPump" name_key="workstationsT4-1,workstationsT4-2,workstationsT4-3,workstationsT4-4,workstationsT4-5" has_quality="false" unlock_level="90,100,105,110,125" >
 			<unlock_entry item="chemistryStation,recyclerWorkstation" unlock_tier="1" />
-			<unlock_entry item="tungstenForge" unlock_tier="2" />
+			<unlock_entry item="tungstenForge,cntVendingMachineSellable" unlock_tier="2" />
 			<unlock_entry item="mechanicBench,wotwAdvDewCollector,adcBigBarrel,adcLargeCatcher,adcAdvancedFilter" unlock_tier="3" />
 			<unlock_entry item="gunSmithingWorkstation" unlock_tier="4" />
 			<unlock_entry item="oilPump,screamerBlock,wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor" unlock_tier="5" />
@@ -5823,7 +5823,7 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,125" value="1" tags="blueprintWorkStation,slotMachineGamblingReady"/>
 			
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,125" value="1" tags="chemistryStation,recyclerWorkstation"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="tungstenForge"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="tungstenForge,cntVendingMachineSellable"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="105,125" value="1" tags="mechanicBench,wotwAdvDewCollector,adcBigBarrel,adcLargeCatcher,adcAdvancedFilter"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="110,125" value="1" tags="gunSmithingWorkstation"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="125,125" value="1" tags="oilPump,screamerBlock,wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor"/>

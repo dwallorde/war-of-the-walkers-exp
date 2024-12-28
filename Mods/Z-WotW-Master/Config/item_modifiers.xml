@@ -1323,6 +1323,31 @@
 		</effect_group>
 	</item_modifier>
 	
+	<item_modifier name="LMGBeltBag" installable_tags="drumMagazine" modifier_tags="magazine" blocked_tags="noMods,firingMode,turretRanged" type="attachment">
+            	  <property name="Extends" value="modGeneralMaster"/>
+		  <property name="UnlockedBy" value="LMGBeltBagSchematic" />
+		  <property name="CustomIcon" value="modLMGBeltBag" />
+		  <property name="Stacknumber" value="1" />
+		  <property name="Group" value="Mods" />
+		  <property name="DropMeshfile" value="@Other/Items/Misc/sack_droppedPrefab.prefab" />
+		<effect_group tiered="false">
+			<passive_effect name="MagazineSize" operation="perc_add" value="9" />
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-.25" />
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.25" />
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.25" />
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.25" />
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.25" />
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".10" />
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".05" />
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.02" />
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" value="-.25" />
+			<passive_effect name="DegradationPerUse" operation="perc_add" value="-.5" />
+			<passive_effect name="Mobility" operation="perc_add" value="-.50"/>
+			<passive_effect name="PerkLevel" tags="perkParkour" operation="base_set" value="0"/>
+	        </effect_group>
+	    <property name="PickupJournalEntry" value="augmentGunsTip"/>
+	  </item_modifier>
+	
 	<item_modifier name="modArmorCowboyBoots" installable_tags="armorFeet" modifier_tags="rare" blocked_tags="noMods" type="attachment">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 		<property name="TraderStageTemplate" value="modsTier1"/>

@@ -1,5 +1,7 @@
 <config>
 
+	<!-- Add the two pill items that allow the player to sort the quests either by name or by distance -->
+
 	<append xpath="/items">
 	
 		<item name="sortQuestListByName">

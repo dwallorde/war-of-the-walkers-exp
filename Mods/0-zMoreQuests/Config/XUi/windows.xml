@@ -1,0 +1,30 @@
+<config>
+
+	<!-- Remove the base game's window of responses e.g. trader talk window -->
+	<remove xpath="//window[@name='windowResponses']"/>
+
+	<!-- _______________________________________________________________________________________________ -->
+
+	<insertAfter xpath="//window[@name='windowStatement']">
+		
+		<!-- Add back a modified window of responses -->
+		<window name="windowResponses" pos="90,-460" width="710" height="400" anchor="LeftTop" cursor_area="true">
+			
+			<!-- The background texture that can be found inside the Textures folder -->
+			<texture name="QuestListBG" pos="-15,15" size="714,432" style="questlist.background" pivot="topleft"/>
+			
+			<!-- Configure the scrollbar itself -->
+			<scrollbar name="scrollbar" depth="3" pos="680,-200" width="25" height="395" padding="4" foregroundcolor="[mediumGrey]" foregroundsprite="menu_empty3px" pivot="center" />
+			
+			<!-- Configure the scrollable window. 'rows' is the max amount of quests or responses that are shown in one column -->
+			<scrollview name="scrollable_response" depth="2" scrollbar="scrollbar" reset_position="true" over_scroll="false" scroll_speed=".25">
+				<grid name="items" pos="0,-100" rows="100" cols="1" width="690" height="200" cell_width="690" cell_height="40" repeat_content="true" arrangement="vertical" controller="DialogResponseList">
+					<response_entry id="0" />
+				</grid>
+			</scrollview>
+
+		</window>
+
+	</insertAfter>
+
+</config>

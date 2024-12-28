@@ -1,0 +1,15 @@
+<config>
+
+	<!-- Here you can set the maximum number of available quests. Instead of 30 you can type anything between 1-60 (included) -->
+	<NrOfQuests>30</NrOfQuests>
+	
+	<!-- Here you can set the distances of how far away the game checks for the next quest POIs. 
+	     This is kind of redundant, because it will check for every POI anyways, but this allows to set priority to POIs that are closer to the player. -->
+		 
+	<!-- Game will try to fill the list of quests first by looking for suitable POI candidates that are up to 2km away -->
+	<FirstCheckDistance>2000</FirstCheckDistance>
+	
+	<!-- If the list of quests is not full, it will look for more suitable candidates up to 6km away. If that also does not fill the list of quests, it will look as far as it can beyond 6km -->
+	<SecondCheckDistance>6000</SecondCheckDistance>
+	
+</config>

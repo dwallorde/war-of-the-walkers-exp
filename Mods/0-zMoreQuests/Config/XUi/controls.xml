@@ -1,0 +1,6 @@
+<config>
+	
+	<!-- Required for the scroll bar -->
+    <set xpath="//response_entry/rect/@style">press, hover</set>
+
+</config>

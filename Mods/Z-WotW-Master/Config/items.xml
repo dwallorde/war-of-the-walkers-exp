@@ -2910,7 +2910,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mstone"/>
 	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
-	<property name="EconomicValue" value="20"/>
+	<property name="EconomicValue" value="50"/>
 	<property name="EconomicBundleSize" value="70"/>
 	<property name="Group" value="Building,Resources"/>
 </item>
@@ -2924,7 +2924,7 @@
 	<property name="Material" value="Mconcrete"/>
 	<property name="Weight" value="20"/>
 	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
-	<property name="EconomicValue" value="25"/>
+	<property name="EconomicValue" value="250"/>
 	<property name="EconomicBundleSize" value="20"/>
 	<property name="Group" value="Building,Resources"/>
 </item>
@@ -18323,6 +18323,18 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorRadiationProtectionHands" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorRadiationProtectionFeet" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="LMGBeltBagSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player" />
+	<property name="CustomIcon" value="modLMGBeltBag" />
+	<!-- <property name="CustomIconTint" value="255,81,69" /> -->
+	<property name="Unlocks" value="LMGBeltBag" />
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LMGBeltBag" operation="set" value="1" />
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100" />
 	</effect_group>
 </item>
 
