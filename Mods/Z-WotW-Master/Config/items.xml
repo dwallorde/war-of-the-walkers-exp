@@ -4817,6 +4817,9 @@
 		<property name="Zoom_max_out" value="55"/>
 		<property name="Zoom_max_in" value="55"/>
 		<property name="ScopeCameraOffset" value="0.00,-0.034,0.1"/>
+		<!-- <property name="ScopeCameraOffset" value="0.5,-1.51,0.1"/> -->
+		<!-- <property name="SightsCameraOffset" value="-.0003,-0.045,-.01"/> -->
+		<property name="SightsCameraOffset" value=".0093,-0.02,-.02"/>
 			<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
 	        <property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
 	</property>
@@ -5164,6 +5167,7 @@
 		<property name="Zoom_max_out" value="55"/>
 		<property name="Zoom_max_in" value="55"/>
 		<property name="ScopeCameraOffset" value="0,0.01,.02"/>
+		<property name="SightsCameraOffset" value=".0000,0.00865,-.01"/>
 				<property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
                 <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
 	</property>
@@ -24309,5 +24313,7 @@
 <append xpath="/items/item[@name='scoreOpenNPCWindow']">
 	<property name="Weight" value="0"/>
 </append>
+
+<set xpath="/items/item[@name='schematicMaster']/property[@name='ScrapTimeOverride']/@value">1</set>
 
 </config>

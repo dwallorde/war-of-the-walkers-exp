@@ -5,20 +5,20 @@
   <property name="ExcludePOICulling" value="False" />
   <property name="DistantPOIYOffset" value="0" />
   <property name="AllowTopSoilDecorations" value="False" />
-  <property name="DifficultyTier" value="5" />
+  <property name="DifficultyTier" value="4" />
   <property name="ShowQuestClearCount" value="1" />
   <property name="TraderArea" value="False" />
   <property name="QuestTags" value="clear, fetch, infested" />
   <property name="RotationToFaceNorth" value="2" />
   <property name="YOffset" value="-15" />
   <property name="EditorGroups" value="rural" />
-  <property name="SleeperVolumeSize" value="26, 7, 28#3, 3, 36" />
-  <property name="SleeperVolumeStart" value="9, 2, 6#36, 2, 3" />
-  <property name="SleeperVolumeGroupId" value="0,0" />
-  <property name="SleeperVolumeGroup" value="GroupZomBadass,45,57,GroupGenericZombie,16,22" />
-  <property name="SleeperIsLootVolume" value="True,False" />
-  <property name="SleeperIsQuestExclude" value="False,False" />
-  <property name="SleeperVolumeFlags" value="2,2" />
+  <property name="SleeperVolumeSize" value="26, 7, 26#3, 3, 36#8, 3, 7#15, 4, 24" />
+  <property name="SleeperVolumeStart" value="9, 2, 8#36, 2, 3#4, 2, 3#27, 14, 16" />
+  <property name="SleeperVolumeGroupId" value="0,0,0,0" />
+  <property name="SleeperVolumeGroup" value="GroupZomBadass,45,57,GroupGenericZombie,16,22,GroupGenericZombie,15,19,GroupGenericZombie,15,22" />
+  <property name="SleeperIsLootVolume" value="True,False,False,False" />
+  <property name="SleeperIsQuestExclude" value="False,False,True,False" />
+  <property name="SleeperVolumeFlags" value="2,2,3,3" />
   <property name="PrefabSize" value="42, 27, 42" />
   <property name="Tags" value="rural" />
   <property name="POIMarkerSize" value="7, 13, 3" />
@@ -30,20 +30,21 @@
   <property name="POIMarkerPartRotations" value="2" />
   <property name="POIMarkerPartSpawnChance" value="1" />
   <property name="Zoning" value="rural" />
-  <property name="SleeperVolumeTriggeredBy" value=" # " />
+  <property name="SleeperVolumeTriggeredBy" value=" # #2#3" />
   <property name="TriggerVolumeSize" value="13, 2, 14#3, 2, 2#4, 2, 3" />
   <property name="TriggerVolumeStart" value="15, 2, 13#30, 2, 19#5, 2, 19" />
   <property name="TriggerVolumeTriggers" value="1#2#3" />
+  <property name="DuplicateRepeatDistance" value="300" />
   <property class="Stats">
-    <property name="TotalVertices" value="727489" />
-    <property name="TotalTriangles" value="455273" />
+    <property name="TotalVertices" value="729857" />
+    <property name="TotalTriangles" value="456676" />
     <property class="BlockEntities">
-      <property name="Vertices" value="651017" />
-      <property name="Triangles" value="395521" />
+      <property name="Vertices" value="653187" />
+      <property name="Triangles" value="396656" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="55246" />
-      <property name="Triangles" value="31056" />
+      <property name="Vertices" value="55382" />
+      <property name="Triangles" value="31124" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="768" />
@@ -54,16 +55,16 @@
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes3">
-      <property name="Vertices" value="4608" />
-      <property name="Triangles" value="2304" />
+      <property name="Vertices" value="4488" />
+      <property name="Triangles" value="2244" />
     </property>
     <property class="ChunkMeshes4">
       <property name="Vertices" value="0" />
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes5">
-      <property name="Vertices" value="15850" />
-      <property name="Triangles" value="26008" />
+      <property name="Vertices" value="16032" />
+      <property name="Triangles" value="26268" />
     </property>
   </property>
   <property class="IndexedBlockOffsets">

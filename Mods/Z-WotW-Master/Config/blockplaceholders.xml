@@ -798,12 +798,17 @@
 <set xpath="/blockplaceholders/placeholder[@name='plantShrubRandomHelper']/block[@biome='burnt_forest']/@name">plantShrubBurntForest</set>
 <set xpath="/blockplaceholders/placeholder[@name='plantHedgeRandomHelper']/block[@biome='burnt_forest']/@name">plantHedgeBurntForest</set>
 
+<set xpath="/blockplaceholders/placeholder[@name='plantShrubRandomHelper']/block[@biome='desert']/@name">plantShrub</set>
+<set xpath="/blockplaceholders/placeholder[@name='plantHedgeRandomHelper']/block[@biome='desert']/@name">plantHedge</set>
+
 <set xpath="/blockplaceholders/placeholder[@name='treeTraderRandomHelper']/block[@biome='burnt_forest']/@name">treePineBurntLrgBF</set>
 <set xpath="/blockplaceholders/placeholder[@name='treeSmallRandomHelper']/block[@name='treeBurntMaple01'][@biome='burnt_forest']/@name">treeBurntMaple01BF</set>
 <set xpath="/blockplaceholders/placeholder[@name='treeSmallRandomHelper']/block[@name='treeDeadTree01'][@biome='burnt_forest']/@name">treeDeadTree01BF</set>
 <set xpath="/blockplaceholders/placeholder[@name='treeSmallThinRandomHelper']/block[@name='treeDeadTree01'][@biome='burnt_forest']/@name">treeDeadTree01BF</set>
 <set xpath="/blockplaceholders/placeholder[@name='treeMediumRandomHelper']/block[@biome='burnt_forest']/@name">treeBurntMaple02BF</set>
 <set xpath="/blockplaceholders/placeholder[@name='treeLargeRandomHelper']/block[@biome='burnt_forest']/@name">treeBurntMaple03BF</set>
+
+<set xpath="/blockplaceholders/placeholder[@name='treeSmallThinRandomHelper']/block[@name='treeDeadTree01'][@biome='desert']/@name">treeDeadTree01BF</set>
 
 
 </config>

@@ -5,8 +5,7 @@
   <property name="ExcludePOICulling" value="False" />
   <property name="DistantPOIYOffset" value="0" />
   <property name="AllowTopSoilDecorations" value="False" />
-  <property name="DifficultyTier" value="1" />
-  <property name="QuestTags" value="clear" />
+  <property name="DifficultyTier" value="0" />
   <property name="ShowQuestClearCount" value="1" />
   <property name="TraderArea" value="False" />
   <property name="RotationToFaceNorth" value="2" />
@@ -33,19 +32,16 @@
   <property name="POIMarkerPartSpawnChance" value="1,1" />
   <property name="SleeperVolumeTriggeredBy" value=" " />
   <property class="IndexedBlockOffsets">
-    <property class="Rally">
-      <property name="0" value="0, 5, 4" />
-    </property>
     <property class="challenge_polymers">
       <property name="0" value="10, 6, 8" />
     </property>
   </property>
   <property class="Stats">
-    <property name="TotalVertices" value="57649" />
-    <property name="TotalTriangles" value="25027" />
+    <property name="TotalVertices" value="56751" />
+    <property name="TotalTriangles" value="24147" />
     <property class="BlockEntities">
-      <property name="Vertices" value="54247" />
-      <property name="Triangles" value="21283" />
+      <property name="Vertices" value="53349" />
+      <property name="Triangles" value="20403" />
     </property>
     <property class="ChunkMeshes0">
       <property name="Vertices" value="1080" />

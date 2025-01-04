@@ -401,7 +401,7 @@
 
 <insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='perkBooks']">
 		<trader_item_group name="groupQuestChallenge" count="1">
-			<item name="Challenge_BaconAndEggs" count="1"/>
+			<!-- <item name="Challenge_BaconAndEggs" count="1"/>
 			<item name="Challenge_Coffee" count="1"/>
 			<item name="Challenge_GreenTea" count="1"/>
 			<item name="Challenge_Bandage" count="1"/>
@@ -498,7 +498,7 @@
 			<item name="quest_tier2_clearRandom" count="1"/>
 			<item name="quest_tier3_clearRandom" count="1"/>
 			<item name="quest_tier4_clearRandom" count="1"/>
-			<item name="quest_tier5_clearRandom" count="1"/>
+			<item name="quest_tier5_clearRandom" count="1"/> -->
 			<item name="qt_taylor" count="1" prob="0.2"/>
 			<item name="qt_nickole" count="1" prob="0.2"/>
 			<item name="qt_stephan" count="1" prob="0.2"/>

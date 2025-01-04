@@ -400,6 +400,7 @@
 			<decoration type="prefab" name="wotw_Resource_RandomOrePile" prob="0.00025" rotatemax="7"/>
 			<decoration type="prefab" name="wotw_Deco_BrimstoneVein" prob="0.00325" rotatemax="7"/>
 			<decoration type="prefab" name="wotw_Deco_BrimstoneVein" prob="0.00125" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Deco_CopperZincVein" prob="0.00325" rotatemax="7"/>
 			<decoration type="block" blockname="plantedYucca3Harvest" prob="0.0045" rotatemax="3" />
 			<decoration type="block" blockname="plantedAloe3Harvest" prob="0.0045" rotatemax="3"/>
 			<decoration type="block" blockname="plantedCotton3Harvest" prob="0.003" rotatemax="3"/>
@@ -454,6 +455,7 @@
 			</layers>
 			<decorations>
 				<decoration type="prefab" name="wotw_Deco_BrimstoneVein" checkresource="-7" onslopes="true" prob=".01657" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".01657" rotatemax="3"/>
 				<decoration type="block" blockname="resourceRock01" prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="resourceRock02" prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="oreDesertBoulder1" prob=".00033" rotatemax="3"/>
@@ -536,6 +538,8 @@
 </append>
 
 <insertAfter xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.392']/decorations/decoration[@blockname='resourceRock02']">
+				<decoration type="prefab" name="wotw_Deco_TungstenVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Deco_LavaVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
 				<decoration type="block" blockname="oreWastelandBoulder1" prob=".00099" rotatemax="3"/>
 				<decoration type="block" blockname="oreWastelandBoulder2" prob=".00099" rotatemax="3"/>
 				<decoration type="block" blockname="oreWastelandBoulder3" prob=".00099" rotatemax="3"/>
@@ -579,6 +583,8 @@
 </insertAfter> -->
 
 <insertAfter xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='resourceRock02']">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
 			<decoration type="block" blockname="oreWastelandBoulder1" prob=".00033" rotatemax="3"/>
 			<decoration type="block" blockname="oreWastelandBoulder2" prob=".00033" rotatemax="3"/>
 			<decoration type="block" blockname="oreWastelandBoulder3" prob=".00033" rotatemax="3"/>
@@ -778,6 +784,7 @@
 </append>
 
 <insertAfter xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@prob='0.22']/decorations/decoration[@blockname='resourceRock02']">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder1" prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder2" prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder3" prob=".00033" rotatemax="3"/>
@@ -789,7 +796,12 @@
 					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
 </append>
 
+<insertAfter xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@prob='0.24']/decorations/decoration[@name='deco_iron_vein']">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+</insertAfter>
+
 <insertAfter xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@prob='0.392']/decorations/decoration[@blockname='resourceRock02']">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder1" prob=".00099" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder2" prob=".00099" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder3" prob=".00099" rotatemax="3"/>
@@ -802,6 +814,7 @@
 </append>
 
 <insertAfter xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@prob='0.412']/decorations/decoration[@blockname='resourceRock02']">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder1" prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder2" prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder3" prob=".00033" rotatemax="3"/>
@@ -814,6 +827,7 @@
 </append>
 
 <insertAfter xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@prob='0.442']/decorations/decoration[@blockname='resourceRock02']">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder1" prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder2" prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="oreBurntBoulder3" prob=".00033" rotatemax="3"/>

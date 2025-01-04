@@ -365,7 +365,7 @@
 	<challenge name="tradesmanHarvestResources" title_key="challengeTradesmanHarvestResources" icon="ui_game_symbol_miner69er" group="Tradesman"
 		short_description_key="challengeTradesmanHarvestResourcesShort" description_key="challengeTradesmanHarvestResourcesDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="Harvest" item="wotwResourceWoodLog" count="2500"/>
+		<objective type="Harvest" item="wotwResourceWoodLog" count="1500"/>
 		<objective type="Harvest" item="resourceRockSmall" count="5000"/>
 		<objective type="Harvest" item="resourceClayLump" count="5000"/>
 	</challenge>
@@ -788,4 +788,7 @@
 		<objective type="KillByTag" entity_tags="animal" target_name_key="xuiAnimals" count="150"/>
 	</challenge>
 </insertAfter>
+
+<set xpath="/challenges/challenge[@name='gathererWood']/objective[@type='Harvest']/@item">wotwResourceWoodLog</set>
+<set xpath="/challenges/challenge[@name='gathererWood']/objective[@type='Harvest']/@count">500</set>
 </config>

@@ -2364,7 +2364,7 @@
 
 <insertAfter xpath="/lootcontainers/lootgroup[@name='empty']">
 <lootgroup name="groupQuestChallenge">
-	<item name="Challenge_BaconAndEggs"/>
+	<!-- <item name="Challenge_BaconAndEggs"/>
 	<item name="Challenge_Coffee"/>
 	<item name="Challenge_GreenTea"/>
 	<item name="Challenge_Bandage"/>
@@ -2471,7 +2471,22 @@
 	<item name="quest_tier2_clearRandom"/>
 	<item name="quest_tier3_clearRandom"/>
 	<item name="quest_tier4_clearRandom"/>
-	<item name="quest_tier5_clearRandom"/>
+	<item name="quest_tier5_clearRandom"/> -->
+	<item name="qt_taylor" count="1" prob="0.2"/>
+	<item name="qt_nickole" count="1" prob="0.2"/>
+	<item name="qt_stephan" count="1" prob="0.2"/>
+	<item name="qt_jennifer" count="1" prob="0.2"/>
+	<item name="qt_claude" count="1" prob="0.2"/>
+	<item name="qt_sarah" count="1" prob="0.2"/>
+	<item name="qt_raphael" count="1" prob="0.2"/>
+	<item name="Treasure_DwallsLostGoods" count="1" prob="0.2"/>
+	<item name="Treasure_HealthSupplies" count="1" prob="0.2"/>
+	<item name="Treasure_BuildingSupplies" count="1" prob="0.2"/>
+	<item name="Treasure_AmmoSupplies" count="1" prob="0.2"/>
+	<item name="Treasure_FoodandDrinkSupplies" count="1" prob="0.2"/>
+	<item name="Treasure_MidTierWeaponsSupplies" count="1" prob="0.2"/>
+	<item name="Treasure_HighTierWeaponsSupplies" count="1" prob="0.2"/>
+	<item name="Treasure_LowTierWeaponsSupplies" count="1" prob="0.2"/>
 </lootgroup>
 
 <lootgroup name="classFragments">
@@ -4865,6 +4880,7 @@
 <!-- Lootcontainer Farm Loot Container -->
 <lootcontainer name="lootCrateFarm" count="3,6" size="5,3" destroy_on_close="false" sound_open="fantasyChestOpen" sound_close="fantasyChestClose" open_time="1.5" loot_quality_template="qualBaseTemplate" buff="buffScavengingServerHack,buffScavengingSkillXPTick">
 	<item group="seeds"/>
+	<item name="seedSkillMagazine" count="0,1" prob="0.2"/>
 	<item group="groupIngredientsCommon" loot_prob_template="medHigh"/>
 	<item group="groupIngredientsUncommon" loot_prob_template="med"/>
 	<item group="groupIngredientsRare" loot_prob_template="low"/>

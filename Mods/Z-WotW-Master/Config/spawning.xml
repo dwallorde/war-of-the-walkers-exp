@@ -57,6 +57,19 @@
 		<spawn id="be01" maxcount="1" respawndelay="5" time="Any" entitygroup="WastelandNPCs" spawnDeadChance="0" />
 </insertAfter>
 
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='dz01']/@respawndelay">0.9</set>
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='nz01']/@respawndelay">0.7</set>
+
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='dz02']/@respawndelay">0.07</set>
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='nz02']/@respawndelay">0.04</set>
+
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='dz03']/@respawndelay">0.05</set>
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='nz03']/@respawndelay">0.02</set>
+
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='na01']/@respawndelay">3.0</set>
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='ae01']/@respawndelay">1.1</set>
+<set xpath="/spawning/biome[@name='wasteland']/spawn[@id='ne01']/@respawndelay">0.9</set>
+
 <!-- HeadHunter Zombie Spawn Adjustments/Additions -->
 
 <remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='doakszhhd01']"/>

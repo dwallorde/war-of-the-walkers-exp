@@ -567,6 +567,7 @@
 	<property name="TintColor" value="E3BC0C"/>
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Map.Color" value="184,115,51"/>
+	<property name="DisplayInfo" value="Name"/>
 	<property name="Material" value="MoreMetal"/>
 	<property name="MaxDamage" value="850"/>
 	<property name="Model" value="#@modfolder:Resources/OreBoulders.unity3d?BoulderPrefab"/>
@@ -1206,7 +1207,9 @@
 
 <set xpath="/blocks/block[@name='cntPickupTruck01White']/property[@name='PassThroughDamage']/@value">false</set>
 <set xpath="/blocks/block[@name='cntPickupTruck01White']/drop[@event='Harvest'][@name='smallEngine']/@tag">singleHarvest</set>
+<set xpath="/blocks/block[@name='cntPickupTruck01White']/drop[@event='Harvest'][@name='smallEngine']/@name">hdSmallEngine</set>
 <set xpath="/blocks/block[@name='cntPickupTruck01White']/drop[@event='Harvest'][@name='carBattery']/@tag">singleHarvest</set>
+<set xpath="/blocks/block[@name='cntPickupTruck01White']/drop[@event='Harvest'][@name='carBattery']/@name">hdBattery</set>
 <set xpath="/blocks/block[@name='cntPickupTruck01White']/drop[@event='Harvest'][@name='ammoGasCan']/@tag">singleHarvest</set>
 <set xpath="/blocks/block[@name='cntPickupTruck01White']/drop[@event='Harvest'][@name='ammoGasCan']/@count">20,100</set>
 <append xpath="/blocks/block[@name='cntPickupTruck01White']">
@@ -1277,7 +1280,9 @@
 
 <set xpath="/blocks/block[@name='cntFireTruck01White']/property[@name='PassThroughDamage']/@value">false</set>
 <set xpath="/blocks/block[@name='cntFireTruck01White']/drop[@event='Harvest'][@name='smallEngine']/@tag">singleHarvest</set>
+<set xpath="/blocks/block[@name='cntFireTruck01White']/drop[@event='Harvest'][@name='smallEngine']/@name">hdSmallEngine</set>
 <set xpath="/blocks/block[@name='cntFireTruck01White']/drop[@event='Harvest'][@name='carBattery']/@tag">singleHarvest</set>
+<set xpath="/blocks/block[@name='cntFireTruck01White']/drop[@event='Harvest'][@name='carBattery']/@name">hdBattery</set>
 <set xpath="/blocks/block[@name='cntFireTruck01White']/drop[@event='Harvest'][@name='ammoGasCan']/@tag">singleHarvest</set>
 <set xpath="/blocks/block[@name='cntFireTruck01White']/drop[@event='Harvest'][@name='ammoGasCan']/@count">20,100</set>
 <append xpath="/blocks/block[@name='cntFireTruck01White']">
@@ -1316,6 +1321,23 @@
 <append xpath="/blocks/block[@name='cntBusCity']">
 	<property name="MaxDamage" value="1000"/>
 	<property name="DowngradeBlock" value="carBusCityHarvested"/>
+</append>
+
+<set xpath="/blocks/block[@name='cntFarmTruckClosed']/drop[@event='Harvest'][@name='smallEngine']/@tag">singleHarvest</set>
+<set xpath="/blocks/block[@name='cntFarmTruckClosed']/drop[@event='Harvest'][@name='smallEngine']/@name">hdSmallEngine</set>
+<set xpath="/blocks/block[@name='cntFarmTruckClosed']/drop[@event='Harvest'][@name='carBattery']/@tag">singleHarvest</set>
+<set xpath="/blocks/block[@name='cntFarmTruckClosed']/drop[@event='Harvest'][@name='carBattery']/@name">hdBattery</set>
+
+<set xpath="/blocks/block[@name='forkliftWhite']/drop[@event='Harvest'][@name='smallEngine']/@tag">singleHarvest</set>
+<set xpath="/blocks/block[@name='forkliftWhite']/drop[@event='Harvest'][@name='smallEngine']/@name">hdSmallEngine</set>
+<append xpath="/blocks/block[@name='forkliftWhite']">
+	<drop event="Harvest" name="hdBattery" count="0,1" prob=".5" tag="singleHarvest"/>
+</append>
+
+<set xpath="/blocks/block[@name='forklift2White']/drop[@event='Harvest'][@name='smallEngine']/@tag">singleHarvest</set>
+<set xpath="/blocks/block[@name='forklift2White']/drop[@event='Harvest'][@name='smallEngine']/@name">hdSmallEngine</set>
+<append xpath="/blocks/block[@name='forklift2White']">
+	<drop event="Harvest" name="hdBattery" count="0,1" prob=".5" tag="singleHarvest"/>
 </append>
 
 <append xpath="/blocks/block[@name='cntAmbulanceTruck01']">
@@ -2225,7 +2247,7 @@
 	<property class="RepairItems">
 		<property name="resourceCobblestones" value="500"/>
 	</property>
-	<drop event="Destroy" name="waterWell" count="0"/>
+	<drop event="Destroy" name="waterWell" count="1"/>
 	<property name="CanPickup" value="false"/>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="EconomicValue" value="300"/>
@@ -31168,6 +31190,34 @@
 	<drop event="Destroy" name="plantedCorn1" count="1" prob="0.1"/>
 </append>
 
+<append xpath="/blocks/block[@name='plantedHopDead']">
+	<drop event="Destroy" name="plantedHop1" count="1" prob="0.1"/>
+</append>
+
+<append xpath="/blocks/block[@name='plantedPotatoDead']">
+	<drop event="Destroy" name="plantedPotato1" count="1" prob="0.1"/>
+</append>
+
+<append xpath="/blocks/block[@name='plantedBlueberryDead']">
+	<drop event="Destroy" name="plantedBlueberry1" count="1" prob="0.1"/>
+</append>
+
+<append xpath="/blocks/block[@name='plantedAloeDead']">
+	<drop event="Destroy" name="plantedAloe1" count="1" prob="0.1"/>
+</append>
+
+<append xpath="/blocks/block[@name='plantedCoffeeDead']">
+	<drop event="Destroy" name="plantedCoffee1" count="1" prob="0.1"/>
+</append>
+
+<append xpath="/blocks/block[@name='plantedCottonDead']">
+	<drop event="Destroy" name="plantedCotton1" count="1" prob="0.1"/>
+</append>
+
+<append xpath="/blocks/block[@name='plantedYuccaDead']">
+	<drop event="Destroy" name="plantedYucca1" count="1" prob="0.1"/>
+</append>
+
 <set xpath="/blocks/block[@name='bedrollPOI']/property[@name='Material']/@value">Mcloth</set>
 <set xpath="/blocks/block[@name='bedrollPOI']/property[@class='RepairItems']/property[@name='resourceYuccaFibers']/@name">resourceCloth</set>
 <set xpath="/blocks/block[@name='bedrollPOI']/drop[@event='Harvest']/@name">resourceCloth</set>
@@ -32654,9 +32704,9 @@
 		</property>
 		<property class="TEFeatureLockable"/>
 		<property class="TEFeatureSignable">
-			<property name="FontSize" value="90"/>
-			<property name="LineCount" value="3"/>
-			<property name="LineWidth" value="0.55"/>
+			<property name="FontSize" value="40"/>
+			<property name="LineCount" value="4"/>
+			<property name="LineWidth" value="0.85"/>
 		</property>
 	</property>
 	
@@ -32695,9 +32745,9 @@
 			<property name="LootList" value="playerStorageXL"/>
 		</property>
 		<property class="TEFeatureSignable">
-			<property name="FontSize" value="90"/>
-			<property name="LineCount" value="3"/>
-			<property name="LineWidth" value="0.55"/>
+			<property name="FontSize" value="40"/>
+			<property name="LineCount" value="4"/>
+			<property name="LineWidth" value="0.85"/>
 		</property>
 	</property>
 	<property name="Shape" value="ModelEntity"/>
@@ -32725,5 +32775,7 @@
 	<property name="SortOrder2" value="0005"/>
 </block>
 </append>
+
+<append xpath="/blocks/block[@name='cropsGrowingMaster']/property[@name='Group']/@value">,Seeds</append>
 
 </configs>
