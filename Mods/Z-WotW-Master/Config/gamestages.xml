@@ -75,7 +75,7 @@
 </append>
 
 <remove xpath="/gamestages/spawner[@name='WanderingHorde']"/>
-<!-- <append xpath="/gamestages">
+<append xpath="/gamestages">
 	<spawner name="WanderingHorde">
 		<gamestage stage="01">
 			<spawn group="wanderingHordeStageGS1"	num="10" maxAlive="30" duration="09"/>
@@ -228,10 +228,10 @@
 			<spawn group="ZombieBearsGroup"			num="04" maxAlive="30" duration="09"/>
 		</gamestage>
 	</spawner>
-</append> -->
+</append>
 
 <!-- Halloween Wandering Hordes -->
-<append xpath="/gamestages">
+<!-- <append xpath="/gamestages">
 	<spawner name="WanderingHorde">
 		<gamestage stage="01">
 			<spawn group="HalloweenHorde"	num="10" maxAlive="30" duration="09"/>
@@ -384,7 +384,7 @@
 			<spawn group="HalloweenHorde"			num="04" maxAlive="30" duration="09"/>
 		</gamestage>
 	</spawner>
-</append>
+</append> -->
 
 <!-- Christmas Wandering Hordes -->
 <!-- <append xpath="/gamestages">

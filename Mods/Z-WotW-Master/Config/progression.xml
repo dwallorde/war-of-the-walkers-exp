@@ -4725,9 +4725,9 @@
 	
 	<crafting_skill name="craftingConstruction" max_level="125" parent="attCrafting" name_key="craftingConstructionName" desc_key="craftingConstructionDesc" long_desc_key="craftingConstructionLongDesc" icon="ui_game_symbol_hammer" >
 	
-		<display_entry icon="cntBeerCooler,cntIronWritableCrate,shelfStorage,doorBlack,interiorHouseDoorWhite" name_key="constructionT1-1,constructionT1-2,constructionT1-3,constructionT1-4,constructionT1-5" has_quality="false" unlock_level="2,5,10,15,20" >
+		<display_entry icon="cntCoolerBlue,cntIronWritableCrate,shelfStorage,doorBlack,interiorHouseDoorWhite" name_key="constructionT1-1,constructionT1-2,constructionT1-3,constructionT1-4,constructionT1-5" has_quality="false" unlock_level="2,5,10,15,20" >
 			<unlock_entry item="cntCoolerVariantHelper" unlock_tier="1" />
-			<unlock_entry item="cntIronWritableCrate,StorageChest2SignedSecure,cntBeerCooler" unlock_tier="2" />
+			<unlock_entry item="cntIronWritableCrate,StorageChest2SignedSecure" unlock_tier="2" />
 			<unlock_entry item="shelfStorage" unlock_tier="3" />
 			<unlock_entry item="doorVariantHelper,doorRusticVariantHelper,doorGlassVariantHelper" unlock_tier="4" />
 			<unlock_entry item="interiorHouseDoorPlayerBlockVariantHelper,interiorHouseDoorDoublePlayerBlockVariantHelper,interiorDoorOldPlayerBlockVariantHelper,interiorDoorOldDoublePlayerBlockVariantHelper,tallCabinetDoorPlayerBlockVariantHelper,closetDoorPlayerBlockVariantHelper,closetDoorDoublePlayerBlockVariantHelper,pantryDoorPlayerBlockVariantHelper" unlock_tier="5" />
@@ -4762,7 +4762,7 @@
 		
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,125" value="1" tags="cntCoolerVariantHelper"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,125" value="1" tags="cntIronWritableCrate,StorageChest2SignedSecure,cntBeerCooler"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,125" value="1" tags="cntIronWritableCrate,StorageChest2SignedSecure"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,125" value="1" tags="shelfStorage"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,125" value="1" tags="doorVariantHelper,doorRusticVariantHelper,doorGlassVariantHelper"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,125" value="1" tags="interiorHouseDoorPlayerBlockVariantHelper,interiorHouseDoorDoublePlayerBlockVariantHelper,interiorDoorOldPlayerBlockVariantHelper,interiorDoorOldDoublePlayerBlockVariantHelper,tallCabinetDoorPlayerBlockVariantHelper,closetDoorPlayerBlockVariantHelper,closetDoorDoublePlayerBlockVariantHelper,pantryDoorPlayerBlockVariantHelper"/>
@@ -5360,7 +5360,7 @@
 		</display_entry>
 
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="armorPrimitiveMaster,armorPrimitiveHelmet,armorPrimitiveOutfit,armorPrimitiveGloves,armorPrimitiveBoots"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,100" value="1" tags="armorPrimitiveMaster,armorPrimitiveHelmet,armorPrimitiveOutfit,armorPrimitiveGloves,armorPrimitiveBoots"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="armorLightMaster,armorMediumMaster,armorHeavyMaster,armorLumberjackHelmet,armorLumberjackOutfit,armorLumberjackGloves,armorLumberjackBoots,armorPreacherHelmet,armorPreacherOutfit,armorPreacherGloves,armorPreacherBoots,armorRogueHelmet,armorRogueOutfit,armorRogueGloves,armorRogueBoots,armorAthleticHelmet,armorAthleticOutfit,armorAthleticGloves,armorAthleticBoots,armorEnforcerHelmet,armorEnforcerOutfit,armorEnforcerGloves,armorEnforcerBoots,armorFarmerHelmet,armorFarmerOutfit,armorFarmerGloves,armorFarmerBoots,armorBikerHelmet,armorBikerOutfit,armorBikerGloves,armorBikerBoots,armorScavengerHelmet,armorScavengerOutfit,armorScavengerGloves,armorScavengerBoots,armorRangerHelmet,armorRangerOutfit,armorRangerGloves,armorRangerBoots,armorCommandoHelmet,armorCommandoOutfit,armorCommandoGloves,armorCommandoBoots,armorAssassinHelmet,armorAssassinOutfit,armorAssassinGloves,armorAssassinBoots,armorMinerHelmet,armorMinerOutfit,armorMinerGloves,armorMinerBoots,armorNomadHelmet,armorNomadOutfit,armorNomadGloves,armorNomadBoots,armorNerdHelmet,armorNerdOutfit,armorNerdGloves,armorNerdBoots,armorRaiderHelmet,armorRaiderOutfit,armorRaiderGloves,armorRaiderBoots"/>
 
 			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,100" value="1,2,3,4,5,5" tags="armorPrimitiveMaster,armorPrimitiveHelmet,armorPrimitiveOutfit,armorPrimitiveGloves,armorPrimitiveBoots"/>
@@ -5389,12 +5389,12 @@
 		<display_entry icon="drugVitamins,advancedSplint,traumaFirstAidBandage" name_key="medicalT4-1,medicalT4-2,medicalT4-3" has_quality="false" unlock_level="75,85,100" >
 			<unlock_entry item="drugVitamins,vitaminA,vitaminB,vitaminC,vitaminD" unlock_tier="1" />
 			<unlock_entry item="advancedSplint" unlock_tier="2" />
-			<unlock_entry item="traumaFirstAidBandage" unlock_tier="3" />
+			<unlock_entry item="traumaFirstAidBandage,wotwDrugAntiRadMinor" unlock_tier="3" />
 		</display_entry>
 		<display_entry icon="legBoosterShot,traumaFirstAidKit,immunizationShot" name_key="medicalT5-1,medicalT5-2,medicalT5-3" has_quality="false" unlock_level="110,120,130" >
 			<unlock_entry item="legBoosterShot,deployHealth" unlock_tier="1" />
 			<unlock_entry item="traumaFirstAidKit" unlock_tier="2" />
-			<unlock_entry item="immunizationShot" unlock_tier="3" />
+			<unlock_entry item="immunizationShot,wotwDrugAntiRadMajor" unlock_tier="3" />
 		</display_entry>
 
 		<effect_group>
@@ -5412,11 +5412,11 @@
 			
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,130" value="1" tags="drugVitamins,vitaminA,vitaminB,vitaminC,vitaminD"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="85,130" value="1" tags="advancedSplint"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,130" value="1" tags="traumaFirstAidBandage"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,130" value="1" tags="traumaFirstAidBandage,wotwDrugAntiRadMinor"/>
 			
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="110,130" value="1" tags="legBoosterShot,deployHealth"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,130" value="1" tags="traumaFirstAidKit"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="130" value="1" tags="immunizationShot"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="130" value="1" tags="immunizationShot,wotwDrugAntiRadMajor"/>
 		</effect_group>
 	</crafting_skill>
 	
@@ -5662,22 +5662,22 @@
 
 		<display_entry icon="generatorBankA,electricwirerelay,batterybank,smallEngine,motionsensor,vaultDoor01" name_key="electricianT1-1,electricianT1-2,electricianT1-3,electricianT1-5,electricianT1-6,electricianT1-7" has_quality="false" unlock_level="5,10,20,40,50,60" >
 			<unlock_entry item="generatorbank" unlock_tier="1" />
-			<unlock_entry item="electricwirerelay,switch,tripwirepost,industrialLight01_player,industrialLight02_player,lightIndustrialRed_player,lightIndustrialMountedWall_player,lightIndustrialMountedWallRed_player,lightIndustrialHangingBlockVariantHelper,ceilingLight07_player,spotlightPlayer,HN Lights,HN Electronics" unlock_tier="2" />
+			<unlock_entry item="electricwirerelay,switch,tripwirepost,industrialLight01_player,spotlightPlayer" unlock_tier="2" />
 			<unlock_entry item="batterybank" unlock_tier="3" />
 			<unlock_entry item="smallEngine,engineParts" unlock_tier="4" />
 			<!-- <unlock_entry item="carBattery" unlock_tier="5" /> -->
 			<unlock_entry item="motionsensor,electrictimerrelay,pressureplate,pressureplateLong,speaker" unlock_tier="5" />
-			<unlock_entry item="vaultDoor01Player_Powered,vaultDoor01PlayerDouble_Powered,vaultHatch_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered" unlock_tier="6" />
+			<unlock_entry item="vaultDoor01Player_Powered,vaultDoor01PlayerDouble_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered" unlock_tier="6" />
 		</display_entry>
 		<display_entry icon="carBattery" name_key="electricianT1-4" has_quality="true" unlock_level="30,34,38,42,46,50" >
 			<unlock_entry item="carBattery" unlock_tier="1" />
 		</display_entry>
 		<display_entry icon="ecoGeneratorbank,ceilingLight02Brass,ecoSmallEngine,porchLight01,ecoBatterybank" name_key="electricianT2-1,electricianT2-2,electricianT2-3,electricianT2-5,electricianT2-6" has_quality="false" unlock_level="70,75,80,90,95" >
 			<unlock_entry item="ecoGeneratorbank" unlock_tier="1" />
-			<unlock_entry item="ceilingLight02Brass_player,ceilingLight05Brass_player,ceilingLight04_player,ceilingLight05_player,signShopOpen_player,signNeonColdBeer_player,streetLight01_player,lightSconce_player,lanternOldBlockVariantHelper" unlock_tier="2" />
+			<unlock_entry item="ceilingLight02Brass_player,signShopOpen_player,signNeonColdBeer_player,streetLight01_player,lanternOldBlockVariantHelper" unlock_tier="2" />
 			<unlock_entry item="ecoSmallEngine,enginePartsECO" unlock_tier="3" />
 			<!-- <unlock_entry item="ecoBattery" unlock_tier="4" /> -->
-			<unlock_entry item="porchLight01_player,ceilingLight02_player,recessedLight_player,fluorescentLight_player,fluorescentLightBayIntact_player,lightPanelLEDBlockVariantHelper,trackLight_player,flashlightDecor_player" unlock_tier="4" />
+			<unlock_entry item="porchLight01_player,recessedLight_player,lightPanelLEDBlockVariantHelper,trackLight_player" unlock_tier="4" />
 			<unlock_entry item="ecoBatterybank" unlock_tier="5" />
 		</display_entry>
 		<display_entry icon="ecoBattery" name_key="electricianT2-4" has_quality="true" unlock_level="85,89,93,97,101,105" >
@@ -5685,7 +5685,7 @@
 		</display_entry>
 		<display_entry icon="hdGeneratorbank,ceilingFanLight,hdSmallEngine,hdBatterybank,solarbank" name_key="electricianT3-1,electricianT3-2,electricianT3-3,electricianT3-5,electricianT3-6,electricianT3-7" has_quality="false" unlock_level="100,105,110,120,125" >
 			<unlock_entry item="hdGeneratorbank" unlock_tier="1" />
-			<unlock_entry item="ceilingFanLight_player,chandelierLight_player,endTableLamp_player,signExitLight_player,roadBarricadeLight_player,deskLampLight_player,deskLampLight02BlockVariantHelper,tableLampLight01CenteredBlockVariantHelper,lightCeilingBulbMountWhite_player,lightCeilingBulbMountBlack_player,lightCeilingBulbMount_2x2White_player,lightCeilingBulbMount_2x2Black_player,lightCeilingBulbSocketWhite_player,lightCeilingBulbSocketBlack_player,lightCeilingBulbSocket_2x2White_player,lightCeilingBulbSocket_2x2Black_player,workLight_player,streetLightClassic_player" unlock_tier="2" />
+			<unlock_entry item="ceilingFanLight_player,signExitLight_player,deskLampLight_player,workLight_player,streetLightClassic_player" unlock_tier="2" />
 			<unlock_entry item="hdSmallEngine,enginePartsHD" unlock_tier="3" />
 			<!-- <unlock_entry item="hdBattery" unlock_tier="4" /> -->
 			<unlock_entry item="hdBatterybank" unlock_tier="4" />
@@ -5701,7 +5701,7 @@
 
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,150" value="1" tags="generatorbank"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,150" value="1" tags="electricwirerelay,switch,tripwirepost,industrialLight01_player,industrialLight02_player,lightIndustrialRed_player,lightIndustrialMountedWall_player,lightIndustrialMountedWallRed_player,lightIndustrialHangingBlockVariantHelper,ceilingLight07_player,spotlightPlayer,HN Lights,HN Electronics"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,150" value="1" tags="electricwirerelay,switch,tripwirepost,industrialLight01_player,industrialLight02_player,lightIndustrialRed_player,lightIndustrialMountedWall_player,lightIndustrialMountedWallRed_player,lightIndustrialHangingBlockVariantHelper,ceilingLight07_player,spotlightPlayer"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,150" value="1" tags="batterybank"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,150" value="1" tags="carBattery"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,150" value="1" tags="smallEngine,engineParts"/>
@@ -5863,7 +5863,7 @@
 			<unlock_entry item="vehicleHumveechassis,vehicleHumveebody,vehicleHDWheels" unlock_tier="1" />
 			<unlock_entry item="vehicleJunkerChassis,vehicleJunkerbars" unlock_tier="2" />
 			<unlock_entry item="vehicleRatChassis,vehicleRatbars" unlock_tier="3" />
-			<unlock_entry item="vehicleCruiserChassis,vehicleCruiserbars" unlock_tier="4" />
+			<unlock_entry item="Cruiserchassis,vehicleCruiserbars" unlock_tier="4" />
 			<unlock_entry item="vehicleDirtBikeChassis,vehicleDirtBikeParts" unlock_tier="5" />
 			<unlock_entry item="vehicleBoxTruckbody,vehicleBoxTruckchassis" unlock_tier="6" />
 		</display_entry>

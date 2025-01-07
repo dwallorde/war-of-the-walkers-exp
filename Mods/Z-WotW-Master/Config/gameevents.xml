@@ -1036,7 +1036,7 @@
 			<property name="value" value="80"/>
 		</requirement>
 		<action class="SpawnEntity">
-			<property name="entity_group" value="WanderingHorde"/>
+			<property name="entity_group" value="ZombieBadassGSHorde"/>
 			<property name="spawn_count" value="6"/>
 			<property name="air_spawn" value="false"/>
 			<property name="add_to_group" value="zombies"/>

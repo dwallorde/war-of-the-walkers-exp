@@ -656,7 +656,7 @@
 	<property name="damage_category" value="earth"/>
 	<property name="surface_category" value="plant"/>
 	<property name="particle_destroy_category" value="xt_leaves2"/>
-	<property name="Hardness" type="float" value="1"/>
+	<property name="Hardness" type="float" value="10"/>
 	<property name="stepsound" value="tree"/>
 	<property name="lightopacity" value="5"/>
 	<property name="stability_glue" value="0"/>

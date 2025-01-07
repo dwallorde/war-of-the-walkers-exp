@@ -71,11 +71,11 @@
       <property name="0" value="55, 5, 49" />
       <property name="1" value="54, 5, 55" />
     </property>
-    <property class="Rally">
-      <property name="0" value="12, 5, 12" />
-    </property>
     <property class="challenge_sinks">
       <property name="0" value="2, 5, 6" />
+    </property>
+    <property class="Rally">
+      <property name="0" value="12, 5, 12" />
     </property>
     <property class="quest_stick">
       <property name="0" value="57, 5, 46" />
@@ -298,8 +298,8 @@
       <property name="0" value="50, 5, 55" />
     </property>
     <property class="POILight">
-      <property name="0" value="49, 7, 55" />
-      <property name="1" value="48, 7, 54" />
+      <property name="0" value="48, 7, 54" />
+      <property name="1" value="49, 7, 55" />
     </property>
     <property class="QuestRestorePower">
       <property name="0" value="47, 5, 54" />

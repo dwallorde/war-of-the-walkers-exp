@@ -2543,7 +2543,6 @@
 		<item name="treeChristmas2Medium"/>
 		<item name="treeChristmas3Large"/>
 		<item name="modCandyCaneClub"/>
-		<!-- <item name="modCandyCaneKnife"/> -->
 	</lootgroup>
 	
 	<lootgroup name="halloweenDecorations" count="1">
@@ -3374,8 +3373,8 @@
 	<!-- <item group="cosmeticsElectricParts" count="1,2" loot_prob_template="veryLow"/>
 	<item group="cosmeticsMechanicalParts" count="1,2" loot_prob_template="veryLow"/>
 	<item group="cosmeticsPlasticParts" count="1,2" loot_prob_template="veryLow"/> -->
-	<item group="christmasDecorations" count="1,2" loot_prob_template="med"/>
-	<item group="halloweenDecorations" count="1,2" loot_prob_template="med"/>
+	<!-- <item group="christmasDecorations" count="1,2" loot_prob_template="med"/> -->
+	<!-- <item group="halloweenDecorations" count="1,2" loot_prob_template="med"/> -->
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupWorkingStiffs03']">
@@ -3435,8 +3434,8 @@
 	<item name="vitaminC"/>
 	<item name="vitaminD"/>
 	<item name="zincPowder" count="10,20"/>
-	<item group="christmasPresents" count="1,2" loot_prob_template="med"/>
-	<item name="halloweenTrickorTreat" count="1,2" loot_prob_template="med"/>
+	<!-- <item group="christmasPresents" count="1,2" loot_prob_template="med"/> -->
+	<!-- <item name="halloweenTrickorTreat" count="1,2" loot_prob_template="med"/> -->
 </append>
 
 <insertAfter xpath="/lootcontainers/lootgroup[@name='groupMedicalRare']">
@@ -3447,6 +3446,8 @@
 	<item name="traumaFirstAidKit" loot_prob_template="low"/>
 	<item name="traumaFirstAidBandage"/>
 	<item name="immunizationShot" loot_prob_template="veryLow"/>
+	<item name="wotwDrugAntiRadMinor" loot_prob_template="low"/>
+	<item name="wotwDrugAntiRadMajor" loot_prob_template="veryLow"/>
 </lootgroup>
 </insertAfter>
 
@@ -3805,67 +3806,119 @@
 
 <insertAfter xpath="/lootcontainers/lootgroup[@name='groupCrossbowBoltIronLarge']">
 <lootgroup name="group45ACPSmall">
-	<item name="wotwAmmo45ACP" count="6,8" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo45ACP" count="3,4" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group45ACPMedium">
-	<item name="wotwAmmo45ACP" count="10,20" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo45ACP" count="5,10" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group45ACPLarge">
-	<item name="wotwAmmo45ACP" count="25,35" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo45ACP" count="12,16" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group556mmSmall">
-	<item name="wotwAmmo556mmBullet" count="5,7" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo556mmBullet" count="3,5" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group556mmMedium">
-	<item name="wotwAmmo556mmBullet" count="8,15" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo556mmBullet" count="4,8" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group556mmLarge">
-	<item name="wotwAmmo556mmBullet" count="20,30" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo556mmBullet" count="10,15" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group57mmSmall">
-	<item name="wotwAmmo57mmBullet" count="5,7" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo57mmBullet" count="3,5" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group57mmMedium">
-	<item name="wotwAmmo57mmBullet" count="8,15" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo57mmBullet" count="4,8" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group57mmLarge">
-	<item name="wotwAmmo57mmBullet" count="20,30" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo57mmBullet" count="10,15" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group20gSmall">
-	<item name="wotwAmmo20GShotgunShell" count="5,7" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo20GShotgunShell" count="3,5" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group20gMedium">
-	<item name="wotwAmmo20GShotgunShell" count="8,15" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo20GShotgunShell" count="4,8" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="group20gLarge">
-	<item name="wotwAmmo20GShotgunShell" count="20,30" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmo20GShotgunShell" count="10,15" loot_stage_count_mod="0.01"/>
 </lootgroup>
 </insertAfter>
 
 <insertAfter xpath="/lootcontainers/lootgroup[@name='groupResourceBulletTipLarge']">
 <lootgroup name="groupResourceHPBulletTipSmall">
-	<item name="wotwAmmoHPBulletTip" count="10,20" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmoHPBulletTip" count="5,10" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="groupResourceHPBulletTipMedium">
-	<item name="wotwAmmoHPBulletTip" count="20,30" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmoHPBulletTip" count="10,15" loot_stage_count_mod="0.01"/>
 </lootgroup>
 
 <lootgroup name="groupResourceHPBulletTipLarge">
-	<item name="wotwAmmoHPBulletTip" count="30,40" loot_stage_count_mod="0.01"/>
+	<item name="wotwAmmoHPBulletTip" count="15,20" loot_stage_count_mod="0.01"/>
 </lootgroup>
 </insertAfter>
+
+<set xpath="/lootcontainers/lootgroup[@name='group9mmSmall']/item[@name='ammo9mmBulletBall']/@count">3,4</set>
+<set xpath="/lootcontainers/lootgroup[@name='group9mmMedium']/item[@name='ammo9mmBulletBall']/@count">5,10</set>
+<set xpath="/lootcontainers/lootgroup[@name='group9mmLarge']/item[@name='ammo9mmBulletBall']/@count">15,25</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='group762mmSmall']/item[@name='ammo762mmBulletBall']/@count">2,3</set>
+<set xpath="/lootcontainers/lootgroup[@name='group762mmMedium']/item[@name='ammo762mmBulletBall']/@count">4,8</set>
+<set xpath="/lootcontainers/lootgroup[@name='group762mmLarge']/item[@name='ammo762mmBulletBall']/@count">10,20</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='group44MagnumSmall']/item[@name='ammo44MagnumBulletBall']/@count">2,3</set>
+<set xpath="/lootcontainers/lootgroup[@name='group44MagnumMedium']/item[@name='ammo44MagnumBulletBall']/@count">4,6</set>
+<set xpath="/lootcontainers/lootgroup[@name='group44MagnumLarge']/item[@name='ammo44MagnumBulletBall']/@count">8,13</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupShotgunShellSmall']/item[@name='ammoShotgunShell']/@count">1,2</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupShotgunShellMedium']/item[@name='ammoShotgunShell']/@count">2,3</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupShotgunShellLarge']/item[@name='ammoShotgunShell']/@count">3,5</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupArrowIronSmall']/item[@name='ammoArrowIron']/@count">2,3</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupArrowIronMedium']/item[@name='ammoArrowIron']/@count">4,6</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupArrowIronLarge']/item[@name='ammoArrowIron']/@count">8,12</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupCrossbowBoltIronSmall']/item[@name='ammoCrossbowBoltIron']/@count">2,3</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupCrossbowBoltIronMedium']/item[@name='ammoCrossbowBoltIron']/@count">4,6</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupCrossbowBoltIronLarge']/item[@name='ammoCrossbowBoltIron']/@count">8,12</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceGunPowderSmall']/item[@name='resourceGunPowder']/@count">5,10</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceGunPowderMedium']/item[@name='resourceGunPowder']/@count">10,15</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceGunPowderLarge']/item[@name='resourceGunPowder']/@count">15,20</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletCasingSmall']/item[@name='resourceBulletCasing']/@count">5,10</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletCasingMedium']/item[@name='resourceBulletCasing']/@count">10,15</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletCasingLarge']/item[@name='resourceBulletCasing']/@count">15,20</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletTipSmall']/item[@name='resourceBulletTip']/@count">5,10</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletTipMedium']/item[@name='resourceBulletTip']/@count">10,15</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletTipLarge']/item[@name='resourceBulletTip']/@count">15,20</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupResourcePaperSmall']/item[@name='resourcePaper']/@count">5,10</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourcePaperMedium']/item[@name='resourcePaper']/@count">10,15</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourcePaperLarge']/item[@name='resourcePaper']/@count">15,20</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBuckshotSmall']/item[@name='resourceBuckshot']/@count">5,10</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBuckshotMedium']/item[@name='resourceBuckshot']/@count">10,15</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceBuckshotLarge']/item[@name='resourceBuckshot']/@count">15,20</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceArrowHeadIronSmall']/item[@name='resourceArrowHeadIron']/@count">2,3</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceArrowHeadIronMedium']/item[@name='resourceArrowHeadIron']/@count">4,6</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceArrowHeadIronLarge']/item[@name='resourceArrowHeadIron']/@count">8,12</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceArrowHeadSteelAPSmall']/item[@name='resourceArrowHeadSteelAP']/@count">2,3</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceArrowHeadSteelAPMedium']/item[@name='resourceArrowHeadSteelAP']/@count">4,6</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupResourceArrowHeadSteelAPLarge']/item[@name='resourceArrowHeadSteelAP']/@count">8,12</set>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupAmmoSmall']">
 	<item group="group45ACPSmall" loot_prob_template="med"/>
@@ -4322,10 +4375,10 @@
 	<item group="groupRewardCards" count="1" loot_prob_template="medLow"/>
 	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="med"/>
-	<item group="christmasPresents" count="1,3" loot_prob_template="low"/>
-	<item group="christmasDecorations" count="1,3" loot_prob_template="low"/>
-	<item group="halloweenDecorations" count="1,2" loot_prob_template="low"/>
-	<item name="halloweenTrickorTreat" count="1,2" loot_prob_template="med"/>
+	<!-- <item group="christmasPresents" count="1,3" loot_prob_template="low"/> -->
+	<!-- <item group="christmasDecorations" count="1,3" loot_prob_template="low"/> -->
+	<!-- <item group="halloweenDecorations" count="1,2" loot_prob_template="low"/> -->
+	<!-- <item name="halloweenTrickorTreat" count="1,2" loot_prob_template="med"/> -->
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupHiddenStash02']">
@@ -4381,8 +4434,8 @@
 <append xpath="/lootcontainers/lootgroup[@name='groupShotgunMessiahCrate04']">
 	<item group="classFragments" loot_prob_template="low"/> 
 	<item name="repairKitWeapon" count="2,4" loot_prob_template="low"/>
-	<item group="christmasPresents" count="1,2" loot_prob_template="low"/>
-	<item name="halloweenTrickorTreat" count="1,2" loot_prob_template="low"/>
+	<!-- <item group="christmasPresents" count="1,2" loot_prob_template="low"/> -->
+	<!-- <item name="halloweenTrickorTreat" count="1,2" loot_prob_template="low"/> -->
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupPopNPillsCrate03']">
@@ -4409,10 +4462,10 @@
 	<item group="classFragments" loot_prob_template="low"/> 
 </append>
 
-<append xpath="/lootcontainers/lootgroup[@name='groupShamwayCrate03']">
+<!-- <append xpath="/lootcontainers/lootgroup[@name='groupShamwayCrate03']">
 	<item group="christmasPresents" count="1,2" loot_prob_template="low"/>
 	<item name="halloweenTrickorTreat" count="1,2" loot_prob_template="low"/>
-</append>
+</append> -->
 
 <append xpath="/lootcontainers/lootgroup[@name='groupMorticianDrawer02']">
 	<item group="classFragments" loot_prob_template="low"/> 
@@ -4420,8 +4473,8 @@
 
 <append xpath="/lootcontainers/lootgroup[@name='groupConstructionCrate02']">
 	<item group="classFragments" loot_prob_template="low"/> 
-	<item group="christmasDecorations" count="1,2" loot_prob_template="low"/>
-	<item group="halloweenDecorations" count="1,2" loot_prob_template="low"/>
+	<!-- <item group="christmasDecorations" count="1,2" loot_prob_template="low"/> -->
+	<!-- <item group="halloweenDecorations" count="1,2" loot_prob_template="low"/> -->
 </append>
 
 <remove xpath="/lootcontainers/lootgroup[@name='airdropfood']/item[@name='foodGrilledMeat']"/>
@@ -4589,8 +4642,8 @@
 <lootcontainer name="supplyCrateBuilding" count="4,8" size="5,5" destroy_on_close="empty" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" buff="buffScavengingServerHack,buffScavengingSkillXPTick">
 	<item group="groupWorkingStiffsCrate" count="2,3"/>
 	<item group="groupToolsTiered" count="1"/>
-	<item group="christmasDecorations" count="1,2" loot_prob_template="low"/>
-	<item group="halloweenDecorations" count="1,2" loot_prob_template="low"/>
+	<!-- <item group="christmasDecorations" count="1,2" loot_prob_template="low"/> -->
+	<!-- <item group="halloweenDecorations" count="1,2" loot_prob_template="low"/> -->
 </lootcontainer>
 
 <!-- Lootcontainer Supply Crate Health and Armour Loot -->
@@ -4663,8 +4716,8 @@
 	<item group="booksAllScaled" count="1" loot_prob_template="medHigh"/>
 	<item group="groupQuestChallenge" count="1" loot_prob_template="low"/>
 	<item group="groupTreasureMaps" count="1" loot_prob_template="low"/>
-	<item group="christmasPresents" count="1,2" loot_prob_template="low"/>
-	<item name="halloweenTrickorTreat" count="1,2" loot_prob_template="low"/>
+	<!-- <item group="christmasPresents" count="1,2" loot_prob_template="low"/> -->
+	<!-- <item name="halloweenTrickorTreat" count="1,2" loot_prob_template="low"/> -->
 </lootcontainer>
 
 <!-- Lootcontainer Player Made Kitchen Cabinets Loot NOT USED -->
@@ -5455,10 +5508,13 @@
 <set xpath="/lootcontainers/lootgroup[@name='groupInfestedT2']/item[@group='groupAmmoMunitions']/@count">2</set>
 <set xpath="/lootcontainers/lootgroup[@name='groupInfestedT3']/item[@group='groupAmmoMunitions']/@count">2</set>
 <set xpath="/lootcontainers/lootgroup[@name='groupInfestedT3']/item[@group='groupAmmoLarge']/@count">1</set>
-<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']/item[@group='groupAmmoMunitions']/@count">3</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']/item[@group='groupAmmoMunitions']/@count">2</set>
 <set xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']/item[@group='groupAmmoLarge']/@count">2</set>
 <set xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']/item[@group='groupAmmoMunitions']/@count">2</set>
-<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']/item[@group='groupAmmoLarge']/@count">3</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']/item[@group='groupAmmoLarge']/@count">2</set>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupAmmoPileLarge']/item[@group='groupAmmoLarge']/@count">1</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupAmmoMunitions']/item[@group='groupAmmoLarge']/@count">1</set>
 
 <append xpath="lootcontainers/lootgroup[@name='groupWeaponsT3_Machinegunner']">
 	<item name="LMGBeltBag"/>

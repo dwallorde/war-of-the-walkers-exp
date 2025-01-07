@@ -3656,10 +3656,10 @@
     <property name="Material" value="Mwood_weak" />
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
-	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCratePrefab.prefab"/> -->
-	<!-- <property name="ModelOffset" value="0,0,0"/> -->
+	<property name="Model" value="@:Entities/LootContainers/shippingCratePrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas3Prefab" />
+	<!-- <property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas3Prefab" /> -->
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="0" />
     <property name="DowngradeBlock" value="lootCrateBuildingSupplies" />
@@ -3681,10 +3681,10 @@
     <property name="Material" value="Mwood_weak" />
 	<property name="DisplayInfo" value="Name"/>
 	<property name="Shape" value="ModelEntity" />
-	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateSavagePrefab.prefab"/> -->
-	<!-- <property name="ModelOffset" value="0,0,0"/> -->
+	<property name="Model" value="@:Entities/LootContainers/shippingCrateSavagePrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas6Prefab" />
+	<!-- <property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas6Prefab" /> -->
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="0" />
     <property name="DowngradeBlock" value="lootCrateHealthandArmor" />
@@ -3706,8 +3706,8 @@
     <property name="Material" value="Mwood_weak" />
 	<property name="DisplayInfo" value="Name"/>
 	<property name="Shape" value="ModelEntity" />
-	<!-- <property name="Model" value="Entities/Industrial/palletCartonMilitaryTileCoveredPrefab"/> -->
-	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas5Prefab" />
+	<property name="Model" value="Entities/Industrial/palletCartonMilitaryTileCoveredPrefab"/>
+	<!-- <property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas5Prefab" /> -->
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="0" />
     <property name="DowngradeBlock" value="lootCrateAmmo" />
@@ -3730,10 +3730,10 @@
 	<property name="Material" value="Mwood_weak" />
 	<property name="DisplayInfo" value="Name"/>
 	<property name="Shape" value="ModelEntity"/>
-	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateShamwayPrefab.prefab"/> -->
-	<!-- <property name="ModelOffset" value="0,0,0"/> -->
+	<property name="Model" value="@:Entities/LootContainers/shippingCrateShamwayPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas1Prefab" />
+	<!-- <property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas1Prefab" /> -->
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
 	<drop event="Destroy" name="wood" count="0" />
 	<property name="DowngradeBlock" value="lootCrateFoodandDrink" />
@@ -3755,10 +3755,10 @@
     <property name="Material" value="Mwood_weak" />
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
-	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/> -->
-	<!-- <property name="ModelOffset" value="0,0,0"/> -->
+	<property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" />
+	<!-- <property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" /> -->
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="0" />
     <property name="DowngradeBlock" value="lootCrateWeaponsDay5" />
@@ -3780,10 +3780,10 @@
     <property name="Material" value="Mwood_weak" />
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
-	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/> -->
-	<!-- <property name="ModelOffset" value="0,0,0"/> -->
+	<property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" />
+	<!-- <property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" /> -->
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="0" />
     <property name="DowngradeBlock" value="lootCrateWeaponsDay7" />
@@ -3805,10 +3805,10 @@
     <property name="Material" value="Mwood_weak" />
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
-	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/> -->
-	<!-- <property name="ModelOffset" value="0,0,0"/> -->
+	<property name="Model" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" />
+	<!-- <property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" /> -->
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="0" />
     <property name="DowngradeBlock" value="lootCrateWeaponsDay3" />
@@ -3830,10 +3830,10 @@
     <property name="Material" value="Mwood_weak" />
 	<property name="DisplayInfo" value="Name"/>
     <property name="Shape" value="ModelEntity"/>
-	<!-- <property name="Model" value="@:Entities/LootContainers/shippingCratePrefab.prefab"/> -->
-	<!-- <property name="ModelOffset" value="0,0,0"/> -->
+	<property name="Model" value="@:Entities/LootContainers/shippingCratePrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas3Prefab" />
+	<!-- <property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas3Prefab" /> -->
 	<property name="ParticleOnDeath" value="supply_crate_gib_Prefab" />
     <drop event="Destroy" name="wood" count="0" />
     <property name="DowngradeBlock" value="lootCrateGeneral" />
@@ -5658,8 +5658,8 @@
 	<property name="OpenSound" value="oilpump_open"/>
 	<property name="CloseSound" value="oilpump_close"/>
 	<property name="ConvertSound" value="oilpump_complete,1"/>
-	<property name="MinConvertTime" value="14400"/>
-	<property name="MaxConvertTime" value="28800"/>
+	<property name="MinConvertTime" value="10800"/>
+	<property name="MaxConvertTime" value="18000"/>
 	<property name="EconomicValue" value="20000"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
@@ -5776,8 +5776,8 @@
 	<property name="OpenSound" value="collector_open"/>
 	<property name="CloseSound" value="collector_close"/>
 	<property name="ConvertSound" value="collector_complete_item,1"/>
-	<property name="MinConvertTime" value="18000"/>
-	<property name="MaxConvertTime" value="32400"/>
+	<property name="MinConvertTime" value="10800"/>
+	<property name="MaxConvertTime" value="18000"/>
 	<property name="EconomicValue" value="20000"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
@@ -19903,7 +19903,7 @@
 	<drop event="Fall" name="resourceWood" count="0" prob="1" stick_chance="0"/>
 	<property name="SortOrder1" value="B900"/>
 	<property name="SortOrder2" value="0004"/>
-	<property name="FilterTags" value="MC_outdoor,SC_shrubbery,A21_NEW"/>
+	<property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
 </block>
 
 <block name="wotwPlantHedgeSnowHardened">

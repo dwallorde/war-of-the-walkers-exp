@@ -743,10 +743,11 @@
 			<item name="wotwResourceFertilizer" count="5,10" prob="0.75"/>
 			<item name="twine" count="10,20"/>
 			<item name="resourceRockSmall" count="1000,3000"/>
-			<item name="wotwResourceBrimstone" count="50,100"/>
-			<item name="wotwResourceSilicon" count="50,100" prob="0.5"/>
-			<item name="wotwResourceKerosene" count="50,100" prob="0.4"/>
-			<item name="wotwResourceDiesel" count="50,100" prob="0.6"/>
+			<item name="wotwResourceBrimstone" count="100,200"/>
+			<item name="wotwResourceSilicon" count="100,200" prob="0.6"/>
+			<item name="wotwResourceSulfur" count="100,200" prob="0.6"/>
+			<item name="wotwResourceKerosene" count="100,200" prob="0.6"/>
+			<item name="wotwResourceDiesel" count="100,200" prob="0.6"/>
 			<item name="wotwResourceLeather" count="10,25"/>
 </append>
 
@@ -1152,6 +1153,8 @@
 			<item name="drinkJarGrandpasMoonshine" count="1,2"/>
 			<item name="drinkJarGrandpasAwesomeSauce" count="1,2"/>
 			<item name="drinkJarGrandpasLearningElixir" count="1,2"/>
+			<item name="wotwDrugAntiRadMinor" count="1"/>
+			<item name="wotwDrugAntiRadMajor" count="1"/>
 		</trader_item_group>
 		
 		<trader_item_group name="survivalistTraps">
@@ -1480,10 +1483,10 @@
 			<item name="handlewood" count="1,3"/>
 			<item name="handlemetal" count="1,3" prob="0.3"/>
 			<item name="handlefiberglass" count="1,3" prob="0.1"/>
-			<item group="christmasDecorations" count="1,2" prob="0.3"/>
-			<item group="christmasPresents" count="1,2" prob="0.3"/>
-			<item group="halloweenDecorations" count="1,2" prob="0.3"/>
-			<item name="halloweenTrickorTreat" count="1,2"/>
+			<!-- <item group="christmasDecorations" count="1,2" prob="0.3"/> -->
+			<!-- <item group="christmasPresents" count="1,2" prob="0.3"/> -->
+			<!-- <item group="halloweenDecorations" count="1,2" prob="0.3"/> -->
+			<!-- <item name="halloweenTrickorTreat" count="1,2"/> -->
 </append>
 
 
@@ -1495,7 +1498,12 @@
 
 <set xpath="/traders/trader_info[@id='1']/trader_items/item[@name='toolDewFilter']/@count">2,3</set>
 
-<append xpath="/traders/trader_info[@id='1']/trader_items[@count='all']">
+<insertAfter xpath="/traders/trader_info[@id='1']/trader_items/item[@group='groupDyeMods']">
+			<item name="wotwDrugAntiRadMinor" count="1,2"/>
+			<item name="wotwDrugAntiRadMajor" count="1,2"/>
+</insertAfter>
+
+<insertAfter xpath="/traders/trader_info[@id='1']/trader_items/item[@group='decorativeBlocks']">
 			<item name="repairKitArmour" count="2,3"/>
 			<item name="repairKitTool" count="2,3"/>
 			<item name="repairKitWeapon" count="2,3"/>
@@ -1508,7 +1516,7 @@
 			<item name="wotwWorkToolDualMotor" count="1"/>
 			<item name="wotwToolWSCarbideBlade" count="1"/>
 			<item name="wotwToolWSHeatedRack" count="1"/>
-</append>
+</insertAfter>
 
 <!-- <append xpath="/traders/trader_info[@id='1']">
 		<trader_items count="0,1">
@@ -1523,7 +1531,7 @@
 
 <set xpath="/traders/trader_info[@id='6']/trader_items/item[@name='toolDewFilter']/@count">2,3</set>
 
-<append xpath="/traders/trader_info[@id='6']/trader_items[@count='all']">
+<insertAfter xpath="/traders/trader_info[@id='6']/trader_items/item[@group='decorativeBlocks']">
 			<item name="repairKitArmour" count="2,3"/>
 			<item name="repairKitTool" count="2,3"/>
 			<item name="repairKitWeapon" count="2,3"/>
@@ -1534,7 +1542,7 @@
 			<item name="wotwWorkToolTunedEngine" count="1"/>
 			<item name="wotwWorkToolBiggerDrums" count="1"/>
 			<item name="wotwWorkToolDualMotor" count="1"/>
-</append>
+</insertAfter>
 
 <!-- Trader Jen: Medical and Books -->
 <removeattribute xpath="/traders/trader_info[@id='2']/@open_time" />
@@ -1543,7 +1551,12 @@
 
 <set xpath="/traders/trader_info[@id='2']/trader_items/item[@name='toolDewFilter']/@count">2,3</set>
 
-<append xpath="/traders/trader_info[@id='2']/trader_items[@count='all']">
+<insertAfter xpath="/traders/trader_info[@id='2']/trader_items/item[@name='toolCookingGrill']">
+			<item name="wotwDrugAntiRadMinor" count="1,2"/>
+			<item name="wotwDrugAntiRadMajor" count="1,2"/>
+</insertAfter>
+
+<insertAfter xpath="/traders/trader_info[@id='2']/trader_items/item[@group='decorativeBlocks']">
 			<item name="repairKitArmour" count="2,3"/>
 			<item name="repairKitTool" count="2,3"/>
 			<item name="repairKitWeapon" count="2,3"/>
@@ -1554,7 +1567,7 @@
 			<item name="wotwWorkToolTunedEngine" count="1"/>
 			<item name="wotwWorkToolBiggerDrums" count="1"/>
 			<item name="wotwWorkToolDualMotor" count="1"/>
-</append>
+</insertAfter>
 
 <!-- Trader Hugh: Guns & Ammo -->
 <removeattribute xpath="/traders/trader_info[@id='7']/@open_time" />
@@ -1563,7 +1576,7 @@
 
 <set xpath="/traders/trader_info[@id='7']/trader_items/item[@name='toolDewFilter']/@count">2,3</set>
 
-<append xpath="/traders/trader_info[@id='7']/trader_items[@count='all']">
+<insertAfter xpath="/traders/trader_info[@id='7']/trader_items/item[@group='decorativeBlocks']">
 			<item name="repairKitArmour" count="2,3"/>
 			<item name="repairKitTool" count="2,3"/>
 			<item name="repairKitWeapon" count="2,3"/>
@@ -1574,7 +1587,7 @@
 			<item name="wotwWorkToolTunedEngine" count="1"/>
 			<item name="wotwWorkToolBiggerDrums" count="1"/>
 			<item name="wotwWorkToolDualMotor" count="1"/>
-</append>
+</insertAfter>
 
 <!-- Trader Rekt: Food & Farming -->
 <removeattribute xpath="/traders/trader_info[@id='8']/@open_time" />
@@ -1583,7 +1596,7 @@
 
 <set xpath="/traders/trader_info[@id='8']/trader_items/item[@name='toolDewFilter']/@count">3,4</set>
 
-<append xpath="/traders/trader_info[@id='8']/trader_items[@count='all']">
+<insertAfter xpath="/traders/trader_info[@id='8']/trader_items/item[@group='decorativeBlocks']">
 			<item name="repairKitArmour" count="2,3"/>
 			<item name="repairKitTool" count="2,3"/>
 			<item name="repairKitWeapon" count="2,3"/>
@@ -1594,7 +1607,7 @@
 			<item name="wotwWorkToolTunedEngine" count="1"/>
 			<item name="wotwWorkToolBiggerDrums" count="1"/>
 			<item name="wotwWorkToolDualMotor" count="1"/>
-</append>
+</insertAfter>
 
 
 

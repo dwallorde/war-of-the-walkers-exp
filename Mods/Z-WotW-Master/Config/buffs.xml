@@ -1913,6 +1913,16 @@
 
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$HazmatGearWorn" operation="add" value="1"/>
+			<!-- <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$HazmatGearWorn" operation="subtract" value="1"/> -->
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRadiationProtHeadRemovalCooldown"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRadiationProtHeadRemovalCooldown" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		
+		<effect_group>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$HazmatGearWorn" operation="subtract" value="1"/>
 		</effect_group>
 	</buff>
@@ -1923,6 +1933,16 @@
 
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$HazmatGearWorn" operation="add" value="1"/>
+			<!-- <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$HazmatGearWorn" operation="subtract" value="1"/> -->
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRadiationProtChestRemovalCooldown"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRadiationProtChestRemovalCooldown" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		
+		<effect_group>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$HazmatGearWorn" operation="subtract" value="1"/>
 		</effect_group>
 	</buff>
@@ -1933,6 +1953,16 @@
 
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$HazmatGearWorn" operation="add" value="1"/>
+			<!-- <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$HazmatGearWorn" operation="subtract" value="1"/> -->
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRadiationProtHandsRemovalCooldown"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRadiationProtHandsRemovalCooldown" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		
+		<effect_group>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$HazmatGearWorn" operation="subtract" value="1"/>
 		</effect_group>
 	</buff>
@@ -1943,6 +1973,16 @@
 
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$HazmatGearWorn" operation="add" value="1"/>
+			<!-- <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$HazmatGearWorn" operation="subtract" value="1"/> -->
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRadiationProtFeetRemovalCooldown"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRadiationProtFeetRemovalCooldown" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		
+		<effect_group>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$HazmatGearWorn" operation="subtract" value="1"/>
 		</effect_group>
 	</buff>
@@ -2296,6 +2336,33 @@
 			<requirement name="HoldingItemHasTags" tags="axe"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" tags="resourceWood,wotwResourceWoodStick"/>
 
+		</effect_group>
+</append>
+
+<append xpath="/buffs/buff[@name='zombieOakRadNurseRadiatedShowerAOEEffect']/effect_group">
+			<requirement name="!HasBuff" buff="buffRadiationProtHead"/>
+			<requirement name="!HasBuff" buff="buffRadiationProtChest"/>
+			<requirement name="!HasBuff" buff="buffRadiationProtHands"/>
+			<requirement name="!HasBuff" buff="buffRadiationProtFeet"/>
+</append>
+
+<append xpath="/buffs/buff[@name='zombieBuffStatusCheck01']">
+		<effect_group>
+			<passive_effect name="HealthMax" operation="base_add" value="50">
+				<requirement name="InBiome" biome="09"/> <!-- Burnt_Forest -->
+			</passive_effect>
+			
+			<passive_effect name="HealthMax" operation="base_add" value="100">
+				<requirement name="InBiome" biome="05"/> <!-- Desert -->
+			</passive_effect>
+			
+			<passive_effect name="HealthMax" operation="base_add" value="150">
+				<requirement name="InBiome" biome="01"/> <!-- Snow -->
+			</passive_effect>
+			
+			<passive_effect name="HealthMax" operation="base_add" value="200">
+				<requirement name="InBiome" biome="08"/> <!-- Wasteland -->
+			</passive_effect>
 		</effect_group>
 </append>
 </config>

@@ -1328,7 +1328,7 @@
 		<passive_effect name="HealthMax" operation="base_set" value="2000"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 	</effect_group>
 </entity_class>
@@ -2085,8 +2085,8 @@
 
 <insertAfter xpath="/entity_classes/entity_class[@name='DroppedLootContainerTwitch']">
 <entity_class name="EntityLootContainerBossMechanic">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootBossPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2099,8 +2099,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerBossMedical">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootBossPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2113,8 +2113,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerBossBuildingSupplies">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootBossPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2127,8 +2127,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerBossGeneric1">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootBossPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2141,8 +2141,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerBossGunT2">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootBossPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2155,8 +2155,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerBossGunT3">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootBossPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2169,8 +2169,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerBossBooks">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootBossPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2183,8 +2183,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerBossGeneric2">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootBossPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2197,8 +2197,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerUtilityWorker">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootRegPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2211,8 +2211,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerMilitaryZombie">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>  -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> 
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootRegPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2225,8 +2225,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerNurseZombie">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootRegPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2239,8 +2239,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerHazmatZombie">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootRegPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2253,8 +2253,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerLumberjackZombie">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootRegPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2267,8 +2267,8 @@
 </entity_class>
 
 <entity_class name="EntityLootContainerBandits">	<property name="HideInSpawnMenu" value="true"/>
-	<!-- <property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/> -->
-	<property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<!-- <property name="Mesh" value="#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1"/> -->
 	<!-- <property name="Mesh" value="#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootStrongPrefab"/> -->
 	<property name="ModelType" value="Custom"/>
 	<property name="Prefab" value="Backpack"/>
@@ -2294,9 +2294,9 @@
 </insertAfter>
 
 <!-- Christmas Loot Container Mesh Set -->
-<set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='Mesh']/@value">#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1</set>
-<set xpath="/entity_classes/entity_class[@name='EntityLootContainerStrong']/property[@name='Mesh']/@value">#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas2</set>
-<set xpath="/entity_classes/entity_class[@name='EntityLootContainerBoss']/property[@name='Mesh']/@value">#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas3</set>
+<!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='Mesh']/@value">#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas1</set> -->
+<!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerStrong']/property[@name='Mesh']/@value">#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas2</set> -->
+<!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerBoss']/property[@name='Mesh']/@value">#@modfolder:Resources/ChristmasDroppedLoot.unity3d?lootContainerChristmas3</set> -->
 
 <!-- Halloween Loot Container Mesh Set -->
 <!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='Mesh']/@value">#@modfolder:Resources/HalloweenDroppedLootbag.unity3d?HalloweenDroppedLootRegPrefab</set>
@@ -3253,9 +3253,12 @@
 <append xpath="/entity_classes">
 <entity_class name="zombieOakNurseLight" extends="zombieOakNurse">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1000"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="750"/>
@@ -3267,9 +3270,12 @@
 
 <entity_class name="zombieOakFireNurseLight" extends="zombieOakFireNurse">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1000"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="750"/>
@@ -3281,9 +3287,12 @@
 
 <entity_class name="zombieOakRadNurseLight" extends="zombieOakRadNurse">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1000"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="750"/>
@@ -3296,10 +3305,13 @@
 
 <entity_class name="zombieOakHeadHunter1Light" extends="zombieOakHeadHunter1">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
     <property name="WalkType" value="2"/>
 	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1000"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="750"/>
@@ -3311,10 +3323,13 @@
 
 <entity_class name="zombieOakHeadHunter2Light" extends="zombieOakHeadHunter2">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
     <property name="WalkType" value="2"/>
 	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1000"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="750"/>
@@ -3326,10 +3341,13 @@
 
 <entity_class name="zombieOakHeadHunter3Light" extends="zombieOakHeadHunter3">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
     <property name="WalkType" value="2"/>
 	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1000"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="750"/>
@@ -3341,10 +3359,13 @@
 
 <entity_class name="zombieOakHeadHunter4Light" extends="zombieOakHeadHunter4">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
     <property name="WalkType" value="2"/>
 	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1000"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="750"/>
@@ -3356,10 +3377,13 @@
 
 <entity_class name="zombieOakHeadHunter5Light" extends="zombieOakHeadHunter5">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
     <property name="WalkType" value="2"/>
 	<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1000"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="750"/>
@@ -3371,9 +3395,12 @@
 
 <entity_class name="zombieOakNurseMed" extends="zombieOakNurse">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".7"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -3385,9 +3412,12 @@
 
 <entity_class name="zombieOakFireNurseMed" extends="zombieOakFireNurse">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".7"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -3399,9 +3429,12 @@
 
 <entity_class name="zombieOakRadNurseMed" extends="zombieOakRadNurse">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".7"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/>
+	<property name="MapIcon" value="ui_game_symbol_zombie"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -3414,10 +3447,13 @@
 
 <entity_class name="zombieOakHeadHunter1Med" extends="zombieOakHeadHunter1">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
   <property name="WalkType" value="2"/>
 	<property name="PainResistPerHit" value=".7"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -3429,10 +3465,13 @@
 
 <entity_class name="zombieOakHeadHunter2Med" extends="zombieOakHeadHunter2">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
     <property name="WalkType" value="2"/>
 	<property name="PainResistPerHit" value=".7"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -3444,9 +3483,12 @@
 
 <entity_class name="zombieOakHeadHunter3Med" extends="zombieOakHeadHunter3">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".7"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -3458,9 +3500,12 @@
 
 <entity_class name="zombieOakHeadHunter4Med" extends="zombieOakHeadHunter4">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".7"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -3472,9 +3517,12 @@
 
 <entity_class name="zombieOakHeadHunter5Med" extends="zombieOakHeadHunter5">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template,perkZT02,perkZT03"/>
 	<property name="PainResistPerHit" value=".7"/><!-- Radiated -->
 	<property name="ExperienceGain" value="1250"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
 	
 	<effect_group name="Base Effects">
         <passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -3484,5 +3532,157 @@
     </effect_group> 
 </entity_class>
 </append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieOakNurse']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieOakNurse']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieOakNurse']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieOakFireNurse']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieOakFireNurse']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieOakFireNurse']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieOakRadNurse']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieOakRadNurse']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieOakRadNurse']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter1']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter1']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter1']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter2']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter2']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter2']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter3']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter3']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter3']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter4']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter4']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter4']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter5']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter5']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter5']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieSkeleton']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieSkeleton']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieSkeleton']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieSkeletonAxe']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieSkeletonAxe']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieSkeletonAxe']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieSkeletonSword']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieSkeletonSword']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieSkeletonSword']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieDeathKnight']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieDeathKnight']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieDeathKnight']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieBase']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieBase']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieBase']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieAxe']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieAxe']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieAxe']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieArmor']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieArmor']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieArmor']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieHelm']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieHelm']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieHelm']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieSwordShield']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieSwordShield']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieSwordShield']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='zombieGhoul']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='zombieGhoul']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='zombieGhoul']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
+
+<append xpath="/entity_classes/entity_class[@name='GiantRat']/property[@name='Tags']/@value">,perkZT01,perkZT02,perkZT03</append>
+<append xpath="/entity_classes/entity_class[@name='GiantRat']">
+	<property name="MapIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_zombie01"/>
+	<property name="NavObject" value="zombietracking_zombie" />
+</append>
+<set xpath="/entity_classes/entity_class[@name='GiantRat']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
 
 </config>

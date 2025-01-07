@@ -3560,6 +3560,20 @@
 	<ingredient name="wotwResourceHardwoodPlank" count="250"/>
 	<ingredient name="resourceNail" count="50"/>
 </recipe>
+
+<recipe name="wotwDrugAntiRadMinor" count="1" craft_area="mortarandPestle" craft_tool="toolBeaker" tags="learnable,perkMasterChef">
+	<ingredient name="zincPowder" count="10"/>
+	<ingredient name="householdChemicals" count="10"/>
+	<ingredient name="medicalBloodBag" count="2"/>
+	<ingredient name="drugAntibiotics" count="1"/>
+</recipe>
+
+<recipe name="wotwDrugAntiRadMajor" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+	<ingredient name="zincPowder" count="20"/>
+	<ingredient name="householdChemicals" count="20"/>
+	<ingredient name="medicalBloodBag" count="4"/>
+	<ingredient name="drugAntibiotics" count="2"/>
+</recipe>
 </append>
 
 <!-- Gun Recipes -->
@@ -6220,7 +6234,7 @@
 <set xpath="/recipes/recipe[@name='ammoBundleArrowStone']/ingredient[@name='resourceFeather']/@count">240</set>
 
 <!-- Christmas Items -->
-<append xpath="/recipes">
+<!-- <append xpath="/recipes">
 <recipe name="boxChristmasVariantHelper" count="1" craft_time="2">
 	<ingredient name="resourceWood" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
@@ -6267,10 +6281,10 @@
 	<ingredient name="resourceScrapPolymers" count="30"/>
 	<ingredient name="resourceYuccaFibers" count="300"/>
 </recipe>
-</append>
+</append> -->
 
 <!-- Halloween Items -->
-<append xpath="/recipes">
+<!-- <append xpath="/recipes">
 <recipe name="wotwHalloweenJukebox" count="1" craft_time="2">
 	<ingredient name="resourceForgedIron" count="150"/>
 	<ingredient name="resourceGlue" count="10"/>
@@ -6297,7 +6311,7 @@
 	<ingredient name="resourceYuccaFibers" count="300"/>
 	<ingredient name="foodCropPumpkin" value="5"/>
 </recipe>
-</append>
+</append> -->
 
 <set xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']/@craft_time">5</set>
 <append xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']/@tags">,learnable</append>
@@ -9033,10 +9047,19 @@
 <set xpath="/recipes/recipe[@name='armorPrimitiveBoots']/ingredient[@name='resourceWood']/@name">wotwResourceWoodStick</set>
 <set xpath="/recipes/recipe[@name='armorPrimitiveBoots']/effect_group/passive_effect[@value='5,10,15,20,30']/@tags">resourceYuccaFibers,wotwResourceWoodStick</set>
 
-<removeattribute xpath="/recipes/recipe[@name='armorPrimitiveHelmet']/@tags"/>
+<remove xpath="/recipes/recipe[@name='armorPrimitiveHelmet']/ingredient[@name='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='armorPrimitiveHelmet']/effect_group/passive_effect[@tags='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='armorPrimitiveOutfit']/ingredient[@name='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='armorPrimitiveOutfit']/effect_group/passive_effect[@tags='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='armorPrimitiveGloves']/ingredient[@name='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='armorPrimitiveGloves']/effect_group/passive_effect[@tags='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='armorPrimitiveBoots']/ingredient[@name='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='armorPrimitiveBoots']/effect_group/passive_effect[@tags='resourceLegendaryParts']"/>
+
+<!-- <removeattribute xpath="/recipes/recipe[@name='armorPrimitiveHelmet']/@tags"/>
 <removeattribute xpath="/recipes/recipe[@name='armorPrimitiveOutfit']/@tags"/>
 <removeattribute xpath="/recipes/recipe[@name='armorPrimitiveGloves']/@tags"/>
-<removeattribute xpath="/recipes/recipe[@name='armorPrimitiveBoots']/@tags"/>
+<removeattribute xpath="/recipes/recipe[@name='armorPrimitiveBoots']/@tags"/> -->
 
 <setattribute xpath="/recipes/recipe[@name='cntIronWritableCrate']" name="tags">learnable</setattribute>
 <setattribute xpath="/recipes/recipe[@name='cntSteelWritableCrate']" name="tags">learnable</setattribute>
