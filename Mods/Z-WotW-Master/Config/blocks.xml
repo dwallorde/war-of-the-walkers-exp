@@ -4385,12 +4385,23 @@
 <block name="screamerBlock">
 	<property name="CustomIcon" value="screamerBlock"/>
 	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Msteel"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ScreamerBlock.unity3d?ScreamerBlockPrefab" />
 	<property name="MultiBlockDim" value="1,2,1" />
-	<property name="Stacknumber" value="1"/>
-	<property name="Material" value="Msteel"/>
-	<property name="Weight" value="200"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="5000"/>
+	<property name="TraderStageTemplate" value="midTier3"/>
+	<property name="MaxDamage" value="1000"/>
+	<property name="TakeDelay" value="5"/>
 	<property name="Class" value="GameEvent"/>
     <property name="ActivateEvent" value="horde_SpawnTrigger"/>
 	<property name="DestroyOnEvent" value="false" />
@@ -4405,13 +4416,12 @@
 	</property>
 	<drop event="Destroy" name="screamerBlock" count="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Building,Science"/>
-	<property name="EconomicValue" value="5000"/>
-	<property name="TraderStageTemplate" value="midTier3"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="PickupJournalEntry" value="screamerBlockTip" />
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="screamerBlockUsed">
@@ -4492,35 +4502,38 @@
 
 <block name="coffeemaker">
 	<property name="CustomIcon" value="coffeemaker" />
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Campfire" />
-	<property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800" />
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/CoffeeMaker.unity3d?CoffeeMakerPrefab" />
-	<property name="Stacknumber" value="1"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.1"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
+	<property name="Class" value="Campfire"/>
 	<property class="Workstation">
 		<property name="CraftingAreaRecipes" value="coffeemaker"/>
 		<property name="Modules" value="output,input"/>
-		<property name="Collide" value="melee,bullet,arrow,rocket" />
+		<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_coffeemaker" />
-	<property name="CraftActionName" value="lblContextActionBrew" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_coffeemaker" />
-	<property name="OpenSound" value="coffeemaker_open" />
-	<property name="CloseSound" value="coffeemaker_close" />
-	<property name="CraftSound" value="coffeemaker_craft_click" />
-	<property name="CraftCompleteSound" value="coffeemaker_complete" />
-	<property name="WorkstationJournalTip" value="coffeemakerTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_coffeemaker"/>
+	<property name="CraftActionName" value="lblContextActionBrew"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_coffeemaker"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/CoffeeMaker.unity3d?CoffeeMakerPrefab"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="midTier1"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="0.1"/>
+	<property name="HeatMapTime" value="1200"/>
+	<property name="HeatMapFrequency" value="25"/>
+	<property name="OpenSound" value="coffeemaker_open"/>
+	<property name="CloseSound" value="coffeemaker_close"/>
+	<property name="CraftSound" value="coffeemaker_craft_click"/>
+	<property name="CraftCompleteSound" value="coffeemaker_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceScrapIron" value="40"/>
 		<property name="resourceGlue" value="4"/>
@@ -4534,98 +4547,49 @@
 	<drop event="Harvest" name="resourceWood" count="8" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Food/Cooking,Building" />
-	<property name="EconomicValue" value="1500" />
-	<property name="TraderStageTemplate" value="midTier1"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Food/Cooking,Building,TCScience,advBuilding" />
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="microwave">
 	<property name="CustomIcon" value="microwave" />
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Campfire" />
-	<property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800" />
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/Microwave.unity3d?MicrowavePrefab" />
-	<property name="Stacknumber" value="1"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.1"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
+	<property name="Class" value="Campfire"/>
 	<property class="Workstation">
 		<property name="CraftingAreaRecipes" value="microwave"/>
 		<property name="Modules" value="output,fuel,input"/>
-		<property name="Collide" value="melee,bullet,arrow,rocket" />
+		<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_microwave" />
-	<property name="CraftActionName" value="lblContextActionCook" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_microwave" />
-	<property name="OpenSound" value="microwave_open" />
-	<property name="CloseSound" value="microwave_close" />
-	<property name="CraftSound" value="microwave_craft_click" />
-	<property name="CraftCompleteSound" value="microwave_complete" />
-	<property name="WorkstationJournalTip" value="microwaveTip" />
-	
-	<property class="RepairItems">
-		<property name="resourceScrapIron" value="40"/>
-		<property name="resourceGlue" value="4"/>
-		<property name="resourceScrapPolymers" value="6"/>
-		<property name="resourceWood" value="20"/>
-	</property>
-	<drop event="Harvest" name="resourceScrapIron" count="10" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="10" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceGlue" count="1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="8" tag="salvageHarvest"/>
-	<drop event="Destroy" count="0"/>
-	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Food/Cooking,Building" />
-	<property name="EconomicValue" value="1500" />
-	<property name="TraderStageTemplate" value="midTier1"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-</block>
-
-<block name="playerOven">
-	<property name="CustomIcon" value="playerOven" />
 	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Campfire" />
-	<property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800" />
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/PlayerOven.unity3d?PlayerOvenPrefab" />
-	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="CreativeMode" value="Player"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_microwave"/>
+	<property name="CraftActionName" value="lblContextActionCook"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_microwave"/>
 	<property name="Stacknumber" value="1"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Microwave.unity3d?MicrowavePrefab"/>
 	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="midTier1"/>
+	<property name="MaxDamage" value="800"/>
 	<property name="HeatMapStrength" value="0.1"/>
 	<property name="HeatMapTime" value="1200"/>
 	<property name="HeatMapFrequency" value="25"/>
-	<property class="Workstation">
-		<property name="CraftingAreaRecipes" value="playerOven"/>
-		<property name="Modules" value="tools,output,input"/>
-		<property name="Collide" value="melee,bullet,arrow,rocket" />
-		<property name="ToolNames" value="1,2,3,4,5,6"/>
-	</property>
-	<property name="WorkstationIcon" value="ui_game_symbol_playerOven" />
-	<property name="CraftActionName" value="lblContextActionCook" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_playeroven" />
-	<property name="OpenSound" value="poven_open" />
-	<property name="CloseSound" value="poven_close" />
-	<property name="CraftSound" value="poven_craft_click" />
-	<property name="CraftCompleteSound" value="poven_complete" />
-	<property name="WorkstationJournalTip" value="playerOvenTip" />
-	
+	<property name="OpenSound" value="microwave_open"/>
+	<property name="CloseSound" value="microwave_close"/>
+	<property name="CraftSound" value="microwave_craft_click"/>
+	<property name="CraftCompleteSound" value="microwave_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceScrapIron" value="40"/>
 		<property name="resourceGlue" value="4"/>
@@ -4639,52 +4603,116 @@
 	<drop event="Harvest" name="resourceWood" count="8" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Food/Cooking,Building" />
-	<property name="EconomicValue" value="2000" />
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Food/Cooking,Building,TCScience,advBuilding" />
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
+</block>
+
+<block name="playerOven">
+	<property name="CustomIcon" value="playerOven"/>
+	<property name="Class" value="Campfire"/>
+	<property class="Workstation">
+		<property name="CraftingAreaRecipes" value="playerOven"/>
+		<property name="Modules" value="tools,output,input"/>
+		<property name="Collide" value="melee,bullet,arrow,rocket"/>
+		<property name="ToolNames" value="1,2,3,4,5,6"/>
+	</property>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_playerOven"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/PlayerOven.unity3d?PlayerOvenPrefab"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="5000"/>
 	<property name="TraderStageTemplate" value="midTier2"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="0.1"/>
+	<property name="HeatMapTime" value="1200"/>
+	<property name="HeatMapFrequency" value="25"/>
+	<property name="CraftActionName" value="lblContextActionCook"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_playeroven"/>
+	<property name="OpenSound" value="poven_open"/>
+	<property name="CloseSound" value="poven_close"/>
+	<property name="CraftSound" value="poven_craft_click"/>
+	<property name="CraftCompleteSound" value="poven_complete"/>
+	<property name="TakeDelay" value="5"/>
+	<property class="RepairItems">
+		<property name="resourceScrapIron" value="40"/>
+		<property name="resourceGlue" value="4"/>
+		<property name="resourceScrapPolymers" value="6"/>
+		<property name="resourceWood" value="20"/>
+	</property>
+	<drop event="Harvest" name="resourceScrapIron" count="10" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceGlue" count="1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="8" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Food/Cooking,Building,TCScience,advBuilding" />
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="foodProcessingTable">
-	<property name="CustomIcon" value="foodProcessingTable" />
+	<property name="CustomIcon" value="foodProcessingTable"/>
+	<property name="Class" value="Workstation"/>
+	<property class="Workstation">
+	<property name="Modules" value="output"/>
+	<property name="CraftingAreaRecipes" value="foodProcessingTable"/>
+	<property name="ToolNames" value="1,2"/>
+	</property>
 	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Workstation" />
-	<property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/FoodPrepTable.unity3d?FoodPrepTable2MasterPrefab" />
-	<property name="MultiBlockDim" value="1,2,1" />
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_foodProcessingTable"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/FoodPrepTable.unity3d?FoodPrepTable2MasterPrefab"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="ImposterDontBlock" value="true"/>
-	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="6500" />
+	<property name="TraderStageTemplate" value="midTier1"/>
+	<property name="MaxDamage" value="800"/>
 	<property name="HeatMapStrength" value="0.5"/>
 	<property name="HeatMapTime" value="1200"/>
 	<property name="HeatMapFrequency" value="25"/>
 	<property name="RecipeList" value="foodProcessingTable"/>
-	<property name="Stacknumber" value="1" />
-	<property class="Workstation">
-	<property name="Modules" value="output"/>
-	<property name="CraftingAreaRecipes" value="foodProcessingTable" />
-	<property name="ToolNames" value="1,2"/>
-	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_foodProcessingTable" />
-	<property name="CraftActionName" value="lblContextActionPrep" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_foodprep" />
-	<property name="OpenSound" value="foodprocessing_open" />
-	<property name="CloseSound" value="foodprocessing_close" />
-	<property name="CraftSound" value="foodprocessing_craft_click" />
-	<property name="CraftCompleteSound" value="foodprocessing_complete" />
-	<property name="WorkstationJournalTip" value="foodProcessingTableTip" />
-	
+	<property name="CraftActionName" value="lblContextActionPrep"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_foodprep"/>
+	<property name="OpenSound" value="foodprocessing_open"/>
+	<property name="CloseSound" value="foodprocessing_close"/>
+	<property name="CraftSound" value="foodprocessing_craft_click"/>
+	<property name="CraftCompleteSound" value="foodprocessing_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems"> 
 		<property name="resourceForgedIron" value="25"/>
 		<property name="resourceMechanicalParts" value="20"/>
-		<property name="resourceWood" value="50" /> 
+		<property name="resourceWood" value="50"/> 
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
@@ -4693,43 +4721,52 @@
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="EconomicValue" value="1500" />
-	<property name="TraderStageTemplate" value="midTier1"/>
-	<property name="Group" value="Building,Science" />
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="breweryStation">
 	<property name="CustomIcon" value="breweryStation"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
 	<property name="Class" value="Campfire"/>
-	<property name="Material" value="Mwood"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/BreweryStation.unity3d?BreweryStationPrefab"/>
-	<property name="ModelOffset" value="0.5,0.5,0.0"/>
-	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-	<property name="MultiBlockDim" value="2,2,1" />
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Stacknumber" value="1"/>
 	<property class="Workstation">
 		<property name="Modules" value="output,fuel,input"/>
 		<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_breweryStation" />
-	<property name="CraftActionName" value="lblContextActionBrew" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_brewery" />
-	<property name="OpenSound" value="brewery_open" />
-	<property name="CloseSound" value="brewery_close" />
-	<property name="CraftSound" value="brewery_smelt_click" />
-	<property name="CraftCompleteSound" value="brewery_item_complete" />
-	<property name="WorkstationJournalTip" value="breweryStationTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_breweryStation"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mwood"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/BreweryStation.unity3d?BreweryStationPrefab"/>
+	<property name="ModelOffset" value="0.5,0.5,0.0"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="5000"/>
+	<property name="TraderStageTemplate" value="midTier2"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionBrew"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_brewery"/>
+	<property name="OpenSound" value="brewery_open"/>
+	<property name="CloseSound" value="brewery_close"/>
+	<property name="CraftSound" value="brewery_smelt_click"/>
+	<property name="CraftCompleteSound" value="brewery_item_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="10"/>
 		<property name="resourceMetalPipe" value="10"/>
@@ -4743,55 +4780,59 @@
 	<drop event="Harvest" name="resourceWood" count="15" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Food/Cooking,Building,Science"/>
-	<property name="EconomicValue" value="2000" />
-	<property name="TraderStageTemplate" value="midTier2"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Food/Cooking,Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="gunSmithingWorkstation">
 	<property name="CustomIcon" value="gunSmithingWorkstation"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-    <property name="Class" value="Workstation" />
-    <property name="Material" value="Mstone_scrap" />
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="true"/>
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/GunSmithingWorkstation.unity3d?GunSmithingWorkstation" />
-    <property name="Place" value="TowardsPlacerInverted" />
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="MultiBlockDim" value="2,2,1"/>
-	<property name="ModelOffset" value="0.5,0.5,0"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Stacknumber" value="1" />
-	<property name="HeatMapStrength" value="1.5"/>
-	<property name="HeatMapTime" value="1500"/>
-	<property name="HeatMapFrequency" value="20"/>
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
+    <property name="Class" value="Workstation"/>
 	<property class="Workstation">
 		<property name="CraftingAreaRecipes" value="gunSmithingWorkstation"/>
 		<property name="Modules" value="tools,output"/>
 		<property name="Collide" value="melee,bullet,arrow,rocket"/>
 		<property name="ToolNames" value="1,2,3"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_gunSmithingWorkstation" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_gunsmithing" />
-	<property name="OpenSound" value="gsmithing_open" />
-	<property name="CloseSound" value="gsmithing_close" />
-	<property name="CraftSound" value="gsmithing_smelt_click" />
-	<property name="CraftCompleteSound" value="gsmithing_item_complete" />
-	<property name="WorkstationJournalTip" value="gunSmithingWorkstationTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_gunSmithingWorkstation"/>
+	<property name="Stacknumber" value="1"/>
+    <property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/GunSmithingWorkstation.unity3d?GunSmithingWorkstation"/>
+	<property name="ModelOffset" value="0.5,0.5,0"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="8000" />
+	<property name="TraderStageTemplate" value="midTier3"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="1.5"/>
+	<property name="HeatMapTime" value="1500"/>
+	<property name="HeatMapFrequency" value="20"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_gunsmithing"/>
+	<property name="OpenSound" value="gsmithing_open"/>
+	<property name="CloseSound" value="gsmithing_close"/>
+	<property name="CraftSound" value="gsmithing_smelt_click"/>
+	<property name="CraftCompleteSound" value="gsmithing_item_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
-		<property name="resourceForgedIron" value="40" />
-		<property name="resourceForgedSteel" value="10" />
-		<property name="resourceElectricParts" value="10" />
-		<property name="resourceMetalPipe" value="5" />
+		<property name="resourceForgedIron" value="40"/>
+		<property name="resourceForgedSteel" value="10"/>
+		<property name="resourceElectricParts" value="10"/>
+		<property name="resourceMetalPipe" value="5"/>
 	</property>
     <drop event="Harvest" name="resourceScrapIron" count="40" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
@@ -4800,48 +4841,58 @@
 	<drop event="Harvest" name="resourceMetalPipe" count="2" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-    <property name="Group" value="Building" />
-	<property name="EconomicValue" value="5000" />
-	<property name="TraderStageTemplate" value="midTier3"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+    <property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="blueprintWorkStation">
 	<property name="CustomIcon" value="blueprintWorkStation"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-    <property name="Class" value="Workstation" />
-    <property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800"/>
-    <property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/BlueprintWorkstation.unity3d?BlueprintWorkstationPrefab" />
-	<property name="MultiBlockDim" value="2,1,1" />
-	<property name="ModelOffset" value="0.5,0.5,0.0"/>
-	<property name="Place" value="TowardsPlacerInverted" />
-	<property name="OnlySimpleRotations" value="true"/>
-    <property name="IsTerrainDecoration" value="true" />
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Stacknumber" value="1" />
+    <property name="Class" value="Workstation"/>
 	<property class="Workstation">
 		<property name="Modules" value="tools,output"/>
 		<property name="CraftingAreaRecipes" value="blueprintWorkStation"/>
 		<property name="ToolNames" value="1,2"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_blueprintWorkStation" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_blueprint" />
-	<property name="OpenSound" value="blueprintstation_open" />
-	<property name="CloseSound" value="blueprintstation_close" />
-	<property name="CraftSound" value="blueprintstation_craft_click" />
-	<property name="CraftCompleteSound" value="blueprintstation_complete" />
-	<property name="WorkstationJournalTip" value="blueprintWorkStationTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_blueprintWorkStation"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/BlueprintWorkstation.unity3d?BlueprintWorkstationPrefab"/>
+	<property name="ModelOffset" value="0.5,0.5,0.0"/>
+	<property name="MultiBlockDim" value="2,1,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+    <property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="7500"/>
+	<property name="TraderStageTemplate" value="midTier2"/>
+	<property name="MaxDamage" value="800"/>
+    <property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_blueprint"/>
+	<property name="OpenSound" value="blueprintstation_open"/>
+	<property name="CloseSound" value="blueprintstation_close"/>
+	<property name="CraftSound" value="blueprintstation_craft_click"/>
+	<property name="CraftCompleteSound" value="blueprintstation_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
-		<property name="resourceForgedSteel" value="15" />
-		<property name="resourceElectricParts" value="10" />
-		<property name="resourceMetalPipe" value="5" />
-		<property name="resourceMechanicalParts" value="10" />
+		<property name="resourceForgedSteel" value="15"/>
+		<property name="resourceElectricParts" value="10"/>
+		<property name="resourceMetalPipe" value="5"/>
+		<property name="resourceMechanicalParts" value="10"/>
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="60" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceForgedSteel" count="8" tag="salvageHarvest"/>
@@ -4850,54 +4901,57 @@
 	<drop event="Harvest" name="resourceMechanicalParts" count="4" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-    <property name="Group" value="Building,advBuilding" />
-	<property name="EconomicValue" value="2000" />
-	<property name="TraderStageTemplate" value="midTier2"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+    <property name="Group" value="Building,TCScience,advBuilding" />
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="tungstenForge">
 	<property name="CustomIcon" value="tungstenForge"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
 	<property name="Class" value="Campfire"/>
-	<property name="Material" value="Mstone_scrap"/>
-	<property name="MaxDamage" value="1600"/>
-	<property name="StabilitySupport" value="true"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/AdvancedForge.unity3d?AdvancedForge2Prefab.prefab"/>
-	<property name="MultiBlockDim" value="2,2,1" />
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="WaterFlow" value="permitted"/>
-	<property name="ModelOffset" value="-0.5,0.5,0.0"/>
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<!-- <property name="ParticleName" value="#@modfolder:Resources/advancedForgeParticles.unity3d?p_advancedForge"/>
-    <property name="ParticleOffset" value="0.5,0.5,0.5"/> -->
-	<property name="ParticleName" value="campfire"/>
-	<property name="ParticleOffset" value="-0.5,0.5,0.5"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="HeatMapStrength" value="1.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
 	<property class="Workstation">
 		<property name="CraftingAreaRecipes" value="tungstenForge,forge"/>
 		<property name="Modules" value="tools,output,fuel"/>
 		<property name="ToolNames" value="1,2,3"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_tungstenForge" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_tungstenforge" />
-	<property name="OpenSound" value="tforge_open" />
-	<property name="CloseSound" value="tforge_close" />
-	<property name="CraftSound" value="tforge_smelt_click" />
-	<property name="CraftCompleteSound" value="tforge_item_complete" />
-	<property name="WorkstationJournalTip" value="tungstenForgeTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="tungstenForgeDesc"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_tungstenForge"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mstone_scrap"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/AdvancedForge.unity3d?AdvancedForge2Prefab.prefab"/>
+	<property name="ModelOffset" value="-0.5,0.5,0.0"/>
+	<property name="MultiBlockDim" value="2,2,1" />
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="ParticleName" value="campfire"/>
+	<property name="ParticleOffset" value="-0.5,0.5,0.5"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="5000"/>
+	<property name="TraderStageTemplate" value="midTier3"/>
+	<property name="MaxDamage" value="1600"/>
+	<property name="HeatMapStrength" value="6"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_tungstenforge"/>
+	<property name="OpenSound" value="tforge_open"/>
+	<property name="CloseSound" value="tforge_close"/>
+	<property name="CraftSound" value="tforge_smelt_click"/>
+	<property name="CraftCompleteSound" value="tforge_item_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceRockSmall" value="50"/>
 		<property name="resourceClayLump" value="60"/>
@@ -4909,23 +4963,28 @@
 	<drop event="Harvest" name="wotwResourceLeather" count="5" tool_category="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Building"/>
-	<property name="DescriptionKey" value="tungstenForgeDesc"/>
-	<property name="EconomicValue" value="5000"/>
-	<property name="TraderStageTemplate" value="midTier3"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0200"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
 	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="forge_grab"/>
+	<property name="SoundPlace" value="forge_place"/>
 </block>
 
 <block name="forge">
 	<property name="Class" value="Campfire"/>
+	<property class="Workstation">
+		<property name="CraftingAreaRecipes" value="forge"/>
+		<property name="Modules" value="tools,output,fuel"/>
+		<property name="ToolNames" value="1,2,3"/>
+	</property>
 	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="forgeDesc"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_forge"/>
+	<property name="Stacknumber" value="1"/>
 	<property name="Material" value="Mstone_scrap"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="true"/>
-	<property name="Path" value="solid"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Crafting/forgeWorkstationPrefab"/>
 	<property name="MultiBlockDim" value="2,2,1"/>
@@ -4935,52 +4994,54 @@
 	<property name="ParticleOffset" value="0,0.4,0.5"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Path" value="solid"/>
 	<property name="IsTerrainDecoration" value="true"/>
-	<property name="Stacknumber" value="1"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="MaxDamage" value="800"/>
 	<property name="HeatMapStrength" value="6"/>
 	<property name="HeatMapTime" value="5000"/>
 	<property name="HeatMapFrequency" value="1000"/>
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
 	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
-
-	<property class="Workstation">
-		<property name="CraftingAreaRecipes" value="forge"/>
-		<property name="Modules" value="tools,output,fuel,input"/>
-		<property name="ToolNames" value="1,2,3"/>
-	</property>
-	<property name="WorkstationIcon" value="ui_game_symbol_forge"/>
 	<property name="OpenSound" value="forge_open"/>
 	<property name="CloseSound" value="forge_close"/>
 	<property name="CraftSound" value="forge_smelt_click"/>
 	<property name="CraftCompleteSound" value="forge_item_complete"/>
-	<property name="WorkstationJournalTip" value="forgeTip"/>
-
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
-		<property name="resourceRockSmall" value="50"/>
-		<property name="resourceClayLump" value="60"/>
-		<property name="wotwResourceLeather" value="20"/>
+		<property name="resourceCobblestones" value="50"/>
 	</property>
 	<drop event="Harvest" name="resourceRockSmall" count="40" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceClayLump" count="20" tag="allHarvest"/>
 	<drop event="Harvest" name="wotwResourceLeather" count="5" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Building,advBuilding"/>
-	<property name="DescriptionKey" value="forgeDesc"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0200"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
 	<property name="Tags" value="workstationSkill,twitch_workstation"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="forge_grab"/>
+	<property name="SoundPlace" value="forge_place"/>
 </block>
 
 <block name="forgeStone">
 	<property name="CustomIcon" value="forgeStone"/>
 	<property name="Class" value="Campfire"/>
+	<property class="Workstation">
+		<property name="CraftingAreaRecipes" value="forgeStone"/>
+		<property name="Modules" value="tools,output,fuel"/>
+		<property name="ToolNames" value="1,2"/>
+	</property>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="forgeStoneDesc"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_forgeStone"/>
+	<property name="Stacknumber" value="1"/>
 	<property name="Material" value="Mstone_scrap"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="true"/>
-	<property name="Path" value="solid"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/StoneForge.unity3d?StoneForgePrefab.prefab"/>
 	<property name="ModelOffset" value="-0.5,0.5,0.0"/>
@@ -4988,61 +5049,57 @@
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="WaterFlow" value="permitted"/>
 	<property name="ParticleName" value="forgeWorkstation"/>
-	<!-- <property name="ParticleOffset" value="0,0.4,0.5"/> -->
 	<property name="ParticleOffset" value="0,-0.3,0.25"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
 	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Path" value="solid"/>
 	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="MaxDamage" value="800"/>
 	<property name="HeatMapStrength" value="6"/>
 	<property name="HeatMapTime" value="5000"/>
 	<property name="HeatMapFrequency" value="1000"/>
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
 	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
-	<!--<property name="RecipeList" value="forgeStone"/>-->
-	<!--<property name="CraftTimeMultiplier" value="0.5,1"/>-->
-	<property name="Stacknumber" value="1"/>
-	
-	<property class="Workstation">
-		<property name="CraftingAreaRecipes" value="forgeStone"/>
-		<property name="Modules" value="tools,output,fuel,input"/>
-		<property name="ToolNames" value="1,2"/>
-	</property>
-	<property name="WorkstationIcon" value="ui_game_symbol_forgeStone"/>
 	<property name="OpenSound" value="forge_open"/>
 	<property name="CloseSound" value="forge_close"/>
 	<property name="CraftSound" value="forge_smelt_click"/>
 	<property name="CraftCompleteSound" value="forge_item_complete"/>
-	<property name="WorkstationJournalTip" value="forgeStoneTip"/>
-	
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
-		<property name="resourceRockSmall" value="50"/>
-		<property name="resourceClayLump" value="60"/>
-		<property name="wotwResourceLeather" value="20"/>
+		<property name="resourceCobblestones" value="50"/>
 	</property>
 	<drop event="Harvest" name="resourceRockSmall" count="40" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceClayLump" count="20" tag="allHarvest"/>
 	<drop event="Harvest" name="wotwResourceLeather" count="5" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="DescriptionKey" value="forgeStoneDesc"/>
-	<property name="EconomicValue" value="1000"/>
-	<property name="TraderStageTemplate" value="midTier0"/>
-	<property name="Group" value="Building,advBuilding"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0200"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
 	<property name="Tags" value="workstationSkill,twitch_workstation"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="forge_grab"/>
+	<property name="SoundPlace" value="forge_place"/>
 </block>
 
 <block name="forgeAmmo">
 	<property name="CustomIcon" value="forgeAmmo"/>
-	<!-- <property name="TintColor" value="717A62"/> -->
 	<property name="Class" value="Campfire"/>
+	<property class="Workstation">
+		<property name="CraftingAreaRecipes" value="forgeAmmo"/>
+		<property name="Modules" value="tools,output,fuel"/>
+		<property name="ToolNames" value="1,2,3"/>
+	</property>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="forgeAmmoDesc"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_forgeAmmo"/>
+	<property name="Stacknumber" value="1"/>
 	<property name="Material" value="Mstone_scrap"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="true"/>
-	<property name="Path" value="solid"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/AmmoForge.unity3d?AmmoForgePrefab.prefab"/>
 	<property name="ModelOffset" value="-0.5,0.5,0.0"/>
@@ -5050,250 +5107,260 @@
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="WaterFlow" value="permitted"/>
 	<property name="ParticleName" value="forgeWorkstation"/>
-	<!-- <property name="ParticleOffset" value="0,0.4,0.5"/> -->
 	<property name="ParticleOffset" value="0,-0.4,0.3"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
 	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Path" value="solid"/>
 	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="MaxDamage" value="800"/>
 	<property name="HeatMapStrength" value="6"/>
 	<property name="HeatMapTime" value="5000"/>
 	<property name="HeatMapFrequency" value="1000"/>
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
 	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
-	<!--<property name="RecipeList" value="forgeAmmo"/>-->
-	<!--<property name="CraftTimeMultiplier" value="0.5,1"/>-->
-	<property name="Stacknumber" value="1"/>
-
-	<property class="Workstation">
-		<property name="CraftingAreaRecipes" value="forgeAmmo"/>
-		<property name="Modules" value="tools,output,fuel,input"/>
-		<property name="ToolNames" value="1,2,3"/>
-	</property>
-	<property name="WorkstationIcon" value="ui_game_symbol_forgeAmmo"/>
 	<property name="OpenSound" value="forge_open"/>
 	<property name="CloseSound" value="forge_close"/>
 	<property name="CraftSound" value="forge_smelt_click"/>
 	<property name="CraftCompleteSound" value="forge_item_complete"/>
-	<property name="WorkstationJournalTip" value="forgeAmmoTip"/>
-
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
-		<property name="resourceRockSmall" value="50"/>
-		<property name="resourceClayLump" value="60"/>
-		<property name="wotwResourceLeather" value="20"/>
+		<property name="resourceCobblestones" value="50"/>
 	</property>
 	<drop event="Harvest" name="resourceRockSmall" count="40" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceClayLump" count="20" tag="allHarvest"/>
 	<drop event="Harvest" name="wotwResourceLeather" count="5" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="DescriptionKey" value="forgeAmmoDesc"/>
-	<property name="EconomicValue" value="1000"/>
-	<property name="TraderStageTemplate" value="midTier0"/>
-	<property name="Group" value="Building,advBuilding"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0200"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="forge_grab"/>
+	<property name="SoundPlace" value="forge_place"/>
 </block>
 
 <block name="fabricationStation">
 	<property name="CustomIcon" value="fabricationStation"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
 	<property name="Class" value="Workstation"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/Fabricator.unity3d?FabricatorPrefab"/>
-	<property name="MultiBlockDim" value="2,2,1"/>
-	<property name="ModelOffset" value="0.5,0.5,0"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="Stacknumber" value="1"/>
 	<property class="Workstation">
 		<property name="Modules" value="output"/>
 		<property name="CraftingAreaRecipes" value="fabricationStation"/>
 		<property name="ToolNames" value="1"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_fabricationStation" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_fabricator" />
-	<property name="OpenSound" value="fabricationstation_open" />
-	<property name="CloseSound" value="fabricationstation_close" />
-	<property name="CraftSound" value="fabricationstation_craft_click" />
-	<property name="CraftCompleteSound" value="fabricationstation_complete" />
-	<property name="WorkstationJournalTip" value="fabricationStationTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="fabricationStationDesc"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_fabricationStation"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Fabricator.unity3d?FabricatorPrefab"/>
+	<property name="ModelOffset" value="0.5,0.5,0"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="4000"/>
+	<property name="TraderStageTemplate" value="midTier2"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_fabricator"/>
+	<property name="OpenSound" value="fabricationstation_open"/>
+	<property name="CloseSound" value="fabricationstation_close"/>
+	<property name="CraftSound" value="fabricationstation_craft_click"/>
+	<property name="CraftCompleteSound" value="fabricationstation_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="25"/>
 		<property name="resourceMechanicalParts" value="20"/>
 		<property name="resourceWood" value="50"/>
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest,lumberjackHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="DescriptionKey" value="fabricationStationDesc"/>
-	<property name="EconomicValue" value="2000"/>
-	<property name="TraderStageTemplate" value="midTier2"/>
-	<property name="Group" value="Building,Science"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="ammoWorkstation">
 	<property name="CustomIcon" value="ammoWorkstation"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
 	<property name="Class" value="Workstation"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/AmmoBench.unity3d?AmmoBench2Prefab"/>
-	<property name="DisplayType" value="blockMulti"/>
-	<property name="MultiBlockDim" value="2,2,1"/>
-	<property name="ModelOffset" value="-0.5,0.5,0.0"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="2"/>
-	<property name="HeatMapTime" value="5000"/>
-	<property name="HeatMapFrequency" value="1000"/>
-	<property name="Stacknumber" value="1"/>
 	<property class="Workstation">
 		<property name="Modules" value="output"/>
 		<property name="CraftingAreaRecipes" value="ammoWorkstation"/>
 		<property name="ToolNames" value="1,2,3"/>
 	</property>
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="ammoWorkstationDesc"/>
+	<property name="DisplayType" value="blockMulti"/>
 	<property name="WorkstationIcon" value="ui_game_symbol_ammoWorkstation"/>
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_ammo" />
-	<property name="OpenSound" value="ammoworkstation_open" />
-	<property name="CloseSound" value="ammoworkstation_close" />
-	<property name="CraftSound" value="ammoworkstation_smelt_click" />
-	<property name="CraftCompleteSound" value="ammoworkstation_complete" />
-	<property name="WorkstationJournalTip" value="ammoWorkstationTip" />
-	
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/AmmoBench.unity3d?AmmoBench2Prefab"/>
+	<property name="ModelOffset" value="-0.5,0.5,0.0"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="5000"/>
+	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_ammo"/>
+	<property name="OpenSound" value="ammoworkstation_open"/>
+	<property name="CloseSound" value="ammoworkstation_close"/>
+	<property name="CraftSound" value="ammoworkstation_smelt_click"/>
+	<property name="CraftCompleteSound" value="ammoworkstation_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="25"/>
 		<property name="resourceMechanicalParts" value="20"/>
 		<property name="resourceWood" value="50"/>
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest,lumberjackHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="DescriptionKey" value="ammoWorkstationDesc"/>
-	<property name="EconomicValue" value="2000"/>
-	<property name="TraderStageTemplate" value="midTier0"/>
-	<property name="Group" value="Building,Science"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="mechanicBench">
 	<property name="CustomIcon" value="mechanicBench"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
 	<property name="Class" value="Workstation"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/MechanicBench.unity3d?MechanicBenchPrefab"/>
-	<property name="MultiBlockDim" value="2,2,1"/>
-	<property name="ModelOffset" value="0.5,0.5,0"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="Stacknumber" value="1"/>
 	<property class="Workstation">
 		<property name="Modules" value="output"/>
 		<property name="CraftingAreaRecipes" value="mechanicBench"/>
 		<property name="ToolNames" value="1,2,3"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_mechanicBench" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_mechanic" />
-	<property name="OpenSound" value="mechanicbench_open" />
-	<property name="CloseSound" value="mechanicbench_close" />
-	<property name="CraftSound" value="mechanicbench_smelt_click" />
-	<property name="CraftCompleteSound" value="mechanicbench_complete" />
-	<property name="WorkstationJournalTip" value="mechanicBenchTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="mechanicBenchDesc"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_mechanicBench"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/MechanicBench.unity3d?MechanicBenchPrefab"/>
+	<property name="ModelOffset" value="0.5,0.5,0"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="8500"/>
+	<property name="TraderStageTemplate" value="midTier3"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_mechanic"/>
+	<property name="OpenSound" value="mechanicbench_open"/>
+	<property name="CloseSound" value="mechanicbench_close"/>
+	<property name="CraftSound" value="mechanicbench_smelt_click"/>
+	<property name="CraftCompleteSound" value="mechanicbench_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="25"/>
 		<property name="resourceMechanicalParts" value="20"/>
 		<property name="resourceWood" value="50"/>
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest,lumberjackHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="DescriptionKey" value="mechanicBenchDesc"/>
-	<property name="EconomicValue" value="5000"/>
-	<property name="TraderStageTemplate" value="midTier3"/>
-	<property name="Group" value="Building,Science"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="mortarandPestle">
-	<property name="CustomIcon" value="mortarandPestle" />
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Campfire" />
-	<property name="Material" value="MstoneNoGlue" />
-	<property name="MaxDamage" value="800" />
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/MortarandPestle.unity3d?MortarandPestle2Prefab" />
-	<property name="StabilitySupport" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.1"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="Stacknumber" value="1"/>
+	<property name="CustomIcon" value="mortarandPestle"/>
+	<property name="Class" value="Campfire"/>
 	<property class="Workstation">
 		<property name="CraftingAreaRecipes" value="mortarandPestle"/>
-		<property name="Modules" value="output,input"/>
-		<property name="Collide" value="melee,bullet,arrow,rocket" />
+		<property name="Modules" value="output"/>
 		<property name="ToolNames" value="1,2"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_mortarandPestle" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_mortarandpestle" />
-	<property name="OpenSound" value="mortar_open" />
-	<property name="CloseSound" value="mortar_close" />
-	<property name="CraftSound" value="mortar_craft_click" />
-	<property name="CraftCompleteSound" value="mortar_complete" />
-	<property name="WorkstationJournalTip" value="mortarandPestleTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_mortarandPestle"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="MstoneNoGlue"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/MortarandPestle.unity3d?MortarandPestle2Prefab"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="1500" />
+	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="3"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_mortarandpestle"/>
+	<property name="OpenSound" value="mortar_open"/>
+	<property name="CloseSound" value="mortar_close"/>
+	<property name="CraftSound" value="mortar_craft_click"/>
+	<property name="CraftCompleteSound" value="mortar_complete"/>
+	<property name="TakeDelay" value="1"/>
 	<property class="RepairItems">
 		<property name="resourceScrapIron" value="40"/>
 		<property name="resourceGlue" value="4"/>
@@ -5307,53 +5374,59 @@
 	<drop event="Harvest" name="resourceWood" count="8" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Food/Cooking,Building" />
-	<property name="EconomicValue" value="500" />
-	<property name="TraderStageTemplate" value="midTier0"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Food/Cooking,Building,TCScience,advBuilding" />
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="armourSmithingWorkstation">
-	<property name="CustomIcon" value="armourSmithingWorkstation" />
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Workstation" />
-	<property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/ArmorSmithingStation.unity3d?ArmorSmithingStationPrefab" />
-	<property name="MultiBlockDim" value="2,2,1" />
-	<property name="ModelOffset" value="0.5,0.5,0.0"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Place" value="TowardsPlacerInverted" />
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.25"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="armourSmithingWorkstation"/>
+	<property name="Class" value="Workstation"/>
 	<property class="Workstation">
 		<property name="Modules" value="output"/>
-		<property name="CraftingAreaRecipes" value="armourSmithingWorkstation" />
+		<property name="CraftingAreaRecipes" value="armourSmithingWorkstation"/>
 		<property name="ToolNames" value="1"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_armourSmithingWorkstation" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_armor" />
-	<property name="OpenSound" value="armoursmithingstation_open" />
-	<property name="CloseSound" value="armoursmithingstation_close" />
-	<property name="CraftSound" value="armoursmithingstation_craft_click" />
-	<property name="CraftCompleteSound" value="armoursmithingstation_complete" />
-	<property name="WorkstationJournalTip" value="armourSmithingWorkstationTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_armourSmithingWorkstation"/>
+	<property name="Stacknumber" value="1" />
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/ArmorSmithingStation.unity3d?ArmorSmithingStationPrefab"/>
+	<property name="ModelOffset" value="0.5,0.5,0.0"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="6500" />
+	<property name="TraderStageTemplate" value="midTier2"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_armor"/>
+	<property name="OpenSound" value="armoursmithingstation_open"/>
+	<property name="CloseSound" value="armoursmithingstation_close"/>
+	<property name="CraftSound" value="armoursmithingstation_craft_click"/>
+	<property name="CraftCompleteSound" value="armoursmithingstation_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
-		<property name="resourceForgedIron" value="35" />
-		<property name="resourceScrapIron" value="200" />
-		<property name="resourceElectricParts" value="10" />
-		<property name="resourceMetalPipe" value="6" />
-		<property name="resourceWood" value="100" />
+		<property name="resourceForgedIron" value="35"/>
+		<property name="resourceScrapIron" value="200"/>
+		<property name="resourceElectricParts" value="10"/>
+		<property name="resourceMetalPipe" value="6"/>
+		<property name="resourceWood" value="100"/>
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceForgedIron" count="20" tag="allHarvest"/>
@@ -5363,43 +5436,53 @@
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Building" />
-	<property name="EconomicValue" value="2000" />
-	<property name="TraderStageTemplate" value="midTier2"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="toolWorkstation">
-	<property name="CustomIcon" value="toolWorkstation" />
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Workstation" />
-	<property name="Material" value="Mmetal" />
-	<property name="StabilitySupport" value="false"/>
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/AdvancedToolWorkbench.unity3d?AdvancedToolWorkbenchPrefab" />
-	<property name="MultiBlockDim" value="2,2,1" />
-	<property name="ModelOffset" value="0.5,0.5,0"/>
-	<property name="Place" value="TowardsPlacerInverted" />
-	<property name="Stacknumber" value="1" />
-	<property name="HeatMapStrength" value="0.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
+	<property name="CustomIcon" value="toolWorkstation"/>
+	<property name="Class" value="Workstation"/>
 	<property class="Workstation">
 		<property name="Modules" value="output"/>
-		<property name="CraftingAreaRecipes" value="toolWorkstation" />
+		<property name="CraftingAreaRecipes" value="toolWorkstation"/>
 		<property name="ToolNames" value="1,2"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_toolWorkstation" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_tool" />
-	<property name="OpenSound" value="toolworkbench_open" />
-	<property name="CloseSound" value="toolworkbench_close" />
-	<property name="CraftSound" value="toolworkbench_craft_click" />
-	<property name="CraftCompleteSound" value="toolworkbench_complete" />
-	<property name="WorkstationJournalTip" value="toolWorkstationTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_toolWorkstation"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/AdvancedToolWorkbench.unity3d?AdvancedToolWorkbenchPrefab"/>
+	<property name="ModelOffset" value="0.5,0.5,0"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="7000" />
+	<property name="TraderStageTemplate" value="midTier1"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_tool"/>
+	<property name="OpenSound" value="toolworkbench_open"/>
+	<property name="CloseSound" value="toolworkbench_close"/>
+	<property name="CraftSound" value="toolworkbench_craft_click"/>
+	<property name="CraftCompleteSound" value="toolworkbench_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="35" />
 		<property name="resourceWood" value="50" />
@@ -5411,51 +5494,57 @@
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="Group" value="Building" />
-	<property name="EconomicValue" value="1500" />
-	<property name="TraderStageTemplate" value="midTier1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="buildersWorkstation">
-	<property name="CustomIcon" value="buildersWorkstation" />
+	<property name="CustomIcon" value="buildersWorkstation"/>
+	<property name="Class" value="Workstation"/>
+	<property class="Workstation">
+		<property name="Modules" value="output"/>
+		<property name="CraftingAreaRecipes" value="buildersWorkstation" />
+		<property name="ToolNames" value="1,2,3"/>
+	</property>
 	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Workstation" />
-	<property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/BuildersWorkbench.unity3d?BuildersWorkbenchPrefab" />
-	<property name="MultiBlockDim" value="2,2,1" />
+	<property name="CreativeMode" value="Player"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_buildersWorkstation"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/BuildersWorkbench.unity3d?BuildersWorkbenchPrefab"/>
 	<property name="ModelOffset" value="-0.5,0.5,0.0"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
 	<property name="ImposterDontBlock" value="true"/>
-	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="Stacknumber" value="1" />
-	<property class="Workstation">
-	<property name="Modules" value="output"/>
-	<property name="CraftingAreaRecipes" value="buildersWorkstation" />
-	<property name="ToolNames" value="1,2,3"/>
-	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_buildersWorkstation" />
-	<property name="CraftActionName" value="lblContextActionBuild" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_builder" />
-	<property name="OpenSound" value="buildersworkbench_open" />
-	<property name="CloseSound" value="buildersworkbench_close" />
-	<property name="CraftSound" value="buildersworkbench_craft_click" />
-	<property name="CraftCompleteSound" value="buildersworkbench_complete" />
-	<property name="WorkstationJournalTip" value="buildersWorkstationTip" />
-	
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="5500"/>
+	<property name="TraderStageTemplate" value="midTier1"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionBuild"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_builder"/>
+	<property name="OpenSound" value="buildersworkbench_open"/>
+	<property name="CloseSound" value="buildersworkbench_close"/>
+	<property name="CraftSound" value="buildersworkbench_craft_click"/>
+	<property name="CraftCompleteSound" value="buildersworkbench_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems"> 
 		<property name="resourceForgedIron" value="25"/>
 		<property name="resourceMechanicalParts" value="20"/>
-		<property name="resourceWood" value="50" /> 
+		<property name="resourceWood" value="50"/> 
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
@@ -5464,175 +5553,126 @@
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="EconomicValue" value="1500" />
-	<property name="TraderStageTemplate" value="midTier1"/>
-	<property name="Group" value="Building" />
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="wotwTablesawWorkstation">
-	<property name="CustomIcon" value="tableSaw" />
+	<property name="CustomIcon" value="tableSaw"/>
+	<property name="Class" value="Campfire"/>
+	<property class="Workstation">
+		<property name="Modules" value="output"/>
+		<property name="CraftingAreaRecipes" value="wotwTablesawWorkstation"/>
+	</property>
 	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Campfire" />
-	<property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_table_saw"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="Entities/Crafting/table_sawPrefab"/>
-	<!-- <property name="MultiBlockDim" value="2,2,1" /> -->
-	<!-- <property name="ModelOffset" value="-0.5,0.5,0.0"/> -->
 	<property name="ImposterDontBlock" value="true"/>
-	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="Stacknumber" value="1" />
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="TraderStageTemplate" value="midTier1"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
 	<property name="Fuels" value="ammoGasCan,5"/>
-	<property class="Workstation">
-	<property name="Modules" value="output"/>
-	<property name="CraftingAreaRecipes" value="wotwTablesawWorkstation" />
-	<!-- <property name="ToolNames" value="1,2,3"/> -->
-	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_table_saw" />
-	<property name="CraftActionName" value="lblContextActionBuild" />
-	<property name="CraftIcon" value="ui_game_symbol_table_saw" />
-	<property name="OpenSound" value="buildersworkbench_open" />
-	<property name="CloseSound" value="buildersworkbench_close" />
-	<property name="CraftSound" value="buildersworkbench_craft_click" />
-	<property name="CraftCompleteSound" value="buildersworkbench_complete" />
-	<property name="WorkstationJournalTip" value="buildersWorkstationTip" />
-	
+	<property name="CraftActionName" value="lblContextActionProcess"/>
+	<property name="CraftIcon" value="ui_game_symbol_table_saw"/>
+	<property name="OpenSound" value="buildersworkbench_open"/>
+	<property name="CloseSound" value="buildersworkbench_close"/>
+	<property name="CraftSound" value="buildersworkbench_craft_click"/>
+	<property name="CraftCompleteSound" value="buildersworkbench_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems"> 
 		<property name="resourceForgedIron" value="25"/>
 		<property name="resourceMechanicalParts" value="20"/>
-		<property name="resourceWood" value="50" /> 
+		<property name="resourceWood" value="50"/> 
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest,lumberjackHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="EconomicValue" value="1000" />
-	<property name="TraderStageTemplate" value="midTier1"/>
-	<property name="Group" value="Building,TCScience,advBuilding" />
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="wotwTanningWorkstation">
-	<property name="CustomIcon" value="wotwTanningWorkstation" />
+	<property name="CustomIcon" value="wotwTanningWorkstation"/>
+	<property name="Class" value="Workstation"/>
+	<property class="Workstation">
+		<property name="Modules" value="output"/>
+		<property name="CraftingAreaRecipes" value="wotwTanningWorkstation"/>
+	</property>
 	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Class" value="Workstation" />
-	<property name="Material" value="Mmetal" />
-	<property name="MaxDamage" value="800"/>
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/TanningBench.unity3d?TanningRackPrefab" />
-	<!-- <property name="MultiBlockDim" value="1,1,1" /> -->
-	<!-- <property name="ModelOffset" value="0,-0.5,0"/> -->
+	<property name="CreativeMode" value="Player"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_table_saw"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/TanningBench.unity3d?TanningRackPrefab"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="WaterFlow" value="permitted"/>
-	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="OnlySimpleRotations" value="true"/>
-	<property name="Path" value="solid"/>
 	<property name="IsTerrainDecoration" value="true"/>
-	<property name="StabilitySupport" value="true"/>
-	<property name="HeatMapStrength" value="0.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="Stacknumber" value="1" />
-	<property class="Workstation">
-	<property name="Modules" value="output"/>
-	<property name="CraftingAreaRecipes" value="wotwTanningWorkstation" />
-	<!-- <property name="ToolNames" value="1,2,3"/> -->
-	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_table_saw" />
-	<property name="CraftActionName" value="lblContextActionBuild" />
-	<property name="CraftIcon" value="ui_game_symbol_table_saw" />
-	<property name="OpenSound" value="buildersworkbench_open" />
-	<property name="CloseSound" value="buildersworkbench_close" />
-	<property name="CraftSound" value="buildersworkbench_craft_click" />
-	<property name="CraftCompleteSound" value="buildersworkbench_complete" />
-	<property name="WorkstationJournalTip" value="buildersWorkstationTip" />
-	
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="2500" />
+	<property name="TraderStageTemplate" value="midTier1"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionProcess"/>
+	<property name="CraftIcon" value="ui_game_symbol_resource"/>
+	<property name="OpenSound" value="buildersworkbench_open"/>
+	<property name="CloseSound" value="buildersworkbench_close"/>
+	<property name="CraftSound" value="buildersworkbench_craft_click"/>
+	<property name="CraftCompleteSound" value="buildersworkbench_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems"> 
 		<property name="resourceForgedIron" value="25"/>
 		<property name="resourceMechanicalParts" value="20"/>
-		<property name="resourceWood" value="50" /> 
+		<property name="resourceWood" value="50"/> 
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest,lumberjackHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="EconomicValue" value="1000" />
-	<property name="TraderStageTemplate" value="midTier1"/>
-	<property name="Group" value="Building,TCScience,advBuilding" />
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
+	<property name="Group" value="Building,TCScience,advBuilding"/>
 	<property name="Tags" value="workstationSkill,twitch_workstation"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-</block>
-
-<block name="oilPumpdep">
-	<property name="CustomIcon" value="oilPump" />
-	<!-- <property name="UnlockedBy" value="craftingWorkstations"/> -->
-	<property name="CreativeMode" value="None"/>
-	<property name="Class" value="Campfire" />
-	<property name="Material" value="Mmetal"/>
-	<property name="MaxDamage" value="1000"/>
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/OilPump.unity3d?OilPumpPrefab"/>
-	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-	<property name="MultiBlockDim" value="3,5,3"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Stacknumber" value="1" />
-	<property name="HeatMapStrength" value="0.3"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property class="Workstation">
-		<property name="Modules" value="output"/>
-		<property name="CraftingAreaRecipes" value="oilPump" />
-	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_oilPump" />
-	<property name="CraftActionName" value="lblContextActionPump" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_oilpump" />
-	<property name="OpenSound" value="oilpump_open" />
-	<property name="CloseSound" value="oilpump_close" />
-	<property name="CraftSound" value="oilpump_craft_click" />
-	<property name="CraftCompleteSound" value="oilpump_complete" />
-	<property name="WorkstationJournalTip" value="oilPumpTip" />
-	
-	<property class="RepairItems"> 
-		<property name="resourceMechanicalParts" value="20" />
-		<property name="resourceElectricParts" value="15" />
-		<property name="resourceElectronicParts" value="10" />
-		<property name="resourceMetalPipe" value="15" />
-		<property name="resourceForgedIron" value="40" />
-	</property>
-	<drop event="Harvest" name="resourceForgedIron" count="5" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceForgedIron" count="15" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="10" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="7" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectronicParts" count="5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="7" tag="salvageHarvest"/>
-	<drop event="Destroy" count="0"/>
-	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Building,TCScience,advBuilding" />
-	<property name="DescriptionKey" value="oilPumpDesc"/>
-	<property name="EconomicValue" value="2750" />
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <block name="oilPump">
@@ -5668,11 +5708,11 @@
 	<property name="HeatMapTime" value="10000"/>
 	<property name="HeatMapFrequency" value="2000"/> -->
 	<property class="RepairItems">
-		<property name="resourceMechanicalParts" value="20" />
-		<property name="resourceElectricParts" value="15" />
-		<property name="resourceElectronicParts" value="10" />
-		<property name="resourceMetalPipe" value="15" />
-		<property name="resourceForgedIron" value="40" />
+		<property name="resourceMechanicalParts" value="20"/>
+		<property name="resourceElectricParts" value="15"/>
+		<property name="resourceElectronicParts" value="10"/>
+		<property name="resourceMetalPipe" value="15"/>
+		<property name="resourceForgedIron" value="40"/>
 	</property>
 	<drop event="Harvest" name="resourceForgedIron" count="5" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceForgedIron" count="15" tag="salvageHarvest"/>
@@ -5686,7 +5726,8 @@
 	<property name="Group" value="Building,TCScience,advBuilding"/>
 	<property name="Tags" value="workstationSkill,twitch_workstation"/>
 	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
-	<property name="PickupJournalEntry" value="oilPumpTip"/>
+	<property name="SoundPickup" value="dewcollector_grab"/>
+	<property name="SoundPlace" value="dewcollector_place"/>
 	
 	<property name="HasModifiers" value="true"/>
 	<property name="HasItemConversions" value="true"/>
@@ -5703,53 +5744,6 @@
 	<!-- <modifier name="adcLargeCatcher" effect="ItemQuantity" value="adcEnhancedWater" secondary="2" thirdValue="2"/> -->
 	<modifier name="wotwWorkToolTunedEngine" effect="Speed" value="-0.5"/>
 	<modifier name="wotwWorkToolBiggerDrums" effect="OutputSlots" value="2"/> <!-- Additive effect -->
-</block>
-
-<block name="cntAdvancedDewCollector"> <!-- wotwAdvDewCollector -->
-	<property name="CustomIcon" value="cntDewCollector" />
-	<property name="CustomIconTint" value="864C4C"/>
-	<property name="TintColor" value="864C4C"/>
-	<property name="Class" value="DewCollector"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="WorkstationIcon" value="ui_game_symbol_water"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="DescriptionKey" value="wotwAdvDewCollectorDesc"/>
-	<property name="Material" value="MFuelBarrelPolymer"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Furniture/collectorDewPrefab"/>
-	<property name="MultiBlockDim" value="3,3,3"/>
-	<property name="ImposterExchange" value="imposterBlock" param1="116"/>
-	<property name="WaterFlow" value="permitted"/>
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="RestrictSubmergedPlacement" value="true"/>
-	<property name="AllowedRotations" value="Basic90"/>
-	<property name="Path" value="solid"/>
-	<property name="IsDecoration" value="true"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="OpenSound" value="collector_open"/>
-	<property name="CloseSound" value="collector_close"/>
-	<property name="ConvertSound" value="collector_complete_item"/>
-	<property name="MinConvertTime" value="10800" /> <!-- 21600 Game Seconds = 6 Game Hours -->
-	<property name="MaxConvertTime" value="18000" /> <!-- 36000 Game Seconds = 10 Game Hours -->
-	<property name="ConvertToItem" value="drinkJarBoiledWater" />
-	<property name="EconomicValue" value="20000"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="MaxDamage" value="450"/>
-	<property name="HeatMapStrength" value="1"/>
-	<property name="HeatMapTime" value="10000"/>
-	<property name="HeatMapFrequency" value="2000"/>
-	<property class="RepairItems">
-		<property name="resourceScrapPolymers" value="40"/>
-	</property>
-	<drop event="Harvest" name="resourceScrapPolymers" count="40,60" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="1,3" tag="allHarvest"/>
-	<drop event="Destroy" name="resourceWaterFilter" count="2,3"/>
-	<property name="SortOrder1" value="B281"/>
-	<property name="SortOrder2" value="0100"/>
-	<property name="Group" value="Food/Cooking,Building,advBuilding"/>
-	<property name="Tags" value="workstationSkill,twitch_workstation"/>
-	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 </block>
 
 <block name="wotwAdvDewCollector">
@@ -5792,11 +5786,14 @@
 	<drop event="Harvest" name="resourceScrapPolymers" count="40,60" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceMetalPipe" count="1,3" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceWaterFilter" count="2,3"/>
+	<property name="DestroyFX" value="blockdestroy_cloth,collector_destroy"/>
 	<property name="SortOrder1" value="B281"/>
 	<property name="SortOrder2" value="0100"/>
-	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+	<property name="Group" value="Food/Cooking,Building,advBuilding"/>
 	<property name="Tags" value="workstationSkill,twitch_workstation"/>
 	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="dewcollector_grab"/>
+	<property name="SoundPlace" value="dewcollector_place"/>
 	
 	<property name="HasModifiers" value="true"/>
 	<property name="HasItemConversions" value="true"/>
@@ -5815,56 +5812,62 @@
 
 <block name="recyclerWorkstation">
 	<property name="CustomIcon" value="recyclerWorkstation"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
 	<property name="Class" value="Workstation"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="StabilitySupport" value="false"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/Recycler.unity3d?RecyclerPrefab"/>
-	<property name="MultiBlockDim" value="1,2,1"/>
-	<property name="ModelOffset" value="0,-0.5,0"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="HeatMapStrength" value="0.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="Stacknumber" value="1"/>
 	<property class="Workstation">
 		<property name="Modules" value="output"/>
 		<property name="CraftingAreaRecipes" value="recyclerWorkstation"/>
 	</property>
-	
-	<property name="WorkstationIcon" value="ui_game_symbol_recyclerWorkstation" />
-	<property name="CraftActionName" value="lblContextActionCraft" />
-	<property name="CraftIcon" value="ui_game_symbol_workstation_recycler" />
-	<property name="OpenSound" value="fabricationstation_open" />
-	<property name="CloseSound" value="fabricationstation_close" />
-	<property name="CraftSound" value="fabricationstation_craft_click" />
-	<property name="CraftCompleteSound" value="fabricationstation_complete" />
-	<property name="WorkstationJournalTip" value="recyclerTip" />
-	
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="recyclerWorkstationDesc"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="WorkstationIcon" value="ui_game_symbol_recyclerWorkstation"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Recycler.unity3d?RecyclerPrefab"/>
+	<property name="ModelOffset" value="0,-0.5,0"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="5000"/>
+	<property name="TraderStageTemplate" value="midTier3"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="CraftActionName" value="lblContextActionScrap"/>
+	<property name="CraftIcon" value="ui_game_symbol_workstation_recycler"/>
+	<property name="OpenSound" value="fabricationstation_open"/>
+	<property name="CloseSound" value="fabricationstation_close"/>
+	<property name="CraftSound" value="fabricationstation_craft_click"/>
+	<property name="CraftCompleteSound" value="fabricationstation_complete"/>
+	<property name="TakeDelay" value="5"/>
 	<property class="RepairItems">
 		<property name="resourceForgedIron" value="25"/>
 		<property name="resourceMechanicalParts" value="20"/>
 		<property name="resourceWood" value="50"/>
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest,lumberjackHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="DescriptionKey" value="fabricationStationDesc"/>
-	<property name="EconomicValue" value="5000"/>
-	<property name="TraderStageTemplate" value="midTier3"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0300"/>
 	<property name="Group" value="Building,TCScience,advBuilding"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="workbench_grab"/>
+	<property name="SoundPlace" value="workbench_place"/>
 </block>
 
 <!-- VENDING MACHINES START -->
@@ -14432,7 +14435,7 @@
 	<property class="RepairItems">
 	  <property name="resourceWood" value="20" />
 	</property>
-    <drop event="Destroy" count="0" />
+    <drop event="Destroy" name="wotwDropBox" count="1" />
 	<property name="Group" value="Building"/>
 </block>
 
@@ -22421,6 +22424,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -22578,6 +22582,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -22731,6 +22736,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -22888,6 +22894,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -23045,6 +23052,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -23202,6 +23210,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -23352,7 +23361,6 @@
 	<property name="MeshDamage" value="
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
-		Door/DMG2, 500,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -23808,6 +23816,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -23965,6 +23974,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -24119,6 +24129,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -24275,6 +24286,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -25040,6 +25052,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -25097,6 +25110,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -25154,6 +25168,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -25211,6 +25226,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -25384,6 +25400,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -25546,6 +25563,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -25708,6 +25726,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -25870,6 +25889,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -26033,6 +26053,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -26195,6 +26216,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -26358,6 +26380,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -26520,6 +26543,7 @@
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
 		Door/DMG2, 500,
+		Door/DMG3, 250,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -26837,7 +26861,6 @@
 	<property name="MeshDamage" value="
 		Door/DMG0, 2500,
 		Door/DMG1, 1500,
-		Door/DMG2, 500,
 		-, 1
 		"/>
 	<property class="RepairItems">
@@ -31272,12 +31295,19 @@
 <set xpath="/blocks/block[@name='palletBagFertilizerSingleBent']/drop[@event='Harvest']/@name">wotwResourceFertilizer</set>
 <set xpath="/blocks/block[@name='palletBagFertilizerSingleBent']/drop[@event='Harvest']/@count">2,3</set>
 
+<set xpath="/blocks/block[@name='palletBagFlourBaseFull']/drop[@event='Harvest'][@name='foodCornMeal']/@count">5,10</set>
 <set xpath="/blocks/block[@name='palletBagFlourBaseFull']/drop[@event='Harvest'][@name='foodCornMeal']/@name">flour</set>
+<set xpath="/blocks/block[@name='palletBagFlourTile']/drop[@event='Harvest'][@name='foodCornMeal']/@count">5,10</set>
 <set xpath="/blocks/block[@name='palletBagFlourTile']/drop[@event='Harvest'][@name='foodCornMeal']/@name">flour</set>
+<set xpath="/blocks/block[@name='palletBagFlourBaseMed']/drop[@event='Harvest'][@name='foodCornMeal']/@count">4,8</set>
 <set xpath="/blocks/block[@name='palletBagFlourBaseMed']/drop[@event='Harvest'][@name='foodCornMeal']/@name">flour</set>
+<set xpath="/blocks/block[@name='palletBagFlourCapMed']/drop[@event='Harvest'][@name='foodCornMeal']/@count">4,6</set>
 <set xpath="/blocks/block[@name='palletBagFlourCapMed']/drop[@event='Harvest']/@name">flour</set>
+<set xpath="/blocks/block[@name='palletBagFlourCapSml']/drop[@event='Harvest'][@name='foodCornMeal']/@count">2,4</set>
 <set xpath="/blocks/block[@name='palletBagFlourCapSml']/drop[@event='Harvest']/@name">flour</set>
+<set xpath="/blocks/block[@name='palletBagFlourSingleBent']/drop[@event='Harvest'][@name='foodCornMeal']/@count">2</set>
 <set xpath="/blocks/block[@name='palletBagFlourSingleBent']/drop[@event='Harvest']/@name">flour</set>
+<set xpath="/blocks/block[@name='palletBagFlourSingleFlat']/drop[@event='Harvest'][@name='foodCornMeal']/@count">2</set>
 <set xpath="/blocks/block[@name='palletBagFlourSingleFlat']/drop[@event='Harvest']/@name">flour</set>
 
 <set xpath="/blocks/block[@name='palletTarpBaseWhite']/drop[@event='Harvest'][@name='resourceCobblestones']/@count">30,50</set>

@@ -3685,4 +3685,44 @@
 </append>
 <set xpath="/entity_classes/entity_class[@name='GiantRat']/property[@name='TrackerIcon']/@value">ui_game_symbol_tracking_zombie01</set>
 
+<append xpath="/entity_classes/entity_class[@name='zombieSkeleton']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieSkeletonAxe']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieSkeletonSword']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieDeathKnight']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieBase']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieAxe']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieArmor']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieHelm']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieSwordShield']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
+<append xpath="/entity_classes/entity_class[@name='zombieGhoul']/effect_group[@name='Base Effects']">
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+</append>
+
 </config>

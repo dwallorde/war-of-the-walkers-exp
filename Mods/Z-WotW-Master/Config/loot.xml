@@ -4308,57 +4308,63 @@
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackReg01']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="low"/>
-	<item group="groupActionRewardCards" count="1" loot_prob_template="veryLow"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="veryLow"/>
+	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackReg02']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="veryLow"/>
 	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackReg03']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="medLow"/>
-	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="veryLow"/>
+	<item group="groupActionRewardCards" count="1" loot_prob_template="medLow"/>
 </append>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupZpackReg']/@count">1,2</set>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong01']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="medLow"/>
-	<item group="groupActionRewardCards" count="1" loot_prob_template="veryLow"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="veryLow"/>
+	<item group="groupActionRewardCards" count="1" loot_prob_template="medLow"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong02']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="medLow"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="veryLow"/>
 	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong03']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="med"/>
-	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupActionRewardCards" count="1" loot_prob_template="med"/>
 </append>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupZpackStrong']/@count">1,2</set>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss01']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="med"/>
-	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupActionRewardCards" count="1" loot_prob_template="med"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss02']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="med"/>
-	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupActionRewardCards" count="1" loot_prob_template="med"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss03']">
 	<item group="ClassFragmentsDrop" count="1" loot_prob_template="low"/>
-	<item group="groupRewardCards" count="1" loot_prob_template="medHigh"/>
-	<item group="groupActionRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupRewardCards" count="1" loot_prob_template="low"/>
+	<item group="groupActionRewardCards" count="1" loot_prob_template="med"/>
 </append>
+
+<set xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']/@count">1,3</set>
 
 <!-- <set xpath="/lootcontainers/lootgroup[@name='groupPassNGas02']/item[@name='ammoGasCan']/@count">50,100</set> -->
 

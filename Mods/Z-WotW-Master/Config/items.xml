@@ -2185,10 +2185,10 @@
 <!-- Medicinal -->
 <!-- immunizationShot, vitaminA, vitaminB, vitaminC, vitaminD, legBoosterShot, advancedSplint, traumaFirstAidBandage, traumaFirstAidKit, xStrengthPainkillers, energypill -->
 <set xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']/@value">50</set>
-<set xpath="/items/item[@name='medicalBandage']/property[@name='Stacknumber']/@value">25</set>
-<set xpath="/items/item[@name='medicalFirstAidBandage']/property[@name='Stacknumber']/@value">25</set>
-<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">25</set>
-<set xpath="/items/item[@name='medicalSplint']/property[@name='Stacknumber']/@value">25</set>
+<set xpath="/items/item[@name='medicalBandage']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='medicalFirstAidBandage']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='medicalSplint']/property[@name='Stacknumber']/@value">50</set>
 <set xpath="/items/item[@name='medicalBloodBag']/property[@name='Stacknumber']/@value">50</set>
 <set xpath="/items/item[@name='drugVitamins']/property[@name='Stacknumber']/@value">50</set>
 <set xpath="/items/item[@name='drugPainkillers']/property[@name='Stacknumber']/@value">50</set>
@@ -2411,7 +2411,7 @@
 	<property name="Meshfile" value="@:Other/Items/Health/bandage.FBX"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mwood"/>
-	<property name="Stacknumber" value="25"/> 
+	<property name="Stacknumber" value="50"/> 
 	<property name="FuelValue" value="80"/>
 	<property name="EconomicValue" value="150"/>
 	<property name="Group" value="Science,Medicine"/>
@@ -2490,7 +2490,7 @@
 	<property name="EconomicValue" value="200" />
 	<property name="DescriptionKey" value="traumaFirstAidBandageDesc"/>
 	<property name="Group" value="Science,Medical"/>
-	<property name="Stacknumber" value="25"/>
+	<property name="Stacknumber" value="50"/>
 	<effect_group tiered="false">
 	<!-- used on self -->
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="5"/> <!-- X -->
@@ -2545,7 +2545,7 @@
 	<property name="UnlockedBy" value="craftingMedical"/>
 	<property name="Group" value="Science,Medical,TCMedical"/>
 	<property name="EconomicValue" value="500" />
-	<property name="Stacknumber" value="25"/>
+	<property name="Stacknumber" value="50"/>
 	<property name="DescriptionKey" value="traumaFirstAidKitDesc"/>
 	<property name="SoundPickup" value="firstaidkit_grab"/>
 	<property name="SoundPlace" value="firstaidkit_place"/>
@@ -2728,7 +2728,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceScrapIron"/>
 	<property name="Weight" value="5"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="SellableToTrader" value="false"/>
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="5"/>
@@ -2742,7 +2742,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="tungsten"/>
 	<property name="Weight" value="5"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="SellableToTrader" value="false"/>
 	<property name="EconomicValue" value="50"/>
 	<property name="EconomicBundleSize" value="5"/>
@@ -2775,7 +2775,7 @@
 	<property name="Material" value="copper"/>
 	<property name="EconomicValue" value="5"/>
 	<property name="Weight" value="5"/>
-	<property name="Stacknumber" value="6000" /> <!-- STK resource -->
+	<property name="Stacknumber" value="10000" /> <!-- STK resource -->
 	<property name="SellableToTrader" value="false"/>
 	<property name="CraftingIngredientTime" value="5"/>
 </item>
@@ -2789,7 +2789,7 @@
 	<property name="Material" value="zinc"/>
 	<property name="EconomicValue" value="5"/>
 	<property name="Weight" value="5"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="SellableToTrader" value="false"/>
 	<property name="CraftingIngredientTime" value="5"/>
 </item>
@@ -2800,7 +2800,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mcloth"/>
-	<property name="Stacknumber" value="250"/> <!-- STK resource -->
+	<property name="Stacknumber" value="500"/> <!-- STK resource -->
 	<property name="Weight" value="5"/>
 	<property name="Group" value="Resources"/>
 	<property name="CraftingIngredientTime" value="1.5"/>
@@ -2817,7 +2817,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
-	<property name="Stacknumber" value="250"/> <!-- STK resource -->
+	<property name="Stacknumber" value="500"/> <!-- STK resource -->
 	<property name="Weight" value="0"/>
 	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 	<property name="CraftingIngredientTime" value="1.5"/>
@@ -2831,12 +2831,12 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="BlueprintPaper"/>
-	<property name="Stacknumber" value="250"/>
-	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="1000"/>
+	<property name="EconomicValue" value="50"/>
 	<property name="FuelValue" value="1"/>
 	<property name="Weight" value="1"/>
 	<property name="Group" value="Resources" />
-	<property name="CraftingIngredientTime" value="1.5"/>
+	<property name="CraftingIngredientTime" value="1.25"/>
 	<property name="CraftingIngredientExp" value="1.75"/>
 </item>
 
@@ -2847,7 +2847,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic" />
-	<property name="Stacknumber" value="100" />
+	<property name="Stacknumber" value="250" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="CFChemicals,Resources,Chemicals" />
 	<property name="EconomicValue" value="150" />
@@ -2863,7 +2863,7 @@
 	<property name="Weight" value="5" />
 	<property name="RepairTime" value="1" />
 	<property name="RepairAmount" value="100" />
-	<property name="Stacknumber" value="250" />
+	<property name="Stacknumber" value="500" />
 	<property name="FuelValue" value="15" />
 	<property name="EconomicValue" value="90" />
 	<property name="Group" value="Resources,Clothing" />
@@ -3215,7 +3215,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
-	<property name="Stacknumber" value="25"/>
+	<property name="Stacknumber" value="50"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="Group" value="Resources"/>
 	<property name="DescriptionKey" value="geodeDesc"/>
@@ -4028,119 +4028,6 @@
 
 <!-- Supply Flares -->
 <!-- flareBuildingSupply, flareHealthandArmorSupply, flareFoodandDrinkSupply, flareAmmoSupply, flareSmallWeaponsSupply, flareMediumWeaponSupplyFlare, flareLargeWeaponsSupplyFlare, flareGeneralSupply -->
-<item name="wotwGunFlare">
-	<property name="CreativeMode" value="None"/>
-	<property name="CustomIcon" value="gunExplosivesT3RocketLauncher"/>
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,launcher,canHaveCosmetic"/>
-	<property name="DisplayType" value="rangedLauncher"/>
-	<property name="HoldType" value="10"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/RocketLauncher/rocketlauncherPrefab.prefab"/>
-	<property name="Material" value="MRocketLauncherParts"/>
-	<property name="TintColor" value="77, 77, 51"/>
-	<property name="Weight" value="1"/>
-	<property name="RepairTools" value="resourceRepairKit"/>
-	<property name="DegradationBreaksAfter" value="false"/>
-	<property name="SoundJammed" value="weapon_jam"/>
-	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
-	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
-	<property name="Sound_Sight_In" value="launcher_sight_in"/>
-	<property name="Sound_Sight_Out" value="launcher_sight_out"/>
-	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
-	<property name="RepairExpMultiplier" value="10.8"/>
-	<property name="EconomicValue" value="1000"/>
-	<property name="TraderStageTemplate" value="baseTier3"/>
-	<property name="UnlockedBy" value="craftingExplosives"/><!-- gunExplosivesT3RocketLauncherSchematic, -->
-	<property name="ShowQuality" value="true"/>
-	<property name="SoundUnholster" value="weapon_unholster"/>
-	<property name="SoundHolster" value="weapon_holster"/>
-
-	<property class="Action0">
-		<property name="Class" value="Launcher"/>
-		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
-		<!-- <property name="Range" value="200"/> -->
-		<property name="Magazine_items" value="ammoFlareGeneral"/>
-		<!-- <property name="Reload_time" value="2"/> -->
-		<property name="Sound_start" value="m136_fire"/>
-		<property name="Sound_repeat" value=""/>
-		<property name="Sound_end" value=""/>
-		<property name="Sound_empty" value="dryfire"/>
-		<property name="Sound_reload" value="m136_reload"/>
-		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="rocketLauncherFire"/>
-		<property name="Particles_muzzle_smoke" value="nozzlesmoke_m136"/>
-		<property name="ScopeOffset" value="-.00062,.088,.065"/>
-		<property name="SideOffset" value="0,0,0"/>
-		<property name="BarrelOffset" value="0,0,0"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-	        <property name="triggerEffectTriggerShootDualsense" value="PistolShoot"/>
-	</property>
-	<property class="Action1">
-		<property name="Class" value="Zoom"/>
-		<property name="Zoom_max_out" value="55"/>
-		<property name="Zoom_max_in" value="55"/>
-	        <property name="triggerEffectTriggerPullDualsense" value="PistolZoom"/>
-	</property>
-	<effect_group name="wotwGunFlare">
-		<passive_effect name="MaxRange" operation="base_set" value="25"/>
-		<passive_effect name="DamageFalloffRange" operation="base_set" value="25"/>
-		<passive_effect name="RoundsPerMinute" operation="base_set" value="75"/>
-		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
-		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".7"/>
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="7"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="7"/>
-		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".15"/>
-		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
-		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
-		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2"/>
-
-		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="10"/>
-		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="10"/>
-		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.5"/>
-		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".5"/>
-
-		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.2"/>
-		<passive_effect name="WeaponHandling" operation="base_set" value=".9"/>
-
-		<passive_effect name="DegradationMax" operation="base_set" value="250"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
-	</effect_group>
-</item>
-
-<item name="ammoFlareGeneral">
-	<property name="CreativeMode" value="None"/>
-	<property name="CustomIcon" value="flareGeneralSupply"/>
-	<property name="Tags" value="ammo"/>
-	<property name="DisplayType" value="ammoLauncher"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/RocketLauncher/rocketPrefab.prefab"/>
-	<property name="HoldType" value="45"/>
-	<property name="HandMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mlead_scrap"/>
-	<property name="Stacknumber" value="20"/>
-	<property name="EconomicValue" value="250"/>
-	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
-	
-	<property class="Action1">
-		<property name="Class" value="Projectile"/>
-		<property name="Gravity" value="-2"/>
-		<property name="FlyTime" value=".05"/>
-		<property name="LifeTime" value="5"/>
-
-		<!--<property name="Explosion.BlockDamage" value="2500"/>  workaround, not affected by perks at all -->
-		<!--<property name="Explosion.EntityDamage" value="442"/>  workaround, not affected by perks at all -->
-	</property>
-	<effect_group name="ammoFlareGeneral" tiered="false">
-		<passive_effect name="BlockDamage" operation="base_set" value="0"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="0"/>
-		<passive_effect name="ProjectileVelocity" operation="base_set" value="25"/>
-		<display_value name="dExRadius" value="0"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="spawn_Airdrop_General" />
-	</effect_group>
-</item>
-
 <item name="wotwFlareGeneralSupply">
 	<property name="CustomIcon" value="flareGeneralSupply"/>
 	<property name="Tags" value="ammo,weapon"/>
@@ -4171,7 +4058,7 @@
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Activate"/>
 		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
-		<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Delay" value="5"/> <!-- obsolete if rounds per minute exists -->
 	</property>
 	<property name="ThrowableDecoy" value="true"/>
 	<effect_group tiered="false">
@@ -5168,6 +5055,7 @@
 		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,3,4,5" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="-7" tags="perkMachineGunner"/> <!-- damage offset -->
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkMachineGunner"/> <!-- random EntityDmg -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
 		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
@@ -5444,7 +5332,7 @@
 	<property name="HandMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mlead_scrap"/>
-	<property name="Stacknumber" value="20"/>
+	<property name="Stacknumber" value="50"/>
 	<property name="EconomicValue" value="500"/>
 	<property name="TraderStageTemplate" value="ammoTier3"/>
 	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
@@ -5494,7 +5382,7 @@
 		<property name="Explosion.DamageBonus.water" value="0"/>
 	</property>
 
-	<effect_group name="ammoRocketFrag" tiered="false">
+	<effect_group name="wotwAmmoRP7RocketFrag" tiered="false">
 		<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="50"/>
 		<passive_effect name="ProjectileVelocity" operation="base_set" value="40" tags="perkDemolitionsExpert"/>
@@ -5518,10 +5406,10 @@
 	<property name="SoundPickup" value="bullets_grab"/>
 	<property name="SoundPlace" value="bullets_place"/>
 	<effect_group name="wotwAmmo45ACP" tiered="false">
-		<passive_effect name="EntityDamage" operation="base_set" value="80" tags="perkGunslinger,revolver"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="2" tags="perkGunslinger"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="80" tags="perkGunslinger,revolver,perkMachineGunner"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="2" tags="perkGunslinger,perkMachineGunner"/>
 		<passive_effect name="BlockDamage" operation="base_add" value="12" tags="barrelExplosive"/>
-		<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger">
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner">
 			<requirement name="ProgressionLevel" progression_name="perkEnforcerComplete" operation="Equals" value="1"/>
 		</passive_effect>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -5660,7 +5548,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mlead_scrap"/>
-	<property name="Stacknumber" value="300"/> <!-- STK ammo low -->
+	<property name="Stacknumber" value="500"/> <!-- STK ammo low -->
 	<property name="EconomicValue" value="16"/>
 	<property name="TraderStageTemplate" value="ammoTier1"/>
 	<property name="Group" value="Ammo/Weapons"/>
@@ -5693,7 +5581,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceScrapPolymers"/>
-	<property name="Stacknumber" value="300"/> <!-- STK ammo low -->
+	<property name="Stacknumber" value="500"/> <!-- STK ammo low -->
 	<property name="EconomicValue" value="30"/>
 	<property name="TraderStageTemplate" value="ammoTier2"/>
 	<property name="Group" value="Ammo/Weapons"/>
@@ -5740,7 +5628,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceScrapPolymers"/>
-	<property name="Stacknumber" value="300"/> <!-- STK ammo low -->
+	<property name="Stacknumber" value="500"/> <!-- STK ammo low -->
 	<property name="EconomicValue" value="35"/>
 	<property name="TraderStageTemplate" value="ammoTier3"/>
 	<property name="Group" value="Ammo/Weapons"/>
@@ -5769,7 +5657,7 @@
 	<property name="Extends" value="ammo9mmBulletBall"/>
 	<property name="CustomIcon" value="wotwAmmo556mmBullet"/>
 	<property name="Tags" value="ammo556mm"/>
-	<property name="Stacknumber" value="300"/> <!-- STK ammo low -->
+	<property name="Stacknumber" value="500"/> <!-- STK ammo low -->
 	<property name="EconomicValue" value="14"/>
 	<property name="TraderStageTemplate" value="ammoTier1"/>
 	<property name="UnlockedBy" value="craftingAmmo"/>
@@ -5836,7 +5724,7 @@
 	<property name="Extends" value="ammo9mmBulletBall"/>
 	<property name="CustomIcon" value="wotwAmmo57mmBullet"/>
 	<property name="Tags" value="ammo57mm"/>
-	<property name="Stacknumber" value="300"/> <!-- STK ammo low -->
+	<property name="Stacknumber" value="500"/> <!-- STK ammo low -->
 	<property name="EconomicValue" value="13"/>
 	<property name="TraderStageTemplate" value="ammoTier1"/>
 	<property name="UnlockedBy" value="craftingAmmo"/>
@@ -5928,7 +5816,7 @@
 	<property name="StickyColliderRadius" value=".05"/>
 	<property name="StickyColliderLength" value="1"/>
 	<property name="Material" value="tungsten" />
-	<property name="Stacknumber" value="300" /> <!-- STK ammo low -->
+	<property name="Stacknumber" value="500" /> <!-- STK ammo low -->
 	<property name="EconomicValue" value="65"/>
 	<property name="TraderStageTemplate" value="arrowsTier5"/>
 	<property name="EconomicBundleSize" value="5"/>
@@ -5986,7 +5874,7 @@
 	<property name="StickyColliderRadius" value=".05"/>
 	<property name="StickyColliderLength" value=".75"/>
 	<property name="Material" value="tungsten" />
-	<property name="Stacknumber" value="300" /> <!-- STK ammo low -->
+	<property name="Stacknumber" value="500" /> <!-- STK ammo low -->
 	<property name="EconomicValue" value="50"/>
 	<property name="TraderStageTemplate" value="arrowsTier5"/>
 	<property name="EconomicBundleSize" value="5"/>
@@ -6226,7 +6114,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/Explosives.unity3d?HDPipeBombPrefab"/>
 	<property name="DropScale" value="2.5"/>
 	<property name="Material" value="Mmetal"/>
-	<property name="Stacknumber" value="20"/>
+	<property name="Stacknumber" value="25"/>
 	<property name="EconomicValue" value="200"/>
 	<property name="TraderStageTemplate" value="baseTier7"/>
 	<property name="Weight" value="0"/>
@@ -6367,7 +6255,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/Explosives.unity3d?HDTimedChargePrefab"/>
 	<property name="DropScale" value="1.8"/>
 	<property name="Material" value="Mmetal"/>
-	<property name="Stacknumber" value="10"/>
+	<property name="Stacknumber" value="25"/>
 	<property name="EconomicValue" value="600"/>
 	<property name="TraderStageTemplate" value="baseTier7"/>
 	<property name="Weight" value="0"/>
@@ -6431,7 +6319,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/Explosives.unity3d?HDDynamitePrefab"/>
 	<property name="DropScale" value="2.5"/>
 	<property name="Material" value="MDynamite"/>
-	<property name="Stacknumber" value="10"/>
+	<property name="Stacknumber" value="25"/>
 	<property name="EconomicValue" value="200"/>
 	<property name="TraderStageTemplate" value="baseTier7"/>
 	<property name="Weight" value="0"/>
@@ -15877,7 +15765,7 @@
 	<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="BlueprintPaper"/>
-	<property name="Weight" value="25"/>
+	<property name="Weight" value="8"/>
 	<property name="EconomicValue" value="5000"/>
 	<property name="Stacknumber" value="50"/> <!-- STK loot -->
 	<property name="Group" value="Science"/>
@@ -15906,7 +15794,7 @@
 	<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="BlueprintPaper"/>
-	<property name="Weight" value="50"/>
+	<property name="Weight" value="10"/>
 	<property name="EconomicValue" value="7500"/>
 	<property name="Stacknumber" value="50"/> <!-- STK loot -->
 	<property name="Group" value="Science"/>
@@ -15934,7 +15822,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="BlueprintPaper"/>
-	<property name="Weight" value="25"/>
+	<property name="Weight" value="6"/>
 	<property name="Stacknumber" value="5"/> <!-- STK book -->
 	<property name="DisplayType" value="expEarned"/>
 	<property name="EconomicValue" value="500"/>
@@ -19096,7 +18984,7 @@
 			<property name="Create_item_count" value="1,1,1,1,1"/>
 	</append>
 	
-	<set xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']/@value">25</set>
+	<set xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']/@value">50</set>
 	
 	<append xpath="/items/item[@name='resourceSilverNugget']">
 	<property name="Weight" value="5"/>
@@ -19110,10 +18998,70 @@
 	<property name="Weight" value="15"/>
 	</append>
 
-	<set xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']/@value">300</set>
-	<set xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']/@value">300</set>
-	<set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']/@value">300</set>
-	<set xpath="/items/item[@name='ammoShotgunBreachingSlug']/property[@name='Stacknumber']/@value">300</set>
+	<set xpath="/items/item[@name='ammoBundleMaster']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammoShotgunBreachingSlug']/property[@name='Stacknumber']/@value">500</set>
+	
+	<set xpath="/items/item[@name='ammoArrowStone']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammoArrowExploding']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltStone']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltIron']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@name='Stacknumber']/@value">500</set>
+	
+	<set xpath="/items/item[@name='ammoBundle9mmBulletBall']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='ammoBundle9mmBulletHP']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='ammoBundle9mmBulletAP']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='ammoBundle44MagnumBulletBall']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='ammoBundle44MagnumBulletHP']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='ammoBundle44MagnumBulletAP']/property[@name='Stacknumber']/@value">50</set>
+	
+	<set xpath="/items/item[@name='resourceRockSmallBundle']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']/@value">25</set>
+	<set xpath="/items/item[@name='thrownTimedCharge']/property[@name='Stacknumber']/@value">25</set>
+	<set xpath="/items/item[@name='thrownDynamite']/property[@name='Stacknumber']/@value">25</set>
+	
+	<set xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']/@value">25</set>
+	<set xpath="/items/item[@name='ammoRocketHE']/property[@name='Stacknumber']/@value">25</set>
+	<set xpath="/items/item[@name='ammoRocketFrag']/property[@name='Stacknumber']/@value">25</set>
+	
+	<set xpath="/items/item[@name='resourceRockSmall']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceSnowBall']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceYuccaFibers']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceWood']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceCrushedSand']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceBrokenGlass']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceScrapIron']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceForgedIron']/property[@name='Stacknumber']/@value">1000</set>
+	<set xpath="/items/item[@name='resourceMetalPipe']/property[@name='Stacknumber']/@value">1000</set>
+	<set xpath="/items/item[@name='resourceForgedSteel']/property[@name='Stacknumber']/@value">1000</set>
+	<set xpath="/items/item[@name='resourceSewingKit']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/items/item[@name='resourceOilShale']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceBone']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceLeather']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='resourceTestosteroneExtract']/property[@name='Stacknumber']/@value">50</set>
+	<set xpath="/items/item[@name='resourceScrapLead']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceClayLump']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceCobblestones']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceCement']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceConcreteMix']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='resourcePaper']/property[@name='Stacknumber']/@value">1000</set>
+	<set xpath="/items/item[@name='resourceHeadlight']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/items/item[@name='resourceSpring']/property[@name='Stacknumber']/@value">1000</set>
+	<set xpath="/items/item[@name='resourceDuctTape']/property[@name='Stacknumber']/@value">1000</set>
+	<set xpath="/items/item[@name='resourceFeather']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='resourceCoal']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourcePotassiumNitratePowder']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceGunPowder']/property[@name='Stacknumber']/@value">5000</set>
+	<set xpath="/items/item[@name='resourceBuckshot']/property[@name='Stacknumber']/@value">5000</set>
+	<set xpath="/items/item[@name='resourceBulletCasing']/property[@name='Stacknumber']/@value">5000</set>
+	<set xpath="/items/item[@name='resourceBulletTip']/property[@name='Stacknumber']/@value">5000</set>
+	<set xpath="/items/item[@name='resourceNail']/property[@name='Stacknumber']/@value">5000</set>
+	<set xpath="/items/item[@name='resourceOil']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='resourcePaint']/property[@name='Stacknumber']/@value">5000</set>
 	
 	<!-- <append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
 		<property name="Focused_blockname_6" value="waterWell"/>
@@ -23456,7 +23404,7 @@
 <item name="wotwToolWSCarbideBlade">
 	<property name="CustomIcon" value="wotwToolWSCarbideBlade"/>
 	<property name="UnlockedBy" value="craftingResources"/>
-	<property name="DescriptionKey" value="adcLargeCatcherDesc"/>
+	<property name="DescriptionKey" value="wotwToolWSCarbideBladeDesc"/>
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -23471,7 +23419,7 @@
 <item name="wotwToolWSHeatedRack">
 	<property name="CustomIcon" value="wotwToolWSHeatedRack"/>
 	<property name="UnlockedBy" value="craftingResources"/>
-	<property name="DescriptionKey" value="adcLargeCatcherDesc"/>
+	<property name="DescriptionKey" value="wotwToolWSHeatedRackDesc"/>
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -23480,10 +23428,10 @@
 	<property name="EconomicValue" value="750"/>
 	<property name="Group" value="Tools/Traps"/>
 	<property name="TraderStageTemplate" value="midTier3"/>
-	<property name="DisplayType" value="toolSmoothJawPliers"/>
+	<property name="DisplayType" value="wotwToolWSHeatedRack"/>
 	<property name="ItemTypeIcon" value="wotwTanningWorkstation"/>
 	<effect_group tiered="false">
-		<requirement name="!HoldingItemHasTags" tags="toolSmoothJawPliers"/>
+		<requirement name="!HoldingItemHasTags" tags="wotwToolWSHeatedRack"/>
 			<passive_effect name="CraftingTime" operation="perc_add" value="-.3"/>
 			<display_value name="dCraftingTime" value=".3"/>
 	</effect_group>
@@ -23497,7 +23445,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="EconomicValue" value="120"/>
-	<property name="Stacknumber" value="10"/> <!-- STK loot -->
+	<property name="Stacknumber" value="50"/> <!-- STK loot -->
 	<property name="UnlockedBy" value="craftingMedical"/>
 	<property name="DisplayType" value="cureInfection"/>
 	<property name="TintColor" value="120,255,120"/>
@@ -23523,7 +23471,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="EconomicValue" value="120"/>
-	<property name="Stacknumber" value="10"/> <!-- STK loot -->
+	<property name="Stacknumber" value="50"/> <!-- STK loot -->
 	<property name="UnlockedBy" value="craftingMedical"/>
 	<property name="DisplayType" value="cureInfection"/>
 	<property name="TintColor" value="120,255,120"/>
@@ -23548,7 +23496,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceWoodLog"/>
 	<property name="Weight" value="4"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="FuelValue" value="100"/>
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
@@ -23568,7 +23516,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourcewoodStick"/>
 	<property name="Weight" value="1"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="FuelValue" value="10"/>
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
@@ -23589,7 +23537,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceHardWood"/>
 	<property name="Weight" value="4"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="FuelValue" value="150"/>
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
@@ -23609,7 +23557,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceHardWoodPlank"/>
 	<property name="Weight" value="2"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="FuelValue" value="75"/>
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
@@ -23629,7 +23577,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceHardWoodStick"/>
 	<property name="Weight" value="1"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="FuelValue" value="25"/>
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
@@ -23648,7 +23596,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceWood"/>
 	<property name="Weight" value="0"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="FuelValue" value="5"/>
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
@@ -23664,7 +23612,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mstone"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
 	<property name="Group" value="Resources"/>
@@ -23678,7 +23626,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mstone"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
 	<property name="Group" value="Resources"/>
@@ -23692,7 +23640,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mstone"/>
-	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="25"/>
 	<property name="EconomicBundleSize" value="50"/>
 	<property name="Group" value="Resources"/>
@@ -23763,7 +23711,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mdirt"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="5000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="10"/>
 	<property name="EconomicBundleSize" value="10"/>
 	<property name="UnlockedBy" value="craftingAmmo"/>
@@ -24579,5 +24527,48 @@
 </append>
 
 <set xpath="/items/item[@name='schematicMaster']/property[@name='ScrapTimeOverride']/@value">1</set>
+
+<set xpath="/items/item[@name='resourceBluegilFish']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceCatfish']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceCrab']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceCrappie']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceGrouper']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceLargeMouthBass']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceMackerel']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceOctopus']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRedSnapper']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceShad']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceShrimp']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceStripedBass']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceTrout']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceTuna']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceFishingCoin']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceSeaweed']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceOldBoot']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawBluegilFishFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawCatfishFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawCrappieFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawGrouperFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawLargeMouthBassFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawMackerelFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawRedSnapperFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawStripedBassFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawTroutFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawTunaFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='resourceRawShadRoe']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodGrilledFishFillet']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodMarinatedTunaSteak']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodFriedBluegil']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodFriedCatfish']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodGrilledCrabCake']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodGlazedMackerel']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodBlackenedRedSnapper']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodFriedShadRoeandBacon']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodGrilledOctopus']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodFriedShrimp']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodFriedTrout']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodSearedBass']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodRoastedGrouper']/property[@name='Stacknumber']/@value">50</set>
+<set xpath="/items/item[@name='foodFriedCrappieCake']/property[@name='Stacknumber']/@value">50</set>
 
 </config>

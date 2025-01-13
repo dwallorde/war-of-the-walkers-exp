@@ -1173,6 +1173,10 @@
 		<action class="AddXP">
 			<property name="xp_amount" value="5000" />
 		</action>
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_ArmourandTools" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
 	</action_sequence>
 	
 	<!-- Progression_Melee_and_Guns_REWARD -->
@@ -1180,6 +1184,10 @@
 		<property name="action_type" value="Game" />
 		<action class="AddXP">
 			<property name="xp_amount" value="5000" />
+		</action>
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_MeleeandGuns" param1="quest" />
+			<property name="notify" value="false" />
 		</action>
 	</action_sequence>
 	
@@ -1189,6 +1197,10 @@
 		<action class="AddXP">
 			<property name="xp_amount" value="5000" />
 		</action>
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_FoodandMedical" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
 	</action_sequence>
 	
 	<!-- Progression_Resource_Gathering_REWARD -->
@@ -1196,6 +1208,10 @@
 		<property name="action_type" value="Game" />
 		<action class="AddXP">
 			<property name="xp_amount" value="5000" />
+		</action>
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_ResourceGathering" param1="quest" />
+			<property name="notify" value="false" />
 		</action>
 	</action_sequence>
 	
@@ -1205,6 +1221,10 @@
 		<action class="AddXP">
 			<property name="xp_amount" value="5000" />
 		</action>
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_ZombieHunting" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
 	</action_sequence>
 	
 	<!-- Progression_Animal_Hunting_REWARD -->
@@ -1212,6 +1232,98 @@
 		<property name="action_type" value="Game" />
 		<action class="AddXP">
 			<property name="xp_amount" value="5000" />
+		</action>
+		<action class="AddQuest">
+			<property name="quest" value="quest_reward_AnimalHunting" param1="quest" />
+			<property name="notify" value="false" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_alarm_house_biz_lp1">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="alarm_house_biz_lp1" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_alarm_house_biz_lp2">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="alarm_house_biz_lp2" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_alarm_house_biz_lp3">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="alarm_house_biz_lp3" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_elevator_ding1">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="elevator_ding1" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_elevator_ding2">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="elevator_ding2" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_elevator_ding3">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="elevator_ding3" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_elevator_ding4">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="elevator_ding4" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_explosion_buzzer1">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="explosion_buzzer1" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_light_bay1">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="light_bay1" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_light_bay2">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="light_bay2" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="test_light_bay3">
+		<property name="action_type" value="Game" />
+		<action class="PlaySound">
+			<property name="sound" value="light_bay3" />
+			<property name="phase" value="1" />
 		</action>
 	</action_sequence>
 </append>

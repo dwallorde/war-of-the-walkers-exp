@@ -287,6 +287,10 @@
 			<display_entry name="dCraftingTime" title_key="statCraftingTimeArmourSmithingStation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
 		</item_display_info>
 		
+		<item_display_info display_type="wotwToolWSHeatedRack" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeTanningStation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		
 		<item_display_info display_type="toolScrewGun" display_group="workstationTools">
 			<display_entry name="dCraftingTime" title_key="statCraftingTimeToolSmithingWorkstation" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
 		</item_display_info>

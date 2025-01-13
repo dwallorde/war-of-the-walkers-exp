@@ -7217,4 +7217,102 @@
 		<reward type="Item" id="resourceLegendaryParts" ischosen="true" isfixed="true" value="4"/>
 </append>
 
+<append xpath="/quests">
+<!-- quest_reward_ArmourandTools -->
+	<quest id="quest_reward_ArmourandTools" template="challengegroup_reward_homesteading">
+		<variable name="name" value="quest_reward_ArmourandToolsName"/>
+		<variable name="subtitle" value="quest_reward_ArmourandToolsSubtitle"/>
+		<variable name="description" value="quest_reward_ArmourandToolsDesc"/>
+		<variable name="completion" value="quest_reward_ArmourandToolsCompletion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="wotwMeleeToolLegendaryPickaxe" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeToolLegendaryFireaxe" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeToolLegendaryShovel" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeToolLegendaryNailgun" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeToolLegendaryAuger" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeToolLegendaryChainsaw" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeToolLegendaryImpactDriver" ischosen="true" value="6"/>
+	</quest>
+	
+<!-- quest_reward_MeleeandGuns -->
+	<quest id="quest_reward_MeleeandGuns" template="challengegroup_reward_homesteading">
+		<variable name="name" value="quest_reward_MeleeandGunsName"/>
+		<variable name="subtitle" value="quest_reward_MeleeandGunsSubtitle"/>
+		<variable name="description" value="quest_reward_MeleeandGunsDesc"/>
+		<variable name="completion" value="quest_reward_MeleeandGunsCompletion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="questRewardLegendaryRifleCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="questRewardLegendaryShotgunCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="questRewardLegendaryMachineGunCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="questRewardLegendaryHandgunCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="questRewardLegendaryRoboticsCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+	
+<!-- quest_reward_FoodandMedical -->
+	<quest id="quest_reward_FoodandMedical" template="challengegroup_reward_homesteading">
+		<variable name="name" value="quest_reward_FoodandMedicalName"/>
+		<variable name="subtitle" value="quest_reward_FoodandMedicalSubtitle"/>
+		<variable name="description" value="quest_reward_FoodandMedicalDesc"/>
+		<variable name="completion" value="quest_reward_FoodandMedicalCompletion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="questRewardFarmT2Bundle" ischosen="true" value="1"/>
+		<reward type="Item" id="questRewardFarmT3Bundle" ischosen="true" value="1"/>
+		<reward type="Item" id="questRewardT3FoodBundle" ischosen="true" value="1"/>
+		<reward type="Item" id="questRewardT4FoodBundle" ischosen="true" value="1"/>
+		<reward type="LootItem" id="perkBooks" ischosen="true" value="1"/>
+	</quest>
+	
+<!-- quest_reward_ResourceGathering -->
+	<quest id="quest_reward_ResourceGathering" template="challengegroup_reward_homesteading">
+		<variable name="name" value="quest_reward_ResourceGatheringName"/>
+		<variable name="subtitle" value="quest_reward_ResourceGatheringSubtitle"/>
+		<variable name="description" value="quest_reward_ResourceGatheringDesc"/>
+		<variable name="completion" value="quest_reward_ResourceGatheringCompletion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="questRewardAmmoCraftingBundle" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="questRewardT2TrapsBundle" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="solarCell" ischosen="true" isfixed="true" value="3"/>
+		<reward type="Item" id="questRewardBladeTrapBundle" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="resourceLegendaryParts" ischosen="true" isfixed="true" value="4"/>
+	</quest>
+	
+<!-- quest_reward_ZombieHunting -->
+	<quest id="quest_reward_ZombieHunting" template="challengegroup_reward_homesteading">
+		<variable name="name" value="quest_reward_ZombieHuntingName"/>
+		<variable name="subtitle" value="quest_reward_ZombieHuntingSubtitle"/>
+		<variable name="description" value="quest_reward_ZombieHuntingDesc"/>
+		<variable name="completion" value="quest_reward_ZombieHuntingCompletion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="wotwMeleeWpnLegendaryMachete" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnClubLegendary" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnLegendaryKnife" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnSpearLegendary" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnSledgehammerLegendary" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnBatBaseballLegendary" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnSwordLegendary" ischosen="true" value="6"/>
+	</quest>
+	
+<!-- quest_reward_ZombieHunting -->
+	<quest id="quest_reward_AnimalHunting" template="challengegroup_reward_homesteading">
+		<variable name="name" value="quest_reward_AnimalHuntingName"/>
+		<variable name="subtitle" value="quest_reward_AnimalHuntingSubtitle"/>
+		<variable name="description" value="quest_reward_AnimalHuntingDesc"/>
+		<variable name="completion" value="quest_reward_AnimalHuntingCompletion"/>
+		<!-- Challenge Rewards are localized. Update challengeKillRewardReading if this list is changed. -->
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="wotwMeleeWpnLegendaryMachete" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnClubLegendary" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnLegendaryKnife" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnSpearLegendary" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnSledgehammerLegendary" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnBatBaseballLegendary" ischosen="true" value="6"/>
+		<reward type="Item" id="wotwMeleeWpnSwordLegendary" ischosen="true" value="6"/>
+	</quest>
+</append>
+
 </config>

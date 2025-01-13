@@ -559,7 +559,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="wotwAmmoHPBulletTip" count="1" craft_time="240" craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="learnable,ammoWorkstation">
+<recipe name="wotwAmmoHPBulletTipBundle" count="1" craft_time="240" craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="learnable,ammoWorkstation">
 	<ingredient name="resourceScrapLead" count="2400"/> 
 	<ingredient name="resourceClayLump" count="800"/>
 	<effect_group>

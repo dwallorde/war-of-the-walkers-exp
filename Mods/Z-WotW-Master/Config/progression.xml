@@ -436,7 +436,6 @@
 	</book>
 </insertAfter>
 
-
 <remove xpath="/progression/perks/book[@name='perkArtOfMiningPallets']"/>
 <insertAfter xpath="/progression/perks/book[@name='perkArtOfMiningBlackStrap']">
 	<!-- *** ART_OF_MINING_VOLUME_05_BUNDLES -->
@@ -448,6 +447,8 @@
 		</effect_group>
 	</book>
 </insertAfter>
+
+<set xpath="/progression/perks/book[@name='perkLuckyLooterAmmunition']/effect_group/passive_effect[@name='LootQuantity']/@value">.1</set>
 
 <insertAfter xpath="/progression/perks/book[@name='perkSpearHunter8Complete']">
 	<book name="perkCarryingCapacitySmall" parent="skillCarryingCapacity" max_level="1" base_skill_point_cost="0" name_key="perkCarryingCapacitySmallName" desc_key="perkCarryingCapacitySmallDesc">
@@ -5542,8 +5543,7 @@
 			<unlock_entry item="plantedAppleTreeFert1" unlock_tier="2" />
 			<unlock_entry item="plantedBlackberryFert1" unlock_tier="3" />
 			<unlock_entry item="plantedStrawberryFert1" unlock_tier="4" />
-			<unlock_entry item="plantedCocoaFert1" unlock_tier="5" />
-			<!-- <unlock_entry item="fishingPoleWood,resourceIronHook,resourceFishingSpool,weaponBugnet,plantedCocoaFert1" unlock_tier="5" /> -->
+			<unlock_entry item="fishingPoleWood,resourceIronHook,resourceFishingSpool,weaponBugnet,plantedCocoaFert1" unlock_tier="5" />
 		</display_entry>
 		<display_entry icon="seedPepperFert,seedCarrotFert,seedCucumberFert,seedLeekFert,wotwMeleeToolSteelHoe" name_key="seedsT8-1,seedsT8-2,seedsT8-3,seedsT8-4,seedsT8-5" has_quality="false" unlock_level="72,74,76,78,80" >
 			<unlock_entry item="plantedPepperFert1,plantedMelonFert1" unlock_tier="1" />
@@ -5622,7 +5622,6 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="64,120" value="1" tags="plantedAppleTreeFert1"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="66,120" value="1" tags="plantedBlackberryFert1"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="68,120" value="1" tags="plantedStrawberryFert1"/>
-			<!-- <passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,120" value="1" tags="plantedCocoaFert1"/> -->
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,120" value="1" tags="fishingPoleWood,resourceIronHook,resourceFishingSpool,weaponBugnet,plantedCocoaFert1"/>
 			
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="72,120" value="1" tags="plantedPepperFert1,plantedMelonFert1"/>

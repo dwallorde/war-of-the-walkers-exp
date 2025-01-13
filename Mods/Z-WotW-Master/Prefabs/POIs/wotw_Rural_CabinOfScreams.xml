@@ -80,9 +80,6 @@
       <property name="3" value="51, 24, 53" />
       <property name="4" value="55, 24, 53" />
     </property>
-    <property class="challenge_polymers">
-      <property name="0" value="48, 18, 47" />
-    </property>
     <property class="challenge_gore">
       <property name="0" value="50, 4, 46" />
       <property name="1" value="51, 4, 49" />
@@ -92,6 +89,9 @@
       <property name="0" value="50, 18, 33" />
       <property name="1" value="46, 18, 40" />
       <property name="2" value="50, 18, 45" />
+    </property>
+    <property class="challenge_polymers">
+      <property name="0" value="48, 18, 47" />
     </property>
     <property class="challenge_mech_parts">
       <property name="0" value="13, 24, 26" />
