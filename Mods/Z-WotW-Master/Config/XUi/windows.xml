@@ -15,22 +15,12 @@
 
 <append xpath="/windows/window[@name='ingameMenu']">
 	<rect name="wotwmenu_version_control">
-		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Exp Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
-		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.2.1.6" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
+		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
+		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.2.1.7" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
 	</rect>
 	<rect name="npcmenu_image">
 		<sprite name="WOTWingameMenuPoweredLogo" depth="4" pos="60,100" size="248,66" atlas="uiAtlas" sprite="wotw_POWERED_LOGO_inGameMenu" pivot="bottom" globalopacitymod="1.5" />
 	</rect>
-</append>
-
-<append xpath="/windows">
-	<window name="WOTWwindowCraftingQueue" width="397" height="78" panel="Left" cursor_area="true" >
-		<rect depth="0" pos="-52,-90" width="303" controller="CraftingQueue">
-			<grid name="queue" rows="2" cols="6" pos="73,82" cell_width="60" cell_height="60" repeat_content="true">
-				<wotw_recipe_stack name="0"/>
-			</grid>
-		</rect>
-	</window>
 </append>
 
 <append xpath="/windows">
@@ -43,566 +33,915 @@
 	</window>
 </append>
 
-<!-- Mortar & Pestle Tools -->
-<append xpath="/windows">
-	<window name="windowToolsMortar" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
+<!-- WOTW Mortar & Pestle Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsMortar" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
 
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
-			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBeaker,wotwToolAdvancedPestle" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- WOTW Armour Smithing -->
-<append xpath="/windows">
-	<window name="windowToolsArmourSmithing" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolSmoothJawPliers" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- WOTW Tool Workbench -->
-<append xpath="/windows">
-	<window name="windowToolsToolWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="hammerRounding,wotwToolScrewGun" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- WOTW Builders Workbench -->
-<append xpath="/windows">
-	<window name="windowToolsBuildersWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="rebarBender,weldingTool,wotwToolTapeMeasure" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- WOTW Blueprint Workbench -->
-<append xpath="/windows">
-	<window name="windowToolsBlueprintStation" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,wotwToolPortableCNC" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Weaponsmithing Workstation Tool Window -->
-<append xpath="/windows">
-	<window name="windowToolsGunSmithing" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolBrassHammer" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Player Oven Tool Window -->
-<append xpath="/windows">
-	<window name="windowToolsPlayerOven" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="2" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="fryingPan,roastingPan,loafPan,toolCookingPot,toolCookingGrill,toolBeaker" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Food Processing Table Tool Window -->
-<append xpath="/windows">
-	<window name="windowToolsFoodProcessingTable" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolCuttingBoard,wotwToolSharpKnife" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Tungsten Forge Tool Window -->
-<append xpath="/windows">
-<window name="windowToolsTungstenForge" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Stone Forge Tool Window -->
-<append xpath="/windows">
-	<window name="windowToolsStoneForge" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Ammo Forge Tool Window -->
-<append xpath="/windows">	
-	<window name="windowToolsAmmoForge" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolAndDieSet" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Fabrication Tool Window -->
-<append xpath="/windows">
-	<window name="windowToolsFabrication" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolSewingMachine" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Ammo Workstation Tool Window -->
-<append xpath="/windows">
-	<window name="windowToolsAmmoStation" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolReloadingPress" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<!-- Mechanic Workstation Tool Window -->
-<append xpath="/windows">
-	<window name="windowToolsMechanicBench" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolSocketSet" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<append xpath="/windows">
-	<window name="windowToolsWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<append xpath="/windows">
-	<window name="windowToolsCementMixer" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,ecoSmallEngine,hdSmallEngine" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<append xpath="/windows">
-	<window name="windowToolsChemistryStation" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-
-	<window name="windowToolsTablesaw" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,wotwToolWSCarbideBlade" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-	
-	<window name="windowToolsTanner" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="TOOLS" text_key="xuiTools" />
-		</panel>
-
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-
-			<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolWSHeatedRack" required_tools_only="true">
-				<item_stack controller="RequiredItemStack" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
-
-<append xpath="/windows">
-			<window name="windowCraftingQueueWorkstationFuelSMXStandard" depth="10" width="136" height="68" panel="Left" cursor_area="true">
-				<rect name="smxui_queue_module" depth="9" pos="410,400" width="136" height="204" controller="CraftingQueue">
-
-					<sprite name="backgroundMain" depth="2" width="136" height="204" sprite="menu_empty" type="sliced" color="[smxui_slot_main_background]" on_press="true" />
-
-					<grid name="queue" depth="10" pos="34,-34" rows="3" cols="2" cell_width="68" cell_height="68" arrangement="vertical" repeat_content="true">
-						<smxui_crafting_recipe_stack name="0"/>
+					<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBeaker,wotwToolAdvancedPestle" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
 
-				<rect name="smxui_queue_art_module" depth="10" pos="410,200" width="136" height="80">
-					<sprite name="smxui_artline_vertical" depth="1" pos="102,-5" width="80" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="270" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
-					<sprite name="smxui_artline_horizontal" depth="1" pos="-40,-57" width="160" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="0" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsMortar" depth="4" pos="-475,150" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="2" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBeaker,wotwToolAdvancedPestle" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
 				</rect>
 			</window>
-</append>
+		</append>
+	</if>
+</conditional>
 
-<append xpath="/windows">
-	<window name="windowOutputWorkstationFuelSMXStandard" depth="9" width="360" height="68" anchor="CenterTop" panel="Left" cursor_area="true" >
-		<rect name="smxui_content_module" depth="0" pos="30,100" height="75" disablefallthrough="true" on_press="true">
+<!-- WOTW Armour Smithing Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsArmourSmithing" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
 
-			<sprite name="backgroundMain" depth="2" width="340" height="68" sprite="menu_empty" type="sliced" color="[smxui_slot_main_background]" on_press="true" />
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
-			<grid name="inventory" depth="10" pos="34,-34" rows="1" cols="5" cell_width="68" cell_height="68" repeat_content="true" controller="WorkstationOutputGrid">
-				<smxui_output_item_stack name="0"/>
-			</grid>
-		</rect>
-	</window>
-	
-	<window name="windowToolswotwAdvDewCollector" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
-			<label style="header.name" text="MODIFIERS" text_key="adcXuiModifiers" />
-		</panel>
+					<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolSmoothJawPliers" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
 
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="IDC_Core.XUiC_PassiveCollectorToolGrid, IDCCore" repeat_content="true"
-			required_tools="adcAdvancedFilter,adcLargeCatcher,adcBigBarrel" required_tools_only="true">
-				<item_stack controller="IDC_Core.XUiC_RequiredItemStack,IDCCore" name="0"/>
-			</grid>
-		</rect>
-	</window>
-	
-	<window name="windowwotwAdvDewCollector" width="{windowWidth}" height="378" controller="IDC_Core.XUiC_PassiveCollectorWindow, IDCCore" panel="Left" anchor_side="bottomright" visible="false" cursor_area="true" >
-		<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
-			<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
-			<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
-			<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiDewCollector" font_size="32" />
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsArmourSmithing" depth="4" pos="-475,50" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="1" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolSmoothJawPliers" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Tool Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsToolWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="hammerRounding,wotwToolScrewGun" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsToolWorkbench" depth="4" pos="-475,150" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="2" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="hammerRounding,wotwToolScrewGun" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Builders Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsBuildersWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="rebarBender,weldingTool,wotwToolTapeMeasure" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsBuildersWorkbench" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="rebarBender,weldingTool,wotwToolTapeMeasure" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Blueprint Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsBlueprintStation" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,wotwToolPortableCNC" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsBlueprintStation" depth="4" pos="-475,150" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="2" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,wotwToolPortableCNC" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Gun Smithing Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsGunSmithing" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolBrassHammer" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsGunSmithing" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolBrassHammer" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Player Oven Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsPlayerOven" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="2" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="fryingPan,roastingPan,loafPan,toolCookingPot,toolCookingGrill,toolBeaker" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsPlayerOven" depth="4" pos="-475,550" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="6" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="fryingPan,roastingPan,loafPan,toolCookingPot,toolCookingGrill,toolBeaker" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Food Processing Table -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsFoodProcessingTable" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolCuttingBoard,wotwToolSharpKnife" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsFoodProcessingTable" depth="4" pos="-475,150" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="2" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolCuttingBoard,wotwToolSharpKnife" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsWotWForge" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Tungsten Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsTungstenForge" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsTungstenForge" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Stone Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsStoneForge" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsStoneForge" depth="4" pos="-475,150" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="2" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Ammo Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">	
+			<window name="windowToolsAmmoForge" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolAndDieSet" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">	
+			<window name="windowToolsAmmoForge" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolAndDieSet" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Fabrication Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsFabrication" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolSewingMachine" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsFabrication" depth="4" pos="-475,50" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="1" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolSewingMachine" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- Ammo Workstation Tool Window -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsAmmoStation" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolReloadingPress" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsAmmoStation" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolReloadingPress" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Mechanic Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsMechanicBench" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolSocketSet" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsMechanicBench" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="calipers,toolAndDieSet,wotwToolSocketSet" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- Workbench -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsWorkbench" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- Cement Mixer -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsCementMixer" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,ecoSmallEngine,hdSmallEngine" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsCementMixer" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,ecoSmallEngine,hdSmallEngine" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- Chemistry Station -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsChemistryStation" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsChemistryStation" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Tablesaw Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsTablesaw" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,wotwToolWSCarbideBlade" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsTablesaw" depth="4" pos="-475,150" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="2" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,wotwToolWSCarbideBlade" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Tanning Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsTanner" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolWSHeatedRack" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsTanner" depth="4" pos="-475,50" width="610" height="101" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
+					<grid name="inventory" rows="1" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolWSHeatedRack" required_tools_only="true">
+						<general_item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Advanced Dew Collector -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolswotwAdvDewCollector" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+					<label style="header.name" text="MODIFIERS" text_key="adcXuiModifiers" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="IDC_Core.XUiC_PassiveCollectorToolGrid, IDCCore" repeat_content="true"
+					required_tools="adcAdvancedFilter,adcLargeCatcher,adcBigBarrel" required_tools_only="true">
+						<item_stack controller="IDC_Core.XUiC_RequiredItemStack,IDCCore" name="0"/>
+					</grid>
+				</rect>
+			</window>
 			
-			<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
-		</panel>
-		<rect name="content" pos="3,-49" >
-			<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="queue,0,-3" anchor_bottom="queue,0,0" anchor_right="queue,1,0" anchor_top="queue,1,49" on_press="true" />
-			<grid depth="12" name="queue" rows="3" cols="3" cell_width="75" cell_height="75" repeat_content="true" controller="IDC_Core.XUiC_PassiveCollectorContainer, IDCCore" required_item="drinkJarEmpty">
-				<dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
-			</grid>
-		</rect>
-	</window>
-	
-	<!-- Oil Pump -->
-	<window name="windowToolsoilPump" width="228" height="121" panel="Right" cursor_area="true" >
-		<panel style="header.panel">
-			<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
-			<label style="header.name" text="MODIFIERS" text_key="adcXuiModifiers" />
-		</panel>
+			<window name="windowwotwAdvDewCollector" width="{windowWidth}" height="378" controller="IDC_Core.XUiC_PassiveCollectorWindow, IDCCore" panel="Left" anchor_side="bottomright" visible="false" cursor_area="true" >
+				<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
+					<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
+					<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
+					<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiDewCollector" font_size="32" />
+					
+					<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
+				</panel>
+				<rect name="content" pos="3,-49" >
+					<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="queue,0,-3" anchor_bottom="queue,0,0" anchor_right="queue,1,0" anchor_top="queue,1,49" on_press="true" />
+					<grid depth="12" name="queue" rows="3" cols="3" cell_width="75" cell_height="75" repeat_content="true" controller="IDC_Core.XUiC_PassiveCollectorContainer, IDCCore" required_item="drinkJarEmpty">
+						<dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
 
-		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="IDC_Core.XUiC_PassiveCollectorToolGrid, IDCCore" repeat_content="true"
-			required_tools="wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor" required_tools_only="true">
-				<item_stack controller="IDC_Core.XUiC_RequiredItemStack,IDCCore" name="0"/>
-			</grid>
-		</rect>
-	</window>
-	
-	<window name="windowoilPump" width="{windowWidth}" height="378" controller="IDC_Core.XUiC_PassiveCollectorWindow, IDCCore" panel="Left" anchor_side="bottomright" visible="false" cursor_area="true" >
-		<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
-			<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
-			<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
-			<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiDewCollector" font_size="32" />
+<!-- WOTW Advanced Dew Collector -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolswotwAdvDewCollector" depth="3" pos="-920,475" width="610" height="880" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="185,-620" height="101" disablefallthrough="true">
+					<grid name="inventory" pos="0,-145" rows="1" cols="3" cell_width="121" cell_height="101" controller="IDC_Core.XUiC_PassiveCollectorToolGrid, IDCCore" repeat_content="true" required_tools="adcAdvancedFilter,adcLargeCatcher,adcBigBarrel" required_tools_only="true">
+						<general_item_stack controller="IDC_Core.XUiC_RequiredItemStack,IDCCore" name="0"/>
+					</grid>
+				</rect>
+			</window>
 			
-			<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
-		</panel>
-		<rect name="content" pos="3,-49" >
-			<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="queue,0,-3" anchor_bottom="queue,0,0" anchor_right="queue,1,0" anchor_top="queue,1,49" on_press="true" />
-			<grid depth="12" name="queue" rows="3" cols="3" cell_width="75" cell_height="75" repeat_content="true" controller="IDC_Core.XUiC_PassiveCollectorContainer, IDCCore" required_item="drinkJarEmpty">
-				<dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
-			</grid>
-		</rect>
-	</window>
-</append>
+			<window name="windowwotwAdvDewCollector" depth="3" pos="-920,475" width="610" height="880" anchor="CenterCenter" controller="IDC_Core.XUiC_PassiveCollectorWindow, IDCCore" visible="false" cursor_area="true">
+				<sprite name="smx_menu_separation" depth="2" pos="305,-700" width="301" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+				<rect name="leftPanel" pos="0,0" width="610" height="880">
+					<rect name="newContent">
+						<sprite name="smx_panel_background" depth="1" width="650" pivot="center" sprite="smx_menu_background" type="sliced" color="7,7,7,219" anchor_left="#cam,0,-10" anchor_right="#cam,1,-1235" anchor_bottom="#cam,0,-5" anchor_top="#cam,1,-50" />
+						<rect name="header" pos="0,0" width="610" height="110">
+							<label name="windowName" depth="4" pos="305,-70" width="590" height="52" pivot="center" style="smx_label_outline" text_key="xuiDewCollector" font_size="50" spacing_x="2" justify="center" upper_case="true" color="255,255,255,255" />
+							<sprite name="smx_panel_separation" depth="4" pos="305,-105" width="500" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+							<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false">
+							</rect>
+						</rect>
+					</rect>
+				</rect>
+				<rect name="content" pos="185,-420" >
+					<grid depth="12" name="queue" rows="3" cols="3" cell_width="121" cell_height="101" repeat_content="true" controller="IDC_Core.XUiC_PassiveCollectorContainer, IDCCore" required_item="drinkJarEmpty">
+						<wotw_smx_dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Oil Pump Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsoilPump" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="MODIFIERS" text_key="adcXuiModifiers" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="IDC_Core.XUiC_PassiveCollectorToolGrid, IDCCore" repeat_content="true"
+					required_tools="wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor" required_tools_only="true">
+						<item_stack controller="IDC_Core.XUiC_RequiredItemStack,IDCCore" name="0"/>
+					</grid>
+				</rect>
+			</window>
+			
+			<window name="windowoilPump" width="{windowWidth}" height="378" controller="IDC_Core.XUiC_PassiveCollectorWindow, IDCCore" panel="Left" anchor_side="bottomright" visible="false" cursor_area="true" >
+				<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
+					<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
+					<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
+					<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiDewCollector" font_size="32" />
+					
+					<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
+				</panel>
+				<rect name="content" pos="3,-49" >
+					<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="queue,0,-3" anchor_bottom="queue,0,0" anchor_right="queue,1,0" anchor_top="queue,1,49" on_press="true" />
+					<grid depth="12" name="queue" rows="3" cols="3" cell_width="75" cell_height="75" repeat_content="true" controller="IDC_Core.XUiC_PassiveCollectorContainer, IDCCore" required_item="drinkJarEmpty">
+						<dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolsoilPump" depth="3" pos="-920,475" width="610" height="880" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="185,-620" height="101" disablefallthrough="true">
+					<grid name="inventory" pos="0,-145" rows="1" cols="3" cell_width="121" cell_height="101" controller="IDC_Core.XUiC_PassiveCollectorToolGrid, IDCCore" repeat_content="true" required_tools="wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor" required_tools_only="true">
+						<general_item_stack controller="IDC_Core.XUiC_RequiredItemStack,IDCCore" name="0"/>
+					</grid>
+				</rect>
+			</window>
+
+			<window name="windowoilPump" depth="3" pos="-920,475" width="610" height="880" anchor="CenterCenter" controller="IDC_Core.XUiC_PassiveCollectorWindow, IDCCore" visible="false" cursor_area="true">
+				<sprite name="smx_menu_separation" depth="2" pos="305,-700" width="301" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+				<rect name="leftPanel" pos="0,0" width="610" height="880">
+					<rect name="newContent">
+						<sprite name="smx_panel_background" depth="1" width="650" pivot="center" sprite="smx_menu_background" type="sliced" color="7,7,7,219" anchor_left="#cam,0,-10" anchor_right="#cam,1,-1235" anchor_bottom="#cam,0,-5" anchor_top="#cam,1,-50" />
+						<rect name="header" pos="0,0" width="610" height="110">
+							<label name="windowName" depth="4" pos="305,-70" width="590" height="52" pivot="center" style="smx_label_outline" text_key="xuiDewCollector" font_size="50" spacing_x="2" justify="center" upper_case="true" color="255,255,255,255" />
+							<sprite name="smx_panel_separation" depth="4" pos="305,-105" width="500" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+							<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false">
+							</rect>
+						</rect>
+					</rect>
+				</rect>
+				<rect name="content" pos="185,-420" >
+					<grid depth="12" name="queue" rows="3" cols="3" cell_width="121" cell_height="101" repeat_content="true" controller="IDC_Core.XUiC_PassiveCollectorContainer, IDCCore" required_item="drinkJarEmpty">
+						<wotw_smx_dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
 
 <set xpath="/windows/window[@name='windowQuestObjectives']/@height">280</set>
 <set xpath="/windows/window[@name='windowQuestObjectives']/rect[@name='content']/@height">234</set>
-<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@rows">7</set>
-<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@cell_height">43</set> <!-- 42 -->
-<!-- <set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@height">195</set> -->
-<append xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid">
+
+<!-- Ingredient Row Addition -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@rows">7</set>
+		<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@cell_height">43</set>
+		<append xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid">
 					<ingredient_row name="6"/>
-</append>
-<!-- <set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='smxui_window_content']/rect[@name='smxui_ingredients_module']/grid[@name='ingredients']/@rows">6</set>
-<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='smxui_window_content']/rect[@name='smxui_ingredients_module']/grid[@name='ingredients']/@cell_height">50</set> -->
+		</append>
+	</if>
+</conditional>
 
-<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cols">15</set>
-<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@pos">44,-30</set>
-<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cell_width">66</set>
-<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']//@cell_width">66</set>
-<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cell_height">66</set>
-<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']//@cell_height">66</set>
-<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cols">15</set>
-<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cell_width">66</set>
-<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']//@cell_width">66</set>
-<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cell_height">66</set>
-<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']//@cell_height">66</set>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cols">15</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@pos">44,-30</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cell_width">66</set>
+		<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']//@cell_width">66</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cell_height">66</set>
+		<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']//@cell_height">66</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cols">15</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cell_width">66</set>
+		<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']//@cell_width">66</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cell_height">66</set>
+		<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']//@cell_height">66</set>
+	</if>
+</conditional>
 
-<!-- <set xpath="/windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory']/@cols">15</set>
-<set xpath="/windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory']/@pos">44,-30</set>
-<set xpath="/windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory']/@cell_width">66</set>
-<set xpath="windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory']//@cell_width">66</set>
-<set xpath="/windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory']/@cell_height">66</set>
-<set xpath="windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory']//@cell_height">66</set>
-<set xpath="/windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory2']/@cols">15</set>
-<set xpath="/windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory2']/@cell_width">66</set>
-<set xpath="windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory2']//@cell_width">66</set>
-<set xpath="/windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory2']/@cell_height">66</set>
-<set xpath="windows/window[@name='windowToolbeltHIDDEN']/rect/grid[@name='inventory2']//@cell_height">66</set> -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cols">15</set>
+		<!-- <set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@pos">44,-30</set> -->
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cell_width">66</set>
+		<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']//@cell_width">66</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']/@cell_height">66</set>
+		<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory']//@cell_height">66</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cols">15</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cell_width">66</set>
+		<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']//@cell_width">66</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']/@cell_height">66</set>
+		<set xpath="windows/window[@name='windowToolbelt']/rect/grid[@name='inventory2']//@cell_height">66</set>
+	</if>
+</conditional>
 
-<set xpath="/windows/window[@name='windowCraftingQueue']/rect/grid[@name='queue']/@rows">2</set>
-<!-- <set xpath="/windows/window[@name='windowOutputWorkstationFuel']/rect/grid[@name='inventory']/@rows">2</set>
-<set xpath="/windows/window[@name='windowOutputWorkstationNoFuel']/rect/grid[@name='inventory']/@rows">2</set> -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='windowCraftingQueue']/rect/grid[@name='queue']/@rows">2</set>
+	</if>
+</conditional>
 
-<!-- <set xpath="/windows/window[@name='windowOutputWorkstationNoFuel']/rect/rect[@name='smx_output_dump']/@pos">370,-26</set>
-<set xpath="/windows/window[@name='windowOutputWorkstationNoFuel']/rect/rect[@name='smx_output_dump']/button[@name='btnMoveAll']/@size">22,22</set>
-<set xpath="/windows/window[@name='windowOutputWorkstationNoFuel']/rect/rect[@name='smx_output_dump']/button[@name='btnMoveAll']/@pos">-8,0</set>
-<set xpath="/windows/window[@name='windowOutputWorkstationNoFuel']/rect/rect[@name='smx_output_dump']/sprite[@name='smxui_artbox_background_45']/@width">42</set>
-<set xpath="/windows/window[@name='windowOutputWorkstationNoFuel']/rect/rect[@name='smx_output_dump']/sprite[@name='smxui_artbox_background_45']/@height">42</set>
-<set xpath="/windows/window[@name='windowOutputWorkstationNoFuel']/rect/rect[@name='smx_output_dump']/sprite[@name='smxui_artbox_foreground_45']/@width">38</set>
-<set xpath="/windows/window[@name='windowOutputWorkstationNoFuel']/rect/rect[@name='smx_output_dump']/sprite[@name='smxui_artbox_foreground_45']/@height">38</set> -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">14</set>
+		<set xpath="/windows/window[@name='windowQuestTracker']/grid[@name='objectiveList']/@rows">15</set>
+		<set xpath="/windows/window[@name='windowQuestObjectives']/rect[@name='content']/rect[@visible='{showquest}']/grid[@name='objectiveList']/@rows">15</set>
+	</if>
+</conditional>
 
-<!-- <set xpath="/windows/window[@name='windowCraftingQueueWorkstationNoToolNoFuel']/rect/grid[@name='queue']/@cols">2</set>
-
-<set xpath="/windows/window[@name='windowCraftingQueueWorkstationNoFuel']/rect/grid[@name='queue']/@cols">2</set>
-<set xpath="/windows/window[@name='windowCraftingQueueWorkstationNoFuel']/rect/grid[@name='queue']/@rows">6</set>
-<set xpath="/windows/window[@name='windowCraftingQueueWorkstationNoFuel']/rect[@name='smxui_queue_module']/@pos">410,500</set>
-<set xpath="/windows/window[@name='windowCraftingQueueWorkstationNoFuel']/rect[@name='smxui_queue_art_module']/@pos">410,300</set>
-
-<set xpath="/windows/window[@name='windowCraftingQueueWorkstationFuel']/rect/grid[@name='queue']/@cols">4</set>
-
-<set xpath="/windows/window[@name='windowBackpack']/smxui_window_design_content_inventory/@rows2">24</set> -->
-<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">14</set>
-
-<set xpath="/windows/window[@name='windowQuestTracker']/grid[@name='objectiveList']/@rows">15</set>
-
-<set xpath="/windows/window[@name='windowQuestObjectives']/rect[@name='content']/rect[@visible='{showquest}']/grid[@name='objectiveList']/@rows">15</set>
-
-<!-- <set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='smxui_main_content_module']/rect[@name='smxui_perks_module']/rect[@name='smxui_perkentries_module']/scrollview[@name='scrollview']/grid[@name='smxui_perk_grid']/@rows">100</set> -->
-<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cols">9</set>
-<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cell_width">41</set>
-<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cell_height">41</set>
-<!-- <set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/grid/@rows">10</set> -->
-<!-- <set xpath="/windows/window[@name='windowSkillCraftingInfo']/rect/rect[@name='tableBox']/grid/@rows">15</set> -->
-
-<!-- <remove xpath="/windows/window[@name='windowResponses']/grid[@name='items']"/>
-<set xpath="/windows/window[@name='windowResponses']/@pos">0,300</set> -->
-<!-- <set xpath="/windows/window[@name='windowResponses']/sprite[@name='smxui_response_background']/@width">1600</set>
-<set xpath="/windows/window[@name='windowResponses']/sprite[@name='smxui_response_background']/@height">475</set>
-<set xpath="/windows/window[@name='windowResponses']/sprite[@name='smxui_response_background']/@pos">0,-75</set>
-<set xpath="/windows/window[@name='windowResponses']/label[@name='characterName']/@pos">-300,65</set>
-<set xpath="/windows/window[@name='windowResponses']/panel[@name='previewFrame']/@pos">-650,180</set> -->
-
-<!-- <set xpath="/windows/window[@name='windowResponses']/grid[@name='items']/@pos">-380,20</set>
-<set xpath="/windows/window[@name='windowResponses']/grid[@name='items']/@width">960</set>
-<set xpath="/windows/window[@name='windowResponses']/grid[@name='items']/@rows">8</set>
-<set xpath="/windows/window[@name='windowResponses']/grid[@name='items']/@cols">3</set> -->
-
-<!-- <append xpath="/windows/window[@name='windowResponses']">
-				<scrollbar	name="scrollbar"
-							depth="6"
-							pos="725,-75"
-							width="24"
-							height="390"
-							padding="4"
-							foregroundname="handler"
-							foregroundsprite="smxlib_scrollbar_handler"
-							foregroundcolor="[smxui_scrollbar_handler]"
-							backgroundname="background"
-							backgroundsprite="smxlib_scrollbar_background"
-							backgroundcolor="[smxui_scrollbar_background]"
-							pivot="center"
-							globalopacitymod="1.8">
-
-					<button name="handler" sprite="smxlib_scrollbar_handler" pivot="center" hovercolor="[smxui_scrollbar_handler_hover]" color="[smxui_scrollbar_handler]" defaultcolor="[smxui_scrollbar_handler]" hoverscale="1" />
-					<button name="background" sprite="smxlib_scrollbar_background" pivot="center" hovercolor="[smxui_scrollbar_background_hover]" color="[smxui_scrollbar_background]" defaultcolor="[smxui_scrollbar_background]" hoverscale="1" sound_play_on_press_down="[paging_click]" />
-				</scrollbar>
-
-				<scrollview name="scrollview" depth="5" pos="-350,100" width="4000" height="350" scrollbar="scrollbar" reset_position="true" over_scroll="false" scroll_speed="2.5">
-
-					<grid name="items" pos="0,0" width="4000" height="350" rows="20" cols="3" cell_width="350" cell_height="36" repeat_content="true" controller="DialogResponseList" arrangement="vertical">
-						<smxui_response_entry id="0" enabled_color="[iconColor]" disabled_color="[disabledLabelColor]" row_color="[white]" hover_color="[lightGrey]" />
-					</grid>
-
-				</scrollview>
-</append> -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cols">9</set>
+		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cell_width">41</set>
+		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cell_height">41</set>
+	</if>
+</conditional>
 
 <!-- Window Looting Changes -->
-<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">13</set>
-<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">13</set>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">13</set>
+		<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">13</set>
+	</if>
+</conditional>
 
-<!--JNS Backpack Changes -->
-<!-- <set xpath="/windows/window[@name='windowBackpack']/@width">674</set> -->
-<!-- <set xpath="/windows/window[@name='windowBackpack']/smxcore_window_design/@width">674</set>
-<set xpath="/windows/window[@name='windowBackpack']/smxui_window_design_content_inventory/@width">564</set>
-<set xpath="/windows/window[@name='windowBackpack']/smxui_window_design_content_inventory/@rows2">15</set>
-<set xpath="/windows/window[@name='windowBackpack']/smxui_window_design_content_inventory/@cols">8</set>
-<set xpath="/windows/window[@name='windowBackpack']/smxui_window_design_content_inventory/@cell_width">68</set>
-<set xpath="/windows/window[@name='windowBackpack']/smxui_window_design_content_inventory/@cell_height">68</set>
-<set xpath="/windows/window[@name='windowBackpack']/smxui_window_design_menu_right_inventory/@width">674</set> -->
-
-<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">12</set>
-<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">12</set>
-
-<!-- <set xpath="/windows/window[@name='windowCraftingList']/smxui_window_design_menu_top_category/@cols">10</set>
-<set xpath="/windows/window[@name='windowCraftingList']/smxui_window_design_menu_top_category/@width">300</set>
-<set xpath="/windows/window[@name='windowCraftingList']/smxui_window_design_menu_top_category/@height">40</set> -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">12</set>
+		<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">12</set>
+	</if>
+</conditional>
 
 <setattribute xpath="/windows/window[@name='windowHireInformation']" name="cursor_area">true</setattribute>
 <setattribute xpath="/windows/window[@name='windowHireInformationPopup']" name="cursor_area">true</setattribute>
 <setattribute xpath="/windows/window[@name='windowJoinInformationPopup']" name="cursor_area">true</setattribute>
-
-<!-- <set xpath="/windows/window[@name='windowLooting']/rect[@name='smxui_lootwindow_design']/button[@name='btnBroadcast']/@tooltip_key">xuiBroadcast</set> -->
-
-<!-- <insertAfter xpath="/windows/window[@name='windowChallengeEntryDescription']/rect[@name='content']/grid[@name='objectives']/rect[@visible='{hasobjective3}']">
-				<rect depth="2" width="520" height="30" visible="{hasobjective4}" >
-					<rect pos="15,0">
-						<sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
-						<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
-
-						<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
-
-						<filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill4}" />
-						<label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective4}"/>
-
-						<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-					</rect>
-				</rect>
-</insertAfter> -->
 
 <remove xpath="/windows/window[@name='windowChallengeEntryDescription']"/>
 
@@ -735,4 +1074,101 @@
 	
 	<set xpath="/windows/window[@name='ingameMenu']/grid[@name='smx_mod_grid']/@pos">50,410</set>
 
+<!-- <conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows/window[@name='windowBackpack']/panel/rect">
+					<rect pos="0, 0" visible="{moveFollower}">
+						<button depth="3" name="btnMoveFillAndSmart" sprite="ui_game_symbol_store_similar_down" tooltip_key="lblStashFillAndSmart" pos="200, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]"/>
+						<button depth="3" name="btnMoveAll" sprite="ui_game_symbol_store_all_down" tooltip_key="lblStashAll" pos="240, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]"/>
+					</rect>
+		</append>
+	</if>
+</conditional> -->
+
+<!-- <set xpath="/windows/window[@name='windowBackpack']/panel/rect/rect/@visible">true</set> -->
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Perception']/smx_skills_skill_grid[@groupName='Combat']/@perkCount">3</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Perception']/smx_skills_skill_grid[@groupName='Combat']/@groupName">Covert Defenses:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Perception']/smx_skills_skill_grid[@groupName='General']/@pos">435,91</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Perception']/smx_skills_skill_grid[@groupName='General']/@groupName">Hide and Seek:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Perception']/smx_skills_skill_grid[@groupName='Scavening']/@pos">740,91</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Perception']/smx_skills_skill_grid[@groupName='Scavening']/@groupName">Explosive Fighting:</set>
+	
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Strength']/smx_skills_skill_grid[@groupName='Combat']/@perkCount">2</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Strength']/smx_skills_skill_grid[@groupName='Combat']/@groupName">Soldier Defenses:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Strength']/smx_skills_skill_grid[@groupName='General']/@pos">335,91</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Strength']/smx_skills_skill_grid[@groupName='General']/@groupName">Melee Offense:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Strength']/smx_skills_skill_grid[@groupName='Construction']/@perkCount">4</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Strength']/smx_skills_skill_grid[@groupName='Construction']/@pos">640,91</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Strength']/smx_skills_skill_grid[@groupName='Construction']/@groupName">Firearm Offense:</set>
+	
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Fortitude']/smx_skills_skill_grid[@groupName='Combat']/@groupName">Survival Skills:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Fortitude']/smx_skills_skill_grid[@groupName='Survival']/@perkCount">3</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Fortitude']/smx_skills_skill_grid[@groupName='Survival']/@groupName">Expert Hunting and Foraging:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Fortitude']/smx_skills_skill_grid[@groupName='Recovery']/@pos">740,91</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Fortitude']/smx_skills_skill_grid[@groupName='Recovery']/@groupName">Well Being:</set>
+	
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Agility']/smx_skills_skill_grid[@groupName='Combat']/@perkCount">3</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Agility']/smx_skills_skill_grid[@groupName='Combat']/@groupName">Loot and Pack:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Agility']/smx_skills_skill_grid[@groupName='Athletics']/@pos">435,91</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Agility']/smx_skills_skill_grid[@groupName='Athletics']/@groupName">Caring Operator:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Agility']/smx_skills_skill_grid[@groupName='Stealth']/@perkCount">3</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Agility']/smx_skills_skill_grid[@groupName='Stealth']/@pos">740,91</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Agility']/smx_skills_skill_grid[@groupName='Stealth']/@groupName">Engineering:</set>
+	
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Intellect']/smx_skills_skill_grid[@groupName='Combat']/@groupName">Bartering Miner:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Intellect']/smx_skills_skill_grid[@groupName='Influence']/@groupName">Rewarding Run:</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Intellect']/smx_skills_skill_grid[@groupName='Craftsmanship']/@perkCount">3</set>
+		<set xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']/rect[@name='Intellect']/smx_skills_skill_grid[@groupName='Craftsmanship']/@groupName">Craftsman Skills:</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows/window[@name='windowSkillList']/rect/rect/rect/rect[@controller='SMXcore.SkillList, SMXcore']/scrollview/table[@name='skillList']">
+												<rect name="Advanced Perks">
+													<smx_skills_attribute_entry name="Intellect" pos="0,2" size="90,90" rotation="0" />
+													<smx_skills_skill_grid pos="130,91" perkCount="5" groupName="Operations:" />
+													<smx_skills_skill_grid pos="635,91" perkCount="4" groupName="Barter and Dash:" />
+												</rect>
+												
+												<rect name="Advanced Perks">
+													<smx_skills_attribute_entry name="Intellect" pos="0,2" size="90,90" rotation="0" />
+													<smx_skills_skill_grid pos="130,91" perkCount="4" groupName="Life Support:" />
+												</rect>
+												
+												<rect name="Magazine Bonus">
+													<smx_skills_attribute_entry name="Intellect" pos="0,2" size="90,90" rotation="0" />
+													<smx_skills_skill_grid pos="130,91" perkCount="10" groupName="Magazine Bonus Perks:" />
+												</rect>
+												
+												<rect name="Magazine Bonus">
+													<smx_skills_attribute_entry name="Intellect" pos="0,2" size="90,90" rotation="0" />
+													<smx_skills_skill_grid pos="130,91" perkCount="10" groupName="" />
+												</rect>
+												
+												<rect name="Magazine Bonus">
+													<smx_skills_attribute_entry name="Intellect" pos="0,2" size="90,90" rotation="0" />
+													<smx_skills_skill_grid pos="130,91" perkCount="6" groupName="" />
+												</rect>
+												
+												<rect name="Action Skills">
+													<smx_skills_attribute_entry name="Intellect" pos="0,2" size="90,90" rotation="0" />
+													<smx_skills_skill_grid pos="130,91" perkCount="10" groupName="Action Skills:" />
+												</rect>
+												
+												<rect name="Action Skills2">
+													<smx_skills_attribute_entry name="Intellect" pos="0,2" size="90,90" rotation="0" />
+													<smx_skills_skill_grid pos="130,91" perkCount="10" groupName="" />
+												</rect>
+												
+												<rect name="Action Skills3">
+													<smx_skills_attribute_entry name="Intellect" pos="0,2" size="90,90" rotation="0" />
+													<smx_skills_skill_grid pos="130,91" perkCount="4" groupName="" />
+												</rect>
+		</append>
+	</if>
+</conditional>
 </config>

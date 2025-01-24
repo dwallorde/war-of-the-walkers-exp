@@ -59,6 +59,11 @@ attAdvBenefitsName,progression,Attribute,,,Advanced Benefits,
 attAdvBenefitsDesc,progression,Attribute,,,At higher levels these perks will unlock offering you better benefits that will help you survive the apocalypse,
 attAdvBenefitsRank1Desc,progression,Attribute,,,At higher levels these perks will unlock offering you better benefits that will help you survive the apocalypse,
 
+attmagazinePerks,progression,Attribute,,,Magazine Perks,
+attMagazinePerksName,progression,Attribute,,,Magazine Perks,
+attMagazinePerksDesc,progression,Attribute,,,Equipping mods into your hands will increase these perks which give you bonus chance in finding stated magazine,
+attMagazinePerksRank1Desc,progression,Attribute,,,Equipping mods into your hands will increase these perks which give you bonus chance in finding stated magazine,
+
 skillCovertLevel1,progression,Attribute,,,Covert Defenses:,
 skillCovertLevel1Name,progression,Attribute,,,Covert Defenses:,
 skillCovertLevel1Desc,progression,Attribute,,,Level One of Covert Class unlocks the following perks.,

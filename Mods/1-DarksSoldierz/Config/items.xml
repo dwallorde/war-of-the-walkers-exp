@@ -1,6 +1,5 @@
 <configs>
-	<append xpath="/items">
-	
+	<append xpath="/items">	
 		<item name="DarksSoldierzLoadHack01">
 			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>

@@ -118,7 +118,6 @@
 <set xpath="/progression/skills/book_group[@name='skillHuntingJournal']/@icon">bookHuntingJournalBears</set>
 <set xpath="/progression/skills/book_group[@name='skillLuckyLooter']/@icon">bookLuckyLooterDukes</set>
 <set xpath="/progression/skills/book_group[@name='skillEnforcer']/@icon">bookEnforcerDamage</set>
-<!-- <set xpath="/progression/skills/book_group[@name='skillNeedleAndThread']/@icon">bookNeedleAndThreadWinterWear</set> -->
 <set xpath="/progression/skills/book_group[@name='skillNightStalker']/@icon">bookNightStalkerStealthDamage</set>
 <set xpath="/progression/skills/book_group[@name='skillPistolPete']/@icon">bookPistolPeteTakeAim</set>
 <set xpath="/progression/skills/book_group[@name='skillArchery']/@icon">bookRangersArrowRecovery</set>
@@ -132,138 +131,307 @@
 <set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">36</set>
 
 <!-- Progression Start -->
-<insertBefore xpath="/progression/attributes/attribute[@name='attBooks']">
-	<!-- Tab #1 Class: Covert attPerception -->
-	<attribute name="attClassCovertMaster" name_key="attClassCovertMasterName" desc_key="attClassCovertMasterDesc" icon="ui_game_symbol_classCovert" min_level="0" max_level="3" base_skill_point_cost="0">
-		<effect_group>
-			<effect_description level="1"  desc_key="attClassCovertMasterRank1Desc" long_desc_key="attClassCovertMasterRank1LongDesc"/>
-			<effect_description level="2"  desc_key="attClassCovertMasterRank2Desc" long_desc_key="attClassCovertMasterRank2LongDesc"/>
-			<effect_description level="3"  desc_key="attClassCovertMasterRank3Desc" long_desc_key="attClassCovertMasterRank3LongDesc"/>
-		</effect_group>
-	</attribute>
-	
-	<!-- Tab #2 Class: Soldier attStrength -->
-	<attribute name="attClassSoldierMaster" name_key="attClassSoldierMasterName" desc_key="attClassSoldierMasterDesc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="3" base_skill_point_cost="0">
-		<effect_group>
-			<effect_description level="1"  desc_key="attClassSoldierMasterRank1Desc" long_desc_key="attClassSoldierMasterRank1LongDesc"/>
-			<effect_description level="2"  desc_key="attClassSoldierMasterRank2Desc" long_desc_key="attClassSoldierMasterRank2LongDesc"/>
-			<effect_description level="3"  desc_key="attClassSoldierMasterRank3Desc" long_desc_key="attClassSoldierMasterRank3LongDesc"/>
-		</effect_group>
-	</attribute>
-	
-	<!-- Tab #3 Class: Survivalist attFortitude -->
-	<attribute name="attClassSurvivalistMaster" name_key="attClassSurvivalistMasterName" desc_key="attClassSurvivalistMasterDesc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="3" base_skill_point_cost="0">
-		<effect_group>
-			<effect_description level="1"  desc_key="attClassSurvivalistMasterRank1Desc" long_desc_key="attClassSurvivalistMasterRank1LongDesc"/>
-			<effect_description level="2"  desc_key="attClassSurvivalistMasterRank2Desc" long_desc_key="attClassSurvivalistMasterRank2LongDesc"/>
-			<effect_description level="3"  desc_key="attClassSurvivalistMasterRank3Desc" long_desc_key="attClassSurvivalistMasterRank3LongDesc"/>
-		</effect_group>
-	</attribute>
-	
-	<!-- Tab #4 Class: Technician attAgility -->
-	<attribute name="attClassTechnicianMaster" name_key="attClassTechnicianMasterName" desc_key="attClassTechnicianMasterDesc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="3" base_skill_point_cost="0">
-		<effect_group>
-			<effect_description level="1"  desc_key="attClassTechnicianMasterRank1Desc" long_desc_key="attClassTechnicianMasterRank1LongDesc"/>
-			<effect_description level="2"  desc_key="attClassTechnicianMasterRank2Desc" long_desc_key="attClassTechnicianMasterRank2LongDesc"/>
-			<effect_description level="3"  desc_key="attClassTechnicianMasterRank3Desc" long_desc_key="attClassTechnicianMasterRank3LongDesc"/>
-		</effect_group>
-	</attribute>
-	
-	<!-- Tab #5 Class: Tradesman attIntellect -->
-	<attribute name="attClassTradesmanMaster" name_key="attClassTradesmanMasterName" desc_key="attClassTradesmanMasterDesc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="3" base_skill_point_cost="0">
-		<effect_group>
-			<effect_description level="1"  desc_key="attClassTradesmanMasterRank1Desc" long_desc_key="attClassTradesmanMasterRank1LongDesc"/>
-			<effect_description level="2"  desc_key="attClassTradesmanMasterRank2Desc" long_desc_key="attClassTradesmanMasterRank2LongDesc"/>
-			<effect_description level="3"  desc_key="attClassTradesmanMasterRank3Desc" long_desc_key="attClassTradesmanMasterRank3LongDesc"/>
-		</effect_group>
-	</attribute>
-	
-	<!-- Tab #6 Advanced Benefits -->
-	<attribute name="attAdvBenefits" name_key="attAdvBenefitsName" desc_key="attAdvBenefitsDesc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0">
-		<effect_group>
-			<effect_description level="1"  desc_key="attAdvBenefitsRank1Desc" long_desc_key="attAdvBenefitsRank1Desc"/>
-		</effect_group>
-	</attribute>
-	
-	<!-- Tab #7 Action Skills -->
-	<attribute name="attActionSkills" name_key="attActionSkillsName" desc_key="attActionSkillsDesc" min_level="0" max_level="0" base_skill_point_cost="0" icon="ui_game_symbol_actionSkills">
-		<effect_group name="Action Skills Lvl 0 Set">
-			<requirement name="CVarCompare" cvar="AS_Pickaxes_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Axes_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Shovels_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Wrenching_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_PowerTools_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Construction_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Pistols_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Shotguns_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Rifles_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_MachineGuns_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Archery_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_RoboticJunk_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_BluntWeapons_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_BladeWeapons_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_ThrownWeapons_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_FistWeapons_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_LightArmour_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_MediumArmour_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_HeavyArmour_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Scavenging_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Athletics_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Swimming_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Stealth_XP" operation="Equals" value="0"/>
-			<requirement name="CVarCompare" cvar="AS_Medicine_XP" operation="Equals" value="0"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_XP_Mult" operation="set" value="1.015"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pickaxes_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pickaxes_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Axes_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Axes_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shovels_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shovels_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Wrenching_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Wrenching_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_PowerTools_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_PowerTools_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Construction_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Construction_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Scavenging_LvlNextAdd" operation="set" value="50"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Scavenging_LvlNextTotal" operation="set" value="50"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Athletics_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Athletics_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Swimming_LvlNextAdd" operation="set" value="50"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Swimming_LvlNextTotal" operation="set" value="50"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Stealth_LvlNextAdd" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Stealth_LvlNextTotal" operation="set" value="500"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Medicine_LvlNextAdd" operation="set" value="50"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Medicine_LvlNextTotal" operation="set" value="50"/>
-		</effect_group>
-	</attribute>
-</insertBefore>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<insertBefore xpath="/progression/attributes/attribute[@name='attBooks']">
+			<!-- Tab #1 Class: Covert attPerception -->
+			<attribute name="attClassCovertMaster" name_key="attClassCovertMasterName" desc_key="attClassCovertMasterDesc" icon="ui_game_symbol_classCovert" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassCovertMasterRank1Desc" long_desc_key="attClassCovertMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassCovertMasterRank2Desc" long_desc_key="attClassCovertMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassCovertMasterRank3Desc" long_desc_key="attClassCovertMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #2 Class: Soldier attStrength -->
+			<attribute name="attClassSoldierMaster" name_key="attClassSoldierMasterName" desc_key="attClassSoldierMasterDesc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassSoldierMasterRank1Desc" long_desc_key="attClassSoldierMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassSoldierMasterRank2Desc" long_desc_key="attClassSoldierMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassSoldierMasterRank3Desc" long_desc_key="attClassSoldierMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #3 Class: Survivalist attFortitude -->
+			<attribute name="attClassSurvivalistMaster" name_key="attClassSurvivalistMasterName" desc_key="attClassSurvivalistMasterDesc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassSurvivalistMasterRank1Desc" long_desc_key="attClassSurvivalistMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassSurvivalistMasterRank2Desc" long_desc_key="attClassSurvivalistMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassSurvivalistMasterRank3Desc" long_desc_key="attClassSurvivalistMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #4 Class: Technician attAgility -->
+			<attribute name="attClassTechnicianMaster" name_key="attClassTechnicianMasterName" desc_key="attClassTechnicianMasterDesc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassTechnicianMasterRank1Desc" long_desc_key="attClassTechnicianMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassTechnicianMasterRank2Desc" long_desc_key="attClassTechnicianMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassTechnicianMasterRank3Desc" long_desc_key="attClassTechnicianMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #5 Class: Tradesman attIntellect -->
+			<attribute name="attClassTradesmanMaster" name_key="attClassTradesmanMasterName" desc_key="attClassTradesmanMasterDesc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassTradesmanMasterRank1Desc" long_desc_key="attClassTradesmanMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassTradesmanMasterRank2Desc" long_desc_key="attClassTradesmanMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassTradesmanMasterRank3Desc" long_desc_key="attClassTradesmanMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #6 Advanced Benefits -->
+			<attribute name="attAdvBenefits" name_key="attAdvBenefitsName" desc_key="attAdvBenefitsDesc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attAdvBenefitsRank1Desc" long_desc_key="attAdvBenefitsRank1Desc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #7 Action Skills -->
+			<attribute name="attActionSkills" name_key="attActionSkillsName" desc_key="attActionSkillsDesc" min_level="0" max_level="0" base_skill_point_cost="0" icon="ui_game_symbol_actionSkills">
+				<effect_group name="Action Skills Lvl 0 Set">
+					<requirement name="CVarCompare" cvar="AS_Pickaxes_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Axes_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Shovels_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Wrenching_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_PowerTools_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Construction_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Pistols_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Shotguns_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Rifles_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_MachineGuns_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Archery_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_RoboticJunk_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_BluntWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_BladeWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_ThrownWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_FistWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_LightArmour_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_MediumArmour_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_HeavyArmour_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Scavenging_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Athletics_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Swimming_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Stealth_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Medicine_XP" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_XP_Mult" operation="set" value="1.015"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pickaxes_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pickaxes_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Axes_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Axes_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shovels_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shovels_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Wrenching_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Wrenching_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_PowerTools_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_PowerTools_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Construction_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Construction_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Scavenging_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Scavenging_LvlNextTotal" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Athletics_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Athletics_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Swimming_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Swimming_LvlNextTotal" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Stealth_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Stealth_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Medicine_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Medicine_LvlNextTotal" operation="set" value="50"/>
+				</effect_group>
+			</attribute>
+		</insertBefore>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<insertBefore xpath="/progression/attributes/attribute[@name='attBooks']">
+			<!-- Tab #1 Class: Covert attPerception -->
+			<attribute name="attClassCovertMaster" name_key="attClassCovertMasterName" desc_key="attClassCovertMasterDesc" icon="ui_game_symbol_classCovert" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassCovertMasterRank1Desc" long_desc_key="attClassCovertMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassCovertMasterRank2Desc" long_desc_key="attClassCovertMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassCovertMasterRank3Desc" long_desc_key="attClassCovertMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #2 Class: Soldier attStrength -->
+			<attribute name="attClassSoldierMaster" name_key="attClassSoldierMasterName" desc_key="attClassSoldierMasterDesc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassSoldierMasterRank1Desc" long_desc_key="attClassSoldierMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassSoldierMasterRank2Desc" long_desc_key="attClassSoldierMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassSoldierMasterRank3Desc" long_desc_key="attClassSoldierMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #3 Class: Survivalist attFortitude -->
+			<attribute name="attClassSurvivalistMaster" name_key="attClassSurvivalistMasterName" desc_key="attClassSurvivalistMasterDesc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassSurvivalistMasterRank1Desc" long_desc_key="attClassSurvivalistMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassSurvivalistMasterRank2Desc" long_desc_key="attClassSurvivalistMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassSurvivalistMasterRank3Desc" long_desc_key="attClassSurvivalistMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #4 Class: Technician attAgility -->
+			<attribute name="attClassTechnicianMaster" name_key="attClassTechnicianMasterName" desc_key="attClassTechnicianMasterDesc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassTechnicianMasterRank1Desc" long_desc_key="attClassTechnicianMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassTechnicianMasterRank2Desc" long_desc_key="attClassTechnicianMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassTechnicianMasterRank3Desc" long_desc_key="attClassTechnicianMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #5 Class: Tradesman attIntellect -->
+			<attribute name="attClassTradesmanMaster" name_key="attClassTradesmanMasterName" desc_key="attClassTradesmanMasterDesc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="3" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attClassTradesmanMasterRank1Desc" long_desc_key="attClassTradesmanMasterRank1LongDesc"/>
+					<effect_description level="2"  desc_key="attClassTradesmanMasterRank2Desc" long_desc_key="attClassTradesmanMasterRank2LongDesc"/>
+					<effect_description level="3"  desc_key="attClassTradesmanMasterRank3Desc" long_desc_key="attClassTradesmanMasterRank3LongDesc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #6 Advanced Benefits -->
+			<attribute name="attAdvBenefits" name_key="attAdvBenefitsName" desc_key="attAdvBenefitsDesc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attAdvBenefitsRank1Desc" long_desc_key="attAdvBenefitsRank1Desc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #7 Advanced Benefits -->
+			<attribute name="attAdvBenefits2" name_key="attAdvBenefitsName" desc_key="attAdvBenefitsDesc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attAdvBenefitsRank1Desc" long_desc_key="attAdvBenefitsRank1Desc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #8 Magazine Bonus Benefits -->
+			<attribute name="attAdvBenefits3" name_key="attMagazinePerksName" desc_key="attMagazinePerksDesc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attMagazinePerksRank1Desc" long_desc_key="attMagazinePerksRank1Desc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #9 Magazine Bonus Benefits -->
+			<attribute name="attAdvBenefits4" name_key="attMagazinePerksName" desc_key="attMagazinePerksDesc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attMagazinePerksRank1Desc" long_desc_key="attMagazinePerksRank1Desc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #10 Magazine Bonus Benefits -->
+			<attribute name="attAdvBenefits5" name_key="attMagazinePerksName" desc_key="attMagazinePerksDesc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0">
+				<effect_group>
+					<effect_description level="1"  desc_key="attMagazinePerksRank1Desc" long_desc_key="attMagazinePerksRank1Desc"/>
+				</effect_group>
+			</attribute>
+			
+			<!-- Tab #11 Action Skills -->
+			<attribute name="attActionSkills" name_key="attActionSkillsName" desc_key="attActionSkillsDesc" min_level="0" max_level="0" base_skill_point_cost="0" icon="ui_game_symbol_actionSkills">
+				<effect_group name="Action Skills Lvl 0 Set">
+					<requirement name="CVarCompare" cvar="AS_Pickaxes_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Axes_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Shovels_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Wrenching_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_PowerTools_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Construction_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Pistols_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Shotguns_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Rifles_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_MachineGuns_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Archery_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_RoboticJunk_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_BluntWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_BladeWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_ThrownWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_FistWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_LightArmour_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_MediumArmour_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_HeavyArmour_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Scavenging_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Athletics_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Swimming_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Stealth_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_Medicine_XP" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_XP_Mult" operation="set" value="1.015"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pickaxes_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pickaxes_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Axes_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Axes_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shovels_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shovels_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Wrenching_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Wrenching_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_PowerTools_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_PowerTools_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Construction_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Construction_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Scavenging_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Scavenging_LvlNextTotal" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Athletics_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Athletics_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Swimming_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Swimming_LvlNextTotal" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Stealth_LvlNextAdd" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Stealth_LvlNextTotal" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Medicine_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Medicine_LvlNextTotal" operation="set" value="50"/>
+				</effect_group>
+			</attribute>
+		</insertBefore>
+	</if>
+</conditional>
 
 <remove xpath="/progression/perks/book[@name='perkEnforcerAPAmmo']"/>
 <remove xpath="/progression/perks/book[@name='perkEnforcerHPAmmo']"/>
@@ -524,32 +692,71 @@
 	</book>
 </insertAfter>
 
-<append xpath="/progression/perks">
-	<skill name="skillCovertLevel1" parent="attClassCovertMaster" name_key="skillCovertLevel1Name" desc_key="skillCovertLevel1Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillCovertLevel2" parent="attClassCovertMaster" name_key="skillCovertLevel2Name" desc_key="skillCovertLevel2Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillCovertLevel3" parent="attClassCovertMaster" name_key="skillCovertLevel3Name" desc_key="skillCovertLevel3Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	
-	<skill name="skillSoldierLevel1" parent="attClassSoldierMaster" name_key="skillSoldierLevel1Name" desc_key="skillSoldierLevel1Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillSoldierLevel2" parent="attClassSoldierMaster" name_key="skillSoldierLevel2Name" desc_key="skillSoldierLevel2Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillSoldierLevel3" parent="attClassSoldierMaster" name_key="skillSoldierLevel3Name" desc_key="skillSoldierLevel3Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/progression/perks">
+			<skill name="skillCovertLevel1" parent="attClassCovertMaster" name_key="skillCovertLevel1Name" desc_key="skillCovertLevel1Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillCovertLevel2" parent="attClassCovertMaster" name_key="skillCovertLevel2Name" desc_key="skillCovertLevel2Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillCovertLevel3" parent="attClassCovertMaster" name_key="skillCovertLevel3Name" desc_key="skillCovertLevel3Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			
+			<skill name="skillSoldierLevel1" parent="attClassSoldierMaster" name_key="skillSoldierLevel1Name" desc_key="skillSoldierLevel1Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSoldierLevel2" parent="attClassSoldierMaster" name_key="skillSoldierLevel2Name" desc_key="skillSoldierLevel2Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSoldierLevel3" parent="attClassSoldierMaster" name_key="skillSoldierLevel3Name" desc_key="skillSoldierLevel3Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
 
-	<skill name="skillSurvivalist1" parent="attClassSurvivalistMaster" name_key="skillSurvivalist1Name" desc_key="skillSurvivalist1Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillSurvivalist2" parent="attClassSurvivalistMaster" name_key="skillSurvivalist2Name" desc_key="skillSurvivalist2Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillSurvivalist3" parent="attClassSurvivalistMaster" name_key="skillSurvivalist3Name" desc_key="skillSurvivalist3Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	
-	<skill name="skillTechnician1" parent="attClassTechnicianMaster" name_key="skillTechnician1Name" desc_key="skillTechnician1Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillTechnician2" parent="attClassTechnicianMaster" name_key="skillTechnician2Name" desc_key="skillTechnician2Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillTechnician3" parent="attClassTechnicianMaster" name_key="skillTechnician3Name" desc_key="skillTechnician3Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	
-	<skill name="skillTradesman1" parent="attClassTradesmanMaster" name_key="skillTradesman1Name" desc_key="skillTradesman1Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillTradesman2" parent="attClassTradesmanMaster" name_key="skillTradesman2Name" desc_key="skillTradesman2Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillTradesman3" parent="attClassTradesmanMaster" name_key="skillTradesman3Name" desc_key="skillTradesman3Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSurvivalist1" parent="attClassSurvivalistMaster" name_key="skillSurvivalist1Name" desc_key="skillSurvivalist1Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSurvivalist2" parent="attClassSurvivalistMaster" name_key="skillSurvivalist2Name" desc_key="skillSurvivalist2Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSurvivalist3" parent="attClassSurvivalistMaster" name_key="skillSurvivalist3Name" desc_key="skillSurvivalist3Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			
+			<skill name="skillTechnician1" parent="attClassTechnicianMaster" name_key="skillTechnician1Name" desc_key="skillTechnician1Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillTechnician2" parent="attClassTechnicianMaster" name_key="skillTechnician2Name" desc_key="skillTechnician2Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillTechnician3" parent="attClassTechnicianMaster" name_key="skillTechnician3Name" desc_key="skillTechnician3Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			
+			<skill name="skillTradesman1" parent="attClassTradesmanMaster" name_key="skillTradesman1Name" desc_key="skillTradesman1Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillTradesman2" parent="attClassTradesmanMaster" name_key="skillTradesman2Name" desc_key="skillTradesman2Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillTradesman3" parent="attClassTradesmanMaster" name_key="skillTradesman3Name" desc_key="skillTradesman3Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
 
-	<skill name="skillAdvBenefit1" parent="attAdvBenefits" name_key="skillAdvBenefit1Name" desc_key="skillAdvBenefit1Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillAdvBenefit2" parent="attAdvBenefits" name_key="skillAdvBenefit2Name" desc_key="skillAdvBenefit2Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillAdvBenefit3" parent="attAdvBenefits" name_key="skillAdvBenefit3Name" desc_key="skillAdvBenefit3Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-	<skill name="skillAdvBenefit4" parent="attAdvBenefits" name_key="skillAdvBenefit4Name" desc_key="skillAdvBenefit4Desc" icon="ui_game_symbol_hammer" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
-</append>
+			<skill name="skillAdvBenefit1" parent="attAdvBenefits" name_key="skillAdvBenefit1Name" desc_key="skillAdvBenefit1Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillAdvBenefit2" parent="attAdvBenefits" name_key="skillAdvBenefit2Name" desc_key="skillAdvBenefit2Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillAdvBenefit3" parent="attAdvBenefits" name_key="skillAdvBenefit3Name" desc_key="skillAdvBenefit3Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillAdvBenefit4" parent="attAdvBenefits" name_key="skillAdvBenefit4Name" desc_key="skillAdvBenefit4Desc" icon="ui_game_symbol_hammer" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/progression/perks">
+			<skill name="skillCovertLevel1" parent="attClassCovertMaster" name_key="skillCovertLevel1Name" desc_key="skillCovertLevel1Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillCovertLevel2" parent="attClassCovertMaster" name_key="skillCovertLevel2Name" desc_key="skillCovertLevel2Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillCovertLevel3" parent="attClassCovertMaster" name_key="skillCovertLevel3Name" desc_key="skillCovertLevel3Desc" icon="ui_game_symbol_classCovert" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			
+			<skill name="skillSoldierLevel1" parent="attClassSoldierMaster" name_key="skillSoldierLevel1Name" desc_key="skillSoldierLevel1Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSoldierLevel2" parent="attClassSoldierMaster" name_key="skillSoldierLevel2Name" desc_key="skillSoldierLevel2Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSoldierLevel3" parent="attClassSoldierMaster" name_key="skillSoldierLevel3Name" desc_key="skillSoldierLevel3Desc" icon="ui_game_symbol_classSoldier" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+
+			<skill name="skillSurvivalist1" parent="attClassSurvivalistMaster" name_key="skillSurvivalist1Name" desc_key="skillSurvivalist1Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSurvivalist2" parent="attClassSurvivalistMaster" name_key="skillSurvivalist2Name" desc_key="skillSurvivalist2Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillSurvivalist3" parent="attClassSurvivalistMaster" name_key="skillSurvivalist3Name" desc_key="skillSurvivalist3Desc" icon="ui_game_symbol_classSurvivalist" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			
+			<skill name="skillTechnician1" parent="attClassTechnicianMaster" name_key="skillTechnician1Name" desc_key="skillTechnician1Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillTechnician2" parent="attClassTechnicianMaster" name_key="skillTechnician2Name" desc_key="skillTechnician2Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillTechnician3" parent="attClassTechnicianMaster" name_key="skillTechnician3Name" desc_key="skillTechnician3Desc" icon="ui_game_symbol_classTechnician" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			
+			<skill name="skillTradesman1" parent="attClassTradesmanMaster" name_key="skillTradesman1Name" desc_key="skillTradesman1Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillTradesman2" parent="attClassTradesmanMaster" name_key="skillTradesman2Name" desc_key="skillTradesman2Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillTradesman3" parent="attClassTradesmanMaster" name_key="skillTradesman3Name" desc_key="skillTradesman3Desc" icon="ui_game_symbol_classTradesman" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+
+			<skill name="skillAdvBenefit1" parent="attAdvBenefits" name_key="skillAdvBenefit1Name" desc_key="skillAdvBenefit1Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillAdvBenefit2" parent="attAdvBenefits" name_key="skillAdvBenefit2Name" desc_key="skillAdvBenefit2Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillAdvBenefit3" parent="attAdvBenefits2" name_key="skillAdvBenefit3Name" desc_key="skillAdvBenefit3Desc" icon="ui_game_symbol_recipe" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillAdvBenefit4" parent="attAdvBenefits3" name_key="skillAdvBenefit4Name" desc_key="skillAdvBenefit4Desc" icon="ui_game_symbol_hammer" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillAdvBenefit5" parent="attAdvBenefits4" name_key="skillAdvBenefit4Name" desc_key="skillAdvBenefit4Desc" icon="ui_game_symbol_hammer" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+			<skill name="skillAdvBenefit6" parent="attAdvBenefits5" name_key="skillAdvBenefit4Name" desc_key="skillAdvBenefit4Desc" icon="ui_game_symbol_hammer" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+
+			<skill name="skillAction" parent="attActionSkills" name_key="1" desc_key="2" icon="ui_game_symbol_actionSkills" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></skill>
+		</append>
+	</if>
+</conditional>
 
 <append xpath="/progression/perks">
 	<!-- Main Perks Start -->
@@ -2364,27 +2571,27 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="Pickaxes level increased"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="perkASPickaxesRank1Desc"/>
-			<effect_description level="5" desc_key="perkASPickaxesRank5Desc"/>
-			<effect_description level="10" desc_key="perkASPickaxesRank10Desc"/>
-			<effect_description level="15" desc_key="perkASPickaxesRank15Desc"/>
-			<effect_description level="20" desc_key="perkASPickaxesRank20Desc"/>
-			<effect_description level="25" desc_key="perkASPickaxesRank25Desc"/>
-			<effect_description level="30" desc_key="perkASPickaxesRank30Desc"/>
-			<effect_description level="35" desc_key="perkASPickaxesRank35Desc"/>
-			<effect_description level="40" desc_key="perkASPickaxesRank40Desc"/>
-			<effect_description level="45" desc_key="perkASPickaxesRank45Desc"/>
-			<effect_description level="50" desc_key="perkASPickaxesRank50Desc"/>
-			<effect_description level="55" desc_key="perkASPickaxesRank55Desc"/>
-			<effect_description level="60" desc_key="perkASPickaxesRank60Desc"/>
-			<effect_description level="65" desc_key="perkASPickaxesRank65Desc"/>
-			<effect_description level="70" desc_key="perkASPickaxesRank70Desc"/>
-			<effect_description level="75" desc_key="perkASPickaxesRank75Desc"/>
-			<effect_description level="80" desc_key="perkASPickaxesRank80Desc"/>
-			<effect_description level="85" desc_key="perkASPickaxesRank85Desc"/>
-			<effect_description level="90" desc_key="perkASPickaxesRank90Desc"/>
-			<effect_description level="95" desc_key="perkASPickaxesRank95Desc"/>
-			<effect_description level="100" desc_key="perkASPickaxesRank100Desc"/>
+			<effect_description level="1" desc_key="" long_desc_key="perkASPickaxesRank1Desc"/>
+			<effect_description level="5" desc_key="" long_desc_key="perkASPickaxesRank5Desc"/>
+			<effect_description level="10" desc_key="" long_desc_key="perkASPickaxesRank10Desc"/>
+			<effect_description level="15" desc_key="" long_desc_key="perkASPickaxesRank15Desc"/>
+			<effect_description level="20" desc_key="" long_desc_key="perkASPickaxesRank20Desc"/>
+			<effect_description level="25" desc_key="" long_desc_key="perkASPickaxesRank25Desc"/>
+			<effect_description level="30" desc_key="" long_desc_key="perkASPickaxesRank30Desc"/>
+			<effect_description level="35" desc_key="" long_desc_key="perkASPickaxesRank35Desc"/>
+			<effect_description level="40" desc_key="" long_desc_key="perkASPickaxesRank40Desc"/>
+			<effect_description level="45" desc_key="" long_desc_key="perkASPickaxesRank45Desc"/>
+			<effect_description level="50" desc_key="" long_desc_key="perkASPickaxesRank50Desc"/>
+			<effect_description level="55" desc_key="" long_desc_key="perkASPickaxesRank55Desc"/>
+			<effect_description level="60" desc_key="" long_desc_key="perkASPickaxesRank60Desc"/>
+			<effect_description level="65" desc_key="" long_desc_key="perkASPickaxesRank65Desc"/>
+			<effect_description level="70" desc_key="" long_desc_key="perkASPickaxesRank70Desc"/>
+			<effect_description level="75" desc_key="" long_desc_key="perkASPickaxesRank75Desc"/>
+			<effect_description level="80" desc_key="" long_desc_key="perkASPickaxesRank80Desc"/>
+			<effect_description level="85" desc_key="" long_desc_key="perkASPickaxesRank85Desc"/>
+			<effect_description level="90" desc_key="" long_desc_key="perkASPickaxesRank90Desc"/>
+			<effect_description level="95" desc_key="" long_desc_key="perkASPickaxesRank95Desc"/>
+			<effect_description level="100" desc_key="" long_desc_key="perkASPickaxesRank100Desc"/>
 		</effect_group>
 	</perk>
 	
@@ -4726,7 +4933,7 @@
 	
 	<crafting_skill name="craftingConstruction" max_level="125" parent="attCrafting" name_key="craftingConstructionName" desc_key="craftingConstructionDesc" long_desc_key="craftingConstructionLongDesc" icon="ui_game_symbol_hammer" >
 	
-		<display_entry icon="cntCoolerBlue,cntIronWritableCrate,shelfStorage,doorBlack,interiorHouseDoorWhite" name_key="constructionT1-1,constructionT1-2,constructionT1-3,constructionT1-4,constructionT1-5" has_quality="false" unlock_level="2,5,10,15,20" >
+		<display_entry icon="cntCoolerClosed,cntIronWritableCrate,shelfStorage,doorBlack,interiorHouseDoorWhite" name_key="constructionT1-1,constructionT1-2,constructionT1-3,constructionT1-4,constructionT1-5" has_quality="false" unlock_level="2,5,10,15,20" >
 			<unlock_entry item="cntCoolerVariantHelper" unlock_tier="1" />
 			<unlock_entry item="cntIronWritableCrate,StorageChest2SignedSecure" unlock_tier="2" />
 			<unlock_entry item="shelfStorage" unlock_tier="3" />
@@ -5771,7 +5978,7 @@
 	</crafting_skill>
 	
 	<!-- *** WORKSTATION_SKILLS -->
-	<crafting_skill name="craftingWorkstations" max_level="125" parent="attCrafting" name_key="craftingWorkstationsName" desc_key="craftingWorkstationsDesc" long_desc_key="craftingWorkstationsLongDesc" icon="ui_game_symbol_workbench">
+	<crafting_skill name="craftingWorkstations" max_level="125" parent="attCrafting" name_key="craftingWorkstationsName" desc_key="craftingWorkstationsDesc" long_desc_key="craftingWorkstationsLongDesc" icon="ui_game_symbol_workstationexpertise">
 
 		<display_entry icon="cntDewCollector,forge,mortarandPestle,workbench,ammoWorkstation" name_key="workstationsT1-1,workstationsT1-2,workstationsT1-3,workstationsT1-4,workstationsT1-5" has_quality="false" unlock_level="2,5,10,15,20" >
 			<unlock_entry item="cntDewCollector" unlock_tier="1" />
@@ -5933,4 +6140,29 @@
 		</effect_group>
 	</crafting_skill>
 	</append>
+	
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<set xpath="/progression/perks/perk[@parent='attActionSkills']/@parent">skillAction</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineBows']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineSpears']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineHandguns']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineShotguns']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineRifles']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineMachineGuns']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineExplosives']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineRobotics']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineArmor']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineMedical']/@parent">skillAdvBenefit5</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineFood']/@parent">skillAdvBenefit6</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineFarming']/@parent">skillAdvBenefit6</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineElectrician']/@parent">skillAdvBenefit6</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineTraps']/@parent">skillAdvBenefit6</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineWorkstations']/@parent">skillAdvBenefit6</set>
+		<set xpath="/progression/perks/perk[@name='perkBonusMagazineVehicles']/@parent">skillAdvBenefit6</set>
+		
+		<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/@icon">ui_game_symbol_fistWeapons</set>
+		<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/@icon">ui_game_symbol_bows</set>
+	</if>
+</conditional>
 </config>

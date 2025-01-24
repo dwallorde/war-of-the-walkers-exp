@@ -39,6 +39,59 @@
 	</wotw_recipe_stack>
 </append>
 
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/controls">
+			<wotw_smx_dewcollector_stack controller="DewCollectorStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
+				<rect	width="100"
+						height="100"
+						pivot="center"
+						style="smx_item_stack, hover"
+						on_scroll="${on_scroll}"
+						allow_dropping="${allow_dropping}"
+						prefix_id="${prefix_id}"
+						show_favorites="${show_favorites}"
+						controller="DewCollectorStack"
+						standard_fill_color="236,255,0,96"
+						modded_fill_color="116,204,244,96"
+						collider_scale="1.0"
+						sound="[recipe_click]"
+						sound_play_on_hover="[default_hover]"
+						tooltip="{tooltip}">
+
+					<sprite name="backgroundMain" depth="2" pos="0,-7" size="100,100" pivot="center" sprite="smx_menu_background" color="0,0,0,275" />
+					<sprite name="background" depth="3" pos="0,-4" size="75,75" pivot="center" sprite="smx_diamond_background" color="{selectionbordercolor}" rotation="45" />
+					<sprite name="backgroundArt" depth="4" pos="-1,-3" size="61,61" sprite="smx_slot_durability" flip="horizontally" pivot="center" color="0,0,0,275" rotation="45" />
+
+					<sprite name="background2" depth="6" pos="0,-4" size="65,65" pivot="center" sprite="smx_slot_frame_narrow" color="[darkGrey]" rotation="-45" visible="{#!hasdurability}" />
+					<sprite name="background2" depth="6" pos="0,-4" size="65,65" pivot="center" sprite="smx_slot_frame_narrow" color="{durabilitycolor}" rotation="-45" visible="{hasdurability}" />
+
+					<sprite depth="8" name="favoriteIcon" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+
+					<sprite name="itemIcon" depth="7" pos="0,0" size="75,75" pivot="center" atlas="{itematlas}" sprite="{itemicon}" color="{iconcolor}" foregroundlayer="true" visible="{showitem}" />
+					<sprite name="fillIcon" depth="7" pos="0,0" size="65,65" pivot="center" sprite="ui_game_symbol_water" color="[darkGrey]" foregroundlayer="true" visible="{showempty}" />
+
+					<sprite name="durabilityBackground" depth="23" pos="0,-50" width="90" height="7" pivot="center" sprite="smx_item_durability_bar" color="[darkGrey]" type="sliced" foregroundlayer="true" visible="{hasdurability}" />
+					<sprite name="durability" depth="24" pos="0,-50" width="90" height="7" pivot="center" sprite="smx_item_durability_bar" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" foregroundlayer="true" visible="{hasdurability}" />
+
+					<sprite depth="5" name="disabledOverlay" width="72" height="72" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+
+					<label name="stackValue" depth="17" pos="0,-43" width="90" height="28" pivot="center" style="smx_label_outline" text="{itemcount}" font_size="20" justify="right" />
+
+					<label depth="7" name="timer" pos="35,-38" width="70" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+					<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="70" height="70" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+					<sprite depth="13" name="assembleIcon" size="40,40" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+					
+					<rect pos="0,0" width="100" height="100" >
+						<sprite name="barBackground" depth="3" pos="0,0" size="100,104" pivot="center" sprite="smx_menu_background" color="0,0,0,275" />
+						<sprite name="BarContent" depth="2" pos="0,0" size="100,100" pivot="center" sprite="smx_menu_background" type="filled" fill="{waterfill}" color="{waterfill}" filldirection="Vertical" globalopacity="false" />
+					</rect>
+				</rect>
+			</wotw_smx_dewcollector_stack>
+		</append>
+	</if>
+</conditional>
+
 <set xpath="/controls/ingredient_header/rect[@name='header']/@height">43</set>
 <set xpath="/controls/ingredient_header/rect[@name='header']/rect/@height">41</set>
 <set xpath="/controls/ingredient_header/rect[@name='header']/rect/sprite[@name='backgroundMain']/@height">47</set>
@@ -102,4 +155,10 @@
 <append xpath="/controls/smxui_tool_item_stack/rect">
 					<label name="stackValue" depth="7" pos="-1,-23" width="60" height="18" style="smxcore_label_normal" text="{itemcount}" font_size="20" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxui_element_labelcolor_1]" visible="{hasdurability}" />
 </append> -->
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<set xpath="/controls/smx_skills_book_entry/rect/sprite[@name='groupIcon']/@atlas">uiAtlas</set>
+	</if>
+</conditional>
 </config>

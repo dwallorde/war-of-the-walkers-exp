@@ -2877,7 +2877,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Miron"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="20"/>
 	<property name="EconomicBundleSize" value="20"/>
 	<property name="Group" value="Resources,Building"/>
@@ -2891,7 +2891,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mwood"/>
 	<property name="Weight" value="5"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="FuelValue" value="50"/>
 	<property name="EconomicValue" value="5"/>
 	<property name="EconomicBundleSize" value="50"/>
@@ -2909,7 +2909,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mstone"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="50"/>
 	<property name="EconomicBundleSize" value="70"/>
 	<property name="Group" value="Building,Resources"/>
@@ -2923,7 +2923,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mconcrete"/>
 	<property name="Weight" value="20"/>
-	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="250"/>
 	<property name="EconomicBundleSize" value="20"/>
 	<property name="Group" value="Building,Resources"/>
@@ -2936,7 +2936,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="tungsten" />
-	<property name="Stacknumber" value="1000" /> <!-- STK resource -->
+	<property name="Stacknumber" value="10000" /> <!-- STK resource -->
 	<property name="EconomicValue" value="50" />
 	<property name="Group" value="Resources" />
 	<property name="Weight" value="40" />
@@ -8492,7 +8492,7 @@
 		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,3,4,5" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="350" tags="EconomicValue"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="52.5" tags="perkDeepCuts"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="38" tags="perkDeepCuts"/>
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkDeepCuts"/> <!-- random EntityDmg -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
 		<passive_effect name="BlockDamage" operation="base_set" value="6.4" tags="perkDeepCuts"/>
@@ -19025,7 +19025,6 @@
 	
 	<set xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']/@value">25</set>
 	<set xpath="/items/item[@name='ammoRocketHE']/property[@name='Stacknumber']/@value">25</set>
-	<set xpath="/items/item[@name='ammoRocketFrag']/property[@name='Stacknumber']/@value">25</set>
 	
 	<set xpath="/items/item[@name='resourceRockSmall']/property[@name='Stacknumber']/@value">10000</set>
 	<set xpath="/items/item[@name='resourceSnowBall']/property[@name='Stacknumber']/@value">10000</set>
@@ -21890,6 +21889,7 @@
 			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
 			<property name="EconomicValue" value="65"/>
+			<property name="TraderStageTemplate" value="baseTier0"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<property name="DescriptionKey" value="guppFireExtinguisherItemDesc"/>	
@@ -23363,7 +23363,7 @@
 	<property name="Material" value="Mmetal"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="EconomicValue" value="750"/>
-	<property name="Group" value="Resources"/>
+	<property name="Group" value="Tools/Traps"/>
 	<property name="TraderStageTemplate" value="midTier3"/>
 </item>
 
@@ -23377,7 +23377,7 @@
 	<property name="Material" value="Mmetal"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="EconomicValue" value="750"/>
-	<property name="Group" value="Resources"/>
+	<property name="Group" value="Tools/Traps"/>
 	<property name="TraderStageTemplate" value="midTier3"/>
 </item>
 
@@ -24570,5 +24570,48 @@
 <set xpath="/items/item[@name='foodSearedBass']/property[@name='Stacknumber']/@value">50</set>
 <set xpath="/items/item[@name='foodRoastedGrouper']/property[@name='Stacknumber']/@value">50</set>
 <set xpath="/items/item[@name='foodFriedCrappieCake']/property[@name='Stacknumber']/@value">50</set>
+
+<set xpath="/items/item[@name='meleeHandZombie01']/effect_group[@name='meleeHandZombie01']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.14,.1,.09,.08,.34,.4,.18</set>
+<set xpath="/items/item[@name='meleeHandZombie02']/effect_group[@name='meleeHandZombie02']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.14,.1,.16,.08,.34,.4,.18</set>
+<set xpath="/items/item[@name='meleeHandZombieFeral']/effect_group[@name='meleeHandZombieFeral']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.1,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombieFeral']/effect_group[@name='meleeHandZombieFeral']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombie02Feral']/effect_group[@name='meleeHandZombie02Feral']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.17,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombie02Feral']/effect_group[@name='meleeHandZombie02Feral']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombieShort']/effect_group[@name='meleeHandZombie01']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.14,.1,.09,.08,.34,.4,.18</set>
+<set xpath="/items/item[@name='meleeHandZombieShortFeral']/effect_group[@name='meleeHandZombieFeral']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.1,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombieShortFeral']/effect_group[@name='meleeHandZombieFeral']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombieBurning']/effect_group[@name='meleeHandZombieBurning']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.1,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombieBurning']/effect_group[@name='meleeHandZombieBurning']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">15</set>
+<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/effect_group[@name='meleeHandZombieBurningFeral']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.1,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/effect_group[@name='meleeHandZombieBurningFeral']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/effect_group[@name='meleeHandZombieBurningCrawler']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.17,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/effect_group[@name='meleeHandZombieBurningCrawler']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombieCop']/effect_group[@name='meleeHandZombieCop']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.11,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombieCop']/effect_group[@name='meleeHandZombieCop']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombieCopFeral']/effect_group[@name='meleeHandZombieCopFeral']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.12,.1,.37,.43,.2</set>
+<set xpath="/items/item[@name='meleeHandZombieCopFeral']/effect_group[@name='meleeHandZombieCopFeral']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">25</set>
+<set xpath="/items/item[@name='meleeHandZombieCopRadiated']/effect_group[@name='meleeHandZombieCopRadiated']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.12,.1,.37,.43,.2</set>
+<set xpath="/items/item[@name='meleeHandZombieCopRadiated']/effect_group[@name='meleeHandZombieCopRadiated']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">30</set>
+<set xpath="/items/item[@name='meleeHandzombieMutated']/effect_group[@name='melee']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.12,.1,.37,.43,.2</set>
+<set xpath="/items/item[@name='meleeHandzombieMutated']/effect_group[@name='melee']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">25</set>
+<set xpath="/items/item[@name='meleeHandzombieMutatedFeral']/effect_group[@name='melee']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.12,.1,.37,.43,.2</set>
+<set xpath="/items/item[@name='meleeHandzombieMutatedFeral']/effect_group[@name='melee']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">25</set>
+<set xpath="/items/item[@name='meleeHandzombieMutatedRadiated']/effect_group[@name='melee']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.12,.1,.37,.43,.2</set>
+<set xpath="/items/item[@name='meleeHandzombieMutatedRadiated']/effect_group[@name='melee']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">30</set>
+<set xpath="/items/item[@name='meleeHandAnimalZombieDog']/effect_group[@name='meleeHandAnimalZombieDog']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.1,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandAnimalZombieDog']/effect_group[@name='meleeHandAnimalZombieDog']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">15</set>
+<set xpath="/items/item[@name='meleeHandZombieStrong']/effect_group[@name='meleeHandZombieStrong']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.11,.1,.36,.42,.2</set>
+<set xpath="/items/item[@name='meleeHandZombieStrong']/effect_group[@name='meleeHandZombieStrong']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombieDemolition']/effect_group[@name='meleeHandZombieStrong']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.11,.1,.36,.42,.2</set>
+<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/effect_group[@name='meleeHandZombieStrongFeral']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.11,.1,.36,.42,.2</set>
+<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/effect_group[@name='meleeHandZombieStrongFeral']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">25</set>
+<set xpath="/items/item[@name='meleeHandZombieHazMat']/effect_group[@name='meleeHandZombieHazMat']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.1,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombieHazMat']/effect_group[@name='meleeHandZombieHazMat']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/effect_group[@name='meleeHandZombieHazMatFeral']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.11,.1,.36,.42,.2</set>
+<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/effect_group[@name='meleeHandZombieHazMatFeral']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">25</set>
+<set xpath="/items/item[@name='meleeHandZombieWorker']/effect_group[@name='meleeHandZombieWorker']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.15,.11,.1,.09,.35,.41,.19</set>
+<set xpath="/items/item[@name='meleeHandZombieWorker']/effect_group[@name='meleeHandZombieWorker']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">20</set>
+<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/effect_group[@name='meleeHandZombieWorkerFeral']/triggered_effect[@buff='buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo']/@weights">.16,.12,.11,.1,.36,.42,.2</set>
+<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/effect_group[@name='meleeHandZombieWorkerFeral']/triggered_effect[@target='other'][@cvar='infectionCounter']/@value">25</set>
 
 </config>

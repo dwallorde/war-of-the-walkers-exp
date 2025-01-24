@@ -4454,52 +4454,6 @@
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 </block>
 
-<!-- Old Screamer Block
-<block name="screamerBlock">
-	<property name="CustomIcon" value="screamerBlock"/>
-	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#@modfolder:Resources/ScreamerBlock.unity3d?ScreamerBlockPrefab" />
-	<property name="MultiBlockDim" value="1,2,1" />
-	<property name="Class" value="Campfire"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="HeatMapStrength" value="50"/>
-	<property name="HeatMapTime" value="1250"/>
-	<property name="HeatMapFrequency" value="10"/>
-	<property class="Workstation">
-		<property name="Modules" value="tools,output,fuel,input"/>
-		<property name="Collide" value="melee,bullet,arrow,rocket"/>
-	</property>
-	<property name="Material" value="Msteel"/>
-	<property name="Weight" value="200"/>
-	<property class="RepairItems">
-		<property name="resourceForgedIron" value="50"/>
-		<property name="resourceGlue" value="4"/>
-		<property name="resourceMechanicalParts" value="10"/>
-		<property name="resourceWood" value="25"/>
-		<property name="resourceSpring" value="5"/>
-	</property>
-	<drop event="Harvest" name="resourceScrapIron" count="150" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="6" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceSpring" count="3" tag="salvageHarvest"/>
-	<drop event="Destroy" count="0"/>
-	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="5"/>
-	<property name="Group" value="Building,Science"/>
-	<property name="EconomicValue" value="5000"/>
-	<property name="TraderStageTemplate" value="midTier3"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="WorkstationIcon" value="ui_game_symbol_tracking_zombie03" />
-	<property name="CraftIcon" value="ui_game_symbol_tracking_zombie03" />
-	<property name="OpenSound" value="screamerblock_toggle" />
-	<property name="CloseSound" value="screameralarm1" />
-	<property name="WorkstationJournalTip" value="screamerBlockTip" />
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-</block> -->
-
 <block name="coffeemaker">
 	<property name="CustomIcon" value="coffeemaker" />
 	<property name="Class" value="Campfire"/>

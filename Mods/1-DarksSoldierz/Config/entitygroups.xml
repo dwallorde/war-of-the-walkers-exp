@@ -1,53 +1,582 @@
 <configs>
-	<insertAfter xpath="/entitygroups/entitygroup[last()]">
-		<entitygroup name="NPCDarkSoldierGroupGS01">
-			npcSoldierGBDAxe, 0.2
-			npcSoldierGBDKnife, 0.2
-			npcSoldierGDAxe, 0.2
-			npcSoldierGDKnife, 0.2
-			npcSoldierGHDAxe, 0.2
-			npcSoldierGHDKnife, 0.2 
-			npcSoldierHD1Axe, 0.2
-			npcSoldierHD1Knife, 0.2 
-			npcSoldierHD2Axe, 0.2
-			npcSoldierHD2Knife, 0.2
+	<append xpath="/entitygroups">
+	<!-- BIOMES -->	
+	<!-- *** DAY -->
+		<entitygroup name="DarksSoldierzDay">
+			npcSoldierGBDAxe, 0.125
+			npcSoldierGBDKnife, 0.125
+			npcSoldierGBDPistol, 0.125
+			npcSoldierGBDTRifle, 0.015
+			npcSoldierGBDM60, 0.0075
+			npcSoldierGBDRocketL, 0.0025			
+			npcSoldierGDAxe, 0.125
+			npcSoldierGDKnife, 0.125
+			npcSoldierGDPistol, 0.125
+			npcSoldierGDTRifle, 0.015
+			npcSoldierGDM60, 0.0075
+			npcSoldierGDRocketL, 0.0025
+			npcSoldierGHDAxe, 0.125
+			npcSoldierGHDKnife, 0.125
+			npcSoldierGHDPistol, 0.125
+			npcSoldierGHDTRifle, 0.015
+			npcSoldierGHDM60, 0.0075
+			npcSoldierGHDRocketL, 0.0025			
+			npcSoldierHD1Axe, 0.125
+			npcSoldierHD1Knife, 0.125
+			npcSoldierHD1Pistol, 0.125
+			npcSoldierHD1TRifle, 0.015
+			npcSoldierHD1M60, 0.0075
+			npcSoldierHD1RocketL, 0.0025			
+			npcSoldierHD2Axe, 0.125
+			npcSoldierHD2Knife, 0.125
+			npcSoldierHD2Pistol, 0.125
+			npcSoldierHD2TRifle, 0.015
+			npcSoldierHD2M60, 0.0075
+			npcSoldierHD2RocketL, 0.0025
 			none, 98.0
 		</entitygroup>
-		<entitygroup name="NPCDarkSoldierGroupGS50">
-			npcSoldierGBDAxe, 0.02
-			npcSoldierGBDKnife, 0.02
-			npcSoldierGBDPistol, 0.02
-			npcSoldierGDAxe, 0.02
-			npcSoldierGDKnife, 0.02
-			npcSoldierGDPistol, 0.02
-			npcSoldierGHDAxe, 0.02
-			npcSoldierGHDKnife, 0.02 
-			npcSoldierGHDPistol, 0.02
-			npcSoldierHD1Axe, 0.02
-			npcSoldierHD1Knife, 0.02 
-			npcSoldierHD1Pistol, 0.02
-			npcSoldierHD2Axe, 0.02
-			npcSoldierHD2Knife, 0.02 
-			npcSoldierHD2Pistol, 0.02
-			none, 97.0
+		
+	<!-- *** NIGHT -->
+		<entitygroup name="DarksSoldierzNight">
+			npcSoldierGBDAxe, 0.125
+			npcSoldierGBDKnife, 0.125
+			npcSoldierGBDPistol, 0.125
+			npcSoldierGBDTRifle, 0.015
+			npcSoldierGBDM60, 0.0075
+			npcSoldierGBDRocketL, 0.0025			
+			npcSoldierGDAxe, 0.125
+			npcSoldierGDKnife, 0.125
+			npcSoldierGDPistol, 0.125
+			npcSoldierGDTRifle, 0.015
+			npcSoldierGDM60, 0.0075
+			npcSoldierGDRocketL, 0.0025
+			npcSoldierGHDAxe, 0.125
+			npcSoldierGHDKnife, 0.125
+			npcSoldierGHDPistol, 0.125
+			npcSoldierGHDTRifle, 0.015
+			npcSoldierGHDM60, 0.0075
+			npcSoldierGHDRocketL, 0.0025			
+			npcSoldierHD1Axe, 0.125
+			npcSoldierHD1Knife, 0.125
+			npcSoldierHD1Pistol, 0.125
+			npcSoldierHD1TRifle, 0.015
+			npcSoldierHD1M60, 0.0075
+			npcSoldierHD1RocketL, 0.0025			
+			npcSoldierHD2Axe, 0.125
+			npcSoldierHD2Knife, 0.125
+			npcSoldierHD2Pistol, 0.125
+			npcSoldierHD2TRifle, 0.015
+			npcSoldierHD2M60, 0.0075
+			npcSoldierHD2RocketL, 0.0025
+			none, 98.0
 		</entitygroup>
-		<entitygroup name="NPCDarkSoldierGroupGS100">
-			npcSoldierGBDPistol, 0.02 
-			npcSoldierGBDTRifle, 0.02 
-			npcSoldierGBDM60, 0.02 
-			npcSoldierGDPistol, 0.02 
-			npcSoldierGDTRifle, 0.02 
-			npcSoldierGDM60, 0.02 
-			npcSoldierGHDPistol, 0.02 
-			npcSoldierGHDTRifle, 0.02 
-			npcSoldierGHDM60, 0.02 
-			npcSoldierHD1Pistol, 0.02 
-			npcSoldierHD1TRifle, 0.02 
-			npcSoldierHD1M60, 0.02 
-			npcSoldierHD2Pistol, 0.02 
-			npcSoldierHD2TRifle, 0.02 
-			npcSoldierHD2M60, 0.02 
-			none, 97.0
-		</entitygroup>
-	</insertAfter>
+	</append>
+	
+	<!-- SLEEPER VOLUMES -->
+	
+	<!-- Military ALL -->	
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS01']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS50']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS100']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS200']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS400']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS800']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	
+	<!-- Military MELEE -->	
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS01']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife		
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS50']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife		
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS100']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife		
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS200']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife		
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS400']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife		
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS800']/text()" delim="\n" op="add" >
+		npcSoldierGBDAxe
+		npcSoldierGBDKnife		
+		npcSoldierGDAxe
+		npcSoldierGDKnife
+		npcSoldierGHDAxe
+		npcSoldierGHDKnife			
+		npcSoldierHD1Axe
+		npcSoldierHD1Knife			
+		npcSoldierHD2Axe
+		npcSoldierHD2Knife
+	</csv>
+	
+	<!-- Military RANGED -->
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS01']/text()" delim="\n" op="add" >
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS50']/text()" delim="\n" op="add" >
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS100']/text()" delim="\n" op="add" >
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS200']/text()" delim="\n" op="add" >
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS400']/text()" delim="\n" op="add" >
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS800']/text()" delim="\n" op="add" >
+		npcSoldierGBDPistol
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.0075
+		npcSoldierGBDRocketL, 0.0025			
+		npcSoldierGDPistol
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.0075
+		npcSoldierGDRocketL, 0.0025
+		npcSoldierGHDPistol
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.0075
+		npcSoldierGHDRocketL, 0.0025			
+		npcSoldierHD1Pistol
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.0075
+		npcSoldierHD1RocketL, 0.0025			
+		npcSoldierHD2Pistol
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.0075
+		npcSoldierHD2RocketL, 0.0025
+	</csv>
+	
+	<!-- Military BOSS -->
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS01']/text()" delim="\n" op="add" >
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.1
+		npcSoldierGBDRocketL, 0.005			
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.1
+		npcSoldierGDRocketL, 0.005
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.1
+		npcSoldierGHDRocketL, 0.005			
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.1
+		npcSoldierHD1RocketL, 0.005			
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.1
+		npcSoldierHD2RocketL, 0.005
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS50']/text()" delim="\n" op="add" >
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.1
+		npcSoldierGBDRocketL, 0.005			
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.1
+		npcSoldierGDRocketL, 0.005
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.1
+		npcSoldierGHDRocketL, 0.005			
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.1
+		npcSoldierHD1RocketL, 0.005			
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.1
+		npcSoldierHD2RocketL, 0.005
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS100']/text()" delim="\n" op="add" >
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.1
+		npcSoldierGBDRocketL, 0.005			
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.1
+		npcSoldierGDRocketL, 0.005
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.1
+		npcSoldierGHDRocketL, 0.005			
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.1
+		npcSoldierHD1RocketL, 0.005			
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.1
+		npcSoldierHD2RocketL, 0.005
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS200']/text()" delim="\n" op="add" >
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.1
+		npcSoldierGBDRocketL, 0.005			
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.1
+		npcSoldierGDRocketL, 0.005
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.1
+		npcSoldierGHDRocketL, 0.005			
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.1
+		npcSoldierHD1RocketL, 0.005			
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.1
+		npcSoldierHD2RocketL, 0.005
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS400']/text()" delim="\n" op="add" >
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.1
+		npcSoldierGBDRocketL, 0.005			
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.1
+		npcSoldierGDRocketL, 0.005
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.1
+		npcSoldierGHDRocketL, 0.005			
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.1
+		npcSoldierHD1RocketL, 0.005			
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.1
+		npcSoldierHD2RocketL, 0.005
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS800']/text()" delim="\n" op="add" >
+		npcSoldierGBDTRifle
+		npcSoldierGBDM60, 0.1
+		npcSoldierGBDRocketL, 0.005			
+		npcSoldierGDTRifle
+		npcSoldierGDM60, 0.1
+		npcSoldierGDRocketL, 0.005
+		npcSoldierGHDTRifle
+		npcSoldierGHDM60, 0.1
+		npcSoldierGHDRocketL, 0.005			
+		npcSoldierHD1TRifle
+		npcSoldierHD1M60, 0.1
+		npcSoldierHD1RocketL, 0.005			
+		npcSoldierHD2TRifle
+		npcSoldierHD2M60, 0.1
+		npcSoldierHD2RocketL, 0.005
+	</csv>
 </configs>

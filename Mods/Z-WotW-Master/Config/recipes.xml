@@ -3469,7 +3469,7 @@
 </recipe>
 
 <recipe name="treePlantedWinterPine1m" count="1" craft_time="1" craft_area="mortarandPestle" tags="perkMasterChef">
-	<ingredient name="resourceWood" count="75"/>
+	<ingredient name="wotwResourceHardwoodPlank" count="75"/>
 </recipe>
 
 <recipe name="treePlantedOak1m" count="1" craft_time="1" craft_area="mortarandPestle" tags="perkMasterChef">

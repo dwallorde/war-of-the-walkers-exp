@@ -271,6 +271,9 @@
 		<reward type="Exp" value="25000"/>
 </insertAfter>
 <set xpath="/quests/quest[@id='quest_tier4complete']/reward[@type='Item'][@id='casinoCoin']/@value">8000</set>
+<append xpath="/quests/quest[@id='quest_tier4complete']">
+		<reward type="Item" id="modRadiationProtectionSchematic" ischosen="true" isfixed="true" value="1"/>
+</append>
 
 <insertAfter xpath="/quests/quest[@id='quest_tier5complete']/property[@name='completion_key'][@value='quest_tier5_complete_completion']" >
 		<reward type="Exp" value="50000"/>

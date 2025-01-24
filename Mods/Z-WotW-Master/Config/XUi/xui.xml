@@ -8,197 +8,405 @@
 		<window name="btnDiscord" anchor="LeftCenter" />
 </append>
 
-<!-- <set xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_campfire']/window[@name='windowCraftingList']/@name">windowCraftingListWorkstationForge</set> -->
-
 <!-- Cement Mixer -->
-<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_cementMixer']"/>
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_cementMixer" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsCementMixer"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_cementMixer']"/>
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_cementMixer" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsCementMixer"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_cementMixer']"/>
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_cementMixer" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsCementMixer"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- Workbench -->
-<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_workbench']"/>
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_workbench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsWorkbench"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_workbench']"/>
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_workbench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsWorkbench"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_workbench']"/>
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_workbench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsWorkbench"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- Chemistry Station -->
-<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_chemistryStation']"/>
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_chemistryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowFuel" />
-		<window name="windowToolsChemistryStation"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_chemistryStation']"/>
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_chemistryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowFuel" />
+				<window name="windowToolsChemistryStation"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Mortar and Pestle -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_mortarandPestle" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsMortar"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_chemistryStation']"/>
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_chemistryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowFuel" />
+				<window name="windowToolsChemistryStation"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Armor Smithing Workstation -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_armourSmithingWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsArmourSmithing"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<!-- WOTW Mortar & Pestle -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_mortarandPestle" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsMortar"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Tool Workbench -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_toolWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsToolWorkbench" />
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_mortarandPestle" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsMortar"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Builders Workbench -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_buildersWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsBuildersWorkbench" />
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<!-- WOTW Armour Smithing Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_armourSmithingWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsArmourSmithing"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Tablesaw Workbench -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_wotwTablesawWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsTablesaw" />
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_armourSmithingWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsArmourSmithing"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Tablesaw Workbench -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_wotwTanningWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsTanner" />
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<!-- WOTW Tool Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_toolWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsToolWorkbench" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_toolWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsToolWorkbench" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Builders Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_buildersWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsBuildersWorkbench" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_buildersWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsBuildersWorkbench" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Tablesaw Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_wotwTablesawWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsTablesaw" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_wotwTablesawWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsTablesaw" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Tanning Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_wotwTanningWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsTanner" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_wotwTanningWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsTanner" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Blueprint Workstation -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_blueprintWorkStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsBlueprintStation" />
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_blueprintWorkStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsBlueprintStation" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Gunsmithing Workstation -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_gunSmithingWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsGunSmithing"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_blueprintWorkStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsBlueprintStation" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Oil Pump -->
-<!-- <append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_oilPump" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingListWorkstation"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutputWorkstationNoFuel" />
-		<window name="windowCraftingQueueWorkstationNoToolNoFuel"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append> -->
+<!-- WOTW Gun Smithing Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_gunSmithingWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsGunSmithing"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Screamer Block -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_screamerBlock" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput" />
-		<window name="windowCraftingQueue"/>
-		<window name="windowFuel"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_gunSmithingWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput" />
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsGunSmithing"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Advanced Dew Collector -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="passive_collector_wotwAdvDewCollector" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
+				<window name="windowwotwAdvDewCollector"/>
+				<window name="windowToolswotwAdvDewCollector"/>
+				<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="passive_collector_wotwAdvDewCollector" defaultSelected="0" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
+				<window name="windowwotwAdvDewCollector"/>
+				<window name="windowToolswotwAdvDewCollector"/>
+				<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
 	
-	<!-- <window_group name="workstation_screamerBlockPowered" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingListWorkstation"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutputWorkstationFuelSMXStandard" />
-		<window name="windowCraftingQueueWorkstationFuelSMXStandard"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group> -->
-	
-	<!-- <window_group name="wotwAdvDewCollector" left_panel_valign_top="false" controller="XUiC_DewCollectorWindowGroup" close_compass_on_open="true">
-		<window name="windowAdvDewCollector"/>
-		<window name="windowNonPagingHeader" />
-	</window_group> -->
-	
-	<window_group name="passive_collector_wotwAdvDewCollector" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
-		<window name="windowwotwAdvDewCollector"/>
-		<window name="windowToolswotwAdvDewCollector"/>
-		<window name="windowNonPagingHeader" />
-	</window_group>
-	
-	<window_group name="passive_collector_cntAdvancedDewCollector" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
-		<window name="windowwotwAdvDewCollector"/>
-		<!-- <window name="windowToolswotwAdvDewCollector"/> -->
-		<window name="windowNonPagingHeader" />
-	</window_group>
-	
-	<window_group name="passive_collector_oilPump" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
-		<window name="windowoilPump"/>
-		<window name="windowToolsoilPump"/>
-		<window name="windowNonPagingHeader" />
-	</window_group>
-</append>
+	</if>
+</conditional>
+
+<!-- WOTW Oil Pump Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="passive_collector_oilPump" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
+				<window name="windowoilPump"/>
+				<window name="windowToolsoilPump"/>
+				<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="passive_collector_oilPump" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
+				<window name="windowoilPump"/>
+				<window name="windowToolsoilPump"/>
+				<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Health Deploy Block -->
 <append xpath="/xui/ruleset[@name='default']">
@@ -213,167 +421,421 @@
 </append>
 
 <!-- WOTW Coffee Maker -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_coffeemaker" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_coffeemaker" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_coffeemaker" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Microwave -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_microwave" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowFuel"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_microwave" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowFuel"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_microwave" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowFuel"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Player Oven -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_playerOven" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<!-- <window name="windowFuel"/> -->
-		<window name="windowToolsPlayerOven"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_playerOven" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsPlayerOven"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_playerOven" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsPlayerOven"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Food Processing Table -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_foodProcessingTable" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsFoodProcessingTable"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_foodProcessingTable" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsFoodProcessingTable"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_foodProcessingTable" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsFoodProcessingTable"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Brewery Workstation -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_breweryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowFuel"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_breweryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowFuel"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Forge Workbench -->
-<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_forge']"/>
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_forge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowFuel" />
-		<window name="windowToolsForge"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_breweryStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowFuel"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Tungsten Forge -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_tungstenForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowFuel" />
-		<window name="windowToolsTungstenForge" />
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<!-- Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_forge']"/>
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_forge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowFuel" />
+				<window name="windowToolsForge"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Stone Forge -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_forgeStone" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowFuel"/>
-		<window name="windowToolsStoneForge"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<remove xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_forge']"/>
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_forge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowFuel" />
+				<window name="windowToolsWotWForge"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Ammo Forge -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_forgeAmmo" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowFuel"/>
-		<window name="windowToolsAmmoForge"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<!-- WOTW Tungsten Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_tungstenForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowFuel" />
+				<window name="windowToolsTungstenForge" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_tungstenForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowFuel" />
+				<window name="windowToolsTungstenForge" />
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Stone Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_forgeStone" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowFuel"/>
+				<window name="windowToolsStoneForge"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_forgeStone" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowFuel"/>
+				<window name="windowToolsStoneForge"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Ammo Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_forgeAmmo" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowFuel"/>
+				<window name="windowToolsAmmoForge"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_forgeAmmo" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowFuel"/>
+				<window name="windowToolsAmmoForge"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Fabrication Workstation -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_fabricationStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsFabrication"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_fabricationStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsFabrication"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_fabricationStation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsFabrication"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Recycler Workstation -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_recyclerWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsWorkbench"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_recyclerWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsWorkbench"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_recyclerWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsWorkbench"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- WOTW Ammo Workstation -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_ammoWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsAmmoStation"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_ammoWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsAmmoStation"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
-<!-- WOTW Mechanic Workbench -->
-<append xpath="/xui/ruleset[@name='default']">
-	<window_group name="workstation_mechanicBench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
-		<window name="windowCraftingList"/>
-		<window name="craftingInfoPanel"/>
-		<window name="windowOutput"/>
-		<window name="windowCraftingQueue"/>
-		<window name="windowToolsMechanicBench"/>
-		<window name="windowNonPagingHeader"/>
-	</window_group>
-</append>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_ammoWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsAmmoStation"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Mechanic Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_mechanicBench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingList"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueue"/>
+				<window name="windowToolsMechanicBench"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="workstation_mechanicBench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+				<window name="windowCraftingListChemistryStation"/>
+				<window name="craftingInfoPanel"/>
+				<window name="windowOutput"/>
+				<window name="windowCraftingQueueWorkstation"/>
+				<window name="windowToolsMechanicBench"/>
+				<window name="windowNonPagingHeader"/>
+			</window_group>
+		</append>
+	</if>
+</conditional>
 
 <!-- JNS Backpack 8 x 15 Changes -->
-<set xpath="/xui/ruleset[@name='default']/@stackpanel_scale">1.01</set>
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/xui/ruleset[@name='default']/@stackpanel_scale">1.01</set>
+	</if>
+</conditional>
 
 </config>

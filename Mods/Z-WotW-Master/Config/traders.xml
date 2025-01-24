@@ -793,6 +793,7 @@
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='tools']/item[@name='resourceRepairKit']"/>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
+			<item name="guppFireExtinguisherItem" quality="2,5"/>
 			<item name="wotwMeleeToolStonePickaxe" quality="2,5"/>
 			<item name="wotwMeleeToolIronHoe" quality="2,5"/>
 			<item name="wotwMeleeToolSteelHoe" quality="2,5"/>

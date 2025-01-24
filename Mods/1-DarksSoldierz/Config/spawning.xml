@@ -1,42 +1,48 @@
 <configs>
+
 	<append xpath="/spawning/biome[@name='pine_forest']">
-		<spawn id="dnDarkSoldierGroupGS01" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
-		<spawn id="nnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS012" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
-		<spawn id="nnDarkSoldierGroupGS100" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn id="ddszd01" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" notags="commercial,industrial,downtown" />
+		<spawn id="ndszn01" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" notags="commercial,industrial,downtown" />
+		<spawn id="ddszd02" maxcount="1" respawndelay="3" time="Day" entitygroup="DarksSoldierzDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ndszn02" maxcount="1" respawndelay="3" time="Night" entitygroup="DarksSoldierzNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ddszd03" maxcount="1" respawndelay="3" time="Day" entitygroup="DarksSoldierzNight" tags="downtown" />
+		<spawn id="ndszn03" maxcount="1" respawndelay="3" time="Night" entitygroup="DarksSoldierzNight" tags="downtown" />
 	</append>
 	
 	<append xpath="/spawning/biome[@name='burnt_forest']">
-		<spawn id="dnDarkSoldierGroupGS01" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
-		<spawn id="nnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS012" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
-		<spawn id="nnDarkSoldierGroupGS100" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn id="ddszd01" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" notags="commercial,industrial,downtown" />
+		<spawn id="ndszn01" maxcount="2" respawndelay="1.5" time="Night" entitygroup="DarksSoldierzNight" notags="commercial,industrial,downtown" />
+		<spawn id="ddszd02" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ndszn02" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ddszd03" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzNight" tags="downtown" />
+		<spawn id="ndszn03" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" tags="downtown" />
 	</append>
 	
 	<append xpath="/spawning/biome[@name='desert']">
-		<spawn id="dnDarkSoldierGroupGS01" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
-		<spawn id="nnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS012" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
-		<spawn id="nnDarkSoldierGroupGS100" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn id="ddszd01" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" notags="commercial,industrial,downtown" />
+		<spawn id="ndszn01" maxcount="2" respawndelay="1.5" time="Night" entitygroup="DarksSoldierzNight" notags="commercial,industrial,downtown" />
+		<spawn id="ddszd02" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ndszn02" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ddszd03" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzNight" tags="downtown" />
+		<spawn id="ndszn03" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" tags="downtown" />
 	</append>	
 	
 	<append xpath="/spawning/biome[@name='snow']">
-		<spawn id="dnDarkSoldierGroupGS01" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
-		<spawn id="nnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS012" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
-		<spawn id="nnDarkSoldierGroupGS100" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn id="ddszd01" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" notags="commercial,industrial,downtown" />
+		<spawn id="ndszn01" maxcount="2" respawndelay="1.5" time="Night" entitygroup="DarksSoldierzNight" notags="commercial,industrial,downtown" />
+		<spawn id="ddszd02" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ndszn02" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ddszd03" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzNight" tags="downtown" />
+		<spawn id="ndszn03" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" tags="downtown" />
 	</append>	
 	
 	<append xpath="/spawning/biome[@name='wasteland']">
-		<spawn id="dnDarkSoldierGroupGS01" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" notags="commercial,industrial,downtown" />
-		<spawn id="nnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS50" notags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS012" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS01" tags="commercial,industrial" notags="downtown" />
-		<spawn id="nnDarkSoldierGroupGS100" maxcount="1" respawndelay="1" time="Night" entitygroup="NPCDarkSoldierGroupGS100" tags="commercial,industrial,downtown" />
-		<spawn id="dnDarkSoldierGroupGS50" maxcount="1" respawndelay="1" time="Day" entitygroup="NPCDarkSoldierGroupGS50" tags="downtown" />
+		<spawn id="ddszd01" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" notags="commercial,industrial,downtown" />
+		<spawn id="ndszn01" maxcount="2" respawndelay="1" time="Night" entitygroup="DarksSoldierzNight" notags="commercial,industrial,downtown" />
+		<spawn id="ddszd02" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzDay" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ndszn02" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" tags="commercial,industrial" notags="downtown" />
+		<spawn id="ddszd03" maxcount="1" respawndelay="2" time="Day" entitygroup="DarksSoldierzNight" tags="downtown" />
+		<spawn id="ndszn03" maxcount="1" respawndelay="2" time="Night" entitygroup="DarksSoldierzNight" tags="downtown" />
 	</append>	
 	
 </configs>

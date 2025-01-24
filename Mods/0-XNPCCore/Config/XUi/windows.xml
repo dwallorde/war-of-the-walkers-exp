@@ -1,6 +1,5 @@
 ﻿<configs>
 	<!--    // SMX // Conversation NPC Window - NOT CLEANED -->
-	<remove xpath="/windows/window[@name='windowRespondentName']"/>
 	<append xpath="/windows">
 		<window name="windowLockPicking" pos="0, 60" width="600" height="600" anchor="CenterCenter" controller="PickLocking, SCore" cursor_area="true">
 			<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">

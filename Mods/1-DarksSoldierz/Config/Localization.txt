@@ -1,4 +1,4 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
 
 npcSoldierGBDAxe,entityclasses,Entity,,,National Guard Officer,,,,,,,,,,,,,
 npcSoldierGBDKnife,entityclasses,Entity,,,National Guard Officer,,,,,,,,,,,,,
