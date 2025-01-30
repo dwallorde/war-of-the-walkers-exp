@@ -2,7 +2,7 @@
 <append xpath="/windows/window[@name='mainMenu']">
 	<rect name="wotwmenu_version_control">
 		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
-		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.2.1.7" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
+		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.2.1.7b" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
 	</rect>
 	<rect name="npcmenu_background">
 		<!-- <texture depth="2" color="[white]" texture="@modfolder(WaroftheWalkersMod):Textures\Menu\wotw_POWERED_LOGO.png" name="npcModLogo" pos="1375,350" size="1200,158" pivot="bottomright" keep_aspect_ratio="BasedOnHeight" aspect_ratio="1.8" /> -->
