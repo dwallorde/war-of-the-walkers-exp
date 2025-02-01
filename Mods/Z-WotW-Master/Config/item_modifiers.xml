@@ -271,15 +271,15 @@
 
 <append xpath="/item_modifiers/item_modifier[@name='modMeleeClubBurningShaft']">
 		<item_property_overrides name="wotwMeleeWpnSteelMachete">
-			<property name="FlameEffect" value="ItemModEffects/mod_machete_flamePrefab"/>
+			<property name="FlameEffect" value="@:ItemModEffects/mod_flame_defaultPrefab.prefab"/>
 		</item_property_overrides>
 		
 		<item_property_overrides name="wotwMeleeWpnTungstenMachete">
-			<property name="FlameEffect" value="ItemModEffects/mod_machete_flamePrefab"/>
+			<property name="FlameEffect" value="@:ItemModEffects/mod_flame_defaultPrefab.prefab"/>
 		</item_property_overrides>
 		
 		<item_property_overrides name="wotwMeleeWpnGoldTippedMachete">
-			<property name="FlameEffect" value="ItemModEffects/mod_machete_flamePrefab"/>
+			<property name="FlameEffect" value="@:ItemModEffects/mod_flame_defaultPrefab.prefab"/>
 		</item_property_overrides>
 </append>
 	
