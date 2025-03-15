@@ -1,39 +1,39 @@
 <config>
 <append xpath="/windows/window[@name='mainMenu']">
 	<rect name="wotwmenu_version_control">
-		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
-		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.3.1.8" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
+		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Exp Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
+		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.3.2.0" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
 	</rect>
 	<rect name="npcmenu_background">
-		<!-- <texture depth="2" color="[white]" texture="@modfolder(WaroftheWalkersMod):Textures\Menu\wotw_POWERED_LOGO.png" name="npcModLogo" pos="1375,350" size="1200,158" pivot="bottomright" keep_aspect_ratio="BasedOnHeight" aspect_ratio="1.8" /> -->
-		<texture depth="2" color="[white]" texture="@modfolder(WaroftheWalkersMod):Textures\Menu\wotw_POWERED_LOGO.png" name="npcModLogo" pos="1375,400" size="500,100" pivot="bottomright" />
+		<!-- <texture depth="2" color="[white]" texture="@modfolder(WotWMod):Textures\Menu\wotw_POWERED_LOGO.png" name="npcModLogo" pos="1375,350" size="1200,158" pivot="bottomright" keep_aspect_ratio="BasedOnHeight" aspect_ratio="1.8" /> -->
+		<texture depth="2" color="[white]" texture="@modfolder(WotWMod):Textures\Menu\wotw_POWERED_LOGO.png" name="npcModLogo" pos="1375,400" size="500,100" pivot="bottomright" />
 	</rect>
 </append>
 
 <append xpath="/windows">
 	<window name="btnDiscord" controller="ServerInfo" anchor="CenterCenter" pos="-100,475">
 		<panel name="header" pos="0,0" height="0" depth="3" backgroundspritename="ui_game_panel_header" bordercolor="[transparent]" borderthickness="0" >
-			<texture name="ItemBackground" depth="2" size="75, 75" texture="@modfolder(WaroftheWalkersMod):Textures\Menu\discord-logo.png" pos="0,0" />
+			<texture name="ItemBackground" depth="2" size="75, 75" texture="@modfolder(WotWMod):Textures\Menu\discord-logo.png" pos="0,0" />
 			<label name="ServerDescription" />
 			<label depth="1" pos="0,-20" height="75" width="75" name="ServerWebsiteURL" text="https://discord.gg/bQdP6cH" justify="center" style="press, hover" font_size="40" upper_case="false" />
 		</panel>
 	</window>
 </append>
 
-<set xpath="/windows/window[@name='mainMenuLogo']/texture/@texture">@modfolder(WaroftheWalkersMod):Textures\Menu\wwmenulogo.png</set>
+<set xpath="/windows/window[@name='mainMenuLogo']/texture/@texture">@modfolder(WotWMod):Textures\Menu\wwmenulogo.png</set>
 <set xpath="/windows/window[@name='mainMenuLogo']/texture/@anchor_left">#cam,0,140</set>
 <set xpath="/windows/window[@name='mainMenuLogo']/texture/@anchor_bottom">#cam,0.25,150</set>
 <set xpath="/windows/window[@name='mainMenuLogo']/texture/@anchor_right">#cam,0.0125,675</set>
 <set xpath="/windows/window[@name='mainMenuLogo']/texture/@anchor_top">#cam,0.5,450</set>
 <set xpath="/windows/window[@name='mainMenuLogo']/texture/@aspect_ratio">1.8</set>
 
-<append xpath="/windows/window[@name='loadingScreen']">
-							<texture name="wotwPopOutArt" depth="10" pos="0,325" width="293" height="358" pivot="center" texture="@modfolder(WaroftheWalkersMod):Textures/Menu/wwloadinglogo.png" />
-</append>
+<!-- <append xpath="/windows/window[@name='loadingScreen']">
+							<texture name="wotwPopOutArt" depth="10" pos="0,325" width="293" height="358" pivot="center" texture="@modfolder(WotWMod):Textures/Menu/wwloadinglogo.png" />
+</append> -->
 
-<set xpath="/windows/window[@name='loadingScreen']/rect/label[@name='lblText']/@color">[white]</set>
+<!-- <set xpath="/windows/window[@name='loadingScreen']/rect/label[@name='lblText']/@color">[white]</set> -->
 
-<remove xpath="/windows/window[@name='loadingScreen']/texture[@name='smxMumpfyTag']"/>
+<!-- <remove xpath="/windows/window[@name='loadingScreen']/texture[@name='smxMumpfyTag']"/> -->
 
 <append xpath="/windows">
 		
@@ -295,4 +295,55 @@
 </append>
 
 <set xpath="/windows/window[@name='mainMenu']/grid[@name='smx_mod_grid']/@pos">50,410</set>
+
+<!-- <append xpath="/windows/window[@name='loadingScreen']">
+		<panel name="noclick" depth="2" pos="-650,-300" width="1000" height="200" createuipanel="true" disableautobackground="true">
+			<sprite name="backgroundMain" depth="0" sprite="menu_empty" color="7,7,7,320" type="sliced" fillcenter="true" />
+
+			<sprite name="smxOutlineTop" pos="-20,2" width="850" height="3" sprite="smx_sepline_1" />
+			<sprite name="smxOutlineLeft" pos="-2,-220" width="245" height="3" sprite="smx_sepline_1" rotation="90" />
+			<sprite name="smxOutlineRight" pos="798,-225" width="234" height="3" sprite="smx_sepline_1" rotation="90" />
+			<sprite name="smxOutlineBottom" pos="-30,-198" width="858" height="3" sprite="smx_sepline_1" flip="Horizontally" />
+		</panel>
+</append> -->
+<remove xpath="/windows/window[@name='loadingScreen']" />
+
+<append xpath="/windows">
+	<window name="loadingScreen" depth="200" pos="0,0" width="1185" height="780" anchor="CenterCenter" controller="LoadingScreen" browse_sound="Sounds/Crafting/craft_click_recipe">
+		<panel name="pnlBlack" depth="1" pos="-3000,3000" width="10000" height="10000" createuipanel="true" on_press="true" disableautobackground="true" gamepad_selectable="false" />
+		
+		<texture name="loading_image" depth="2" texture="{background_texture}" color="[white]" anchor_left="#cam,0,-5" anchor_bottom="#cam,0,-5" anchor_right="#cam,1,5" anchor_top="#cam,1,5" original_aspect_ratio="true" keep_aspect_ratio="BasedOnWidth" aspect_ratio="1.779" />
+
+		<texture name="wotwPopOutArt" depth="10" pos="0,325" width="293" height="358" pivot="center" texture="@modfolder(WotWMod):Textures/Menu/wwloadinglogo.png" />
+
+		<rect name="tips_enabled" visible="{show_tips}">
+			<!-- <panel name="noclick" depth="1" pos="-650,-300" width="1000" height="200" createuipanel="true" disableautobackground="true" gamepad_selectable="false">
+				<sprite name="backgroundMain" depth="0" sprite="menu_empty" color="7,7,7,320" type="sliced" fillcenter="true" />
+
+				<sprite name="smxOutlineTop" pos="-20,2" width="850" height="3" sprite="smx_sepline_1" />
+				<sprite name="smxOutlineLeft" pos="-2,-220" width="245" height="3" sprite="smx_sepline_1" rotation="90" />
+				<sprite name="smxOutlineRight" pos="798,-225" width="234" height="3" sprite="smx_sepline_1" rotation="90" />
+				<sprite name="smxOutlineBottom" pos="-30,-198" width="858" height="3" sprite="smx_sepline_1" flip="Horizontally" />
+			</panel> -->
+			<texture name="tipBackground" depth="3" pos="-200,-370" width="1500" height="250" pivot="center" texture="@modfolder(WotWMod):Textures/Menu/backgroundBlack.png" />
+			
+			<sprite name="smxRedArt" depth="8" pos="-930,-375" width="360" height="617" pivot="center" sprite="tfp_7dtd_7" color="255,255,255,96" rotation="116" />
+
+			<sprite name="smxProgressBiohazard" depth="5" pos="-752,-358" width="200" height="200" pivot="center" sprite="smx_ui_game_symbol_biohazard" color="196,196,196,96" controller="Quartz.Spinner, Quartz" spin="false" angle_per_second="1" />
+
+			<texture name="smxPopOutArt" depth="10" pos="-750,-367" width="180" height="92" pivot="center" texture="@modfolder(SMXcore)://Textures/misc/smx_loading_logo.png" />
+
+			<label name="lblTitle" depth="6" pos="-150,-335" width="900" height="34" pivot="center" style="smx_label_outline" text="{title}" font_size="32" color="255,255,255,225" justify="left" spacing_x="5" parse_actions="true" upper_case="true" />
+
+			<sprite name="smx_panel_separation" depth="4" pos="-70,-365" width="1100" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+
+			<label name="lblText" depth="6" pos="-600,-380" width="1050" height="102" pivot="topleft" style="smx_label_outline" text="{text}" font_size="22" color="[white]" justify="left" spacing_x="2" spacing_y="3" parse_actions="true" actions_default_format="( [e61a16]###[-] )" />
+
+			<label name="lblLeft" depth="6" pos="300,-340" width="30" height="30" pivot="center" text=" [action:local:Secondary]" font_size="30" color="[white]" justify="right" parse_actions="true" max_line_count="1" />
+			<label name="lblIndex" depth="6" pos="370,-340" width="100" height="30" pivot="center" text="{index} / {count}" font_size="26" color="[white]" justify="center" spacing_x="2" parse_actions="true" max_line_count="1" />
+			<label name="lblRight" depth="6" pos="440,-340" width="30" height="30" font_size="30" pivot="center" text="[action:local:Primary] " color="[white]" justify="left" parse_actions="true" max_line_count="1" />
+
+		</rect>
+	</window>
+</append>
 </config>

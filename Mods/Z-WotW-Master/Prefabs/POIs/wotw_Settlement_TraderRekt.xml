@@ -5,7 +5,7 @@
   <property name="Zoning" value="any" />
   <property name="RotationToFaceNorth" value="2" />
   <property name="YOffset" value="-1" />
-  <property name="AllowedTownships" value="city,town,rural,wilderness" />
+  <property name="AllowedTownships" value="city,town,rural" />
   <property name="TraderArea" value="True" />
   <property name="TraderAreaProtect" value="0,0,0" />
   <property name="ExcludeDistantPOIMesh" value="False" />
@@ -15,7 +15,7 @@
   <property name="DifficultyTier" value="0" />
   <property name="ExcludePOICulling" value="True" />
   <property name="ShowQuestClearCount" value="1" />
-  <property name="Tags" value="wilderness, countrytown, commercial, industrial, downtown, gateway, nocheckpoint" />
+  <property name="Tags" value="countrytown, commercial, industrial, downtown, gateway, nocheckpoint" />
   <property name="ThemeTags" value="traderRekt" />
   <property name="ThemeRepeatDistance" value="800" />
   <property name="PrefabSize" value="60, 21, 60" />
@@ -30,11 +30,11 @@
   <property name="POIMarkerPartRotations" value="2,2,2" />
   <property name="POIMarkerPartSpawnChance" value="1,1,1" />
   <property class="Stats">
-    <property name="TotalVertices" value="806858" />
-    <property name="TotalTriangles" value="481405" />
+    <property name="TotalVertices" value="893339" />
+    <property name="TotalTriangles" value="534626" />
     <property class="BlockEntities">
-      <property name="Vertices" value="743077" />
-      <property name="Triangles" value="434650" />
+      <property name="Vertices" value="829558" />
+      <property name="Triangles" value="487871" />
     </property>
     <property class="ChunkMeshes0">
       <property name="Vertices" value="54679" />
@@ -71,20 +71,22 @@
     <property class="challenge_polymers">
       <property name="0" value="47, 1, 26" />
     </property>
+    <property class="TraderOnOff">
+      <property name="0" value="30, 2, 30" />
+      <property name="1" value="38, 7, 30" />
+      <property name="2" value="42, 2, 30" />
+      <property name="3" value="42, 8, 33" />
+      <property name="4" value="39, 2, 35" />
+    </property>
     <property class="challenge_cars">
       <property name="0" value="42, 1, 25" />
-    </property>
-    <property class="TraderOnOff">
-      <property name="0" value="42, 8, 33" />
-      <property name="1" value="30, 2, 30" />
-      <property name="2" value="39, 2, 35" />
-      <property name="3" value="42, 2, 30" />
     </property>
     <property class="challenge_mech_parts">
       <property name="0" value="42, 2, 31" />
     </property>
     <property class="challenge_steel">
-      <property name="0" value="31, 2, 27" />
+      <property name="0" value="33, 2, 26" />
+      <property name="1" value="31, 2, 27" />
     </property>
     <property class="Trader">
       <property name="0" value="37, 2, 29" />

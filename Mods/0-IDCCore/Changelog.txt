@@ -1,3 +1,8 @@
+[3.2.0]
+- Update for 7D2D V1.3
+- [EVA] Add vehicle assemly system similar to A16s.
+- [EVA] Rewrite sections of netcode.
+
 [3.1.4]
 - Revert some netcode changes for VehicleAttachments due to item loss.
 - Add index validation to XUiC_VehicleAttachmentSelectorWindow to prevent index shifting.

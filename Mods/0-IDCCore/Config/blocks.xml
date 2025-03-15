@@ -25,6 +25,7 @@
 				<property name="MultiScreamerEnabled" value="false"/>
 				<property name="MultiScreamerChance" value="0.5"/>
 				<property name="MultiScreamerBounds" value="2,4"/>
+				<property name="ScreamersDuringBloodmoon" value="false"/>
 			</property>
 			
 			<property class="TurretOptions">
@@ -48,6 +49,7 @@
 			
 			<property name="DebugTools" value="false"/>
 			<property name="DebugLogging" value="false"/>
+			<property name="EVADebugLogging" value="false"/>
 			<property name="LogGamestagedBiomeSpawns" value="false"/>
 			<property name="LogProgressionParsing" value="false"/>
 		</block>

@@ -3,6 +3,32 @@ Trader_Mechanic,The Mechanic's Shop
 TraderMechanic_b,The Mechanic
 BVbillboard,Bdub's Vehicles Billboard
 
+vehicleBicycleOldBVChassis,Old Bicycle Chassis
+vehicleBicycleOldBVHandlebars,Old Bicycle Handlebars
+vehicleBicycleOldBVPlaceable,Old Bicycle
+vehicleBicycleOldBVPlaceableDesc,Old Bicycle.
+vehicleBicycleOldBV,Old Bicycle
+vehicleMinibikeOldBVChassis,Old Minibike Chassis
+vehicleMinibikeOldBVHandlebars,Old Minibike Handlebars
+vehicleMinibikeOldBVPlaceable,Old Minibike
+vehicleMinibikeOldBVPlaceableDesc,Old Minibike.
+vehicleMinibikeOldBV,Old Minibike
+vehicleMotorcycleOldBVChassis,Old Motorcycle Chassis
+vehicleMotorcycleOldBVHandlebars,Old Motorcycle Handlebars
+vehicleMotorcycleOldBVPlaceable,Old Motorcycle
+vehicleMotorcycleOldBVPlaceableDesc,Old Motorcycle.
+vehicleMotorcycleOldBV,Old Motorcycle
+vehicleTruck4x4OldBVChassis,Old Jeep Chassis
+vehicleTruck4x4OldBVAccessories,Old Jeep Accessories
+vehicleTruck4x4OldBVPlaceable,Old Jeep
+vehicleTruck4x4OldBVPlaceableDesc,Old Jeep.
+vehicleTruck4x4OldBV,Old Jeep
+vehicleGyrocopterOldBVChassis,Old Gyrocopter Chassis
+vehicleGyrocopterOldBVAccessories,Old Gyrocopter Accessories
+vehicleGyrocopterOldBVPlaceable,Old Gyrocopter
+vehicleGyrocopterOldBVPlaceableDesc,Old Gyrocopter.
+vehicleGyrocopterOldBV,Old Gyrocopter
+
 vehicleBoxTruckbody,Box Truck Body
 vehicleBoxTruckbodyDesc,Parts needed to craft the Box Truck.
 vehicleBoxTruckchassis,Box Truck Chassis

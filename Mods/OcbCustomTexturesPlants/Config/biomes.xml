@@ -1,0 +1,37 @@
+<configs>
+	<append xpath="/worldgeneration/biomes/biome/subbiome/decorations[decoration[@blockname='plantedChrysanthemum3Harvest']]">
+		<decoration type="block" blockname="ocb_block_flower_01" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_flower_02" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_flower_03" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_flower_04" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_flower_05" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_flower_06" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_flower_07" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_flower_08" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_flower_09" prob="0.03" rotatemax="7"/>
+
+		<decoration type="block" blockname="ocb_block_tomato_grown" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_tomato_small" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_wheat_grown" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_wheat_small" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_onion_grown" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_onion_small" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_cabbage_grown" prob="0.03" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_cabbage_small" prob="0.03" rotatemax="7"/>
+	</append>
+
+	<append xpath="/worldgeneration/biomes/biome/subbiome/decorations[decoration[@blockname='treeSnowyDeadBush']]">
+		<decoration type="block" blockname="ocb_block_snow_bush_01" prob="0.0035" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_snow_bush_02" prob="0.0025" rotatemax="7"/>
+	</append>
+
+	<append xpath="/worldgeneration/biomes/biome/subbiome/decorations[decoration[@blockname='treeDeadPineLeaf']]">
+		<decoration type="block" blockname="ocb_block_forrest_bush_01" prob="0.0125" rotatemax="7"/>
+	</append>
+
+	<append xpath="/worldgeneration/biomes/biome/subbiome/decorations[decoration[@blockname='treeDesertShrub']]">
+		<decoration type="block" blockname="ocb_block_desert_grass_01" prob="0.0125" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_desert_grass_02" prob="0.005" rotatemax="7"/>
+		<decoration type="block" blockname="ocb_block_desert_bush_01" prob="0.0075" rotatemax="7"/>
+	</append>
+</configs>

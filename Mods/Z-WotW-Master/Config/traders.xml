@@ -1,151 +1,324 @@
 <config>
+<set xpath="/traders/@buy_markup">5</set>
 <!-- Traders.xml -->
 <!-- Trader_Stage_Templates WotW -->
-<!-- <set xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier0']/@max">30</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier1']/@min">20</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier1']/@max">50</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier2']/@min">50</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier2']/@max">125</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier3']/@min">75</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier3']/@max">125</set> -->
-<insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier3']">
-		<traderstage_template name="baseTier4">
-			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
-			<entry min="100" max="999999" quality="1"/> <!-- Steel Tools/Weapons -->
-			<entry min="105" max="999999" quality="2"/>
-			<entry min="110" max="999999" quality="3"/>
-			<entry min="115" max="999999" quality="4"/>
-			<entry min="120" max="999999" quality="5"/>
-		</traderstage_template>
-		<traderstage_template name="baseTier5">
-			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
-			<entry min="130" max="999999" quality="1"/> <!-- Steel Auger/Chainsaw -->
-			<entry min="145" max="999999" quality="2"/>
-			<entry min="160" max="999999" quality="3"/>
-			<entry min="175" max="999999" quality="4"/>
-			<entry min="190" max="999999" quality="5"/>
-		</traderstage_template>
-		<traderstage_template name="baseTier6">
-			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
-			<entry min="200" max="999999" quality="1"/> <!-- Tungsten Tools/Weapons -->
-			<entry min="210" max="999999" quality="2"/>
-			<entry min="220" max="999999" quality="3"/>
-			<entry min="230" max="999999" quality="4"/>
-			<entry min="240" max="999999" quality="5"/>
-		</traderstage_template>
-		<traderstage_template name="baseTier7">
-			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
-			<entry min="250" max="999999" quality="1"/> <!-- Tungsten Auger/Chainsaw -->
-			<entry min="270" max="999999" quality="2"/>
-			<entry min="290" max="999999" quality="3"/>
-			<entry min="310" max="999999" quality="4"/>
-			<entry min="330" max="999999" quality="5"/>
-		</traderstage_template>
-		<traderstage_template name="baseTier8">
-			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
-			<entry min="350" max="999999" quality="1"/> <!-- Diamond Tipped Tools/Weapons -->
-			<entry min="370" max="999999" quality="2"/>
-			<entry min="390" max="999999" quality="3"/>
-			<entry min="410" max="999999" quality="4"/>
-			<entry min="430" max="999999" quality="5"/>
-		</traderstage_template>
-		<traderstage_template name="baseTier9">
-			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
-			<entry min="450" max="999999" quality="1"/> <!-- Legendary Tools/Weapons -->
-			<entry min="475" max="999999" quality="2"/>
-			<entry min="500" max="999999" quality="3"/>
-			<entry min="525" max="999999" quality="4"/>
-			<entry min="550" max="999999" quality="5"/>
-		</traderstage_template>
-</insertAfter>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier0']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier1']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier2']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier3']"/>
 
-<!-- <set xpath="/traders/traderstage_templates/traderstage_template[@name='midTier0']/@min">20</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='midTier1']/@min">50</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='midTier2']/@min">125</set> -->
-<insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='midTier2']">
-		<traderstage_template name="midTier3"> <!-- Chem Station, Tungsten Forge, Mechanic Bench, GunSmithing Station, Oil Pump, Screamer Block -->
-			<entry min="250" max="999999" quality="0"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='midTier0']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='midTier1']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='midTier2']"/>
+
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='ammoTier1']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='ammoTier2']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='ammoTier3']"/>
+
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier0']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier1']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier2']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier3']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier4']"/>
+
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier0']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier1']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier2']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier3']"/>
+
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='modsTier1']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='modsTier2']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='modsTier3']"/>
+
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='electricTier1']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='electricTier2']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='electricTier3']"/>
+
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier0']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier1']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier2']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier3']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier4']"/>
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier5']"/>
+
+<remove xpath="/traders/traderstage_templates/traderstage_template[@name='armorTier1']"/>
+
+<append xpath="/traders/traderstage_templates">
+		<traderstage_template name="baseTier0"> <!-- Stone Tools|Utility Tools -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="999999" max="999999" quality="1"/> <!-- Don't show Q1 items -->
+			<entry min="1" max="10" quality="2"/>
+			<entry min="5" max="20" quality="3"/>
+			<entry min="15" max="30" quality="4"/>
+			<entry min="25" max="40" quality="5"/>
 		</traderstage_template>
-</insertAfter>
-
-<!-- <set xpath="/traders/traderstage_templates/traderstage_template[@name='armorTier1']/@max">75</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='armorTier2']/@min">55</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='armorTier2']/@max">150</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='armorTier3']/@min">135</set> -->
-<insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='armorTier1']">
-		<traderstage_template name="armorTierLegendary"> <!-- Legendary Armor -->
-			<entry min="1" max="999999" quality="0"/>
-			<entry min="450" max="999999" quality="1"/>
-			<entry min="475" max="999999" quality="2"/>
-			<entry min="500" max="999999" quality="3"/>
-			<entry min="525" max="999999" quality="4"/>
-			<entry min="550" max="999999" quality="5"/>
+		<traderstage_template name="baseTier1"> <!-- Scrap Iron Tools -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="35" max="50" quality="1"/>
+			<entry min="45" max="60" quality="2"/>
+			<entry min="55" max="70" quality="3"/>
+			<entry min="65" max="80" quality="4"/>
+			<entry min="75" max="90" quality="5"/>
 		</traderstage_template>
-</insertAfter>
-
-<!-- <set xpath="/traders/traderstage_templates/traderstage_template[@name='ammoTier2']/@min">75</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='ammoTier3']/@min">175</set> -->
-
-<!-- <set xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier1']/@min">50</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier2']/@min">100</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier3']/@min">150</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier4']/@min">175</set> -->
-<insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='arrowsTier4']">
-		<traderstage_template name="arrowsTier5">
-			<entry min="225" max="999999" quality="0"/>
+		<traderstage_template name="baseTier00"> <!-- Pipe Weapons|T0 Weapons -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="999999" max="999999" quality="1"/> <!-- Don't show Q1 items -->
+			<entry min="1" max="35" quality="2"/>
+			<entry min="30" max="55" quality="3"/>
+			<entry min="50" max="75" quality="4"/>
+			<entry min="70" max="90" quality="5"/>
 		</traderstage_template>
-</insertAfter>
-
-<!-- <set xpath="/traders/traderstage_templates/traderstage_template[@name='modsTier2']/@min">50</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='modsTier3']/@min">100</set> -->
-<insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='modsTier3']">
-		<traderstage_template name="modsTier4">
-			<entry min="200" max="999999" quality="0"/>
+		<traderstage_template name="baseTier2"> <!-- T1 Weapons|T1 Explosives -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="85" max="100" quality="1"/>
+			<entry min="95" max="110" quality="2"/>
+			<entry min="105" max="120" quality="3"/>
+			<entry min="115" max="130" quality="4"/>
+			<entry min="125" max="140" quality="5"/>
 		</traderstage_template>
-</insertAfter>
-
-<insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='electricTier3']">
-		<traderstage_template name="electricTier4">
+		<traderstage_template name="baseTier20"> <!-- T1 Weapons|T1 Explosives -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="85" max="110" quality="1"/>
+			<entry min="105" max="135" quality="2"/>
+			<entry min="130" max="155" quality="3"/>
+			<entry min="150" max="999999" quality="4"/>
+			<entry min="175" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier3"> <!-- Mech Tools -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="135" max="150" quality="1"/>
+			<entry min="145" max="160" quality="2"/>
+			<entry min="155" max="170" quality="3"/>
+			<entry min="165" max="999999" quality="4"/>
+			<entry min="175" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier4"> <!-- Steel Tools -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="185" max="200" quality="1"/>
+			<entry min="195" max="210" quality="2"/>
+			<entry min="205" max="220" quality="3"/>
+			<entry min="215" max="999999" quality="4"/>
+			<entry min="225" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier40"> <!-- T2 Weapons -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="185" max="210" quality="1"/>
+			<entry min="205" max="235" quality="2"/>
+			<entry min="230" max="255" quality="3"/>
+			<entry min="250" max="999999" quality="4"/>
+			<entry min="275" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier5"> <!-- Steel Auger/Chainsaw -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="235" max="250" quality="1"/>
+			<entry min="245" max="260" quality="2"/>
+			<entry min="255" max="270" quality="3"/>
+			<entry min="265" max="999999" quality="4"/>
+			<entry min="275" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier50"> <!-- T3 Weapons -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="235" max="260" quality="1"/>
+			<entry min="255" max="280" quality="2"/>
+			<entry min="275" max="300" quality="3"/>
+			<entry min="295" max="999999" quality="4"/>
+			<entry min="325" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier6"> <!-- Tungsten Tools/Weapons -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="285" max="300" quality="1"/>
+			<entry min="295" max="310" quality="2"/>
+			<entry min="305" max="320" quality="3"/>
+			<entry min="315" max="999999" quality="4"/>
+			<entry min="325" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier7"> <!-- Tungsten Auger/Chainsaw -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="335" max="350" quality="1"/>
+			<entry min="345" max="360" quality="2"/>
+			<entry min="355" max="370" quality="3"/>
+			<entry min="365" max="999999" quality="4"/>
+			<entry min="375" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier70"> <!-- T4 Weapons -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="335" max="360" quality="1"/>
+			<entry min="355" max="380" quality="2"/>
+			<entry min="375" max="400" quality="3"/>
+			<entry min="395" max="999999" quality="4"/>
+			<entry min="425" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier8"> <!-- Diamond Tipped Tools -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="385" max="400" quality="1"/>
+			<entry min="395" max="410" quality="2"/>
+			<entry min="405" max="420" quality="3"/>
+			<entry min="415" max="999999" quality="4"/>
+			<entry min="425" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier80"> <!-- T5 Weapons -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="385" max="410" quality="1"/>
+			<entry min="405" max="430" quality="2"/>
+			<entry min="425" max="450" quality="3"/>
+			<entry min="445" max="999999" quality="4"/>
+			<entry min="475" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="baseTier9"> <!-- Legendary Tools/Weapons -->
+			<entry min="1" max="999999" quality="0"/> <!-- Fallback for items without quality -->
+			<entry min="435" max="450" quality="1"/>
+			<entry min="445" max="460" quality="2"/>
+			<entry min="455" max="470" quality="3"/>
+			<entry min="465" max="999999" quality="4"/>
+			<entry min="475" max="999999" quality="5"/>
+		</traderstage_template>
+		
+		<traderstage_template name="midTier0"> <!-- Forge|Dew Gatherer|Tablesaw|Tanning Workstation|Workbench -->
+			<entry min="10" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="midTier1"> <!-- Mortar & Pestle|Ammo Forge|Tool Workstation|Weapon Workstation|Ammo Workstation -->
 			<entry min="100" max="999999" quality="0"/>
-			<entry min="110" max="999999" quality="1"/>
-			<entry min="120" max="999999" quality="2"/>
-			<entry min="130" max="999999" quality="3"/>
-			<entry min="140" max="999999" quality="4"/>
-			<entry min="150" max="999999" quality="5"/>
 		</traderstage_template>
-		<traderstage_template name="electricTier5">
-			<entry min="175" max="999999" quality="0"/>
-			<entry min="185" max="999999" quality="1"/>
-			<entry min="195" max="999999" quality="2"/>
-			<entry min="205" max="999999" quality="3"/>
-			<entry min="210" max="999999" quality="4"/>
-			<entry min="215" max="999999" quality="5"/>
-		</traderstage_template>
-</insertAfter>
-
-<!-- <set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier0']/@max">25</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier1']/@min">15</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier1']/@max">60</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier2']/@min">50</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier2']/@max">100</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier3']/@min">75</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier3']/@max">150</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier4']/@min">125</set>
-<set xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier5']/@min">175</set> -->
-<insertAfter xpath="/traders/traderstage_templates/traderstage_template[@name='vehicleTier5']">
-		<traderstage_template name="vehicleTier6">
+		<traderstage_template name="midTier2"> <!-- Stone Forge|Cement Mixer|Armour Workstation|Fabrication Workstation|Blueprint Workstation|Advanced Dew Collector -->
 			<entry min="200" max="999999" quality="0"/>
 		</traderstage_template>
-		<traderstage_template name="vehicleTier7">
-			<entry min="225" max="999999" quality="0"/>
-		</traderstage_template>
-		<traderstage_template name="vehicleTier8">
-			<entry min="250" max="999999" quality="0"/>
-		</traderstage_template>
-		<traderstage_template name="vehicleTier9">
+		<traderstage_template name="midTier3"> <!-- Chemistry Station|Tungsten Forge|Mechanic Workstation|Horde Block|Oil Pump -->
 			<entry min="300" max="999999" quality="0"/>
 		</traderstage_template>
-</insertAfter>
+		
+		<traderstage_template name="ammoTier1"> <!-- Brass|Buckshot|Darts -->
+			<entry min="1" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="ammoTier2"> <!-- HP|Slug|HE -->
+			<entry min="100" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="ammoTier3"> <!-- AP|Breach|Frag -->
+			<entry min="200" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="ammoTier4"> <!-- RPG7 -->
+			<entry min="300" max="999999" quality="0"/>
+		</traderstage_template>
+		
+		<traderstage_template name="arrowsTier0"> <!-- Stone -->
+			<entry min="1" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="arrowsTier1"> <!-- Iron -->
+			<entry min="100" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="arrowsTier2"> <!-- Steel -->
+			<entry min="200" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="arrowsTier3"> <!-- Flaming -->
+			<entry min="250" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="arrowsTier4"> <!-- Explosive -->
+			<entry min="275" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="arrowsTier5"> <!-- Tungsten -->
+			<entry min="300" max="999999" quality="0"/>
+		</traderstage_template>
+		
+		<traderstage_template name="bowsTier0"> <!-- Primitive Bow -->
+			<entry min="999999" max="999999" quality="1"/> <!-- Don't show Q1 items -->
+			<entry min="1" max="35" quality="2"/>
+			<entry min="30" max="55" quality="3"/>
+			<entry min="50" max="75" quality="4"/>
+			<entry min="70" max="90" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="bowsTier1"> <!-- Wooden Bow -->
+			<entry min="85" max="110" quality="1"/>
+			<entry min="105" max="135" quality="2"/>
+			<entry min="130" max="155" quality="3"/>
+			<entry min="150" max="175" quality="4"/>
+			<entry min="175" max="195" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="bowsTier2"> <!-- Compound Bow, Iron Crossbow -->
+			<entry min="185" max="210" quality="1"/>
+			<entry min="205" max="235" quality="2"/>
+			<entry min="230" max="255" quality="3"/>
+			<entry min="250" max="999999" quality="4"/>
+			<entry min="275" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="bowsTier3"> <!-- Compound Crossbow -->
+			<entry min="235" max="260" quality="1"/>
+			<entry min="255" max="280" quality="2"/>
+			<entry min="275" max="300" quality="3"/>
+			<entry min="295" max="999999" quality="4"/>
+			<entry min="325" max="999999" quality="5"/>
+		</traderstage_template>
+		
+		<traderstage_template name="modsTier1">
+			<entry min="1" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="modsTier2">
+			<entry min="100" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="modsTier3">
+			<entry min="200" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="modsTier4">
+			<entry min="300" max="999999" quality="0"/>
+		</traderstage_template>
+		
+		<traderstage_template name="electricTier1">
+			<entry min="1" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="electricTier2">
+			<entry min="100" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="electricTier3"> <!-- Solar Bank|Solar Cells|Blade Trap|Auto Turret -->
+			<entry min="200" max="999999" quality="0"/>
+			<entry min="210" max="999999" quality="1"/>
+			<entry min="220" max="999999" quality="2"/>
+			<entry min="230" max="999999" quality="3"/>
+			<entry min="240" max="999999" quality="4"/>
+			<entry min="250" max="999999" quality="5"/>
+			<entry min="275" max="999999" quality="6"/>
+		</traderstage_template>
+		<traderstage_template name="electricTier4">
+			<entry min="300" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="electricTier5">
+			<entry min="400" max="999999" quality="0"/>
+		</traderstage_template>
+		
+		<traderstage_template name="vehicleTier0"> <!-- Bicycle, Minibike, SHERP Parts -->
+			<entry min="1" max="100" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="vehicleTier1"> <!-- Bicycle, Minibike, SHERP Full - Minibike Parts -->
+			<entry min="75" max="125" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="vehicleTier2"> <!-- Minibike Full - Motorcycle Parts -->
+			<entry min="100" max="150" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="vehicleTier3"> <!-- Motorcycle Full - 4x4 Parts -->
+			<entry min="150" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="vehicleTier4"> <!-- 4x4 Full - Gyro Parts -->
+			<entry min="200" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="vehicleTier5"> <!-- Gyro Full -->
+			<entry min="250" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="vehicleTier6">
+			<entry min="300" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="vehicleTier7">
+			<entry min="350" max="999999" quality="0"/>
+		</traderstage_template>
+		<traderstage_template name="vehicleTier8">
+			<entry min="400" max="999999" quality="0"/>
+		</traderstage_template>
+		
+		<traderstage_template name="armorTier1"> <!-- All Armor -->
+			<entry min="999999" max="999999" quality="0"/>
+			<entry min="1" max="75" quality="1"/>
+			<entry min="50" max="100" quality="2"/>
+			<entry min="75" max="999999" quality="3"/>
+			<entry min="100" max="999999" quality="4"/>
+			<entry min="200" max="999999" quality="5"/>
+		</traderstage_template>
+</append>
 
 <insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='groupMeleeAll']">
 		<trader_item_group name="christmasPresents" count="1">
@@ -181,7 +354,6 @@
 			<item name="treeChristmas2Medium"/>
 			<item name="treeChristmas3Large"/>
 			<item name="modCandyCaneClub"/>
-			<!-- <item name="modCandyCaneKnife"/> -->
 		</trader_item_group>
 		
 		<trader_item_group name="halloweenDecorations" count="1">
@@ -194,69 +366,88 @@
 </insertBefore>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupMeleeAll']">
-			<item name="wotwMeleeWpnSteelMachete" quality="2,5"/>
-			<item name="wotwMeleeWpnTungstenMachete" quality="2,5"/>
-			<item name="wotwMeleeWpnGoldTippedMachete" quality="2,5"/>
-			<item name="wotwMeleeWpnClubIron" quality="2,5"/>
-			<item name="wotwMeleeWpnClubTungsten" quality="2,5"/>
-			<item name="wotwMeleeWpnClubGoldTipped" quality="2,5"/>
-			<item name="wotwMeleeWpnSteelHuntingKnife" quality="2,5"/>
-			<item name="wotwMeleeWpnTungstenHuntingKnife" quality="2,5"/>
-			<item name="wotwMeleeWpnGoldTippedKnife" quality="2,5"/>
-			<item name="wotwMeleeWpnSpearTungsten" quality="2,5"/>
-			<item name="wotwMeleeWpnSpearGoldTipped" quality="2,5"/>
-			<item name="wotwMeleeWpnSledgehammerTungsten" quality="2,5"/>
-			<item name="wotwMeleeWpnSledgehammerGoldTipped" quality="2,5"/>
-			<item name="wotwMeleeWpnBatBaseballSteel" quality="2,5"/>
-			<item name="wotwMeleeWpnBatBaseballTungsten" quality="2,5"/>
-			<item name="wotwMeleeWpnBatBaseballGoldTipped" quality="2,5"/>
-			<item name="wotwMeleeWpnCleaver" quality="2,5"/>
-			<item name="wotwMeleeWpnKnifeKitchen" quality="2,5"/>
-			<item name="wotwMeleeWpnKnifeCombat" quality="2,5"/>
-			<item name="wotwMeleeWpnSword" quality="2,5"/>
-			<item name="wotwMeleeWpnKatana" quality="2,5"/>
-			<item name="wotwMeleeWpnSwordBig" quality="2,5"/>
-			<item name="wotwMeleeWpnKnifeThrowingBlue" quality="2,5"/>
-			<item name="wotwMeleeWpnKnifeThrowingBlack" quality="2,5"/>
-			<item name="wotwMeleeWpnKnifeThrowingMetal" quality="2,5"/>
-			<item name="wotwMeleeWpnAxeThrowing" quality="2,5"/>
-			<item name="wotwMeleeWpnBatonTungsten" quality="2,5"/>
-			<item name="wotwMeleeWpnPipeIron" quality="2,5"/>
-			<item name="junkSledgeHD" quality="2,5"/>
-			<item name="junkTurretHD" quality="2,5"/>
+			<item name="wotwMeleeWpnSteelMachete" quality="1,5"/>
+			<item name="wotwMeleeWpnTungstenMachete" quality="1,5"/>
+			<item name="wotwMeleeWpnGoldTippedMachete" quality="1,5"/>
+			<item name="wotwMeleeWpnClubIron" quality="1,5"/>
+			<item name="wotwMeleeWpnClubTungsten" quality="1,5"/>
+			<item name="wotwMeleeWpnClubGoldTipped" quality="1,5"/>
+			<item name="wotwMeleeWpnSteelHuntingKnife" quality="1,5"/>
+			<item name="wotwMeleeWpnTungstenHuntingKnife" quality="1,5"/>
+			<item name="wotwMeleeWpnGoldTippedKnife" quality="1,5"/>
+			<item name="wotwMeleeWpnSpearTungsten" quality="1,5"/>
+			<item name="wotwMeleeWpnSpearGoldTipped" quality="1,5"/>
+			<item name="wotwMeleeWpnSledgehammerTungsten" quality="1,5"/>
+			<item name="wotwMeleeWpnSledgehammerGoldTipped" quality="1,5"/>
+			<item name="wotwMeleeWpnBatBaseballSteel" quality="1,5"/>
+			<item name="wotwMeleeWpnBatBaseballTungsten" quality="1,5"/>
+			<item name="wotwMeleeWpnBatBaseballGoldTipped" quality="1,5"/>
+			<item name="wotwMeleeWpnCleaver" quality="1,5"/>
+			<item name="wotwMeleeWpnKnifeKitchen" quality="1,5"/>
+			<item name="wotwMeleeWpnKnifeCombat" quality="1,5"/>
+			<item name="wotwMeleeWpnSword" quality="1,5"/>
+			<item name="wotwMeleeWpnKatana" quality="1,5"/>
+			<item name="wotwMeleeWpnSwordBig" quality="1,5"/>
+			<item name="wotwMeleeWpnKnifeThrowingBlue" quality="1,5"/>
+			<item name="wotwMeleeWpnKnifeThrowingBlack" quality="1,5"/>
+			<item name="wotwMeleeWpnKnifeThrowingMetal" quality="1,5"/>
+			<item name="wotwMeleeWpnAxeThrowing" quality="1,5"/>
+			<item name="wotwMeleeWpnBatonTungsten" quality="1,5"/>
+			<item name="wotwMeleeWpnPipeIron" quality="1,5"/>
+			<item name="junkSledgeHD" quality="1,5"/>
+			<item name="junkTurretHD" quality="1,5"/>
 			
-			<item name="wotwMeleeWpnLegendaryMachete" quality="2,5"/>
-			<item name="wotwMeleeWpnClubLegendary" quality="2,5"/>
-			<item name="wotwMeleeWpnLegendaryKnife" quality="2,5"/>
-			<item name="wotwMeleeWpnSpearLegendary" quality="2,5"/>
-			<item name="wotwMeleeWpnSledgehammerLegendary" quality="2,5"/>
-			<item name="wotwMeleeWpnBatBaseballLegendary" quality="2,5"/>
-			<item name="wotwMeleeWpnSwordLegendary" quality="2,5"/>
-			<item name="wotwMeleeWpnPipeIron" quality="2,5"/>
+			<item name="wotwMeleeWpnLegendaryMachete" quality="1,5"/>
+			<item name="wotwMeleeWpnClubLegendary" quality="1,5"/>
+			<item name="wotwMeleeWpnLegendaryKnife" quality="1,5"/>
+			<item name="wotwMeleeWpnSpearLegendary" quality="1,5"/>
+			<item name="wotwMeleeWpnSledgehammerLegendary" quality="1,5"/>
+			<item name="wotwMeleeWpnBatBaseballLegendary" quality="1,5"/>
+			<item name="wotwMeleeWpnSwordLegendary" quality="1,5"/>
+			<item name="wotwMeleeWpnPipeIron" quality="1,5"/>
 			
-			<item name="wotwMeleeWpnCrowbarSteel" quality="2,5"/>
-			<item name="wotwMeleeWpnCrowbarTungsten" quality="2,5"/>
+			<item name="wotwMeleeWpnCrowbarSteel" quality="1,5"/>
+			<item name="wotwMeleeWpnCrowbarTungsten" quality="1,5"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']">
-			<item name="wotwGunPistolM1911" quality="2,5"/>
-			<item name="wotwGunPistolMK23" quality="2,5"/>
-			<item name="wotwGunShotgunRemington870" quality="2,5"/>
-			<item name="wotwGunShotgunUSAS12" quality="2,5"/>
-			<item name="wotwGunRifleFNScar" quality="2,5"/>
-			<item name="wotwGunRifleSVDDragunov" quality="2,5"/>
-			<item name="wotwGunMGUMP45" quality="2,5"/>
-			<item name="wotwGunMGP90" quality="2,5"/>
-			<item name="wotwGunRPG7RocketLauncher" quality="2,5"/>
+			<item name="wotwGunPistolM1911" quality="1,5"/>
+			<item name="wotwGunPistolMK23" quality="1,5"/>
+			<item name="wotwGunShotgunRemington870" quality="1,5"/>
+			<item name="wotwGunShotgunUSAS12" quality="1,5"/>
+			<item name="wotwGunRifleFNScar" quality="1,5"/>
+			<item name="wotwGunRifleSVDDragunov" quality="1,5"/>
+			<item name="wotwGunMGUMP45" quality="1,5"/>
+			<item name="wotwGunMGP90" quality="1,5"/>
+			<item name="wotwGunRPG7RocketLauncher" quality="1,5"/>
 			<item name="repairKitWeapon" count="1,4"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='weaponsGunParts']">
-			<item name="meleeWpnTungstenSledgehammerParts" count="1,5"/>
-			<item name="meleeWpnTungstenClubParts" count="1,5"/>
-			<item name="meleeWpnTungstenSpearParts" count="1,5"/>
-			<item name="meleeWpnTungstenMacheteParts" count="1,5"/>
 			<item name="meleeWpnTungstenBatonParts" count="1,5"/>
+			<item name="wotwResourceWeaponCraftingKit" count="1,5"/>
+			<item name="wotwHandgunPartBarrel"/>
+			<item name="wotwHandgunPartGrip"/>
+			<item name="wotwHandgunPartReceiver"/>
+			<item name="wotwRiflePartBarrel"/>
+			<item name="wotwRiflePartBolt"/>
+			<item name="wotwRiflePartStock"/>
+			<item name="wotwShotgunPartBarrel"/>
+			<item name="wotwShotgunPartReceiver"/>
+			<item name="wotwShotgunPartStock"/>
+			<item name="wotwMachineGunPartBarrel"/>
+			<item name="wotwMachineGunPartReceiver"/>
+			<item name="wotwMachineGunPartStock"/>
+			<item name="wotwRocketLauncherPartBarrel"/>
+			<item name="wotwRocketLauncherPartReceiver"/>
+			<item name="wotwRocketLauncherPartStock"/>
+			<item name="wotwBowPartBody"/>
+			<item name="wotwBowPartGrip"/>
+			<item name="wotwBowPartString"/>
+			<item name="wotwClubPartBody"/>
+			<item name="wotwBladePartFrame"/>
+			<item name="wotwSledgePartHead"/>
+			<item name="wotwSpearPartHead"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAll']">
@@ -315,8 +506,10 @@
 			<item name="wotwExplosiveHDDynamite" count="5,20"/>
 </append>
 
+<set xpath="/traders/trader_item_groups/trader_item_group[@name='ammoSupplies']/item[@name='resourceArrowHeadIron']/@prob">0.75</set>
+<set xpath="/traders/trader_item_groups/trader_item_group[@name='ammoSupplies']/item[@name='resourceArrowHeadSteelAP']/@prob">0.50</set>
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoSupplies']">
-			<item name="wotwAmmoArrowHeadTungsten" count="5,25" prob="0.05"/>
+			<item name="wotwAmmoArrowHeadTungsten" count="5,25" prob="0.25"/>
 			<item name="wotwAmmoHPBulletTip" count="20,200"/>
 </append>
 
@@ -335,6 +528,9 @@
 			<item name="modBrushlessMotor"/>
 			<item name="modMotherLode"/>
 			<item name="modBonusExp"/>
+			<item name="modClothingFishingT1"/>
+			<item name="modClothingFishingT2"/>
+			<item name="modClothingFishingT3"/>
 </append>
 
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='groupArmorMods']/item[@name='modArmorPerception']"/>
@@ -349,8 +545,11 @@
 			<item name="modArmorHDFittings"/>
 			<item name="modArmorPlatingHD"/>
 			<item name="modHDArmorBandolier"/>
-			<!-- <item name="modArmorQuadStoragePocket"/> -->
+			<item name="modArmorQuintStoragePocket"/>
 			<item name="modArmorHelmetLightHD"/>
+			<item name="modClothingFishingT1"/>
+			<item name="modClothingFishingT2"/>
+			<item name="modClothingFishingT3"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedMods']">
@@ -362,6 +561,7 @@
 
 <insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedMods']">
 		<trader_item_group name="groupVehicleMods">
+			<item name="modBicycleChain"/>
 			<item name="modTurboSingle"/>
 			<item name="modTurboTwin"/>
 			<item name="modTuneupMinor"/>
@@ -379,11 +579,28 @@
 			<item group="groupVehicleMods"/>
 </append>
 
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupDyeMods']">
+			<item name="modDyeWhite1"/>
+			<item name="modDyeOrange"/>
+			<item name="modDyeBeige"/>
+			<item name="modDyeBurgundy"/>
+			<item name="modDyeNavyBlue"/>
+			<item name="modDyeForestGreen"/>
+			<item name="modDyeTurquoise"/>
+</append>
+
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupArmorMedium']">
 			<item name="armorHunterHelmet"/>
 			<item name="armorHunterOutfit"/>
 			<item name="armorHunterGloves"/>
 			<item name="armorHunterBoots"/>
+</append>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupArmorHeavy']">
+			<item name="armorConstHelmet"/>
+			<item name="armorConstOutfit"/>
+			<item name="armorConstGloves"/>
+			<item name="armorConstBoots"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='perkBooks']">
@@ -401,104 +618,6 @@
 
 <insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='perkBooks']">
 		<trader_item_group name="groupQuestChallenge" count="1">
-			<!-- <item name="Challenge_BaconAndEggs" count="1"/>
-			<item name="Challenge_Coffee" count="1"/>
-			<item name="Challenge_GreenTea" count="1"/>
-			<item name="Challenge_Bandage" count="1"/>
-			<item name="Challenge_Splint" count="1"/>
-			<item name="Challenge_Vitamins" count="1"/>
-			<item name="Challenge_WoodFrames" count="1"/>
-			<item name="Challenge_ScrapFrames" count="1"/>
-			<item name="Challenge_RebarFrames" count="1"/>
-			<item name="Challenge_WoodSpikes" count="1"/>
-			<item name="Challenge_IronTools" count="1"/>
-			<item name="Challenge_WoodenClub" count="1"/>
-			<item name="Challenge_IronClub" count="1"/>
-			<item name="Challenge_TungstenClub" count="1"/>
-			<item name="Challenge_SteelMachete" count="1"/>
-			<item name="Challenge_TungstenMachete" count="1"/>
-			<item name="Challenge_CrawlerZombies" count="1"/>
-			<item name="Challenge_mushroomStew" count="1"/>
-			<item name="Challenge_MeatStew" count="1"/>
-			<item name="Challenge_MossyBrew" count="1"/>
-			<item name="Challenge_VegetableStew" count="1"/>
-			<item name="Challenge_BlueberryPie" count="1"/>
-			<item name="Challenge_FirstAidBandage" count="1"/>
-			<item name="Challenge_FirstAidKit" count="1"/>
-			<item name="Challenge_HerbalAntibiotics" count="1"/>
-			<item name="Challenge_SteelTools" count="1"/>
-			<item name="Challenge_ApplePieandJuice" count="1"/>
-			<item name="Challenge_Antibiotics" count="1"/>
-			<item name="Challenge_Crates" count="1"/>
-			<item name="Challenge_RedWoodenBowKills" count="1"/>
-			<item name="Challenge_SteelCrossbowKills" count="1"/>
-			<item name="Challenge_TungstenTools" count="1"/>
-			<item name="Challenge_CopZombie" count="1"/>
-			<item name="Challenge_ScreamerZombie" count="1"/>
-			<item name="Challenge_MeleeCrawlerZombies" count="1"/>
-			<item name="challenge_snakeHunter" count="1"/>
-			<item name="challenge_vultureHunter" count="1"/>
-			<item name="challenge_mountainLionHunter" count="1"/>
-			<item name="challenge_coyotehunter" count="1"/>
-			<item name="challenge_zombieBearhunter" count="1"/>
-			<item name="challenge_spiderhunter" count="1"/>
-			<item name="challenge_snowZombiehunter" count="1"/>
-			<item name="challenge_fireZombiehunter" count="1"/>
-			<item name="challenge_electricZombiehunter" count="1"/>
-			<item name="challenge_demolitionZombiehunter" count="1"/>
-			<item name="challenge_hazmatZombiehunter" count="1"/>
-			<item name="challenge_giantChickenhunter" count="1"/>
-			<item name="challenge_zombieHordeTier1" count="1"/>
-			<item name="challenge_zombieHordeTier2" count="1"/>
-			<item name="challenge_zombieHordeTier3" count="1"/>
-			<item name="challenge_zombieHordeTier4" count="1"/>
-			<item name="challenge_feralHordeTier1" count="1"/>
-			<item name="challenge_feralHordeTier2" count="1"/>
-			<item name="challenge_feralHordeTier3" count="1"/>
-			<item name="challenge_feralHordeTier4" count="1"/>
-			<item name="challenge_radiatedHordeTier1" count="1"/>
-			<item name="challenge_radiatedHordeTier2" count="1"/>
-			<item name="challenge_radiatedHordeTier3" count="1"/>
-			<item name="challenge_radiatedHordeTier4" count="1"/>
-			<item name="challenge_feralRadiatedHordeTier1" count="1"/>
-			<item name="challenge_feralRadiatedHordeTier2" count="1"/>
-			<item name="challenge_feralRadiatedHordeTier3" count="1"/>
-			<item name="challenge_feralRadiatedHordeTier4" count="1"/>
-			<item name="challenge_hostileAnimalHordeTier1" count="1"/>
-			<item name="challenge_hostileAnimalHordeTier2" count="1"/>
-			<item name="challenge_hostileAnimalHordeTier3" count="1"/>
-			<item name="challenge_hostileAnimalHordeTier4" count="1"/>
-			<item name="challenge_timidAnimalHordeTier1" count="1"/>
-			<item name="challenge_timidAnimalHordeTier2" count="1"/>
-			<item name="challenge_timidAnimalHordeTier3" count="1"/>
-			<item name="challenge_timidAnimalHordeTier4" count="1"/>
-			<item name="challenge_fetchloot1" count="1"/>
-			<item name="challenge_fetchloot2" count="1"/>
-			<item name="challenge_fetchloot3" count="1"/>
-			<item name="challenge_fetchloot4" count="1"/>
-			<item name="challenge_fetchloot5" count="1"/>
-			<item name="challenge_fetchloot6" count="1"/>
-			<item name="challenge_fetchloot7" count="1"/>
-			<item name="challenge_fetchloot8" count="1"/>
-			<item name="challenge_fetchloot9" count="1"/>
-			<item name="challenge_fetchloot10" count="1"/>
-			<item name="challenge_fetchloot11" count="1"/>
-			<item name="challenge_fetchloot12" count="1"/>
-			<item name="challenge_fetchloot13" count="1"/>
-			<item name="challenge_fetchloot14" count="1"/>
-			<item name="challenge_fetchloot15" count="1"/>
-			<item name="challenge_fetchloot16" count="1"/>
-			<item name="challenge_fetchloot20" count="1"/>
-			<item name="quest_tier1_fetchRandom" count="1"/>
-			<item name="quest_tier2_fetchRandom" count="1"/>
-			<item name="quest_tier3_fetchRandom" count="1"/>
-			<item name="quest_tier4_fetchRandom" count="1"/>
-			<item name="quest_tier5_fetchRandom" count="1"/>
-			<item name="quest_tier1_clearRandom" count="1"/>
-			<item name="quest_tier2_clearRandom" count="1"/>
-			<item name="quest_tier3_clearRandom" count="1"/>
-			<item name="quest_tier4_clearRandom" count="1"/>
-			<item name="quest_tier5_clearRandom" count="1"/> -->
 			<item name="qt_taylor" count="1" prob="0.2"/>
 			<item name="qt_nickole" count="1" prob="0.2"/>
 			<item name="qt_stephan" count="1" prob="0.2"/>
@@ -511,40 +630,21 @@
 			<item name="Treasure_BuildingSupplies" count="1" prob="0.2"/>
 			<item name="Treasure_AmmoSupplies" count="1" prob="0.2"/>
 			<item name="Treasure_FoodandDrinkSupplies" count="1" prob="0.2"/>
-			<item name="Treasure_MidTierWeaponsSupplies" count="1" prob="0.2"/>
-			<item name="Treasure_HighTierWeaponsSupplies" count="1" prob="0.2"/>
-			<item name="Treasure_LowTierWeaponsSupplies" count="1" prob="0.2"/>
+			<item name="Treasure_WeaponsSupplies" count="1" prob="0.2"/>
 		</trader_item_group>
 
 		<trader_item_group name="groupRewardCards" count="1">
-			<!-- <item name="reward_cardpoint1" prob="1"/>
-			<item name="reward_cardpoint2" prob="0.8"/>
-			<item name="reward_cardpoint3" prob="0.6"/>
-			<item name="reward_cardpoint4" prob="0.4"/>
-			<item name="reward_cardpoint5" prob="0.2"/> -->
-			
 			<item name="reward_exp5000" prob="0.7"/>
 			<item name="reward_exp10000" prob="0.6"/>
 			<item name="reward_exp15000" prob="0.5"/>
 			<item name="reward_exp20000" prob="0.4"/>
 			<item name="reward_exp25000" prob="0.2"/>
-			<!-- <item name="reward_exp50000" prob="0.1"/>
-			<item name="reward_exp75000" prob="0.65"/>
-			<item name="reward_exp100000" prob="0.6"/>
-			<item name="reward_exp125000" prob="0.55"/>
-			<item name="reward_exp150000" prob="0.5"/>
-			<item name="reward_exp175000" prob="0.45"/>
-			<item name="reward_exp200000" prob="0.4"/>
-			<item name="reward_exp250000" prob="0.35"/> -->
-			
 			<item name="reward_experience2x" prob="0.4"/>
 			<item name="reward_experience3x" prob="0.2"/>
 		</trader_item_group>
 	
 		<trader_item_group name="groupActionRewardCards" count="1">
-			<item name="reward_actionPickaxeLevel" prob="1"/>
-			<item name="reward_actionAxeLevel" prob="1"/>
-			<item name="reward_actionShovelLevel" prob="1"/>
+			<item name="reward_actionMiningToolsLevel" prob="1"/>
 			<item name="reward_actionWrenchingLevel" prob="1"/>
 			<item name="reward_actionPowerToolsLevel" prob="1"/>
 			<item name="reward_actionConstructionLevel" prob="1"/>
@@ -563,9 +663,9 @@
 			<item name="reward_actionHeavyArmourLevel" prob="1"/>
 			<item name="reward_actionScavengingLevel" prob="1"/>
 			<item name="reward_actionAthleticsLevel" prob="1"/>
-			<item name="reward_actionSwimmingLevel" prob="1"/>
 			<item name="reward_actionStealthLevel" prob="1"/>
 			<item name="reward_actionMedicineLevel" prob="1"/>
+			<item name="reward_actionQuesterLevel" prob="1"/>
 		</trader_item_group>
 </insertAfter>
 
@@ -588,7 +688,6 @@
 			<item name="modBonusExpSchematic"/>
 			<item name="modArmorHelmetLightHDSchematic"/>
 			<item name="modRadiationProtectionSchematic"/>
-			<!-- <item name="modArmorQuadStoragePocketSchematic"/> -->
 			<item name="modHDArmorBandolierSchematic"/>
 			<item name="modArmorPlatingHDSchematic"/>
 			<item name="modArmorHDFittingsSchematic"/>
@@ -604,6 +703,10 @@
 			<item name="modHDGunMagazineExtenderSchematic"/>
 			<item name="modHDGunBarrelExtenderSchematic"/>
 			<item name="LMGBeltBagSchematic"/>
+			<item name="modDyeSchematic"/>
+			<item name="modClothingFishingT1Schematic"/>
+			<item name="modClothingFishingT2Schematic"/>
+			<item name="modClothingFishingT3Schematic"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsVehiclesMods']">
@@ -626,7 +729,7 @@
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='books']">
-			<item name="blueprintPaper" count="2,5" prob="10"/>
+			<item name="blueprintPaper" count="2,5" prob="0.3"/>
 			<item group="groupRewardCards"/>
 			<item group="groupActionRewardCards"/>
 </append>
@@ -667,7 +770,7 @@
 			<item name="plantedTomato1"/>
 			<item name="plantedMoss1"/>
 			<item name="plantedGraceCorn1" prob="0.2"/>
-			<item name="treeBirdnest"/>
+			<item name="wotwBirdnest"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='foodSupplies']">
@@ -700,17 +803,44 @@
 			<item name="blackberryJuice"/>
 </append>
 
-<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']">
-		<trader_item_group name="building_RebarFrames" count="1,2">
-			<item name="rebar" count="40,80"/>
-			<item name="rConcreteShapes:VariantHelper" count="10,40"/>
-		</trader_item_group>
-		
-		<trader_item_group name="building_TungstenFrames" count="1,2">
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='foodVending']">
+			<item group="preparedFood" count="1,2" prob="0.1"/>
+</append>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']">
+			<item name="twine" count="5,10"/>
 			<item name="tungstenPlating" count="50,100"/>
-			<item name="tungstenShapes:VariantHelper" count="50,75" prob="1.75"/>
+			<item name="resourceClayLump" count="1000,3000"/>
+			<item name="twine" count="6,12"/>
+			<item name="portlandCement" count="100,400" prob="0.25"/>
+			<item name="portlandConcreteMix" count="100,400" prob="0.25"/>
+			<item name="rebar" count="50,200"/>
+			<item name="tungstenPlating" count="50,150" prob="0.25"/>
+			<!-- <item name="frameShapes:VariantHelper" count="50,75"/>
+			<item name="woodShapes:VariantHelper" count="50,75"/>
+			<item name="cobblestoneShapes:VariantHelper" count="50,75"/>
+			<item name="concreteShapes:VariantHelper" count="50,75" prob="0.1"/>
+			<item name="steelShapes:VariantHelper" count="50,75" prob="0.25"/>
+			<item name="rConcreteShapes:VariantHelper" count="50,75" prob="0.50"/>
+			<item name="tungstenShapes:VariantHelper" count="50,75" prob="0.25"/> -->
+</append>
+
+<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']">
+		<trader_item_group name="advancedConstructionSupplies">
+			<item name="twine" count="6,12"/>
+			<item name="portlandCement" count="100,400" prob="0.25"/>
+			<item name="portlandConcreteMix" count="100,400" prob="0.25"/>
+			<item name="rebar" count="50,200"/>
+			<item name="tungstenPlating" count="50,150" prob="0.25"/>
+			<item name="frameShapes:VariantHelper" count="50,75"/>
+			<item name="woodShapes:VariantHelper" count="50,75"/>
+			<item name="cobblestoneShapes:VariantHelper" count="50,75"/>
+			<item name="concreteShapes:VariantHelper" count="50,75" prob="0.1"/>
+			<item name="steelShapes:VariantHelper" count="50,75" prob="0.25"/>
+			<item name="rConcreteShapes:VariantHelper" count="50,75" prob="0.50"/>
+			<item name="tungstenShapes:VariantHelper" count="50,75" prob="0.25"/>
 		</trader_item_group>
-</insertBefore>
+</insertAfter>
 
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']/item[@name='resourceScrapLead']/@count">1000,3000</set>
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']/item[@name='resourceScrapBrass']/@count">1000,3000</set>
@@ -720,29 +850,12 @@
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']/item[@name='resourceForgedSteel']/@count">25,100</set>
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']/item[@name='resourceCloth']/@count">5,50</set>
 
-<append xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']">
-			<item name="twine" count="5,10"/>
-			<item name="tungstenPlating" count="50,100"/>
-			<!-- <item name="woodAndNails" count="50,500"/> -->
-			<item name="resourceClayLump" count="1000,3000"/>
-</append>
-
-<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']">
-		<trader_item_group name="advancedConstructionSupplies">
-			<item name="twine" count="6,12"/>
-			<item name="portlandCement" count="100,400" prob="0.25"/>
-			<item name="portlandConcreteMix" count="100,400" prob="0.25"/>
-			<item group="building_RebarFrames" count="3,6"/>
-			<item group="building_TungstenFrames" count="3,6" prob="0.35"/>
-		</trader_item_group>
-</insertAfter>
-
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']">
 			<item name="forgedTungsten" count="25,75"/>
-			<item name="householdChemicals" count="2,6" prob="0.7"/>
-			<item name="wotwResourceFertilizer" count="5,10" prob="0.75"/>
+			<item name="householdChemicals" count="5,10" prob="0.7"/>
+			<item name="wotwResourceFertilizer" count="5,20" prob="0.75"/>
 			<item name="twine" count="10,20"/>
-			<item name="resourceRockSmall" count="1000,3000"/>
+			<item name="resourceRockSmall" count="1000,6000"/>
 			<item name="wotwResourceBrimstone" count="100,200"/>
 			<item name="wotwResourceSilicon" count="100,200" prob="0.6"/>
 			<item name="wotwResourceSulfur" count="100,200" prob="0.6"/>
@@ -753,29 +866,27 @@
 
 <insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">
 		<trader_item_group name="ultraRareTools" count="1">
-			<item name="toolPartsTungsten" count="1,5"/>
-			<item name="toolPartsAdvancedMotor" count="1,5"/>
-			<item name="wotwMeleeToolDiamondTippedPickaxe" quality="2,5"/>
-			<item name="wotwMeleeToolDiamondTippedFireaxe" quality="2,5"/>
-			<item name="wotwMeleeToolDiamondTippedShovel" quality="2,5"/>
-			<item name="wotwMeleeToolTungstenPickaxe" quality="2,5"/>
-			<item name="wotwMeleeToolTungstenShovel" quality="2,5"/>
-			<item name="wotwMeleeToolTungstenFireaxe" quality="2,5"/>
+			<item name="wotwMeleeToolDiamondTippedPickaxe" quality="1,5"/>
+			<item name="wotwMeleeToolDiamondTippedFireaxe" quality="1,5"/>
+			<item name="wotwMeleeToolDiamondTippedShovel" quality="1,5"/>
+			<item name="wotwMeleeToolTungstenPickaxe" quality="1,5"/>
+			<item name="wotwMeleeToolTungstenShovel" quality="1,5"/>
+			<item name="wotwMeleeToolTungstenFireaxe" quality="1,5"/>
 			<item name="wotwMeleeToolHDNailgun"/>
-			<item name="wotwMeleeToolIceAxe" quality="2,5"/>
-			<item name="wotwMeleeToolIronSickle" quality="2,5"/>
-			<item name="wotwMeleeToolSteelSickle" quality="2,5"/>
-			<item name="wotwMeleeToolTungstenChainsaw" quality="2,5"/>
-			<item name="wotwMeleeToolTungstenAuger" quality="2,5"/>
-			<item name="wotwMeleeToolLegendaryPickaxe" quality="2,5"/>
-			<item name="wotwMeleeToolLegendaryFireaxe" quality="2,5"/>
-			<item name="wotwMeleeToolLegendaryShovel" quality="2,5"/>
-			<item name="wotwMeleeToolLegendaryNailgun" quality="2,5"/>
-			<item name="wotwMeleeToolLegendaryAuger" quality="2,5"/>
-			<item name="wotwMeleeToolLegendaryChainsaw" quality="2,5"/>
-			<item name="wotwMeleeToolLegendaryImpactDriver" quality="2,5"/>
-			<item name="hdBattery"/>
-			<item name="hdSmallEngine"/>
+			<item name="wotwMeleeToolIceAxe" quality="1,5"/>
+			<item name="wotwMeleeToolIronSickle" quality="1,5"/>
+			<item name="wotwMeleeToolSteelSickle" quality="1,5"/>
+			<item name="wotwMeleeToolTungstenChainsaw" quality="1,5"/>
+			<item name="wotwMeleeToolTungstenAuger" quality="1,5"/>
+			<item name="wotwMeleeToolLegendaryPickaxe" quality="1,5"/>
+			<item name="wotwMeleeToolLegendaryFireaxe" quality="1,5"/>
+			<item name="wotwMeleeToolLegendaryShovel" quality="1,5"/>
+			<item name="wotwMeleeToolLegendaryNailgun" quality="1,5"/>
+			<item name="wotwMeleeToolLegendaryAuger" quality="1,5"/>
+			<item name="wotwMeleeToolLegendaryChainsaw" quality="1,5"/>
+			<item name="wotwMeleeToolLegendaryImpactDriver" quality="1,5"/>
+			<item name="wotwHDBattery"/>
+			<item name="wotwHDEngine"/>
 		</trader_item_group>
 </insertBefore>
 
@@ -784,10 +895,23 @@
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">
 			<item group="ultraRareTools" prob="0.5"/>
-			<item name="wotwMeleeToolSteelAuger" quality="2,5"/>
-			<item name="wotwMeleeToolSteelChainsaw" quality="2,5"/>
-			<item name="ecoBattery"/>
-			<item name="ecoSmallEngine"/>
+			<item name="wotwMeleeToolSteelAuger" quality="1,5"/>
+			<item name="wotwMeleeToolSteelChainsaw" quality="1,5"/>
+			<item name="wotwResourceToolCraftingKit"/>
+			<item name="wotwNailgunPartFrame"/>
+			<item name="wotwNailgunPartParts" count="1,4"/>
+			<item name="wotwNailgunPartReceiver"/>
+			<item name="wotwNailgunPartBattery"/>
+			<item name="wotwPickPartHead"/>
+			<item name="wotwAxePartHead"/>
+			<item name="wotwShovelPartHead"/>
+			<item name="wotwHoePartHead"/>
+			<item name="wotwAugerPartBlade"/>
+			<item name="wotwAugerPartParts" count="1,4"/>
+			<item name="wotwChainsawPartBlade"/>
+			<item name="wotwChainsawPartParts" count="1,4"/>
+			<item name="wotwECOBattery"/>
+			<item name="wotwECOEngine"/>
 </append>
 
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='tools']/item[@name='resourceRepairKit']"/>
@@ -810,20 +934,84 @@
 			<item name="handlewood" count="1,3"/>
 			<item name="handlemetal" count="1,3" prob="0.3"/>
 			<item name="handlefiberglass" count="1,3" prob="0.1"/>
+			<item name="wotwResourceToolCraftingKit"/>
+			<item name="wotwNailgunPartFrame"/>
+			<item name="wotwNailgunPartParts" count="1,4"/>
+			<item name="wotwNailgunPartReceiver"/>
+			<item name="wotwNailgunPartBattery"/>
+			<item name="wotwPickPartHead"/>
+			<item name="wotwAxePartHead"/>
+			<item name="wotwShovelPartHead"/>
+			<item name="wotwHoePartHead"/>
+			<item name="wotwAugerPartBlade"/>
+			<item name="wotwAugerPartParts" count="1,4"/>
+			<item name="wotwChainsawPartBlade"/>
+			<item name="wotwChainsawPartParts" count="1,4"/>
 </append>
 
+<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
+		<trader_item_group name="toolParts" count="4,5">
+			<item name="repairKitTool" count="1,4"/>
+			<item name="handlewood" count="1,3"/>
+			<item name="handlemetal" count="1,3" prob="0.3"/>
+			<item name="handlefiberglass" count="1,3" prob="0.1"/>
+			<item name="wotwResourceToolCraftingKit"/>
+			<item name="wotwNailgunPartFrame"/>
+			<item name="wotwNailgunPartParts" count="1,4"/>
+			<item name="wotwNailgunPartReceiver"/>
+			<item name="wotwNailgunPartBattery"/>
+			<item name="wotwPickPartHead"/>
+			<item name="wotwAxePartHead"/>
+			<item name="wotwShovelPartHead"/>
+			<item name="wotwHoePartHead"/>
+			<item name="wotwAugerPartBlade"/>
+			<item name="wotwAugerPartParts" count="1,4"/>
+			<item name="wotwChainsawPartBlade"/>
+			<item name="wotwChainsawPartParts" count="1,4"/>
+		</trader_item_group>
+</insertAfter>
+
+<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='groupVehicles']">
+		<trader_item_group name="groupEngineParts" count="1,2">
+			<item name="wotwResourceAlternator"/>
+			<item name="wotwResourceFuelPump"/>
+			<item name="wotwResourceStarter"/>
+			<item name="wotwResourceSparkPlug" count="1,2"/>
+			<item name="wotwResourceDistributor"/>
+			<item name="wotwResourceTimingBelt"/>
+			<item name="wotwResourceCarburator"/>
+			<item name="wotwResourceCrankshaft"/>
+			<item name="wotwResourcePiston"/>
+			<item name="wotwResourceWaterPump"/>
+			<item name="wotwResourceExhaustManifold"/>
+		</trader_item_group>
+		
+		<trader_item_group name="groupEngineItems" count="1,2">
+			<item name="wotwResourceEngineAccessories"/>
+			<item name="wotwResourceEngineECOAccessories"/>
+			<item name="wotwResourceEngineHDAccessories"/>
+			<item name="wotwResourceEngineParts"/>
+			<item name="wotwResourceEngineECOParts"/>
+			<item name="wotwResourceEngineHDParts"/>
+			<item name="wotwResourceEngineBlock"/>
+			<item name="wotwResourceEngineECOBlock"/>
+			<item name="wotwResourceEngineHDBlock"/>
+			<item name="wotwResourceEngineTransmission"/>
+			<item name="wotwResourceEngineECOTransmission"/>
+			<item name="wotwResourceEngineHDTransmission"/>
+		</trader_item_group>
+</insertBefore>
+
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupVehicles']">
-			<item name="ecoBattery"/>
-			<item name="ecoSmallEngine"/>
-			<item name="hdBattery"/>
-			<item name="hdSmallEngine"/>
-			<item name="vehicleHDWheels"/>
+			<item name="wotwECOBattery"/>
+			<item name="wotwECOEngine"/>
+			<item name="wotwECOVehicleWheels"/>
+			<item name="wotwHDBattery"/>
+			<item name="wotwHDEngine"/>
+			<item name="wotwHDVehicleWheels"/>
 			
-			<!-- <item name="vehicleFanBoatHull"/>
-			<item name="FanBoatCabinAssy"/>
-			<item name="vehicleFanBoatAccessories"/>
-			<item name="FanBoatPropellerAssy"/>
-			<item name="vehicleFanBoatPlaceable"/> -->
+			<item group="groupEngineItems" count="1,2"/>
+			<item group="groupEngineParts" count="1,2"/>
 			
 			<item name="vehicleRaftFrame"/>
 			<item name="vehicleRaftSail"/>
@@ -836,10 +1024,6 @@
 			<item name="vehicleFlatBoatFrame"/>
 			<item name="vehicleFlatBoatAccessories"/>
 			<item name="vehicleFlatBoatPlaceable"/>
-			
-			<!-- <item name="vehicleJetSkiFrame"/>
-			<item name="vehicleJetSkiAccessories"/>
-			<item name="vehicleJetSkiPlaceable"/> -->
 			
 			<item name="vehicleHindchassis"/>
 			<item name="vehicleHindaccessories"/>
@@ -858,16 +1042,13 @@
 			<item name="coffeemaker"/>
 			<item name="microwave"/>
 			<item name="foodProcessingTable"/>
-			<item name="bankInvestmentReady"/>
 			<item name="armourSmithingWorkstation"/>
 			<item name="playerOven"/>
 			<item name="breweryStation"/>
 			<item name="fabricationStation"/>
 			<item name="blueprintWorkStation"/>
-			<item name="slotMachineGamblingReady"/>
 			<item name="recyclerWorkstation"/>
 			<item name="tungstenForge"/>
-			<item name="cntVendingMachineSellable"/>
 			<item name="mechanicBench"/>
 			<item name="gunSmithingWorkstation"/>
 			<item name="oilPump"/>
@@ -931,13 +1112,37 @@
 			<item name="hdGeneratorbank" count="1" prob="1"/>
 			<item name="hdBatterybank" count="1" prob="0.7"/>
 		<!-- *** Lights_Misc -->
-			<item name="ceilingLight02Brass_player" count="1" prob="1.0"/>
-			<item name="ceilingLight05Brass_player" count="1,6" prob="1.0"/>
-			<item name="ceilingLight05_player" count="1,2" prob="1.0"/>
-			<item name="ceilingLight04_player" count="1,2" prob="1.0"/>
-			<item name="signShopOpen_player" count="1,2" prob="1.0"/>
-			<item name="signNeonColdBeer_player" count="1,2" prob="1.0"/>
-			<item name="streetLight01_player" count="1,2" prob="1.0"/>
+			<item name="ceilingLight02Brass_player" count="1,3" prob="1.0"/>
+			<item name="ceilingLight05Brass_player" count="1,3" prob="1.0"/>
+			<item name="ceilingLight04_player" count="1,3" prob="1.0"/>
+			<item name="ceilingLight05_player" count="1,3" prob="1.0"/>
+			<item name="signShopOpen_player" count="1,3" prob="1.0"/>
+			<item name="signNeonColdBeer_player" count="1,3" prob="1.0"/>
+			<item name="streetLight01_player" count="1,3" prob="1.0"/>
+			<item name="porchLight01_player" count="1,3" prob="1.0"/>
+			<item name="ceilingLight02_player" count="1,3" prob="1.0"/>
+			<item name="recessedLight_player" count="1,3" prob="1.0"/>
+			<item name="fluorescentLight_player" count="1,3" prob="1.0"/>
+			<item name="trackLight_player" count="1,3" prob="1.0"/>
+			<item name="flashlightDecor_player" count="1,3" prob="1.0"/>
+			<item name="ceilingFanLight_player" count="1,3" prob="1.0"/>
+			<item name="chandelierLight_player" count="1,3" prob="1.0"/>
+			<item name="signExitLight_player" count="1,3" prob="1.0"/>
+			<item name="roadBarricadeLight_player" count="1,3" prob="1.0"/>
+			<item name="deskLampLight_player" count="1,3" prob="1.0"/>
+			<item name="deskLampLight02BlockVariantHelper" count="1,3" prob="1.0"/>
+			<item name="lightCeilingBulbMountWhite_player" count="1,3" prob="1.0"/>
+			<item name="lightCeilingBulbMountBlack_player" count="1,3" prob="1.0"/>
+			<item name="fluorescentLightBayIntact_player" count="1,3" prob="1.0"/>
+			<item name="lightPanelLEDBlockVariantHelper" count="1,3" prob="1.0"/>
+			<item name="lightIndustrialRed_player" count="1,3" prob="1.0"/>
+			<item name="lightIndustrialMountedWall_player" count="1,3" prob="1.0"/>
+			<item name="lightIndustrialMountedWallRed_player" count="1,3" prob="1.0"/>
+			<item name="lightIndustrialHangingBlockVariantHelper" count="1,3" prob="1.0"/>
+			<item name="lightSconce_player" count="1,3" prob="1.0"/>
+			<item name="lanternOldBlockVariantHelper" count="1,3" prob="1.0"/>
+			<item name="workLight_player" count="1,3" prob="1.0"/>
+			<item name="streetLightClassic_player" count="1,3" prob="1.0"/>
 		<!-- *** Traps -->
 			<item name="hdElectricFencePost" count="2,6" prob="1.0"/>
 			<item name="tungstenDart" count="15,70" prob="1.0"/>
@@ -949,10 +1154,6 @@
 
 <insertAfter xpath="traders/trader_item_groups/trader_item_group[@name='traderElectrical']">
 		<trader_item_group name="toolandweaponParts">
-			<item name="meleeWpnTungstenSledgehammerParts" count="2,5"/>
-			<item name="meleeWpnTungstenClubParts" count="2,5"/>
-			<item name="meleeWpnTungstenSpearParts" count="2,5"/>
-			<item name="meleeWpnTungstenMacheteParts" count="2,5"/>
 			<item name="meleeWpnTungstenBatonParts" count="2,5"/>
 			<item name="meleeToolAllSteelParts" count="1,4"/>
 			<item name="meleeToolAxeT3ChainsawParts" count="1,4"/>
@@ -970,8 +1171,88 @@
 			<item name="meleeWpnSledgeT3SteelSledgehammerParts" count="1,4"/>
 			<item name="meleeWpnKnucklesT3SteelKnucklesParts" count="1,4"/>
 			<item name="armorParts" count="1,3"/>
-			<item name="toolPartsTungsten" count="1,3"/>
-			<item name="toolPartsAdvancedMotor" count="1,3"/>
+			<item name="repairKitTool" count="1,4"/>
+			<item name="handlewood" count="1,3"/>
+			<item name="handlemetal" count="1,3" prob="0.3"/>
+			<item name="handlefiberglass" count="1,3" prob="0.1"/>
+			<item name="wotwResourceToolCraftingKit" count="1,4"/>
+			<item name="wotwNailgunPartFrame"/>
+			<item name="wotwNailgunPartParts" count="1,4"/>
+			<item name="wotwNailgunPartReceiver"/>
+			<item name="wotwNailgunPartBattery"/>
+			<item name="wotwPickPartHead"/>
+			<item name="wotwAxePartHead"/>
+			<item name="wotwShovelPartHead"/>
+			<item name="wotwHoePartHead"/>
+			<item name="wotwAugerPartBlade"/>
+			<item name="wotwAugerPartParts" count="1,4"/>
+			<item name="wotwChainsawPartBlade"/>
+			<item name="wotwChainsawPartParts" count="1,4"/>
+			<item name="wotwHandgunPartBarrel"/>
+			<item name="wotwHandgunPartGrip"/>
+			<item name="wotwHandgunPartReceiver"/>
+			<item name="wotwRiflePartBarrel"/>
+			<item name="wotwRiflePartBolt"/>
+			<item name="wotwRiflePartStock"/>
+			<item name="wotwShotgunPartBarrel"/>
+			<item name="wotwShotgunPartReceiver"/>
+			<item name="wotwShotgunPartStock"/>
+			<item name="wotwMachineGunPartBarrel"/>
+			<item name="wotwMachineGunPartReceiver"/>
+			<item name="wotwMachineGunPartStock"/>
+			<item name="wotwRocketLauncherPartBarrel"/>
+			<item name="wotwRocketLauncherPartReceiver"/>
+			<item name="wotwRocketLauncherPartStock"/>
+			<item name="wotwBowPartBody"/>
+			<item name="wotwBowPartGrip"/>
+			<item name="wotwBowPartString"/>
+			<item name="wotwClubPartBody"/>
+			<item name="wotwBladePartFrame"/>
+			<item name="wotwSledgePartHead"/>
+			<item name="wotwSpearPartHead"/>
+			<item name="wotwResourceWeaponCraftingKit" count="1,4"/>
+		</trader_item_group>
+		
+		<trader_item_group name="weaponParts">
+			<item name="meleeWpnTungstenBatonParts" count="2,5"/>
+			<item name="meleeToolAllSteelParts" count="1,4"/>
+			<item name="meleeToolAxeT3ChainsawParts" count="1,4"/>
+			<item name="gunMGT1AK47Parts" count="1,4"/>
+			<item name="gunHandgunT1PistolParts" count="1,4"/>
+			<item name="gunBowT1WoodenBowParts" count="1,4"/>
+			<item name="gunRifleT1HuntingRifleParts" count="1,4"/>
+			<item name="gunShotgunT1DoubleBarrelParts" count="1,4"/>
+			<item name="gunExplosivesT3RocketLauncherParts" count="1,4"/>
+			<item name="gunBotRoboticsParts" count="1,4"/>
+			<item name="meleeWpnBatonT2StunBatonParts" count="1,4"/>
+			<item name="meleeWpnBladeT3MacheteParts" count="1,4"/>
+			<item name="meleeWpnSpearT3SteelSpearParts" count="1,4"/>
+			<item name="meleeWpnClubT3SteelClubParts" count="1,4"/>
+			<item name="meleeWpnSledgeT3SteelSledgehammerParts" count="1,4"/>
+			<item name="meleeWpnKnucklesT3SteelKnucklesParts" count="1,4"/>
+			<item name="wotwHandgunPartBarrel"/>
+			<item name="wotwHandgunPartGrip"/>
+			<item name="wotwHandgunPartReceiver"/>
+			<item name="wotwRiflePartBarrel"/>
+			<item name="wotwRiflePartBolt"/>
+			<item name="wotwRiflePartStock"/>
+			<item name="wotwShotgunPartBarrel"/>
+			<item name="wotwShotgunPartReceiver"/>
+			<item name="wotwShotgunPartStock"/>
+			<item name="wotwMachineGunPartBarrel"/>
+			<item name="wotwMachineGunPartReceiver"/>
+			<item name="wotwMachineGunPartStock"/>
+			<item name="wotwRocketLauncherPartBarrel"/>
+			<item name="wotwRocketLauncherPartReceiver"/>
+			<item name="wotwRocketLauncherPartStock"/>
+			<item name="wotwBowPartBody"/>
+			<item name="wotwBowPartGrip"/>
+			<item name="wotwBowPartString"/>
+			<item name="wotwClubPartBody"/>
+			<item name="wotwBladePartFrame"/>
+			<item name="wotwSledgePartHead"/>
+			<item name="wotwSpearPartHead"/>
+			<item name="wotwResourceWeaponCraftingKit" count="1,4"/>
 		</trader_item_group>
 		
 		<trader_item_group name="workstationTools" count="1,3">
@@ -979,10 +1260,10 @@
 			<item name="toolCookingGrill"/>
 			<item name="toolBeaker" prob="0.7"/>
 			<item name="toolAnvil"/>
+			<item name="toolBellows"/>
 			<item name="toolForgeCrucible" prob="0.6"/>
 			<item name="calipers" prob="0.5"/>
 			<item name="toolAndDieSet" prob="0.4"/>
-			<!-- <item name="rivetGun" prob="0.5"/> -->
 			<item name="rebarBender" prob="0.4"/>
 			<item name="weldingTool" prob="0.3"/>
 			<item name="hammerRounding" prob="0.5"/>
@@ -1000,30 +1281,59 @@
 			<item name="wotwToolSewingMachine" prob="0.5"/>
 			<item name="wotwToolReloadingPress" prob="0.5"/>
 			<item name="wotwToolSocketSet" prob="0.25"/>
+			<item name="adcAdvancedFilter" prob="0.2"/>
+			<item name="adcLargeCatcher" prob="0.2"/>
+			<item name="adcBigBarrel" prob="0.2"/>
+			<item name="wotwWorkToolTunedEngine" prob="0.2"/>
+			<item name="wotwWorkToolBiggerDrums" prob="0.2"/>
+			<item name="wotwWorkToolDualMotor" prob="0.2"/>
+			<item name="wotwToolWSCarbideBlade"/>
+			<item name="wotwToolWSHeatedRack"/>
 		</trader_item_group>
 		
 		<trader_item_group name="classFragmentsLow" count="1">
-			<item name="classFragmentSurvivalist" count="1"/>
-			<item name="classFragmentSoldier" count="1"/>
-			<item name="classFragmentTradesman" count="1"/>
-			<item name="classFragmentCovert" count="1"/>
-			<item name="classFragmentTechnician" count="1"/>
+			<item name="classFragmentBarter"/>
+			<item name="classFragmentBuilder"/>
+			<item name="classFragmentCovert"/>
+			<item name="classFragmentFighter"/>
+			<item name="classFragmentHunter"/>
+			<item name="classFragmentLooter"/>
+			<item name="classFragmentMedic"/>
+			<item name="classFragmentRanger"/>
+			<item name="classFragmentSoldier"/>
+			<item name="classFragmentSurvivalist"/>
+			<item name="classFragmentTechnician"/>
+			<item name="classFragmentTradesman"/>
 		</trader_item_group>
 		
 		<trader_item_group name="classFragmentsMedium" count="1,2">
-			<item name="classFragmentSurvivalist" count="1"/>
-			<item name="classFragmentSoldier" count="1"/>
-			<item name="classFragmentTradesman" count="1"/>
-			<item name="classFragmentCovert" count="1"/>
-			<item name="classFragmentTechnician" count="1"/>
+			<item name="classFragmentBarter"/>
+			<item name="classFragmentBuilder"/>
+			<item name="classFragmentCovert"/>
+			<item name="classFragmentFighter"/>
+			<item name="classFragmentHunter"/>
+			<item name="classFragmentLooter"/>
+			<item name="classFragmentMedic"/>
+			<item name="classFragmentRanger"/>
+			<item name="classFragmentSoldier"/>
+			<item name="classFragmentSurvivalist"/>
+			<item name="classFragmentTechnician"/>
+			<item name="classFragmentTradesman"/>
 		</trader_item_group>
 		
 		<trader_item_group name="classFragmentsHigh" count="2,3">
-			<item name="classFragmentSurvivalist" count="1"/>
-			<item name="classFragmentSoldier" count="1"/>
-			<item name="classFragmentTradesman" count="1"/>
-			<item name="classFragmentCovert" count="1"/>
-			<item name="classFragmentTechnician" count="1"/>
+			<item name="classFragmentBarter"/>
+			<item name="classFragmentBuilder"/>
+			<item name="classFragmentCovert"/>
+			<item name="classFragmentFighter"/>
+			<item name="classFragmentHunter"/>
+			<item name="classFragmentLooter"/>
+			<item name="classFragmentMedic"/>
+			<item name="classFragmentRanger"/>
+			<item name="classFragmentSoldier"/>
+			<item name="classFragmentSurvivalist"/>
+			<item name="classFragmentTechnician"/>
+			<item name="classFragmentTradesman"/>
 		</trader_item_group>
 		
 		<trader_item_group name="classFragments" count="1">
@@ -1034,14 +1344,270 @@
 </insertAfter>
 
 <insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
+		<!-- Builder Class -->
+		<trader_item_group name="barterTaggedQuests">
+			<item name="wotw_QuestT1Commercial"/>
+			<item name="wotw_QuestT2Commercial"/>
+			<item name="wotw_QuestT3Commercial"/>
+			<item name="wotw_QuestT4Commercial"/>
+			<item name="wotw_QuestT1Industrial"/>
+			<item name="wotw_QuestT2Industrial"/>
+			<item name="wotw_QuestT3Industrial"/>
+			<item name="wotw_QuestT4Industrial"/>
+			<item name="wotw_QuestT1Residence"/>
+			<item name="wotw_QuestT2Residence"/>
+			<item name="wotw_QuestT3Residence"/>
+			<item name="wotw_QuestT4Residence"/>
+			<item name="wotw_QuestT1Wilderness"/>
+			<item name="wotw_QuestT2Wilderness"/>
+			<item name="wotw_QuestT3Wilderness"/>
+			<item name="wotw_QuestT4Wilderness"/>
+			<item name="wotw_QuestT5Random"/>
+		</trader_item_group>
+		
+		<trader_item_group name="barterGoToQuests">
+			<item name="wotw_QuestGoToT3Battleship"/>
+			<item name="wotw_QuestGoToT3ChickenAttack"/>
+			<item name="wotw_QuestGoToT3Bridge"/>
+			<item name="wotw_QuestGoToT3BusinessCentre"/>
+			<item name="wotw_QuestGoToT4DungeonofDwall"/>
+			<item name="wotw_QuestGoToT2ImpoundLot"/>
+			<item name="wotw_QuestGoToT4CornMaze"/>
+			<item name="wotw_QuestGoToT5Metro"/>
+			<item name="wotw_QuestGoToT4TowerLevels"/>
+			<item name="wotw_QuestGoToT5Warehouse"/>
+			<item name="wotw_QuestGoToT4Tower"/>
+			<item name="wotw_QuestGoToT5CrawlerCamp"/>
+			<item name="wotw_QuestGoToT5DwallsDeepRouteFarm"/>
+			<item name="wotw_QuestGoToT5GrandLibrary"/>
+			<item name="wotw_QuestGoToT4UnrealStuperStore"/>
+			<item name="wotw_QuestGoToT5CabinofScreams"/>
+			<item name="wotw_QuestGoToT5Area69"/>
+			<item name="wotw_QuestGoToT5DwallsPirateShip"/>
+			<item name="wotw_QuestGoToT5DwallsDepartmentofDefense"/>
+			<item name="wotw_QuestGoToT4FortressoftheDead"/>
+			<item name="wotw_QuestGoToT5DwallsRandomCastle"/>
+			<item name="wotw_QuestGoToT5DwallsBusinessTower"/>
+		</trader_item_group>
+		
+		<!-- Builder Class -->
+		<trader_item_group name="builderResources">
+			<item group="generalResources" count="1,2"/>
+			<item group="constructionSupplies" count="1,2"/>
+		</trader_item_group>
+		
+		<trader_item_group name="builderConstruction">
+			<item group="advancedConstructionSupplies" count="1,2"/>
+			<item group="decorativeBlocks" count="1,2" prob="0.5"/>
+		</trader_item_group>
+		
+		<trader_item_group name="builderMagazines">
+			<item name="wotwConstructionSkillMagazine" count="1,3"/>
+			<item name="wotwResourcesSkillMagazine" count="1,3"/>
+			<item name="workstationSkillMagazine" count="1,3"/>
+			<item name="repairToolsSkillMagazine" count="1,3"/>
+			<item name="reward_actionConstructionLevel"/>
+		</trader_item_group>
+		
+		<trader_item_group name="builderTools">
+			<item name="toolAnvil"/>
+			<item name="toolBellows"/>
+			<item name="toolForgeCrucible" prob="0.6"/>
+			<item name="rebarBender" prob="0.4"/>
+			<item name="weldingTool" prob="0.3"/>
+			<item name="wotwToolTapeMeasure" prob="0.5"/>
+			<item name="wotwNailgunPartFrame"/>
+			<item name="wotwNailgunPartParts" count="1,4"/>
+			<item name="wotwNailgunPartReceiver"/>
+			<item name="wotwNailgunPartBattery"/>
+			<item name="wotwResourceToolCraftingKit"/>
+			<item name="armorConstHelmet" prob="0.1"/>
+			<item name="armorConstOutfit" prob="0.1"/>
+			<item name="armorConstGloves" prob="0.1"/>
+			<item name="armorConstBoots" prob="0.1"/>
+		</trader_item_group>
+		
+		<!-- Covert Class -->
+		<trader_item_group name="covertQuests">
+			<item name="classTreasure_armorcrate"/>
+		</trader_item_group>
+		
+		<trader_item_group name="covertResources">
+			<item name="resourceSewingKit" count="4,8"/>
+			<item name="kevlar" count="50,100"/>
+			<item name="wotwResourceWeaponCraftingKit" count="1,4"/>
+		</trader_item_group>
+		
+		<trader_item_group name="covertTools">
+			<item group="ammoArrowsBolts" count="1,4"/>
+			<item name="wotwBowPartBody"/>
+			<item name="wotwBowPartGrip"/>
+			<item name="wotwBowPartString"/>
+			<item name="gunBowT1WoodenBowParts" count="1,4"/>
+			<item name="armorRogueHelmet" prob="0.1"/>
+			<item name="armorRogueOutfit" prob="0.1"/>
+			<item name="armorRogueGloves" prob="0.1"/>
+			<item name="armorRogueBoots" prob="0.1"/>
+		</trader_item_group>
+		
+		<trader_item_group name="covertMagazines">
+			<item name="bowsSkillMagazine" count="1,3"/>
+			<item name="armorSkillMagazine" count="1,3"/>
+			<item name="reward_actionArcheryLevel"/>
+		</trader_item_group>
+		
+		<!-- Fighter Class -->
+		<trader_item_group name="fighterMagazines">
+			<item name="knucklesSkillMagazine" count="1,3"/>
+			<item name="explosivesSkillMagazine" count="1,3"/>
+			<item name="spearsSkillMagazine" count="1,3"/>
+			<item name="reward_actionThrownWpnsLevel"/>
+			<item name="reward_actionFistWpnsLevel"/>
+		</trader_item_group>
+		
+		<trader_item_group name="fighterTools">
+			<item name="repairKitWeapon" count="1,4"/>
+			<item name="wotwSpearPartHead"/>
+			<item name="wotwResourceWeaponCraftingKit" count="1,2"/>
+			<item name="armorBikerHelmet" prob="0.1"/>
+			<item name="armorBikerOutfit" prob="0.1"/>
+			<item name="armorBikerGloves" prob="0.1"/>
+			<item name="armorBikerBoots" prob="0.1"/>
+		</trader_item_group>
+		
+		<trader_item_group name="fighterResources">
+			<item group="thrownAmmo" count="1,2"/>
+			<item group="groupDyeMods" count="1" prob="0.5"/>
+		</trader_item_group>
+		
+		<!-- Hunter Class -->
+		<trader_item_group name="hunterMagazines">
+			<item name="reward_actionLightArmourLevel"/>
+		</trader_item_group>
+		
+		<trader_item_group name="hunterTools">
+			<item name="armorHunterHelmet" prob="0.1"/>
+			<item name="armorHunterOutfit" prob="0.1"/>
+			<item name="armorHunterGloves" prob="0.1"/>
+			<item name="armorHunterBoots" prob="0.1"/>
+		</trader_item_group>
+		
+		<trader_item_group name="hunterResources">
+			<item name="wotwResourceLeather" count="25,75"/>
+			<item name="rawWhiteMeat" count="25,75"/>
+			<item name="foodRawMeat" count="20,40"/>
+		</trader_item_group>
+		
+		<!-- Looter Class -->
+		<trader_item_group name="looterResources">
+			<item group="ammoAll"/>
+			<item group="ammoSupplies"/>
+			<item group="groupModsAll"/>
+			<item group="groupDyeMods"/>
+			<item group="perkBooks"/>
+			<item group="groupQuestChallenge"/>
+			<item group="groupActionRewardCards"/>
+			<item group="skillMagazines"/>
+			<item group="schematicsModsCommon"/>
+			<item group="commonBooks"/>
+			<item group="medicine"/>
+			<item group="foodSupplies"/>
+			<item group="constructionSupplies"/>
+			<item group="advancedConstructionSupplies"/>
+			<item group="generalResources"/>
+			<item group="groupEngineParts"/>
+			<item group="groupEngineItems"/>
+			<item group="toolandweaponParts"/>
+		</trader_item_group>
+		
+		<!-- Medic Class -->
+		<trader_item_group name="medicResources">
+			<item group="medicine"/>
+			<item group="rareMedicine" prob="0.2"/>
+			<item name="medicalAloeCream" count="5,10"/>
+			<item name="zincPowder" count="5,10"/>
+			<item name="medicalSkillMagazine" count="1,3"/>
+		</trader_item_group>
+		
+		<!-- Ranger Class -->
+		<trader_item_group name="rangerMagazines">
+			<item name="reward_actionMediumArmourLevel" count="1,3"/>
+			<item name="armorSkillMagazine" count="1,3"/>
+			<item name="bladesSkillMagazine" count="1,3"/>
+			<item name="handgunsSkillMagazine" count="1,3"/>
+			<item name="riflesSkillMagazine" count="1,3"/>
+			<item name="wotwAmmoSkillMagazine" count="1,3"/>
+			<item name="reward_actionPistolsLevel" count="1,3"/>
+			<item name="reward_actionRiflesLevel" count="1,3"/>
+		</trader_item_group>
+		
+		<trader_item_group name="rangerResources">
+			<item group="ammoAll" count="1,2"/>
+			<item group="ammoSupplies"/>
+			<item group="groupDyeMods"/>
+			<item group="groupRangedMods"/>
+			<item group="groupArmorMods"/>
+			<item group="groupMeleeMods"/>
+			<item name="wotwResourceWeaponCraftingKit" count="1,4"/>
+		</trader_item_group>
+		
+		<trader_item_group name="rangerTools">
+			<item group="groupArmorMedium"/>
+			<item name="gunHandgunT1PistolParts" count="1,4"/>
+			<item name="gunRifleT1HuntingRifleParts" count="1,4"/>
+			<item name="meleeWpnBladeT3MacheteParts" count="1,4"/>
+			<item name="wotwHandgunPartBarrel"/>
+			<item name="wotwHandgunPartGrip"/>
+			<item name="wotwHandgunPartReceiver"/>
+			<item name="wotwRiflePartBarrel"/>
+			<item name="wotwRiflePartBolt"/>
+			<item name="wotwRiflePartStock"/>
+			<item name="armorParts" count="1,3"/>
+		</trader_item_group>
+		
+		<!-- Soldier Class -->
+		<trader_item_group name="soldierQuests">
+			<item name="classTreasure_weaponcrate"/>
+			<item name="classTreasure_guncrate"/>
+		</trader_item_group>
+		
+		<trader_item_group name="soldierResources">
+			<item group="ammoAll"/>
+			<item group="ammoSupplies"/>
+			<item name="wotwResourceWeaponCraftingKit" count="1,4"/>
+		</trader_item_group>
+		
+		<trader_item_group name="soldierTools">
+			<item name="gunShotgunT1DoubleBarrelParts" count="1,4"/>
+			<item name="gunMGT1AK47Parts" count="1,4"/>
+			<item name="meleeWpnClubT3SteelClubParts" count="1,4"/>
+			<item name="meleeWpnSledgeT3SteelSledgehammerParts" count="1,4"/>
+			<item name="wotwShotgunPartBarrel"/>
+			<item name="wotwShotgunPartReceiver"/>
+			<item name="wotwShotgunPartStock"/>
+			<item name="wotwMachineGunPartBarrel"/>
+			<item name="wotwMachineGunPartReceiver"/>
+			<item name="wotwMachineGunPartStock"/>
+			<item name="wotwClubPartBody"/>
+			<item name="wotwSledgePartHead"/>
+		</trader_item_group>
+		
+		<trader_item_group name="soldierMagazines">
+			<item name="shotgunsSkillMagazine" count="1,3"/>
+			<item name="machineGunsSkillMagazine" count="1,3"/>
+			<item name="clubsSkillMagazine" count="1,3"/>
+			<item name="sledgehammersSkillMagazine" count="1,3"/>
+			<item name="armorSkillMagazine" count="1,3"/>
+			<item name="wotwAmmoSkillMagazine" count="1,3"/>
+			<item name="reward_actionHeavyArmourLevel" count="1,3"/>
+			<item name="reward_actionBluntWpnsLevel" count="1,3"/>
+			<item name="reward_actionMachineGunsLevel" count="1,3"/>
+			<item name="reward_actionShotgunsLevel" count="1,3"/>
+			<item name="armorParts" count="1,3"/>
+		</trader_item_group>
+		
+		<!-- Survivalist Class -->
 		<trader_item_group name="survivalistQuests">
-			<item name="classChallenge_TraumaFirstAidBandage"/>
-			<item name="classChallenge_TraumaFirstAidKit"/>
-			<item name="classChallenge_SpeedTraps"/>
-			<item name="classChallenge_pieCrafting"/>
-			<item name="classChallenge_chickenSoupMaster"/>
-			<item name="classChallenge_beefSoupMaster"/>
-			<item name="classChallenge_dinnerMaster"/>
 			<item name="classTreasure_survivalistsupplies"/>
 			<item name="classTreasure_survivalistsupplies2"/>
 		</trader_item_group>
@@ -1123,195 +1689,21 @@
 			<item name="mochaCoffee" count="1,2" prob="0.1"/>
 		</trader_item_group>
 		
-		<trader_item_group name="survivalistRawHealth">
-			<item name="medicalAloeCream" count="50,100"/>
-			<item name="medicalBloodBag" count="2,4"/>
-			<item name="zincPowder" count="10,30"/>
-		</trader_item_group>
-		
-		<trader_item_group name="survivalistCookedHealth">
-			<item name="drugVitamins" count="2,4"/>
-			<item name="vitaminA" count="2,4"/>
-			<item name="vitaminB" count="2,4"/>
-			<item name="vitaminC" count="2,4"/>
-			<item name="vitaminD" count="2,4"/>
-			<item name="medicalSplint" count="2,4"/>
-			<item name="medicalFirstAidBandage" count="2,4"/>
-			<item name="medicalFirstAidKit" count="2,4"/>
-			<item name="medicalPlasterCast" count="2,4"/>
-			<item name="drugAntibiotics" count="2,4"/>
-			<item name="drugPainkillers" count="2,4"/>
-			<item name="drugHerbalAntibiotics" count="2,4"/>
-			<item name="advancedSplint" count="2,4"/>
-			<item name="traumaFirstAidBandage" count="2,4"/>
-			<item name="traumaFirstAidKit" count="2,4"/>
-			<item name="xStrengthPainkillers" count="2,4"/>
-			<item name="legBoosterShot" count="2,4"/>
-			<item name="immunizationShot" count="2,4"/>
-			<item name="drugSteroids" count="1,2"/>
-			<item name="drugFortBites" count="1,2"/>
-			<item name="drugRecog" count="1,2"/>
-			<item name="drinkJarGrandpasMoonshine" count="1,2"/>
-			<item name="drinkJarGrandpasAwesomeSauce" count="1,2"/>
-			<item name="drinkJarGrandpasLearningElixir" count="1,2"/>
-			<item name="wotwDrugAntiRadMinor" count="1"/>
-			<item name="wotwDrugAntiRadMajor" count="1"/>
-		</trader_item_group>
-		
-		<trader_item_group name="survivalistTraps">
-			<item name="ExplosiveSpeedTrap" count="1,2"/>
-			<item name="SpeedTrapSet" count="1,2"/>
-			<item name="FireSpeedTrap" count="1,2"/>
-			<item name="wotwExplosiveMine" count="1,2"/>
-		</trader_item_group>
-		
 		<trader_item_group name="survivalistFarming">
 			<item name="wotwResourceFertilizer" count="1,3"/>
 			<item name="farmPlotBlockVariantHelper" count="5,15"/>
-			<item name="plantedWheat1"/>
-			<item name="plantedAppleTree1"/>
-			<item name="plantedBlackberry1"/>
-			<item name="plantedStrawberry1"/>
-			<item name="plantedCocoa1"/>
-			<item name="plantedCarrot1"/>
-			<item name="plantedCucumber1"/>
-			<item name="plantedLeek1"/>
-			<item name="plantedLettuce1"/>
-			<item name="plantedMelon1"/>
-			<item name="plantedOnion1"/>
-			<item name="plantedPepper1"/>
-			<item name="plantedTomato1"/>
-			<item name="plantedMoss1"/>
+			<item group="seeds" count="2,4"/>
+			<item name="wotwChickenYoung" count="0,1"/>
+			<item name="wotwChickenAdult" count="0,1" prob="0.25"/>
 		</trader_item_group>
 		
 		<trader_item_group name="survivalistMagazines">
-			<item name="workstationSkillMagazine" count="1,3"/>
-			<item name="medicalSkillMagazine" count="1,3"/>
-			<item name="knucklesSkillMagazine" count="1,3"/>
 			<item name="foodSkillMagazine" count="1,3"/>
 			<item name="seedSkillMagazine" count="1,3"/>
 		</trader_item_group>
 		
-		<trader_item_group name="soldierQuests">
-			<item name="classChallenge_goldtippedknife"/>
-			<item name="classChallenge_goldtippedmachete"/>
-			<item name="classChallenge_meleezombies"/>
-			<item name="classTreasure_weaponcrate"/>
-			<item name="classTreasure_guncrate"/>
-		</trader_item_group>
-		
-		<trader_item_group name="soldierRawAmmo">
-			<item name="resourceGunPowder" count="250,500"/>
-			<item name="resourceBulletTip" count="250,750"/>
-			<item name="resourceBulletCasing" count="250,750"/>
-			<item name="resourceScrapBrass" count="250,500"/>
-			<item name="resourceScrapLead" count="250,500"/>
-			<item name="resourceBuckshot" count="250,750"/>
-			<item name="wotwAmmoHPBulletTip" count="250,750"/>
-		</trader_item_group>
-		
-		<trader_item_group name="soldierAmmo">
-			<item name="ammo9mmBulletBall" count="25,75"/>
-			<item name="ammo9mmBulletHP" count="25,75"/>
-			<item name="ammo9mmBulletAP" count="25,75"/>
-			<item name="ammo762mmBulletBall" count="25,75"/>
-			<item name="ammo762mmBulletHP" count="25,75"/>
-			<item name="ammo762mmBulletAP" count="25,75"/>
-			<item name="ammo44MagnumBulletBall" count="25,75"/>
-			<item name="ammo44MagnumBulletHP" count="25,75"/>
-			<item name="ammo44MagnumBulletAP" count="25,75"/>
-			<item name="ammoShotgunShell" count="25,75"/>
-			<item name="ammoShotgunSlug" count="25,75"/>
-			<item name="ammoShotgunBreachingSlug" count="25,75"/>
-			<item name="wotwAmmo45ACP" count="25,75"/>
-			<item name="wotwAmmo45ACPHP" count="25,75"/>
-			<item name="wotwAmmo45ACPAP" count="25,75"/>
-			<item name="wotwAmmo20GShotgunShell" count="25,75"/>
-			<item name="wotwAmmo20GShotgunSlug" count="25,75"/>
-			<item name="wotwAmmo20GShotgunBreachingSlug" count="25,75"/>
-			<item name="wotwAmmo556mmBullet" count="25,75"/>
-			<item name="wotwAmmo556mmBulletHP" count="25,75"/>
-			<item name="wotwAmmo556mmBulletAP" count="25,75"/>
-			<item name="wotwAmmo57mmBullet" count="25,75"/>
-			<item name="wotwAmmo57mmBulletHP" count="25,75"/>
-			<item name="wotwAmmo57mmBulletAP" count="25,75"/>
-		</trader_item_group>
-		
-		<trader_item_group name="soldierMeleeWpns">
-			<item group="groupMeleeAll"/>
-			<item name="wotwMeleeWpnClubTungsten"/>
-			<item name="wotwMeleeWpnBatBaseballTungsten"/>
-			<item name="wotwMeleeWpnBatBaseballGoldTipped"/>
-			<item name="wotwMeleeWpnClubGoldTipped"/>
-			<item name="wotwMeleeWpnKnifeCombat"/>
-			<item name="wotwMeleeWpnSword"/>
-			<item name="wotwMeleeWpnGoldTippedKnife"/>
-			<item name="wotwMeleeWpnTungstenMachete"/>
-			<item name="wotwMeleeWpnGoldTippedMachete"/>
-			<item name="wotwMeleeWpnSpearGoldTipped"/>
-		</trader_item_group>
-		
-		<trader_item_group name="soldierGuns">
-			<item name="gunHandgunT1Pistol"/>
-			<item name="gunMGT1AK47"/>
-			<item name="gunRifleT1HuntingRifle"/>
-			<item name="gunShotgunT2PumpShotgun"/>
-			<item name="gunMGT2TacticalAR"/>
-			<item name="gunRifleT2LeverActionRifle"/>
-			<item name="gunHandgunT2Magnum44"/>
-			<item name="gunHandgunT3SMG5"/>
-			<item name="gunMGT3M60"/>
-			<item name="gunHandgunT3DesertVulture"/>
-			<item name="gunShotgunT3AutoShotgun"/>
-			<item name="gunRifleT3SniperRifle"/>
-			<item name="gunExplosivesT3RocketLauncher"/>
-			<item name="wotwGunPistolM1911"/>
-			<item name="wotwGunPistolMK23"/>
-			<item name="wotwGunShotgunRemington870"/>
-			<item name="wotwGunShotgunUSAS12"/>
-			<item name="wotwGunRifleFNScar"/>
-			<item name="wotwGunRifleSVDDragunov"/>
-			<item name="wotwGunMGUMP45"/>
-			<item name="wotwGunMGP90"/>
-			<item name="wotwGunRPG7RocketLauncher"/>
-		</trader_item_group>
-		
-		<trader_item_group name="soldierMagazines">
-			<item name="handgunsSkillMagazine" count="1,3"/>
-			<item name="shotgunsSkillMagazine" count="1,3"/>
-			<item name="riflesSkillMagazine" count="1,3"/>
-			<item name="machineGunsSkillMagazine" count="1,3"/>
-			<item name="bladesSkillMagazine" count="1,3"/>
-			<item name="clubsSkillMagazine" count="1,3"/>
-			<item name="sledgehammersSkillMagazine" count="1,3"/>
-			<item name="armorSkillMagazine" count="1,3"/>
-			<item name="wotwAmmoSkillMagazine" count="1,3"/>
-		</trader_item_group>
-		
-		<trader_item_group name="covertQuests">
-			<item name="classChallenge_Lockpicking"/>
-			<item name="classTreasure_armorcrate"/>
-		</trader_item_group>
-		
-		<trader_item_group name="covertResources">
-			<item name="resourceLockPick" count="2,10"/>
-			<item name="resourceSewingKit" count="4,8"/>
-			<item name="kevlar" count="50,100"/>
-		</trader_item_group>
-		
-		<trader_item_group name="covertMagazines">
-			<item name="bowsSkillMagazine" count="1,3"/>
-			<item name="spearsSkillMagazine" count="1,3"/>
-			<item name="armorSkillMagazine" count="1,3"/>
-			<item name="knucklesSkillMagazine" count="1,3"/>
-			<item name="explosivesSkillMagazine" count="1,3"/>
-		</trader_item_group>
-		
+		<!-- Technician Class -->
 		<trader_item_group name="technicianQuests">
-			<item name="classChallenge_minibikeparts"/>
-			<item name="classChallenge_Lighting"/>
-			<item name="classChallenge_BaseTraps"/>
-			<item name="classChallenge_BaseTraps2"/>
 			<item name="classTreasure_BaseTraps2"/>
 			<item name="classTreasure_VehicleParts"/>
 		</trader_item_group>
@@ -1321,18 +1713,15 @@
 			<item name="resourceElectricParts" count="50,100"/>
 			<item name="resourceMechanicalParts" count="50,100"/>
 			<item name="resourceSpring" count="5,10"/>
-			<item name="sparkPlug" count="2,6"/>
-			<item name="valve" count="2,6"/>
-			<item name="piston" count="2,6"/>
-			<item name="crankshaft" count="2,6"/>
-			<item name="engineParts" count="1,2"/>
-			<item name="enginePartsECO" count="1,2"/>
-			<item name="enginePartsHD" count="1,2"/>
+			<item group="groupEngineParts" count="1,2"/>
+			<item group="groupEngineItems" count="1,2"/>
 		</trader_item_group>
 		
 		<trader_item_group name="technicianResources">
 			<item name="forgedTungsten" count="20,50"/>
 			<item name="ammoGasCan" count="100,500"/>
+			<item name="wotwResourceDiesel" count="100,500"/>
+			<item name="wotwResourceKerosene" count="100,500"/>
 			<item name="resourceAcid" count="2,6"/>
 			<item name="householdChemicals" count="2,6"/>
 		</trader_item_group>
@@ -1350,36 +1739,8 @@
 			<item name="hdAutoTurret" count="1"/>
 		</trader_item_group>
 		
-		<trader_item_group name="technicianElectricalLights">
-			<item name="ceilingLight02Brass_player" count="5"/>
-			<item name="ceilingLight04_player" count="5"/>
-			<item name="ceilingLight05_player" count="5"/>
-			<item name="ceilingLight01_player" count="5"/>
-			<item name="spotlightPlayer" count="5"/>
-			<item name="signShopOpen_player" count="1"/>
-			<item name="signNeonColdBeer_player" count="1"/>
-			<item name="streetLight01_player" count="2"/>
-		</trader_item_group>
-		
-		<trader_item_group name="technicianElectricalParts">
-			<item name="electricwirerelay" count="5"/>
-			<item name="speaker" count="2"/>
-			<item name="switch" count="2"/>
-			<item name="tripwirepost" count="2"/>
-			<item name="pressureplate" count="2"/>
-			<item name="electrictimerrelay" count="2"/>
-			<item name="pressureplateLong" count="2"/>
-			<item name="motionsensor" count="2"/>
-		</trader_item_group>
-		
-		<trader_item_group name="technicianElectricalBanks">
-			<item name="generatorbank"/>
-			<item name="ecoGeneratorbank"/>
-			<item name="hdGeneratorbank"/>
-			<item name="batterybank"/>
-			<item name="ecoBatterybank"/>
-			<item name="hdBatterybank"/>
-			<item name="meleeToolWireTool"/>
+		<trader_item_group name="technicianElectrical">
+			<item group="traderElectrical" count="1,2"/>
 		</trader_item_group>
 		
 		<trader_item_group name="technicianMagazines">
@@ -1391,10 +1752,8 @@
 			<item name="workstationSkillMagazine" count="1,3"/>
 		</trader_item_group>
 		
+		<!-- Tradesman Class -->
 		<trader_item_group name="tradesmanQuests">
-			<item name="classChallenge_sledgehammer"/>
-			<item name="classChallenge_diamondtools"/>
-			<item name="classChallenge_woodframes"/>
 			<item name="classTreasure_buildingsupplies"/>
 			<item name="classTreasure_tradesmansupplies"/>
 		</trader_item_group>
@@ -1408,8 +1767,6 @@
 			<item name="resourceMechanicalParts" count="50,150"/>
 			<item name="meleeToolAllSteelParts" count="2,5"/>
 			<item name="meleeToolAxeT3ChainsawParts" count="2,5"/>
-			<item name="toolPartsTungsten" count="2,5"/>
-			<item name="toolPartsAdvancedMotor" count="2,5"/>
 		</trader_item_group>
 		
 		<trader_item_group name="tradesmanRawResources">
@@ -1420,60 +1777,46 @@
 			<item name="resourceScrapIron" count="2500,5000"/>
 		</trader_item_group>
 		
-		<trader_item_group name="tradesmanUpgradeMats">
-			<item name="resourceConcreteMix" count="100,500"/>
-			<item name="tungstenPlating" count="100,300"/>
-			<item name="resourceCobblestones" count="250,1000"/>
-			<!-- <item name="woodAndNails" count="250,1000"/> -->
-		</trader_item_group>
-		
-		<trader_item_group name="tradesmanToolsCommon">
-			<item name="meleeToolPickT1IronPickaxe"/>
-			<item name="meleeToolShovelT1IronShovel"/>
-			<item name="meleeToolAxeT1IronFireaxe"/>
-			<item name="meleeWpnSledgeT1IronSledgehammer"/>
-			<item name="meleeToolRepairT1ClawHammer"/>
-			<item name="meleeToolSalvageT1Wrench"/>
-			<item name="meleeToolAllSteelParts" count="4,8"/>
-			<item name="meleeToolAxeT3Chainsaw"/>
-			<item name="meleeToolPickT3Auger"/>
-			<item name="meleeToolRepairT3Nailgun"/>
-			<item name="meleeToolSalvageT2Ratchet"/>
-			<item name="meleeToolSalvageT3ImpactDriver"/>
-			<item name="meleeToolPickT2SteelPickaxe"/>
-			<item name="meleeToolAxeT2SteelAxe"/>
-			<item name="meleeToolShovelT2SteelShovel"/>
-		</trader_item_group>
-		
-		<trader_item_group name="tradesmanToolsRare">
-			<item name="wotwMeleeToolHDNailgun"/>
-			<item name="wotwMeleeToolTungstenShovel"/>
-			<item name="wotwMeleeToolTungstenFireaxe"/>
-			<item name="wotwMeleeToolTungstenPickaxe"/>
-			<item name="wotwMeleeToolIceAxe"/>
-			<item name="wotwMeleeToolSteelSickle"/>
-			<item name="wotwMeleeToolSteelHoe"/>
-			<item name="wotwMeleeToolSteelChainsaw"/>
-			<item name="wotwMeleeToolTungstenChainsaw"/>
-			<item name="wotwMeleeToolSteelAuger"/>
-			<item name="wotwMeleeToolTungstenAuger"/>
+		<trader_item_group name="tradesmanTools">
+			<item name="resourceLockPick" count="2,10"/>
+			<item group="workstationTools"/>
+			<item name="meleeToolAllSteelParts" count="1,4"/>
+			<item name="meleeToolAxeT3ChainsawParts" count="1,4"/>
+			<item name="wotwPickPartHead"/>
+			<item name="wotwAxePartHead"/>
+			<item name="wotwShovelPartHead"/>
+			<item name="wotwHoePartHead"/>
+			<item name="wotwAugerPartBlade"/>
+			<item name="wotwAugerPartParts" count="1,4"/>
+			<item name="wotwChainsawPartBlade"/>
+			<item name="wotwChainsawPartParts" count="1,4"/>
+			<item name="handlewood" count="1,3"/>
+			<item name="handlemetal" count="1,3" prob="0.3"/>
+			<item name="handlefiberglass" count="1,3" prob="0.1"/>
+			<item name="wotwResourceToolCraftingKit" count="1,4"/>
 		</trader_item_group>
 		
 		<trader_item_group name="tradesmanMagazines">
 			<item name="harvestingToolsSkillMagazine" count="1,3"/>
-			<item name="repairToolsSkillMagazine" count="1,3"/>
 			<item name="workstationSkillMagazine" count="1,3"/>
-			<item name="electricianSkillMagazine" count="1,3"/>
-			<item name="trapsSkillMagazine" count="1,3"/>
-			<item name="wotwConstructionSkillMagazine" count="1,3"/>
 			<item name="wotwResourcesSkillMagazine" count="1,3"/>
 		</trader_item_group>
 </insertBefore>
 
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']/item[@name='resourceGunPowder']/@count">25,50</set>
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']/item[@name='resourcePotassiumNitratePowder']/@count">20,200</set>
-
+<set xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']/item[@name='ammoGasCan']/@count">2500,5000</set>
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']/item[@name='drinkJarGrandpasForgettingElixir']"/>
 <append xpath="traders/trader_item_groups/trader_item_group[@name='traderGeneral']">
+			<item name="wotwResourceDiesel" count="2500,5000"/>
+			<item name="wotwResourceKerosene" count="2500,5000"/>
+			<item name="resourceCoal" count="20,200"/>
+</append>
+
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='traderGeneral']/item[@group='rareTools']"/>
+<append xpath="traders/trader_item_groups/trader_item_group[@name='traderGeneral']">
+			<item group="groupEngineItems" count="1,2" prob="2"/>
+			<item group="groupEngineParts" count="1,2" prob="2"/>
 			<item group="toolandweaponParts" count="1,2" prob="2"/>
 			<item group="workstationTools" count="1,2" prob="0.8"/>
 			<item group="classFragments" count="1" prob="0.75"/>
@@ -1482,282 +1825,483 @@
 			<item name="repairKitWeapon" count="5,10"/>
 			<item name="armorParts" count="1,3"/>
 			<item name="handlewood" count="1,3"/>
-			<item name="handlemetal" count="1,3" prob="0.3"/>
-			<item name="handlefiberglass" count="1,3" prob="0.1"/>
-			<!-- <item group="christmasDecorations" count="1,2" prob="0.3"/> -->
-			<!-- <item group="christmasPresents" count="1,2" prob="0.3"/> -->
-			<!-- <item group="halloweenDecorations" count="1,2" prob="0.3"/> -->
-			<!-- <item name="halloweenTrickorTreat" count="1,2"/> -->
+			<item name="handlemetal" count="1,3" prob="0.5"/>
+			<item name="handlefiberglass" count="1,3" prob="0.3"/>
+			<item group="rareTools" count="1" prob="0.1"/>
+			<conditional evaluator="client">
+				<if cond="event('christmas')">
+					<item group="christmasDecorations" count="1,2" prob="0.3"/>
+					<item group="christmasPresents" count="1,2" prob="0.3"/>
+				</if>
+				<if cond="event('halloween')">
+					<item group="halloweenDecorations" count="1,2" prob="0.3"/>
+					<item name="halloweenTrickorTreat" count="1,2"/>
+				</if>
+			</conditional>
 </append>
 
-
-
-<!-- Trader Joel: Clothes and Armour -->
-<removeattribute xpath="/traders/trader_info[@id='1']/@open_time" />
-<removeattribute xpath="/traders/trader_info[@id='1']/@close_time" />
-<set xpath="traders/trader_info[@id='1']/@reset_interval">1</set>
-
-<set xpath="/traders/trader_info[@id='1']/trader_items/item[@name='toolDewFilter']/@count">2,3</set>
-
-<insertAfter xpath="/traders/trader_info[@id='1']/trader_items/item[@group='groupDyeMods']">
+<remove xpath="/traders/trader_info[@id='1']"/>
+<remove xpath="/traders/trader_info[@id='6']"/>
+<remove xpath="/traders/trader_info[@id='2']"/>
+<remove xpath="/traders/trader_info[@id='7']"/>
+<remove xpath="/traders/trader_info[@id='8']"/>
+<append xpath="/traders">
+<!-- *** TRADER JOEL ID:1 SPECIALTY: CLOTHES AND ARMOR -->
+	<trader_info id="1" reset_interval="1">
+		
+		<!-- *** SPECIALTY -->
+		<trader_items count="all">
+			<item group="groupArmorMods" count="4,6"/>
+			<item group="groupArmorLight" count="3,5"/>
+			<item group="groupArmorMedium" count="3,5"/>
+			<item group="groupArmorHeavy" count="3,5"/>
+			<item name="armorParts" count="3,5"/>
+			<item name="resourceSewingKit" count="3,5"/>
+			<item name="armorSkillMagazine" count="2,4"/>
 			<item name="wotwDrugAntiRadMinor" count="1,2"/>
 			<item name="wotwDrugAntiRadMajor" count="1,2"/>
-</insertAfter>
-
-<insertAfter xpath="/traders/trader_info[@id='1']/trader_items/item[@group='decorativeBlocks']">
-			<item name="repairKitArmour" count="2,3"/>
-			<item name="repairKitTool" count="2,3"/>
-			<item name="repairKitWeapon" count="2,3"/>
-			<item name="resourceRepairKit" count="2,3"/>
-			<item name="adcAdvancedFilter" count="1"/>
-			<item name="adcLargeCatcher" count="1"/>
-			<item name="adcBigBarrel" count="1"/>
-			<item name="wotwWorkToolTunedEngine" count="1"/>
-			<item name="wotwWorkToolBiggerDrums" count="1"/>
-			<item name="wotwWorkToolDualMotor" count="1"/>
-			<item name="wotwToolWSCarbideBlade" count="1"/>
-			<item name="wotwToolWSHeatedRack" count="1"/>
-</insertAfter>
-
-<!-- <append xpath="/traders/trader_info[@id='1']">
-		<trader_items count="0,1">
-			<item group="classFragments"/>
 		</trader_items>
-</append> -->
-
-<!-- Trader Bob: Tools and Vehicles -->
-<removeattribute xpath="/traders/trader_info[@id='6']/@open_time" />
-<removeattribute xpath="/traders/trader_info[@id='6']/@close_time" />
-<set xpath="traders/trader_info[@id='6']/@reset_interval">1</set>
-
-<set xpath="/traders/trader_info[@id='6']/trader_items/item[@name='toolDewFilter']/@count">2,3</set>
-
-<insertAfter xpath="/traders/trader_info[@id='6']/trader_items/item[@group='decorativeBlocks']">
-			<item name="repairKitArmour" count="2,3"/>
-			<item name="repairKitTool" count="2,3"/>
-			<item name="repairKitWeapon" count="2,3"/>
-			<item name="resourceRepairKit" count="2,3"/>
-			<item name="adcAdvancedFilter" count="1"/>
-			<item name="adcLargeCatcher" count="1"/>
-			<item name="adcBigBarrel" count="1"/>
-			<item name="wotwWorkToolTunedEngine" count="1"/>
-			<item name="wotwWorkToolBiggerDrums" count="1"/>
-			<item name="wotwWorkToolDualMotor" count="1"/>
-</insertAfter>
-
-<!-- Trader Jen: Medical and Books -->
-<removeattribute xpath="/traders/trader_info[@id='2']/@open_time" />
-<removeattribute xpath="/traders/trader_info[@id='2']/@close_time" />
-<set xpath="traders/trader_info[@id='2']/@reset_interval">1</set>
-
-<set xpath="/traders/trader_info[@id='2']/trader_items/item[@name='toolDewFilter']/@count">2,3</set>
-
-<insertAfter xpath="/traders/trader_info[@id='2']/trader_items/item[@name='toolCookingGrill']">
+		
+		<!-- *** GENERAL -->
+		<trader_items count="all">
+			<item group="traderAlways"/>
+			<item group="traderGeneral" count="3,6"/>
+			<item group="groupModsAll" count="4,8"/>
+			<item group="generalResources" count="4,6"/>
+			<item group="skillMagazines" count="3,5"/>
+			<item group="books" unique_only="true" count="3,4"/>
+			<item group="groupDyeMods" count="5"/>
+			<item group="tools" prob="0.1" count="1,2"/>
+			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
+			<item group="groupRangedAll" prob="0.1" count="1,2"/>
+			<item group="weaponsGunParts" count="3,6"/>
+			<item group="toolParts" count="2,4"/>
+			<item group="traderElectrical" prob="0.5" count="4,8"/>
+			<item group="traderSolarCells" count="1,3"/>
+			<item group="constructionSupplies" count="2,4"/>
+			<item group="decorativeBlocks"  count="4,8"/>
+			<item group="workstationTools" count="1,2"/>
+			<item name="repairKitArmour" count="1,2"/>
+			<item name="repairKitTool" count="1,2"/>
+			<item name="repairKitWeapon" count="1,2"/>
+			<item name="resourceRepairKit" count="1,2"/>
+			<item name="toolDewGatherer" count="1,2"/>
+			<item name="toolDewTarp" count="1,2"/>
+			<item name="toolDewFilter" count="1,2"/>
+			<item name="toolCookingPot"/>
+			<item name="toolCookingGrill"/>
+		</trader_items>
+	</trader_info>
+	
+<!-- *** TRADER BOB ID:6 SPECIALTY: TOOLS AND VEHICLES -->
+	<trader_info id="6" reset_interval="1">
+		<!-- *** SPECIALTY -->
+		<trader_items count="all">
+			<item group="groupVehicles" count="4,6"/>
+			<item group="groupMeleeMods" count="2,4"/>
+			<item group="tools" count="8,10"/>
+			<item group="rareTools" unique_only="true" count="2,3"/>
+			<item group="traderElectrical" count="6,12"/>
+			<item group="toolParts" count="2,4"/>
+		</trader_items>
+		
+		<!-- *** GENERAL -->
+		<trader_items count="all">
+			<item group="traderAlways"/>
+			<item group="traderGeneral" count="3,6"/>
+			<item group="groupModsAll" count="4,6"/>
+			<item group="generalResources" count="5,8"/>
+			<item group="skillMagazines" count="3,5"/>
+			<item group="books" unique_only="true" count="3,4"/>
+			<item group="groupDyeMods" count="5"/>
+			<item group="tools" prob="0.1" count="1,2"/>
+			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
+			<item group="groupRangedAll" prob="0.1" count="1,2"/>
+			<item group="weaponsGunParts" count="3,6"/>
+			<item group="toolParts" count="2,4"/>
+			<item group="traderElectrical" prob="0.5" count="4,8"/>
+			<item group="traderSolarCells" count="1,3"/>
+			<item group="constructionSupplies" count="2,4"/>
+			<item group="decorativeBlocks"  count="4,8"/>
+			<item group="workstationTools" count="1,2"/>
+			<item name="repairKitArmour" count="1,2"/>
+			<item name="repairKitTool" count="1,2"/>
+			<item name="repairKitWeapon" count="1,2"/>
+			<item name="resourceRepairKit" count="1,2"/>
+			<item name="toolDewGatherer" count="1,2"/>
+			<item name="toolDewTarp" count="1,2"/>
+			<item name="toolDewFilter" count="1,2"/>
+			<item name="toolCookingPot"/>
+			<item name="toolCookingGrill"/>
+		</trader_items>
+	</trader_info>
+	
+<!-- *** TRADER JEN ID:2 SPECIALTY: MEDICAL AND BOOKS -->
+	<trader_info id="2" reset_interval="1">
+		<!-- *** SPECIALTY -->
+		<trader_items count="all">
+			<item name="resourceCropAloeLeaf" count="3,7"/>
+			<item name="medicalAloeCream" count="3,7"/>
+			<item group="medicine" count="6,8"/>
+			<item group="rareMedicine" count="2,5"/>
+			<item group="ultraRareMedicine" prob="0.7" count="2,3"/>
+			<item group="skillMagazines" count="5,9"/>
+			<item group="commonBooks" count="2,4"/>
+			<item group="rareBooks" count="1,3"/>
+			<item group="perkBooks" count="1,3"/>
 			<item name="wotwDrugAntiRadMinor" count="1,2"/>
 			<item name="wotwDrugAntiRadMajor" count="1,2"/>
-</insertAfter>
+			<item name="wotwChickenYoung" count="1"/>
+			<item name="wotwChickenAdult" count="1" prob="0.25"/>
+		</trader_items>
+		
+		<!-- *** GENERAL -->
+		<trader_items count="all">
+			<item group="traderAlways"/>
+			<item group="traderGeneral" count="3,6"/>
+			<item group="groupModsAll" count="4,6"/>
+			<item group="generalResources" count="5,8"/>
+			<item group="skillMagazines" count="3,5"/>
+			<item group="books" unique_only="true" count="3,4"/>
+			<item group="groupDyeMods" count="5"/>
+			<item group="tools" prob="0.1" count="1,2"/>
+			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
+			<item group="groupRangedAll" prob="0.1" count="1,2"/>
+			<item group="weaponsGunParts" count="3,6"/>
+			<item group="toolParts" count="2,4"/>
+			<item group="traderElectrical" prob="0.5" count="4,8"/>
+			<item group="traderSolarCells" count="1,3"/>
+			<item group="constructionSupplies" count="2,4"/>
+			<item group="decorativeBlocks"  count="4,8"/>
+			<item group="workstationTools" count="1,2"/>
+			<item name="repairKitArmour" count="1,2"/>
+			<item name="repairKitTool" count="1,2"/>
+			<item name="repairKitWeapon" count="1,2"/>
+			<item name="resourceRepairKit" count="1,2"/>
+			<item name="toolDewGatherer" count="1,2"/>
+			<item name="toolDewTarp" count="1,2"/>
+			<item name="toolDewFilter" count="1,2"/>
+			<item name="toolCookingPot"/>
+			<item name="toolCookingGrill"/>
+		</trader_items>
+	</trader_info>
+	
+<!-- *** TRADER HUGH ID:7 SPECIALTY: GUNS & AMMO -->
+	<trader_info id="7" reset_interval="1">
+		
+		<!-- *** SPECIALTY -->
+		<trader_items count="all">
+			<item group="groupAllAmmo" count="2,4"/>
+			<item group="ammoSupplies" count="2,3"/>
+			<item group="groupRangedAll" count="4,6"/>
+			<item group="groupMeleeAll" count="4,6"/>
+			<item group="weaponsGunParts" count="3,6"/>
+			<item group="groupRangedMods" count="1,2"/>
+		</trader_items>
+		
+		<!-- *** GENERAL -->
+		<trader_items count="all">
+			<item group="traderAlways"/>
+			<item group="traderGeneral" count="3,6"/>
+			<item group="groupModsAll" count="4,6"/>
+			<item group="generalResources" count="5,8"/>
+			<item group="skillMagazines" count="3,5"/>
+			<item group="books" unique_only="true" count="3,4"/>
+			<item group="groupDyeMods" count="5"/>
+			<item group="tools" prob="0.1" count="1,2"/>
+			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
+			<item group="groupRangedAll" prob="0.1" count="1,2"/>
+			<item group="weaponsGunParts" count="3,6"/>
+			<item group="toolParts" count="2,4"/>
+			<item group="traderElectrical" prob="0.5" count="4,8"/>
+			<item group="traderSolarCells" count="1,3"/>
+			<item group="constructionSupplies" count="2,4"/>
+			<item group="decorativeBlocks"  count="4,8"/>
+			<item group="workstationTools" count="1,2"/>
+			<item name="repairKitArmour" count="1,2"/>
+			<item name="repairKitTool" count="1,2"/>
+			<item name="repairKitWeapon" count="1,2"/>
+			<item name="resourceRepairKit" count="1,2"/>
+			<item name="toolDewGatherer" count="1,2"/>
+			<item name="toolDewTarp" count="1,2"/>
+			<item name="toolDewFilter" count="1,2"/>
+			<item name="toolCookingPot"/>
+			<item name="toolCookingGrill"/>
+		</trader_items>
+	</trader_info>
 
-<insertAfter xpath="/traders/trader_info[@id='2']/trader_items/item[@group='decorativeBlocks']">
-			<item name="repairKitArmour" count="2,3"/>
-			<item name="repairKitTool" count="2,3"/>
-			<item name="repairKitWeapon" count="2,3"/>
-			<item name="resourceRepairKit" count="2,3"/>
-			<item name="adcAdvancedFilter" count="1"/>
-			<item name="adcLargeCatcher" count="1"/>
-			<item name="adcBigBarrel" count="1"/>
-			<item name="wotwWorkToolTunedEngine" count="1"/>
-			<item name="wotwWorkToolBiggerDrums" count="1"/>
-			<item name="wotwWorkToolDualMotor" count="1"/>
-</insertAfter>
-
-<!-- Trader Hugh: Guns & Ammo -->
-<removeattribute xpath="/traders/trader_info[@id='7']/@open_time" />
-<removeattribute xpath="/traders/trader_info[@id='7']/@close_time" />
-<set xpath="traders/trader_info[@id='7']/@reset_interval">1</set>
-
-<set xpath="/traders/trader_info[@id='7']/trader_items/item[@name='toolDewFilter']/@count">2,3</set>
-
-<insertAfter xpath="/traders/trader_info[@id='7']/trader_items/item[@group='decorativeBlocks']">
-			<item name="repairKitArmour" count="2,3"/>
-			<item name="repairKitTool" count="2,3"/>
-			<item name="repairKitWeapon" count="2,3"/>
-			<item name="resourceRepairKit" count="2,3"/>
-			<item name="adcAdvancedFilter" count="1"/>
-			<item name="adcLargeCatcher" count="1"/>
-			<item name="adcBigBarrel" count="1"/>
-			<item name="wotwWorkToolTunedEngine" count="1"/>
-			<item name="wotwWorkToolBiggerDrums" count="1"/>
-			<item name="wotwWorkToolDualMotor" count="1"/>
-</insertAfter>
-
-<!-- Trader Rekt: Food & Farming -->
-<removeattribute xpath="/traders/trader_info[@id='8']/@open_time" />
-<removeattribute xpath="/traders/trader_info[@id='8']/@close_time" />
-<set xpath="traders/trader_info[@id='8']/@reset_interval">1</set>
-
-<set xpath="/traders/trader_info[@id='8']/trader_items/item[@name='toolDewFilter']/@count">3,4</set>
-
-<insertAfter xpath="/traders/trader_info[@id='8']/trader_items/item[@group='decorativeBlocks']">
-			<item name="repairKitArmour" count="2,3"/>
-			<item name="repairKitTool" count="2,3"/>
-			<item name="repairKitWeapon" count="2,3"/>
-			<item name="resourceRepairKit" count="2,3"/>
-			<item name="adcAdvancedFilter" count="1"/>
-			<item name="adcLargeCatcher" count="1"/>
-			<item name="adcBigBarrel" count="1"/>
-			<item name="wotwWorkToolTunedEngine" count="1"/>
-			<item name="wotwWorkToolBiggerDrums" count="1"/>
-			<item name="wotwWorkToolDualMotor" count="1"/>
-</insertAfter>
-
-
+<!-- *** TRADER REKT ID:8 SPECIALTY: FOOD & FARMING -->
+	<trader_info id="8" reset_interval="1">
+		<!-- *** SPECIALTY -->
+		<trader_items count="all">
+			<item group="seeds" count="4,6" />
+			<item group="cannedfood" count="3,6"/>
+			<item group="foodSupplies" count="7,10"/>
+			<item group="groupFoodAll" count="4,6"/>
+			<item name="wotwChickenYoung" count="1"/>
+			<item name="wotwChickenAdult" count="1" prob="0.25"/>
+		</trader_items>
+		
+		<!-- *** GENERAL -->
+		<trader_items count="all">
+			<item group="traderAlways"/>
+			<item group="traderGeneral" count="3,6"/>
+			<item group="groupModsAll" count="4,6"/>
+			<item group="generalResources" count="5,8"/>
+			<item group="skillMagazines" count="3,5"/>
+			<item group="books" unique_only="true" count="3,4"/>
+			<item group="groupDyeMods" count="5"/>
+			<item group="tools" prob="0.1" count="1,2"/>
+			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
+			<item group="groupRangedAll" prob="0.1" count="1,2"/>
+			<item group="weaponsGunParts" count="3,6"/>
+			<item group="toolParts" count="2,4"/>
+			<item group="traderElectrical" prob="0.5" count="4,8"/>
+			<item group="traderSolarCells" count="1,3"/>
+			<item group="constructionSupplies" count="2,4"/>
+			<item group="decorativeBlocks"  count="4,8"/>
+			<item group="workstationTools" count="1,2"/>
+			<item name="repairKitArmour" count="1,2"/>
+			<item name="repairKitTool" count="1,2"/>
+			<item name="repairKitWeapon" count="1,2"/>
+			<item name="resourceRepairKit" count="1,2"/>
+			<item name="toolDewGatherer" count="1,2"/>
+			<item name="toolDewTarp" count="1,2"/>
+			<item name="toolDewFilter" count="1,2"/>
+			<item name="toolCookingPot"/>
+			<item name="toolCookingGrill"/>
+		</trader_items>
+	</trader_info>
+</append>
 
 <insertAfter xpath="/traders/trader_info[@id='9']">
 	<!-- Class Vending Machines -->
 	
-	<!-- Class Vending Machine (Survivalist) Player -->
-	<trader_info id="32" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="20" max_inventory="25" min_items_swapped="15" max_items_swapped="20">
-		<trader_items count="20">
-			<item name="blueprintPaper" count="5,15" prob="0.5"/>
-			<item group="survivalistFarming" count="2,4" prob="0.5"/>
-			<item group="survivalistTraps" count="1,2" prob="0.5"/>
-			<item group="survivalistRawHealth" count="1" prob="0.6"/>
-			<item group="survivalistCookedHealth" count="1,2" prob="0.4"/>
-			<item group="survivalistRawFood" count="1,2" prob="0.8"/>
-			<item group="survivalistCookedFood" count="1" prob="0.5"/>
-			<item group="survivalistCookedDrink" count="1" prob="0.5"/>
-			<item group="survivalistQuests" count="1,2" prob="0.2"/>
-			<item group="survivalistMagazines" count="2,4" prob="0.75"/>
+	<!-- Class Vending Machine (Barter) Player -->
+	<trader_info id="48" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="barterTaggedQuests" count="2,3"/>
+			<item group="barterGoToQuests" count="2,3"/>
 		</trader_items>
 	</trader_info>
 	
-	<!-- Class Vending Machine (Survivalist) POI -->
-	<trader_info id="33" full_reset="false" reset_interval="4" override_buy_markup="1.0" allow_sell="false" min_inventory="15" max_inventory="20" min_items_swapped="10" max_items_swapped="15">
-		<trader_items count="15">
-			<item name="blueprintPaper" count="5,15" prob="0.5"/>
-			<item group="survivalistFarming" count="2,4" prob="0.5"/>
-			<item group="survivalistTraps" count="1,2" prob="0.5"/>
-			<item group="survivalistRawHealth" count="1" prob="0.6"/>
-			<item group="survivalistCookedHealth" count="1,2" prob="0.4"/>
-			<item group="survivalistRawFood" count="1,2" prob="0.8"/>
-			<item group="survivalistCookedFood" count="1" prob="0.5"/>
-			<item group="survivalistCookedDrink" count="1" prob="0.5"/>
-			<item group="survivalistMagazines" count="2,4" prob="0.75"/>
+	<!-- Class Vending Machine (Barter) POI -->
+	<trader_info id="49" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="barterTaggedQuests" count="2,3"/>
+			<item group="barterGoToQuests" count="2,3"/>
 		</trader_items>
 	</trader_info>
 	
-	<!-- Class Vending Machine (Soldier) Player -->
-	<trader_info id="36" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="20" max_inventory="25" min_items_swapped="15" max_items_swapped="20">
-		<trader_items count="20">
-			<item name="repairKitWeapon" count="10,25" prob="0.5"/>
-			<item group="weaponsGunParts" count="1,2" prob="0.5"/>
-			<item group="soldierGuns" count="1,2" prob="0.3"/>
-			<item group="soldierMeleeWpns" count="1,2" prob="0.5"/>
-			<item group="soldierRawAmmo" count="1" prob="0.6"/>
-			<item group="soldierAmmo" count="1,2" prob="0.4"/>
-			<item group="soldierQuests" count="1,2" prob="0.2"/>
-			<item group="soldierMagazines" count="2,4" prob="0.75"/>
+	<!-- Class Vending Machine (Builder) Player -->
+	<trader_info id="50" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="builderConstruction" count="2,3"/>
+			<item group="builderMagazines" count="1,2"/>
+			<item group="builderResources" count="2,4"/>
+			<item group="builderTools" count="1,2"/>
 		</trader_items>
 	</trader_info>
 	
-	<!-- Class Vending Machine (Soldier) POI -->
-	<trader_info id="37" full_reset="false" reset_interval="4" override_buy_markup="1.0" allow_sell="false" min_inventory="15" max_inventory="20" min_items_swapped="10" max_items_swapped="15">
-		<trader_items count="15">
-			<item name="repairKitWeapon" count="10,25" prob="0.5"/>
-			<item group="weaponsGunParts" count="1,2" prob="0.5"/>
-			<item group="soldierGuns" count="1,2" prob="0.3"/>
-			<item group="soldierMeleeWpns" count="1,2" prob="0.5"/>
-			<item group="soldierRawAmmo" count="1" prob="0.6"/>
-			<item group="soldierAmmo" count="1,2" prob="0.4"/>
-			<item group="soldierMagazines" count="2,4" prob="0.75"/>
+	<!-- Class Vending Machine (Builder) POI -->
+	<trader_info id="51" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="builderConstruction" count="2,3"/>
+			<item group="builderMagazines" count="1,2"/>
+			<item group="builderResources" count="2,4"/>
+			<item group="builderTools" count="1,2"/>
 		</trader_items>
 	</trader_info>
 	
 	<!-- Class Vending Machine (Covert) Player -->
-	<trader_info id="46" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="20" max_inventory="25" min_items_swapped="15" max_items_swapped="20">
-		<trader_items count="20">
-			<item name="repairKitArmour" count="4,8" prob="0.5"/>
-			<item group="covertResources" count="1,2" prob="0.5"/>
-			<item group="groupArmorLight" count="1" prob="0.45"/>
-			<item group="groupArmorMedium" count="1" prob="0.45"/>
-			<item group="groupArmorHeavy" count="1,2" prob="0.5"/>
-			<item group="covertQuests" count="1,2" prob="0.2"/>
-			<item group="covertMagazines" count="2,4" prob="0.75"/>
+	<trader_info id="46" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="covertTools" count="2,4"/>
+			<item group="covertMagazines" count="2,4"/>
+			<item group="covertQuests" count="0,1"/>
 		</trader_items>
 	</trader_info>
 	
 	<!-- Class Vending Machine (Covert) POI -->
-	<trader_info id="47" full_reset="false" reset_interval="4" override_buy_markup="1.0" allow_sell="false" min_inventory="15" max_inventory="20" min_items_swapped="10" max_items_swapped="15">
-		<trader_items count="15">
-			<item name="repairKitArmour" count="4,8" prob="0.5"/>
-			<item group="covertResources" count="1,2" prob="0.5"/>
-			<item group="groupArmorLight" count="1" prob="0.45"/>
-			<item group="groupArmorMedium" count="1" prob="0.45"/>
-			<item group="groupArmorHeavy" count="1,2" prob="0.5"/>
-			<item group="covertMagazines" count="2,4" prob="0.75"/>
+	<trader_info id="47" full_reset="false" reset_interval="4" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="covertTools" count="2,4"/>
+			<item group="covertMagazines" count="2,4"/>
+			<item group="covertQuests" count="0,1"/>
 		</trader_items>
 	</trader_info>
 	
+	<!-- Class Vending Machine (Fighter) Player -->
+	<trader_info id="52" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="fighterTools" count="2,3"/>
+			<item group="fighterMagazines" count="2,3"/>
+			<item group="fighterResources" count="2,4"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Fighter) POI -->
+	<trader_info id="53" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="fighterTools" count="2,3"/>
+			<item group="fighterMagazines" count="2,3"/>
+			<item group="fighterResources" count="2,4"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Hunter) Player -->
+	<trader_info id="54" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="hunterTools" count="2,3"/>
+			<item group="hunterMagazines" count="2,3"/>
+			<item group="hunterResources" count="3,5"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Hunter) POI -->
+	<trader_info id="55" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="hunterTools" count="2,3"/>
+			<item group="hunterMagazines" count="2,3"/>
+			<item group="hunterResources" count="3,5"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Looter) Player -->
+	<trader_info id="56" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="looterResources" count="5,7"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Looter) POI -->
+	<trader_info id="57" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="looterResources" count="5,7"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Medic) Player -->
+	<trader_info id="58" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="medicResources" count="5,7"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Medic) POI -->
+	<trader_info id="59" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="medicResources" count="5,7"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Ranger) Player -->
+	<trader_info id="60" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="rangerTools" count="2,3"/>
+			<item group="rangerMagazines" count="2,3"/>
+			<item group="rangerResources" count="3,5"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Ranger) POI -->
+	<trader_info id="61" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="rangerTools" count="2,3"/>
+			<item group="rangerMagazines" count="2,3"/>
+			<item group="rangerResources" count="3,5"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Soldier) Player -->
+	<trader_info id="36" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="soldierTools" count="2,4"/>
+			<item group="soldierMagazines" count="1,3"/>
+			<item group="soldierResources" count="3,5"/>
+			<item group="soldierQuests" count="0,1"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Soldier) POI -->
+	<trader_info id="37" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="soldierTools" count="2,4"/>
+			<item group="soldierMagazines" count="1,3"/>
+			<item group="soldierResources" count="3,5"/>
+			<item group="soldierQuests" count="0,1"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Survivalist) Player -->
+	<trader_info id="32" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="survivalistRawFood" count="2,4"/>
+			<item group="survivalistCookedFood" count="2,3"/>
+			<item group="survivalistCookedDrink" count="2,3"/>
+			<item group="survivalistFarming" count="2,4"/>
+			<item group="survivalistMagazines" count="1,2"/>
+			<item group="survivalistQuests" count="0,1"/>
+		</trader_items>
+	</trader_info>
+	
+	<!-- Class Vending Machine (Survivalist) POI -->
+	<trader_info id="33" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="survivalistRawFood" count="2,4"/>
+			<item group="survivalistCookedFood" count="2,3"/>
+			<item group="survivalistCookedDrink" count="2,3"/>
+			<item group="survivalistFarming" count="2,4"/>
+			<item group="survivalistMagazines" count="1,2"/>
+			<item group="survivalistQuests" count="0,1"/>
+		</trader_items>
+	</trader_info>
+
 	<!-- Class Vending Machine (Technician) Player -->
-	<trader_info id="44" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="20" max_inventory="25" min_items_swapped="15" max_items_swapped="20">
-		<trader_items count="20">
-			<item name="resourceRepairKit" count="5,10" prob="0.5"/>
-			<item group="technicianElectricalBanks" count="1,2" prob="0.4"/>
-			<item group="technicianElectricalParts" count="1,2" prob="0.5"/>
-			<item group="technicianElectricalLights" count="1,2" prob="0.5"/>
-			<item group="technicianElectricalTraps" count="1,2" prob="0.4"/>
-			<item group="technicianResources" count="1,2" prob="0.7"/>
-			<item group="technicianVehiclePartResources" count="1,2" prob="0.5"/>
-			<item group="groupVehicles" count="1,2" prob="0.5"/>
-			<item group="technicianQuests" count="1,2" prob="0.2"/>
-			<item group="technicianMagazines" count="2,4" prob="0.75"/>
+	<trader_info id="44" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="technicianResources" count="2,3"/>
+			<item group="technicianVehiclePartResources" count="2,3"/>
+			<item group="groupVehicles" count="1,2"/>
+			<item group="technicianElectricalTraps" count="2,3"/>
+			<item group="technicianElectrical" count="2,3"/>
+			<item group="technicianMagazines" count="1,2"/>
+			<item group="technicianQuests" count="0,1"/>
 		</trader_items>
 	</trader_info>
 	
 	<!-- Class Vending Machine (Technician) POI -->
-	<trader_info id="45" full_reset="false" reset_interval="4" override_buy_markup="1.0" allow_sell="false" min_inventory="15" max_inventory="20" min_items_swapped="10" max_items_swapped="15">
-		<trader_items count="15">
-			<item name="resourceRepairKit" count="5,10" prob="0.5"/>
-			<item group="technicianElectricalBanks" count="1,2" prob="0.4"/>
-			<item group="technicianElectricalParts" count="1,2" prob="0.5"/>
-			<item group="technicianElectricalLights" count="1,2" prob="0.5"/>
-			<item group="technicianElectricalTraps" count="1,2" prob="0.4"/>
-			<item group="technicianResources" count="1,2" prob="0.7"/>
-			<item group="technicianVehiclePartResources" count="1,2" prob="0.5"/>
-			<item group="groupVehicles" count="1,2" prob="0.5"/>
-			<item group="technicianMagazines" count="2,4" prob="0.75"/>
+	<trader_info id="45" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="technicianResources" count="2,3"/>
+			<item group="technicianVehiclePartResources" count="2,3"/>
+			<item group="groupVehicles" count="1,2"/>
+			<item group="technicianElectricalTraps" count="2,3"/>
+			<item group="technicianElectrical" count="2,3"/>
+			<item group="technicianMagazines" count="1,2"/>
+			<item group="technicianQuests" count="0,1"/>
 		</trader_items>
 	</trader_info>
 	
 	<!-- Class Vending Machine (Tradesman) Player -->
-	<trader_info id="38" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="20" max_inventory="25" min_items_swapped="15" max_items_swapped="20">
-		<trader_items count="20">
-			<item name="repairKitTool" count="5,10" prob="0.5"/>
-			<item group="tradesmanToolsCommon" count="1,2" prob="0.5"/>
-			<item group="tradesmanToolsRare" count="1" prob="0.3"/>
-			<item group="constructionSupplies" count="1,2" prob="0.45"/>
-			<item group="advancedConstructionSupplies" count="1,2" prob="0.4"/>
-			<item group="tradesmanUpgradeMats" count="1,2" prob="0.4"/>
-			<item group="tradesmanRawResources" count="1,2" prob="0.5"/>
-			<item group="tradesmanResources" count="1,2" prob="0.5"/>
-			<item group="tradesmanQuests" count="1,2" prob="0.2"/>
-			<item group="tradesmanMagazines" count="2,4" prob="0.75"/>
+	<trader_info id="38" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="2" max_inventory="4" min_items_swapped="2" max_items_swapped="4">
+		<trader_items count="all">
+			<item group="tradesmanTools" count="2,3"/>
+			<item group="tradesmanRawResources" count="3,5"/>
+			<item group="tradesmanResources" count="3,4"/>
+			<item group="tradesmanMagazines" count="1,3"/>
+			<item group="tradesmanQuests" count="0,1"/>
 		</trader_items>
 	</trader_info>
 	
-	
 	<!-- Class Vending Machine (Tradesman) POI -->
-	<trader_info id="39" full_reset="false" reset_interval="4" override_buy_markup="1.0" allow_sell="false" min_inventory="15" max_inventory="20" min_items_swapped="10" max_items_swapped="15">
-		<trader_items count="15">
-			<item name="repairKitTool" count="5,10" prob="0.5"/>
-			<item group="tradesmanToolsCommon" count="1,2" prob="0.5"/>
-			<item group="tradesmanToolsRare" count="1" prob="0.3"/>
-			<item group="constructionSupplies" count="1,2" prob="0.45"/>
-			<item group="advancedConstructionSupplies" count="1,2" prob="0.4"/>
-			<item group="tradesmanUpgradeMats" count="1,2" prob="0.4"/>
-			<item group="tradesmanRawResources" count="1,2" prob="0.5"/>
-			<item group="tradesmanResources" count="1,2" prob="0.5"/>
-			<item group="tradesmanMagazines" count="2,4" prob="0.75"/>
+	<trader_info id="39" full_reset="false" reset_interval="2" override_buy_markup="1.0" allow_sell="false" min_inventory="1" max_inventory="2" min_items_swapped="1" max_items_swapped="2">
+		<trader_items count="all">
+			<item group="tradesmanTools" count="2,3"/>
+			<item group="tradesmanRawResources" count="3,5"/>
+			<item group="tradesmanResources" count="3,4"/>
+			<item group="tradesmanMagazines" count="1,3"/>
+			<item group="tradesmanQuests" count="0,1"/>
 		</trader_items>
 	</trader_info>
 	
@@ -1775,19 +2319,21 @@
 	<trader_info id="71" full_reset="true" reset_interval="1" allow_sell="false">
 		<trader_items count="all">
 			<item group="books" count="1,5" prob="1.2"/>
-			<item group="skillMagazines" count="3,6" prob="1.25"/>
+			<item group="skillMagazines" count="2,4" prob="1.25"/>
 			<item group="groupRewardCards" count="1,2" prob="0.3"/>
-			<item group="groupActionRewardCards" count="1,4" prob="0.25"/>
-			<item group="classFragments" count="0,1" prob="0.35"/>
+			<item group="groupActionRewardCards" count="1,4" prob="0.75"/>
+			<item group="classFragments" count="0,2" prob="0.5"/>
 		</trader_items>
 	</trader_info>
 	
 	<!-- Player Owned - Vending Machine Sellable -->
 	<trader_info id="72" reset_interval="3" full_reset="false" override_buy_markup="0.9" override_sell_markup="0.9" min_items_swapped="5" max_items_swapped="10" allow_sell="true"/>
-	
-	<!-- <trader_info id="72" reset_interval="1" override_buy_markup="0.9" override_sell_markup="0.9" min_items_swapped="5" max_items_swapped="10" allow_sell="true" player_owned="true"/> -->
 </insertAfter>
 
-<remove xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']/item[@name='drinkJarGrandpasForgettingElixir']"/>
+<remove xpath="//trader_item_group[@name='schematicsVehiclesMods']/item[@name='modVehicleLawnTractorGrassCollectorSchematic']"/>
+<remove xpath="//trader_item_group[@name='schematicsVehiclesMods']/item[@name='modVehicleLawnTractorPlantCollectorSchematic']"/>
+<remove xpath="//trader_item_group[@name='schematicsVehiclesMods']/item[@name='modVehicleLawnTractorCropsCollectorSchematic']"/>
+<remove xpath="//trader_item_group[@name='schematicsVehiclesMods']/item[@name='modVehicleLawnTractorCropsProtectorSchematic']"/>
+<remove xpath="//trader_item_group[@name='schematicsVehiclesMods']/item[@name='modVehicleLawnTractorCropsReseederSchematic']"/>
 
 </config>

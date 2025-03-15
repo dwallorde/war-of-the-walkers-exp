@@ -1,5 +1,106 @@
 <configs>
 	<append xpath="/entity_classes">
+		<entity_class name="vehicleBicycleOldBV">
+			<property name="Class" value="EntityBicycle"/>
+			<property name="Tags" value="vehicle,takeable,bicycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/a21vechs.unity3d?bicycle_PrefabOld"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicleBicycle"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="0"/>
+			<property name="Explosion.RadiusBlocks" value="1"/>
+			<property name="Explosion.RadiusEntities" value="1"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_bicycle"/>
+			<property name="NavObject" value="bicycle" />
+			<property name="Buffs" value="buffBicycle"/>
+		</entity_class>
+		<entity_class name="vehicleMinibikeOldBV">
+			<property name="Class" value="EntityMinibike"/>
+			<property name="Tags" value="vehicle,usesGas,bikerSetBonus,takeable,minibike"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/a21vechs.unity3d?minibike_PrefabOld"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicleMinibike"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
+			<property name="Explosion.RadiusBlocks" value="3"/>
+			<property name="Explosion.RadiusEntities" value="3"/>
+			<property name="Explosion.BlockDamage" value="20"/>
+			<property name="Explosion.EntityDamage" value="20"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_minibike"/>
+			<property name="NavObject" value="minibike" />
+			<property name="Buffs" value="buffMinibike"/>
+		</entity_class>
+		<entity_class name="vehicleMotorcycleOldBV">
+			<property name="Tags" value="vehicle,usesGas,bikerSetBonus,moto"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/a21vechs.unity3d?motorcycle_PrefabOld"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicleMotorcycle"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
+			<property name="Explosion.RadiusBlocks" value="5"/>
+			<property name="Explosion.RadiusEntities" value="5"/>
+			<property name="Explosion.BlockDamage" value="100"/>
+			<property name="Explosion.EntityDamage" value="100"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_motorcycle"/>
+			<property name="NavObject" value="motorcycle"/>
+			<property name="Buffs" value="buffMotorcycle"/>
+		</entity_class>
+		<entity_class name="vehicleTruck4x4OldBV">
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Tags" value="vehicle,usesGas"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/a21vechs.unity3d?Old4x4"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicle4x4Truck"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
+			<property name="Explosion.RadiusBlocks" value="5"/>
+			<property name="Explosion.RadiusEntities" value="5"/>
+			<property name="Explosion.BlockDamage" value="100"/>
+			<property name="Explosion.EntityDamage" value="100"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_4x4"/>
+			<property name="NavObject" value="4x4"/>
+		</entity_class>
+		<entity_class name="vehicleGyrocopterOldBV">
+			<property name="Class" value="EntityVGyroCopter"/>
+			<property name="Tags" value="vehicle,usesGas"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/a21vechs.unity3d?gyrocopterOld"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicleGyrocopter"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
+			<property name="Explosion.RadiusBlocks" value="3"/>
+			<property name="Explosion.RadiusEntities" value="5"/>
+			<property name="Explosion.BlockDamage" value="100"/>
+			<property name="Explosion.EntityDamage" value="100"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_gyrocopter"/>
+			<property name="NavObject" value="gyrocopter" />
+		</entity_class>
 		<entity_class name="vehicleBoxTruckPlain">
 			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
@@ -10,7 +111,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleXL1"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -30,7 +131,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleXL1"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -50,7 +151,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleXL2"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -70,7 +171,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleXL2"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -90,7 +191,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleL1"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -110,7 +211,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -130,7 +231,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleMotorcycle"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -150,7 +251,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleBicycle"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -170,7 +271,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleL1"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="3"/>
 			<property name="Explosion.RadiusEntities" value="3"/>
 			<property name="Explosion.BlockDamage" value="30"/>
@@ -190,7 +291,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -210,7 +311,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleMinibike"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -230,7 +331,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -250,7 +351,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -270,7 +371,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -290,7 +391,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -310,7 +411,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -330,7 +431,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -350,7 +451,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -370,7 +471,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleMotorcycle"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -390,7 +491,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleXL1"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -410,7 +511,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -430,7 +531,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleGyrocopter"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="3"/>
 			<property name="Explosion.RadiusEntities" value="3"/>
 			<property name="Explosion.BlockDamage" value="30"/>
@@ -450,7 +551,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleXL3"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -470,7 +571,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -490,7 +591,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -510,7 +611,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -530,7 +631,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleMotorcycle"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -550,7 +651,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -570,7 +671,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -590,7 +691,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -610,7 +711,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="BDvehicleXL3"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="3"/>
 			<property name="Explosion.RadiusEntities" value="3"/>
 			<property name="Explosion.BlockDamage" value="30"/>
@@ -630,7 +731,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -650,7 +751,7 @@
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicle4x4Truck"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="32"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>

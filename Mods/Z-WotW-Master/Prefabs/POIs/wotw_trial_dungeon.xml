@@ -43,18 +43,18 @@
       <property name="1" value="6, 15, 15" />
     </property>
     <property class="POILight">
-      <property name="0" value="20, 32, 12" />
-      <property name="1" value="18, 7, 13" />
-      <property name="2" value="18, 15, 13" />
-      <property name="3" value="18, 23, 13" />
-      <property name="4" value="19, 3, 14" />
-      <property name="5" value="19, 7, 14" />
-      <property name="6" value="19, 11, 14" />
-      <property name="7" value="19, 15, 14" />
-      <property name="8" value="19, 19, 14" />
-      <property name="9" value="19, 23, 14" />
-      <property name="10" value="19, 27, 14" />
-      <property name="11" value="21, 32, 15" />
+      <property name="0" value="18, 7, 13" />
+      <property name="1" value="18, 15, 13" />
+      <property name="2" value="18, 23, 13" />
+      <property name="3" value="19, 3, 14" />
+      <property name="4" value="19, 7, 14" />
+      <property name="5" value="19, 11, 14" />
+      <property name="6" value="19, 15, 14" />
+      <property name="7" value="19, 19, 14" />
+      <property name="8" value="19, 23, 14" />
+      <property name="9" value="19, 27, 14" />
+      <property name="10" value="21, 32, 15" />
+      <property name="11" value="20, 32, 12" />
     </property>
     <property class="Rally">
       <property name="0" value="2, 29, 12" />
@@ -69,15 +69,15 @@
     </property>
   </property>
   <property class="Stats">
-    <property name="TotalVertices" value="633202" />
-    <property name="TotalTriangles" value="283172" />
+    <property name="TotalVertices" value="633349" />
+    <property name="TotalTriangles" value="283212" />
     <property class="BlockEntities">
-      <property name="Vertices" value="584892" />
+      <property name="Vertices" value="584977" />
       <property name="Triangles" value="248440" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="42242" />
-      <property name="Triangles" value="24044" />
+      <property name="Vertices" value="42298" />
+      <property name="Triangles" value="24072" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="0" />
@@ -96,8 +96,8 @@
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes5">
-      <property name="Vertices" value="6068" />
-      <property name="Triangles" value="10688" />
+      <property name="Vertices" value="6074" />
+      <property name="Triangles" value="10700" />
     </property>
   </property>
 </prefab>

@@ -23,7 +23,7 @@
   <property name="SleeperIsQuestExclude" value="False,False,False" />
   <property name="EditorGroups" value="house new" />
   <property name="PrefabSize" value="60, 25, 60" />
-  <property name="Tags" value="residential" />
+  <property name="Tags" value="industrial, residential, wotw60" />
   <property name="POIMarkerSize" value="15, 13, 5" />
   <property name="POIMarkerStart" value="39, 4, 60" />
   <property name="POIMarkerGroup" value="Drive-Main" />

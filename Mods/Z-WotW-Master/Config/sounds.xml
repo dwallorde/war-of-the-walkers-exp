@@ -749,6 +749,12 @@
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/SlotMachinePlay.unity3d?slotMachine"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+<SoundDataNode name="alertSound"> <AudioSource name="Sounds/AudioSource_UI"/>
+	<Noise ID="2" noise="11" time="5" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?alertSound"/>
+	<LocalCrouchVolumeScale name="0.5"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="10"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+
 </append>
 
 <set xpath="/Sounds/SoundDataNode[@name='vwheel_bounce']/MaxRepeatRate/@value">10</set>

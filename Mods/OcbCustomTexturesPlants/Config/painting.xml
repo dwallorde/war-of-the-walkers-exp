@@ -1,0 +1,129 @@
+<configs>
+	<append xpath="/paints">
+		<grass id="ocb_flower_01">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower01.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower01.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower01.aost.png"/>
+		</grass>
+		<grass id="ocb_flower_02">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower02.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower02.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower02.aost.png"/>
+		</grass>
+		<grass id="ocb_flower_03">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower03.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower03.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower03.aost.png"/>
+		</grass>
+		<grass id="ocb_flower_04">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower04.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower04.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower04.aost.png"/>
+		</grass>
+		<grass id="ocb_flower_05">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower05.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower05.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower05.aost.png"/>
+		</grass>
+		<grass id="ocb_flower_06">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower06.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower06.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower06.aost.png"/>
+		</grass>
+		<grass id="ocb_flower_07">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower07.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower07.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower07.aost.png"/>
+		</grass>
+		<grass id="ocb_flower_08">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower08.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower08.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower08.aost.png"/>
+		</grass>
+		<grass id="ocb_flower_09">
+			<property name="Diffuse" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower09.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower09.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Flowers.unity3d?assets/flowers/flower09.aost.png"/>
+		</grass>
+
+		<grass id="ocb_grass_tomato_grown">
+			<property name="Diffuse" value="#@modfolder:Resources/Plants.unity3d?assets/exports/tomato.grown.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Plants.unity3d?assets/exports/tomato.grown.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Plants.unity3d?assets/exports/tomato.grown.aost.png"/>
+		</grass>
+		<grass id="ocb_grass_tomato_small">
+			<property name="Diffuse" value="#@modfolder:Resources/Plants.unity3d?assets/exports/tomato.small.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Plants.unity3d?assets/exports/tomato.small.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Plants.unity3d?assets/exports/tomato.small.aost.png"/>
+		</grass>
+
+		<grass id="ocb_grass_wheat_grown">
+			<property name="Diffuse" value="#@modfolder:Resources/Plants.unity3d?assets/plants/wheat.grown.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Plants.unity3d?assets/plants/wheat.grown.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Plants.unity3d?assets/plants/wheat.grown.aost.png"/>
+		</grass>
+		<grass id="ocb_grass_wheat_small">
+			<property name="Diffuse" value="#@modfolder:Resources/Plants.unity3d?assets/plants/wheat.small.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Plants.unity3d?assets/plants/wheat.small.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Plants.unity3d?assets/plants/wheat.small.aost.png"/>
+		</grass>
+
+		<grass id="ocb_grass_onion_grown">
+			<property name="Diffuse" value="#@modfolder:Resources/Plants.unity3d?assets/plants/onion.grown.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Plants.unity3d?assets/plants/onion.grown.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Plants.unity3d?assets/plants/onion.grown.aost.png"/>
+		</grass>
+		<grass id="ocb_grass_onion_small">
+			<property name="Diffuse" value="#@modfolder:Resources/Plants.unity3d?assets/plants/onion.small.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Plants.unity3d?assets/plants/onion.small.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Plants.unity3d?assets/plants/onion.small.aost.png"/>
+		</grass>
+
+		<grass id="ocb_grass_cabbage_grown">
+			<property name="Diffuse" value="#@modfolder:Resources/Plants.unity3d?assets/plants/cabbage.grown.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Plants.unity3d?assets/plants/cabbage.grown.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Plants.unity3d?assets/plants/cabbage.grown.aost.png"/>
+		</grass>
+		<grass id="ocb_grass_cabbage_small">
+			<property name="Diffuse" value="#@modfolder:Resources/Plants.unity3d?assets/plants/cabbage.small.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Plants.unity3d?assets/plants/cabbage.small.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Plants.unity3d?assets/plants/cabbage.small.aost.png"/>
+		</grass>
+
+		<grass id="ocb_snow_bush_01">
+			<property name="Diffuse" value="#@modfolder:Resources/Others.unity3d?snow-bush-01.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Others.unity3d?snow-bush-01.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Others.unity3d?snow-bush-01.aost.png"/>
+		</grass>
+
+		<grass id="ocb_snow_bush_02">
+			<property name="Diffuse" value="#@modfolder:Resources/Others.unity3d?snow-bush-02.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Others.unity3d?snow-bush-02.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Others.unity3d?snow-bush-02.aost.png"/>
+		</grass>
+
+		<grass id="ocb_desert_grass_01">
+			<property name="Diffuse" value="#@modfolder:Resources/Others.unity3d?desert-grass-01.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Others.unity3d?desert-grass-01.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Others.unity3d?desert-grass-01.aost.png"/>
+		</grass>
+
+		<grass id="ocb_desert_grass_02">
+			<property name="Diffuse" value="#@modfolder:Resources/Others.unity3d?desert-grass-02.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Others.unity3d?desert-grass-02.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Others.unity3d?desert-grass-02.aost.png"/>
+		</grass>
+
+		<grass id="ocb_desert_bush_01">
+			<property name="Diffuse" value="#@modfolder:Resources/Others.unity3d?desert-bush-01.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Others.unity3d?desert-bush-01.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Others.unity3d?desert-bush-01.aost.png"/>
+		</grass>
+
+		<grass id="ocb_forrest_bush_01">
+			<property name="Diffuse" value="#@modfolder:Resources/Others.unity3d?forrest-bush-01.albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/Others.unity3d?forrest-bush-01.normal.png"/>
+			<property name="Specular" value="#@modfolder:Resources/Others.unity3d?forrest-bush-01.aost.png"/>
+		</grass>
+	</append>
+</configs>

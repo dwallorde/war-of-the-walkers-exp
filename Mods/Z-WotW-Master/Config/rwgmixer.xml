@@ -1,77 +1,181 @@
 <config>
 
 <append xpath="/rwgmixer">
-	<prefab_spawn_adjust partial_name="wotw_Settlement_ClassStore" biomeTags="wasteland" bias="20" min_count="2" max_count="4"/>
-	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderLand" biomeTags="snow" bias="20" min_count="2" max_count="4"/>
-	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderBob" biomeTags="desert" bias="20" min_count="2" max_count="4"/>
-	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderBob2" biomeTags="desert" bias="20" min_count="2" max_count="4"/>
-	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderHugh" biomeTags="snow" bias="20" min_count="2" max_count="4"/>
-	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJen" biomeTags="burntforest" bias="20" min_count="2" max_count="4"/>
-	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJen2" biomeTags="burntforest" bias="20" min_count="2" max_count="4"/>
-	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJoel" biomeTags="wasteland" bias="20" min_count="2" max_count="4"/>
-	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderRekt" biomeTags="forest" bias="20" min_count="2" max_count="4"/>
+	<streettile name="rwg_tile_industrial_cap_wotw1">
+		<property name="mintiles" value="2"/>
+		<property name="maxtiles" value="4"/>
+	</streettile>
+	
+	<streettile name="rwg_tile_industrial_corner_wotw2">
+		<property name="mintiles" value="2"/>
+		<property name="maxtiles" value="4"/>
+	</streettile>
+	
+	<streettile name="rwg_tile_industrial_straight_wotw1">
+		<property name="mintiles" value="2"/>
+		<property name="maxtiles" value="4"/>
+	</streettile>
+	
+	<streettile name="rwg_tile_industrial_intersection_wotw1">
+		<property name="mintiles" value="4"/>
+		<property name="maxtiles" value="6"/>
+	</streettile>
+
+	<prefab_spawn_adjust partial_name="wotw_Settlement_ClassStore" biomeTags="wasteland" bias="20" min_count="1" max_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderLand" biomeTags="snow" bias="20" min_count="1" max_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderBob" biomeTags="desert" bias="20" min_count="1" max_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderBob2" biomeTags="desert" bias="20" min_count="1" max_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderHugh" biomeTags="snow" bias="20" min_count="1" max_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJen" biomeTags="burntforest" bias="20" min_count="1" max_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJen2" biomeTags="burntforest" bias="20" min_count="1" max_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderJoel" biomeTags="wasteland" bias="20" min_count="1" max_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Settlement_TraderRekt" biomeTags="forest" bias="20" min_count="1" max_count="2"/>
+	
+	<prefab_spawn_adjust partial_name="wotw_Amusement_Park" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Boss_Maze" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_AutoShop1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_AutoShop2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_DistributionCenter" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_Hotel1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_MechShop1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_MovieTheatre1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_ShopScene1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_Tower1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Business_Tower2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_CityBuilding_PoliceStation1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_CityBuilding_Prison1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseA_Res1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseA_Res2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseA_Res3" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseA_Res4" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseA_Res5" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseA_Res6" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseB_HuntingLodge1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseB_LogCabin1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseB_Res1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseB_Res2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_HouseB_Res3" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Castle1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Castle2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_CastleFrontier" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Colosseum" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Factory1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Firehall1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_industrial_freighterv2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Maze1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Pentagon" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_industrial_sawmillfin" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Ship1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_industrial_shipyard" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Industrial_Village1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_large_bunker" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_relief_camp" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Remnant_Mall1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Restaurant_Bar" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Restaurant_Burgers1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Restaurant_Cafe1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Rural_CabinOfScreams" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Rural_Pitstop" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Skyscraper_01" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Skyscraper_02" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Skyscraper_03" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Book1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Book2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Book3" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_CanuckTire" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Carpro1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Clothing1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Convenience1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Cosco" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Dollar1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Drugmart1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Electronics1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Electronics2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_GasStation" min_count="2"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Grocery1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_GunShop1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Hardware1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_HardwareDepot1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_HardwareHome" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_HisHers1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Pharmacy1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_Pharmacy2" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_StripMall1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Store_UnrealStuper1" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_trial_battleship" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_trial_bridge" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Trial_BusinessCentre" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Trial_Chickenattack" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_trial_dungeon" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Trial_ImpoundLot" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Trial_Maze" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Trial_T4Dungeon" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Trial_T5Dungeon" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_trial_tower" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Wilderness_Bunker" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Wilderness_CrawlerCamp" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Wilderness_DeeprouteFarm" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Wilderness_GrandLibrary" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Wilderness_TankConvoy" min_count="1"/>
+	<prefab_spawn_adjust partial_name="wotw_Wilderness_VikingVillage" min_count="1"/>
 </append>
 
-<!-- <set xpath="/rwgmixer/world[@name='medium']/property[@name='world_size']/@value">8000,10000</set> -->
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='oldwest']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='forest_countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='bforest_countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='bforest_town']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='town']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='city']/property[@name='count']/@value">1, 2, 3</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='city']/property[@name='tiles']/@value">10, 15</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='wasteland_city']/property[@name='count']/@value">1, 2, 3</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='wasteland_city']/property[@name='tiles']/@value">7, 14</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='citybig']/property[@name='count']/@value">5, 5, 5</set>
+<set xpath="/rwgmixer/world[@name='tiny']/property[@class='citybig']/property[@name='tiles']/@value">20, 50</set>
 
-<!-- <set xpath="/rwgmixer/world[@name='medium']/property[@class='rivers']/property[@name='scale']/@value">2,3.5</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='oldwest']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='forest_countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='bforest_countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='bforest_town']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='town']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='city']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='city']/property[@name='tiles']/@value">10, 15</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='wasteland_city']/property[@name='count']/@value">0, 0, 0</set>
+<!-- <set xpath="/rwgmixer/world[@name='small']/property[@class='wasteland_city']/property[@name='tiles']/@value">8, 16</set> -->
+<set xpath="/rwgmixer/world[@name='small']/property[@class='citybig']/property[@name='count']/@value">10, 10, 10</set>
+<set xpath="/rwgmixer/world[@name='small']/property[@class='citybig']/property[@name='tiles']/@value">35, 100</set>
 
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='oldwest']/property[@name='few']/@value">1</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='oldwest']/property[@name='default']/@value">2</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='oldwest']/property[@name='many']/@value">3</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='oldwest']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='forest_countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='bforest_countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='bforest_town']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='tiles']/@value">10, 15</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='wasteland_city']/property[@name='count']/@value">0, 0, 0</set>
+<!-- <set xpath="/rwgmixer/world[@name='medium']/property[@class='wasteland_city']/property[@name='tiles']/@value">8, 16</set> -->
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='citybig']/property[@name='count']/@value">10, 10, 10</set>
+<set xpath="/rwgmixer/world[@name='medium']/property[@class='citybig']/property[@name='tiles']/@value">75, 200</set>
 
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='countrytown']/property[@name='few']/@value">4</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='countrytown']/property[@name='default']/@value">5</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='countrytown']/property[@name='many']/@value">6</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='oldwest']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='forest_countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='bforest_countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='bforest_town']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='countrytown']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='count']/@value">0, 0, 0</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='count']/@value">1, 2, 3</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='tiles']/@value">10, 15</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='wasteland_city']/property[@name='count']/@value">0, 0, 0</set>
+<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='wasteland_city']/property[@name='tiles']/@value">10, 20</set> -->
+<set xpath="/rwgmixer/world[@name='large']/property[@class='citybig']/property[@name='count']/@value">20, 20, 20</set>
+<set xpath="/rwgmixer/world[@name='large']/property[@class='citybig']/property[@name='tiles']/@value">60, 400</set>
 
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='few']/@value">3</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='default']/@value">5</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='many']/@value">7</set>
+<set xpath="/rwgmixer/township[@name='city']/property[@name='biomes']/@value">forest,burntforest,desert,snow,wasteland</set>
+<set xpath="/rwgmixer/township[@name='citybig']/property[@name='biomes']/@value">forest,burntforest,desert,snow,wasteland</set>
 
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='mintiles']/@value">10</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='town']/property[@name='maxtiles']/@value">12</set>
+<set xpath="/rwgmixer/district[@name='industrial']/property[@name='spawn_weight']/@value">0.3</set>
 
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='few']/@value">4</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='default']/@value">6</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='many']/@value">8</set>
-
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='mintiles']/@value">18</set>
-<set xpath="/rwgmixer/world[@name='medium']/property[@class='city']/property[@name='maxtiles']/@value">22</set> -->
-
-<!-- <set xpath="/rwgmixer/world[@name='large']/property[@name='world_size']/@value">13000,16000</set> -->
-
-<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='rivers']/property[@name='scale']/@value">4,7</set> -->
-<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='rivers']/property[@name='few']/@value">3</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='rivers']/property[@name='default']/@value">6</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='rivers']/property[@name='many']/@value">12</set> -->
-
-<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='lakes']/property[@name='scale']/@value">4,8</set> -->
-<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='lakes']/property[@name='few']/@value">3</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='lakes']/property[@name='default']/@value">4</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='lakes']/property[@name='many']/@value">6</set> -->
-
-<!-- <set xpath="/rwgmixer/world[@name='large']/property[@class='oldwest']/property[@name='few']/@value">2</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='oldwest']/property[@name='default']/@value">3</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='oldwest']/property[@name='many']/@value">4</set>
-
-<set xpath="/rwgmixer/world[@name='large']/property[@class='countrytown']/property[@name='few']/@value">3</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='countrytown']/property[@name='default']/@value">5</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='countrytown']/property[@name='many']/@value">6</set>
-
-<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='few']/@value">6</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='default']/@value">7</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='many']/@value">8</set>
-
-<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='mintiles']/@value">10</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='town']/property[@name='maxtiles']/@value">14</set>
-
-<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='few']/@value">8</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='default']/@value">10</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='many']/@value">11</set>
-
-<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='mintiles']/@value">20</set>
-<set xpath="/rwgmixer/world[@name='large']/property[@class='city']/property[@name='maxtiles']/@value">24</set>
-
-<set xpath="/rwgmixer/district[@name='industrial']/property[@name='district_spawn_weight']/@value">0.6</set> -->
 
 </config>

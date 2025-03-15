@@ -1,0 +1,96 @@
+<configs>
+
+	<setattribute xpath="/windows/window[@name='mapAreaEnterWaypointName']" name="depth">8</setattribute>
+	<setattribute xpath="/windows/window[@name='mapAreaEnterWaypointName']/panel/panel/textfield" name="foregroundlayer">true</setattribute>
+
+	<!-- show color picker below text input field -->
+	<append xpath="/windows/window[@name='mapAreaEnterWaypointName']/panel[@name='content']" name="depth">
+		<panel pos="-36,-54" depth="1" width="140" disableautobackground="true">
+			<color_picker name="navIconColor" />
+		</panel>
+	</append>
+
+	<!-- Remove old structure completely, re-create afterwards -->
+	<remove xpath="/windows/window[@name='mapAreaChooseWaypoint']" />
+
+	<!-- Basic new structure -->
+	<append xpath="/windows">
+		<window name="mapAreaChooseWaypoint" depth="7" pos="200,-200" cursor_area="true" controller="XUiC_CustomWayPointIcons, WayPointIcons" height="{outerHeight}">
+			<panel name="content" depth="0" pos="0,0" width="{outerWidth}" height="{outerHeight}" bordercolor="[black]" borderthickness="3">
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]"
+						width="{outerWidth}" height="{outerHeight}" type="sliced" fillcenter="false" />
+				<grid name="list" pos="3,-3" width="43" height="43" cell_width="43" cell_height="43"
+					  repeat_content="false" arrangement="vertical" controller="MapSubPopupList">
+					<!-- keep default icons for compatibility -->
+					<map_popup_sub_line icon="ui_game_symbol_map_cave"/>
+					<map_popup_sub_line icon="ui_game_symbol_map_cabin"/>
+					<map_popup_sub_line icon="ui_game_symbol_map_campsite"/>
+					<map_popup_sub_line icon="ui_game_symbol_map_city"/>
+					<map_popup_sub_line icon="ui_game_symbol_map_fortress"/>
+					<map_popup_sub_line icon="ui_game_symbol_map_civil"/>
+					<map_popup_sub_line icon="ui_game_symbol_map_house"/>
+					<map_popup_sub_line icon="ui_game_symbol_map_town"/>
+					<map_popup_sub_line icon="ui_game_symbol_map_trader"/>
+				</grid>
+			</panel>
+		</window>
+	</append>
+
+	<!-- Show how other plugins may add additional icons (or replace them fully) -->
+	<append xpath="/windows/window[@name='mapAreaChooseWaypoint']/panel[@name='content']/grid[@name='list']">
+
+		<!-- https://thenounproject.com/icon/1067030/ -->
+		<map_popup_sub_line icon="ui_game_symbol_map_bicycle"/>
+		<!-- https://thenounproject.com/icon/3337522/ -->
+		<map_popup_sub_line icon="ui_game_symbol_map_moped"/>
+		<!-- https://thenounproject.com/icon/4046333/ -->
+		<map_popup_sub_line icon="ui_game_symbol_map_motorcycle"/>
+		<!-- https://thenounproject.com/icon/2389506/ -->
+		<map_popup_sub_line icon="ui_game_symbol_map_car"/>
+		<!-- https://thenounproject.com/icon/4493588/ -->
+		<map_popup_sub_line icon="ui_game_symbol_map_bus"/>
+
+		<map_popup_sub_line icon="ui_game_symbol_shopping_cart"/>
+		<map_popup_sub_line icon="ui_game_symbol_water"/>
+		<map_popup_sub_line icon="ui_game_symbol_tree"/>
+		<map_popup_sub_line icon="ui_game_symbol_coin"/>
+		<map_popup_sub_line icon="ui_game_symbol_forge"/>
+		<map_popup_sub_line icon="ui_game_symbol_workbench"/>
+		<map_popup_sub_line icon="ui_game_symbol_campfire"/>
+		<map_popup_sub_line icon="ui_game_symbol_chemistry"/>
+		<map_popup_sub_line icon="ui_game_symbol_cement"/>
+		<map_popup_sub_line icon="ui_game_symbol_table_saw"/>
+		<map_popup_sub_line icon="ui_game_symbol_computer"/>
+		<map_popup_sub_line icon="ui_game_symbol_trash"/>
+		<map_popup_sub_line icon="ui_game_symbol_pack_mule"/>
+		<map_popup_sub_line icon="ui_game_symbol_wrench"/>
+		<map_popup_sub_line icon="ui_game_symbol_hammer"/>
+		<map_popup_sub_line icon="ui_game_symbol_tailoring"/>
+		<map_popup_sub_line icon="ui_game_symbol_club"/>
+		<map_popup_sub_line icon="ui_game_symbol_knife"/>
+		<map_popup_sub_line icon="ui_game_symbol_archery"/>
+		<map_popup_sub_line icon="ui_game_symbol_pistol"/>
+		<map_popup_sub_line icon="ui_game_symbol_rifle"/>
+		<map_popup_sub_line icon="ui_game_symbol_map_bed"/>
+		<map_popup_sub_line icon="ui_game_symbol_book"/>
+		<map_popup_sub_line icon="ui_game_symbol_gas"/>
+		<map_popup_sub_line icon="ui_game_symbol_pills"/>
+		<map_popup_sub_line icon="ui_game_symbol_medical"/>
+		<map_popup_sub_line icon="ui_game_symbol_cookware"/>
+		<map_popup_sub_line icon="ui_game_symbol_spatula"/>
+		<map_popup_sub_line icon="ui_game_symbol_fork"/>
+		<map_popup_sub_line icon="ui_game_symbol_treasure"/>
+		<map_popup_sub_line icon="ui_game_symbol_fire"/>
+		<map_popup_sub_line icon="ui_game_symbol_backpack"/>
+		<map_popup_sub_line icon="ui_game_symbol_x"/>
+		<map_popup_sub_line icon="ui_game_symbol_check"/>
+		<map_popup_sub_line icon="ui_game_symbol_death"/>
+		<map_popup_sub_line icon="ui_game_symbol_map"/>
+		<map_popup_sub_line icon="ui_game_symbol_compass"/>
+		<map_popup_sub_line icon="ui_game_symbol_hunger"/>
+		<map_popup_sub_line icon="ui_game_symbol_lightbulb"/>
+		<map_popup_sub_line icon="ui_game_symbol_science"/>
+
+	</append>
+
+</configs>

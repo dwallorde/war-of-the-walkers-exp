@@ -21,15 +21,15 @@
   <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0,0,0,0,0" />
   <property name="SleeperVolumeFlags" value="0,0,0,0,0,0,0,0,0,0" />
   <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False,False,False,False" />
-  <property name="EditorGroups" value="industrial" />
+  <property name="EditorGroups" value="industrial, Wilderness" />
   <property name="PrefabSize" value="100, 25, 100" />
-  <property name="Tags" value="industrial, wotw100" />
-  <property name="POIMarkerSize" value="9, 13, 1" />
-  <property name="POIMarkerStart" value="35, 4, 100" />
-  <property name="POIMarkerGroup" value="Drive-M" />
+  <property name="Tags" value="wilderness" />
+  <property name="POIMarkerSize" value="7, 0, 1" />
+  <property name="POIMarkerStart" value="36, 5, 100" />
+  <property name="POIMarkerGroup" value="new" />
   <property name="POIMarkerTags" value="" />
-  <property name="POIMarkerType" value="PartSpawn" />
-  <property name="POIMarkerPartToSpawn" value="part_driveway_industrial_08" />
+  <property name="POIMarkerType" value="RoadExit" />
+  <property name="POIMarkerPartToSpawn" value="" />
   <property name="POIMarkerPartRotations" value="0" />
   <property name="POIMarkerPartSpawnChance" value="1" />
   <property name="SleeperVolumeTriggeredBy" value=" # # # # # # # # # " />

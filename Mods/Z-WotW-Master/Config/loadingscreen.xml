@@ -13,17 +13,17 @@
 <remove xpath="/doc/backgrounds/tex[@file='@modfolder(SMXcore)://Textures/loadingscreens/smx_loadingscreen_7.png']"/>
 
 <append xpath="/doc/backgrounds">
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls1.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls2.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls3.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls4.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls5.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls6.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls7.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls8.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls9.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls10.png"/>
-		<tex file="@modfolder(WaroftheWalkersMod):Textures\Menu\Dwalls11.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls1.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls2.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls3.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls4.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls5.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls6.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls7.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls8.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls9.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls10.png"/>
+		<tex file="@modfolder(WotWMod):Textures\Menu\Dwalls11.png"/>
 </append>
 
 <remove xpath="/doc/tips/tip[@key='loadingTipMainHUD']"/>
@@ -39,6 +39,8 @@
 <remove xpath="/doc/tips/tip[@key='loadingTipWorkstations']"/>
 <remove xpath="/doc/tips/tip[@key='loadingTipUnlockingRecipes']"/>
 <remove xpath="/doc/tips/tip[@key='loadingTipCraftingBetterQL']"/>
+<remove xpath="/doc/tips/tip[@key='loadingTipMagazines']"/>
+<remove xpath="/doc/tips/tip[@key='loadingTipPerkLootBoost']"/>
 <remove xpath="/doc/tips/tip[@key='loadingTipBaseUpgrading']"/>
 <remove xpath="/doc/tips/tip[@key='loadingTipRadials']"/>
 <remove xpath="/doc/tips/tip[@key='loadingTipHarvestingCorpses']"/>
@@ -61,15 +63,21 @@
 <append xpath="/doc/tips">
 		<tip key="loadingTipWOTW"/>
 		<tip key="loadingTipClasses"/>
-		<tip key="loadingTipClassTradesman"/>
+		<tip key="loadingTipClassBarter"/>
+		<tip key="loadingTipClassBuilder"/>
+		<tip key="loadingTipClassCovert"/>
+		<tip key="loadingTipClassFighter"/>
+		<tip key="loadingTipClassHunter"/>
+		<tip key="loadingTipClassLooter"/>
+		<tip key="loadingTipClassMedic"/>
+		<tip key="loadingTipClassRanger"/>
 		<tip key="loadingTipClassSoldier"/>
 		<tip key="loadingTipClassSurvivalist"/>
-		<tip key="loadingTipClassCovert"/>
 		<tip key="loadingTipClassTechnician"/>
-		<!-- <tip key="loadingTipCraftingSkills"/>
-		<tip key="loadingTipRecipesTab"/> -->
+		<tip key="loadingTipClassTradesman"/>
+		<tip key="loadingTipCraftingSkills"/>
 		<tip key="loadingTipLeveling"/>
-		<tip key="loadingTipQuests"/>
+		<tip key="loadingTipChallenges"/>
 		<tip key="loadingTipVehicles"/>
 		<tip key="loadingTipWorkstations"/>
 		<tip key="loadingTipDiscord"/>
@@ -87,6 +95,7 @@
 		<tip key="loadingTipLockpicking"/>
 		<tip key="loadingTipDropbox"/>
 		<tip key="loadingTipMining"/>
+		<tip key="loadingTipFoodSpoilage"/>
 </append>
 
 </doc>

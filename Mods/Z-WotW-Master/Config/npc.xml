@@ -21,6 +21,17 @@
 		stance="Like" voice_set="trader_jen"
 		trader_id="71" dialog_id="trader" quest_faction="7" 
 		localization_id="npcTraderJay"/>
+		
+		<npc_info
+		id="NPCjunkDroneQuester"
+		name="Junk Drone"
+		name_key="npc_junkDrone"
+		faction="whiteriver"
+		portrait="npc_joel"
+		greeting_type="nearby"
+		dialog_id="junkDroneQuest" quest_faction="1"
+		stance="Like" voice_set="trader"
+		trader_id="1"/>
 </append>
 
 </config>

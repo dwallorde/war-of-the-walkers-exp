@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="OcbCustomTexturesPlants" />
+	<DisplayName value="OCB CustomTextures Plants Demo" />
+	<Description value="Demo modlet for OcbCustomTextures core mod." />
+	<Website value="https://github.com/OCB7D2D/OcbCustomTexturesPlants" />
+	<Author value="ocbMaurice" />
+	<Version value="0.7.0" />
+</xml>

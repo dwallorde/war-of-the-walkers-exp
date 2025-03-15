@@ -8,6 +8,34 @@
 		<lootcontainer name="BDvehicleXL3" count="0" size="10,9" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate"></lootcontainer>
 	</append>
 	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
+		<lootgroup name="minibikeOldParts">
+			<item name="vehicleMinibikeOldBVChassis"/>
+			<item name="vehicleMinibikeOldBVHandlebars"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="motorcycleOldParts">
+			<item name="vehicleMotorcycleOldBVChassis"/>
+			<item name="vehicleMotorcycleOldBVHandlebars"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="4x4OldParts">
+			<item name="vehicleTruck4x4OldBVChassis"/>
+			<item name="vehicleTruck4x4OldBVAccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="gyrocopterOldParts">
+			<item name="vehicleGyrocopterOldBVChassis"/>
+			<item name="vehicleGyrocopterOldBVAccessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
 		<lootgroup name="WorkTruckgroup">
 			<item name="vehicleWorkTruckchassis"/>
 			<item name="vehicleWorkTruckaccessories"/>
@@ -286,5 +314,9 @@
 		<item group="BoxTruckgroup" loot_prob_template="ProbT3"/>
 		<item group="LMTVgroup" loot_prob_template="ProbT3"/>
 		<item group="OldSemigroup" loot_prob_template="ProbT3"/>
+		<item group="minibikeOldParts" loot_prob_template="ProbT1"/>
+		<item group="motorcycleOldParts" loot_prob_template="ProbT2"/>
+		<item group="4x4OldParts" loot_prob_template="ProbT3"/>
+		<item group="gyrocopterOldParts" loot_prob_template="ProbT3"/>
 	</append>
 </configs>

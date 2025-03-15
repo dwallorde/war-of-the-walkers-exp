@@ -6,7 +6,7 @@
 	</window>
 </append>
 
-<set xpath="/windows/window[@name='ingameMenuLogo']/texture/@texture">@modfolder(WaroftheWalkersMod):Textures\Menu\wwmenulogo.png</set>
+<set xpath="/windows/window[@name='ingameMenuLogo']/texture/@texture">@modfolder(WotWMod):Textures\Menu\wwmenulogo.png</set>
 <set xpath="/windows/window[@name='ingameMenuLogo']/texture/@anchor_left">#cam,0,120</set>
 <set xpath="/windows/window[@name='ingameMenuLogo']/texture/@anchor_bottom">#cam,0.25,150</set>
 <set xpath="/windows/window[@name='ingameMenuLogo']/texture/@anchor_right">#cam,0.0125,675</set>
@@ -15,8 +15,8 @@
 
 <append xpath="/windows/window[@name='ingameMenu']">
 	<rect name="wotwmenu_version_control">
-		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
-		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.3.1.8" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
+		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Exp Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
+		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="1.3.2.0" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
 	</rect>
 	<rect name="npcmenu_image">
 		<sprite name="WOTWingameMenuPoweredLogo" depth="4" pos="60,100" size="248,66" atlas="uiAtlas" sprite="wotw_POWERED_LOGO_inGameMenu" pivot="bottom" globalopacitymod="1.5" />
@@ -550,7 +550,7 @@
 
 				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
-					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,wotwECOBattery,wotwHDBattery" required_tools_only="true">
 						<item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -564,7 +564,7 @@
 		<append xpath="/windows">
 			<window name="windowToolsWorkbench" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
 				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
-					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,wotwECOBattery,wotwHDBattery" required_tools_only="true">
 						<general_item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -585,7 +585,7 @@
 
 				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
-					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,ecoSmallEngine,hdSmallEngine" required_tools_only="true">
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,wotwECOEngine,wotwHDEngine" required_tools_only="true">
 						<item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -599,7 +599,7 @@
 		<append xpath="/windows">
 			<window name="windowToolsCementMixer" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
 				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
-					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,ecoSmallEngine,hdSmallEngine" required_tools_only="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="smallEngine,wotwECOEngine,wotwHDEngine" required_tools_only="true">
 						<general_item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -620,7 +620,7 @@
 
 				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
-					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,wotwECOBattery,wotwHDBattery" required_tools_only="true">
 						<item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -634,7 +634,7 @@
 		<append xpath="/windows">
 			<window name="windowToolsChemistryStation" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
 				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
-					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,ecoBattery,hdBattery" required_tools_only="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="carBattery,wotwECOBattery,wotwHDBattery" required_tools_only="true">
 						<general_item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -713,6 +713,79 @@
 	</if>
 </conditional>
 
+<!-- WOTW Birdnest -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolswotwBirdnest" width="228" height="121" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+					<label style="header.name" text="MODIFIERS" text_key="adcXuiModifiers" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+					<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="IDC_Core.XUiC_PassiveCollectorToolGrid, IDCCore" repeat_content="true"
+					required_tools="wotwChickenYoung,wotwChickenAdult" required_tools_only="true">
+						<item_stack controller="IDC_Core.XUiC_RequiredItemStack,IDCCore" name="0"/>
+					</grid>
+				</rect>
+			</window>
+			
+			<window name="windowwotwBirdnest" width="{windowWidth}" height="378" controller="IDC_Core.XUiC_PassiveCollectorWindow, IDCCore" panel="Left" anchor_side="bottomright" visible="false" cursor_area="true" >
+				<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
+					<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
+					<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
+					<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiBirdnest" font_size="32" />
+					
+					<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
+				</panel>
+				<rect name="content" pos="3,-49" >
+					<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="queue,0,-3" anchor_bottom="queue,0,0" anchor_right="queue,1,0" anchor_top="queue,1,49" on_press="true" />
+					<grid depth="12" name="queue" rows="3" cols="3" cell_width="75" cell_height="75" repeat_content="true" controller="IDC_Core.XUiC_PassiveCollectorContainer, IDCCore" required_item="drinkJarEmpty">
+						<dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
+<!-- WOTW Birdnest -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/windows">
+			<window name="windowToolswotwBirdnest" depth="3" pos="-920,475" width="610" height="880" anchor="CenterCenter" cursor_area="true">
+				<rect name="content" depth="0" pos="185,-620" height="101" disablefallthrough="true">
+					<grid name="inventory" pos="0,-145" rows="1" cols="2" cell_width="121" cell_height="101" controller="IDC_Core.XUiC_PassiveCollectorToolGrid, IDCCore" repeat_content="true"
+					required_tools="wotwChickenYoung,wotwChickenAdult" required_tools_only="true">
+						<general_item_stack controller="IDC_Core.XUiC_RequiredItemStack,IDCCore" name="0"/>
+					</grid>
+				</rect>
+			</window>
+			
+			<window name="windowwotwBirdnest" depth="3" pos="-920,475" width="610" height="880" anchor="CenterCenter" controller="IDC_Core.XUiC_PassiveCollectorWindow, IDCCore" visible="false" cursor_area="true">
+				<sprite name="smx_menu_separation" depth="2" pos="305,-700" width="301" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+				<rect name="leftPanel" pos="0,0" width="610" height="880">
+					<rect name="newContent">
+						<sprite name="smx_panel_background" depth="1" width="650" pivot="center" sprite="smx_menu_background" type="sliced" color="7,7,7,219" anchor_left="#cam,0,-10" anchor_right="#cam,1,-1235" anchor_bottom="#cam,0,-5" anchor_top="#cam,1,-50" />
+						<rect name="header" pos="0,0" width="610" height="110">
+							<label name="windowName" depth="4" pos="305,-70" width="590" height="52" pivot="center" style="smx_label_outline" text_key="xuiDewCollector" font_size="50" spacing_x="2" justify="center" upper_case="true" color="255,255,255,255" />
+							<sprite name="smx_panel_separation" depth="4" pos="305,-105" width="500" height="5" pivot="center" sprite="smx_sepline_2" color="[smx_element_separation_2]" />
+							<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false">
+							</rect>
+						</rect>
+					</rect>
+				</rect>
+				<rect name="content" pos="185,-420" >
+					<grid depth="12" name="queue" rows="3" cols="3" cell_width="121" cell_height="101" repeat_content="true" controller="IDC_Core.XUiC_PassiveCollectorContainer, IDCCore" required_item="drinkJarEmpty">
+						<wotw_smx_dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
 <!-- WOTW Advanced Dew Collector -->
 <conditional>
 	<if cond="mod_loaded('zSMXui') == false">
@@ -735,7 +808,7 @@
 				<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
 					<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
 					<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
-					<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiDewCollector" font_size="32" />
+					<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiAdvDewCollector" font_size="32" />
 					
 					<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
 				</panel>
@@ -807,7 +880,7 @@
 				<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
 					<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
 					<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
-					<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiDewCollector" font_size="32" />
+					<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiOilPump" font_size="32" />
 					
 					<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
 				</panel>
@@ -916,11 +989,15 @@
 	</if>
 </conditional>
 
+<!-- Progression Window Category Header Changes -->
+<!-- To Do:  Increase to support 16 Tabs -->
 <conditional>
 	<if cond="mod_loaded('zSMXui') == false">
-		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cols">9</set>
-		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cell_width">41</set>
-		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cell_height">41</set>
+		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cols">16</set>
+		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cell_width">33</set>
+		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories']/@cell_height">33</set>
+		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel[@pos='394,0']/@pos">290,-43</set>
+		<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel[@pos='540,0']/@pos">535,0</set>
 	</if>
 </conditional>
 
@@ -936,6 +1013,15 @@
 	<if cond="mod_loaded('zSMXui') == false">
 		<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">12</set>
 		<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">12</set>
+		
+		<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cell_width">57</set>
+		<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cell_height">57</set>
+		<remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/item_stack"/>
+		<append xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']">
+			<wotw_item_stack name="0"/>
+		</append>
+		<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cols">12</set>
+		<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@rows">14</set>
 	</if>
 </conditional>
 
@@ -945,147 +1031,127 @@
 
 <remove xpath="/windows/window[@name='windowChallengeEntryDescription']"/>
 
-	<append xpath="/windows">
-        <window name="windowChallengeEntryDescription" width="553" height="600" panel="Center" controller="Quartz.ChallengeEntryDescriptionWindow, Quartz" cursor_area="true" >
-            <panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
-                <sprite depth="2" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_pen"/>
-                <label depth="2" pos="345,-8" width="100" height="28" text="{timestamp}" color="[lightGrey]" justify="right" upper_case="true" />
-                <label style="header.name" text_key="challenge" width="400" />
-            </panel>
-            <rect name="content" pos="0,-46" height="711" depth="1">
-            
-                <!-- <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" width="100" height="103" color="[black]" type="sliced" fillcenter="false" />  -->
-                <sprite depth="1" pos="2,-2" name="preview" width="97" height="100" color="[darkGrey]" type="sliced" />
-                <sprite depth="3" pos="50,-50" width="80" height="80" sprite="{entryicon}" pivot="center" foregroundlayer="true"/>
+<append xpath="/windows">
+	<window name="windowChallengeEntryDescription" width="553" height="600" panel="Center" controller="Quartz.ChallengeEntryDescriptionWindow, Quartz" cursor_area="true" >
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+			<sprite depth="2" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_pen"/>
+			<label depth="2" pos="345,-8" width="100" height="28" text="{timestamp}" color="[lightGrey]" justify="right" upper_case="true" />
+			<label style="header.name" text_key="challenge" width="400" />
+		</panel>
+		<rect name="content" pos="0,-46" height="711" depth="1">
+		
+			<sprite depth="1" pos="2,-2" name="preview" width="97" height="100" color="[darkGrey]" type="sliced" />
+			<sprite depth="3" pos="50,-50" width="80" height="80" sprite="{entryicon}" pivot="center" foregroundlayer="true"/>
 
-                <button pos="520,-50" depth="12" name="gotoButton" style="icon32px" sprite="ui_game_symbol_go_to_button" defaultcolor="[white]" pivot="center" collider_scale="1.5" sound="[paging_click]" visible="{showgoto}"/>
+			<button pos="520,-50" depth="12" name="gotoButton" style="icon32px" sprite="ui_game_symbol_go_to_button" defaultcolor="[white]" pivot="center" collider_scale="1.5" sound="[paging_click]" visible="{showgoto}"/>
 
-                <rect name="descriptionBox" depth="1" pos="97,0" width="456" height="100" >
-                    <!-- <sprite depth="1" name="background" color="[mediumGrey]" type="sliced"/> -->
-                    <!-- <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="456" height="103" color="[black]" type="sliced" fillcenter="false" /> -->
-                    <label depth="2" pos="12,-18" width="538" height="93" text="{entrytitle}"/>
-                    <label depth="2" pos="12,-46" width="538" height="93" text="{entrygroup}" font_size="22" color="[disabledLabelColor]" />
-                </rect>
-                
-                <rect name="detailsBox" depth="1" pos="0,-100" width="553" height="179" >
-                    <!-- <sprite depth="1" name="background" color="[mediumGrey]" type="sliced"/> -->
-                    <!-- <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="453" height="182" color="[black]" type="sliced" fillcenter="false" /> -->
-                    <label depth="2" name="descriptionText" pos="10,-6" width="538" height="172" font_size="22" text="{entryshortdescription}" parse_actions="true" actions_default_format="( [e61a16]###[-] )"/>
-                </rect>
+			<rect name="descriptionBox" depth="1" pos="97,0" width="456" height="100" >
+				<label depth="2" pos="12,-18" width="538" height="93" text="{entrytitle}"/>
+				<label depth="2" pos="12,-46" width="538" height="93" text="{entrygroup}" font_size="22" color="[disabledLabelColor]" />
+			</rect>
+			
+			<rect name="detailsBox" depth="1" pos="0,-100" width="553" height="179" >
+				<label depth="2" name="descriptionText" pos="10,-6" width="538" height="172" font_size="22" text="{entryshortdescription}" parse_actions="true" actions_default_format="( [e61a16]###[-] )"/>
+			</rect>
 
-                <grid name="objectives" pos="0,-173" rows="8" width="520" height="520" cell_width="520" cell_height="40" arrangement="vertical">
-                
-                    <rect depth="2" width="520" height="30" controller="Quartz.ChallengeEntryObjectiveEntry, Quartz" visible="{hasobjective}">
-                        <rect pos="15,0">
-                            <sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
-                            <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+			<grid name="objectives" pos="0,-173" rows="8" width="520" height="520" cell_width="520" cell_height="40" arrangement="vertical">
+			
+				<rect depth="2" width="520" height="30" controller="Quartz.ChallengeEntryObjectiveEntry, Quartz" visible="{hasobjective}">
+					<rect pos="15,0">
+						<sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
+						<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
 
-                            <filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
+						<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
 
-                            <filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill}" />
-                            <label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective}"/>
+						<filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill}" />
+						<label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective}"/>
 
-                            <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-                            
-                        </rect>
-                    </rect>
-                    
-                    <rect depth="2" width="520" height="30" controller="Quartz.ChallengeEntryObjectiveEntry, Quartz" visible="{hasobjective}" >
-                        <rect pos="15,0">
-                            <sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
-                            <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
-
-                            <filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
-
-                            <filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill}" />
-                            <label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective}"/>
-
-                            <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-                        </rect>
-                    </rect>
-
-                    <rect depth="2" width="520" height="30" controller="Quartz.ChallengeEntryObjectiveEntry, Quartz" visible="{hasobjective}" >
-                        <rect pos="15,0">
-                            <sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
-                            <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
-
-                            <filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
-
-                            <filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill}" />
-                            <label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective}"/>
-
-                            <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-                        </rect>
-                    </rect>
-					
-					<rect depth="2" width="520" height="30" controller="Quartz.ChallengeEntryObjectiveEntry, Quartz" visible="{hasobjective}" >
-                        <rect pos="15,0">
-                            <sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
-                            <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
-
-                            <filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
-
-                            <filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill}" />
-                            <label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective}"/>
-
-                            <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
-                        </rect>
-                    </rect>
-                
-                    <rect name="rewardBox" depth="1" pos="0,-300" width="553" height="50" >
-                        <!-- <sprite depth="1" name="background" color="[mediumGrey]" type="sliced"/> -->
-                        <!-- <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="453" height="182" color="[black]" type="sliced" fillcenter="false" /> -->
-                        <label depth="2" name="descriptionText" pos="10,-3" width="538" height="172" justify="center" font_size="22" text="{rewardtitle}: [DECEA3]{rewardtext}[-]" visible="{hasreward}"/>
-                    </rect>
-
-                    <rect name="ChallengeBox3" depth="1" pos="0,-383" width="553" height="296" visible="{# objectivecount == 3}" >
-                        <sprite depth="1" name="background" color="0,0,0,145" type="sliced"/>
-                        <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="553" height="296" color="[black]" type="sliced" fillcenter="false" />
-                        <label depth="3" pos="9, -6" text="{entrydescription}"  width="530" height="293" font_size="26" parse_actions="true" actions_default_format="( [e61a16]###[-] )" />
-                    </rect>
-                    
-                    <rect name="ChallengeBox2" depth="1" pos="0,-383" width="553" height="336" visible="{# objectivecount == 2}" >
-                        <sprite depth="1" name="background" color="0,0,0,145" type="sliced"/>
-                        <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="553" height="336" color="[black]" type="sliced" fillcenter="false" />
-                        <label depth="3" pos="9, -6" text="{entrydescription}"  width="530" height="333" font_size="26" parse_actions="true" actions_default_format="( [e61a16]###[-] )" />
-                    </rect>
-                    
-                    <rect name="ChallengeBox1" depth="1" pos="0,-383" width="553" height="376" visible="{# objectivecount == 1}" >
-                        <sprite depth="1" name="background" color="0,0,0,145" type="sliced"/>
-                        <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="553" height="376" color="[black]" type="sliced" fillcenter="false" />
-                        <label depth="3" pos="9, -6" text="{entrydescription}"  width="530" height="373" font_size="26" parse_actions="true" actions_default_format="( [e61a16]###[-] )" />
-                    </rect>
-                
-                </grid>
-            
-                <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="553" height="711" color="[black]" type="sliced" fillcenter="false" />
-                <sprite color="[darkGrey]" type="sliced" />
-                
-                <simplebutton name="btnTrack" depth="3" pos="12,-667" width="250" height="36" font_size="24" caption="Track ([action:gui:GUI D-Pad Left])" visible="{haschallenge}" parse_actions="true" enabled="{enabletrack}"  gamepad_selectable="false"/>
-                <simplebutton name="btnComplete" depth="3" pos="290,-667" width="250" height="36" font_size="24" caption="Complete ([action:gui:GUI D-Pad Up])" visible="{haschallenge}" parse_actions="true" enabled="{enableredeem}"  gamepad_selectable="false"/>
-                
-                <rect visible="{showempty}">
-                    <label pos="15,-270" depth="3" name="descriptionText" width="530" height="540" text="DESCRIPTION NOT AVAILABLE AT THIS TIME." text_key="xuiSelectChallengeInfo" justify="Left" pivot="left" font_size="28" />
-                </rect>
-            </rect>
-
-        </window>
-	</append>
-	
-	<set xpath="/windows/window[@name='ingameMenu']/grid[@name='smx_mod_grid']/@pos">50,410</set>
-
-<!-- <conditional>
-	<if cond="mod_loaded('zSMXui') == false">
-		<append xpath="/windows/window[@name='windowBackpack']/panel/rect">
-					<rect pos="0, 0" visible="{moveFollower}">
-						<button depth="3" name="btnMoveFillAndSmart" sprite="ui_game_symbol_store_similar_down" tooltip_key="lblStashFillAndSmart" pos="200, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]"/>
-						<button depth="3" name="btnMoveAll" sprite="ui_game_symbol_store_all_down" tooltip_key="lblStashAll" pos="240, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]"/>
+						<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+						
 					</rect>
-		</append>
-	</if>
-</conditional> -->
+				</rect>
+				
+				<rect depth="2" width="520" height="30" controller="Quartz.ChallengeEntryObjectiveEntry, Quartz" visible="{hasobjective}" >
+					<rect pos="15,0">
+						<sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
+						<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
 
-<!-- <set xpath="/windows/window[@name='windowBackpack']/panel/rect/rect/@visible">true</set> -->
+						<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
+
+						<filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill}" />
+						<label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective}"/>
+
+						<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					</rect>
+				</rect>
+
+				<rect depth="2" width="520" height="30" controller="Quartz.ChallengeEntryObjectiveEntry, Quartz" visible="{hasobjective}" >
+					<rect pos="15,0">
+						<sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
+						<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+
+						<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
+
+						<filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill}" />
+						<label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective}"/>
+
+						<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					</rect>
+				</rect>
+				
+				<rect depth="2" width="520" height="30" controller="Quartz.ChallengeEntryObjectiveEntry, Quartz" visible="{hasobjective}" >
+					<rect pos="15,0">
+						<sprite depth="1" name="border" color="0,0,0,150" height="30" type="sliced" />
+						<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+
+						<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />
+
+						<filledsprite depth="4" name="BarContent" color="0,128,128,255" type="filled" fill="{objectivefill}" />
+						<label depth="6" name="TextContent" pos="0,-4" font_size="20" color="[white]" justify="center" text="{objective}"/>
+
+						<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					</rect>
+				</rect>
+			
+				<rect name="rewardBox" depth="1" pos="0,-300" width="553" height="50" >
+					<label depth="2" name="descriptionText" pos="10,-3" width="538" height="172" justify="center" font_size="22" text="{rewardtitle}: [DECEA3]{rewardtext}[-]" visible="{hasreward}"/>
+				</rect>
+
+				<rect name="ChallengeBox3" depth="1" pos="0,-383" width="553" height="296" visible="{# objectivecount == 3}" >
+					<sprite depth="1" name="background" color="0,0,0,145" type="sliced"/>
+					<sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="553" height="296" color="[black]" type="sliced" fillcenter="false" />
+					<label depth="3" pos="9, -6" text="{entrydescription}"  width="530" height="293" font_size="26" parse_actions="true" actions_default_format="( [e61a16]###[-] )" />
+				</rect>
+				
+				<rect name="ChallengeBox2" depth="1" pos="0,-383" width="553" height="336" visible="{# objectivecount == 2}" >
+					<sprite depth="1" name="background" color="0,0,0,145" type="sliced"/>
+					<sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="553" height="336" color="[black]" type="sliced" fillcenter="false" />
+					<label depth="3" pos="9, -6" text="{entrydescription}"  width="530" height="333" font_size="26" parse_actions="true" actions_default_format="( [e61a16]###[-] )" />
+				</rect>
+				
+				<rect name="ChallengeBox1" depth="1" pos="0,-383" width="553" height="376" visible="{# objectivecount == 1}" >
+					<sprite depth="1" name="background" color="0,0,0,145" type="sliced"/>
+					<sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="553" height="376" color="[black]" type="sliced" fillcenter="false" />
+					<label depth="3" pos="9, -6" text="{entrydescription}"  width="530" height="373" font_size="26" parse_actions="true" actions_default_format="( [e61a16]###[-] )" />
+				</rect>
+			
+			</grid>
+		
+			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="553" height="711" color="[black]" type="sliced" fillcenter="false" />
+			<sprite color="[darkGrey]" type="sliced" />
+			
+			<simplebutton name="btnTrack" depth="3" pos="12,-667" width="250" height="36" font_size="24" caption="Track ([action:gui:GUI D-Pad Left])" visible="{haschallenge}" parse_actions="true" enabled="{enabletrack}"  gamepad_selectable="false"/>
+			<simplebutton name="btnComplete" depth="3" pos="290,-667" width="250" height="36" font_size="24" caption="Complete ([action:gui:GUI D-Pad Up])" visible="{haschallenge}" parse_actions="true" enabled="{enableredeem}"  gamepad_selectable="false"/>
+			
+			<rect visible="{showempty}">
+				<label pos="15,-270" depth="3" name="descriptionText" width="530" height="540" text="DESCRIPTION NOT AVAILABLE AT THIS TIME." text_key="xuiSelectChallengeInfo" justify="Left" pivot="left" font_size="28" />
+			</rect>
+		</rect>
+
+	</window>
+</append>
+
+<set xpath="/windows/window[@name='ingameMenu']/grid[@name='smx_mod_grid']/@pos">50,410</set>
 
 <conditional>
 	<if cond="mod_loaded('zSMXui') == true">
@@ -1169,6 +1235,18 @@
 													<smx_skills_skill_grid pos="130,91" perkCount="4" groupName="" />
 												</rect>
 		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='windowLooting' or @name='windowVehicleStorage']//rect[@controller='ContainerStandardControls']/button[@name='btnPinGrab']/@pos">100,-22</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/windows/window[@name='windowLooting']//rect[@controller='ContainerStandardControls']/button[@name='btnBroadcast']/@tooltip_key">xuiBroadcast</set>
 	</if>
 </conditional>
 </config>

@@ -20,15 +20,15 @@
   <property name="SleeperIsBossVolume" value="False,False,False,False,False,False,False" />
   <property name="SleeperVolumeFlags" value="0,0,0,0,0,0,0" />
   <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False" />
-  <property name="EditorGroups" value="industrial" />
+  <property name="EditorGroups" value="Wilderness" />
   <property name="PrefabSize" value="100, 17, 100" />
-  <property name="Tags" value="industrial, wotw100" />
-  <property name="POIMarkerSize" value="10, 13, 1#7, 13, 1" />
-  <property name="POIMarkerStart" value="90, 4, -1#6, 4, -1" />
-  <property name="POIMarkerGroup" value="Drive-M1,Drive-M2" />
+  <property name="Tags" value="wilderness" />
+  <property name="POIMarkerSize" value="8, 0, 1#5, 0, 1" />
+  <property name="POIMarkerStart" value="91, 5, -1#7, 5, -1" />
+  <property name="POIMarkerGroup" value="Exit1,Exit2" />
   <property name="POIMarkerTags" value="#" />
-  <property name="POIMarkerType" value="PartSpawn,PartSpawn" />
-  <property name="POIMarkerPartToSpawn" value="part_driveway_industrial_04,part_driveway_industrial_01" />
+  <property name="POIMarkerType" value="RoadExit,RoadExit" />
+  <property name="POIMarkerPartToSpawn" value="," />
   <property name="POIMarkerPartRotations" value="2,2" />
   <property name="POIMarkerPartSpawnChance" value="1,1" />
   <property name="SleeperVolumeTriggeredBy" value=" # # # # # # " />
@@ -58,10 +58,6 @@
     <property class="Rally">
       <property name="0" value="17, 5, 35" />
     </property>
-    <property class="FetchContainer">
-      <property name="0" value="69, 9, 98" />
-      <property name="1" value="77, 7, 98" />
-    </property>
     <property class="challenge_sinks">
       <property name="0" value="76, 5, 73" />
       <property name="1" value="76, 6, 73" />
@@ -82,6 +78,10 @@
       <property name="16" value="80, 7, 74" />
       <property name="17" value="80, 6, 75" />
       <property name="18" value="80, 7, 75" />
+    </property>
+    <property class="FetchContainer">
+      <property name="0" value="69, 9, 98" />
+      <property name="1" value="77, 7, 98" />
     </property>
     <property class="challenge_pallet">
       <property name="0" value="66, 5, 37" />

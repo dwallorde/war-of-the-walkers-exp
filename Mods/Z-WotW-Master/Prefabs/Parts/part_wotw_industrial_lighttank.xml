@@ -12,7 +12,7 @@
   <property name="RotationToFaceNorth" value="0" />
   <property name="Zoning" value="Industrial" />
   <property name="EditorGroups" value="parts, industrial" />
-  <property name="Tags" value="industrial" />
+  <property name="Tags" value="part" />
   <property class="IndexedBlockOffsets">
     <property class="POILight">
       <property name="0" value="13, 2, 4" />

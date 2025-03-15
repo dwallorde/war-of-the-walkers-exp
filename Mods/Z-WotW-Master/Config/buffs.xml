@@ -964,30 +964,27 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" operation="GTE" value="2"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value=".2"/>
-				<passive_effect name="BlockDamage" operation="perc_add" value=".2" tags="melee"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1" tags="melee"/>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" operation="GTE" value="3"/>
-				<passive_effect name="HealthLoss" operation="perc_add" value="-.1"/>
+				<passive_effect name="HealthLoss" operation="perc_add" value="-.05"/>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" operation="GTE" value="4"/>
-				<passive_effect name="WalkSpeed" operation="perc_add" value=".1"/>
-				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
-				<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".05"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".05"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".05"/>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" operation="GTE" value="5"/>
-				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".1" tags="melee"/>
-				<passive_effect name="CrouchSpeed" operation="perc_add" value=".1"/>
-				<passive_effect name="LootDropProb" operation="perc_add" value=".1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05" tags="melee"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".05"/>
+				<passive_effect name="LootDropProb" operation="perc_add" value=".05"/>
 		</effect_group>
 
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="0"/>
 		</effect_group>
 	</buff>
@@ -1525,6 +1522,26 @@
 			<triggered_effect trigger="onSelfBuffFinish" action="SetNavObject" nav_object="zombietracking_horde3" add="true" />
 		</effect_group>
 	</buff>
+	
+	<buff name="boss_give_navobject1">
+		<stack_type value="replace"/>
+		<duration value="6000"/>
+		<effect_group>
+			<passive_effect name="DismemberSelfChance" operation="base_set" value="0" />
+			<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="zombietracking_bossZombie1" add="true" />
+			<triggered_effect trigger="onSelfBuffFinish" action="SetNavObject" nav_object="zombietracking_bossZombie1" add="true" />
+		</effect_group>
+	</buff>
+	
+	<buff name="minion_give_navobject1">
+		<stack_type value="replace"/>
+		<duration value="6000"/>
+		<effect_group>
+			<passive_effect name="DismemberSelfChance" operation="base_set" value="0" />
+			<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="zombietracking_minionZombie1" add="true" />
+			<triggered_effect trigger="onSelfBuffFinish" action="SetNavObject" nav_object="zombietracking_minionZombie1" add="true" />
+		</effect_group>
+	</buff>
 </append>
 
 <remove xpath="/buffs/buff[@name='buffAnimalTrackerAcquired']"/>
@@ -1703,6 +1720,12 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiationExit">
 				<requirement name="!InBiome" biome="08"/>
 				<requirement name="CVarCompare" cvar="radiationCounter" operation="GT" value="0"/>
+				<requirement name="!HasBuff" buff="god"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiationExit">
+				<!-- <requirement name="!InBiome" biome="08"/> -->
+				<requirement name="CVarCompare" cvar="radiationCounter" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$HazmatGearWorn" operation="GT" value="4"/>
 				<requirement name="!HasBuff" buff="god"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRadiationCatch">
@@ -2199,16 +2222,32 @@
 		<duration value="0"/>
 		
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="block_air_drop_horde_start" allow_client_call="true"/>
+			<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="block_air_drop_horde_start" allow_client_call="true">
+					<requirement name="NotHasBuff" buff="buffAirDropHordeCooldown"/></triggered_effect>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffairdrophorde"/>
 		</effect_group>
+	</buff>
+	
+	<buff name="buffHomerunCooldown" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="180"/>
+	</buff>
+	
+	<buff name="buffAirDropHordeCooldown" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="180"/>
+	</buff>
+	
+	<buff name="buffFlareCooldown" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
 	</buff>
 </append>
 
 <append xpath="/buffs/buff[@name='god']">
 	<effect_group>
 		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="radiationCounter" operation="set" value="0"/>
-		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="vitamins1,vitamins2,vitamins3,vitamins4" />
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="vitamins1,vitamins2,vitamins3,vitamins4,wotwBossBuffSoldier69EventTrigger1Cooldown,wotwBossBuffSoldier69EventTrigger2Cooldown" />
 		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$HazmatGearWorn" operation="set" value="0">
 				<requirement name="CVarCompare" cvar="$HazmatGearWorn" operation="LT" value="0"/></triggered_effect>
 	</effect_group>
@@ -2337,6 +2376,19 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" tags="resourceWood,wotwResourceWoodStick"/>
 
 		</effect_group>
+		
+		<effect_group>
+			<!-- If armor set NOT complete, remove bonus buff -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffConsSetBonus">
+				<requirement name="ArmorGroupCount" group_name="groupConst" operation="LTE" value="3" />
+				<requirement name="HasBuff" buff="buffConsSetBonus"/>
+			</triggered_effect>
+			<!-- If armor set complete, add bonus buff -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffConsSetBonus">
+				<requirement name="ArmorGroupCount" group_name="groupConst" operation="Equals" value="4" />
+				<requirement name="!HasBuff" buff="buffConsSetBonus"/>
+			</triggered_effect>
+		</effect_group>
 </append>
 
 <append xpath="/buffs/buff[@name='zombieOakRadNurseRadiatedShowerAOEEffect']/effect_group">
@@ -2364,5 +2416,132 @@
 				<requirement name="InBiome" biome="08"/> <!-- Wasteland -->
 			</passive_effect>
 		</effect_group>
+</append>
+
+<append xpath="/buffs">
+	<buff name="buffConsSetBonus" name_key="buffConsSetBonusName" description_key="buffConsSetBonusDesc" tooltip_key="buffConsSetBonusTooltip" icon="ui_game_symbol_armor_iron" icon_color="255,255,255">
+		<stack_type value="ignore"/>
+		<display_value_key value="Bonus"/>
+		<display_value value="xxx"/>
+		
+		<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorConsFSBDisplay" operation="set" value="50"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorConsFSBDisplay" operation="set" value="50"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorConsFSBDisplay"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".5">
+					<requirement name="HoldingItemHasTags" tags="repairTool"/>
+				</passive_effect>
+		</effect_group>
+	</buff>
+
+</append>
+
+<!-- Boss Buffs -->
+<append xpath="/buffs">
+	<buff name="wotwBossBuffSoldier69" name_key="beers" description_key="drunkDesc" tooltip_key="drunkTooltip" icon="ui_game_symbol_beer">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		
+		<effect_group>
+			<!-- <triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" buff="boss_SpawnTrigger_soldier69_initial"/> -->
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="boss_give_navobject1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="other" range="10" buff="wotwBossBuffSoldier69EventTrigger1">
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="0.7"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value="0.9"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="other" range="10" buff="wotwBossBuffSoldier69EventTrigger2">
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value="0.5"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="0.1"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="wotwBossBuffSoldier69EventTrigger1" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="boss_SpawnTrigger_soldier69_1">
+				<requirement name="!HasBuff" buff="wotwBossBuffSoldier69EventTrigger1Cooldown"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="wotwBossBuffSoldier69EventTrigger1Cooldown"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="wotwBossBuffSoldier69EventTrigger1Cooldown" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="300"/>
+	</buff>
+	
+	<buff name="wotwBossBuffSoldier69EventTrigger2" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="boss_SpawnTrigger_soldier69_2">
+				<requirement name="!HasBuff" buff="wotwBossBuffSoldier69EventTrigger2Cooldown"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="wotwBossBuffSoldier69EventTrigger2Cooldown"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="wotwBossBuffSoldier69EventTrigger2Cooldown" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="300"/>
+	</buff>
+	
+	<buff name="wotwBossBuffHellsBoss" name_key="beers" description_key="drunkDesc" tooltip_key="drunkTooltip" icon="ui_game_symbol_beer">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		
+		<effect_group>
+			<!-- <triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" buff="boss_SpawnTrigger_soldier69_initial"/> -->
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="boss_give_navobject1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="other" range="10" buff="wotwBossBuffHellsBossEventTrigger1">
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="0.7"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value="0.9"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="other" range="10" buff="wotwBossBuffHellsBossEventTrigger2">
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value="0.5"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="0.1"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="wotwBossBuffHellsBossEventTrigger1" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="boss_SpawnTrigger_hellsboss_1">
+				<requirement name="!HasBuff" buff="wotwBossBuffHellsBossEventTrigger1Cooldown"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="wotwBossBuffHellsBossEventTrigger1Cooldown"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="wotwBossBuffHellsBossEventTrigger1Cooldown" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="300"/>
+	</buff>
+	
+	<buff name="wotwBossBuffHellsBossEventTrigger2" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="boss_SpawnTrigger_hellsboss_2">
+				<requirement name="!HasBuff" buff="wotwBossBuffHellsBossEventTrigger2Cooldown"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="wotwBossBuffHellsBossEventTrigger2Cooldown"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="wotwBossBuffHellsBossEventTrigger2Cooldown" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="300"/>
+	</buff>
 </append>
 </config>

@@ -5,7 +5,7 @@
   <property name="Zoning" value="any" />
   <property name="RotationToFaceNorth" value="2" />
   <property name="YOffset" value="-1" />
-  <property name="AllowedTownships" value="city,town,rural,wilderness" />
+  <property name="AllowedTownships" value="city,town,rural" />
   <property name="TraderArea" value="True" />
   <property name="TraderAreaProtect" value="0,0,0" />
   <property name="TraderAreaTeleportSize" value="40, 27, 42" />
@@ -13,7 +13,7 @@
   <property name="ExcludeDistantPOIMesh" value="False" />
   <property name="DistantPOIYOffset" value="0" />
   <property name="EditorGroups" value="settlements" />
-  <property name="QuestTags" value="trader,traderBob" />
+  <property name="QuestTags" value="trader, traderBob" />
   <property name="DifficultyTier" value="0" />
   <property name="ExcludePOICulling" value="True" />
   <property name="ShowQuestClearCount" value="1" />
@@ -32,15 +32,15 @@
   <property name="POIMarkerPartRotations" value="2,2,2,2,2,2" />
   <property name="POIMarkerPartSpawnChance" value="1,1,1,1,1,1" />
   <property class="Stats">
-    <property name="TotalVertices" value="1742459" />
-    <property name="TotalTriangles" value="659675" />
+    <property name="TotalVertices" value="1828079" />
+    <property name="TotalTriangles" value="735146" />
     <property class="BlockEntities">
-      <property name="Vertices" value="1660226" />
-      <property name="Triangles" value="601948" />
+      <property name="Vertices" value="1746086" />
+      <property name="Triangles" value="677539" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="72987" />
-      <property name="Triangles" value="42599" />
+      <property name="Vertices" value="72747" />
+      <property name="Triangles" value="42479" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="0" />
@@ -92,9 +92,6 @@
     </property>
     <property class="challenge_pallet">
       <property name="0" value="57, 1, 11" />
-    </property>
-    <property class="quest_feather">
-      <property name="0" value="24, 10, 42" />
     </property>
     <property class="challenge_cars">
       <property name="0" value="45, 1, 21" />

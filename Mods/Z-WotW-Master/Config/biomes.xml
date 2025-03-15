@@ -1,35 +1,40 @@
 <config>
 <!-- Biomes.xml -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/@lootstage_modifier">0</set>
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/@lootstage_bonus">0</set>
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/@lootstage_modifier">0.1</set>
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/@lootstage_bonus">4</set>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/@lootstage_modifier">0.2</set>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/@lootstage_bonus">8</set>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/@lootstage_modifier">0.3</set>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/@lootstage_bonus">12</set>
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/@lootstage_modifier">0.5</set>
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/@lootstage_bonus">16</set>
+
 
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/@prob">78</set> <!-- default is 44 -->
-<!-- <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/Fog/@min">.02</set> --> <!-- default is 0 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/Temperature/@min">12</set>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/Temperature/@max">22</set>
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/Fog/@max">.32</set> <!-- default is 2 -->
-	
+
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/Temperature/@min">10</set>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/Temperature/@max">20</set>
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/@prob">4</set> <!-- default is 8 -->
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/Fog/@min">3</set> <!-- default is 7 -->
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/Fog/@max">4</set> <!-- default is 18 -->
-	
-	
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/@prob">12</set> <!-- default is 40 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/@prob">20</set> <!-- default is 40 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/Temperature/@min">6</set>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/Temperature/@max">15</set>
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/Fog/@min">.29</set> <!-- default is 1 -->
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/Fog/@max">.39</set> <!-- default is 5 -->
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/Precipitation/@min">50</set> <!-- default is 30 -->
 	
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/@prob">6</set> <!-- default is 8 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/Temperature/@min">6</set>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/Temperature/@max">15</set>
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/Fog/@min">.45</set> <!--default is 5 -->
 <set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/Fog/@max">3</set> <!-- default is 15 -->
-
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/Temperature/@min">18</set>
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/Temperature/@max">26</set>
-
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/Temperature/@min">12</set>
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/Temperature/@max">20</set>
-
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/Temperature/@min">10</set>
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snow']/Temperature/@max">18</set>
-
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/Temperature/@min">8</set>
-<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/Temperature/@max">12</set>
 
 <append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@prob='0.3']/layers/layer[@depth='*'][@blockname='terrStone']">
 					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
@@ -56,18 +61,6 @@
 </insertAfter>
 
 <remove xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@prob='0.412']"/>
-
-<!-- <append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@prob='0.412']/layers/layer[@depth='*'][@blockname='terrStone']">
-					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
-					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
-					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
-</append>
-
-<insertAfter xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@prob='0.412']/decorations/decoration[@blockname='resourceRock02']">
-				<decoration type="block" blockname="oreSnowBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreSnowBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreSnowBoulder3" prob=".00033" rotatemax="3"/>
-</insertAfter> -->
 
 <append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@prob='0.442']/layers/layer[@depth='*'][@blockname='terrStone']">
 					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
@@ -125,20 +118,27 @@
 		</subbiome>
 </append>
 
-<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/@prob">95</set> <!-- default is 83 -->
-<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/Fog/@min">.05</set> <!-- default is 0 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/@prob">93</set> <!-- default is 88 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/Temperature/@min">55</set> <!-- default is 65 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/Temperature/@max">65</set> <!-- default is 70 -->
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/Fog/@max">.08</set> <!-- default is 2 -->
 		
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/@prob">2</set> <!-- default is 7 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/Temperature/@min">50</set> <!-- default is 65 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/Temperature/@max">60</set> <!-- default is 70 -->
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/Fog/@min">8</set> <!-- default is 16 -->
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/Fog/@max">13</set> <!-- default is 27 -->
 		
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rain']/@prob">2</set> <!-- default is 7 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rain']/Temperature/@min">50</set> <!-- default is 65 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rain']/Temperature/@max">60</set> <!-- default is 70 -->
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rain']/Fog/@min">.9</set> <!-- default is 1 -->
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rain']/Fog/@max">2.5</set> <!-- default is 3 -->
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rain']/Precipitation/@min">50</set> <!-- default is 30 -->
 		
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='storm']/@prob">1</set> <!-- default is 3 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='storm']/Temperature/@min">45</set> <!-- default is 65 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='storm']/Temperature/@max">55</set> <!-- default is 70 -->
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='storm']/Fog/@min">1.5</set> <!-- default is 2 -->
 <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='storm']/Fog/@max">5</set> <!-- default is 8 -->
 
@@ -196,20 +196,6 @@
 
 <remove xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@prob='0.442']"/>
 
-<!-- <append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@prob='0.442']/layers/layer[@depth='*'][@blockname='terrStone']">
-					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
-					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
-					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
-</append>
-
-<set xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@prob='0.442']/decorations/decoration[@blockname='treeTallGrassDiagonal']/@prob">.1</set>
-
-<insertAfter xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@prob='0.442']/decorations/decoration[@blockname='resourceRock02']">
-				<decoration type="block" blockname="oreForestBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreForestBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreForestBoulder3" prob=".00033" rotatemax="3"/>
-</insertAfter> -->
-
 <append xpath="worldgeneration/biomes/biome[@name='pine_forest']/layers/layer[@depth='*'][@blockname='terrStone']">
 					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
 					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
@@ -245,78 +231,30 @@
 				<decoration type="prefab" name="wotw_Resource_RandomLootCrate5" prob="0.0005" rotatemax="7"/>
 </append>
 
-<!-- <append xpath="worldgeneration/biomes/biome[@name='pine_forest']">
-		<subbiome prob="0.4551"> --> <!-- Ore Sub Biome: copperOre / zincOre -->
-			<!-- <layers>
-				<layer depth="1" blockname="terrForestGround"> <resource blockname="terrDirt" prob="0.071" rwgGenerationType="all"/> </layer>
-				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.4130" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="copperOre" prob="0.3100" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.4130" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>	<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/> <resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/> </layer> <layer depth="1" blockname="terrStone"/> <layer depth="3" blockname="terrBedrock"/>
-			</layers>
-			<decorations>
-				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
-				<decoration type="prefab" name="wotw_deco_RandomOre" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
-				<decoration type="block" blockname="resourceRock01" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="resourceRock02" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreForestBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreForestBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreForestBoulder3" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/>
-				<decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/>
-				<decoration type="prefab" name="rock_form01" prob=".001" rotatemax="7"/>
-				<decoration type="block" blockname="plantedCotton3Harvest" prob="0.001"/>
-				<decoration type="block" blockname="rock01" prob=".001"/>
-				<decoration type="block" blockname="rock02" prob=".001"/>
-				<decoration type="block" blockname="rock04" prob=".001"/>
-				<decoration type="block" blockname="cntBirdnest" prob="0.001"/>
-				<decoration type="block" blockname="treeDeadPineLeaf" prob="0.01" rotatemax="7"/>
-				<decoration type="block" blockname="treeJuniper4m" prob="0.001" rotatemax="7"/>
-				<decoration type="block" blockname="treeMountainPine12m" prob="0.001" rotatemax="7"/>
-				<decoration type="block" blockname="treeMountainPine19m" prob="0.0015" rotatemax="7"/>
-				<decoration type="block" blockname="treeMountainPine27m" prob="0.002" rotatemax="7"/>
-				<decoration type="block" blockname="treeMountainPine31m" prob="0.002" rotatemax="7"/>
-				<decoration type="block" blockname="treeMountainPineDry21m" prob="0.002" rotatemax="7"/>
-				<decoration type="block" blockname="treeMountainPine41m" prob="0.004" rotatemax="7"/>
-				<decoration type="block" blockname="plantedSnowberry3Harvest" prob=".001"/>
-				<decoration type="block" blockname="plantedChrysanthemum3Harvest" prob="0.004"/>
-				<decoration type="block" blockname="treeTallGrassDiagonal" prob=".3"/>
-				<decoration type="block" blockname="treeShortGrass" prob=".5"/>
-				<decoration type="block" blockname="treeOakLrg01" prob="0.001" rotatemax="7"/>
-				<decoration type="block" blockname="treeOakMed01" prob="0.001" rotatemax="7"/>
-				<decoration type="block" blockname="treeOakMed02" prob="0.001" rotatemax="7"/>
-				<decoration type="block" blockname="treeOakSml01" prob="0.001" rotatemax="7"/>
-				<decoration type="block" blockname="treeFirLrg01" prob="0.0005" rotatemax="7"/>
-				<decoration type="block" blockname="treeMountainPine48m" prob="0.0005" rotatemax="7"/>
-				<decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
-		</subbiome>
-</append> -->
-
 <set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/@prob">97</set> <!-- default is 87 -->
-<append xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']">
-			<Fog min=".03" max=".07" prob="1"/>
-</append> <!-- default is nil -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/Temperature/@min">110</set>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/Temperature/@max">120</set>
 <set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/CloudThickness[1]/@prob">66</set> <!-- default is 33 -->
 <set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/CloudThickness[2]/@prob">33</set> <!-- default is 66 -->
-				
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/@prob">2</set> <!-- default is 8 -->
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Fog/@min">.29</set> <!-- default is 1 -->
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Fog/@max">1</set> <!-- default is 4 -->
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Precipitation/@min">0</set> <!-- default is 25 -->
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Precipitation/@max">0</set> <!-- default is 55 -->
-		
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/@prob">1</set> <!-- default is 5 -->
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Fog/@min">1</set> <!-- default is 3 -->
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Fog/@max">5</set> <!-- default is 15 -->
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Precipitation/@min">0</set> <!-- default is 55 -->
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Precipitation/@max">0</set> <!-- default is 80 -->
+<append xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']">
+			<Fog min="0" max=".07" prob="1"/>
+</append> <!-- default is nil -->
 
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/Temperature/@min">105</set>
-<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/Temperature/@max">115</set>
-
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/@prob">4</set> <!-- default is 3 -->
 <set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Temperature/@min">105</set>
 <set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Temperature/@max">115</set>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Fog/@min">.29</set> <!-- default is 1 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Fog/@max">1</set> <!-- default is 4 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Precipitation/@min">20</set> <!-- default is 25 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rain']/Precipitation/@max">45</set> <!-- default is 55 -->
 
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/@prob">1</set> <!-- default is 5 -->
 <set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Temperature/@min">105</set>
 <set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Temperature/@max">115</set>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Fog/@min">1</set> <!-- default is 3 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Fog/@max">5</set> <!-- default is 15 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Precipitation/@min">50</set> <!-- default is 55 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Precipitation/@max">75</set> <!-- default is 80 -->
 
 <append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@prob='0.29']/layers/layer[@depth='*'][@blockname='terrSandStone']">
 					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
@@ -366,31 +304,7 @@
 
 <remove xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@prob='0.412']"/>
 
-<!-- <append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@prob='0.412']/layers/layer[@depth='*'][@blockname='terrSandStone']">
-					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
-					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
-					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
-</append>
-
-<insertAfter xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@prob='0.412']/decorations/decoration[@blockname='resourceRock02']">
-				<decoration type="block" blockname="oreDesertBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreDesertBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreDesertBoulder3" prob=".00033" rotatemax="3"/>
-</insertAfter> -->
-
 <remove xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@prob='0.442']"/>
-
-<!-- <append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@prob='0.442']/layers/layer[@depth='*'][@blockname='terrSandStone']">
-					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
-					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
-					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
-</append>
-
-<insertAfter xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@prob='0.442']/decorations/decoration[@blockname='resourceRock02']">
-				<decoration type="block" blockname="oreDesertBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreDesertBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreDesertBoulder3" prob=".00033" rotatemax="3"/>
-</insertAfter> -->
 
 <append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome/decorations">
 			<decoration type="block" blockname="oreDesertBoulder1" prob=".00033" rotatemax="3"/>
@@ -498,38 +412,29 @@
 
 <set xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@prob='0.29']/decorations/decoration[@blockname='carsRandomHelper']/@blockname">CustomCarHelper</set>
 
-<!-- <set xpath="worldgeneration/biomes/biome[@name='wasteland']/spectrum[@name='burnt_forest']/@name">desert</set> -->
+<!-- <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/spectrum[@name='wasteland']/@name">desert</set> -->
 
-<!-- <remove xpath="worldgeneration/biomes/biome[@name='wasteland']/@spectrum"/> -->
+<remove xpath="/worldgeneration/biomes/biome[@name='wasteland']/spectrum[@name='wasteland']"/>
 
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/@prob">97</set> <!-- default is 80 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/Temperature/@min">120</set> <!-- default is 50 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/Temperature/@max">130</set> <!-- default is 90 -->
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/Fog/@min">.05</set> <!-- default is 0 -->
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/Fog/@max">.12</set> <!-- default is 5 -->
 		
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rain']/@prob">2</set> <!-- default is 15 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rain']/Temperature/@min">110</set> <!-- default is 50 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rain']/Temperature/@max">120</set> <!-- default is 90 -->
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rain']/Fog/@min">1</set> <!-- default is 2 -->
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rain']/Fog/@max">3</set> <!-- default is 5 -->
 		
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='storm']/@prob">1</set> <!-- default is 5 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='storm']/Temperature/@min">110</set> <!-- default is 50 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='storm']/Temperature/@max">120</set> <!-- default is 90 -->
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='storm']/Fog/@min">2</set> <!-- default is 3 -->
 <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='storm']/Fog/@max">8</set> <!-- default is 15 -->
 
 <remove xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.3']"/>
-
-<!-- <append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.3']/layers/layer[@depth='*'][@blockname='terrStone']">
-				<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
-				<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
-				<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
-</append>
-
-<insertAfter xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.3']/decorations/decoration[@blockname='resourceRock02']">
-				<decoration type="block" blockname="oreWastelandBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreWastelandBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreWastelandBoulder3" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder3" prob=".00033" rotatemax="3"/>
-</insertAfter> -->
 
 <append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.392']/layers/layer[@depth='*'][@blockname='terrStone']">
 				<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
@@ -550,37 +455,7 @@
 
 <remove xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.412']"/>
 
-<!-- <append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.412']/layers/layer[@depth='*'][@blockname='terrStone']">
-				<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
-				<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
-				<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
-</append>
-
-<insertAfter xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.412']/decorations/decoration[@blockname='resourceRock02']">
-				<decoration type="block" blockname="oreWastelandBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreWastelandBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreWastelandBoulder3" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder3" prob=".00033" rotatemax="3"/>
-</insertAfter> -->
-
 <remove xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.442']"/>
-
-<!-- <append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.442']/layers/layer[@depth='*'][@blockname='terrStone']">
-				<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
-				<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
-				<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
-</append>
-
-<insertAfter xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.442']/decorations/decoration[@blockname='resourceRock02']">
-				<decoration type="block" blockname="oreWastelandBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreWastelandBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreWastelandBoulder3" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder1" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder2" prob=".00033" rotatemax="3"/>
-				<decoration type="block" blockname="oreBurntBoulder3" prob=".00033" rotatemax="3"/>
-</insertAfter> -->
 
 <insertAfter xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='resourceRock02']">
 			<decoration type="prefab" name="wotw_Deco_TungstenVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
@@ -771,11 +646,26 @@
 		<decoration type="block" blockname="treePlainsTree2" prob="0.0012" rotatemax="7"/>
 </append>
 
-<!-- <set xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.3']/decorations/decoration[@blockname='carsRandomHelper']/@blockname">CustomCarHelper</set> -->
 <set xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.392']/decorations/decoration[@blockname='carWrecksRandomHelper']/@blockname">CustomCarHelper</set>
-<!-- <set xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.412']/decorations/decoration[@blockname='carWrecksRandomHelper']/@blockname">CustomCarHelper</set>
-<set xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@prob='0.442']/decorations/decoration[@blockname='carWrecksRandomHelper']/@blockname">CustomCarHelper</set> -->
 <set xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='carWrecksRandomHelper']/@blockname">CustomCarHelper</set>
+
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/@prob">94</set> <!-- default is 83 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/Temperature/@min">60</set> <!-- default is 50 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/Temperature/@max">100</set> <!-- default is 90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/Fog/@min">0</set> <!-- default is 0 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/Fog/@max">.2</set> <!-- default is 5 -->
+		
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rain']/@prob">5</set> <!-- default is 10 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rain']/Temperature/@min">55</set> <!-- default is 50 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rain']/Temperature/@max">95</set> <!-- default is 90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rain']/Fog/@min">1</set> <!-- default is 2 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rain']/Fog/@max">3</set> <!-- default is 5 -->
+		
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='storm']/@prob">4</set> <!-- default is 7 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='storm']/Temperature/@min">55</set> <!-- default is 50 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='storm']/Temperature/@max">95</set> <!-- default is 90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='storm']/Fog/@min">2</set> <!-- default is 3 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='storm']/Fog/@max">8</set> <!-- default is 15 -->
 
 <append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@prob='0.22']/layers/layer[@depth='*'][@blockname='terrStone']">
 					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>

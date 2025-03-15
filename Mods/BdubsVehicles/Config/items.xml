@@ -1,5 +1,178 @@
 <configs>
 	<append xpath="/items">
+		<item name="vehicleBicycleOldBVChassis">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="750"/>
+			<property name="TraderStageTemplate" value="vehicleTier0"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+			<property name="SoundPickup" value="chassis_grab"/>
+			<property name="SoundPlace" value="chassis_place"/>
+		</item>
+		<item name="vehicleBicycleOldBVHandlebars">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="750"/>
+			<property name="TraderStageTemplate" value="vehicleTier0"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+			<property name="SoundPickup" value="handlebars_grab"/>
+			<property name="SoundPlace" value="handlebars_place"/>
+		</item>
+		<item name="vehicleBicycleOldBVPlaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle,vlight,canHaveCosmetic"/>
+			<property name="DescriptionKey" value="vehiclePlaceableBicycleDesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/a21vechs.unity3d?bicycle_PrefabOld"/>
+			<property name="EconomicValue" value="2500"/>
+			<property name="TraderStageTemplate" value="vehicleTier1"/>
+			<property name="SoundPickup" value="bike_grab"/>
+			<property name="SoundPlace" value="bike_place"/>
+			<property class="Action1">
+				<property name="Vehicle" value="vehicleBicycleOldBV"/>
+			</property>
+			<effect_group name="vehicleBicyclePlaceable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+		<item name="vehicleMinibikeOldBVChassis">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="1800"/>
+			<property name="TraderStageTemplate" value="vehicleTier1"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+			<property name="SoundPickup" value="chassis_grab"/>
+			<property name="SoundPlace" value="chassis_place"/>
+		</item>
+		<item name="vehicleMinibikeOldBVHandlebars">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="1800"/>
+			<property name="TraderStageTemplate" value="vehicleTier1"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+			<property name="SoundPickup" value="handlebars_grab"/>
+			<property name="SoundPlace" value="handlebars_place"/>
+		</item>
+		<item name="vehicleMinibikeOldBVPlaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="vehicleMinibikePlaceableDesc"/>
+			<property name="Tags" value="vehicle,varmor,vengine,vfuel,vlight,canHaveCosmetic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/a21vechs.unity3d?minibike_PrefabOld"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="TraderStageTemplate" value="vehicleTier2"/>
+			<property name="SoundPickup" value="minibike_grab"/>
+			<property name="SoundPlace" value="minibike_place"/>
+			<property class="Action1">
+				<property name="Vehicle" value="vehicleMinibikeOldBV"/>
+			</property>
+			<effect_group name="vehicleMinibikePlaceable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="3"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="2000"/>
+			</effect_group>
+		</item>
+		<item name="vehicleMotorcycleOldBVChassis">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="3000"/>
+			<property name="TraderStageTemplate" value="vehicleTier2"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+			<property name="SoundPickup" value="chassis_grab"/>
+			<property name="SoundPlace" value="chassis_place"/>
+		</item>
+		<item name="vehicleMotorcycleOldBVHandlebars">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="3000"/>
+			<property name="TraderStageTemplate" value="vehicleTier2"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+			<property name="SoundPickup" value="handlebars_grab"/>
+			<property name="SoundPlace" value="handlebars_place"/>
+		</item>
+		<item name="vehicleMotorcycleOldBVPlaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+			<property name="Tags" value="vehicle,varmor,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/a21vechs.unity3d?motorcycle_PrefabOld"/>
+			<property name="EconomicValue" value="10000"/>
+			<property name="TraderStageTemplate" value="vehicleTier3"/>
+			<property name="SoundPickup" value="motorcycle_grab"/>
+			<property name="SoundPlace" value="motorcycle_place"/>
+			<property class="Action1">
+				<property name="Vehicle" value="vehicleMotorcycleOldBV"/>
+			</property>
+			<effect_group name="vehicleMotorcyclePlaceable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="4000"/>
+			</effect_group>
+		</item>
+		<item name="vehicleTruck4x4OldBVChassis">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="9000"/>
+			<property name="TraderStageTemplate" value="vehicleTier3"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+			<property name="SoundPickup" value="chassis_grab"/>
+			<property name="SoundPlace" value="chassis_place"/>
+		</item>
+		<item name="vehicleTruck4x4OldBVAccessories">
+			<property name="Extends" value="vehicleBicycleHandlebars"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="9000"/>
+			<property name="TraderStageTemplate" value="vehicleTier3"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+		</item>
+		<item name="vehicleTruck4x4OldBVPlaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vplow,vseat,canHaveCosmetic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/a21vechs.unity3d?Old4x4"/>
+			<property name="EconomicValue" value="30000"/>
+			<property name="TraderStageTemplate" value="vehicleTier4"/>
+			<property class="Action1">
+				<property name="Vehicle" value="vehicleTruck4x4OldBV"/>
+				<property name="VehicleSize" value="4.5, 3.1, 7"/>
+			</property>
+			<effect_group name="main" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="5"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="8000"/>
+			</effect_group>
+		</item>
+		<item name="vehicleGyrocopterOldBVChassis">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="15000"/>
+			<property name="TraderStageTemplate" value="vehicleTier4"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+			<property name="SoundPickup" value="chassis_grab"/>
+			<property name="SoundPlace" value="chassis_place"/>
+		</item>
+		<item name="vehicleGyrocopterOldBVAccessories">
+			<property name="Extends" value="vehicleBicycleHandlebars"/>
+			<property name="Tags" value="vehiclesSkill"/>
+			<property name="EconomicValue" value="15000"/>
+			<property name="TraderStageTemplate" value="vehicleTier4"/>
+			<property name="UnlockedBy" value="craftingVehicles"/>
+		</item>
+		<item name="vehicleGyrocopterOldBVPlaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+			<property name="Tags" value="vehicle,vengine,vseat,vfuel,vlight,canHaveCosmetic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/a21vechs.unity3d?gyrocopterOld"/>
+			<property name="EconomicValue" value="50000"/>
+			<property name="TraderStageTemplate" value="vehicleTier5"/>
+			<property class="Action1">
+				<property name="Vehicle" value="vehicleGyrocopterOldBV"/>
+				<property name="VehicleSize" value="2.5, 2.5, 5.5"/>
+			</property>
+			<effect_group name="vehicleGyrocopterPlaceable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="3500"/>
+			</effect_group>
+		</item>
 		<item name="vehicleBoxTruckchassis">
 			<property name="Extends" value="vehicleWheels"/>
 			<property name="UnlockedBy" value="craftingVehicles"/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModSettings>
+	<Global>
+		<Tab name="Optionals" displayKey="" tooltipKey="">
+			<Category name="General" displayKey="wotwSettingGeneral" tooltipKey="wotwSettingGeneralTooltip">
+				<Switch name="FireEnabled" displayKey="wotwSettingFireEnabled" tooltipKey="wotwSettingFireEnabledTooltip" value="On" defaultValue="On" leftValue="Off" rightValue="On" />
+				<Switch name="AutoRedeemChallenge" displayKey="wotwSettingAutoRedeemChallenge" tooltipKey="wotwSettingAutoRedeemChallengeTooltip" value="Off" defaultValue="Off" leftValue="Off" rightValue="On" />
+				<Switch name="XPNotification" displayKey="wotwSettingXPNotification" tooltipKey="wotwSettingXPNotificationTooltip" value="On" defaultValue="On" leftValue="Off" rightValue="On" />
+				<Switch name="TraderProtection" displayKey="wotwSettingTraderProtection" tooltipKey="wotwSettingTraderProtectionTooltip" value="On" defaultValue="On" leftValue="Off" rightValue="On" />
+				<Switch name="HeadshotOnly" displayKey="wotwSettingHeadshotOnly" tooltipKey="wotwSettingHeadshotOnlyTooltip" value="Off" defaultValue="Off" leftValue="Off" rightValue="On" />
+			</Category>
+		</Tab>
+	</Global>
+	<World />
+</ModSettings>

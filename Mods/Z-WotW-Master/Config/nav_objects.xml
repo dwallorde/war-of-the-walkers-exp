@@ -21,6 +21,18 @@
 			</onscreen_settings>
 	</nav_object_class>
 	
+	<nav_object_class name="Raft" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="UI_Raft"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="UI_Raft"/>
+			</onscreen_settings>
+		</nav_object_class>
+	
 	<nav_object_class name="Fanboat">
 		<property name="requirement_type" value="IsVehicleOwner" />
 
@@ -119,6 +131,52 @@
 			
 			<onscreen_settings>
 				<property name="sprite_name" value="ui_game_symbol_tracking_zombie03"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="64"/>
+				<property name="color" value="255,255,255,255"/>
+				<property name="use_head_offset" value="true"/>
+				<property name="offset" value="0,1,0" />
+				<property name="sprite_size" value="48" />
+				<property name="sprite_fill_type" value="Health" />
+				<property name="sprite_fill_name" value="ui_game_symbol_twitch_overhead_hp_ring" />
+				<property name="sprite_fill_color" value="250,0,0,255" />
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="zombietracking_bossZombie1" extends="animaltracking_hostile">
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie01"/>
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie02"/>
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_twitch_boss_overhead"/>
+				<property name="min_distance" value="0"/>
+				<property name="max_distance" value="64"/>
+				<property name="color" value="255,255,255,255"/>
+				<property name="use_head_offset" value="true"/>
+				<property name="offset" value="0,2,0" />
+				<property name="sprite_size" value="48" />
+				<property name="sprite_fill_type" value="Health" />
+				<property name="sprite_fill_name" value="ui_game_symbol_twitch_overhead_hp_ring" />
+				<property name="sprite_fill_color" value="250,0,0,255" />
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="zombietracking_minionZombie1" extends="animaltracking_hostile">
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie01"/>
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_zombie02"/>
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_twitch_minion_overhead"/>
 				<property name="min_distance" value="0"/>
 				<property name="max_distance" value="64"/>
 				<property name="color" value="255,255,255,255"/>

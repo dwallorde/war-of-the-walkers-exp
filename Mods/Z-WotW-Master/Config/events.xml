@@ -1,0 +1,9 @@
+<wotwConfig>
+<remove xpath="/events/event[@name='halloween']"/>
+<append xpath="/events">
+	<event name="halloween" start_date="10/01" end_date="12/01" />
+</append>
+
+<set xpath="/events/event[@name='christmas']/@start_date">11/01</set>
+<set xpath="/events/event[@name='christmas']/@end_date">01/15</set>
+</wotwConfig>

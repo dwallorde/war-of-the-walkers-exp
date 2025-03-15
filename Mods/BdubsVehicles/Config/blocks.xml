@@ -683,7 +683,7 @@
 			<property name="OnlySimpleRotations" value="false"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-			<property name="CustomIcon" value="Swhite"/>
+			<property name="CustomIcon" value="vehicleStallionplaceable"/>
 			<property name="Stabilitysupport" value="false"/>
 			<property name="CanPickup" value="false"/>
 			<property name="MaxDamage" value="350"/>

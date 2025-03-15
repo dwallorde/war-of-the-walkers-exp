@@ -357,6 +357,32 @@
 	</if>
 </conditional>
 
+<!-- WOTW Birdnest -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="passive_collector_wotwBirdnest" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
+				<window name="windowwotwBirdnest"/>
+				<window name="windowToolswotwBirdnest"/>
+				<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/xui/ruleset[@name='default']">
+			<window_group name="passive_collector_wotwBirdnest" defaultSelected="0" left_panel_valign_top="false" controller="IDC_Core.XUiC_PassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
+				<window name="windowwotwBirdnest"/>
+				<window name="windowToolswotwBirdnest"/>
+				<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	
+	</if>
+</conditional>
+
 <!-- WOTW Advanced Dew Collector -->
 <conditional>
 	<if cond="mod_loaded('zSMXui') == false">

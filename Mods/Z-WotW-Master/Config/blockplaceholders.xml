@@ -589,6 +589,7 @@
 		<block name="hiddenSafePaintingWOTW1" prob="1"/>
 		<block name="hiddenSafePaintingWOTW2" prob="1"/>
 		<block name="hiddenSafePictureHellsJanitor" prob="1"/>
+		<block name="hiddenSafePictureRandomPlanet" prob="1"/>
 		<block name="hiddenSafePictureSunBunnie888" prob="1"/>
 		<block name="hiddenSafePictureShugg" prob="1"/>
 		<block name="hiddenSafePictureDrunkenuff" prob="1"/>
@@ -624,9 +625,7 @@
 		<block name="supplyCrateHealthandArmor" prob="0.6"/>
 		<block name="supplyCrateAmmo" prob="0.5"/>
 		<block name="supplyCrateFoodandDrink" prob="0.75"/>
-		<block name="supplyCrateWeaponsDay5" prob="0.4"/>
-		<block name="supplyCrateWeaponsDay7" prob="0.3"/>
-		<block name="supplyCrateWeaponsDay3" prob="0.5"/>
+		<block name="supplyCrateWeapons" prob="0.5"/>
 		<block name="supplyCrateGeneral" prob="0.8"/>
 	</placeholder>
 	
@@ -650,6 +649,18 @@
 		<block name="wotwPlantHedgeDeadHardened" prob="1.0" biome="desert"/>
 		<block name="wotwPlantHedgeSnowHardened" prob="1.0" biome="snow"/>
 		<block name="wotwPlantHedgeDeadHardened" prob="1.0" biome="wasteland"/>
+	</placeholder>
+	
+	<placeholder name="decoCarMotorFlat">
+		<block name="wotwDecoCarMotorFlat" prob=".33"/>
+		<block name="wotwDecoECOCarMotorFlat" prob=".33"/>
+		<block name="wotwDecoHDCarMotorFlat" prob=".33"/>
+	</placeholder>
+	
+	<placeholder name="decoCarMotorFlipped">
+		<block name="wotwDecoCarMotorFlipped" prob=".33"/>
+		<block name="wotwDecoECOCarMotorFlipped" prob=".33"/>
+		<block name="wotwDecoHDCarMotorFlipped" prob=".33"/>
 	</placeholder>
 </append>
 
@@ -810,5 +821,91 @@
 
 <set xpath="/blockplaceholders/placeholder[@name='treeSmallThinRandomHelper']/block[@name='treeDeadTree01'][@biome='desert']/@name">treeDeadTree01BF</set>
 
-
+<append xpath="/blockplaceholders">
+	<placeholder name="treeDeadRandomHelper">
+		<block name="treeDeadTree01" prob="1.0" biome="snow" randomrotation="true"/>
+		<block name="treeDeadTree01BF" prob="1.0" biome="pine_forest" randomrotation="true"/>
+		<block name="treeDeadTree01BF" prob="1.0" biome="desert" randomrotation="true"/>
+		<block name="treeDeadTree01" prob="1.0" biome="wasteland" randomrotation="true"/>
+		<block name="treeDeadTree01BF" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+	</placeholder>
+	
+	<placeholder name="decoCarTireSmallFlat">
+		<block name="wotwDecoCarTireSmallFlatStd" prob="0.55"/>
+		<block name="wotwDecoCarTireSmallFlatECO" prob="0.3"/>
+		<block name="wotwDecoCarTireSmallFlatHD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarTireFlat">
+		<block name="wotwDecoCarTireFlatStd" prob="0.55"/>
+		<block name="wotwDecoCarTireFlatECO" prob="0.3"/>
+		<block name="wotwDecoCarTireFlatHD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarTirePile">
+		<block name="wotwDecoCarTirePileStd" prob="0.55"/>
+		<block name="wotwDecoCarTirePileECO" prob="0.3"/>
+		<block name="wotwDecoCarTirePileHD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarTireStack">
+		<block name="wotwDecoCarTireStackStd" prob="0.55"/>
+		<block name="wotwDecoCarTireStackECO" prob="0.3"/>
+		<block name="wotwDecoCarTireStackHD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarWheelFlat">
+		<block name="wotwDecoCarWheelFlatStd" prob="0.55"/>
+		<block name="wotwDecoCarWheelFlatECO" prob="0.3"/>
+		<block name="wotwDecoCarWheelFlatHD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarTireSmallFlat02">
+		<block name="wotwDecoCarTireSmallFlat02Std" prob="0.55"/>
+		<block name="wotwDecoCarTireSmallFlat02ECO" prob="0.3"/>
+		<block name="wotwDecoCarTireSmallFlat02HD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarTireFlat02">
+		<block name="wotwDecoCarTireFlat02Std" prob="0.55"/>
+		<block name="wotwDecoCarTireFlat02ECO" prob="0.3"/>
+		<block name="wotwDecoCarTireFlat02HD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarTirePile02">
+		<block name="wotwDecoCarTirePile02Std" prob="0.55"/>
+		<block name="wotwDecoCarTirePile02ECO" prob="0.3"/>
+		<block name="wotwDecoCarTirePile02HD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarTireStack02">
+		<block name="wotwDecoCarTireStack02Std" prob="0.55"/>
+		<block name="wotwDecoCarTireStack02ECO" prob="0.3"/>
+		<block name="wotwDecoCarTireStack02HD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarWheelFlat02">
+		<block name="wotwDecoCarWheelFlat02Std" prob="0.55"/>
+		<block name="wotwDecoCarWheelFlat02ECO" prob="0.3"/>
+		<block name="wotwDecoCarWheelFlat02HD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarWheelOffset01">
+		<block name="wotwDecoCarWheelOffset01Std" prob="0.55"/>
+		<block name="wotwDecoCarWheelOffset01ECO" prob="0.3"/>
+		<block name="wotwDecoCarWheelOffset01HD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarWheelOffset02">
+		<block name="wotwDecoCarWheelOffset02Std" prob="0.55"/>
+		<block name="wotwDecoCarWheelOffset02ECO" prob="0.3"/>
+		<block name="wotwDecoCarWheelOffset02HD" prob="0.15"/>
+	</placeholder>
+	
+	<placeholder name="decoCarWheelOffset03">
+		<block name="wotwDecoCarWheelOffset03Std" prob="0.55"/>
+		<block name="wotwDecoCarWheelOffset03ECO" prob="0.3"/>
+		<block name="wotwDecoCarWheelOffset03HD" prob="0.15"/>
+	</placeholder>
+</append>
 </config>

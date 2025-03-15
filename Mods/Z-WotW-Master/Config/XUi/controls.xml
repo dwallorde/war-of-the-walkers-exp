@@ -25,6 +25,31 @@
 			</rect>
 		</wotw_backpack_item_stack>
 		
+		<wotw_item_stack controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
+			<rect controller="${controller}" style="wotw_vehicle_itemStack, hover" collider_scale="1.0" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" >
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="60" height="60" color="[black]" type="sliced" fillcenter="false" />
+				<sprite depth="3" name="background" sprite="menu_empty3px" width="55" height="55" color="{selectionbordercolor}" type="sliced" globalopacity="true" fillcenter="false"/>
+				<sprite depth="2" name="highlightOverlay" width="54" height="54" color="{backgroundcolor}" pos="0,0" type="sliced" globalopacity="true"/>
+
+				<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored" size="55,55" globalopacity="true"/>
+				<sprite depth="8" name="favoriteIcon" width="15" height="15" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+				<sprite depth="6" name="itemIcon" width="42" height="42" atlas="ItemIconAtlas" sprite="{itemicon}" pos="30,-30" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+				<sprite depth="8" name="lockTypeIcon" width="21" height="21" sprite="{locktypeicon}" pos="2,-2" foregroundlayer="true"/>
+				<sprite depth="8" name="itemtypeicon" width="21" height="21" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+
+				<sprite depth="3" name="durabilityBackground" width="52" height="7" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1, -47" foregroundlayer="true" visible="{hasdurability}" />
+				<filledsprite depth="4" name="durability" width="52" height="7" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" pos="1, -47" foregroundlayer="true" visible="{hasdurability}" />
+
+				<sprite depth="5" name="disabledOverlay" width="54" height="54" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+
+				<label depth="7" name="stackValue" pos="-3,-35" width="52" height="19" text="{itemcount}" font_size="24" effect="outline" justify="{#hasdurability ? 'Center' : 'Right'}" />
+				<label depth="7" name="timer" pos="35,-38" width="52" height="17" font_size="22" justify="center" pivot="center" color="[beige]" effect="outline" effect_distance="1,1" effect_color="0,0,0,255"/>
+				<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="52" height="52" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+				<sprite depth="13" name="assembleIcon" size="37,37" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+				<sprite depth="14" name="quickswapIcon" size="27,27" sprite="server_refresh" pos="40,-2" foregroundlayer="true" />
+			</rect>
+		</wotw_item_stack>
+		
 	<wotw_recipe_stack>
 		<rect controller="RecipeStack" width="60" height="60" collider_scale="1.1">
 				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="63" height="63" color="[black]" type="sliced" fillcenter="false"/>	

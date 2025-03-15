@@ -30,15 +30,15 @@
   <property name="DuplicateRepeatDistance" value="300" />
   <property name="QuestTags" value="clear, infested" />
   <property class="Stats">
-    <property name="TotalVertices" value="3295627" />
-    <property name="TotalTriangles" value="1795217" />
+    <property name="TotalVertices" value="3297455" />
+    <property name="TotalTriangles" value="1796131" />
     <property class="BlockEntities">
       <property name="Vertices" value="1487419" />
       <property name="Triangles" value="712280" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="1544220" />
-      <property name="Triangles" value="914777" />
+      <property name="Vertices" value="1546048" />
+      <property name="Triangles" value="915691" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="225024" />
@@ -68,7 +68,7 @@
     <property class="POILight">
       <property name="0" value="85, 3, 85" />
     </property>
-    <property class="quest_wood">
+    <property class="quest_stick">
       <property name="0" value="87, 11, 45" />
       <property name="1" value="87, 11, 46" />
       <property name="2" value="87, 11, 47" />

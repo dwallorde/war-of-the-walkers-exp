@@ -30,6 +30,7 @@
   <property name="POIMarkerPartToSpawn" value="part_driveway_industrial_01" />
   <property name="POIMarkerPartRotations" value="0" />
   <property name="POIMarkerPartSpawnChance" value="1" />
+  <property name="YOffset" value="-1" />
   <property class="Stats">
     <property name="TotalVertices" value="713170" />
     <property name="TotalTriangles" value="339817" />
@@ -67,6 +68,9 @@
       <property name="0" value="58, 1, 50" />
       <property name="1" value="51, 1, 57" />
     </property>
+    <property class="challenge_cars">
+      <property name="0" value="50, 1, 46" />
+    </property>
     <property class="challenge_gore">
       <property name="0" value="52, 18, 4" />
     </property>
@@ -92,9 +96,6 @@
     </property>
     <property class="Rally">
       <property name="0" value="23, 1, 57" />
-    </property>
-    <property class="challenge_cars">
-      <property name="0" value="31, 1, 54" />
     </property>
   </property>
 </prefab>

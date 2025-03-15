@@ -95,26 +95,26 @@
 				<item group="traderElectrical"  unique_only="true" count="2,10"/>
 				<item group="skillMagazines" unique_only="true" count="0,3"/>
 				<item group="books" unique_only="true" count="0,3"/>
-				<item name="resourceWaterFilter" count="0,3"/>
-				<item name="toolCookingPot" count="0,3"/>
-				<item name="toolCookingGrill" count="0,3"/>
+				<item group="schematicsVehiclesMods" count="0,3"/>
+				<item name="toolCookingPot" count="0,1"/>
+				<item name="toolCookingGrill" count="0,1"/>
 			</trader_items>		
 			<!-- *** General -->
 			<trader_items count="all">
 				<item group="traderAlways"/>
 				<item group="traderGeneral" count="4,10"/>
 				<item group="groupModsAll" count="7,10"/>
-				<item group="tools" unique_only="true" count="10"/>
+				<item group="tools" unique_only="true" count="2,5"/>
 				<item group="generalResources" count="5,8"/>
-				<item group="traderElectrical" unique_only="true" count="2,5"/>
-				<item group="groupMeleeAll" count="5,7"/>
-				<item group="groupRangedAll" count="5,7"/>
-				<item group="weaponsGunParts" count="2,4"/>
+				<item group="traderElectrical" unique_only="true" count="1,5"/>
+				<item group="groupMeleeAll" count="0,1"/>
+				<item group="groupRangedAll" count="0,1"/>
+				<item group="weaponsGunParts" count="1,2"/>
 				<item name="armorParts" count="1,2"/>
-				<item name="resourceSewingKit" count="1,2"/>
-				<item group="groupArmorLight" unique_only="true" count="6"/>
-				<item group="groupArmorMedium" unique_only="true" count="6"/>
-				<item group="groupArmorHeavy" unique_only="true" count="6"/>
+				<item group="groupDyeMods" count="1,2"/>
+				<item group="groupArmorLight" unique_only="true" count="0,2"/>
+				<item group="groupArmorMedium" unique_only="true" count="0,2"/>
+				<item group="groupArmorHeavy" unique_only="true" count="0,2"/>
 				<item group="constructionSupplies" count="2,4"/>
 				<item group="decorativeBlocks" unique_only="true" count="6,10"/>
 			</trader_items>

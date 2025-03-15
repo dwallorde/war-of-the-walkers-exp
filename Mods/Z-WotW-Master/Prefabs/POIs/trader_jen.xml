@@ -5,7 +5,7 @@
   <property name="Zoning" value="any" />
   <property name="RotationToFaceNorth" value="2" />
   <property name="YOffset" value="-2" />
-  <property name="AllowedTownships" value="city,town,rural,wilderness" />
+  <property name="AllowedTownships" value="city,town,rural" />
   <property name="TraderArea" value="True" />
   <property name="TraderAreaProtect" value="0,0,0" />
   <property name="TraderAreaTeleportSize" value="41, 21, 40" />
@@ -32,11 +32,11 @@
   <property name="POIMarkerPartRotations" value="2,2,2,2" />
   <property name="POIMarkerPartSpawnChance" value="1,1,1,1" />
   <property class="Stats">
-    <property name="TotalVertices" value="1221930" />
-    <property name="TotalTriangles" value="484385" />
+    <property name="TotalVertices" value="1276694" />
+    <property name="TotalTriangles" value="509371" />
     <property class="BlockEntities">
-      <property name="Vertices" value="1119332" />
-      <property name="Triangles" value="416418" />
+      <property name="Vertices" value="1174096" />
+      <property name="Triangles" value="441404" />
     </property>
     <property class="ChunkMeshes0">
       <property name="Vertices" value="89036" />

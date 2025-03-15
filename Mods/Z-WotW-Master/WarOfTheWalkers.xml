@@ -54,12 +54,12 @@
 			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
 			Contains the following modlets:
 						-00000-Gears	-Author: Laydor
-						-0-AugmentedQuests 	-Author: jns
+						-0_TFP_Harmony	-Author: The Fun Pimps
 						-0-IDCCore		-Author: I don't Care
 						-0-Quartz		-Author: Laydor
 						-0-SCore 		-Author: sphereii
 						-0-XNPCCore 		-Author: Xyth
-						-1-DarksCleanerz		-Author: Darkstardragon
+						-0-zMoreQuests		-Author: jns
 						-1-DarksMMPack1			-Author: Darkstardragon
 						-1-DarksRaiderGurlz		-Author: Darkstardragon
 						-1-DarksSoldierz		-Author: Darkstardragon
@@ -70,16 +70,22 @@
 						-KHV1-CustomMenuMusic		-Author: Khaine
 						-khzmusik_Zombies			-Author: khzmusik
 						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbCustomTextures	-Author: ocbMaurice
+						-OcbCustomTexturesPlants	-Author: ocbMaurice
 						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbLawnTractor		-Author: ocbMaurice
 						-OcbMicroSplat		-Author: ocbMaurice
 						-OcbPinRecipes		-Author: ocbMaurice
+						-OcbPlantGrowInfo	-Author: ocbMaurice
+						-OcbRemoteDescription	-Author: ocbMaurice
 						-OcbStopFuelWaste		-Author: ocbMaurice
+						-OcbWayPointIcons		-Author: ocbMaurice
 						-SMXcore		-Author: Sirillion
 						-TelricsFishing		-Author: Telric
 						-zSMXhud		-Author: Sirillion
 						-zSMXmenu		-Author: Sirillion
 			7DTD Version Required: V1.3
-			Current Mod Version: 1.3.1.8 Exp
+			Current Mod Version: 1.3.2.0 Exp
 			</Description>
 			<Version/>
 			<DownloadMode>Clone</DownloadMode>
@@ -109,12 +115,12 @@
 			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
 			Contains the following modlets:
 						-00000-Gears	-Author: Laydor
-						-0-AugmentedQuests 	-Author: jns
+						-0_TFP_Harmony	-Author: The Fun Pimps
 						-0-IDCCore		-Author: I don't Care
 						-0-Quartz		-Author: Laydor
 						-0-SCore 		-Author: sphereii
 						-0-XNPCCore 		-Author: Xyth
-						-1-DarksCleanerz		-Author: Darkstardragon
+						-0-zMoreQuests		-Author: jns
 						-1-DarksMMPack1			-Author: Darkstardragon
 						-1-DarksRaiderGurlz		-Author: Darkstardragon
 						-1-DarksSoldierz		-Author: Darkstardragon
@@ -125,16 +131,22 @@
 						-KHV1-CustomMenuMusic		-Author: Khaine
 						-khzmusik_Zombies			-Author: khzmusik
 						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbCustomTextures	-Author: ocbMaurice
+						-OcbCustomTexturesPlants	-Author: ocbMaurice
 						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbLawnTractor		-Author: ocbMaurice
 						-OcbMicroSplat		-Author: ocbMaurice
 						-OcbPinRecipes		-Author: ocbMaurice
+						-OcbPlantGrowInfo	-Author: ocbMaurice
+						-OcbRemoteDescription	-Author: ocbMaurice
 						-OcbStopFuelWaste		-Author: ocbMaurice
+						-OcbWayPointIcons		-Author: ocbMaurice
 						-SMXcore		-Author: Sirillion
 						-TelricsFishing		-Author: Telric
 						-zSMXhud		-Author: Sirillion
 						-zSMXmenu		-Author: Sirillion
 			7DTD Version Required: V1.3
-			Current Mod Version: 1.3.1.8 Exp
+			Current Mod Version: 1.3.2.0 Exp
 			</Description>
 			<Version/>
 			<DownloadMode>Clone</DownloadMode>

@@ -25,16 +25,22 @@
 <append xpath="/ui_display_info/crafting_category_display">
 		<crafting_category_list display_type="armourSmithingWorkstation">
 			<!-- <crafting_category name="Mods" icon="ui_game_symbol_mods" display_name="lblCategoryMods" /> -->
-			<crafting_category name="Clothing" icon="ui_game_symbol_shirt" display_name="lblCategoryClothing" />
+			<!-- <crafting_category name="Clothing" icon="ui_game_symbol_shirt" display_name="lblCategoryClothing" /> -->
+			<crafting_category name="ArmourLight" icon="ui_game_symbol_lightArmour" display_name="lblCategoryArmourLight" />
+			<crafting_category name="ArmourMed" icon="ui_game_symbol_clothing" display_name="lblCategoryArmourMed" />
+			<crafting_category name="ArmourHeavy" icon="ui_game_symbol_heavyArmour" display_name="lblCategoryArmourHeavy" />
+			<crafting_category name="Dyes" icon="ui_game_symbol_dyes" display_name="lblCategoryDyes" />
 		</crafting_category_list>
 </append>
 
 <append xpath="/ui_display_info/crafting_category_display">
 		<crafting_category_list display_type="toolWorkstation">
-			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" />
-			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tools" display_name="lblCategoryToolsTraps" />
+			<!-- <crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" /> -->
+			<!-- <crafting_category name="Tools/Traps" icon="ui_game_symbol_tools" display_name="lblCategoryToolsTraps" /> -->
+			<crafting_category name="Tools" icon="ui_game_symbol_tools" display_name="lblCategoryToolsTraps" />
+			<crafting_category name="WorkstationTools" icon="ui_game_symbol_workstation_tungstenforge" display_name="lblCategoryWorkstationTools" />
 			<crafting_category name="Mods" icon="ui_game_symbol_mods" display_name="lblCategoryMods" />
-			<crafting_category name="Parts" icon="ui_game_symbol_assemble" display_name="lblCategoryParts" />
+			<crafting_category name="Parts" icon="ui_game_symbol_parts2" display_name="lblCategoryParts" />
 		</crafting_category_list>
 </append>
 
@@ -54,8 +60,10 @@
 
 <append xpath="/ui_display_info/crafting_category_display">
 		<crafting_category_list display_type="gunSmithingWorkstation">
-			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" />
-			<!-- <crafting_category name="Mods" icon="ui_game_symbol_mods" display_name="lblCategoryMods" /> -->
+			<!-- <crafting_category name="Ammo/Weapons" icon="ui_game_symbol_weapons" display_name="lblCategoryAmmoWeapons" /> -->
+			<crafting_category name="Ranged Weapons" icon="ui_game_symbol_guns" display_name="lblCategoryGuns"/>
+			<crafting_category name="Melee Weapons" icon="ui_game_symbol_meleeWeapons" display_name="lblCategoryMeleeWpns"/>
+			<crafting_category name="Parts" icon="ui_game_symbol_parts2" display_name="lblCategoryParts" />
 		</crafting_category_list>
 </append>
 
@@ -478,6 +486,24 @@
 
 		<item_display_info display_type="armorHunterBoots" display_group="groupAttire" extends="armorMediumNew" >
 			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<!-- Construction -->
+		<item_display_info display_type="armorConstHelmet" display_group="groupAttire" extends="armorHeavy" >
+			<display_entry name="dHelmetLight" title_key="statHelmetLight" display_type="Decimal1" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorConstOutfit" display_group="groupAttire" extends="armorHeavy" >
+			<display_entry name="dJumpingStaminaLoss" title_key="statJumpingStaminaLoss" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorConstGloves" display_group="groupAttire" extends="armorHeavy" >
+			<display_entry name="dBlockRange" title_key="statBlockRange" display_type="Decimal1" display_leading_plus="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorConstBoots" display_group="groupAttire" extends="armorHeavy" >
+			<display_entry name="dJumpStrength" title_key="statJumpStrength" display_type="Decimal1" display_leading_plus="true"/>
+			<display_entry name="dFallDamage" title_key="statSafeFallDist" display_type="Decimal1" display_leading_plus="true"/>
 		</item_display_info>
 </append>
 

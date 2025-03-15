@@ -21,7 +21,7 @@
   <property name="SleeperVolumeFlags" value="0,0,0,0,0,0,0,0,2,2,1,1,0,0,2,0,0,0,0,0,0,0,0,0,0,2,2,1" />
   <property name="YOffset" value="-5" />
   <property name="EditorGroups" value="house new" />
-  <property name="Tags" value="residential" />
+  <property name="Tags" value="industrial, residential, wotw60" />
   <property name="POIMarkerSize" value="7, 13, 5" />
   <property name="POIMarkerStart" value="39, 4, -5" />
   <property name="POIMarkerGroup" value="Driveway" />
