@@ -20096,6 +20096,7 @@
 	</append>
 	<append xpath="/items/item[@name='meleeToolAllSteelParts']">
 		<property name="UnlockedBy" value="tradesmanCraftHarvestTools"/>
+		<property name="DescriptionKey" value="meleeToolAllSteelPartsDesc"/>
 		<property name="Group" value="Parts"/>
 	</append>
 	<append xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammerParts']">
@@ -20116,15 +20117,22 @@
 	</append>
 	<append xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnucklesParts']">
 		<property name="UnlockedBy" value="craftingResources"/>
+		<property name="DescriptionKey" value="meleeWpnKnucklesT3SteelKnucklesPartsDesc"/>
+	</append>
+	<append xpath="/items/item[@name='armorParts']">
+		<property name="DescriptionKey" value="armorPartsDesc"/>
 	</append>
 	<append xpath="/items/item[@name='meleeToolAxeT3ChainsawParts']">
 		<property name="UnlockedBy" value="craftingResources"/>
+		<property name="DescriptionKey" value="meleeToolAxeT3ChainsawPartsDesc"/>
 	</append>
 	<append xpath="/items/item[@name='meleeWpnBatonT2StunBatonParts']">
 		<property name="UnlockedBy" value="craftingResources"/>
+		<property name="DescriptionKey" value="meleeWpnBatonT2StunBatonPartsDesc"/>
 	</append>
 	<append xpath="/items/item[@name='gunBotRoboticsParts']">
 		<property name="UnlockedBy" value="craftingResources"/>
+		<property name="DescriptionKey" value="gunBotRoboticsPartsDesc"/>
 	</append>
 	<append xpath="/items/item[@name='gunBowT1WoodenBowParts']">
 		<property name="UnlockedBy" value="covertCraftBows"/>
@@ -23972,7 +23980,7 @@
 	<property name="EconomicValue" value="120"/>
 	<property name="Stacknumber" value="50"/> <!-- STK loot -->
 	<property name="UnlockedBy" value="craftingMedical"/>
-	<property name="DisplayType" value="cureInfection"/>
+	<property name="DisplayType" value="cureRadiation"/>
 	<property name="TintColor" value="120,255,120"/>
 	<property name="Group" value="Science,CFChemicals,Medical,TCMedical"/>
 
@@ -23982,7 +23990,7 @@
 		<property name="Sound_start" value="player_painkillers"/>
 	</property>
 	<effect_group tiered="false">
-		<display_value name="dCureInfection" value=".1"/>
+		<display_value name="dCureRadiation" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="radiationCounter" operation="subtract" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffRadiationAddCure"/>
 	</effect_group>
@@ -23998,7 +24006,7 @@
 	<property name="EconomicValue" value="120"/>
 	<property name="Stacknumber" value="50"/> <!-- STK loot -->
 	<property name="UnlockedBy" value="craftingMedical"/>
-	<property name="DisplayType" value="cureInfection"/>
+	<property name="DisplayType" value="cureRadiation"/>
 	<property name="TintColor" value="120,255,120"/>
 	<property name="Group" value="Science,CFChemicals,Medical,TCMedical"/>
 
@@ -24008,7 +24016,7 @@
 		<property name="Sound_start" value="player_painkillers"/>
 	</property>
 	<effect_group tiered="false">
-		<display_value name="dCureInfection" value=".5"/>
+		<display_value name="dCureRadiation" value=".5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="radiationCounter" operation="subtract" value="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffRadiationAddCure"/>
 	</effect_group>

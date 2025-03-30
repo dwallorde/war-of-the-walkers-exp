@@ -283,6 +283,10 @@
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
 		
+		<item_display_info display_type="cureRadiation" display_group="groupConsumables">
+			<display_entry name="dCureRadiation" title_key="statRadiationCure" display_type="Percent"/>
+		</item_display_info>
+		
 		<item_display_info display_type="ammoFlare" display_group="groupAmmo">
 			<display_entry name="dFuseTime" title_key="statFuseTime" display_type="Time" negative_preferred="true"/>
 		</item_display_info>

@@ -5597,7 +5597,7 @@
 <!-- Heavy Armour -->
 <perk name="soldierCraftHeavyArmour" max_level="1" parent="skillSoldier5" name_key="soldierCraftHeavyArmourName" desc_key="soldierCraftHeavyArmourDesc" icon="ui_game_symbol_heavyArmour">
 	<level_requirements level="1">
-		<requirement name="ProgressionLevel" progression_name="attClassRangerMaster" operation="GTE" value="1" desc_key="reqRangerClass"/>
+		<requirement name="ProgressionLevel" progression_name="attClassSoldierMaster" operation="GTE" value="1" desc_key="reqSoldierClass"/>
 	</level_requirements>
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorHeavyMaster"/>
@@ -6097,23 +6097,23 @@
 <!-- Electricutioner -->
 <perk name="perkElectrocutioner" max_level="5" parent="skillTechnician2" name_key="perkElectrocutionerName" desc_key="perkElectrocutionerDesc" icon="ui_game_symbol_electric_power">
 	<level_requirements level="1">
-		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="10" desc_key="reqRoboticsJunk10"/>
+		<requirement name="ProgressionLevel" progression_name="perkASRoboticJunk" operation="GTE" value="10" desc_key="reqRoboticsJunk10"/>
 	</level_requirements>
 	<level_requirements level="2">
 		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="1" desc_key="reqTechnicianClass"/>
-		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="25" desc_key="reqRoboticsJunk25"/>
+		<requirement name="ProgressionLevel" progression_name="perkASRoboticJunk" operation="GTE" value="25" desc_key="reqRoboticsJunk25"/>
 	</level_requirements>
 	<level_requirements level="3">
 		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="2" desc_key="reqTechnicianClass2"/>
-		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="50" desc_key="reqRoboticsJunk50"/>
+		<requirement name="ProgressionLevel" progression_name="perkASRoboticJunk" operation="GTE" value="50" desc_key="reqRoboticsJunk50"/>
 	</level_requirements>
 	<level_requirements level="4">
 		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="2" desc_key="reqTechnicianClass2"/>
-		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="75" desc_key="reqRoboticsJunk75"/>
+		<requirement name="ProgressionLevel" progression_name="perkASRoboticJunk" operation="GTE" value="75" desc_key="reqRoboticsJunk75"/>
 	</level_requirements>
 	<level_requirements level="5">
 		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="3" desc_key="reqTechnicianClass3"/>
-		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="100" desc_key="reqRoboticsJunk100"/>
+		<requirement name="ProgressionLevel" progression_name="perkASRoboticJunk" operation="GTE" value="100" desc_key="reqRoboticsJunk100"/>
 	</level_requirements>
 
 	<effect_group>
@@ -6265,8 +6265,8 @@
 	
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="carBattery,smallEngine,wotwResourceEngineParts,wotwResourceEngineAccessories,wotwResourceEngineBlock,wotwResourceEngineTransmission"/>
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="wotwECOBattery,wotwECOEngine,wotwResourceEngineECOParts,wotwECOVehicleWheels,wotwResourceEngineECOBlock,wotwResourceEngineECOTransmission"/>
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="wotwHDBattery,wotwHDEngine,wotwResourceEngineHDParts,wotwHDVehicleWheels,wotwResourceEngineHDBlock,wotwResourceEngineHDTransmission"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="wotwECOBattery,wotwECOEngine,wotwResourceEngineECOParts,wotwResourceEngineECOAccessories,wotwECOVehicleWheels,wotwResourceEngineECOBlock,wotwResourceEngineECOTransmission"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="wotwHDBattery,wotwHDEngine,wotwResourceEngineHDParts,wotwResourceEngineHDAccessories,wotwHDVehicleWheels,wotwResourceEngineHDBlock,wotwResourceEngineHDTransmission"/>
 		
 		<effect_description level="1" desc_key="technicianCraftMechanicalRank1Desc" long_desc_key="technicianCraftMechanicalRank1LongDesc"/>
 		<effect_description level="2" desc_key="technicianCraftMechanicalRank2Desc" long_desc_key="technicianCraftMechanicalRank2LongDesc"/>
@@ -6813,7 +6813,7 @@
 		<unlock_entry item="ammoBundle9mmBulletHP,ammoBundle762mmBulletHP,ammoBundleShotgunSlug,ammoBundle44MagnumBulletHP,wotwAmmo45ACPHPBundle,wotwAmmo20GShotgunSlugBundle" unlock_tier="2"/>
 	</display_entry>
 	<display_entry icon="ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP" name_key="ammoT4-5" unlock_level="100" has_quality="false" >
-		<unlock_entry item="wotwAmmo556mmBulletHPBundle,wotwAmmo57mmBulletHPBundle,ammoBundle9mmBulletAP,ammoBundle762mmBulletAP,ammoBundleShotgunBreachingSlug,ammoBundle44MagnumBulletAP,wotwAmmo45ACPAPBundle,wotwAmmo20GShotgunBreachingSlugBundle,wotwAmmo556mmBulletAPBundle,wotwAmmo57mmBulletAPBundle,wotwResourceSmokelessGunPowderBundle" unlock_tier="3"/>
+		<unlock_entry item="wotwAmmo556mmBulletHPBundle,wotwAmmo57mmBulletHPBundle,ammoBundle9mmBulletAP,ammoBundle762mmBulletAP,ammoBundleShotgunBreachingSlug,ammoBundle44MagnumBulletAP,wotwAmmo45ACPAPBundle,wotwAmmo20GShotgunBreachingSlugBundle,wotwAmmo556mmBulletAPBundle,wotwAmmo57mmBulletAPBundle,wotwResourceSmokelessGunPowderBundle" unlock_tier="1"/>
 	</display_entry>
 	
 	<effect_group>
@@ -6848,7 +6848,7 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="88,100" value="1" tags="ammoBundleArrowStone,ammoBundleArrowIron,ammoBundleArrowFlaming,ammoBundleCrossbowBoltFlaming,ammoBundleArrowSteelAP,ammoBundleCrossbowBoltExploding,ammoBundleArrowExploding,ammoBundleCrossbowBoltIron,ammoBundleCrossbowBoltSteelAP,ammoBundleCrossbowBoltStone"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="92,100" value="1" tags="ammoBundle9mmBulletBall,ammoBundle762mmBulletBall,ammoBundleShotgunShell,ammoBundle44MagnumBulletBall,wotwAmmo45ACPBundle,wotwAmmo20GShotgunShellBundle,wotwAmmo556mmBulletBundle,wotwAmmo57mmBulletBundle"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="96,100" value="1" tags="ammoBundle9mmBulletHP,ammoBundle762mmBulletHP,ammoBundleShotgunSlug,ammoBundle44MagnumBulletHP,wotwAmmo45ACPHPBundle,wotwAmmo20GShotgunSlugBundle,wotwAmmo556mmBulletHPBundle,wotwAmmo57mmBulletHPBundle"/>
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="ammoBundle9mmBulletAP,ammoBundle762mmBulletAP,ammoBundleShotgunBreachingSlug,ammoBundle44MagnumBulletAP,wotwAmmo45ACPAPBundle,wotwAmmo20GShotgunBreachingSlugBundle,wotwAmmo556mmBulletAPBundle,wotwAmmo57mmBulletAPBundle,wotwResourceSmokelessGunPowderBundle"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="wotwAmmo556mmBulletHPBundle,wotwAmmo57mmBulletHPBundle,ammoBundle9mmBulletAP,ammoBundle762mmBulletAP,ammoBundleShotgunBreachingSlug,ammoBundle44MagnumBulletAP,wotwAmmo45ACPAPBundle,wotwAmmo20GShotgunBreachingSlugBundle,wotwAmmo556mmBulletAPBundle,wotwAmmo57mmBulletAPBundle,wotwResourceSmokelessGunPowderBundle"/>
 	</effect_group>
 </crafting_skill>
 

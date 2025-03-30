@@ -1921,6 +1921,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Dwall here, I am leaving this note here hoping that one day someone will find this.  That day has come apparantly, unless zombies can read.  Attached is a map to some hidden treasure I left burried just in case I needed later on.  I don't, so as far as I can tell, you are most deserving.  Good Luck" />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -1947,6 +1948,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Attached is a map to the last known where abouts of the missing Health Supplies.  Find it and it's yours!" />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -1973,6 +1975,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Attached is a map to the last known where abouts of the missing Building Supplies.  Find it and it's yours!" />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -1999,6 +2002,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Attached is a map to the last known where abouts of the missing Ammo Supplies.  Find it and it's yours!" />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2025,6 +2029,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Attached is a map to the last known where abouts of the missing Food and Drink Supplies.  Find it and it's yours!" />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2051,6 +2056,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Attached is a map to the last known where abouts of the missing Weapons Supplies.  Find it and it's yours!" />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2081,6 +2087,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of these Building Supplies." />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2106,6 +2113,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of a Tradesman Supplies." />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2133,6 +2141,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of a Gun Crate." />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2158,6 +2167,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of a Weapon Crate." />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2185,6 +2195,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of these Food Supplies." />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2210,6 +2221,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of these Farm Supplies." />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2237,6 +2249,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of a Armour Crate." />
 		<property name="difficulty" value="hard" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 		
 		<objective type="TreasureChest">
@@ -2264,6 +2277,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of a Base Traps Crate." />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 
 		<objective type="TreasureChest">
@@ -2289,6 +2303,7 @@
 		<property name="category_key" value="treasure" />
 		<property name="offer" value="Check your map for the location of a Vehicle Parts Crate." />
 		<property name="difficulty" value="medium" />
+		<property name="extra_tags" value="treasure"/>
 		<property name="shareable" value="false" />
 
 		<objective type="TreasureChest">
@@ -2417,7 +2432,7 @@
 		<property name="difficulty" value="easy"/>
 		<property name="shareable" value="false"/>
 
-		<reward type="Recipe" id="classPaperBarter"/>
+		<reward type="Recipe" id="classPaperBuilder"/>
 		<reward type="Quest" id="0wotwQuestClass_Builder"/>
 	</quest>
 	
@@ -3512,6 +3527,48 @@
 <append xpath="/quests/quest[@id='tier3_buried_supplies']">
 	<variable name="extra_tags" value="treasure"/>
 </append>
+
+<append xpath="/quests/quest[@id='treasure_taylor']">
+	<property name="extra_tags" value="treasure" param1="extra_tags"/>
+</append>
+
+<append xpath="/quests/quest[@id='treasure_nickole']">
+	<property name="extra_tags" value="treasure" param1="extra_tags"/>
+</append>
+
+<append xpath="/quests/quest[@id='treasure_stephan']">
+	<property name="extra_tags" value="treasure" param1="extra_tags"/>
+</append>
+
+<append xpath="/quests/quest[@id='treasure_jennifer']">
+	<property name="extra_tags" value="treasure" param1="extra_tags"/>
+</append>
+
+<append xpath="/quests/quest[@id='treasure_claude']">
+	<property name="extra_tags" value="treasure" param1="extra_tags"/>
+</append>
+
+<append xpath="/quests/quest[@id='treasure_sarah']">
+	<property name="extra_tags" value="treasure" param1="extra_tags"/>
+</append>
+
+<append xpath="/quests/quest[@id='treasure_raphael']">
+	<property name="extra_tags" value="treasure" param1="extra_tags"/>
+</append>
+
+<set xpath="/quests/quest[@id='tier1_clear']/property[@name='extra_tags']/@value">clear</set>
+<set xpath="/quests/quest[@id='tier2_clear']/variable[@name='extra_tags']/@value">clear</set>
+<set xpath="/quests/quest[@id='tier3_clear']/variable[@name='extra_tags']/@value">clear</set>
+<set xpath="/quests/quest[@id='tier4_clear']/variable[@name='extra_tags']/@value">clear</set>
+<set xpath="/quests/quest[@id='tier5_clear']/variable[@name='extra_tags']/@value">clear</set>
+<set xpath="/quests/quest[@id='tier6_clear']/variable[@name='extra_tags']/@value">clear</set>
+
+<set xpath="/quests/quest[@id='tier1_fetch']/property[@name='extra_tags']/@value">fetch</set>
+<set xpath="/quests/quest[@id='tier2_fetch']/variable[@name='extra_tags']/@value">fetch</set>
+<set xpath="/quests/quest[@id='tier3_fetch']/variable[@name='extra_tags']/@value">fetch</set>
+<set xpath="/quests/quest[@id='tier4_fetch']/variable[@name='extra_tags']/@value">fetch</set>
+<set xpath="/quests/quest[@id='tier5_fetch']/variable[@name='extra_tags']/@value">fetch</set>
+<set xpath="/quests/quest[@id='tier6_fetch']/variable[@name='extra_tags']/@value">fetch</set>
 
 <remove xpath="/quests/quest[@id='quest_whiteRiverCitizen1']/reward[@id='meleeToolShovelT0StoneShovel']"/>
 <append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">

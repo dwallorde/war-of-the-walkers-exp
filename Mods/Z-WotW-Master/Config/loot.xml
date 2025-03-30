@@ -5048,7 +5048,7 @@
 
 <set xpath="/lootcontainers/lootcontainer[@name='fastFoodTrash']/@size">5,2</set>
 
-<set xpath="/lootcontainers/lootcontainer[@name='cupboard']/@size">5,3</set>
+<set xpath="/lootcontainers/lootcontainer[@name='cupboard']/@size">5,4</set>
 
 <set xpath="/lootcontainers/lootcontainer[@name='laundry']/@size">5,4</set>
 

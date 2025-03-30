@@ -538,15 +538,15 @@
 	<challenge name="looterLootJunkItems" title_key="challengeLooterLootJunkItems" icon="ui_game_symbol_junkitems" group="Looter"
 		short_description_key="challengeLooterLootJunkItemsShort" description_key="challengeLooterLootJunkItemsDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<!-- <objective type="GatherTags, SCore" item_tags="junk" count="500"/> -->
-		<objective type="GatherTags, SCore" loot_list="garbage" item_tags="junk" count="500"/>
+		<objective type="GatherTags, SCore" item_tags="junk" count="500"/>
+		<!-- <objective type="GatherTags, SCore" loot_list="garbage" item_tags="junk" count="500"/> -->
 	</challenge>
 	
 	<challenge name="looterLootAmmoItems" title_key="challengeLooterLootAmmoItems" icon="ui_game_symbol_ammo" group="Looter"
 		short_description_key="challengeLooterLootAmmoItemsShort" description_key="challengeLooterLootAmmoItemsDesc"
 		reward_text_key="reward_looterClassPoint" reward_event="reward_looterClassPoint">
-		<!-- <objective type="GatherTags, SCore" item_tags="ammo" count="500"/> -->
-		<objective type="GatherTags, SCore" loot_list="munitions" item_tags="ammo" count="500"/>
+		<objective type="GatherTags, SCore" item_tags="ammo" count="500"/>
+		<!-- <objective type="GatherTags, SCore" loot_list="munitions" item_tags="ammo" count="500"/> -->
 	</challenge>
 	
 	<challenge name="looterLootPartsItems" title_key="challengeLooterLootPartsItems" icon="ui_game_symbol_parts2" group="Looter"
@@ -559,23 +559,23 @@
 	<challenge name="looterLootVehicleItems" title_key="challengeLooterLootVehicleItems" icon="ui_game_symbol_parts" group="Looter"
 		short_description_key="challengeLooterLootVehicleItemsShort" description_key="challengeLooterLootVehicleItemsDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<!-- <objective type="GatherTags, SCore" item_tags="vehiclesSkill" count="25"/> -->
-		<objective type="GatherTags, SCore" loot_list="cars" item_tags="vehiclesSkill" count="50"/>
+		<objective type="GatherTags, SCore" item_tags="vehiclesSkill" count="25"/>
+		<!-- <objective type="GatherTags, SCore" loot_list="cars" item_tags="vehiclesSkill" count="50"/> -->
 	</challenge>
 	
 	<challenge name="looterLootMedicalItems" title_key="challengeLooterLootMedicalItems" icon="ui_game_symbol_medical" group="Looter"
 		short_description_key="challengeLooterLootMedicalItemsShort" description_key="challengeLooterLootMedicalItemsDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<!-- <objective type="GatherTags, SCore" item_tags="medical" count="100"/> -->
-		<objective type="GatherTags, SCore" loot_list="popnpillsShelves" item_tags="medical" count="100"/>
+		<objective type="GatherTags, SCore" item_tags="medical" count="100"/>
+		<!-- <objective type="GatherTags, SCore" loot_list="popnpillsShelves" item_tags="medical" count="100"/> -->
 	</challenge>
 	
 	<challenge name="looterLootFoodItems" title_key="challengeLooterLootFoodItems" icon="ui_game_symbol_greaterFoodandDrink" group="Looter"
 		short_description_key="challengeLooterLootFoodItemsShort" description_key="challengeLooterLootFoodItemsDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<!-- <objective type="GatherTags, SCore" item_tags="food,drinks" count="100"/> -->
+		<objective type="GatherTags, SCore" item_tags="food,drinks" count="100"/>
 		<!-- <objective type="GatherTags, SCore" loot_list="foodPileSmall,foodPileMed,foodPileLarge" item_tags="food,drinks" count="100"/> -->
-		<objective type="GatherTags, SCore" loot_list="shamwayShelves" item_tags="food,drinks" count="100"/>
+		<!-- <objective type="GatherTags, SCore" loot_list="shamwayShelves" item_tags="food,drinks" count="100"/> -->
 	</challenge>
 	
 	<challenge name="looterCraftScavengerArmour" title_key="challengeLooterCraftScavengerArmour" icon="ui_game_symbol_actionArmour" group="Looter"
