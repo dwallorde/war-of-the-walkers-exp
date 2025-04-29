@@ -3389,8 +3389,8 @@
 	<property name="Mesh" value="@:Entities/LootContainers/shippingCrateShotgunPrefab.prefab"/>
 	<!-- <property name="UserSpawnType" value="None"/> -->
 	<property name="Faction" value="none"/>
-	<property name="LootListAlive" value="supplyCrateRangedT1"/>
-	<property name="LootListOnDeath" value="supplyCrateRangedT1"/>
+	<property name="LootListAlive" value="supplyCrateWeapons"/>
+	<property name="LootListOnDeath" value="supplyCrateWeapons"/>
 	<property name="TimeStayAfterDeath" value="999999"/>
 	<property name="IsEnemyEntity" value="false"/>
 	<property name="NavObject" value="flareSmallWeaponsSupply" />

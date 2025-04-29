@@ -433,7 +433,7 @@
 	<challenge name="fighterDecapitateZombies" title_key="challengeFighterDecapitateZombies" icon="ui_game_symbol_decapitation" group="Fighter"
 		short_description_key="challengeFighterDecapitateZombiesShort" description_key="challengeFighterDecapitateZombiesDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="Decapitation, SCore" count="10" />
+		<objective type="Decapitation, SCore" count="10" item_tag="gun,knife,machete,axe"/>
 	</challenge>
 	
 	<challenge name="fighterCraftBikerArmour" title_key="challengeFighterCraftBikerArmour" icon="ui_game_symbol_actionArmour" group="Fighter"

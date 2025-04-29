@@ -30,15 +30,15 @@
   <property name="POIMarkerPartRotations" value="1,1,1,3" />
   <property name="POIMarkerPartSpawnChance" value="1,1,1,1" />
   <property class="Stats">
-    <property name="TotalVertices" value="2546301" />
-    <property name="TotalTriangles" value="1383082" />
+    <property name="TotalVertices" value="2924951" />
+    <property name="TotalTriangles" value="1521488" />
     <property class="BlockEntities">
-      <property name="Vertices" value="2513493" />
-      <property name="Triangles" value="1355834" />
+      <property name="Vertices" value="2891383" />
+      <property name="Triangles" value="1493152" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="24514" />
-      <property name="Triangles" value="13376" />
+      <property name="Vertices" value="24538" />
+      <property name="Triangles" value="13388" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="0" />
@@ -57,8 +57,8 @@
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes5">
-      <property name="Vertices" value="8150" />
-      <property name="Triangles" value="13800" />
+      <property name="Vertices" value="8886" />
+      <property name="Triangles" value="14876" />
     </property>
   </property>
   <property class="IndexedBlockOffsets">
@@ -82,26 +82,28 @@
       <property name="1" value="58, 1, 21" />
       <property name="2" value="59, 4, 24" />
     </property>
+    <property class="challenge_sinks">
+      <property name="0" value="54, 1, 48" />
+    </property>
+    <property class="challenge_pallet">
+      <property name="0" value="58, 4, 11" />
+    </property>
     <property class="challenge_mech_parts">
       <property name="0" value="52, 1, 30" />
-      <property name="1" value="46, 1, 40" />
-      <property name="2" value="54, 1, 41" />
-      <property name="3" value="52, 1, 42" />
-      <property name="4" value="54, 1, 43" />
-      <property name="5" value="46, 1, 45" />
-      <property name="6" value="49, 1, 45" />
-      <property name="7" value="52, 1, 45" />
-      <property name="8" value="50, 1, 39" />
+      <property name="1" value="50, 1, 39" />
+      <property name="2" value="46, 1, 40" />
+      <property name="3" value="54, 1, 41" />
+      <property name="4" value="52, 1, 42" />
+      <property name="5" value="54, 1, 43" />
+      <property name="6" value="46, 1, 45" />
+      <property name="7" value="49, 1, 45" />
+      <property name="8" value="52, 1, 45" />
     </property>
     <property class="challenge_steel">
       <property name="0" value="54, 1, 42" />
     </property>
     <property class="Trader">
       <property name="0" value="33, 1, 44" />
-    </property>
-    <property class="challenge_sinks">
-      <property name="0" value="35, 1, 47" />
-      <property name="1" value="36, 1, 47" />
     </property>
   </property>
 </prefab>

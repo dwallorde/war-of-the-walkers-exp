@@ -12694,7 +12694,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="tungsten" />
 	<property name="Weight" value="1" />
-	<property name="Stacknumber" value="6000" /> <!-- STK resource -->
+	<property name="Stacknumber" value="10000" /> <!-- STK resource -->
 	<property name="EconomicValue" value="25" />
 	<property name="EconomicBundleSize" value="10" />
 	<property name="Group" value="Resources" />
@@ -17030,7 +17030,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="ClassPaper"/>
-	<property name="Stacknumber" value="5"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
 	<property name="FuelValue" value="0"/>
 	<property name="Weight" value="0"/>
 	<property name="EconomicValue" value="250"/>
@@ -19427,11 +19427,11 @@
 	<append xpath="/items/item[@name='gunBowT3CompoundCrossbow']/property[@class='Action0']/property[@name='Magazine_items']/@value">,wotwAmmoCrossbowBoltTungsten,unloadgun3</append>
 	<append xpath="/items/item[@name='gunBotT2JunkTurret']/property[@class='Action0']/property[@name='Magazine_items']/@value">,unloadgun1</append>
 	
-	<set xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@class='Action0']/property[@name='Class']/@value">OpenBundle</set>
+	<!-- <set xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@class='Action0']/property[@name='Class']/@value">OpenBundle</set>
 	<append xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@class='Action0']">
 			<property name="Create_item" value="resetQuestSurvivalistClass1,resetQuestSoldierClass1,resetQuestTradesmanClass1,resetQuestTechnicianClass1,resetQuestCovertClass1"/>
 			<property name="Create_item_count" value="1,1,1,1,1"/>
-	</append>
+	</append> -->
 	
 	<set xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']/@value">50</set>
 	
@@ -25372,7 +25372,63 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingVehicles" level="100" show_message="false"/>
 	</effect_group>
 </item>
+
+<item name="questRewardECOVehiclePartsBundle">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bundleVehicleParts"/>
+	<property name="CustomIconTint" value="FFFFFF"/>
+	<property name="ItemTypeIcon" value="bundle"/>
+	<property name="DescriptionKey" value="questRewardECOVehiclePartsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="ecoSmallEngine,ecoBattery"/>
+		<property name="Random_item_count" value="1,1"/>
+		<property name="Random_count" value="1"/>
+		<property name="Unique_random_only" value="true"/>
+	</property>
+</item>
+
+<item name="questRewardHDVehiclePartsBundle">
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bundleVehicleParts"/>
+	<property name="CustomIconTint" value="FFFFFF"/>
+	<property name="ItemTypeIcon" value="bundle"/>
+	<property name="DescriptionKey" value="questRewardHDVehiclePartsBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourcePaper"/>
+		<property name="Create_item_count" value="0"/>
+		<property name="Random_item" value="hdSmallEngine,hdBattery"/>
+		<property name="Random_item_count" value="1,1"/>
+		<property name="Random_count" value="1"/>
+		<property name="Unique_random_only" value="true"/>
+	</property>
+</item>
 </append>
+
+<set xpath="/items/item[@name='questRewardBRDMPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardBuggyPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwECOVehicleWheels,questRewardECOVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardChargerPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardDirtBikePartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardGNXPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardGolfCartPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwECOVehicleWheels,questRewardECOVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardHotRodPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardHumveePartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardJunkerPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwECOVehicleWheels,questRewardECOVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardLMTVPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardMarauderPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwECOVehicleWheels,questRewardECOVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardMD500PartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwECOVehicleWheels,questRewardECOVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardMRAPPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwECOVehicleWheels,questRewardECOVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardNovaPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwECOVehicleWheels,questRewardECOVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardOldSemiPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardPickupPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardRatPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwECOVehicleWheels,questRewardECOVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardStallionPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardUAZ452PartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardUH60PartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
+<set xpath="/items/item[@name='questRewardWorkTruckPartsBundle']/property[@class='Action0']/property[@name='Create_item']/@value">vehiclesSkillMagazine,wotwHDVehicleWheels,questRewardHDVehiclePartsBundle</set>
 
 <append xpath="/items/item[@name='adminPerkBook']/effect_group">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkDBChickenEggs" level="-1" show_message="false"/>
@@ -25695,5 +25751,7 @@
 <append xpath="/items/item[@name='vehicleLawnTractorPlaceable']">
 	<property name="DescriptionKey" value="vehicleLawnTractorPlaceableDesc"/>
 </append>
+
+<remove xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/effect_group[@name='Drink Tier Trader']"/>
 
 </config>

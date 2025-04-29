@@ -4094,6 +4094,8 @@
 	<ingredient name="resourceSpring" count="5"/>
 </recipe>
 
+
+
 <!-- Steel Tool Parts -->
 <recipe name="meleeToolAllSteelParts" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" craft_time="5" tags="learnable,perkAdvancedEngineering">
 	<ingredient name="resourceForgedSteel" count="20"/>
@@ -4110,7 +4112,7 @@
 	<ingredient name="wotwResourceToolCraftingKit" count="1"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="wotwAxePartHead,meleeToolAllSteelParts"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="wotwResourceToolCraftingKit,meleeToolAllSteelParts"/>
 		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
 	</effect_group>
 </recipe>
@@ -4122,7 +4124,7 @@
 	<ingredient name="wotwResourceToolCraftingKit" count="4"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="wotwAxePartHead,meleeToolAllSteelParts"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="wotwResourceToolCraftingKit,meleeToolAllSteelParts"/>
 		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
 	</effect_group>
 </recipe>
@@ -4134,7 +4136,7 @@
 	<ingredient name="wotwResourceToolCraftingKit" count="6"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="wotwAxePartHead,meleeToolAllSteelParts"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="wotwResourceToolCraftingKit,meleeToolAllSteelParts"/>
 		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
 	</effect_group>
 </recipe>
@@ -6278,6 +6280,14 @@
 </recipe>
 
 <recipe name="wotwSledgePartHead" count="1" craft_area="gunSmithingWorkstation" craft_tool="calipers" craft_time="5" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="resourceForgedIron" count="40"/>
+	<ingredient name="resourceMechanicalParts" count="10"/>
+	<ingredient name="resourceOil" count="4"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceSpring" count="8"/>
+</recipe>
+
+<recipe name="wotwSpearPartHead" count="1" craft_area="gunSmithingWorkstation" craft_tool="calipers" craft_time="5" tags="learnable,perkAdvancedEngineering">
 	<ingredient name="resourceForgedIron" count="40"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceOil" count="4"/>

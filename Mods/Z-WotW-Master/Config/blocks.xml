@@ -6399,6 +6399,8 @@
 	<drop event="Harvest" name="blackberries" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="blackberries" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedBlackberry1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -6411,6 +6413,9 @@
 	<drop event="Harvest" name="blackberries" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedBlackberry1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
 	<drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.5"/>
+	<drop event="Harvest" name="blackberries" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
@@ -6456,6 +6461,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedBlackberry.unity3d?plantBlackberryHarvest"/>
 	<drop event="Harvest" name="blackberries" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="blackberries" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="blackberries" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedBlackberryFert1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedBlackberryFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -6496,6 +6504,9 @@
 	<drop event="Harvest" name="blackberries" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="blackberries" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedNBlackberry1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="blackberries" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedNBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedNBlackberry1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -6535,6 +6546,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedBlackberry.unity3d?plantBlackberryHarvest"/>
 	<drop event="Harvest" name="blackberries" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="blackberries" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="blackberries" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedNBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedBlackberryFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -6569,6 +6583,8 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedStrawberry.unity3d?plantStrawberryHarvest"/>
 	<drop event="Harvest" name="strawberries" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="strawberries" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="plantedStrawberry1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -6581,6 +6597,9 @@
 	<drop event="Harvest" name="strawberries" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="strawberries" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedStrawberry1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="strawberries" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedStrawberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedStrawberry1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -6628,6 +6647,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedStrawberry.unity3d?plantStrawberryHarvest"/>
 	<drop event="Harvest" name="strawberries" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="strawberries" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="strawberries" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedStrawberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedStrawberryFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -6667,6 +6689,9 @@
 	<drop event="Harvest" name="strawberries" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="strawberries" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedStrawberry1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="strawberries" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedStrawberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedStrawberry1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -6707,6 +6732,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedStrawberry.unity3d?plantStrawberryHarvest"/>
 	<drop event="Harvest" name="strawberries" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="strawberries" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="strawberries" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedStrawberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedStrawberryFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -6742,6 +6770,8 @@
 	<drop event="Harvest" name="carrot" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="carrot" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedCarrot1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -6754,6 +6784,9 @@
 	<drop event="Harvest" name="carrot" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="carrot" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedCarrot1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="carrot" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedCarrot1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCarrot1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -6801,6 +6834,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedCarrot.unity3d?plantCarrotHarvest"/>
 	<drop event="Harvest" name="carrot" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="carrot" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="carrot" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedCarrot1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedCarrotFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -6841,6 +6877,9 @@
 	<drop event="Harvest" name="carrot" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="carrot" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedCarrot1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="carrot" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedCarrot1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCarrot1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -6881,6 +6920,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedCarrot.unity3d?plantCarrotHarvest"/>
 	<drop event="Harvest" name="carrot" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="carrot" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="carrot" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedCarrot1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedCarrotFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -6917,6 +6959,8 @@
 	<drop event="Harvest" name="wheat" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="wheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedWheat1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
@@ -6927,6 +6971,9 @@
 	<drop event="Harvest" name="wheat" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="wheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedWheat1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="wheat" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedWheat1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedWheat1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -6974,6 +7021,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedWheat.unity3d?plantWheatHarvest" />
 	<drop event="Harvest" name="wheat" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="wheat" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="wheat" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedWheat1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedWheatFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -7014,6 +7064,9 @@
 	<drop event="Harvest" name="wheat" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="wheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedWheat1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="wheat" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedWheat1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedWheat1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -7054,6 +7107,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedWheat.unity3d?plantWheatHarvest" />
 	<drop event="Harvest" name="wheat" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="wheat" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="wheat" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedWheat1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedWheatFert1"/>
 </block>
 
@@ -7088,6 +7144,8 @@
 	<drop event="Harvest" name="tomato" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="tomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedTomato1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7099,6 +7157,9 @@
 	<drop event="Harvest" name="tomato" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="tomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedTomato1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="tomato" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedTomato1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedTomato1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7146,6 +7207,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedTomato.unity3d?plantTomatoHarvest"/>
 	<drop event="Harvest" name="tomato" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="tomato" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="tomato" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedTomato1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedTomatoFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -7186,6 +7250,9 @@
 	<drop event="Harvest" name="tomato" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="tomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedTomato1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="tomato" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedTomato1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedTomato1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -7226,6 +7293,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedTomato.unity3d?plantTomatoHarvest"/>
 	<drop event="Harvest" name="tomato" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="tomato" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="tomato" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedTomato1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedTomatoFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -7261,6 +7331,8 @@
 	<drop event="Harvest" name="cucumber" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="cucumber" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedCucumber1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7272,6 +7344,9 @@
 	<drop event="Harvest" name="cucumber" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="cucumber" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedCucumber1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="cucumber" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedCucumber1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCucumber1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7318,6 +7393,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedCucumber.unity3d?plantCucumberHarvest"/>
 	<drop event="Harvest" name="cucumber" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="cucumber" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="cucumber" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedCucumber1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedCucumberFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -7358,6 +7436,9 @@
 	<drop event="Harvest" name="cucumber" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="cucumber" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedCucumber1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="cucumber" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedCucumber1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCucumber1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -7397,6 +7478,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedCucumber.unity3d?plantCucumberHarvest"/>
 	<drop event="Harvest" name="cucumber" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="cucumber" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="cucumber" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedCucumber1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedCucumberFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -7432,6 +7516,8 @@
 	<drop event="Harvest" name="leek" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="leek" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedLeek1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7443,6 +7529,9 @@
 	<drop event="Harvest" name="leek" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="leek" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedLeek1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="leek" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedLeek1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedLeek1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7490,6 +7579,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedLeek.unity3d?plantLeekHarvest"/>
 	<drop event="Harvest" name="leek" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="leek" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="leek" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedLeek1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedLeekFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -7530,6 +7622,9 @@
 	<drop event="Harvest" name="leek" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="leek" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedLeek1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="leek" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedLeek1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedLeek1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -7570,6 +7665,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedLeek.unity3d?plantLeekHarvest"/>
 	<drop event="Harvest" name="leek" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="leek" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="leek" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedLeek1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedLeekFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -7605,6 +7703,8 @@
 	<drop event="Harvest" name="lettuce" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="lettuce" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedLettuce1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7616,6 +7716,9 @@
 	<drop event="Harvest" name="lettuce" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="lettuce" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedLettuce1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="lettuce" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedLettuce1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedLettuce1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7662,6 +7765,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedLettuce.unity3d?plantLettuceHarvest"/>
 	<drop event="Harvest" name="lettuce" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="lettuce" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="lettuce" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedLettuce1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedLettuceFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -7702,6 +7808,9 @@
 	<drop event="Harvest" name="lettuce" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="lettuce" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedLettuce1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="lettuce" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedLettuce1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedLettuce1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -7741,6 +7850,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedLettuce.unity3d?plantLettuceHarvest"/>
 	<drop event="Harvest" name="lettuce" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="lettuce" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="lettuce" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedLettuce1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedLettuceFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -7776,6 +7888,8 @@
 	<drop event="Harvest" name="melon" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="melon" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedMelon1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7787,6 +7901,9 @@
 	<drop event="Harvest" name="melon" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="melon" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedMelon1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="melon" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedMelon1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedMelon1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7834,6 +7951,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedMelon.unity3d?plantMelonHarvest"/>
 	<drop event="Harvest" name="melon" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="melon" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="melon" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedMelon1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedMelonFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -7875,6 +7995,9 @@
 	<drop event="Harvest" name="melon" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="melon" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedMelon1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="melon" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedMelon1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedMelon1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -7916,6 +8039,9 @@
 	<property name="DescriptionKey" value="wotwNLPlantedMelonFert3HarvestPlayerDesc"/>
 	<drop event="Harvest" name="melon" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="melon" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="melon" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedMelon1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedMelonFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -7951,6 +8077,8 @@
 	<drop event="Harvest" name="onion" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="onion" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedOnion1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -7962,6 +8090,9 @@
 	<drop event="Harvest" name="onion" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="onion" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedOnion1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="onion" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedOnion1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedOnion1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -8009,6 +8140,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedOnion.unity3d?plantOnionHarvest"/>
 	<drop event="Harvest" name="onion" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="onion" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="onion" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedOnion1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedOnionFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -8049,6 +8183,9 @@
 	<drop event="Harvest" name="onion" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="onion" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedOnion1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="onion" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedOnion1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedOnion1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -8089,6 +8226,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedOnion.unity3d?plantOnionHarvest"/>
 	<drop event="Harvest" name="onion" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="onion" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="onion" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedOnion1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedOnionFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -8124,6 +8264,8 @@
 	<drop event="Harvest" name="cocoaBeans" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="cocoaBeans" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedCocoa1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -8135,6 +8277,9 @@
 	<drop event="Harvest" name="cocoaBeans" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="cocoaBeans" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedCocoa1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="cocoaBeans" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedCocoa1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCocoa1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -8182,6 +8327,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedCocoa.unity3d?plantCocoaHarvest" />
 	<drop event="Harvest" name="cocoaBeans" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="cocoaBeans" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="cocoaBeans" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedCocoa1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedCocoaFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -8222,6 +8370,9 @@
 	<drop event="Harvest" name="cocoaBeans" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="cocoaBeans" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedCocoa1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="cocoaBeans" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedCocoa1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCocoa1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -8262,6 +8413,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedCocoa.unity3d?plantCocoaHarvest" />
 	<drop event="Harvest" name="cocoaBeans" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="cocoaBeans" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="cocoaBeans" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedCocoa1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedCocoaFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -8297,6 +8451,8 @@
 	<drop event="Harvest" name="pepper" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="pepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedPepper1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -8308,6 +8464,9 @@
 	<drop event="Harvest" name="pepper" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="pepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedPepper1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="pepper" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedPepper1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedPepper1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -8355,6 +8514,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedPepper.unity3d?plantPepperHarvest"/>
 	<drop event="Harvest" name="pepper" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="pepper" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="pepper" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedPepper1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedPepperFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -8395,6 +8557,9 @@
 	<drop event="Harvest" name="pepper" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="pepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedPepper1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="pepper" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedPepper1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedPepper1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -8435,6 +8600,9 @@
 	<property name="Model" value="#@modfolder:Resources/PlantedPepper.unity3d?plantPepperHarvest"/>
 	<drop event="Harvest" name="pepper" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="pepper" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="pepper" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedPepper1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedPepperFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -8637,6 +8805,8 @@
 	<drop event="Harvest" name="hangingMoss" count="1" tag="wildCropsHarvest"/>
 	<drop event="Harvest" name="hangingMoss" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedMoss1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
+	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -8649,6 +8819,9 @@
 	<drop event="Harvest" name="hangingMoss" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="hangingMoss" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="plantedMoss1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="hangingMoss" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="plantedMoss1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedMoss1" count="1" prob="0.5"/>
 	<property name="Tags" value="AdvancedCrops"/>
 </block>
@@ -8702,6 +8875,9 @@
 	<property name="Collide" value="melee"/>
 	<drop event="Harvest" name="hangingMoss" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="hangingMoss" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="hangingMoss" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedMoss1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedMossFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -8748,6 +8924,9 @@
 	<drop event="Harvest" name="hangingMoss" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="hangingMoss" prob="0.5" count="1" tag="bonusCropHarvest"/>
 	<drop event="Harvest" name="wotwNLPlantedMoss1" prob="0.2" count="1" tag="bonusSeedHarvest"/>
+	<drop event="Harvest" name="hangingMoss" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<drop event="Destroy" name="wotwNLPlantedMoss1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedMoss1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -8793,6 +8972,9 @@
 	<property name="Collide" value="melee"/>
 	<drop event="Harvest" name="hangingMoss" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="hangingMoss" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="hangingMoss" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="wotwNLPlantedMoss1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedMossFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -8842,6 +9024,9 @@
 	<property name="Model" value="Entities/OutdoorDecor/mushroomHarvestPrefab"/>
 	<drop event="Harvest" name="foodCropMushrooms" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropMushrooms" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedMushroomFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -8894,6 +9079,9 @@
 	<property name="Model" value="Entities/OutdoorDecor/mushroomHarvestPrefab"/>
 	<drop event="Harvest" name="foodCropMushrooms" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropMushrooms" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<drop event="Destroy" name="wotwNLPlantedMushroom1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -8945,6 +9133,9 @@
 	<property name="Model" value="Entities/OutdoorDecor/mushroomHarvestPrefab"/>
 	<drop event="Harvest" name="foodCropMushrooms" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropMushrooms" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropMushrooms" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedMushroomFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -8983,6 +9174,9 @@
 	<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropYuccaFruit" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropYuccaFruit" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropYuccaFruit" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropYuccaFruit" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedYuccaFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9024,6 +9218,9 @@
 	<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropYuccaFruit" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropYuccaFruit" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropYuccaFruit" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropYuccaFruit" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
+	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<drop event="Destroy" name="wotwNLPlantedYucca1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -9066,6 +9263,8 @@
 	<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropYuccaFruit" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropYuccaFruit" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropYuccaFruit" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropYuccaFruit" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedYuccaFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -9103,6 +9302,8 @@
 	<property name="Model" value="Entities/Plants/plantCottonHarvestPrefab"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropCottonPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropCottonPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedCottonFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9144,6 +9345,8 @@
 	<property name="Model" value="Entities/Plants/plantCottonHarvestPrefab"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropCottonPlant" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropCottonPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCotton1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -9185,6 +9388,8 @@
 	<property name="Model" value="Entities/Plants/plantCottonHarvestPrefab"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropCottonPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropCottonPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedCottonFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -9222,6 +9427,8 @@
 	<property name="Model" value="Entities/Plants/plantCoffeePlant_Prefab"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropCoffeeBeans" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedCoffeeFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9264,6 +9471,8 @@
 	<property name="Model" value="Entities/Plants/plantCoffeePlant_Prefab"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropCoffeeBeans" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCoffee1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -9305,6 +9514,8 @@
 	<property name="Model" value="Entities/Plants/plantCoffeePlant_Prefab"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropCoffeeBeans" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedCoffeeFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -9339,6 +9550,8 @@
 	<property name="Texture" value="362"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedGoldenrodFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9377,6 +9590,8 @@
 	<property name="Texture" value="362"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedGoldenrod1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -9415,6 +9630,8 @@
 	<property name="Texture" value="362"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedGoldenrodFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -9452,6 +9669,8 @@
 	<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropAloeLeaf" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedAloeFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9493,6 +9712,8 @@
 	<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropAloeLeaf" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedAloe1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -9534,6 +9755,8 @@
 	<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropAloeLeaf" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedAloeFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -9571,6 +9794,8 @@
 	<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropBlueberries" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropBlueberries" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedBlueberryFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9612,6 +9837,8 @@
 	<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropBlueberries" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropBlueberries" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedBlueberry1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -9653,6 +9880,8 @@
 	<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropBlueberries" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropBlueberries" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedBlueberryFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -9690,6 +9919,8 @@
 	<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropPotato" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropPotato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropPotato" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropPotato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedPotatoFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9731,6 +9962,8 @@
 	<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropPotato" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropPotato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropPotato" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropPotato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedPotato1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -9772,6 +10005,8 @@
 	<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
 	<drop event="Harvest" name="foodCropPotato" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropPotato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropPotato" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropPotato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedPotatoFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -9806,6 +10041,8 @@
 	<property name="Texture" value="244"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedChrysanthemumFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9844,6 +10081,8 @@
 	<property name="Texture" value="244"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedChrysanthemum1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -9882,6 +10121,8 @@
 	<property name="Texture" value="244"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedChrysanthemumFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -9927,6 +10168,8 @@
 	<property name="MultiBlockDim" value="1,3,1"/>
 	<drop event="Harvest" name="foodCropCorn" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropCorn" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropCorn" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedCornFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -9976,6 +10219,8 @@
 	<property name="MultiBlockDim" value="1,3,1"/>
 	<drop event="Harvest" name="foodCropCorn" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropCorn" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropCorn" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCorn1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -10026,6 +10271,8 @@
 	<property name="MultiBlockDim" value="1,3,1"/>
 	<drop event="Harvest" name="foodCropCorn" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropCorn" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropCorn" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedCornFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -10072,6 +10319,8 @@
 	<property name="MultiBlockDim" value="1,3,1"/>
 	<drop event="Harvest" name="foodCropGraceCorn" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropGraceCorn" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedGraceCornFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -10121,6 +10370,8 @@
 	<property name="MultiBlockDim" value="1,3,1"/>
 	<drop event="Harvest" name="foodCropGraceCorn" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropGraceCorn" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedGraceCorn1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -10171,6 +10422,8 @@
 	<property name="MultiBlockDim" value="1,3,1"/>
 	<drop event="Harvest" name="foodCropGraceCorn" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropGraceCorn" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropGraceCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwPlantedGraceCornFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -10208,6 +10461,8 @@
 	<property name="Model" value="Entities/Plants/plantHopsHarvestPrefab"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropHopsFlower" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropHopsFlower" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedHopFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -10249,6 +10504,8 @@
 	<property name="Model" value="Entities/Plants/plantHopsHarvestPrefab"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropHopsFlower" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropHopsFlower" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedHop1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -10290,6 +10547,8 @@
 	<property name="Model" value="Entities/Plants/plantHopsHarvestPrefab"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="resourceCropHopsFlower" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="resourceCropHopsFlower" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedHopFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -10328,6 +10587,8 @@
 	<property name="Model" value="Entities/Plants/pumpkinHarvestPrefab"/>
 	<drop event="Harvest" name="foodCropPumpkin" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropPumpkin" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropPumpkin" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropPumpkin" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedPumpkinFert1"/>
 	<property name="Tags" value="FertilizedCrops"/>
 </block>
@@ -10369,6 +10630,8 @@
 	<property name="Model" value="Entities/Plants/pumpkinHarvestPrefab"/>
 	<drop event="Harvest" name="foodCropPumpkin" count="2" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropPumpkin" prob="0.5" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropPumpkin" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropPumpkin" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedPumpkin1" count="1" prob="0.5"/>
 	<property name="Tags" value="NLCrops"/>
 </block>
@@ -10411,6 +10674,8 @@
 	<property name="Model" value="Entities/Plants/pumpkinHarvestPrefab"/>
 	<drop event="Harvest" name="foodCropPumpkin" count="4" tag="cropHarvest"/>
 	<drop event="Harvest" name="foodCropPumpkin" prob="0.75" count="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="foodCropPumpkin" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
+	<drop event="Harvest" name="foodCropPumpkin" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedPumpkinFert1"/>
 	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
@@ -32424,7 +32689,7 @@
 	<property name="Tags" value="coalBurnedDmg"/>
 	<drop event="Destroy" name="wotwResourceWoodLog" count="10" tag="oreWoodHarvest"/>
 	<property name="DisplayInfo" value="Description"/>
-	<property name="DescriptionKey" value="treeBurntMaple01BFDesc"/>
+	<property name="DescriptionKey" value="treeBurntMaple02BFDesc"/>
 </block>
 
 <block name="treeBurntMaple03BF">
@@ -32445,7 +32710,7 @@
 	<property name="OversizedBounds" value="(-0.5,4,-0.5),(2,9,2)"/>
 	<drop event="Destroy" name="wotwResourceWoodLog" count="10" tag="oreWoodHarvest"/>
 	<property name="DisplayInfo" value="Description"/>
-	<property name="DescriptionKey" value="treeBurntMaple01BFDesc"/>
+	<property name="DescriptionKey" value="treeBurntMaple03BFDesc"/>
 </block>
 
 <block name="treeDeadTree01BF">

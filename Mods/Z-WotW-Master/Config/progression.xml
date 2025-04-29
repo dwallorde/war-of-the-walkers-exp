@@ -2058,7 +2058,7 @@
 		<requirement name="PlayerLevel" target="self" operation="GTE" value="35" desc_key="reqPlayer35"/>
 	</level_requirements>
 	<level_requirements level="4">
-		<requirement name="ProgressionLevel" progression_name="attClassBuilderMaster" operation="GTE" value="3" desc_key="reqBuilderClass2"/>
+		<requirement name="ProgressionLevel" progression_name="attClassBuilderMaster" operation="GTE" value="2" desc_key="reqBuilderClass2"/>
 		<requirement name="PlayerLevel" target="self" operation="GTE" value="60" desc_key="reqPlayer60"/>
 	</level_requirements>
 	<level_requirements level="5">
@@ -5757,7 +5757,7 @@
 	</level_requirements>
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2" value="1" tags="wotwMeleeToolIronHoe"/>
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2" value="1" tags="wotwMeleeToolSteelHoe,wotwHoePartHead"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2" value="1" tags="wotwMeleeToolSteelHoe,wotwMeleeToolSteelSickle,wotwHoePartHead"/>
 		
 		<effect_description level="1" desc_key="survivalistCraftHoesRank1Desc" long_desc_key="survivalistCraftHoesRank1LongDesc"/>
 		<effect_description level="2" desc_key="survivalistCraftHoesRank2Desc" long_desc_key="survivalistCraftHoesRank2LongDesc"/>
@@ -6697,8 +6697,8 @@
 		<passive_effect name="StaminaGain" operation="perc_add" level="1,3" value="1,3"/>
 
 		<effect_description level="1" desc_key="perkRuleOneCardioNameRank1Desc" long_desc_key="perkRuleOneCardioName1Rank1LongDesc"/>
-		<effect_description level="2" desc_key="perkRuleOneCardioNameRank2Desc" long_desc_key="perkRuleOneCardioName1Rank1LongDesc"/>
-		<effect_description level="3" desc_key="perkRuleOneCardioNameRank3Desc" long_desc_key="perkRuleOneCardioName1Rank1LongDesc"/>
+		<effect_description level="2" desc_key="perkRuleOneCardioNameRank2Desc" long_desc_key="perkRuleOneCardioName1Rank2LongDesc"/>
+		<effect_description level="3" desc_key="perkRuleOneCardioNameRank3Desc" long_desc_key="perkRuleOneCardioName1Rank3LongDesc"/>
 	</effect_group>
 </perk>
 
@@ -7890,7 +7890,7 @@
 		<unlock_entry item="vehicleRaftFrame,vehicleRaftSail" unlock_tier="4" />
 	</display_entry>
 	<display_entry icon="vehicleTruck4x4Placeable,WorkTruck,Rat,vehicleDinghyPlaceable" name_key="vehiclesT3-1,vehiclesT3-2,vehiclesT3-3,vehiclesT3-4" has_quality="false" unlock_level="24,27,30,33" >
-		<unlock_entry item="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories,vehicleTruck4x4OldBVChassis,vehicleTruck4x4OldBVPlaceable" unlock_tier="1" />
+		<unlock_entry item="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories,vehicleTruck4x4OldBVChassis,vehicleTruck4x4OldBVAccessories" unlock_tier="1" />
 		<unlock_entry item="vehicleWorkTruckchassis,vehicleWorkTruckaccessories,wotwHDVehicleWheels" unlock_tier="2" />
 		<unlock_entry item="vehicleRatChassis,vehicleRatbars" unlock_tier="3" />
 		<unlock_entry item="vehicleDinghyFrame,vehicleDinghyAccessories" unlock_tier="4" />
@@ -7938,7 +7938,7 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,100" value="1" tags="vehicleGolfCartaccessories,vehicleGolfCartchassis"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,100" value="1" tags="vehicleRaftFrame,vehicleRaftSail"/>
 		
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,100" value="1" tags="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories,vehicleTruck4x4OldBVChassis,vehicleTruck4x4OldBVPlaceable"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,100" value="1" tags="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories,vehicleTruck4x4OldBVChassis,vehicleTruck4x4OldBVAccessories"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="vehicleWorkTruckchassis,vehicleWorkTruckaccessories,wotwHDVehicleWheels"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="vehicleRatChassis,vehicleRatbars"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="33,100" value="1" tags="vehicleDinghyFrame,vehicleDinghyAccessories"/>
