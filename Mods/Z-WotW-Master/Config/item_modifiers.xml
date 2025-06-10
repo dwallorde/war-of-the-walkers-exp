@@ -225,9 +225,11 @@
 		</item_property_overrides>
 		
 		<item_property_overrides name="wotwGunRifleFNScar">
-			<property name="ScopeOffset" value="0,.073,-.13"/>
+			<property name="ScopeOffset" value="0.5,.073,-.16"/>
+			<!-- <property name="ScopeOffset" value="0,.073,-.13"/> -->
 			<property name="ScopeScale" value=".7,.7,.7"/>
-			<property name="ScopeCameraOffset" value="0,-.029,.02"/>
+			<property name="ScopeCameraOffset" value="0,-.037,.02"/>
+			<!-- <property name="ScopeCameraOffset" value="0,-.029,.02"/> -->
 		</item_property_overrides>
 		
 		<item_property_overrides name="wotwGunRifleSVDDragunov">

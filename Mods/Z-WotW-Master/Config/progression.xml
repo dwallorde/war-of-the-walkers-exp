@@ -271,12 +271,15 @@
 					<requirement name="CVarCompare" cvar="AS_Pistols_XP" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="AS_Rifles_XP" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="AS_BladeWeapons_XP" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="AS_MediumArmour_XP" operation="Equals" value="0"/>
 					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextAdd" operation="set" value="250"/>
 					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextTotal" operation="set" value="250"/>
 					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextAdd" operation="set" value="250"/>
 					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextTotal" operation="set" value="250"/>
 					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextAdd" operation="set" value="250"/>
 					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextTotal" operation="set" value="250"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextAdd" operation="set" value="250"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextTotal" operation="set" value="250"/>
 				</effect_group>
 			</attribute>
 			
@@ -6429,9 +6432,9 @@
 	</level_requirements>
 
 	<effect_group>
-		<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="asPickaxe,asAxe,asShovel"/>
-		<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="asPickaxe,asAxe,asShovel"/>
-		<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".15,.5" tags="asPickaxe,asAxe,asShovel"/>
+		<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="pickaxe,axe,shovel"/>
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="pickaxe,axe,shovel"/>
+		<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".15,.5" tags="pickaxe,axe,shovel"/>
 		
 		<!-- Increase the chance to find harvesting tools with each perk rank -->
 		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="harvestingSkill"/>
@@ -6454,7 +6457,7 @@
 	</effect_group>
 	<!-- Miner_69er:SEXREX_REPLACEMENT -->
 	<effect_group>
-		<requirement name="HoldingItemHasTags" tags="asPickaxe,asAxe,asShovel"/>
+		<requirement name="HoldingItemHasTags" tags="pickaxe,axe,shovel"/>
 		<passive_effect name="StaminaLoss" operation="perc_add" level="1,2,3,4,5" value="-.08,-.15,-.2,-.25,-.25"/>
 		<passive_effect name="StaminaLoss" operation="perc_add" level="1,2,3,4,5" value="-.07,-.15,-.2,-.25,-.25" tags="secondary"/>
 		<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5" value=".05,.1,.15,.2,.25"/>
@@ -7785,7 +7788,7 @@
 		<unlock_entry item="autoTurret" unlock_tier="5" />
 	</display_entry>
 	<display_entry icon="rabbitTrapBaited,SpeedTrapSet,FireSpeedTrap" name_key="trapsT2-1,trapsT2-2,trapsT2-3" has_quality="false" unlock_level="15,18,21">
-		<unlock_entry item="wotwTrapRabbitSet,wotwTrapRabbitEmpty" unlock_tier="1" />
+		<unlock_entry item="wotwTrapRabbitSet" unlock_tier="1" />
 		<unlock_entry item="SpeedTrapSet" unlock_tier="2" />
 		<unlock_entry item="FireSpeedTrap,FireTrap" unlock_tier="3" />
 	</display_entry>
@@ -7804,7 +7807,7 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="9,40" value="1" tags="shotgunTurret"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,40" value="1" tags="autoTurret"/>
 		
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,40" value="1" tags="wotwTrapRabbitSet,wotwTrapRabbitEmpty"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,40" value="1" tags="wotwTrapRabbitSet"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,40" value="1" tags="SpeedTrapSet"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,40" value="1" tags="FireSpeedTrap,FireTrap"/>
 		

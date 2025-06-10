@@ -771,6 +771,7 @@
 			<item name="plantedMoss1"/>
 			<item name="plantedGraceCorn1" prob="0.2"/>
 			<item name="wotwBirdnest"/>
+			<item name="wotwTrapRabbitSet"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='foodSupplies']">
@@ -1695,6 +1696,7 @@
 			<item group="seeds" count="2,4"/>
 			<item name="wotwChickenYoung" count="0,1"/>
 			<item name="wotwChickenAdult" count="0,1" prob="0.25"/>
+			<item name="wotwSteelCage" count="1"/>
 		</trader_item_group>
 		
 		<trader_item_group name="survivalistMagazines">
@@ -1897,7 +1899,7 @@
 	<trader_info id="6" reset_interval="1">
 		<!-- *** SPECIALTY -->
 		<trader_items count="all">
-			<item group="groupVehicles" count="4,6"/>
+			<item group="groupVehicles" count="6,10"/>
 			<item group="groupMeleeMods" count="2,4"/>
 			<item group="tools" count="8,10"/>
 			<item group="rareTools" unique_only="true" count="2,3"/>
@@ -1953,6 +1955,7 @@
 			<item name="wotwDrugAntiRadMajor" count="1,2"/>
 			<item name="wotwChickenYoung" count="1"/>
 			<item name="wotwChickenAdult" count="1" prob="0.25"/>
+			<item name="wotwSteelCage" count="1"/>
 		</trader_items>
 		
 		<!-- *** GENERAL -->
@@ -2040,6 +2043,7 @@
 			<item group="groupFoodAll" count="4,6"/>
 			<item name="wotwChickenYoung" count="1"/>
 			<item name="wotwChickenAdult" count="1" prob="0.25"/>
+			<item name="wotwSteelCage" count="1"/>
 		</trader_items>
 		
 		<!-- *** GENERAL -->
@@ -2322,7 +2326,7 @@
 			<item group="skillMagazines" count="2,4" prob="1.25"/>
 			<item group="groupRewardCards" count="1,2" prob="0.3"/>
 			<item group="groupActionRewardCards" count="1,4" prob="0.75"/>
-			<item group="classFragments" count="2,5" prob="0.8"/>
+			<item group="classFragments" count="4,8" prob="0.8"/>
 		</trader_items>
 	</trader_info>
 	

@@ -164,6 +164,8 @@
 
 <set xpath="/challenges/challenge[@name='harvestLeather']/objective/@item">wotwResourceLeather</set>
 
+<set xpath="/challenges/challenge[@name='killDemolitions']/objective/@count">5</set>
+
 <set xpath="/challenges/challenge[@name='harvestCarParts']/objective[@item='smallEngine']/@item">wotwResourceEngineBlock</set>
 <insertAfter xpath="/challenges/challenge[@name='harvestCarParts']/objective[@item='wotwResourceEngineBlock']">
 	<objective type="Harvest" item="wotwResourceEngineTransmission" count="3" block_tag="challenge_cars" override_tracker_index="challenge_cars" track_distance="50"/>
@@ -214,9 +216,9 @@
 		<objective type="Gather" item="casinoCoin" count="50000"/>
 	</challenge>
 	
-	<challenge name="barterCraftEnforcerOutfit" title_key="challengeCovertCraftRogueOutfit" icon="ui_game_symbol_actionArmour" group="Barter"
+	<challenge name="barterCraftEnforcerOutfit" title_key="challengeBarterCraftEnforcerOutfit" icon="ui_game_symbol_actionArmour" group="Barter"
 		hint="challengeBarterCraftRogueOutfitHint1"
-		short_description_key="challengeCovertCraftRogueOutfitShort" description_key="challengeCovertCraftRogueOutfitDesc"
+		short_description_key="challengeBarterCraftEnforcerOutfitShort" description_key="challengeBarterCraftEnforcerOutfitDesc"
 		reward_text_key="reward_barterClassPoint" reward_event="reward_barterClassPoint">
 		<objective type="Craft" item="armorEnforcerHelmet" count="1"/>
 		<objective type="Craft" item="armorEnforcerOutfit" count="1"/>
@@ -224,9 +226,9 @@
 		<objective type="Craft" item="armorEnforcerBoots" count="1"/>
 	</challenge>
 	
-	<challenge name="barterWearEnforcerOutfit" title_key="challengeCovertWearRogueOutfit" icon="ui_game_symbol_actionArmour" group="Barter"
-		hint="challengeCovertWearRogueOutfitHint1"
-		short_description_key="challengeCovertWearRogueOutfitShort" description_key="challengeCovertWearRogueOutfitDesc"
+	<challenge name="barterWearEnforcerOutfit" title_key="challengeBarterWearEnforcerOutfit" icon="ui_game_symbol_actionArmour" group="Barter"
+		hint="challengeBarterWearRogueOutfitHint1"
+		short_description_key="challengeBarterWearEnforcerOutfitShort" description_key="challengeBarterWearEnforcerOutfitDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
 		<objective type="Wear" item="armorEnforcerHelmet" count="1"/>
 		<objective type="Wear" item="armorEnforcerOutfit" count="1"/>

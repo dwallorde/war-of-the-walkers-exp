@@ -1178,7 +1178,7 @@
 	<ingredient name="resourceCobblestones" count="500"/>
 	<ingredient name="bucketRiverWater" count="5"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4,5" value="0,-.05,-.1,-.15,-.2,-.25" tags="resourceForgedSteel,wotwResourceHardwoodPlank,resourceNail"/>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4,5" value="0,-.05,-.1,-.15,-.2,-.25" tags="resourceForgedIron,resourceSpring,resourceMechanicalParts,resourceCobblestones"/>
 	</effect_group>
 </recipe>
 
@@ -5246,16 +5246,18 @@
 </recipe>
 
 <recipe name="wotwTrapRabbitSet" count="1" tags="learnable">
-	<ingredient name="wotwTrapRabbitEmpty" count="1"/>
-	<ingredient name="foodCropCorn" count="2"/>
-</recipe>
-
-<recipe name="wotwTrapRabbitEmpty" count="1" tags="learnable">
 	<ingredient name="wotwResourceWoodStick" count="50"/>
 	<ingredient name="resourceYuccaFibers" count="20"/>
 	<ingredient name="resourceGlue" count="2"/>
 	<ingredient name="resourceNail" count="8"/>
 </recipe>
+
+<!-- <recipe name="wotwTrapRabbitEmpty" count="1" tags="learnable">
+	<ingredient name="wotwResourceWoodStick" count="50"/>
+	<ingredient name="resourceYuccaFibers" count="20"/>
+	<ingredient name="resourceGlue" count="2"/>
+	<ingredient name="resourceNail" count="8"/>
+</recipe> -->
 
 <recipe name="SpeedTrapSet" count="1" craft_area="workbench" tags="learnable">
 	<ingredient name="resourceForgedIron" count="10"/>
@@ -5793,6 +5795,102 @@
 
 <!-- Class Recipes -->
 <append xpath="/recipes">
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentBarter" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentBuilder" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classPaperCovert" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentFighter" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentHunter" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentLooter" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentMedic" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentRanger" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentTradesman" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentSoldier" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classFragmentSurvivalist" count="2"/>
+</recipe>
+
+<recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
+	<ingredient name="classPaperTechnician" count="2"/>
+</recipe>
+
+<recipe name="classFragmentBarter" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentBuilder" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classPaperCovert" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentFighter" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentHunter" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentLooter" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentMedic" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentRanger" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentTradesman" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentSoldier" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classFragmentSurvivalist" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
+<recipe name="classPaperTechnician" count="1">
+	<ingredient name="classFragment" count="2"/>
+</recipe>
+
 <recipe name="classPaperBarter" count="1" tags="learnable">
 	<ingredient name="classFragmentBarter" count="10"/>
 </recipe>
@@ -5835,10 +5933,6 @@
 
 <recipe name="classPaperSurvivalist" count="1" tags="learnable">
 	<ingredient name="classFragmentSurvivalist" count="10"/>
-</recipe>
-
-<recipe name="classPaperCovert" count="1" tags="learnable">
-	<ingredient name="classFragmentCovert" count="10"/>
 </recipe>
 
 <recipe name="classPaperTechnician" count="1" tags="learnable">
@@ -7098,6 +7192,10 @@
 
 <recipe name="oilBundle" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkAdvancedEngineering">
 	<ingredient name="resourceOil" count="50"/>
+</recipe>
+
+<recipe name="oilBundle" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="resourceOilShale" count="960"/>
 </recipe>
 
 <recipe name="clothBundle" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkAdvancedEngineering">

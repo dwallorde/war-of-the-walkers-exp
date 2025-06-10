@@ -592,19 +592,24 @@
 			<property name="phase" value="2" />
 			<property name="nav_object" value="rally" />
 		</objective>
+		
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
 
 		<objective type="POIStayWithin">
-			<property name="phase" value="4" />
+			<property name="phase" value="3" />
 			<property name="radius" value="25" />
 		</objective>
 
 		<objective type="ReturnToNPC">
-			<property name="phase" value="5" />
+			<property name="phase" value="4" />
 			<property name="nav_object" value="return_to_trader" />
 		</objective>
 
 		<objective type="InteractWithNPC">
-			<property name="phase" value="5" />
+			<property name="phase" value="4" />
 			<property name="nav_object" value="return_to_trader" />
 		</objective>
 

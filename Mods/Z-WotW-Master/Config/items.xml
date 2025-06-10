@@ -2379,7 +2379,7 @@
 	<property name="Material" value="Mplastics" />
 	<property name="Stacknumber" value="50" />
 	<property name="EconomicValue" value="200"/>
-	<property name="Group" value="Science,CFChemicals,Medicine" />
+	<property name="Group" value="Science,Medical,TCMedical" />
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/> <!-- obsolete? -->
@@ -2415,7 +2415,7 @@
 	<property name="Stacknumber" value="50"/> 
 	<property name="FuelValue" value="80"/>
 	<property name="EconomicValue" value="150"/>
-	<property name="Group" value="Science,Medicine"/>
+	<property name="Group" value="Science,Medical,TCMedical"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/> <!-- obsolete? -->
@@ -2491,7 +2491,7 @@
 	<property name="UnlockedBy" value="craftingMedical"/>
 	<property name="EconomicValue" value="200" />
 	<property name="DescriptionKey" value="traumaFirstAidBandageDesc"/>
-	<property name="Group" value="Science,Medical"/>
+	<property name="Group" value="Science,Medical,TCMedical"/>
 	<property name="Stacknumber" value="50"/>
 	<property class="Action0">
 		<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LT" value="1"/>
@@ -2714,7 +2714,7 @@
 		<property name="Sound_start" value="player_painkillers"/>
 			<requirement name="NotHasBuff" buff="buffDrugPainkillers,ExtraStrengthPainKillers"/>
 	</property>
-	<property name="Group" value="Science,CFChemicals,Medical"/>
+	<property name="Group" value="Science,Medical,TCMedical"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryConcussion"/>
 		<display_value name="dStopsConcussion" value="1"/>
@@ -2751,7 +2751,7 @@
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="player_painkillers"/>
 	</property>
-	<property name="Group" value="Science,CFChemicals,Medical"/>
+	<property name="Group" value="Science,Medical,TCMedical"/>
 	<effect_group tiered="false">
 		<display_value name="dStaminaRegen" value=".5"/>
 		<display_value name="dDuration" value="300"/>
@@ -2805,7 +2805,7 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="tungsten"/>
-	<property name="Stacknumber" value="500"/> <!-- STK resource -->
+	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="50"/>
 	<property name="CraftingIngredientExp" value="15"/>
 	<property name="CraftingIngredientTime" value="15"/>
@@ -13037,7 +13037,7 @@
 
 <item name="wotwMeleeToolStonePickaxe">
 	<property name="CustomIcon" value="wotwMeleeToolStonePickaxe"/>
-	<property name="Tags" value="melee,light,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic,harvestingSkill,csStoneScrapITools,asPickaxe,csT0Pickaxes"/>
+	<property name="Tags" value="melee,light,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic,harvestingSkill,csStoneScrapITools,asPickaxe,csT0Pickaxes,pickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="32"/>
 	<property name="Meshfile" value="#@modfolder:Resources/StoneTools.unity3d?StonePickaxePrefab"/>
@@ -13219,7 +13219,7 @@
 
 <item name="wotwMeleeToolScrapIronPickaxe">
 	<property name="CustomIcon" value="wotwMeleeToolScrapIronPickaxe" />
-	<property name="Tags" value="melee,grunting,light,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,csStoneScrapITools,asPickaxe,csT05Pickaxes"/>
+	<property name="Tags" value="melee,grunting,light,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,csStoneScrapITools,asPickaxe,csT05Pickaxes,pickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="32"/>
 	<property name="Meshfile" value="#@modfolder:Resources/ScrapIronTools.unity3d?ScrapIronPickaxePrefab"/>
@@ -13378,7 +13378,7 @@
 
 <item name="wotwMeleeToolTungstenPickaxe">
 	<property name="CustomIcon" value="wotwMeleeToolTungstenPickaxe"/>
-	<property name="Tags" value="melee,grunting,heavy,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,csTungstenDiamondTools,asPickaxe,csT3Pickaxes"/>
+	<property name="Tags" value="melee,grunting,heavy,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,csTungstenDiamondTools,asPickaxe,csT3Pickaxes,pickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="4" />
 	<property name="Meshfile" value="#@modfolder:Resources/TungstenTools.unity3d?TungstenPickaxePrefab" />
@@ -13641,7 +13641,7 @@
 
 <item name="wotwMeleeToolDiamondTippedPickaxe">
 	<property name="CustomIcon" value="wotwMeleeToolDiamondTippedPickaxe"/>
-	<property name="Tags" value="melee,grunting,heavy,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,csTungstenDiamondTools,asPickaxe,csT4Pickaxes"/>
+	<property name="Tags" value="melee,grunting,heavy,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,csTungstenDiamondTools,asPickaxe,csT4Pickaxes,pickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="4"/>
 	<property name="Meshfile" value="#@modfolder:Resources/DiamondTools.unity3d?DiamondTippedPickaxePrefab"/>
@@ -14801,7 +14801,7 @@
 <item name="wotwMeleeToolLegendaryPickaxe">
 	<property name="CustomIcon" value="wotwMeleeToolDiamondTippedPickaxe"/>
 	<property name="CustomIconTint" value="FF6C33"/>
-	<property name="Tags" value="melee,grunting,heavy,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,asPickaxe"/>
+	<property name="Tags" value="melee,grunting,heavy,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,asPickaxe,pickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="4"/>
 	<property name="Meshfile" value="#@modfolder:Resources/DiamondTools.unity3d?DiamondTippedPickaxePrefab"/>
@@ -17012,8 +17012,6 @@
 	<property name="DescriptionKey" value="classPaperDesc" />
 </item>
 
-
-
 <item name="classPaperTechnician">
 	<property name="Extends" value="classPaperMaster" />
 	<property name="CustomIcon" value="classPaperTechnician" />
@@ -17022,6 +17020,22 @@
  
 <!-- Fragments -->
 <!-- classFragmentTradesman, classFragmentSoldier, classFragmentSurvivalist, classFragmentCovert, classFragmentTechnician -->
+
+<item name="classFragment">
+	<property name="CustomIcon" value="classFragmentTradesman"/>
+	<property name="Tags" value="ClassFragment"/>
+	<property name="HoldType" value="21"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="ClassPaper"/>
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
+	<property name="FuelValue" value="0"/>
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="Group" value="Books,Resources"/>
+	<property name="DescriptionKey" value="classFragmentsDesc" />
+</item>
 
 <item name="classFragmentTradesman">
 	<property name="CustomIcon" value="classFragmentTradesman"/>
@@ -19608,6 +19622,7 @@
 	<append xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']">
 		<property name="DescriptionKey" value="meleeToolAxeT1IronFireaxe1Desc"/>
 	</append>
+	<append xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='Tags']/@value">,pickaxe</append>
 	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='RepairTools']/@value">repairKitTool</set>
 	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='UnlockedBy']/@value">tradesmanCraftHarvestTools</set>
 	<append xpath="/items/item[@name='meleeToolPickT1IronPickaxe']">
@@ -23781,6 +23796,20 @@
 	<property name="EconomicValue" value="2500"/>
 	<property name="Group" value="Tools/Traps,WorkstationTools"/>
 	<property name="TraderStageTemplate" value="midTier3"/>
+</item>
+
+<item name="wotwSteelCage">
+	<property name="CustomIcon" value="wotwSteelCage"/>
+	<property name="UnlockedBy" value="craftingResources"/>
+	<property name="DescriptionKey" value="wotwSteelCageDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="Group" value="Tools/Traps,WorkstationTools"/>
+	<property name="TraderStageTemplate" value="midTier2"/>
 </item>
 
 <item name="adcMineralInfuser">
