@@ -616,9 +616,13 @@
 		<reward type="Exp" value="2500" />
 		<reward type="Item" id="casinoCoin" value="330" />
 
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1" />
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1" />
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1" />
+		<reward type="LootItem" id="groupQuestFood,groupQuestAmmo,groupQuestSchematics,groupQuestMods" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMedical,groupQuestAmmo,groupQuestSchematics,groupQuestMods" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMedical,groupQuestAmmo,groupQuestSchematics,groupQuestMods" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMedical,groupQuestAmmo,groupQuestSchematics,groupQuestMods" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMedical,groupQuestAmmo,groupQuestSchematics,groupQuestMods" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestResourcesT0,seedsNoFlowers,groupQuestSteel01" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestResourcesT1,groupQuestT1SkillMagazineBundle" ischosen="true"/>
 	</quest>
 	
 	<quest id="wotw_gotoPoibattleship" template="wotw_gotoPoiTemplate">
