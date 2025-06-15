@@ -25073,12 +25073,12 @@
 		
 		<display_value name="dHelmetLight" value="1,1" tier="1,6"/>
 		
-		<!-- <passive_effect name="Mobility" operation="perc_add" value="-.075"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.075"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
 		<display_value name="dStaminaChangeOT" value="-.9"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/>
-		<display_value name="dNoiseMultiplier" value=".2"/> -->
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".4"/>
+		<display_value name="dNoiseMultiplier" value=".4"/>
 		
 		<!-- <display_value name="dHarvestCount" value=".05,.1,.15,.20,.25,.30" tier="1,2,3,4,5,6"/> -->
 	</effect_group>
@@ -25125,14 +25125,14 @@
 		<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,-.1,-.15,-.2,-.25,-.3" tier="1,2,3,4,5,6" tags="jumping"/>
 		<display_value name="dJumpingStaminaLoss" value="-.05,-.1,-.15,-.2,-.25,-.3" tier="1,2,3,4,5,6" tags="jumping"/>
 		
-		<!-- <passive_effect name="Mobility" operation="perc_add" value="-.075"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.075"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
 		<display_value name="dStaminaChangeOT" value="-.9"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/>
-		<display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".4"/>
+		<display_value name="dNoiseMultiplier" value=".4"/>
 		
-		<display_value name="dStaminaLoss" value="-.05,-.1,-.149,-.2,-.25,-.299" tier="1,2,3,4,5,6" tags=""/> -->
+		<!-- <display_value name="dStaminaLoss" value="-.05,-.1,-.149,-.2,-.25,-.299" tier="1,2,3,4,5,6" tags=""/> -->
 	</effect_group>
 
 	<!-- <effect_group>
@@ -25175,14 +25175,14 @@
 		
 		<display_value name="dBlockRange" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		
-		<!-- <passive_effect name="Mobility" operation="perc_add" value="-.075"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.075"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
 		<display_value name="dStaminaChangeOT" value="-.9"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/>
-		<display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".4"/>
+		<display_value name="dNoiseMultiplier" value=".4"/>
 		
-		<display_value name="dBlockDamage" value=".05,.1,.15,.20,.25,.5" tier="1,2,3,4,5,6"/> -->
+		<!-- <display_value name="dBlockDamage" value=".05,.1,.15,.20,.25,.5" tier="1,2,3,4,5,6"/> -->
 	</effect_group>
 
 	<effect_group>
@@ -25227,14 +25227,14 @@
 		<display_value name="dJumpStrength" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
 		<display_value name="dFallDamage" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
 		
-		<!-- <passive_effect name="Mobility" operation="perc_add" value="-.075"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.075"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
 		<display_value name="dStaminaChangeOT" value="-.9"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/>
-		<display_value name="dNoiseMultiplier" value=".2"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".4"/>
+		<display_value name="dNoiseMultiplier" value=".4"/>
 		
-		<display_value name="dFallDamage" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/> -->
+		<!-- <display_value name="dFallDamage" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/> -->
 	</effect_group>
 
 		<!-- Increase $minerBootFallDMG with each tier to then process in buffPlayerFallingDamage -->

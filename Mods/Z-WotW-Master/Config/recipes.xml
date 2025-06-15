@@ -5804,7 +5804,7 @@
 </recipe>
 
 <recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
-	<ingredient name="classPaperCovert" count="2"/>
+	<ingredient name="classFragmentCovert" count="2"/>
 </recipe>
 
 <recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
@@ -5840,7 +5840,7 @@
 </recipe>
 
 <recipe name="classFragment" count="1" craft_area="recyclerWorkstation">
-	<ingredient name="classPaperTechnician" count="2"/>
+	<ingredient name="classFragmentTechnician" count="2"/>
 </recipe>
 
 <recipe name="classFragmentBarter" count="1">
@@ -5851,7 +5851,7 @@
 	<ingredient name="classFragment" count="2"/>
 </recipe>
 
-<recipe name="classPaperCovert" count="1">
+<recipe name="classFragmentCovert" count="1">
 	<ingredient name="classFragment" count="2"/>
 </recipe>
 
@@ -5887,7 +5887,7 @@
 	<ingredient name="classFragment" count="2"/>
 </recipe>
 
-<recipe name="classPaperTechnician" count="1">
+<recipe name="classFragmentTechnician" count="1">
 	<ingredient name="classFragment" count="2"/>
 </recipe>
 
