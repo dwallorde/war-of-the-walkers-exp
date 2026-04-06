@@ -1,3 +1,0 @@
-Key,english
-xuiOptionsVideoTerrainTessellation,Terrain Tessellation
-xuiOptionsVideoTerrainTessellationTooltip,Enables tessellation on the GPU.\nPerformance impact: Very High

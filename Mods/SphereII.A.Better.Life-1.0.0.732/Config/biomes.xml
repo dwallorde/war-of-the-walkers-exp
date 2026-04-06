@@ -1,7 +1,0 @@
-﻿<configs>
-    <append xpath="//biomes/biome[@name='underwater']//decorations" >
-    <decoration type="block" blockname="terrWaterSpawner" prob="0.001" rotatemax="4" />
-  </append>
- </configs>
-
-

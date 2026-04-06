@@ -1,7 +1,0 @@
-﻿Key,English
-
-quest_clear_response,"Clear at [A3B3DE]{poi.name}[-] ([DECEA3]{poi.distance} {poi.direction}[-])"
-quest_fetch_response,"Fetch at [A3B3DE]{poi.name}[-] ([DECEA3]{poi.distance} {poi.direction}[-])"
-quest_fetch_clear_response,"Fetch/Clear at [A3B3DE]{poi.name}[-] ([DECEA3]{poi.distance} {poi.direction}[-])"
-quest_restore_power_response,"Restore Power at [A3B3DE]{poi.name}[-] ([DECEA3]{poi.distance} {poi.direction}[-])"
-quest_infestation_response,"Infestation at [A3B3DE]{poi.name}[-] ([DECEA3]{poi.distance} {poi.direction}[-])"
