@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModSettings>
+  <Global>
+    <Tab name="Optionals" displayKey="" tooltipKey="">
+      <Category name="General" displayKey="smxmenuSettingGeneral" tooltipKey="smxmenuSettingGeneralTooltip">
+        <Switch name="AnimatedBackground" displayKey="smxmenuSettingAnimatedBackground" tooltipKey="smxmenuSettingAnimatedBackgroundTooltip" defaultValue="Off" leftValue="Off" rightValue="On" />
+        <Switch name="SMXInfoWindow" displayKey="smxmenuSettingSMXInfoWindow" tooltipKey="smxmenuSettingSMXInfoWindowTooltip" defaultValue="Off" leftValue="Off" rightValue="On" />
+      </Category>
+    </Tab>
+  </Global>
+  <World />
+</ModSettings>
