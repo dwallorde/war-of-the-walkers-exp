@@ -68,11 +68,18 @@ public class NetPackageDeployNPCSDX : NetPackage
                 // 2. Persistence Setup
                 entityAlive.SetSpawnerSource(EnumSpawnerSource.StaticSpawner);
 
-                // 3. Hydrate Data — unpack ItemValue metadata into the entity (health, buffs, cvars, inventory, name).
-                EntitySyncUtils.SetNPCItemValue(entityAlive, this.itemValue);
+                // Block fresh-item generation during PostInit for restored NPCs.
+                bool isFreshSpawn = !this.itemValue.HasMetadata("EntityClassId");
+                if (!isFreshSpawn)
+                    entityAlive.Buffs.SetCustomVar("InitialInventory", 1);
 
-                // 4. Spawn
+                // 3. Spawn first — EntityTrader.PostInit() (called inside SpawnEntityInWorld) creates
+                // a fresh TileEntityTrader and assigns it to lootContainer.  Hydrating before spawn
+                // would be overwritten.  We hydrate AFTER so we write into the initialized containers.
                 _world.SpawnEntityInWorld(entityAlive);
+
+                // 4. Hydrate Data — unpack ItemValue metadata into the entity.
+                EntitySyncUtils.SetNPCItemValue(entityAlive, this.itemValue);
 
                 // 5. Force Sync — vanilla spawn packets don't carry SDX-specific data (name, title, weapon).
                 iEntity.SendSyncData();

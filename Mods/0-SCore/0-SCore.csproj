@@ -110,7 +110,13 @@
     <Compile Include="Features\Farming\Scripts\DataClasses\PipeData.cs" />
     <Compile Include="Features\Farming\Scripts\DataClasses\PlantData.cs" />
     <Compile Include="Features\Farming\Scripts\FarmPlotManager.cs" />
+    <Compile Include="Features\Farming\Scripts\HarvestManager.cs" />
     <Compile Include="Features\Farming\Scripts\NetPackage\NetPackageToggleSprinkler.cs" />
+    <Compile Include="Features\Farming\Scripts\NetPackage\NetPackageHarvestInventoryRequest.cs" />
+    <Compile Include="Features\Farming\Scripts\NetPackage\NetPackageHarvestInventoryData.cs" />
+    <Compile Include="Features\Farming\Scripts\NetPackage\NetPackageHarvestInventoryUpdate.cs" />
+    <Compile Include="Features\Farming\Scripts\NetPackage\NetPackageAddBlockParticleEffect.cs" />
+    <Compile Include="Features\Farming\Scripts\NetPackage\NetPackageRemoveBlockParticleEffect.cs" />
     <Compile Include="Features\Farming\Scripts\WaterPipeManager.cs" />
     <Compile Include="Features\FireV2\Harmony\BlockInit.cs" />
     <Compile Include="Features\FireV2\Harmony\ChunkSetBlock.cs" />
@@ -491,6 +497,7 @@
     <Compile Include="Harmony\XUIC\XUiC_ItemStack.cs" />
     <Compile Include="Harmony\XUIC\XUiC_ItemStack_SlotTags.cs" />
     <Compile Include="Harmony\XUIC\XUiC_LootWindowGroupOnOpen.cs" />
+    <Compile Include="Harmony\XUIC\XUiC_LootWindowGroup_OnClose.cs" />
     <Compile Include="Harmony\XUIC\XUiC_TargetBar.cs" />
     <Compile Include="Harmony\ZombieFeatures\AIDirectorChunkEventComponentScout.cs" />
     <Compile Include="Harmony\ZombieFeatures\EntityFlyingEAITasks.cs" />

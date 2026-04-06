@@ -33,6 +33,116 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 [ Change Log ]
 
+Version: 2.6.21.1949
+	[ NPC Weapon Swapping / Dialog ]
+		- Fixed weapon swap dialog options (e.g. "Use Knife") never appearing for EntityTrader-based
+		  NPCs (EntityAliveSDX, EntityAliveSDXV4) even when the NPC had the required item.
+		- Root cause: DialogRequirementNPCHasItemSDX checked lootContainer for the player weapon,
+		  but EntityTrader NPCs store their accessible inventory in HarvestManager. The dialog
+		  option was always hidden because HasItem found nothing.
+		- DialogRequirementNPCHasItemSDX now checks HarvestManager first for EntityTrader entities,
+		  falling back to lootContainer for non-trader entities.
+		- Fixed FindWeapon() in both EntityAliveSDX and EntityAliveSDXV4 performing the same wrong
+		  lookup on the CompatibleWeapon path — now checks HarvestManager for EntityTrader entities.
+		- Fixed "Use Bare Hands" (meleeNPCEmptyHand) and other starting-kit weapons never equipping:
+		  FindWeapon() gated all lookups behind a CompatibleWeapon property check, so items that
+		  lack that property (like meleeNPCEmptyHand) always returned false. itemsOnEnterGame and
+		  the current hand-item are now checked before the CompatibleWeapon gate.
+		- Fixed UAITaskFarmingV4.CheckHasSeed() checking lootContainer instead of HarvestManager,
+		  causing farmer NPCs to never detect seeds they were carrying and skip all empty farm plots.
+
+Version: 2.6.21.1125
+	[ NPC Pickup / PickUpNPC ]
+		- Fixed NPC inventory being lost when picked up via DialogActionPickUpNPC and placed back
+		  down with ItemActionDeployNPCSDX.
+		- Fixed NPC inventory not persisting across game restarts for both EntityAliveSDX and
+		  EntityAliveSDXV4.
+		- Root cause: both entity classes extend EntityTrader, so the OpenInventory dialog command
+		  always routes the player-accessible bag through HarvestManager — but GetNPCItemValue was
+		  serializing npc.lootContainer.items (a different, empty object) instead.
+		- GetNPCItemValue now reads from the HarvestManager container when one exists for the entity,
+		  falling back to lootContainer for non-trader entities.
+		- SetNPCItemValue now restores bag items into HarvestManager.GetOrCreate(entityId) for
+		  EntityTrader-based entities, so the new entity's inventory is populated before the player
+		  opens it.
+		- EntityAliveSDX and EntityAliveSDXV4 Write() now saves the HarvestManager container (when
+		  present) into the entity's own binary stream instead of lootContainer, and Read() restores
+		  it back into HarvestManager — tying inventory to the entity save data rather than a
+		  separate file keyed by entity ID.
+		- HarvestManager.Save() is now called on GameShutdown as an additional safety net.
+		- Fixed SetupStartingItems() not checking the InitialInventory guard, causing the NPC's
+		  hand-inventory slots to be overwritten with default XML items on every spawn/re-place.
+
+Version: 2.6.14.638  [ Experimental ]
+	[ Remote Crafting ]
+		- Fixed a bug where `disablesender` with `Invertdisable` set to `true` would stop scanning containers
+		  entirely as soon as a non-allowed container was encountered (`break` instead of `continue`).
+		- To restrict remote crafting to only a specific container, set `disablesender` to the container's
+		  loot list name and set `Invertdisable` to `true`:
+
+			<!-- Only allow remote crafting from containers using the loot list "mySpecialStorage" -->
+			<property class="AdvancedRecipes">
+				<property name="ReadFromContainers" value="true"/>
+				<property name="disablesender" value="mySpecialStorage"/>
+				<property name="Invertdisable" value="true"/>
+			</property>
+
+		  Multiple containers can be allowed by providing a comma-separated list:
+			<property name="disablesender" value="mySpecialStorage,myOtherStorage"/>
+
+Version: 2.6.12.720  [ Experimental ]
+	[ UAI Farming - Dedicated Server ]
+		- Fixed harvest inventory (HarvestManager) not persisting across server restarts. Data is now
+		  saved to HarvestManager.bin in the save directory after each harvest cycle and when the player
+		  closes the loot window, and reloaded on GameStartDone.
+		- Fixed maintenance particles never being removed on dedicated servers. SpawnParticleEffectServer
+		  does not register particles in m_BlockParticles, so RemoveBlockParticleEffect was a no-op.
+		  addParticlesCenteredServer now broadcasts NetPackageAddBlockParticleEffect so each client calls
+		  SpawnBlockParticleEffect (which does register), and removeParticlesCenteredServer broadcasts
+		  NetPackageRemoveBlockParticleEffect so clients can clean them up correctly.
+	[ NPC Teleport - Farm Plot Height ]
+		- Fixed hired NPCs spawning one block inside farm plots (or other player-placed blocks) after
+		  player relog. TeleportToPlayer used World.GetHeightAt which returns terrain height only.
+		  Replaced with GetSurfaceY() in both EntityAliveSDX and EntityAliveSDXV4, which scans upward
+		  from terrain through any solid placed blocks to find the true walkable surface. Applied to
+		  both the initial teleport position and the validateTeleport safety coroutine.
+
+	[ SphreII NPC Add On ]
+		- Added new modlet to support the EntityAliveSDXV4's utilityai.xml
+
+Version: 2.6.11.839  [ Experimental ]
+	[ UAI Farming - Dedicated Server ]
+		- Fixed farming UAI tasks not executing on dedicated servers (addParticlesCentered DS guard).
+		- Fixed EndOfStreamException in TraderData when trader-type NPCs (EntityAliveSDXV4) harvest
+		  crops. Introduced HarvestManager — a per-entity TileEntityLootContainer stored separately
+		  from the trader's lootContainer, bypassing TraderData serialisation entirely.
+		- Fixed NullReferenceException when opening a trader NPC's harvest inventory (chunk + entityId
+		  setup on the HarvestManager container).
+		- Fixed harvest items not appearing for dedicated server clients. Added
+		  NetPackageHarvestInventoryRequest (client→server) and NetPackageHarvestInventoryData
+		  (server→client) so the server serialises and delivers the harvest container contents to
+		  the requesting client, who opens them in a local loot window.
+
+	[ EntitySwimingSDX ]
+		- Replaced List<Vector3i> with a HashSet + List pair for O(1) Contains and O(1) random
+		  access respectively, eliminating per-tick O(n) scans.
+		- Added periodic water-block refresh (every ~15 s) so fish track their current position
+		  instead of chasing stale spawn-time waypoints.
+
+	[ SphereII A Better Life ]
+		- Fixed terrWaterSpawner not spawning fish (entity group name mismatch: AnimalSwimming →
+		  SABLAnimalSwimming).
+		- Stripped unused language columns from Localization.txt, leaving Key and english only.
+		- Documented arramus's V2 compliance contributions: localization, fish prefix/template
+		  naming, UserSpawnType menu control, and underwater biome plant decorations.
+
+	[ SphereII Legacy Distant Terrain ]
+		- Removed global stack trace silencing from InitMod that affected all mods session-wide.
+		- Fixed misleading patch class name (SphereII_VoxelMeshTerrain_Update →
+		  SphereII_WorldEnvironment_Update).
+		- Removed unreachable null check in createDistantTerrain Postfix.
+		- Clarified null terrain generator fallback in terrainHeightFuncAllOtherWorlds.
+
 Version: 2.6.10.1108  [ Experimental ]
 	[ NPCv4 / IEntityAliveSDX - V4 Entity Support ]
 		NPCv4 (EntityAliveSDXV4) is a ground-up rewrite of the NPC entity that extends EntityTrader
@@ -132,6 +242,88 @@ Version: 2.6.10.1108  [ Experimental ]
 		  direct water adjacency, so plots diagonally adjacent to a water source returned no
 		  water and were skipped by the NPC despite being plantable by players. Added the 4
 		  horizontal diagonal neighbors to the scan so corner plots are correctly detected.
+		- Fixed UAI farming tasks not executing on dedicated servers. BlockUtilitiesSDX.addParticlesCentered
+		  had its dedicated-server early-return guard placed after ParticleEffect.IsAvailable() and
+		  ParticleEffect.LoadAsset() calls. On a dedicated server LoadAsset fails before the guard
+		  is reached, which prevented the subsequent AddBuff(_workBuff) call; without the buff,
+		  _hasWorkBuffApplied was never set and the state machine never reached HandleHarvestingAndCleanup.
+		  Fixed by moving the if (GameManager.IsDedicatedServer) return guard to the top of the method,
+		  matching the pattern already used in addParticles.
+		- Fixed EndOfStreamException in TraderData.ReadInventoryData when a trader-type NPC (EntityAliveSDXV4,
+		  which extends EntityTrader) harvested a crop. TileEntityLootContainer.AddItem() always calls
+		  SetModified() internally; on TileEntityTrader this triggers a network packet that serialises
+		  both items[] and TraderData in one stream. Any mismatch between the two stores causes an
+		  EndOfStreamException on the receiving client.
+		  Fix: Added HarvestManager — a static per-entity dictionary of plain TileEntityLootContainers
+		  that are never attached to the world tile-entity system. Items written directly to items[]
+		  without SetModified(), completely bypassing TraderData serialisation. UAITaskFarming and
+		  UAITaskFarmingV4 route harvest items to HarvestManager when the entity is EntityTrader;
+		  non-trader entities continue to use lootContainer.AddItem() as before.
+		- Fixed NullReferenceException in XUiC_LootWindowGroup.OnOpen() when a player opened a
+		  trader-type NPC's harvest inventory. TileEntity.get_blockValue() dereferences this.chunk;
+		  creating the HarvestManager container with a null chunk caused the exception. Fixed by
+		  looking up the entity's current chunk via World.GetChunkSync and passing it to the
+		  TileEntityLootContainer constructor, and setting container.entityId so OnOpen takes the
+		  entity loot-stage path (which does not cast blockValue.Block to BlockLoot).
+		- Fixed harvested items not appearing when a player opened a trader-type NPC's inventory
+		  on a dedicated server. The dialog action (DialogActionExecuteCommandSDX.PerformAction)
+		  runs client-side, while HarvestManager lives on the server process; the client's
+		  HarvestManager was always empty. Fixed with two new NetPackages:
+		    * NetPackageHarvestInventoryRequest (client → server): requests the NPC's harvest
+		      contents; server serialises the items, clears the server-side container, and sends
+		      the response.
+		    * NetPackageHarvestInventoryData (server → client): client deserialises the items,
+		      builds a local-only TileEntityLootContainer, and opens the loot window.
+		  On a listen server HarvestManager is local, so the loot window continues to be opened
+		  directly without a network round-trip. EntityUtilities.ExecuteCMD now branches on
+		  ConnectionManager.IsServer to choose the correct path.
+
+	[ EntitySwimingSDX ]
+		- Fixed per-tick O(n) Contains call in IsGoingToWater(). WaterBlocks was a List<Vector3i>;
+		  replaced with two parallel stores: a HashSet<Vector3i> (_waterBlockSet) for O(1) Contains
+		  used on every update tick, and a List<Vector3i> (_waterBlockList) for O(1) indexed random
+		  access used by GetRandomPosition().
+		- Fixed O(n) duplicate guard in RefreshWaterBlocks(). The old code called List.Contains before
+		  every Add during the scan loop. With HashSet, Add returns false for duplicates automatically,
+		  so no explicit guard is needed.
+		- Fixed fish waypoints becoming stale after the entity swam out of its initial spawn-time scan
+		  volume. RefreshWaterBlocks() was only called once in OnAddedToWorld(); fish that moved beyond
+		  the original 20x10x20 scan range would keep targeting old positions and eventually despawn.
+		  Added a _refreshCounter that triggers a full clear-and-rescan centred on the entity's current
+		  position every 300 ticks (~15 s at 20 ticks/s).
+
+	[ SphereII A Better Life ]
+		- Fixed terrWaterSpawner block not spawning any fish. The SpawnCubeRepeater Config had
+		  eg=AnimalSwimming but the entity group defined in entitygroups.xml is SABLAnimalSwimming.
+		  Corrected to eg=SABLAnimalSwimming so the world-decoration spawner blocks resolve the group.
+		- Cleaned up Config/Localization.txt: removed unused language columns (german, spanish, french,
+		  italian, japanese, koreana, polish, brazilian, russian, turkish, schinese, tchinese) and
+		  the File, Type, UsedInMainMenu, NoTranslate, and Context columns, leaving only Key and english.
+		[ Contributor: arramus ]
+		- Added localization entries for all fish entities and underwater plant blocks.
+		- Introduced fish prefix and template naming convention: fishPassiveTemplate and
+		  fishAggressiveTemplate serve as base templates; all concrete fish entities use the fish
+		  prefix (fishStingRay, fishTurtle, fishSardine, etc.) for consistent identification.
+		- Set UserSpawnType=None on both templates to suppress them from the spawn menu, and
+		  UserSpawnType=Menu on all concrete fish entities so only viable types are player-spawnable.
+		- Added all underwater plant blocks as biome decorations in the underwater biome, allowing
+		  them to appear in-world for environmental showcasing.
+
+	[ SphereII Legacy Distant Terrain ]
+		- Removed two Application.SetStackTraceLogType calls from InitMod that globally silenced
+		  Log and Warning stack traces for the entire session. This suppressed useful diagnostic
+		  output from all other mods and vanilla code, not just this mod's own logging.
+		- Renamed patch class SphereII_VoxelMeshTerrain_Update to SphereII_WorldEnvironment_Update
+		  to correctly reflect the type it patches (WorldEnvironment.Update, not VoxelMeshTerrain).
+		- Removed redundant null check in createDistantTerrain Postfix. DistantTerrain.Instance was
+		  assigned unconditionally inside an if (Instance == null) block and then immediately checked
+		  again before SetTerrainVisible. The second guard was unreachable on a successful assignment;
+		  SetTerrainVisible is now called directly after Configure.
+		- Clarified the null terrain generator fallback in terrainHeightFuncAllOtherWorlds. The
+		  implicit return of poiheightOverride (always 0 at that point) when GetTerrainGenerator()
+		  returns null has been made explicit with a local variable and a comment explaining that
+		  sea level (0) is intentionally returned so distant tiles render flat rather than using
+		  uninitialised height data.
 
 	[ Fire Manager ]
 		- Fixed fire particle left-behind after a burning block is destroyed by a player or

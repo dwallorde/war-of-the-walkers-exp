@@ -67,9 +67,12 @@ public static class EntitySyncUtils
         
         // clears the cvars
         EntityUtilities.ExecuteCMD(entity.entityId, "Dismiss", player);
-        
-       // Cleaning up bad cvar format.
+
+        // Cleaning up bad cvar format.
         player.Buffs.SetCustomVar($"hired_${entity.entityId}", 0f);
+
+        // Release the HarvestManager container for trader-type NPCs.
+        HarvestManager.Remove(entity.entityId);
      
         
     }
@@ -132,7 +135,19 @@ public static class EntitySyncUtils
         itemValue.SetMetadata("Inventory", inventoryStr, TypedMetadataValue.TypeTag.String);
 
         // 7. Bag / Loot Container
-        if (npc.lootContainer != null)
+        // Both EntityAliveSDX and EntityAliveSDXV4 extend EntityTrader.  OpenInventory routes
+        // their player-accessible bag through HarvestManager, not npc.lootContainer.
+        // Serialize from HarvestManager when present; fall back to lootContainer for any
+        // non-trader entity that reaches this path.
+        if (npc is EntityTrader && HarvestManager.Has(npc.entityId))
+        {
+            var hc = HarvestManager.GetOrCreate(npc.entityId);
+            string bagStr = SerializeItemStackArray(hc.items);
+            itemValue.SetMetadata("Bag", bagStr, TypedMetadataValue.TypeTag.String);
+            if (!string.IsNullOrEmpty(hc.lootListName))
+                itemValue.SetMetadata("LootListName", hc.lootListName, TypedMetadataValue.TypeTag.String);
+        }
+        else if (npc.lootContainer != null)
         {
             string bagStr = SerializeItemStackArray(npc.lootContainer.items);
             itemValue.SetMetadata("Bag", bagStr, TypedMetadataValue.TypeTag.String);
@@ -211,24 +226,32 @@ public static class EntitySyncUtils
         {
             ItemStack[] slots = DeserializeItemStackArray(bagStr);
 
-            if (npc.lootContainer == null)
+            // For EntityTrader-based entities (both EntityAliveSDX and EntityAliveSDXV4),
+            // the player-accessible inventory is served by HarvestManager — restore there so
+            // the OpenInventory dialog finds it under the new entity ID.
+            if (npc is EntityTrader)
             {
-                Chunk chunk = null;
-                npc.lootContainer = new TileEntityLootContainer(chunk);
-                npc.lootContainer.entityId = npc.entityId;
-                npc.lootContainer.SetContainerSize(new Vector2i(8, 6));
-            }
-
-            if (npc.lootContainer.items.Length < slots.Length)
-            {
-                npc.lootContainer.items = slots;
+                var hc = HarvestManager.GetOrCreate(npc.entityId);
+                for (int i = 0; i < slots.Length && i < hc.items.Length; i++)
+                    hc.items[i] = slots[i];
             }
             else
             {
-                for (int i = 0; i < slots.Length && i < npc.lootContainer.items.Length; i++)
-                    npc.lootContainer.items[i] = slots[i];
+                if (npc.lootContainer == null)
+                {
+                    Chunk chunk = null;
+                    npc.lootContainer = new TileEntityLootContainer(chunk);
+                    npc.lootContainer.entityId = npc.entityId;
+                    npc.lootContainer.SetContainerSize(new Vector2i(8, 6));
+                }
+
+                if (npc.lootContainer.items.Length < slots.Length)
+                    npc.lootContainer.items = slots;
+                else
+                    for (int i = 0; i < slots.Length && i < npc.lootContainer.items.Length; i++)
+                        npc.lootContainer.items[i] = slots[i];
+                npc.lootContainer.SetModified();
             }
-            npc.lootContainer.SetModified();
         }
 
         string lootList = itemValue.GetMetadata("LootListName") as string;

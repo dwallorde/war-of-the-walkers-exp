@@ -19,6 +19,13 @@ public struct NPCFrameCache
     /// <summary>Pre-calculated distance to the leader. Zero when there is no leader.</summary>
     public float        DistanceToLeader;
 
+    /// <summary>
+    /// Squared distance to the leader (no sqrt cost).  Use for comparisons where the
+    /// exact distance is not needed — e.g. <c>if (cache.DistanceSqToLeader > threshold * threshold)</c>.
+    /// Zero when there is no leader.
+    /// </summary>
+    public float        DistanceSqToLeader;
+
     /// <summary>True when a leader exists.</summary>
     public bool         HasLeader;
 
@@ -57,7 +64,9 @@ public struct NPCFrameCache
         Leader              = EntityUtilities.GetLeaderOrOwner(entity.entityId) as EntityAlive;
         HasLeader           = Leader != null;
         LeaderAsPlayer      = Leader as EntityPlayer;
-        DistanceToLeader    = HasLeader ? entity.GetDistance(Leader) : 0f;
+        // Compute squared distance first (no sqrt); derive DistanceToLeader only if needed.
+        DistanceSqToLeader  = HasLeader ? (entity.position - Leader.position).sqrMagnitude : 0f;
+        DistanceToLeader    = HasLeader ? UnityEngine.Mathf.Sqrt(DistanceSqToLeader) : 0f;
         IsLeaderLocalPlayer = HasLeader && GameManager.Instance.World.IsLocalPlayer(Leader.entityId);
         AttackOrRevengeTarget = EntityUtilities.GetAttackOrRevengeTarget(entity.entityId) as EntityAlive;
 

@@ -1353,7 +1353,32 @@ public static class EntityUtilities
 
             case "OpenInventory":
                 AdvLogging.DisplayLog(AdvFeatureClass, strDisplay + " Setting Order Open Inventory");
-                if (entityAlive.lootContainer == null)
+                if (entityAlive is EntityTrader)
+                {
+                    // Trader-type entities (e.g. EntityAliveSDXV4) store harvested crops in
+                    // HarvestManager — a plain TileEntityLootContainer that is never attached to
+                    // the world TES, so SetModified() is never called during harvest and
+                    // TraderData serialisation is never corrupted.
+                    //
+                    // On a listen server the HarvestManager dictionary is local, so we can open
+                    // the container directly. On a dedicated server the dictionary lives on the
+                    // server process while this dialog action runs on the client, so we send a
+                    // request packet and let the server respond with the item data.
+                    if (SingletonMonoBehaviour<ConnectionManager>.Instance.IsServer)
+                    {
+                        AdvLogging.DisplayLog(AdvFeatureClass, strDisplay + " Opening HarvestManager container (listen server)");
+                        var harvestContainer = HarvestManager.GetOrCreate(entityAlive.entityId);
+                        OpenContainer(player as EntityPlayerLocal, harvestContainer);
+                    }
+                    else
+                    {
+                        AdvLogging.DisplayLog(AdvFeatureClass, strDisplay + " Requesting HarvestManager container from server (dedicated server)");
+                        SingletonMonoBehaviour<ConnectionManager>.Instance.SendToServer(
+                            NetPackageManager.GetPackage<NetPackageHarvestInventoryRequest>()
+                                .Setup(entityAlive.entityId, player.entityId));
+                    }
+                }
+                else if (entityAlive.lootContainer == null)
                 {
                     AdvLogging.DisplayLog(AdvFeatureClass, strDisplay + " Loot Container is null");
                 }

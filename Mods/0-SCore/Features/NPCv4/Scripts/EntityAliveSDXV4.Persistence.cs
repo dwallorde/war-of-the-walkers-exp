@@ -35,7 +35,12 @@ public partial class EntityAliveSDXV4
 
         _bw.Write(inventory.holdingItem != null ? inventory.holdingItem.GetItemName() : "");
 
-        if (lootContainer != null)
+        if (HarvestManager.Has(entityId))
+        {
+            _bw.Write(true);
+            GameUtils.WriteItemStack(_bw, HarvestManager.GetOrCreate(entityId).GetItems());
+        }
+        else if (lootContainer != null)
         {
             _bw.Write(true);
             GameUtils.WriteItemStack(_bw, lootContainer.GetItems());
@@ -87,13 +92,12 @@ public partial class EntityAliveSDXV4
         if (_br.ReadBoolean())
         {
             var items = GameUtils.ReadItemStack(_br);
-            if (lootContainer == null)
+            if (items != null)
             {
-                Chunk chunk = null;
-                lootContainer = new TileEntityLootContainer(chunk) { entityId = entityId };
-                lootContainer.SetContainerSize(new Vector2i(8, 6));
+                var hc = HarvestManager.GetOrCreate(entityId);
+                for (int i = 0; i < items.Length && i < hc.items.Length; i++)
+                    hc.items[i] = items[i];
             }
-            if (items != null) lootContainer.items = items;
         }
     }
 

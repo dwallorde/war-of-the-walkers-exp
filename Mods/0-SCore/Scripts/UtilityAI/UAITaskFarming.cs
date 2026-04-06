@@ -154,7 +154,7 @@ namespace UAI
                 // Task timed out (e.g., stuck). Clean up and stop.
                 Debug.LogWarning($"UAITaskFarming timed out for entity {_context.Self.entityId}");
                 _targetFarmPlotData.Visited = true;
-                BlockUtilitiesSDX.removeParticles(new Vector3i(_targetFarmPlotPosition)); // Clean up particles if any
+                BlockUtilitiesSDX.removeParticlesCenteredServer(new Vector3i(_targetFarmPlotPosition)); // Clean up particles if any
                 if (!string.IsNullOrEmpty(_workBuff))
                     _context.Self.Buffs.RemoveBuff(_workBuff); // Ensure buff is removed on timeout
                 Stop(_context);
@@ -194,8 +194,12 @@ namespace UAI
 
             // Arrived at the plot. Stop moving and apply the work buff.
             _context.Self.moveHelper.Stop(); // Ensure entity stops moving
-            BlockUtilitiesSDX.addParticlesCentered(string.Empty,
-                new Vector3i(_targetFarmPlotPosition)); // Add visual effect
+            if (GameManager.IsDedicatedServer)
+                BlockUtilitiesSDX.addParticlesCenteredServer(string.Empty,
+                    new Vector3i(_targetFarmPlotPosition)); // Add visual effect (DS: server→clients)
+            else
+                BlockUtilitiesSDX.addParticlesCentered(string.Empty,
+                    new Vector3i(_targetFarmPlotPosition)); // Add visual effect
 
             // Apply the work buff to start the "working" phase.
             if (!string.IsNullOrEmpty(_workBuff))
@@ -227,7 +231,7 @@ namespace UAI
             }
 
             // Always try to remove particles associated with this task's target location.
-            BlockUtilitiesSDX.removeParticles(new Vector3i(_targetFarmPlotPosition));
+            BlockUtilitiesSDX.removeParticlesCenteredServer(new Vector3i(_targetFarmPlotPosition));
             _context.Self.setHomeArea(new Vector3i(_targetFarmPlotPosition), 10);
 
             // Call the base Stop method for standard cleanup.
@@ -242,33 +246,29 @@ namespace UAI
         /// </summary>
         private bool CheckHasSeed(Context _context)
         {
-            if (_context.Self.lootContainer == null) return false;
+            ItemStack[] items = null;
+            if (_context.Self is EntityTrader && HarvestManager.Has(_context.Self.entityId))
+                items = HarvestManager.GetOrCreate(_context.Self.entityId).items;
+            else if (_context.Self.lootContainer != null)
+                items = _context.Self.lootContainer.items;
 
-            foreach (var itemStack in _context.Self.lootContainer.items)
+            if (items == null) return false;
+
+            foreach (var itemStack in items)
             {
                 if (itemStack.IsEmpty()) continue;
-
-                var itemName = itemStack.itemValue.ItemClass.GetItemName();
-
-                bool match = false;
-                if (_seedPatternEndsWith == null) // Exact match case
-                {
-                    match = itemName.Equals(_seedPatternStartsWith, System.StringComparison.OrdinalIgnoreCase);
-                }
-                else // Pattern match case
-                {
-                    match = itemName.StartsWith(_seedPatternStartsWith, System.StringComparison.OrdinalIgnoreCase) &&
-                            itemName.EndsWith(_seedPatternEndsWith, System.StringComparison.OrdinalIgnoreCase);
-                }
-
-
-                if (match && itemStack.count > 0)
-                {
-                    return true; // Found at least one matching seed item.
-                }
+                if (MatchesSeedPattern(itemStack.itemValue.ItemClass.GetItemName()) && itemStack.count > 0)
+                    return true;
             }
+            return false;
+        }
 
-            return false; // No matching seeds found.
+        private bool MatchesSeedPattern(string itemName)
+        {
+            if (_seedPatternEndsWith == null)
+                return itemName.Equals(_seedPatternStartsWith, System.StringComparison.OrdinalIgnoreCase);
+            return itemName.StartsWith(_seedPatternStartsWith, System.StringComparison.OrdinalIgnoreCase) &&
+                   itemName.EndsWith(_seedPatternEndsWith, System.StringComparison.OrdinalIgnoreCase);
         }
 
 
@@ -341,7 +341,7 @@ namespace UAI
         /// </summary>
         private void HandleHarvestingAndCleanup(Context _context)
         {
-            BlockUtilitiesSDX.removeParticles(new Vector3i(_targetFarmPlotPosition));
+            BlockUtilitiesSDX.removeParticlesCenteredServer(new Vector3i(_targetFarmPlotPosition));
 
             if (_targetFarmPlotData == null)
             {
@@ -355,8 +355,16 @@ namespace UAI
             AdvLogging.DisplayLog("AdvancedTroubleshootingFeatures", "UAITaskFarming",
                 $"Entity {_context.Self.entityId} harvested {harvestedItemStacks?.Count ?? 0} item type(s) from {_targetFarmPlotPosition}.");
 
+            // EntityAliveSDXV4 extends EntityTrader. TileEntityLootContainer.AddItem() always
+            // calls SetModified() internally, which for TileEntityTrader triggers a network
+            // packet that serialises both items[] and TraderData in one stream. Those two stores
+            // can diverge, causing EndOfStreamException on the client. Use HarvestManager — a
+            // plain TileEntityLootContainer per entity, never attached to the world tile-entity
+            // system — to store crops safely. The player opens it via the OpenInventory dialog cmd.
+            bool isTraderEntity = _context.Self is EntityTrader;
+
             var lootContainer = _context.Self.lootContainer;
-            if (lootContainer == null)
+            if (!isTraderEntity && lootContainer == null)
                 Debug.LogWarning($"UAITaskFarming: lootContainer is null on entity {_context.Self.entityId}. Harvest items will be dropped.");
 
             if (harvestedItemStacks != null && harvestedItemStacks.Count > 0)
@@ -392,7 +400,25 @@ namespace UAI
                     AdvLogging.DisplayLog("AdvancedTroubleshootingFeatures", "UAITaskFarming",
                         $"  Attempting to add {count}x '{item.name}' to entity {_context.Self.entityId} inventory.");
 
-                    if (lootContainer != null && lootContainer.AddItem(itemStack))
+                    if (isTraderEntity)
+                    {
+                        // Store in HarvestManager — never touches the trader's lootContainer.
+                        if (!HarvestManager.AddItem(_context.Self.entityId, itemStack))
+                        {
+                            AdvLogging.DisplayLog("AdvancedTroubleshootingFeatures", "UAITaskFarming",
+                                $"  Harvest container full — dropping {count}x '{item.name}' on ground.");
+                            _context.Self.world.GetGameManager().ItemDropServer(
+                                itemStack, _context.Self.position, Vector3.zero,
+                                _context.Self.entityId, 60f, false);
+                        }
+                        else
+                        {
+                            AdvLogging.DisplayLog("AdvancedTroubleshootingFeatures", "UAITaskFarming",
+                                $"  Added {count}x '{item.name}' to harvest container.");
+                            addedItems = true;
+                        }
+                    }
+                    else if (lootContainer != null && lootContainer.AddItem(itemStack))
                     {
                         AdvLogging.DisplayLog("AdvancedTroubleshootingFeatures", "UAITaskFarming",
                             $"  Added {count}x '{item.name}' to inventory.");
@@ -411,8 +437,15 @@ namespace UAI
                 if (addedItems)
                 {
                     _context.Self.PlayOneShot("item_plant_pickup", false);
-                    lootContainer.items = StackSortUtil.CombineAndSortStacks(lootContainer.items, 0);
-                    lootContainer.SetModified();
+                    if (isTraderEntity)
+                    {
+                        HarvestManager.Save();
+                    }
+                    else if (lootContainer != null)
+                    {
+                        lootContainer.items = StackSortUtil.CombineAndSortStacks(lootContainer.items, 0);
+                        lootContainer.SetModified();
+                    }
                 }
             }
 

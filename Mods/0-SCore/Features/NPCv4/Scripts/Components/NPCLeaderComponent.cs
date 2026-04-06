@@ -26,10 +26,12 @@ public class NPCLeaderComponent : INPCComponent
     private const int LeaderCacheExpiry = 30;
 
     /// <summary>Distance (units) at which a following NPC is teleported to the leader.</summary>
-    private const float TeleportThreshold = 60f;
+    private const float TeleportThreshold   = 60f;
+    private const float TeleportThresholdSq = TeleportThreshold * TeleportThreshold;
 
     /// <summary>Distance (units) at which a vehicle-attached NPC is snapped to the leader.</summary>
-    private const float VehicleSnapThreshold = 10f;
+    private const float VehicleSnapThreshold   = 10f;
+    private const float VehicleSnapThresholdSq  = VehicleSnapThreshold * VehicleSnapThreshold;
 
     // -----------------------------------------------------------------------
     // State
@@ -155,7 +157,7 @@ public class NPCLeaderComponent : INPCComponent
         {
             // Leader is in a vehicle — hide the NPC and keep it near the vehicle.
             _entity.SendOnMission(true);
-            if (cache.DistanceToLeader > VehicleSnapThreshold)
+            if (cache.DistanceSqToLeader > VehicleSnapThresholdSq)
             {
                 var snapPos = cache.Leader.GetPosition();
                 snapPos.y += 2f;
@@ -170,7 +172,7 @@ public class NPCLeaderComponent : INPCComponent
 
         _entity.bWillRespawn = true;
 
-        if (cache.DistanceToLeader > TeleportThreshold)
+        if (cache.DistanceSqToLeader > TeleportThresholdSq)
             _entity.TeleportToPlayer(cache.Leader);
 
         // Companion-list management.  Single IndexOf call; uses Count-1 after Add.

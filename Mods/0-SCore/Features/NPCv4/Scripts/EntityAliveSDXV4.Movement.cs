@@ -148,6 +148,23 @@ public partial class EntityAliveSDXV4
         }
     }
 
+    /// <summary>
+    /// Returns the Y coordinate one block above the highest solid block at (x, z),
+    /// scanning upward from terrain height through any player-placed blocks (e.g. farm plots).
+    /// Unlike GetHeightAt, this accounts for structures built on top of terrain.
+    /// </summary>
+    private static int GetSurfaceY(float x, float z)
+    {
+        var world = GameManager.Instance.World;
+        int y = (int)world.GetHeightAt(x, z);
+        int bx = (int)x;
+        int bz = (int)z;
+        int cap = y + 20;
+        while (y < cap && world.GetBlock(bx, y + 1, bz).Block.shape.IsSolidSpace)
+            y++;
+        return y + 1;
+    }
+
     public void TeleportToPlayer(EntityAlive target, bool randomPosition = false)
     {
         if (target == null) return;
@@ -173,7 +190,8 @@ public partial class EntityAliveSDXV4
                 myPosition  = RandomPositionGenerator.CalcPositionInDirection(target, target.position, dir, 5, 80f);
             }
 
-            myPosition.y = (int)GameManager.Instance.World.GetHeightAt(myPosition.x, myPosition.z) + 1;
+            // Find the actual surface, including player-placed blocks (e.g. farm plots).
+            myPosition.y = GetSurfaceY(myPosition.x, myPosition.z);
         }
 
         motion = Vector3.zero;
@@ -186,7 +204,7 @@ public partial class EntityAliveSDXV4
     private IEnumerator ValidateTeleport(EntityAlive target, bool randomPosition = false)
     {
         yield return new WaitForSeconds(1f);
-        var y = (int)GameManager.Instance.World.GetHeightAt(position.x, position.z);
+        var y = GetSurfaceY(position.x, position.z);
         if (position.y < y)
         {
             var myPosition = position;
@@ -200,7 +218,8 @@ public partial class EntityAliveSDXV4
                 myPosition  = RandomPositionGenerator.CalcPositionInDirection(target, target.position, dir, 5, 80f);
             }
 
-            myPosition.y = (int)GameManager.Instance.World.GetHeightAt(myPosition.x, myPosition.z) + 2;
+            // Find the actual surface, including player-placed blocks (e.g. farm plots).
+            myPosition.y = GetSurfaceY(myPosition.x, myPosition.z) + 1;
             motion = Vector3.zero;
             navigator?.clearPath();
             SetPosition(myPosition, true);
