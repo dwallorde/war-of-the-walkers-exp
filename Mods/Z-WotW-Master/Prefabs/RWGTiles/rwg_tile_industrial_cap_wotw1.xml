@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+  <property name="CopyAirBlocks" value="True" />
+  <property name="DifficultyTier" value="0" />
+  <property name="ExcludeDistantPOIMesh" value="False" />
+  <property name="ExcludePOICulling" value="False" />
+  <property name="DistantPOIYOffset" value="0" />
+  <property name="AllowTopSoilDecorations" value="False" />
+  <property name="ShowQuestClearCount" value="1" />
+  <property name="TraderArea" value="False" />
+  <property name="YOffset" value="-18" />
+  <property name="RotationToFaceNorth" value="2" />
+  <property name="Zoning" value="none" />
+  <property name="POIMarkerSize" value="100, 0, 100#25, 0, 25#5, 5, 11#1, 1, 1#1, 1, 1#1, 1, 1#1, 1, 1#9, 21, 19#18, 8, 9#9, 12, 18#18, 7, 9" />
+  <property name="POIMarkerStart" value="22, 18, 36#1, 18, 1#127, 18, 70#134, 28, 71#101, 27, 13#69, 27, 21#34, 27, 25#137, 0, 84#123, 18, 28#123, 18, 126#2, 18, 27" />
+  <property name="POIMarkerGroup" value="1,2,shipping,light1,light2,light3,light4,sinkhole,tank,tank2,tank3" />
+  <property name="POIMarkerTags" value="wotw100##########" />
+  <property name="POIMarkerType" value="POISpawn,POISpawn,PartSpawn,PartSpawn,PartSpawn,PartSpawn,PartSpawn,PartSpawn,PartSpawn,PartSpawn,PartSpawn" />
+  <property name="SleeperVolumeSize" value="17, 10, 38" />
+  <property name="SleeperVolumeStart" value="3, 18, 75" />
+  <property name="SleeperVolumeGroupId" value="0" />
+  <property name="SleeperVolumeGroup" value="S_-Group_Generic_Zombie,1,6" />
+  <property name="SleeperIsLootVolume" value="False" />
+  <property name="SleeperIsQuestExclude" value="False" />
+  <property name="SleeperVolumeFlags" value="0" />
+  <property name="POIMarkerPartToSpawn" value=",,part_shipping_container_05,part_streetlight_double,part_streetlight_quad,part_streetlight_double,part_streetlight_single,part_wotw_industrial_sinkhole,part_wotw_industrial_tank,part_wotw_industrial_missiletank,part_wotw_industrial_lighttank" />
+  <property name="POIMarkerPartRotations" value="2,0,2,0,0,0,3,1,0,2,0" />
+  <property name="POIMarkerPartSpawnChance" value="1,1,0.4,0.2,0.2,0.2,0.2,0.6,0.6,0.8,1" />
+  <property name="PrefabSize" value="150, 29, 150" />
+  <property name="Tags" value="streettile,rwgonly" />
+  <property name="SleeperVolumeTriggeredBy" value=" " />
+  <property class="Stats">
+    <property name="TotalVertices" value="586603" />
+    <property name="TotalTriangles" value="315860" />
+    <property class="BlockEntities">
+      <property name="Vertices" value="422504" />
+      <property name="Triangles" value="147143" />
+    </property>
+    <property class="ChunkMeshes0">
+      <property name="Vertices" value="94265" />
+      <property name="Triangles" value="56529" />
+    </property>
+    <property class="ChunkMeshes1">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes2">
+      <property name="Vertices" value="96" />
+      <property name="Triangles" value="48" />
+    </property>
+    <property class="ChunkMeshes3">
+      <property name="Vertices" value="840" />
+      <property name="Triangles" value="544" />
+    </property>
+    <property class="ChunkMeshes4">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes5">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes6">
+      <property name="Vertices" value="68898" />
+      <property name="Triangles" value="111596" />
+    </property>
+  </property>
+  <property class="IndexedBlockOffsets">
+    <property class="POILight">
+      <property name="0" value="134, 28, 122" />
+    </property>
+    <property class="quest_wood_trees">
+      <property name="0" value="142, 18, 20" />
+    </property>
+    <property class="TraderOnOff">
+      <property name="0" value="101, 18, 26" />
+    </property>
+  </property>
+</prefab>
