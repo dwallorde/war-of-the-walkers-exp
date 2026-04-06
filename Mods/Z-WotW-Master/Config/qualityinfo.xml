@@ -1,0 +1,11 @@
+<config>
+
+<set xpath="/qualityinfo/quality[@key='0']/@color">C1CDCD</set>
+<set xpath="/qualityinfo/quality[@key='1']/@color">7D6454</set>
+<set xpath="/qualityinfo/quality[@key='2']/@color">B29600</set> <!-- B2B200 -->
+<set xpath="/qualityinfo/quality[@key='3']/@color">4BB5BF</set> <!-- 53868B -->
+<set xpath="/qualityinfo/quality[@key='4']/@color">00A200</set> <!-- 006400 -->
+<set xpath="/qualityinfo/quality[@key='5']/@color">0505FF</set> <!-- 000080 -->
+<set xpath="/qualityinfo/quality[@key='6']/@color">CD1874</set> <!-- 8C1953 -->
+
+</config>

@@ -1,0 +1,39 @@
+<configs>
+    <!-- Helmet Light  -->
+    <!-- <append xpath="//item_modifier[@name='modArmorHelmetLight']"> -->
+        <!-- <effect_group name="DamageHooks Deactivate"> -->
+            <!-- <requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/> -->
+            <!-- <requirement name="IsItemActive"/> -->
+            <!-- <triggered_effect trigger="onSelfRoutineUpdate" action="SetPartActive" part="HeadLight" active="false" /> -->
+        <!-- </effect_group> -->
+    <!-- </append> -->
+
+    <!-- <append xpath="//item_modifier[@name='modArmorHelmetLight']/effect_group/triggered_effect[@trigger='onSelfItemActivate']"> -->
+        <!-- <requirement name="ItemPercentUsed, SCore" operation="LT" value="1" /> -->
+    <!-- </append> -->
+	
+		<append xpath="//item_modifier[@name='modArmorHelmetLight']">
+			<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourActiveModSettingsWotW"/>
+			<property name="RepairTools" value="wotwRepairKitBatteries"/>
+			<effect_group name="BrokenHooks">
+				<requirement name="ItemPercentUsed, SCore" operation="GTE" value="1"/>
+				<requirement name="IsEquipped"/>
+				<triggered_effect trigger="onSelfRoutineUpdate" action="AddBuff" buff="buffStatusModBroken"/>
+			</effect_group>
+			<effect_group name="EquipHooks">
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffStatusModBroken"/>
+				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="buffStatusModBroken">
+					<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- <effect_group name="DamageHooks Deactivate">
+				<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+				<requirement name="IsItemActive"/>
+				<triggered_effect trigger="onSelfRoutineUpdate" action="SetPartActive" part="HeadLight" active="false" />
+			</effect_group> -->
+		</append>
+
+		<append xpath="//item_modifier[@name='modArmorHelmetLight']/effect_group/triggered_effect[@trigger='onSelfItemActivate']">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1" />
+		</append>
+</configs>

@@ -1,0 +1,5 @@
+<config>
+
+<!-- <set xpath="/controls/smxui_window_design_menu_right_inventory/rect[@name='smxui_window_menu_content']/rect[@name='smxui_container_options']/smxui_lockedslots_combobox_vertical[@name='cbxLockedSlots']/@value_max">120</set> -->
+
+</config>

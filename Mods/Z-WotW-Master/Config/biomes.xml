@@ -1,0 +1,950 @@
+<config>
+<!-- Biomes.xml -->
+
+<!-- Pine Forest -->
+<!-- <set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/@lootstage_max">50</set> -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/@prob">93</set> <!-- default is 88 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/Temperature/@range">60,70</set> <!-- default is 76,80 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='default']/Fog/@range">0,1</set> <!-- default is 0,2 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/@prob">2</set> <!-- default is 7 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/Temperature/@range">50,55</set> <!-- default is 65,70 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/Fog/@min">25</set> <!-- default is 17 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='fog']/Fog/@max">30</set> <!-- default is 27 -->
+
+<setattribute xpath="//biome[@name='pine_forest']/weather[@name='rainlight']" name="buff">buffRainLight</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rainlight']/@prob">4</set> <!-- default is 6 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rainlight']/Temperature/@range">55,60</set> <!-- default is 65,70 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rainlight']/Fog/@range">1,3</set> <!-- default is 1,3 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rainlight']/Precipitation/@range">45,55</set> <!-- default is 40,50 -->
+
+<setattribute xpath="//biome[@name='pine_forest']/weather[@name='rainheavy']" name="buff">buffRainHeavy</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rainheavy']/@prob">2</set> <!-- default is 4 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rainheavy']/Temperature/@range">50,55</set> <!-- default is 65,70 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rainheavy']/Fog/@range">2,6</set> <!-- default is 3,7 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='rainheavy']/Precipitation/@range">75,90</set> <!-- default is 70,85 -->
+
+<setattribute xpath="//biome[@name='pine_forest']/weather[@name='storm']" name="buff">buffRainHeavy</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='storm']/Temperature/@range">45,55</set> <!-- default is 65,70 -->
+<set xpath="/worldgeneration/biomes/biome[@name='pine_forest']/weather[@name='storm']/Fog/@range">15,15</set> <!-- default is 12,12 -->
+
+<remove xpath="//biomes/biome[@name='pine_forest']/subbiome/decorations/decoration[@blockname='treeDeadTree01']"/>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.0095, 0, .21']/decorations">
+				<decoration type="block" blockname="plantedAloe3Harvest" 			prob="0.008"/>
+				<decoration type="block" blockname="plantedPotato3Harvest" 			prob="0.007"/>
+				<decoration type="block" blockname="mushroom01" 					prob="0.0002"/>
+				<decoration type="block" blockname="mushroom02" 					prob="0.0002"/>
+				<decoration type="block" blockname="forestFlower" 					prob="0.075" />
+				<decoration type="block" blockname="cntBirdnest" 					prob="0.001" />
+				<decoration type="block" blockname="oreForestBoulder1"				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Resource_RandomOrePile" 		prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate4" 	prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate5" 	prob="0.0005" rotatemax="7"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.041, 0, .18'][@noiseoffset='2000, 222']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.041, 0, .18'][@noiseoffset='2000, 222']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.041, 0, .18'][@noiseoffset='2000, 222']/decorations">
+				<decoration type="block" blockname="oreForestBoulder1"				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Resource_RandomOrePile" 		prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate4" 	prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate5" 	prob="0.0005" rotatemax="7"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.041, 0, .18'][@noiseoffset='3000, 333']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.041, 0, .18'][@noiseoffset='3000, 333']/decorations">
+				<decoration type="block" blockname="oreForestBoulder1"				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Resource_RandomOrePile" 		prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate4" 	prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate5" 	prob="0.0005" rotatemax="7"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.041, 0, .18'][@noiseoffset='4000, 444']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.041, 0, .18'][@noiseoffset='4000, 444']/decorations">
+				<decoration type="block" blockname="oreForestBoulder1"				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Resource_RandomOrePile" 		prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate4" 	prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate5" 	prob="0.0005" rotatemax="7"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.014, 0, .38']/decorations">
+				<decoration type="block" blockname="plantedAloe3Harvest" 			prob="0.008"/>
+				<decoration type="block" blockname="plantedPotato3Harvest" 			prob="0.007"/>
+				<decoration type="block" blockname="mushroom01" 					prob="0.0002"/>
+				<decoration type="block" blockname="mushroom02" 					prob="0.0002"/>
+				<decoration type="block" blockname="forestFlower" 					prob="0.075" />
+				<decoration type="block" blockname="oreForestBoulder1"				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Resource_RandomOrePile" 		prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate4" 	prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate5" 	prob="0.0005" rotatemax="7"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.014, 0, .46']/decorations">
+				<decoration type="block" blockname="plantedAloe3Harvest" 			prob="0.008"/>
+				<decoration type="block" blockname="plantedPotato3Harvest" 			prob="0.007"/>
+				<decoration type="block" blockname="mushroom01" 					prob="0.0002"/>
+				<decoration type="block" blockname="mushroom02" 					prob="0.0002"/>
+				<decoration type="block" blockname="forestFlower" 					prob="0.075" />
+				<decoration type="block" blockname="oreForestBoulder1"				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreForestBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Resource_RandomOrePile" 		prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate4" 	prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate5" 	prob="0.0005" rotatemax="7"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='pine_forest']/decorations">
+			<decoration type="block" blockname="plantedGoldenrod3Harvest"			prob=".001" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Resource_RandomOrePile" 			prob="0.00025" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate4" 	prob="0.00025" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate5" 	prob="0.00025" rotatemax="7"/>
+</append>
+
+<!-- Burnt Forest Biome -->
+<!-- <set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/@lootstage_max">100</set> -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/@lootstage_modifier">0.25</set>
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/@lootstage_bonus">5</set>
+
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/@prob">93</set> <!-- default is 83 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/Temperature/@range">80,90</set> <!-- default is 75,85 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/CloudThickness/@range">30,60</set> <!-- default is 40,70 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='default']/Fog/@range">0,4</set> <!-- default is 0,5 -->
+
+<setattribute xpath="//biome[@name='burnt_forest']/weather[@name='rainlight']" name="buff">buffRainLight</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rainlight']/@prob">7</set> <!-- default is 10 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rainlight']/Temperature/@range">80,90</set> <!-- default is 75,85 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rainlight']/Precipitation/@range">50,60</set> <!-- default is 40,50 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rainlight']/Fog/@range">1,4</set> <!-- default is 2,5 -->
+
+<setattribute xpath="//biome[@name='burnt_forest']/weather[@name='rainheavy']" name="buff">buffRainHeavy</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rainheavy']/@prob">5</set> <!-- default is 7 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rainheavy']/Temperature/@range">80,90</set> <!-- default is 75,85 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rainheavy']/Precipitation/@range">80,90</set> <!-- default is 75,85 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='rainheavy']/Fog/@range">2,6</set> <!-- default is 3,8 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='stormbuild']/@duration">.10</set>  <!-- For Testing -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='stormbuild']/Temperature/@range">85,95</set> <!-- default is 75,85 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='stormbuild']/CloudThickness/@range">75,85</set> <!-- default is 98,100 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='stormbuild']/Fog/@range">5,10</set> <!-- default is 0,0 -->
+		
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='storm']/Temperature/@range">85,95</set> <!-- default is 75,85 -->
+<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/weather[@name='storm']/Fog/@range">15,25</set> <!-- default is 0,0 -->
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.03, 0, .21']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.03, 0, .21']/decorations">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".007" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.031, 0, .22'][@noiseoffset='2000, 222']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.031, 0, .22'][@noiseoffset='2000, 222']/decorations">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".007" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.032, 0, .23'][@noiseoffset='3000, 333']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.032, 0, .23'][@noiseoffset='3000, 333']/decorations">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".007" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder1" 				prob=".00099" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder2" 				prob=".00099" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.033, 0, .3']/decorations">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".007" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.04, 0, .4']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome[@noise='.04, 0, .4']/decorations">
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".007" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations">
+			<decoration type="block" blockname="oreBurntBoulder1" prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreBurntBoulder2" prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreBurntBoulder3" prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']">
+		<subbiome noise=".03, 0, .3"> <!-- Ore Sub Biome: Copper / Zinc Ore -->
+			<layers>
+				<layer depth="1" blockname="terrBurntForestGround"/>
+				<layer depth="3" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone">
+					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="*" blockname="terrStone">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+					<resource blockname="copperOre" prob="0.6500" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_deco_RandomOre" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock01" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock02" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="mushroomBiome2" 				prob=".0005"/>
+				<decoration type="block" blockname="mushroomBiome4" 				prob=".0005"/>
+				<decoration type="block" blockname="oreBurntBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreBurntBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="cntBurntForestRandomLootHelper" prob="0.00025"/>
+				<decoration type="block" blockname="rock01" 						prob=".005" rotatemax="3"/>
+				<decoration type="block" blockname="rock02" 						prob=".005" rotatemax="3"/>
+				<decoration type="block" blockname="cntBirdnest" 					prob="0.001"/>
+				<decoration type="block" blockname="treeDeadPineLeaf" 				prob=".001" rotatemax="7"/>
+				<decoration type="block" blockname="treePineBurntLrg" 				prob="0.03" rotatemax="7"/>
+				<decoration type="block" blockname="treePineBurntMed" 				prob="0.03" rotatemax="7"/>
+				<decoration type="block" blockname="treePineBurntFullMed" 			prob="0.03" rotatemax="7"/>
+				<decoration type="prefab" name="deco_rubble_wood_01" 				prob=".004"/>
+				<decoration type="prefab" name="deco_rubble_wood_02" 				prob=".004"/>
+				<decoration type="block" blockname="emberPileDeco1" 				prob="0.001" rotatemax="7"/>
+				<decoration type="block" blockname="emberPileDeco2" 				prob="0.001" rotatemax="7"/>
+				<decoration type="block" blockname="emberPileDeco3" 				prob="0.001" rotatemax="7"/>
+				<decoration type="block" blockname="emberPileDeco4" 				prob="0.001" rotatemax="7"/>
+				<decoration type="block" blockname="treeShortGrass" 				prob=".001"/>
+				<decoration type="block" blockname="treeBrownGrassDiagonal" 		prob=".02"/>
+				<decoration type="block" blockname="treeStump" 						prob=".0002" rotatemax="7"/>
+			</decorations>
+		</subbiome>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations">
+			<decoration type="prefab" name="wotw_Resource_RandomOrePile" prob="0.0005" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Resource_RandomLootCrate2" prob="0.0005" rotatemax="7"/>
+</append>
+
+
+
+<!-- To Do Update New Burnt Forest Biome Trees with Wood Logs/Sticks etc -->
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='plantShrubDead']/@blockname">plantShrubBurntForest</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='treePineBurntLrg']/@blockname">treePineBurntLrgBF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='treePineBurntMed']/@blockname">treePineBurntMedBF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='treePineBurntFullMed']/@blockname">treePineBurntFullMedBF</set>
+<!-- <set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='treeBurntMaple01']/@blockname">treeBurntMaple01BF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='treeBurntMaple02']/@blockname">treeBurntMaple02BF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='treeBurntMaple03']/@blockname">treeBurntMaple03BF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='treeDeadTree01']/@blockname">treeDeadTree01BF</set> -->
+
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations/decoration[@blockname='plantShrubDead']/@blockname">plantShrubBurntForest</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations/decoration[@blockname='treePineBurntLrg']/@blockname">treePineBurntLrgBF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations/decoration[@blockname='treePineBurntMed']/@blockname">treePineBurntMedBF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations/decoration[@blockname='treePineBurntFullMed']/@blockname">treePineBurntFullMedBF</set>
+<!-- <set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations/decoration[@blockname='treeBurntMaple01']/@blockname">treeBurntMaple01BF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations/decoration[@blockname='treeBurntMaple02']/@blockname">treeBurntMaple02BF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations/decoration[@blockname='treeBurntMaple03']/@blockname">treeBurntMaple03BF</set>
+<set xpath="worldgeneration/biomes/biome[@name='burnt_forest']/decorations/decoration[@blockname='treeDeadTree01']/@blockname">treeDeadTree01BF</set> -->
+
+<!-- Desert Biome -->
+<!-- <set xpath="/worldgeneration/biomes/biome[@name='desert']/@lootstage_max">150</set> -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/@lootstage_modifier">0.5</set>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/@lootstage_bonus">8</set>
+
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/@prob">95</set> <!-- default is 90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/Temperature/@range">110,120</set> <!-- default is 95,105 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/CloudThickness[@prob='35']/@prob">70</set> <!-- default is 35 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='default']/CloudThickness[@prob='65']/@prob">30</set> <!-- default is 65 -->
+
+<setattribute xpath="//biome[@name='desert']/weather[@name='rainlight']" name="buff">buffRainLight</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainlight']/@prob">4</set> <!-- default is 5 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainlight']/Temperature/@range">105,115</set> <!-- default is 90,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainlight']/CloudThickness/@range">60,75</set> <!-- default is 55,80 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainlight']/Precipitation/@range">45,55</set> <!-- default is 40,50 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainlight']/Fog/@range">1,3</set> <!-- default is 3,4 -->
+
+<setattribute xpath="//biome[@name='desert']/weather[@name='rainheavy']" name="buff">buffRainHeavy</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainheavy']/@prob">4</set> <!-- default is 5 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainheavy']/Temperature/@range">105,115</set> <!-- default is 90,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainheavy']/CloudThickness/@range">80,95</set> <!-- default is 90,95 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainheavy']/Precipitation/@range">75,90</set> <!-- default is 70,85 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='rainheavy']/Fog/@range">4,6</set> <!-- default is 5,7 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='stormbuild']/@duration">.10</set>  <!-- For Testing -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='stormbuild']/Temperature/@range">105,115</set> <!-- default is 90,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='stormbuild']/CloudThickness/@range">75,85</set> <!-- default is 98,100 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='stormbuild']/Fog/@range">5,10</set> <!-- default is 5,5 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Temperature/@range">105,115</set> <!-- default is 90,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/weather[@name='storm']/Fog/@range">15,25</set> <!-- default is 5,5 -->
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.02, 0, .3']/decorations">
+			<decoration type="block" blockname="oreDesertBoulder1" 					prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreDesertBoulder2" 					prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreDesertBoulder3" 					prob=".00033" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Resource_RandomOrePile" 			prob="0.0005" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Resource_RandomOrePile" 			prob="0.00025" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Deco_BrimstoneVein" 				prob="0.00325" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Deco_BrimstoneVein" 				prob="0.00125" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Deco_CopperZincVein" 				prob="0.00325" rotatemax="7"/>
+			<decoration type="block" blockname="plantedYucca3Harvest" 				prob="0.0045" rotatemax="3" />
+			<decoration type="block" blockname="plantedAloe3Harvest" 				prob="0.0045" rotatemax="3"/>
+			<decoration type="block" blockname="plantedCotton3Harvest" 				prob="0.003" rotatemax="3"/>
+			<decoration type="block" blockname="plantedWheat3Harvest" 				prob="0.0035" rotatemax="3"/>
+			<decoration type="block" blockname="plantedGoldenrod3Harvest" 			prob="0.0041" rotatemax="3"/>
+			<decoration type="block" blockname="plantedCorn3Harvest" 				prob="0.0035" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.02, 0, .45']/decorations">
+			<decoration type="block" blockname="plantedYucca3Harvest" 				prob="0.0045" rotatemax="3" />
+			<decoration type="block" blockname="plantedAloe3Harvest" 				prob="0.0045" rotatemax="3"/>
+			<decoration type="block" blockname="plantedWheat3Harvest" 				prob="0.0035" rotatemax="3"/>
+			<decoration type="block" blockname="plantedCorn3Harvest" 				prob="0.0035" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.03, 0, .2'][@noiseoffset='1000, 111']/layers/layer[@depth='*'][@blockname='terrSandStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.03, 0, .2'][@noiseoffset='1000, 111']/decorations">
+			<decoration type="block" blockname="oreDesertBoulder1" 					prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreDesertBoulder2" 					prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreDesertBoulder3" 					prob=".00033" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Resource_RandomOrePile" 			prob="0.0005" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Resource_RandomOrePile" 			prob="0.00025" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Deco_BrimstoneVein" 				prob="0.00325" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Deco_BrimstoneVein" 				prob="0.00125" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Deco_CopperZincVein" 				prob="0.00325" rotatemax="7"/>
+			<decoration type="block" blockname="plantedYucca3Harvest" 				prob="0.0045" rotatemax="3" />
+			<decoration type="block" blockname="plantedCotton3Harvest" 				prob="0.003" rotatemax="3"/>
+			<decoration type="block" blockname="plantedWheat3Harvest" 				prob="0.0035" rotatemax="3"/>
+			<decoration type="block" blockname="plantedGoldenrod3Harvest" 			prob="0.0041" rotatemax="3"/>
+			<decoration type="block" blockname="plantedCorn3Harvest" 				prob="0.0035" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.031, 0, .21'][@noiseoffset='2000, 222']/layers/layer[@depth='*'][@blockname='terrSandStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.031, 0, .21'][@noiseoffset='2000, 222']/decorations">
+				<decoration type="block" blockname="plantedWheat3Harvest" 			prob="0.0035" rotatemax="3"/>
+				<decoration type="block" blockname="plantedGoldenrod3Harvest" 		prob="0.0041" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.032, 0, .22'][@noiseoffset='3000, 333']/layers/layer[@depth='*'][@blockname='terrSandStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.032, 0, .22'][@noiseoffset='3000, 333']/decorations">
+				<decoration type="block" blockname="plantedWheat3Harvest" 			prob="0.0035" rotatemax="3"/>
+				<decoration type="block" blockname="plantedGoldenrod3Harvest" 		prob="0.0041" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.03, 0, .3']/decorations">
+				<decoration type="block" blockname="plantedWheat3Harvest" 			prob="0.0035" rotatemax="3"/>
+				<decoration type="block" blockname="plantedGoldenrod3Harvest" 		prob="0.0041" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.04, 0, .3']/layers/layer[@depth='*'][@blockname='terrSandStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.04, 0, .3']/decorations">
+				<decoration type="block" blockname="plantedWheat3Harvest" 			prob="0.0035" rotatemax="3"/>
+				<decoration type="block" blockname="plantedGoldenrod3Harvest" 		prob="0.0041" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']/decorations">
+				<decoration type="block" blockname="oreDesertBoulder1" 				prob=".00099" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder2" 				prob=".00099" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder3" 				prob=".00099" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Resource_RandomOrePile" 		prob="0.0005" rotatemax="7"/>
+				<decoration type="prefab" name="wotw_Resource_RandomLootCrate3" 	prob="0.0005" rotatemax="7"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='desert']">
+		<subbiome noise=".05, 0, .35"> <!-- Ore Sub Biome: copperOre / zincOre -->
+			<layers>
+				<layer depth="4" blockname="terrDesertGround"/>
+				<layer depth="1" blockname="terrSandStone">
+					<resource blockname="terrGravel" prob="0.4130" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="*" blockname="terrSandStone">
+					<resource blockname="terrOreSilver" prob=".008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob=".006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob=".0055" rwgGenerationType="all"/>
+					<resource blockname="copperOre" prob=".7" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="1" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="1" blockname="terrSandStone"/>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".01" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_deco_RandomOre" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock01" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock02" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder1" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder2" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder3" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus01" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus02" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus03" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus04" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus05" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="rock01" 					prob=".001" rotatemax="3"/>
+				<decoration type="block" blockname="rock02" 					prob=".001" rotatemax="3"/>
+				<decoration type="block" blockname="rock04" 					prob=".001" rotatemax="3"/>
+				<decoration type="block" blockname="cntDesertRandomLootHelper" 	prob="0.00025"/>
+				<decoration type="block" blockname="treeDeadPineLeaf" 			prob="0.020" rotatemax="7"/>
+				<decoration type="block" blockname="plantedYucca3Harvest" 		prob="0.002" rotatemax="3"/>
+				<decoration type="block" blockname="plantedAloe3Harvest"  		prob="0.003" rotatemax="3"/>
+				<decoration type="block" blockname="treeDesertShrub" 			prob="0.05" rotatemax="7"/>
+				<decoration type="block" blockname="driftwood" 					prob="0.002"/>
+				<decoration type="block" blockname="driftwood2" 				prob="0.002"/>
+				<decoration type="block" blockname="cntBirdnest" 				prob="0.001"/>
+				<decoration type="block" blockname="decoCowSkull" 				prob="0.00025"/>
+				<decoration type="block" blockname="treeCactus06" 				prob="0.0009" rotatemax="3"/>
+				<decoration type="block" blockname="treeBrownGrassDiagonal" 	prob=".00025"/>
+				<decoration type="block" blockname="treeOakMed01" 				prob="0.0003" rotatemax="7"/>
+				<decoration type="block" blockname="treeOakSml01" 				prob="0.002" rotatemax="7"/>
+			</decorations>
+		</subbiome>
+		
+		<subbiome noise=".055, 0, .4"> <!-- Ore Sub Biome: brimstoneOre -->
+			<layers>
+				<layer depth="4" blockname="terrDesertGround"/>
+				<layer depth="1" blockname="terrSandStone">
+					<resource blockname="terrGravel" prob="0.4130" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="*" blockname="terrSandStone">
+					<resource blockname="terrOreSilver" prob=".008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob=".006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob=".0055" rwgGenerationType="all"/>
+					<resource blockname="wotwTerrOreBrimstone" prob=".7" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="1" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="1" blockname="terrSandStone"/>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="wotw_Deco_BrimstoneVein" checkresource="-7" onslopes="true" prob=".01657" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_Deco_CopperZincVein" checkresource="-7" onslopes="true" prob=".01657" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock01" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock02" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder1" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder2" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreDesertBoulder3" 			prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus01" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus02" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus03" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus04" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="treeCactus05" 				prob="0.004" rotatemax="3"/>
+				<decoration type="block" blockname="rock01" 					prob=".001" rotatemax="3"/>
+				<decoration type="block" blockname="rock02" 					prob=".001" rotatemax="3"/>
+				<decoration type="block" blockname="rock04" 					prob=".001" rotatemax="3"/>
+				<decoration type="block" blockname="cntDesertRandomLootHelper" 	prob="0.00025"/>
+				<decoration type="block" blockname="treeDeadPineLeaf" 			prob="0.020" rotatemax="7"/>
+				<decoration type="block" blockname="plantedYucca3Harvest" 		prob="0.002" rotatemax="3"/>
+				<decoration type="block" blockname="plantedAloe3Harvest" 		prob="0.003" rotatemax="3"/>
+				<decoration type="block" blockname="treeDesertShrub" 			prob="0.05" rotatemax="7"/>
+				<decoration type="block" blockname="driftwood" 					prob="0.002"/>
+				<decoration type="block" blockname="driftwood2" 				prob="0.002"/>
+				<decoration type="block" blockname="cntBirdnest" 				prob="0.001"/>
+				<decoration type="block" blockname="decoCowSkull" 				prob="0.00025"/>
+				<decoration type="block" blockname="treeCactus06" 				prob="0.0009" rotatemax="3"/>
+				<decoration type="block" blockname="treeBrownGrassDiagonal" 	prob=".00025"/>
+				<decoration type="block" blockname="treeOakMed01" 				prob="0.0003" rotatemax="7"/>
+				<decoration type="block" blockname="treeOakSml01" 				prob="0.002" rotatemax="7"/>
+			</decorations>
+		</subbiome>
+</append>
+
+<set xpath="worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.03, 0, .3']/decorations/decoration[@blockname='carsRandomHelper']/@blockname">CustomCarHelper</set>
+
+<!-- Snow Biome -->
+<!-- <set xpath="/worldgeneration/biomes/biome[@name='snow']/@lootstage_max">200</set> -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/@lootstage_modifier">0.75</set>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/@lootstage_bonus">12</set>
+
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/@prob">66</set> <!-- default is 44 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/Temperature/@range">15,20</set> <!-- default is 20,30 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/CloudThickness/@range">5,10</set> <!-- default is 10,30 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='default']/Fog/@range">0,1</set> <!-- default is 0,2 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/@prob">6</set> <!-- default is 8 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/Temperature/@range">15,25</set> <!-- default is 20,30 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='fog']/Fog/@range">22,44</set> <!-- default is 9,18 -->
+
+<setattribute xpath="//biome[@name='snow']/weather[@name='snowlight']" name="buff">buffRainLight</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snowlight']/@prob">20</set> <!-- default is 28 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snowlight']/Temperature/@range">10,15</set> <!-- default is 18,28 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snowlight']/Precipitation/@range">35,45</set> <!-- default is 30,45 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snowlight']/Fog/@range">2,6</set> <!-- default is 1,5 -->
+
+<setattribute xpath="//biome[@name='snow']/weather[@name='snowheavy']" name="buff">buffRainHeavy</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snowheavy']/@prob">18</set> <!-- default is 20 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snowheavy']/Temperature/@range">8,13</set> <!-- default is 15,25 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snowheavy']/Precipitation/@range">70,95</set> <!-- default is 60,80 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='snowheavy']/Fog/@range">10,30</set> <!-- default is 5,8 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='stormbuild']/@duration">.10</set>  <!-- For Testing -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='stormbuild']/Temperature/@range">8,13</set> <!-- default is 12,18 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='stormbuild']/CloudThickness/@range">75,85</set> <!-- default is 98,100 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='stormbuild']/Fog/@range">5,10</set> <!-- default is 8,8 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/Temperature/@range">8,13</set> <!-- default is 12,18 -->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/weather[@name='storm']/Fog/@range">15,25</set> <!--default is 8,8 -->
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.03, 0, .21'][@noiseoffset='1000, 111']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.03, 0, .21'][@noiseoffset='1000, 111']/decorations">
+				<decoration type="block" blockname="oreSnowBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.031, 0, .22'][@noiseoffset='2000, 222']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.031, 0, .22'][@noiseoffset='2000, 222']/decorations">
+				<decoration type="block" blockname="oreSnowBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.032, 0, .23'][@noiseoffset='3000, 333']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.032, 0, .23'][@noiseoffset='3000, 333']/decorations">
+				<decoration type="block" blockname="oreSnowBoulder1" 				prob=".00099" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder2" 				prob=".00099" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.033, 0, .3'][@noiseoffset='4000, 444']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.033, 0, .3'][@noiseoffset='4000, 444']/decorations">
+				<decoration type="block" blockname="oreSnowBoulder1" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder2" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder3" prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.04, 0, .4']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/subbiome[@noise='.04, 0, .4']/decorations">
+				<decoration type="block" blockname="oreSnowBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder3" 				prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']/decorations">
+			<decoration type="block" blockname="oreSnowBoulder1" 					prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreSnowBoulder2" 					prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreSnowBoulder3" 					prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='snow']">
+		<subbiome noise=".05, 0, .45"> <!-- Ore Sub Biome: tungstenOre -->
+			<layers>
+				<layer depth="1" blockname="terrSnow"/>
+				<layer depth="3" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone">
+					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="*" blockname="terrStone">
+					<resource blockname="tungstenOre" prob="0.7" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="1" rwgGenerationType="all"/>
+					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="wotw_Deco_TungstenVein" checkresource="-7" onslopes="true" prob=".01757" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_deco_RandomOre" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock01" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock02" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreSnowBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="prefab" name="rock_form02" 						prob=".0005" rotatemax="7"/>
+				<decoration type="prefab" name="rock_form01" 						prob=".0005" rotatemax="7"/>
+				<decoration type="block" blockname="cntForestRandomLootHelper" 		prob="0.00025"/>
+				<decoration type="block" blockname="rock05" 						prob=".005"/>
+				<decoration type="block" blockname="rock06" 						prob=".005"/>
+				<decoration type="block" blockname="rock07" 						prob=".005"/>
+				<decoration type="block" blockname="cntBirdnest" 					prob="0.001"/>
+				<decoration type="block" blockname="treeWinterEverGreen" 			prob="0.003" rotatemax="7"/>
+				<decoration type="block" blockname="treeWinterPine13m" 				prob="0.003" rotatemax="7"/>
+				<decoration type="block" blockname="treeWinterPine19m" 				prob="0.003" rotatemax="7"/>
+				<decoration type="block" blockname="treeWinterPine28m" 				prob="0.003" rotatemax="7"/>
+				<decoration type="block" blockname="treeSnowyDeadBush" 				prob="0.005" rotatemax="7"/>
+				<decoration type="block" blockname="treeSnowyGrassDiagonal" 		prob=".1"/>
+				<decoration type="block" blockname="treeStump" 						prob=".0002" rotatemax="7"/>
+			</decorations>
+		</subbiome>
+</append>
+
+<!-- Wasteland Biome -->
+<!-- <set xpath="/worldgeneration/biomes/biome[@name='wasteland']/@lootstage_max">200</set> -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/@lootstage_modifier">1</set>
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/@lootstage_bonus">16</set>
+
+<remove xpath="/worldgeneration/biomes/biome[@name='wasteland']/spectrum[@name='wasteland']"/>
+
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/@prob">90</set> <!-- default is 83 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/Temperature/@range">120,130</set> <!-- default is 50,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/CloudThickness[@prob='30']/@prob">77</set> <!-- default is 30 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/CloudThickness[@prob='70']/@prob">33</set> <!-- default is 70 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='default']/Fog/@range">0,2</set> <!-- default is 0,5 -->
+
+<setattribute xpath="//biome[@name='wasteland']/weather[@name='rainlight']" name="buff">buffRainLight</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rainlight']/@prob">12</set> <!-- default is 10 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rainlight']/Temperature/@range">115,125</set> <!-- default is 50,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rainlight']/Fog/@range">1,3</set> <!-- default is 2,5 -->
+
+<setattribute xpath="//biome[@name='wasteland']/weather[@name='rainheavy']" name="buff">buffRainHeavy</setattribute>
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rainheavy']/@prob">9</set> <!-- default is 7 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rainheavy']/Temperature/@range">115,125</set> <!-- default is 50,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='rainheavy']/Fog/@range">2,3</set> <!-- default is 3,5 -->
+
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='stormbuild']/@duration">.10</set>  <!-- For Testing -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='stormbuild']/Temperature/@range">120,130</set> <!-- default is 50,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='stormbuild']/CloudThickness/@range">75,85</set> <!-- default is 98,100 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='stormbuild']/Fog/@range">1,4</set> <!-- default is 0,0 -->
+		
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='storm']/Temperature/@range">120,130</set> <!-- default is 50,90 -->
+<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/weather[@name='storm']/Fog/@range">2,8</set> <!-- default is 0,0 -->
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.028, 0, .21']/decorations">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" 				prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.028, 0, .32']/decorations">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" 				prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.03, 0, .21'][@noiseoffset='1000, 111']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.03, 0, .21'][@noiseoffset='1000, 111']/decorations">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" 				prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.031, 0, .22'][@noiseoffset='2000, 222']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.031, 0, .22'][@noiseoffset='2000, 222']/decorations">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" 				prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.032, 0, .23'][@noiseoffset='3000, 333']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.032, 0, .23'][@noiseoffset='3000, 333']/decorations">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" 				prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.033, 0, .3'][@noiseoffset='4000, 444']/decorations">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" 				prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.04, 0, .4']/layers/layer[@depth='*'][@blockname='terrStone']">
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome[@noise='.04, 0, .4']/decorations">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" 				prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00099" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00099" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']">
+		<subbiome noise=".045, 0, .5"> <!-- Ore Sub Biome: * tungstenOre -->
+			<layers>
+				<layer depth="2" blockname="terrDestroyedStone"/>
+				<layer depth="2" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone">
+					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="*" blockname="terrStone">
+					<resource blockname="tungstenOre" prob="0.7" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="1" rwgGenerationType="all"/>
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="wotw_Deco_TungstenVein" 				prob=".01857" checkresource="-7" onslopes="true" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_deco_RandomOre" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock01" 					prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock02" 					prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="cntWastelandRandomLootHelper" 		prob="0.00025"/>
+				<decoration type="block" blockname="treeDeadPineLeaf" 					prob="0.010" rotatemax="7"/>
+				<decoration type="block" blockname="rock01" 							prob=".004" rotatemax="3"/>
+				<decoration type="block" blockname="rock02" 							prob=".004" rotatemax="3"/>
+				<decoration type="block" blockname="cntBirdnest" 						prob="0.001"/>
+				<decoration type="prefab" name="deco_rubble_stone_01" 					prob=".0065"/>
+				<decoration type="prefab" name="deco_rubble_stone_02" 					prob=".0065"/>
+				<decoration type="prefab" name="deco_rubble_stone_03" 					prob=".005"/>
+				<decoration type="prefab" name="deco_rubble_stone_04" 					prob=".003"/>
+				<decoration type="prefab" name="deco_rubble_stone_05" 					prob=".003"/>
+				<decoration type="block" blockname="carWrecksRandomHelper" 				prob="0.0005" rotatemax="3"/>
+				<decoration type="block" blockname="treeBrownGrassDiagonal" 			prob=".05"/>
+			</decorations>
+		</subbiome>
+		
+		<subbiome noise=".04, 0, .55"> <!-- Ore Sub Biome: * lava(Silicon) -->
+			<layers>
+				<layer depth="2" blockname="terrDestroyedStone"/>
+				<layer depth="2" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone">
+					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="*" blockname="terrStone">
+					<resource blockname="terrOreLava" prob="1" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="0.7" rwgGenerationType="all"/>
+					<resource blockname="terrOreSilver" prob="0.008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob="0.006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob="0.0055" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="wotw_Deco_LavaVein" 					prob=".01857" checkresource="-7" onslopes="true" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock01" 					prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock02" 					prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="cntWastelandRandomLootHelper" 		prob="0.00025"/>
+				<decoration type="block" blockname="treeDeadPineLeaf" 					prob="0.010" rotatemax="7"/>
+				<decoration type="block" blockname="rock01" 							prob=".004" rotatemax="3"/>
+				<decoration type="block" blockname="rock02" 							prob=".004" rotatemax="3"/>
+				<decoration type="block" blockname="cntBirdnest" 						prob="0.001"/>
+				<decoration type="prefab" name="deco_rubble_stone_01" 					prob=".0065"/>
+				<decoration type="prefab" name="deco_rubble_stone_02" 					prob=".0065"/>
+				<decoration type="prefab" name="deco_rubble_stone_03" 					prob=".005"/>
+				<decoration type="prefab" name="deco_rubble_stone_04" 					prob=".003"/>
+				<decoration type="prefab" name="deco_rubble_stone_05" 					prob=".003"/>
+				<decoration type="block" blockname="carWrecksRandomHelper" 				prob="0.0005" rotatemax="3"/>
+				<decoration type="block" blockname="treeBrownGrassDiagonal" 			prob=".05"/>
+			</decorations>
+		</subbiome>
+		
+		<subbiome noise=".045, 0, .55"> <!-- Ore Sub Biome: * sulfur -->
+			<layers>
+				<layer depth="2" blockname="terrDestroyedStone"/>
+				<layer depth="2" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone">
+					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="*" blockname="terrStone">
+					<resource blockname="wotwTerrOreSulfur" prob=".7" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="1" rwgGenerationType="all"/>
+					<resource blockname="terrOreSilver" prob=".008" rwgGenerationType="all"/>
+					<resource blockname="terrOreGold" prob=".006" rwgGenerationType="all"/>
+					<resource blockname="terrOreDiamond" prob=".0055" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="wotw_deco_SulfurOre" 					prob=".00857" checkresource="-7" onslopes="true" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock01" 					prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="resourceRock02" 					prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder2" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="oreWastelandBoulder3" 				prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="cntWastelandRandomLootHelper" 		prob="0.00025"/>
+				<decoration type="block" blockname="rock01" 							prob=".004" rotatemax="3"/>
+				<decoration type="block" blockname="rock02" 							prob=".004" rotatemax="3"/>
+				<decoration type="block" blockname="rock04" 							prob=".004" rotatemax="3"/>
+				<decoration type="block" blockname="cntBirdnest" 						prob="0.001"/>
+				<decoration type="prefab" name="deco_rubble_stone_01" 					prob=".0065"/>
+				<decoration type="prefab" name="deco_rubble_stone_02" 					prob=".0065"/>
+				<decoration type="prefab" name="deco_rubble_stone_03" 					prob=".005"/>
+				<decoration type="prefab" name="deco_rubble_stone_04" 					prob=".003"/>
+				<decoration type="prefab" name="deco_rubble_stone_05" 					prob=".003"/>
+				<decoration type="block" blockname="carWrecksRandomHelper" 				prob="0.0005" rotatemax="3"/>
+				<decoration type="block" blockname="treeBrownGrassDiagonal" 			prob=".05"/>
+			</decorations>
+		</subbiome>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations">
+			<decoration type="prefab" name="wotw_Deco_TungstenVein" 					prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 						prob=".00657" checkresource="-7" onslopes="true" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder1" 					prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder2" 					prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="oreWastelandBoulder3" 					prob=".00033" rotatemax="3"/>
+</append>
+
+<append xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations">
+			<decoration type="prefab" name="wotw_Resource_RandomOrePile" 				prob="0.0005" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Deco_LavaVein" 						prob="0.0005" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_deco_SulfurOre" 						prob="0.0005" rotatemax="7"/>
+			<decoration type="prefab" name="wotw_Resource_RandomLootCrate2" 			prob="0.00006" rotatemax="7"/>
+			<decoration type="block" blockname="scrapTungstenPile" 						prob="0.0145" rotatemax="7" />
+</append>
+
+<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations/decoration[@type='block'][@blockname='scrapMetalPile']"/>
+<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations/decoration[@type='block'][@blockname='cinderBlocks01']"/>
+<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations/decoration[@type='block'][@blockname='cinderBlocks02']"/>
+<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations/decoration[@type='block'][@blockname='cinderBlocks03']"/>
+<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@type='block'][@blockname='scrapMetalPile']"/>
+<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@type='block'][@blockname='cinderBlocks01']"/>
+<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@type='block'][@blockname='cinderBlocks02']"/>
+<remove xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@type='block'][@blockname='cinderBlocks03']"/>
+
+<!-- <append xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations">
+		<decoration type="block" blockname="treePlainsTree2" prob="0.0012" rotatemax="7"/>
+</append>
+<append xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations">
+		<decoration type="block" blockname="treePlainsTree2" prob="0.0012" rotatemax="7"/>
+</append> -->
+
+<set xpath="worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations/decoration[@blockname='carWrecksRandomHelper']/@blockname">CustomCarHelper</set>
+<set xpath="worldgeneration/biomes/biome[@name='wasteland']/decorations/decoration[@blockname='carWrecksRandomHelper']/@blockname">CustomCarHelper</set>
+
+<remove xpath="worldgeneration/pois/poi[@name='City Asphalt']/blockontop[@blockname='cinderBlocks03']"/>
+<set xpath="worldgeneration/pois/poi[@name='City Asphalt']/blockontop[@blockname='carsRandomHelper']/@blockname">CustomCarHelper</set>
+<set xpath="worldgeneration/pois/poi[@name='Country Road Asphalt']/blockontop[@blockname='carsRandomHelper']/@blockname">CustomCarHelper</set>
+<set xpath="worldgeneration/pois/poi[@name='Road Gravel']/blockontop[@blockname='carsRandomHelper']/@blockname">CustomCarHelper</set>
+</config>

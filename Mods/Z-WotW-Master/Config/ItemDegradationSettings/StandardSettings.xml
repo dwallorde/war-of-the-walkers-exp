@@ -1,0 +1,557 @@
+<configs>
+    
+    <!-- Actively degrades when the item is considered active -->
+    <Snippet label="StandardItemActiveSettingsWotW">
+		<!-- <effect_group name="Quality Loss 0"> -->
+			<!-- <triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore"> -->
+				<!-- <requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/> -->
+			<!-- </triggered_effect> -->
+		<!-- </effect_group> -->
+		
+		<effect_group name="Quality Loss 0">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfItemRepaired" action="LogMessage" message="DegradeItemValue:: Degrade 0" />
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 1">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 2">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="2"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 3">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="3"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 4">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="4"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="DamageHooks Degrade 0">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="LTE" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 1">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 2">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="2"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 3">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="3"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 4">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="4"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 5">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftWorkstationRepairExp" operation="Equals" value="5"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+    </Snippet>
+
+    <Snippet label="StandardSettingsWotW">
+        <property name="ShowQuality" value="true"/>
+        <property name="RepairTools" value="repairKitTool"/>
+        <property name="DegradationMaxUse" value="1000,6000" param1="1,600"/>
+        <property name="DegradationPerUse" value="1"/>
+        <property name="DegradationBreaksAfter" value="false"/>
+		
+		<effect_group>
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		</effect_group>
+    </Snippet>
+	
+	<Snippet label="StandardModSettingsWotW">
+		<property name="ShowQuality" value="true"/>
+		<property name="RepairTools" value="repairKitTool"/>
+		<property name="DegradationMaxUse" value="500,5000" param1="1,600"/>
+		<property name="DegradationPerUse" value="1"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+
+		<!-- <effect_group name="DamageHooks Degrade">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group> -->
+		
+		<effect_group name="BrokenHooks">
+			<requirement name="ItemPercentUsed, SCore" operation="GTE" value="1"/>
+			<requirement name="IsEquipped"/>
+			<triggered_effect trigger="onSelfRoutineUpdate" action="AddBuff" buff="buffStatusModBroken"/>
+		</effect_group>
+		
+		<effect_group name="EquipHooks">
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffStatusModBroken"/>
+			<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="buffStatusModBroken">
+				<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			</triggered_effect>
+		</effect_group>
+	</Snippet>
+	
+	<Snippet label="StandardToolsModSettingsWotW">
+		<effect_group name="Quality Loss 0">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 1">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 2">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 3">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 4">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="2"/>
+			</triggered_effect>
+		</effect_group>
+        <effect_group name="DamageHooks Degrade 0">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 1">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 2">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 3">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 4">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="2"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 5">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="3"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+    </Snippet>
+	
+	<Snippet label="StandardArmourModSettingsWotW">
+		<effect_group name="Quality Loss 0">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 1">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 2">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 3">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 4">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="2"/>
+			</triggered_effect>
+		</effect_group>
+        <effect_group name="DamageHooks Degrade 0">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 1">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 2">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+			<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 3">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 4">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="2"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 5">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="3"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+    </Snippet>
+	
+	<Snippet label="StandardArmourActiveModSettingsWotW">
+		<effect_group name="Quality Loss 0">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 1">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 2">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 3">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 4">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="2"/>
+			</triggered_effect>
+		</effect_group>
+        <effect_group name="DamageHooks Degrade 0">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="IsItemActive"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			<triggered_effect trigger="onSelfRoutineUpdate" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 1">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="IsItemActive"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfRoutineUpdate" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 2">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="IsItemActive"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+			<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfRoutineUpdate" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 3">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="IsItemActive"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfRoutineUpdate" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 4">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="IsItemActive"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="2"/>
+			<triggered_effect trigger="onSelfRoutineUpdate" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 5">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="IsItemActive"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="ProgressionLevel" progression_name="survivalistCraftRepairExp" operation="Equals" value="3"/>
+			<triggered_effect trigger="onSelfRoutineUpdate" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+    </Snippet>
+	
+	<Snippet label="StandardGunModSettingsWotW">
+		<effect_group name="Quality Loss 0">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 1">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 2">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="soldierCraftRepairExp" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 3">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="soldierCraftRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 4">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="ProgressionLevel" progression_name="soldierCraftRepairExp" operation="Equals" value="2"/>
+			</triggered_effect>
+		</effect_group>
+        <effect_group name="DamageHooks Degrade 0">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 1">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 2">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+			<requirement name="ProgressionLevel" progression_name="soldierCraftRepairExp" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 3">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="ProgressionLevel" progression_name="soldierCraftRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 4">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			<requirement name="ProgressionLevel" progression_name="soldierCraftRepairExp" operation="Equals" value="2"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 5">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="ProgressionLevel" progression_name="soldierCraftRepairExp" operation="Equals" value="3"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+    </Snippet>
+	
+	<Snippet label="StandardMeleeWpnModSettingsWotW">
+		<effect_group name="Quality Loss 0">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 1">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 2">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="rangerCraftRepairExp" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 3">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="rangerCraftRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 4">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="ProgressionLevel" progression_name="rangerCraftRepairExp" operation="Equals" value="2"/>
+			</triggered_effect>
+		</effect_group>
+        <effect_group name="DamageHooks Degrade 0">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 1">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 2">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+			<requirement name="ProgressionLevel" progression_name="rangerCraftRepairExp" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 3">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="ProgressionLevel" progression_name="rangerCraftRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 4">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			<requirement name="ProgressionLevel" progression_name="rangerCraftRepairExp" operation="Equals" value="2"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 5">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="ProgressionLevel" progression_name="rangerCraftRepairExp" operation="Equals" value="3"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+    </Snippet>
+	
+	<Snippet label="StandardVehicleModSettingsWotW">
+		<effect_group name="Quality Loss 0">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 1">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 2">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="technicianCraftRepairExp" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 3">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="technicianCraftRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 4">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="ProgressionLevel" progression_name="technicianCraftRepairExp" operation="Equals" value="2"/>
+			</triggered_effect>
+		</effect_group>
+        <effect_group name="DamageHooks Degrade 0">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 1">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 2">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+			<requirement name="ProgressionLevel" progression_name="technicianCraftRepairExp" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 3">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="ProgressionLevel" progression_name="technicianCraftRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 4">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			<requirement name="ProgressionLevel" progression_name="technicianCraftRepairExp" operation="Equals" value="2"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 5">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="ProgressionLevel" progression_name="technicianCraftRepairExp" operation="Equals" value="3"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		
+		<!-- <requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/> -->
+    </Snippet>
+</configs>

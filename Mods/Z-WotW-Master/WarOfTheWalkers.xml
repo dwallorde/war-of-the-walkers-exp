@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servers>
+	
+	
+	<ServerGroup Name="War of the Walkers" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png" Description="War of the Walkers">
+		
+		<!-- <Server Name="War of the Walkers v1.x.x.x Stable" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png">
+			<Description>The War of the Walkers v1.x.x.x - Stable Branch
+			Latest Stable Version of the War of the Walkers Mod.  Release Notes Link will take you to the official discord for the mod.
+			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
+			Contains the following modlets:
+						-00000-Gears	-Author: Laydor
+						-0-AugmentedQuests 	-Author: jns
+						-0-IDCCore		-Author: I don't Care
+						-0-Quartz		-Author: Laydor
+						-0-SCore 		-Author: sphereii
+						-0-XNPCCore 		-Author: Xyth
+						-1-DarksCleanerz		-Author: Darkstardragon
+						-1-DarksMMPack1			-Author: Darkstardragon
+						-1-DarksRaiderGurlz		-Author: Darkstardragon
+						-1-DarksSoldierz		-Author: Darkstardragon
+						-1-DarksZombiez			-Author: Darkstardragon
+						-1-OaksZombieHeadHunters	-Author: Oakraven
+						-BdubsVehicles		-Author: bdubyah
+						-KHV1-15SlotToolbelt		-Author: Khaine
+						-KHV1-CustomMenuMusic		-Author: Khaine
+						-khzmusik_Zombies			-Author: khzmusik
+						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbMicroSplat		-Author: ocbMaurice
+						-OcbPinRecipes		-Author: ocbMaurice
+						-OcbStopFuelWaste		-Author: ocbMaurice
+						-SMXcore		-Author: Sirillion
+						-TelricsFishing		-Author: Telric
+						-zSMXhud		-Author: Sirillion
+						-zSMXmenu		-Author: Sirillion
+			7DTD Version Required: V1.3
+			Current Mod Version: 1.3.1.8 Stable
+			</Description>
+			<Version/>
+			<DownloadMode>Clone</DownloadMode>
+			<ReleaseNotes>https://discord.gg/bQdP6cH</ReleaseNotes>
+			<Downloads>
+				<Download>https://github.com/dwallorde/war-of-the-walkers-stable</Download>
+			</Downloads>
+			<Discord>https://discord.gg/bQdP6cH</Discord>
+			<Twitter>https://twitter.com/WotWMod</Twitter>
+			<Donate>https://www.paypal.me/dwallorde</Donate>
+		</Server> -->
+		
+		<Server Name="War of the Walkers v2.x.x.x Exp" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png">
+			<Description>The War of the Walkers v2.x.x.x - Experimental (Warning!  May contain game breaking bugs!)
+			Latest Experimental Version of the War of the Walkers Mod.  Release Notes Link will take you to the official discord for the mod.
+			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
+			Contains the following modlets:
+						-00000-Gears	-Author: Laydor
+						-0_TFP_Harmony	-Author: The Fun Pimps
+						-0-IDCCore		-Author: I don't Care
+						-0-Quartz		-Author: Laydor
+						-0-SCore 		-Author: sphereii
+						-0-XNPCCore 		-Author: Xyth
+						-0-zMoreQuests		-Author: jns
+						-1-DarksMMPack1			-Author: Darkstardragon
+						-1-DarksRaiderGurlz		-Author: Darkstardragon
+						-1-DarksSoldierz		-Author: Darkstardragon
+						-1-DarksZombiez			-Author: Darkstardragon
+						-1-OaksZombieHeadHunters	-Author: Oakraven
+						-BdubsVehicles		-Author: bdubyah
+						-KHV1-15SlotToolbelt		-Author: Khaine
+						-KHV1-CustomMenuMusic		-Author: Khaine
+						-khzmusik_Zombies			-Author: khzmusik
+						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbCustomTextures	-Author: ocbMaurice
+						-OcbCustomTexturesPlants	-Author: ocbMaurice
+						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbLawnTractor		-Author: ocbMaurice
+						-OcbMicroSplat		-Author: ocbMaurice
+						-OcbPinRecipes		-Author: ocbMaurice
+						-OcbPlantGrowInfo	-Author: ocbMaurice
+						-OcbRemoteDescription	-Author: ocbMaurice
+						-OcbStopFuelWaste		-Author: ocbMaurice
+						-OcbWayPointIcons		-Author: ocbMaurice
+						-SMXcore		-Author: Sirillion
+						-TelricsFishing		-Author: Telric
+						-zSMXhud		-Author: Sirillion
+						-zSMXmenu		-Author: Sirillion
+			7DTD Version Required: V2.6
+			Current Mod Version: 2.6.3.0 Exp
+			</Description>
+			<Version/>
+			<DownloadMode>Clone</DownloadMode>
+			<ReleaseNotes>https://discord.gg/bQdP6cH</ReleaseNotes>
+			<Downloads>
+				<Download>https://github.com/dwallorde/war-of-the-walkers-exp</Download>
+			</Downloads>
+			<Discord>https://discord.gg/bQdP6cH</Discord>
+			<Twitter>https://twitter.com/WotWMod</Twitter>
+			<Donate>https://www.paypal.me/dwallorde</Donate>
+		</Server>
+		
+		<Server Name="Client Files for Dwalls Server" Logo="https://gitlab.com/dwallorde/war-of-the-walkers-mod-v7-exp/-/raw/master/Mods/WaroftheWalkersMod/UIAtlases/logo/wotw_logo.png">
+			<Description>The War of the Walkers v2.x.x.x - Client (For playing on Dwalls Official WotW Servers Only.  No SP)
+			NO SINGLE PLAYER
+			NOT FULL MOD (CANNOT BE USED TO INSTALL ON SERVER EITHER)
+			The War of the Walkers v2.x.x.x - Client (For playing on Dwalls Official WotW Servers Only.  No SP)
+			NO SINGLE PLAYER
+			NOT FULL MOD (CANNOT BE USED TO INSTALL ON SERVER EITHER)
+			The War of the Walkers v2.x.x.x - Client (For playing on Dwalls Official WotW Servers Only.  No SP)
+			NO SINGLE PLAYER
+			NOT FULL MOD (CANNOT BE USED TO INSTALL ON SERVER EITHER)
+			The War of the Walkers v2.x.x.x - Client (For playing on Dwalls Official WotW Servers Only.  No SP)
+			NO SINGLE PLAYER
+			NOT FULL MOD (CANNOT BE USED TO INSTALL ON SERVER EITHER)
+			Release Notes Link will take you to the official discord for the mod.
+			For those who would like to donate here is the link: https://www.paypal.me/dwallorde
+			Contains the following modlets:
+						-00000-Gears	-Author: Laydor
+						-0_TFP_Harmony	-Author: The Fun Pimps
+						-0-IDCCore		-Author: I don't Care
+						-0-Quartz		-Author: Laydor
+						-0-SCore 		-Author: sphereii
+						-0-XNPCCore 		-Author: Xyth
+						-0-zMoreQuests		-Author: jns
+						-1-DarksMMPack1			-Author: Darkstardragon
+						-1-DarksRaiderGurlz		-Author: Darkstardragon
+						-1-DarksSoldierz		-Author: Darkstardragon
+						-1-DarksZombiez			-Author: Darkstardragon
+						-1-OaksZombieHeadHunters	-Author: Oakraven
+						-BdubsVehicles		-Author: bdubyah
+						-KHV1-15SlotToolbelt		-Author: Khaine
+						-KHV1-CustomMenuMusic		-Author: Khaine
+						-khzmusik_Zombies			-Author: khzmusik
+						-Locks		-Author: Xyth/SphereII/Mumpfy
+						-OcbCustomTextures	-Author: ocbMaurice
+						-OcbCustomTexturesPlants	-Author: ocbMaurice
+						-OcbDensityHoe		-Author: ocbMaurice
+						-OcbLawnTractor		-Author: ocbMaurice
+						-OcbMicroSplat		-Author: ocbMaurice
+						-OcbPinRecipes		-Author: ocbMaurice
+						-OcbPlantGrowInfo	-Author: ocbMaurice
+						-OcbRemoteDescription	-Author: ocbMaurice
+						-OcbStopFuelWaste		-Author: ocbMaurice
+						-OcbWayPointIcons		-Author: ocbMaurice
+						-SMXcore		-Author: Sirillion
+						-TelricsFishing		-Author: Telric
+						-zSMXhud		-Author: Sirillion
+						-zSMXmenu		-Author: Sirillion
+			7DTD Version Required: V2.6
+			Current Mod Version: 2.6.3.0 Exp
+			</Description>
+			<Version/>
+			<DownloadMode>Clone</DownloadMode>
+			<ReleaseNotes>https://discord.gg/bQdP6cH</ReleaseNotes>
+			<Downloads>
+				<Download>https://github.com/dwallorde/war-of-the-walkers-client</Download>
+			</Downloads>
+			<Discord>https://discord.gg/bQdP6cH</Discord>
+			<Twitter>https://twitter.com/WotWMod</Twitter>
+			<Donate>https://www.paypal.me/dwallorde</Donate>
+		</Server>
+	</ServerGroup>
+</Servers>

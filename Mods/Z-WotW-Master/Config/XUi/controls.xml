@@ -1,0 +1,275 @@
+<config>
+
+<append xpath="/controls">
+		<wotw_backpack_item_stack controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
+			<rect controller="${controller}" style="wotw_itemStack, hover" collider_scale="1.0" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" enabled="{# !defined('userlockmode') or !userlockmode}" >
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" color="[black]" type="sliced" fillcenter="false"
+				width="53" height="53" />
+				<sprite depth="3" name="background" sprite="menu_empty3px" color="{selectionbordercolor}" type="sliced" globalopacity="true" fillcenter="false"
+				width="48" height="48" />
+				<sprite depth="2" name="highlightOverlay" color="{backgroundcolor}" pos="0,0" type="sliced" globalopacity="true"
+				width="47" height="47" />
+
+				<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored" globalopacity="true"
+				size="48,48" />
+				<sprite depth="8" name="favoriteIcon" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+				<sprite depth="6" name="itemIcon" width="40" height="40" atlas="ItemIconAtlas" sprite="{itemicon}" pivot="center" foregroundlayer="true" color="{iconcolor}"
+				pos="20,-25" />
+				<sprite depth="8" name="lockTypeIcon" width="7" height="7" sprite="{locktypeicon}" pos="2,-2" foregroundlayer="true"/>
+				<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+
+				<sprite depth="3" name="durabilityBackground" sprite="menu_empty3px" color="[darkGrey]" type="sliced" foregroundlayer="true" visible="{hasdurability}"
+				width="46" height="5" pos="1, -42" />
+				<filledsprite depth="4" name="durability" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" foregroundlayer="true" visible="{hasdurability}"
+				width="46" height="5" pos="1, -42" />
+
+				<sprite depth="5" name="disabledOverlay" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"
+				width="47" height="47" />
+
+				<label depth="7" name="stackValue" height="16" text="{itemcount}" font_size="18" effect="outline" justify="{#hasdurability ? 'Center' : 'Right'}"
+				pos="-2,-30" width="45" />
+				<label depth="7" name="timer" height="16" font_size="18" justify="center" pivot="center" color="[beige]" effect="outline"
+				pos="35,-33" width="45" />
+				<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" color="255,0,0,255" type="sliced" visible="{# ishovered and islocked}" foregroundlayer="true"
+				width="45" height="45" />
+				<sprite depth="13" name="assembleIcon" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true"
+				size="28,28" />
+
+				<sprite depth="14" name="quickswapIcon" size="30,30" sprite="server_refresh" pos="40,-2" foregroundlayer="true" visible="{isQuickSwap}" />
+
+				<button name="rectSlotLock" depth="15" style="press, hover" width="56" height="56" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+					<sprite depth="16" name="slotLockIcon" width="18" height="18" sprite="{# !defined('userlockmode') ? '' : (userlockedslot ? 'ui_game_symbol_lock' : 'ui_game_symbol_unlock') }" pos="35, -14" style="icon32px" pivot="center" color="{# !defined('userlockmode') ? '255,255,255,1' : (userlockedslot ? '222,206,163' : '255,255,255') }" />
+				</button>
+				<sprite depth="15" name="iconSlotLock" width="16" height="16" sprite="ui_game_symbol_lock" pos="35, -14" style="icon32px" pivot="center" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="[lightGrey]" />
+			</rect>
+		</wotw_backpack_item_stack>
+		
+		<wotw_item_stack controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
+			<rect controller="${controller}" style="wotw_vehicle_itemStack, hover" collider_scale="1.0" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" enabled="{# !defined('userlockmode') or !userlockmode}" visible="{# !defined('container_slots') or (int(${repeat_i}) &lt; int(container_slots)) }" >
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" color="[black]" type="sliced" fillcenter="false"
+				width="60" height="60" />
+				<sprite depth="3" name="background" sprite="menu_empty3px" color="{selectionbordercolor}" type="sliced" globalopacity="true" fillcenter="false"
+				width="55" height="55" />
+				<sprite depth="2" name="highlightOverlay" color="{backgroundcolor}" pos="0,0" type="sliced" globalopacity="true"
+				width="54" height="54" />
+
+				<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored" globalopacity="true"
+				size="55,55" />
+				<sprite depth="8" name="favoriteIcon" width="15" height="15" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+				<sprite depth="6" name="itemIcon" width="42" height="42" atlas="ItemIconAtlas" sprite="{itemicon}" pivot="center" foregroundlayer="true" color="{iconcolor}"
+				pos="20,-25" />
+				<sprite depth="8" name="lockTypeIcon" width="21" height="21" sprite="{locktypeicon}" pos="2,-2" foregroundlayer="true"/>
+				<sprite depth="8" name="itemtypeicon" width="21" height="21" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+
+				<sprite depth="3" name="durabilityBackground" sprite="menu_empty3px" color="[darkGrey]" type="sliced" foregroundlayer="true" visible="{hasdurability}"
+				width="52" height="7" pos="1, -47" />
+				<filledsprite depth="4" name="durability" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" foregroundlayer="true" visible="{hasdurability}"
+				width="52" height="7" pos="1, -47" />
+
+				<sprite depth="5" name="disabledOverlay" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"
+				width="54" height="54" />
+				
+
+				<label depth="7" name="stackValue" height="19" text="{itemcount}" font_size="24" effect="outline" justify="{#hasdurability ? 'Center' : 'Right'}"
+				pos="-3,-35" width="52" />
+				<label depth="7" name="timer" height="17" font_size="22" justify="center" pivot="center" color="[beige]" effect="outline"
+				pos="35,-38" width="52" effect_distance="1,1" effect_color="0,0,0,255" />
+				<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" color="255,0,0,255" type="sliced" visible="{# ishovered and islocked}" foregroundlayer="true"
+				width="52" height="52" />
+				<sprite depth="13" name="assembleIcon" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true"
+				size="37,37" />
+				
+				<sprite depth="14" name="quickswapIcon" size="27,27" sprite="server_refresh" pos="40,-2" foregroundlayer="true" visible="{isQuickSwap}" />
+				
+				<button name="rectSlotLock" depth="15" style="press, hover" width="63" height="63" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+					<sprite depth="16" name="slotLockIcon" width="18" height="18" sprite="{# !defined('userlockmode') ? '' : (userlockedslot ? 'ui_game_symbol_lock' : 'ui_game_symbol_unlock') }" pos="40, -14" style="icon32px" pivot="center" color="{# !defined('userlockmode') ? '255,255,255,1' : (userlockedslot ? '222,206,163' : '255,255,255') }" />
+				</button>
+				<sprite depth="15" name="iconSlotLock" width="16" height="16" sprite="ui_game_symbol_lock" pos="40, -14" style="icon32px" pivot="center" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="[lightGrey]" />
+			</rect>
+		</wotw_item_stack>
+		
+	<wotw_recipe_stack>
+		<rect controller="RecipeStack" width="60" height="60" collider_scale="1.1">
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="63" height="63" color="[black]" type="sliced" fillcenter="false"/>	
+				<sprite name="background" color="[mediumGrey]" type="sliced" style="press" on_hover="true"/>
+				<sprite depth="1" name="itemIcon" width="53" height="53" atlas="ItemIconAtlas" sprite="" pos="0,-5" pivot="topleft" foregroundlayer="true"/>
+				<sprite depth="4" name="lockIcon" width="16" height="16" sprite="ui_game_symbol_hammer" pos="2,-2" visible="false" foregroundlayer="true"/>
+				<label depth="4" name="count" pos="4,-42" width="53" height="16" text="Test" font_size="16" justify="right" effect="outline" />
+				<label depth="4" name="timer" pos="34,-38" width="55" height="16" font_size="16" justify="center" pivot="center" color="[beige]"/>
+				<sprite depth="2" name="overlay" width="55" height="55" color="32,32,32,128" type="sliced"/>
+				<sprite depth="3" name="cancel" sprite="ui_game_symbol_x" width="55" height="55" color="255,0,0,0" type="sliced" visible="false" foregroundlayer="true"/>
+			</rect>
+	</wotw_recipe_stack>
+	
+	
+</append>
+
+<conditional>
+	<if cond="mod_loaded('zSMXhud') == true">
+		<!-- <remove xpath="/controls/smxui_toolbelt_item_stack"/> -->
+		<set xpath="/controls/smxui_toolbelt_item_stack">
+				<rect 	controller="${controller}"
+						width="${4+cell_width}"
+						height="${4+cell_height}"
+						style="hover, smx_item_stack"
+						pivot="center"
+						collider_scale="1.0"
+						on_scroll="${on_scroll}"
+						show_favorites="${show_favorites}"
+						allow_dropping="${allow_dropping}"
+						prefix_id="${prefix_id}"
+						tooltip="{tooltip}"
+						enabled="{# !defined('userlockmode') or !userlockmode}"
+						visible="{# !defined('container_slots') or (int(${repeat_i}) &lt; int(container_slots)) }">
+
+					<sprite name="mainBackground" depth="0" pos="0,0" width="${cell_width-4}" height="${cell_height-4}" pivot="center" sprite="menu_empty" type="sliced" color="[smxhud_slot_main_background]" globalopacitymod="1.3" />
+					<sprite name="slotBackground" depth="1" pos="0,0" width="${cell_width-8}" height="${cell_height-8}" pivot="center" sprite="smx_slot_background" type="sliced" color="[smxhud_slot_slot_background]" globalopacity="true" />
+
+					<sprite name="itemBackgroundDurability" depth="2" pos="2,2" width="${cell_width-5}" height="${cell_height-5}" pivot="center" sprite="smx_slot_durability" flip="horizontally" color="{durabilitycolor}" globalopacitymod="0.8" visible="{hasdurability}" />
+					<sprite name="itemBackgroundNormal" depth="2" pos="2,2" width="${cell_width-5}" height="${cell_height-5}" pivot="center" sprite="smx_slot_durability" flip="horizontally" color="[smxhud_slot_item_background]" globalopacitymod="0.8" visible="{#!hasdurability}" />
+
+					<sprite name="slotFrame" depth="3" pos="0,0" width="${cell_width-1}" height="${cell_height-1}" pivot="center" sprite="smx_slot_frame_narrow" color="{selectionbordercolor}" globalopacitymod="1.8" />
+
+					<texture name="backgroundTexture" depth="4" pos="0,0" width="${cell_width-12}" height="${cell_height-12}" pivot="center" material="Materials/Transparent Colored" globalopacity="true" />
+
+					<sprite name="highlightOverlay" depth="0" pos="0,0" width="${cell_width-4}" height="${cell_height-4}" pivot="center" type="sliced" color="{backgroundcolor}" globalopacity="true" force_hide="true" />
+					<sprite name="disabledOverlay" depth="5" pos="0,0" width="${cell_width-4}" height="${cell_height-4}" pivot="center" type="sliced" color="[darkGrey_half_alpha]" visible="false" />
+
+					<sprite name="itemIcon" depth="6" pos="0,0" size="${cell_width-8},${cell_height-8}" pivot="center" atlas="ItemIconAtlas" sprite="{itemicon}" color="{iconcolor}" foregroundlayer="true" />
+					<sprite name="lockTypeIcon" depth="8" pos="${-cell_width/2+16-pos},${cell_height/2-16+pos}" size="${size}" pivot="center" sprite="{locktypeicon}" foregroundlayer="true" />
+					<sprite name="itemtypeicon" depth="8" pos="${-cell_width/2+16-pos},${cell_height/2-16+pos}" size="${size}" pivot="center" sprite="ui_game_symbol_{itemtypeicon}" color="{itemtypeicontint}" foregroundlayer="true" visible="{hasitemtypeicon}" />
+
+					<sprite name="favoriteIcon" depth="8" pos="${cell_width-cell_width},${cell_height/2}" width="20" height="20" pivot="center" sprite="server_favorite" color="255,215,0,325" foregroundlayer="true" visible="{isfavorite}" />
+					<sprite name="favoriteIcon_background" depth="5" pos="${cell_width-cell_width},${cell_height/2}" width="30" height="30" pivot="center" sprite="smx_diamond_background" rotation="45" color="7,7,7,375" visible="{isfavorite}" />
+					<sprite name="favoriteIcon_foreground" depth="6" pos="${cell_width-cell_width},${cell_height/2}" width="30" height="30" pivot="center" sprite="smx_diamond_foreground" rotation="45" color="255,255,255,325" visible="{isfavorite}" />
+
+					<sprite name="durabilityBackground" depth="5" pos="0,${-cell_height/2+8}" width="${cell_width-12}" height="5" pivot="center" sprite="smx_item_durability_bar" color="[smxcore_item_durability_background]" foregroundlayer="true" visible="{hasdurability}" />
+					<sprite name="durability" depth="6" pos="0,${-cell_height/2+8}" width="${cell_width-12}" height="5" pivot="center" sprite="smx_item_durability_bar" type="filled" fill="{durabilityfill}" color="{durabilitycolor}" foregroundlayer="true" visible="{hasdurability}" />
+
+					<label name="stackValue" depth="7" pos="0,${-cell_height/2+12}" width="${cell_width-14}" height="${cell_height-68}" pivot="center" style="smx_label_normal" text="{itemcount}" font_size="18" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxhud_element_labelcolor_1]"/>
+					<!-- <label name="stackValue" depth="7" pos="0,${-cell_height/2+12}" width="${cell_width-14}" height="${cell_height-68}" pivot="center" style="smx_label_normal" text="{itemcount}" font_size="18" justify="{#hasdurability ? 'Center' : 'Right'}" color="[smxhud_element_labelcolor_1]" visible="{#!hasdurability}" /> -->
+					
+					<label name="timer" depth="7" pos="0,-2" width="${cell_width-6}" height="${cell_height-62}" pivot="center" style="smx_label_normal" font_size="18" upper_case="true" justify="center" color="[smxhud_slot_timer_color]" />
+
+					<sprite name="cancel" depth="14" pos="0,0" size="${cell_width-8},${cell_height-8}" pivot="center" sprite="ui_game_symbol_x" color="[smxui_slot_cancel_color]" foregroundlayer="true" visible="{# ishovered and islocked}" />
+					<sprite name="assembleIcon" depth="13" pos="0,${-cell_height/2+4}" size="${size}" pivot="center" sprite="{stacklockicon}" foregroundlayer="true" visible="{isassemblelocked}" />
+
+					<sprite name="quickswapIcon" depth="14" pos="0,-58" size="16,16" pivot="center" sprite="server_refresh" foregroundlayer="true" visible="{isQuickSwap}" />
+
+					<!-- <label name="toolbeltNumbers" depth="1" pos="-2,-54" pivot="center" style="smx_label_outline" text=" [action:local:Inventory${1+repeat_i}]" color="[white]" font_size="16" justify="center" parse_actions="true" max_line_count="1" force_hide="true" /> -->
+					<label name="toolbeltNumbers" depth="1" pos="-2,-54" pivot="center" style="smx_label_outline" text="" color="[white]" font_size="16" justify="center" parse_actions="true" max_line_count="1" force_hide="false" />
+
+					<button name="rectSlotLock" depth="15" style="press, hover" width="73" height="73" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+						<sprite depth="16" name="slotLockIcon" width="24" height="24" sprite="{# !defined('userlockmode') ? '' : (userlockedslot ? 'ui_game_symbol_lock' : 'ui_game_symbol_unlock') }" pos="50, -14" style="icon32px" pivot="center" color="{# !defined('userlockmode') ? '255,255,255,1' : (userlockedslot ? '222,206,163' : '255,255,255') }" />
+					</button>
+
+					<sprite name="iconSlotLock" depth="15" pos="${cell_width-cell_width},${-cell_height/2+4}" width="20" height="20" pivot="center" sprite="ui_game_symbol_lock" color="255,255,255,325" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" />
+				</rect>
+		</set>
+		<set xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']/rect/label[@name='stackValue']/@font_size">13</set>
+		<set xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']/rect/label[@name='stackValue']/@width">50</set>
+		<set xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']/rect/label[@name='stackValue']/@height">28</set>
+		<set xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']/rect/label[@name='stackValue']/@pos">0,-18</set>
+	</if>
+</conditional>
+
+<set xpath="/controls/equipment_weather_stack">
+		<rect depth="1" controller="EquipmentStack" style="itemStack, hover" tooltip="test" allow_remove_item="true" width="43" height="43" pos="0,-41">
+			<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="43" height="43" color="[black]" type="sliced" fillcenter="false"/>
+			<sprite depth="3" name="background" sprite="menu_empty3px" width="38" height="38" color="{selectionbordercolor}" type="sliced" fillcenter="false"/>
+			<sprite depth="2" name="highlightOverlay" width="36" height="36" color="[mediumGrey]" pos="1,-1" type="sliced" globalopacity="true"/>
+			<sprite depth="8" name="itemIcon" width="34" height="34" atlas="ItemIconAtlas" sprite="campfire" pos="18,-18" pivot="center" foregroundlayer="true"/>
+			<sprite depth="8" name="lockTypeIcon" width="17" height="17" sprite="" pos="2,-12" foregroundlayer="true"/>
+			<sprite depth="3" name="durabilityBackground" width="34" height="6" color="[darkGrey]" type="sliced" pos="2, -30" foregroundlayer="true"/>
+			<filledsprite depth="4" name="durability" width="34" height="6" color="[transparent]" type="filled" pos="2, -30" foregroundlayer="true"/>
+			<label depth="7" name="stackValue" pos="0,-28" width="38" height="28" text="" font_size="12" justify="center"/>
+		</rect>
+</set>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<append xpath="/controls">
+			<wotw_smx_dewcollector_stack controller="DewCollectorStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
+				<rect	width="100"
+						height="100"
+						pivot="center"
+						style="smx_item_stack, hover"
+						on_scroll="${on_scroll}"
+						allow_dropping="${allow_dropping}"
+						prefix_id="${prefix_id}"
+						show_favorites="${show_favorites}"
+						controller="DewCollectorStack"
+						standard_fill_color="236,255,0,96"
+						modded_fill_color="116,204,244,96"
+						collider_scale="1.0"
+						sound="[recipe_click]"
+						sound_play_on_hover="[default_hover]"
+						tooltip="{tooltip}">
+
+					<sprite name="backgroundMain" depth="2" pos="0,-7" size="100,100" pivot="center" sprite="smx_menu_background" color="0,0,0,275" />
+					<sprite name="background" depth="3" pos="0,-4" size="75,75" pivot="center" sprite="smx_diamond_background" color="{selectionbordercolor}" rotation="45" />
+					<sprite name="backgroundArt" depth="4" pos="-1,-3" size="61,61" sprite="smx_slot_durability" flip="horizontally" pivot="center" color="0,0,0,275" rotation="45" />
+
+					<sprite name="background2" depth="6" pos="0,-4" size="65,65" pivot="center" sprite="smx_slot_frame_narrow" color="[darkGrey]" rotation="-45" visible="{#!hasdurability}" />
+					<sprite name="background2" depth="6" pos="0,-4" size="65,65" pivot="center" sprite="smx_slot_frame_narrow" color="{durabilitycolor}" rotation="-45" visible="{hasdurability}" />
+
+					<sprite depth="8" name="favoriteIcon" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+
+					<sprite name="itemIcon" depth="7" pos="0,0" size="75,75" pivot="center" atlas="{itematlas}" sprite="{itemicon}" color="{iconcolor}" foregroundlayer="true" visible="{showitem}" />
+					<sprite name="fillIcon" depth="7" pos="0,0" size="65,65" pivot="center" sprite="ui_game_symbol_water" color="[darkGrey]" foregroundlayer="true" visible="{showempty}" />
+
+					<sprite name="durabilityBackground" depth="23" pos="0,-50" width="90" height="7" pivot="center" sprite="smx_item_durability_bar" color="[darkGrey]" type="sliced" foregroundlayer="true" visible="{hasdurability}" />
+					<sprite name="durability" depth="24" pos="0,-50" width="90" height="7" pivot="center" sprite="smx_item_durability_bar" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" foregroundlayer="true" visible="{hasdurability}" />
+
+					<sprite depth="5" name="disabledOverlay" width="72" height="72" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+
+					<label name="stackValue" depth="17" pos="0,-43" width="90" height="28" pivot="center" style="smx_label_outline" text="{itemcount}" font_size="20" justify="right" />
+
+					<label depth="7" name="timer" pos="35,-38" width="70" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+					<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="70" height="70" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+					<sprite depth="13" name="assembleIcon" size="40,40" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+					
+					<rect pos="0,0" width="100" height="100" >
+						<sprite name="barBackground" depth="3" pos="0,0" size="100,104" pivot="center" sprite="smx_menu_background" color="0,0,0,275" />
+						<sprite name="BarContent" depth="2" pos="0,0" size="100,100" pivot="center" sprite="smx_menu_background" type="filled" fill="{waterfill}" color="{waterfill}" filldirection="Vertical" globalopacity="false" />
+					</rect>
+				</rect>
+			</wotw_smx_dewcollector_stack>
+		</append>
+	</if>
+</conditional>
+
+<set xpath="/controls/ingredient_header/rect[@name='header']/@height">43</set>
+<set xpath="/controls/ingredient_header/rect[@name='header']/rect/@height">41</set>
+<set xpath="/controls/ingredient_header/rect[@name='header']/rect/sprite[@name='backgroundMain']/@height">47</set>
+
+<set xpath="/controls/ingredient_row/rect[@name='row']/@height">43</set>
+<set xpath="/controls/ingredient_row/rect[@name='row']/rect/@height">41</set>
+<set xpath="/controls/ingredient_row/rect[@name='row']/rect/sprite[@name='backgroundMain']/@height">47</set>
+<set xpath="/controls/ingredient_row/rect[@name='row']/rect/sprite[@name='icon']/@width">35</set>
+<set xpath="/controls/ingredient_row/rect[@name='row']/rect/sprite[@name='icon']/@height">35</set>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == true">
+		<set xpath="/controls/smx_skills_book_entry/rect/sprite[@name='groupIcon']/@atlas">uiAtlas</set>
+	</if>
+</conditional>
+
+<set xpath="/controls/weather_challenge_list_entry/rect/grid[@name='newList']/@cols">6</set>
+
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<set xpath="/controls/item_part_slot">
+			<rect controller="${controller}" style="itemPartStack, hover" sound_play_on_hover="[default_hover]">
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="380" height="43" color="[black]" type="sliced" fillcenter="false" />
+				<sprite name="background" color="[darkGrey]" height="39" pos="0,1" type="sliced"/>
+				<label depth="4" pos="16,-13" width="250" height="20" text="{partname}" font_size="26" justify="left" />
+
+				<sprite name="itemIcon" depth="4" width="40" height="40" atlas="{partatlas}" sprite="{particon}" color="{particoncolor}" visible="{partvisible}" pos="330,-20" pivot="center" foregroundlayer="true" />
+
+				<label depth="4" pos="14,-10" width="350" height="20" text="EMPTY MODIFIER SLOT" text_key="${empty_slot_text_key}" font_size="26" justify="center" visible="{emptyvisible}" />
+			</rect>
+		</set>
+	</if>
+</conditional>
+</config>
