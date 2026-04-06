@@ -1,0 +1,101 @@
+<config>
+
+<conditional>
+	<if cond="mod_loaded('Quartz') == 'true'">
+		<remove xpath="//window[@name='windowResponses']"/>
+		<insertBefore xpath="//window[@name='windowStatement']">
+			<window name="windowResponses" pos="-740,120" width="760" height="445" anchor="RightCenter" cursor_area="true" controller="DialogResponseList">
+				<label name="lblName" style="subtitle" text="{respondentname}" color="[selectedColor]" justify="left" depth="5" pos="9,18" />
+				<sprite depth="0" name="background" pos="-25,35" width="760" height="442" type="sliced" color="96,96,96,255" globalopacity="false"/>
+				<sprite depth="1" name="foreground" pos="-20,30" width="750" height="432" type="sliced" color="0,0,0,255" globalopacity="false"/>
+				<rect name="showtime" pos="545,30"> 
+					<sprite depth="2" name="dayTimeIcon" width="24" height="24" pos="-10,-8" sprite="ui_game_symbol_clock" color="[iconColor]" foregroundlayer="true" visible="{showtime}"/>
+					<label depth="2" name="dayTimeLabel" width="230" height="28" pos="21,-9" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="22" controller="MapStats" visible="{showtime}"/>
+				</rect>
+				<rect name="rectOptions" pos="0,-30" height="310" width="640" depth="1">
+					<scrollbar name="scrollbar" depth="5" pos="697,-140" width="25" height="300" padding="4" foregroundcolor="[darkGrey]" foregroundsprite="menu_empty3px" pivot="center" />
+					<scrollview name="scrollable_response" depth="5" scrollbar="scrollbar" reset_position="true" over_scroll="false" scroll_speed=".55">
+						<grid name="items" rows="50" cols="1" width="640" height="310" cell_width="640" cell_height="40" repeat_content="true" arrangement="vertical" >
+							<response_entry id="0" />
+						</grid>
+					</scrollview>
+				</rect>
+				<!-- Fixed-position bottom button bar -->
+				<rect name="bottomButtons" pos="-7,-352" width="495" height="40" visible="{currentjobs}" depth="2">
+					<grid name="specialsGrid" rows="1" cols="3" depth="5" arrangement="horizontal" cell_width="165" cell_height="40" repeat_content="false">
+						<response_entry_special name="prev" width="161" height="38"/>
+						<response_entry_special name="next" width="161" height="38"/>
+						<response_entry_special name="cancel" width="161" height="38"/>
+					</grid>
+				</rect>
+			</window>
+		</insertBefore>
+	</if>
+	<else>
+		<set xpath="/windows/window[@name='windowResponses']/@pos">-740,120</set>
+		<remove xpath="/windows/window[@name='windowResponses']/sprite"/>
+		<append xpath="/windows/window[@name='windowResponses']">
+			<sprite depth="0" name="background" pos="-25,35" width="760" height="382" type="sliced" color="96,96,96,255" globalopacity="false"/>
+			<sprite depth="1" name="foreground" pos="-20,30" width="750" height="372" type="sliced" color="0,0,0,255" globalopacity="false"/>
+			<rect name="showtime" pos="545,30"> 
+				<sprite depth="2" name="dayTimeIcon" width="24" height="24" pos="-10,-8" sprite="ui_game_symbol_clock" color="[iconColor]" foregroundlayer="true" visible="{showtime}"/>
+				<label depth="2" name="dayTimeLabel" width="230" height="28" pos="21,-9" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="22" controller="MapStats" visible="{showtime}"/>
+			</rect>
+			<!-- Fixed-position bottom button bar -->
+			<rect name="bottomButtons" pos="-7,-352" width="495" height="40" visible="{currentjobs}" depth="2">
+				<grid name="specialsGrid" rows="1" cols="3" depth="5" arrangement="horizontal" cell_width="165" cell_height="40" repeat_content="false">
+					<response_entry_special name="prev" width="161" height="38"/>
+					<response_entry_special name="next" width="161" height="38"/>
+					<response_entry_special name="cancel" width="161" height="38"/>
+				</grid>
+			</rect>
+		</append>
+	</else>
+</conditional>
+	
+<append xpath="/windows">
+	<window name="QuestToolTipWindow" pos="" width="100" height="25" depth="30" controller="MoreQuestOptions.QuestTooltips.XUiC_QuestToolTip, MoreQuestOptions">
+		<rect>
+			<sprite depth="0" name="sprBackgroundBorder" sprite="ui_game_header_fill" type="sliced" color="[black]" />
+			<sprite depth="1" name="sprBackground" sprite="ui_game_header_fill" type="sliced" pos="3,-3" color="[lightGrey]" />
+			<sprite depth="2" name="sprQuestIcon" pos="0,0" size="32,32" sprite="{questicon}" color="{questiconcolor}" />
+
+			<!-- Title -->
+			<label depth="3" name="lblQuestToolTipTitle" pos="0,0" font_size="22" color="[white]" overflow="resizefreely"/>
+
+			<!-- POI -->
+			<label depth="3" name="lblQuestPOI" pos="0,0" font_size="18" color="222,206,163,255" wrap="true" overflow="resizefreely" parse_actions="true"/>
+
+			<!-- Biome -->
+			<label depth="3" name="lblQuestBiome" pos="0,0" font_size="18" color="222,206,163,255" wrap="true" overflow="resizefreely" parse_actions="true"/>
+
+			<!-- Objectives header + body -->
+			<label depth="3" name="lblObjectivesHeader" pos="0,0" font_size="18" color="[white]" text="--- Objectives ---" overflow="resizefreely"/>
+			<label depth="3" name="lblObjectivesBody" pos="0,0" font_size="18" color="222,206,163,255" wrap="true" overflow="resizefreely" parse_actions="true"/>
+
+			<!-- Rewards header + body -->
+			<label depth="3" name="lblRewardsHeader" pos="0,0" font_size="18" color="[white]" text="--- Rewards Pool ---" overflow="resizefreely"/>
+			<label depth="3" name="lblRewardsBody" pos="0,0" font_size="18" color="222,206,163,255" wrap="true" overflow="resizefreely" parse_actions="true"/>
+		</rect>
+	</window>
+</append>
+	
+<append xpath="/windows/window[@name='windowResponses']">
+<!-- for w/e reason arrangement="horizontal" is different than vertical and requires you to add width to each entry in the grid -->
+	<panel name="questFilterPanel" pos="15,65" depth="30" width="688" height="30" cursor_area="true" background="false" globalopacity="true" globalopacitymod="0.5" controller="MoreQuestOptions.QuestFilters.QuestFilters_XUiC, MoreQuestOptions" visible="{currentjobs}" >
+		<grid name="questFilterGrid" pos="8,0" rows="1" cols="8" cell_width="86" cell_height="30" arrangement="horizontal" repeat_content="false">
+			<simplebutton name="btnFilterAll" width="78" height="28" caption_key="All" parse_actions="true" color="{filtercolor=all}"/>
+			<simplebutton name="btnFilterFetch" width="78" height="28" caption_key="Fetch" parse_actions="true" color="{filtercolor=fetch}"/>
+			<simplebutton name="btnFilterClear" width="78" height="28" caption_key="Clear" parse_actions="true" color="{filtercolor=clear}"/>
+			<simplebutton name="btnFilterFetchClear" width="78" height="28" caption_key="Fetch/Clear" parse_actions="true" color="{filtercolor=fetchclear}"/>
+			<simplebutton name="btnFilterInfested" width="78" height="28" caption_key="Infested" parse_actions="true" color="{filtercolor=infested}"/>
+			<simplebutton name="btnFilterRestore" width="78" height="28" caption_key="Restore" parse_actions="true" color="{filtercolor=restore}"/>
+			<simplebutton name="btnFilterBuried" width="78" height="28" caption_key="Buried" parse_actions="true" color="{filtercolor=buried}"/>
+			<simplebutton name="btnFilterOthers" width="78" height="28" caption_key="Others" parse_actions="true" color="{filtercolor=others}"/>
+		</grid>
+	</panel>
+</append>
+
+<setattribute xpath="//window[@name='windowQuestTracker']/sprite[@name='windowIcon']" name="color">{questiconcolor}</setattribute>
+
+</config>

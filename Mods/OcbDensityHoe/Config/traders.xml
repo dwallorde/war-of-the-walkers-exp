@@ -1,0 +1,17 @@
+﻿<configs patcher-version="6">
+
+  <modif condition="UndeadLegacy_CoreModule">
+    <!-- <modinc path="traders.ulm.xml"/> -->
+  </modif>
+  <modelsif condition="DarknessFallsCore">
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
+      <item name="meleeToolFarmT1IronDensityHoe" quality="20,40"/>
+    </append>
+  </modelsif>
+  <modelse>
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
+      <item name="meleeToolFarmT1IronDensityHoe" quality="1,4"/>
+    </append>
+  </modelse>
+
+</configs>

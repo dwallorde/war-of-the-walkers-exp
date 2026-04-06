@@ -1,0 +1,6 @@
+﻿<configs>
+
+  <setattribute xpath="/items/item[@name='meleeToolFarmT1IronDensityHoe']/property[@name='UnlockedBy']" name="value">AL_CraftingSkill_ConstructionTools</setattribute>
+
+</configs>
+

@@ -1,0 +1,5 @@
+<configs>
+
+	<setattribute xpath="/controls/map_popup_sub_line/rect/sprite[@name='Icon']" name="sprite">${icon}</setattribute>
+
+</configs>

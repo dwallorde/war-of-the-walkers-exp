@@ -1,0 +1,62 @@
+<configs>
+
+<append xpath="/items">
+
+<!-- zombieOakFireNurse -->
+
+		<item name="meleeHandZombieStrongFire">
+			<property name="Extends" value="meleeHandZombieBurning"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="100"/>
+				<property name="Buff" value="buffBurningZombie"/>				
+			</property>
+			<effect_group name="meleeHandZombieStrongFire" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15"><!--InfectionFeral-->
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/><!--AbrasionFeral-->
+				<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffBurningZombie"/>
+			</effect_group>
+		</item>
+		
+<!-- For good measure -->
+
+		<item name="NurseLoadingHack01"> <!-- Wendigo Wasteland and Snow -->
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/NightNurse.unity3d?oaknurse1"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/NightNurse.unity3d?oaknurse1"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		
+		<item name="HunterLoadingHack01"> <!-- Demolisher -->
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/HeadHunter.unity3d?headhunter"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/HeadHunter.unity3d?headhunter"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+</append>
+
+</configs>

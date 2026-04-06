@@ -1,0 +1,14 @@
+<configs>
+	
+	<append xpath="/entitygroups">
+	
+		<entitygroup name="npcAnimalsAny">
+			npcAnimalFox, .3
+			animalFox, .4
+			animalJeerkoa, .3
+			none, 99.0
+		</entitygroup>
+
+	</append>
+	
+</configs>

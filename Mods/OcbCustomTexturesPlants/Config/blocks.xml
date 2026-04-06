@@ -1,0 +1,147 @@
+<configs>
+	<append xpath="/blocks">
+		<block name="ocb_block_flower_01">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_01"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_flower_02">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_02"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_flower_03">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_03"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_flower_04">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_04"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_flower_05">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_05"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_flower_06">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_06"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_flower_07">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_07"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_flower_08">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_08"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_flower_09">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_flower_09"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+
+		<block name="ocb_block_tomato_grown">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_grass_tomato_grown"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_tomato_small">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_grass_tomato_small"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+
+		<block name="ocb_block_wheat_grown">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_grass_wheat_grown"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_wheat_small">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_grass_wheat_small"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+
+		<block name="ocb_block_onion_grown">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Deadgrass"/>
+			<property name="Texture" value="ocb_grass_onion_grown"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_onion_small">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Deadgrass"/>
+			<property name="Texture" value="ocb_grass_onion_small"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+
+		<block name="ocb_block_cabbage_grown">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Deadgrass"/>
+			<property name="Texture" value="ocb_grass_cabbage_grown"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+		<block name="ocb_block_cabbage_small">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Deadgrass"/>
+			<property name="Texture" value="ocb_grass_cabbage_small"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+
+		<block name="ocb_block_snow_bush_01">
+			<property name="Extends" value="treeSnowyDeadBush" param1="CustomIcon"/>
+			<property name="Texture" value="ocb_snow_bush_01"/>
+		</block>
+
+		<block name="ocb_block_snow_bush_02">
+			<property name="Extends" value="treeSnowyDeadBush" param1="CustomIcon"/>
+			<property name="Texture" value="ocb_snow_bush_02"/>
+		</block>
+
+		<block name="ocb_block_desert_grass_01">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_desert_grass_01"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+
+		<block name="ocb_block_desert_grass_02">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_desert_grass_02"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+
+		<block name="ocb_block_desert_bush_01">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_desert_bush_01"/>
+			<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+		</block>
+
+		<block name="ocb_block_forrest_bush_01">
+			<property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+			<property name="Class" value="Tallgrass"/>
+			<property name="Texture" value="ocb_forrest_bush_01"/>
+		</block>
+	</append>
+</configs>

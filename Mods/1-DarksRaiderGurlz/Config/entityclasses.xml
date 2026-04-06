@@ -1,0 +1,849 @@
+<configs>
+
+	<append xpath="/entity_classes">
+
+         <!-- 50s Girls models by Zuhiyan Teyu purchased for use in NPC Mod -->
+
+		<entity_class name="npcRaiderJayneAxe" extends="npcBanditAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
+		</entity_class>	
+		
+		<entity_class name="npcRaiderJayneBat" extends="npcBanditBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
+		</entity_class>		
+
+        <entity_class name="npcRaiderJayneMachete" extends="npcBanditMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
+		</entity_class>		
+
+        <entity_class name="npcRaiderJayneKnife" extends="npcBanditKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" /> 
+		</entity_class>		
+
+        <entity_class name="npcRaiderJayneClub" extends="npcBanditClubTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+		<entity_class name="npcRaiderJaynePistol" extends="npcPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderJayneDPistol" extends="npcDPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderJayneTRifle" extends="npcTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>
+
+        <entity_class name="npcRaiderJayneSRifle" extends="npcSRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>
+
+        <entity_class name="npcRaiderJayneSMG" extends="npcSMGTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderJayneDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderGinaAxe" extends="npcBanditAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderGinaBat" extends="npcBanditBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+        <entity_class name="npcRaiderGinaMachete" extends="npcBanditMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+        <entity_class name="npcRaiderGinaKnife" extends="npcBanditKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+        <entity_class name="npcRaiderGinaClub" extends="npcBanditClubTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+		<entity_class name="npcRaiderGinaPistol" extends="npcPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderGinaDPistol" extends="npcDPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderGinaTRifle" extends="npcTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>
+
+        <entity_class name="npcRaiderGinaSRifle" extends="npcSRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>
+
+        <entity_class name="npcRaiderGinaSMG" extends="npcSMGTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderGinaDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+		<entity_class name="npcRaiderBettyAxe" extends="npcBanditAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderBettyBat" extends="npcBanditBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+        <entity_class name="npcRaiderBettyMachete" extends="npcBanditMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+        <entity_class name="npcRaiderBettyKnife" extends="npcBanditKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+        <entity_class name="npcRaiderBettyClub" extends="npcBanditClubTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+            <property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>		
+
+		<entity_class name="npcRaiderBettyPistol" extends="npcPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderBettyDPistol" extends="npcDPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+
+        <entity_class name="npcRaiderBettyTRifle" extends="npcTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>
+
+        <entity_class name="npcRaiderBettySRifle" extends="npcSRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>
+
+        <entity_class name="npcRaiderBettySMG" extends="npcSMGTemplate"> 
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags" />
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlzDark.unity3d?RaiderBettyDark"/>
+			<property name="LookAtAngle" value="90"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+            <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>	
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="Class" value="EntityNPCBandit, SCore" />
+		</entity_class>	
+                
+    </append>			
+	
+</configs>

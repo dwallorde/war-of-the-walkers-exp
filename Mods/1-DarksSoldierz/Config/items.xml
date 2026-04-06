@@ -1,0 +1,45 @@
+<configs>
+
+	<append xpath="/items">	
+		<item name="DarksSoldierzLoadHack01">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+                <item name="SoldierPickUpNPC">
+			<property name="Extends" value="spherePickUpNPC" />
+		        <property name="CustomIcon" value="Soldier_icon"/>
+                </item>
+             
+                <item name="SoldierGPickUpNPC">
+			<property name="Extends" value="spherePickUpNPC" />
+		        <property name="CustomIcon" value="SoldierG_icon"/>
+                </item>
+
+                <item name="SoldierBPickUpNPC">
+			<property name="Extends" value="spherePickUpNPC" />
+		        <property name="CustomIcon" value="SoldierB_icon"/>
+                </item>
+
+                <item name="SoldierWPickUpNPC">
+			<property name="Extends" value="spherePickUpNPC" />
+		        <property name="CustomIcon" value="SoldierW_icon"/>
+                </item>
+
+                <item name="OfficerPickUpNPC">
+			<property name="Extends" value="spherePickUpNPC" />
+		        <property name="CustomIcon" value="Officer_icon"/>
+                </item>
+
+	</append>
+</configs>

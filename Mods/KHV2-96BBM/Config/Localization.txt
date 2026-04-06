@@ -1,0 +1,6 @@
+Key,english
+perkPackMuleRank1LongDesc,"Who has time to organize their stuff perfectly?\nCarry seven more items without being encumbered.\nIncreases the crafting speed of items from your inventory by 10%.\nYour pack has a 10% chance to ignore physical damage when hit."
+perkPackMuleRank2LongDesc,"You know it's in there somewhere.\nCarry an additional fourteen more items without being encumbered.\nIncreases the crafting speed of items from your inventory by 20%.\nYour pack has a 20% chance to ignore physical damage when hit."
+perkPackMuleRank3LongDesc,"You know exactly where everything is.\nCarry twenty one additional items without being encumbered.\nIncreases the crafting speed of items from your inventory by 30%.\nYour pack has a 30% chance to ignore physical damage when hit."
+perkPackMuleRank4LongDesc,"You just passed inspection, private.\nCarry twenty eight more items without being encumbered.\nIncreases the crafting speed of items from your inventory by 40%.\nYour pack has a 40% chance to ignore physical damage when hit."
+perkPackMuleRank5LongDesc,"Now you're showing off! You're either part mule or strongman.\nCarry thirty five more items without being encumbered.\nIncreases the crafting speed of items from your inventory by 50%.\nYour pack has a 50% chance to ignore physical damage when hit."

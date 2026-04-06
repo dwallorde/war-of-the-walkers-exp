@@ -1,0 +1,15 @@
+﻿<configs>
+
+  <append xpath="/recipes">
+
+    <recipe name="meleeToolFarmT1IronDensityHoe" count="1"
+        tags="learnable,workbenchCrafting">
+      <ingredient name="AL_Item_IngotWroughtIron" count="8"/>
+      <ingredient name="AL_Item_Stick" count="10"/>
+      <ingredient name="AL_Item_Leather" count="2"/>
+      <ingredient name="resourceDuctTape" count="2"/>
+    </recipe>
+
+  </append>
+
+</configs>

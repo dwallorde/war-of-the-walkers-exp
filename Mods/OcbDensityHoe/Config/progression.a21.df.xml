@@ -1,0 +1,5 @@
+﻿<configs>
+
+  <append xpath="/progression/attributes/attribute[@name='attClassLaborer']/effect_group/passive_effect[@name='RecipeTagUnlocked' and starts-with(@level, '2')]/@tags">,meleeToolFarmT1IronDensityHoe</append>
+
+</configs>

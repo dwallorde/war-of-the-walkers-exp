@@ -1,0 +1,247 @@
+<configs>
+
+	<append xpath="/recipes">
+		<recipe name="oldChair1VariantHelperFishableLocation" count="1" craft_time="3">
+			<ingredient name="resourceWood" count="25"/>
+			<ingredient name="resourceNail" count="10"/>
+		</recipe>
+
+		<recipe name="DecorationTackleBoxRedLoot" count="1" craft_time="3">
+			<ingredient name="resourceScrapIron" count="30"/>
+			<ingredient name="resourceScrapPolymers" count="5"/>
+		</recipe>
+
+		<recipe name="DecorationTackleBoxBlueLoot" count="1" craft_time="3">
+			<ingredient name="resourceScrapIron" count="30"/>
+			<ingredient name="resourceScrapPolymers" count="5"/>
+		</recipe>
+
+		<!-- tools -->
+		<recipe name="fishingPoleWood" count="1" craft_time="3" tags="FishingMasterPerks">
+			<ingredient name="resourceIronHook" count="1"/>
+			<ingredient name="resourceFishingSpool" count="1"/>
+			<ingredient name="resourceWood" count="10"/>
+		</recipe>
+
+        <recipe name="resourceFishingWeight" count="1" craft_time="3">
+            <ingredient name="resourceScrapLead" count="5"/>
+            <ingredient name="resourceClayLump" count="5"/>
+        </recipe>
+		
+		<recipe name="resourceIronHook" count="1" craft_time="3">
+			<ingredient name="resourceFishingWeight" count="3"/>
+			<ingredient name="resourceForgedIron" count="2"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>
+
+		<recipe name="resourceFishingSpool" count="1" craft_time="3">
+			<ingredient name="resourceSewingKit" count="1"/>
+			<ingredient name="resourceForgedIron" count="3"/>
+			<ingredient name="resourceScrapPolymers" count="4"/>
+		</recipe>
+
+		<!-- food items -->
+		<recipe name="resourceRawBluegilFishFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceBluegilFish" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawCatfishFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceCatfish" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawCrappieFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceCrappie" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawGrouperFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceGrouper" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawLargeMouthBassFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceLargeMouthBass" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawMackerelFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceMackerel" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawRedSnapperFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceRedSnapper" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawStripedBassFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceStripedBass" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawTroutFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceTrout" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawTunaFillet" count="2" craft_time="3" tags="learnable">
+			<ingredient name="resourceTuna" count="1"/>
+		</recipe>
+
+		<recipe name="resourceRawShadRoe" count="1" craft_time="3" tags="learnable">
+			<ingredient name="resourceShad" count="1"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawBluegilFishFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawCatfishFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawCrappieFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawGrouperFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawLargeMouthBassFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawMackerelFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawRedSnapperFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawStripedBassFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawTroutFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGrilledFishFillet" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawTunaFillet" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodMarinatedTunaSteak" count="1" craft_time="19" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawTunaFillet" count="1"/>
+			<ingredient name="drinkJarBeer" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="3"/>
+		</recipe>
+
+		<recipe name="foodFriedBluegil" count="1" craft_time="16" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceRawBluegilFishFillet" count="1"/>
+			<ingredient name="foodCornMeal" count="2"/>
+			<ingredient name="resourceAnimalFat" count="8"/>
+		</recipe>
+
+		<recipe name="foodFriedCatfish" count="1" craft_time="16" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceRawCatfishFillet" count="1"/>
+			<ingredient name="foodCornMeal" count="2"/>
+			<ingredient name="resourceAnimalFat" count="8"/>
+		</recipe>
+
+		<recipe name="foodGrilledCrabCake" count="1" craft_time="16" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceCrab" count="1"/>
+			<ingredient name="foodCornMeal" count="1"/>
+
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodGlazedMackerel" count="1" craft_time="18" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceRawMackerelFillet" count="1"/>
+			<ingredient name="foodHoney" count="1"/>
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodBlackenedRedSnapper" count="1" craft_time="18" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawRedSnapperFillet" count="1"/>
+			<ingredient name="resourceAnimalFat" count="4"/>
+		</recipe>
+
+		<recipe name="foodFriedShadRoeandBacon" count="1" craft_time="22" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceRawShadRoe" count="1"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="foodRawMeat" count="3"/>
+			<ingredient name="resourceAnimalFat" count="6"/>
+		</recipe>
+
+		<recipe name="foodGrilledOctopus" count="1" craft_time="18" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceOctopus" count="1"/>
+			<ingredient name="resourceAnimalFat" count="3"/>
+
+		</recipe>
+
+		<recipe name="foodFriedShrimp" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceShrimp" count="1"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+		</recipe>
+
+		<recipe name="foodFriedTrout" count="1" craft_time="20" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawTroutFillet" count="1"/>
+			<ingredient name="foodCornMeal" count="2"/>
+			<ingredient name="resourceAnimalFat" count="7"/>
+		</recipe>
+
+		<recipe name="foodSearedBass" count="1" craft_time="20" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawLargeMouthBassFillet" count="1"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodSearedBass" count="1" craft_time="20" craft_area="campfire" craft_tool="toolCookingGrill">
+			<ingredient name="resourceRawStripedBassFillet" count="1"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="resourceAnimalFat" count="2"/>
+		</recipe>
+
+		<recipe name="foodRoastedGrouper" count="1" craft_time="30" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceRawGrouperFillet" count="1"/>
+			<ingredient name="foodCropMushrooms" count="2"/>
+			<ingredient name="resourceAnimalFat" count="4"/>
+		</recipe>
+
+		<recipe name="foodFriedCrappieCake" count="1" craft_time="15" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="resourceRawCrappieFillet" count="1"/>
+			<ingredient name="foodCornMeal" count="3"/>
+			<ingredient name="resourceAnimalFat" count="6"/>
+		</recipe>
+
+		<!-- Added to match V2 mod -->
+		<recipe name="foodTunaFishGravyToast" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+			<ingredient name="resourceRawTunaFillet" count="1"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="foodCornBread" count="2"/>
+			<ingredient name="resourceAnimalFat" count="3"/>
+			<ingredient name="foodCanPeas" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="resourceAnimalFat"/>
+			</effect_group>
+		</recipe>
+	</append>
+
+</configs>

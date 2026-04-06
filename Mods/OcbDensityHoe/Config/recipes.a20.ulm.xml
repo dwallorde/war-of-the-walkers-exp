@@ -1,0 +1,25 @@
+﻿<configs>
+
+  <append xpath="/recipes">
+
+    <recipe name="meleeToolFarmT1IronDensityHoe" time="10"
+        tags="learnable" area="ulmStationCarpenter_2">
+      <ingredient name="resourceScrapIron" count="50"/>
+      <ingredient name="ulmResourceRebarIron" count="2"/>
+      <ingredient name="ulmResourceNutsAndBolts" count="2"/>
+      <ingredient name="resourceLeather" count="5"/>
+    </recipe>
+
+    <recipe name="meleeToolFarmT1IronDensityHoeBlueprint"
+        time="60" area="ulmStationResearch_1">
+      <ingredient name="resourceScrapIron" count="50"/>
+      <ingredient name="ulmResourceRebarIron" count="2"/>
+      <ingredient name="ulmResourceNutsAndBolts" count="2"/>
+      <ingredient name="resourceLeather" count="5"/>
+      <ingredient name="ulmResourceResearch" count="200"/>
+      <ingredient name="resourcePaper" count="10"/>
+    </recipe>
+
+  </append>
+
+</configs>

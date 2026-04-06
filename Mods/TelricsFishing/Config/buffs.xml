@@ -1,0 +1,227 @@
+<configs>
+
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+		<effect_group name="Adds Fishing">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishingMaster" target="self"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/buffs">
+		<!-- fishing -->
+		<buff name="buffFishingMaster" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".5" />
+			<effect_group name="Tier Increase for Crafting">
+				<passive_effect name="CraftingTier" operation="base_set" value="1" tags="FishingMasterPerks">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="0"/>
+				</passive_effect>
+				<passive_effect name="CraftingTier" operation="base_set" value="3" tags="FishingMasterPerks">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="1"/>
+				</passive_effect>
+				<passive_effect name="CraftingTier" operation="base_set" value="4" tags="FishingMasterPerks">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="2"/>
+				</passive_effect>
+				<passive_effect name="CraftingTier" operation="base_set" value="6" tags="FishingMasterPerks">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="GTE" value="3"/>
+				</passive_effect>
+			</effect_group>
+			<effect_group name="Allow Harvesting with Perks">
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="FishingBaitHarvestT1">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="1"/>
+				</passive_effect>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="FishingBaitHarvestT2">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="2"/>
+				</passive_effect>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="FishingBaitHarvestT3">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="GTE" value="3"/>
+				</passive_effect>
+			</effect_group>
+			<effect_group name="Reset on Relog and Death">
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="FishingCatchChance" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffFishingCast"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffFishingCatch"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffFishingComplete"/>
+
+				<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="FishingCatchChance" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="FishingBaitedCatchChance" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFishingCast"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFishingCatch"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFishingComplete"/>
+
+				<triggered_effect trigger="onSelfRespawn" action="ModifyCVar" cvar="FishingCatchChance" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfRespawn" action="ModifyCVar" cvar="FishingBaitedCatchChance" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfRespawn" action="RemoveBuff" buff="buffFishingCast"/>
+				<triggered_effect trigger="onSelfRespawn" action="RemoveBuff" buff="buffFishingCatch"/>
+				<triggered_effect trigger="onSelfRespawn" action="RemoveBuff" buff="buffFishingComplete"/>
+			</effect_group>
+			<effect_group name="Allows Fishing when Wet">
+				<requirement name="CVarCompare" cvar="_wetness" operation="GT" value=".05"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishableWaterReady" target="self"/>
+			</effect_group>
+			<effect_group name="Unlock Recipes: Knifes">
+				<requirement name="HoldingItemHasTags" tags="knife"/>
+				<!--
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishingRecipesUnlockedKnife" target="self"/>-->
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" tags="resourceRawBluegilFishFillet,resourceRawCatfishFillet,resourceRawCrappieFillet,resourceRawGrouperFillet,resourceRawLargeMouthBassFillet,resourceRawMackerelFillet,resourceRawRedSnapperFillet,resourceRawStripedBassFillet,resourceRawTroutFillet,resourceRawTunaFillet,resourceRawShadRoe"/>
+
+			</effect_group>
+			<effect_group name="Radiate to Fishable Boats">
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEntityIsBoat" target="selfAOE" range="1.2" target_tags="fish"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFishableWaterReadyTrigger" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<update_rate value="1" />
+			<effect_group name="Trigger Buff">
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishableWaterReady" target="self"/>
+			</effect_group>
+		</buff>
+		<buff name="buffFishableWaterReady" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group name="Empty to Allow Cast">
+
+			</effect_group>
+		</buff>
+
+		<buff name="buffFishingCast" hidden="false" name_key="buffFishingCastName" description_key="buffFishingCastDesc" icon="ui_game_symbol_NotificationFishingIcon">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<update_rate value="3" />
+			<effect_group name="Set CVars">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="FishingCatchChance" operation="set" value="4"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="FishingCatchChance" operation="add" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="FishingCatchChance" operation="add" value="6">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="Equals" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="FishingCatchChance" operation="add" value="16">
+					<requirement name="ProgressionLevel" progression_name="perkLivingOffTheLand" operation="GTE" value="3"/>
+				</triggered_effect>
+
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="FishingCatchChance" operation="add" value="@FishingBaitedCatchChance"/>
+			</effect_group>
+			<effect_group name="Attaches">
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/TelricsFishingA20.unity3d?FishBobberPrefab" local_offset="0,.05,2.25" parent_transform="Global"/>
+
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="FishBobberPrefab"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="FishBobberPrefab"/>
+				<triggered_effect trigger="onSelfDied" action="RemovePrefabFromEntity" prefab="FishBobberPrefab"/>
+			</effect_group>
+			<effect_group name="Chance to Catch Fish">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,300" operation="LTE" value="@FishingCatchChance"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishingCatch" target="self"/>
+			</effect_group>
+			<effect_group name="Slow Walk">
+				<passive_effect name="RunSpeed" operation="perc_add" value="-.5"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="-.5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="-.5"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFishingCatch" name_key="buffFishingCatchName" description_key="buffFishingCatchDesc" icon="ui_game_symbol_FishCaughtIcon">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<display_value value="FishingCatchTrigger"/>
+			<display_value_key value="{0}"/>
+			<update_rate value=".5" />
+			<effect_group name="Set CVars">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="FishingCatchTrigger" operation="set" value="randomint(20,50)"/>
+
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="FishingCatchTrigger" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="FishingCatchTrigger" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="Chance to Consume Bait">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@FishingBaitConsumeChance"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffFishingBaited" target="self"/>
+			</effect_group>
+			<effect_group name="Remove if Failed">
+				<requirement name="CVarCompare" cvar="FishingCatchTrigger" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishingFail" target="self"/>
+			</effect_group>
+			<effect_group name="Add Fish Caught Buff">
+				<requirement name="CVarCompare" cvar="FishingCatchTrigger" operation="GTE" value="100"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishingComplete" target="self"/>
+			</effect_group>
+			<effect_group name="Fish Tug CVars">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="FishingCatchTrigger" operation="subtract" value="randomint(1,6)"/>
+			</effect_group>
+			<effect_group name="Play Sound">
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FishgCaught"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="FishgCaught">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group name="Shake Camera">
+				<triggered_effect trigger="onSelfBuffStart" action="ShakeCamera" shake_speed="0.75" shake_amplitude="40" shake_time="-1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ShakeCamera" shake_speed="0" shake_amplitude="0" shake_time="1"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="ShakeCamera" shake_speed="0" shake_amplitude="0" shake_time="1"/>
+			</effect_group>
+			<effect_group name="Remove All Prefabs if Finished or Removed.">
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffFishingCast" target="self"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffFishingCast" target="self"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFishingCast" target="self"/>
+
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffFishingCatch" target="self"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffFishingCatch" target="self"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFishingCatch" target="self"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFishingFail" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="2"/>
+			<effect_group name="Play Sound">
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="password_fail"/>
+			</effect_group>
+			<effect_group name="Remove Fishing">
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffFishingCatch" target="self"/>
+			</effect_group>
+			<effect_group name="Consume Bait">
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffFishingBaited" target="self"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFishingComplete" name_key="buffFishingCompleteName" description_key="buffFishingCompleteDesc" icon="ui_game_symbol_FishingCacheIcon">
+			<stack_type value="ignore"/>
+			<duration value="10"/>
+			<effect_group name="Play Sound">
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FishingComplete"/>
+			</effect_group>
+			<effect_group name="Remove Fishing">
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffFishingCatch" target="self"/>
+			</effect_group>
+			<effect_group name="Buff Blink">
+				<passive_effect name="BuffBlink" operation="base_set" value="2" tags="buffFishingComplete"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFishingBaited" name_key="buffFishingBaitedName" description_key="buffFishingBaitedDesc" icon="ui_game_symbol_Earthworm2Icon">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="FishingBaitedCatchChance"/>
+			<display_value_key value="+ {0}%"/>
+			<effect_group name="Reset When Finished">
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="FishingBaitedCatchChance" operation="set" value="0"/>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="FishingBaitConsumeChance" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffEntityIsBoat" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1.5"/>
+			<update_rate value=".25" />
+			<effect_group name="Radiates Fishable to Player">
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishableWaterReady" target="selfAOE" target_tags="player" range="2.5"/>
+			</effect_group>
+		</buff>
+	</append>
+
+</configs>

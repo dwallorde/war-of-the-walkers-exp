@@ -1,0 +1,9 @@
+﻿<configs>
+
+  <append xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/effect_group/passive_effect[@name='RecipeTagUnlocked' and starts-with(@level, '1')]/@tags">,meleeToolFarmT1IronDensityHoe</append>
+
+  <append xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/effect_group">
+    <passive_effect name="CraftingTier" operation="base_set" level="0,1,2,3" value="1,3,4,5" tags="perkLivingOffTheLandQuality"/>
+  </append>
+
+</configs>

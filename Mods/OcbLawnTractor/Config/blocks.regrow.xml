@@ -1,0 +1,63 @@
+﻿<configs>
+	<!-- COTTON -->
+
+	<modinc path="tmpl-blocks/plant.wild.xml" tmpl-plant-wild-name="plantedCotton3Regrow" tmpl-item-name="resourceCropCottonPlant" tmpl-seed-name="plantedCotton1" tmpl-harvest-type="plant"/>
+
+	<!-- CHRYSANTHEMUM -->
+
+	<modinc
+		path="tmpl-blocks/plant.wild.xml"
+		tmpl-plant-wild-name="plantedChrysanthemum3Harvest"
+		tmpl-item-name="resourceCropChrysanthemumPlant"
+		tmpl-seed-name="plantedChrysanthemum1"
+		tmpl-harvest-type="plant"
+	/>
+
+	<!-- GOLDEN ROD -->
+
+	<modinc path="tmpl-blocks/plant.wild.xml" tmpl-plant-wild-name="plantedGoldenrod3Regrow" tmpl-item-name="resourceCropGoldenrodPlant" tmpl-seed-name="plantedGoldenrod1"/>
+
+	<!-- BLUEBERRY -->
+
+	<modinc path="tmpl-blocks/plant.wild.xml" tmpl-plant-wild-name="plantedBlueberry3Regrow" tmpl-item-name="foodCropBlueberries" tmpl-seed-name="plantedBlueberry1"/>
+
+	<!-- ALOE -->
+
+	<modinc path="tmpl-blocks/plant.wild.xml" tmpl-plant-wild-name="plantedAloe3Regrow" tmpl-item-name="resourceCropAloeLeaf" tmpl-seed-name="plantedAloe1"/>
+
+	<!-- COFFEE -->
+
+	<modinc path="tmpl-blocks/plant.wild.xml" tmpl-plant-wild-name="plantedCoffee3Regrow" tmpl-item-name="resourceCropCoffeeBeans" tmpl-seed-name="plantedCoffee1"/>
+
+	<!-- HOP -->
+
+	<modinc path="tmpl-blocks/plant.wild.xml" tmpl-plant-wild-name="plantedCoffee3Regrow" tmpl-item-name="resourceCropCoffeeBeans" tmpl-seed-name="plantedCoffee1"/>
+
+	<!-- MUSHROOM -->
+
+	<modinc path="tmpl-blocks/plant.wild.xml" tmpl-plant-wild-name="plantedMushroom3Regrow" tmpl-item-name="foodCropMushrooms" tmpl-seed-name="plantedMushroom1"/>
+
+	<!-- ############################################################################ -->
+	<!-- ITEMS BELOW CAN ONLY BE HARVESTED WITH CROP MOWER ADDON (WILD IS NOT ENOUGH) -->
+	<!-- ############################################################################ -->
+
+	<!-- CORN -->
+
+	<modinc path="tmpl-blocks/crop.wild.xml" tmpl-plant-wild-name="plantedCorn3Regrow" tmpl-item-name="foodCropCorn" tmpl-seed-name="plantedCorn1"/>
+
+	<!-- GRACE CORN -->
+
+	<modinc path="tmpl-blocks/crop.wild.xml" tmpl-plant-wild-name="plantedGraceCorn3Regrow" tmpl-item-name="foodCropGraceCorn" tmpl-seed-name="plantedGraceCorn1"/>
+
+	<!-- POTATO -->
+
+	<modinc path="tmpl-blocks/crop.wild.xml" tmpl-plant-wild-name="plantedPotato3Regrow" tmpl-item-name="foodCropPotato" tmpl-seed-name="plantedPotato1"/>
+
+	<!-- PUMPKIN -->
+
+	<modinc path="tmpl-blocks/crop.wild.xml" tmpl-plant-wild-name="plantedPumpkin3Regrow" tmpl-item-name="foodCropPumpkin" tmpl-seed-name="plantedPumpkin1"/>
+
+	<!-- YUCCA -->
+
+	<modinc path="tmpl-blocks/crop.wild.xml" tmpl-plant-wild-name="plantedYucca3Regrow" tmpl-item-name="foodCropYuccaFruit" tmpl-seed-name="plantedYucca1"/>
+</configs>

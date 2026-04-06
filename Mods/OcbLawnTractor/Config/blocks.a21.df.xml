@@ -1,0 +1,137 @@
+﻿<configs patcher-version="6">
+	<modinc
+		path="blocks.a21.tmpl.xml"
+		tmpl-plant-wild-name="DFWheatPlantWild"
+		tmpl-plant-player-name="DFWheatPlantPlayer"
+		tmpl-item-name="DFWheat"
+		tmpl-seed-name="DFseedWheat"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc
+		path="blocks.a21.tmpl.xml"
+		tmpl-plant-wild-name="DFCannabisPlantWild"
+		tmpl-plant-player-name="DFCannabisPlantPlayer"
+		tmpl-item-name="drugCannabisBud"
+		tmpl-seed-name="DFseedCannabis"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc path="blocks.a21.tmpl.xml" tmpl-plant-wild-name="DFRicePlantWild" tmpl-plant-player-name="DFRicePlantPlayer" tmpl-item-name="DFRice" tmpl-seed-name="DFseedRice" tmpl-harvest-type="plant"/>
+
+	<modinc
+		path="blocks.a21.tmpl.xml"
+		tmpl-plant-wild-name="DFtomatoPlantWild"
+		tmpl-plant-player-name="DFtomatoPlantPlayer"
+		tmpl-item-name="DFTomato"
+		tmpl-seed-name="DFseedTomato"
+		tmpl-harvest-type="crop"
+	/>
+
+	<modinc
+		path="blocks.a21.tmpl.xml"
+		tmpl-plant-wild-name="DFcarrotPlantWild"
+		tmpl-plant-player-name="DFcarrotPlantPlayer"
+		tmpl-item-name="DFCarrot"
+		tmpl-seed-name="DFseedCarrot"
+		tmpl-harvest-type="crop"
+	/>
+
+	<!-- UNDERGROUND CROPS -->
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedCotton3UndergroundHarvest"
+		tmpl-item-name="resourceCropCottonPlant"
+		tmpl-seed-name="plantedCotton1Underground"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedChrysanthemum3UndergroundHarvest"
+		tmpl-item-name="resourceCropChrysanthemumPlant"
+		tmpl-seed-name="plantedChrysanthemum1Underground"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedGoldenrod3UndergroundHarvest"
+		tmpl-item-name="resourceCropGoldenrodPlant"
+		tmpl-seed-name="plantedGoldenrod1Underground"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedBlueberry3UndergroundHarvest"
+		tmpl-item-name="foodCropBlueberries"
+		tmpl-seed-name="plantedBlueberry1Underground"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedAloe3UndergroundHarvest"
+		tmpl-item-name="resourceCropAloeLeaf"
+		tmpl-seed-name="plantedAloe1Underground"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedCoffee3UndergroundHarvest"
+		tmpl-item-name="resourceCropCoffeeBeans"
+		tmpl-seed-name="plantedCoffee1Underground"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedHop3UndergroundHarvest"
+		tmpl-item-name="resourceCropHopsFlower"
+		tmpl-seed-name="plantedHop1Underground"
+		tmpl-harvest-type="plant"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedCorn3UndergroundHarvest"
+		tmpl-item-name="foodCropCorn"
+		tmpl-seed-name="plantedCorn1Underground"
+		tmpl-harvest-type="crop"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedGraceCorn3UndergroundHarvest"
+		tmpl-item-name="foodCropGraceCorn"
+		tmpl-seed-name="plantedGraceCorn1Underground"
+		tmpl-harvest-type="crop"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedPotato3UndergroundHarvest"
+		tmpl-item-name="foodCropPotato"
+		tmpl-seed-name="plantedPotato1Underground"
+		tmpl-harvest-type="crop"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedPumpkin3UndergroundHarvest"
+		tmpl-item-name="foodCropPumpkin"
+		tmpl-seed-name="plantedPumpkin1Underground"
+		tmpl-harvest-type="crop"
+	/>
+
+	<modinc
+		path="tmpl-blocks/plant.player.xml"
+		tmpl-plant-player-name="plantedYucca3UndergroundHarvest"
+		tmpl-item-name="foodCropYuccaFruit"
+		tmpl-seed-name="plantedYucca1Underground"
+		tmpl-harvest-type="crop"
+	/>
+</configs>

@@ -1,0 +1,161 @@
+<configs>
+
+	<append xpath="/entity_classes">
+
+    <!-- Female Head Hunter Nurses in the Snow and Wasteland by day and everywhere by night -->
+	
+    <entity_class name="zombieOakNurse" extends="zombieBossTemplate">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Mesh" value="#@modfolder:Resources/NightNurse.unity3d?oaknurse1"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1500"/>
+    <property name="HandItem" value="meleeHandZombieStrong"/>
+	
+	<effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1450"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group> 	
+	</entity_class>
+	
+    <entity_class name="zombieOakFireNurse" extends="zombieBossTemplate">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Mesh" value="#@modfolder:Resources/NightNurse.unity3d?oaknursefire"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1500"/>
+    <property name="HandItem" value="meleeHandZombieStrongFire"/>
+	
+	<effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1450"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group> 
+	</entity_class>
+	
+    <entity_class name="zombieOakRadNurse" extends="zombieBossTemplate">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+	<property name="Mesh" value="#@modfolder:Resources/NightNurse.unity3d?oaknurseRad"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1500"/>
+    <property name="HandItem" value="meleeHandZombieStrong"/>
+	
+	<effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1450"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="zombieOakRadNurseRadiatedShowerAOE"/>
+    </effect_group> 
+	</entity_class>
+	
+    <!-- Male Head Hunters in the Desert and Wasteland by day and everywhere by night -->
+	
+    <entity_class name="zombieOakHeadHunter1" extends="zombieBossTemplate">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+    <property name="Mesh" value="#@modfolder:Resources/HeadHunter.unity3d?headhunter"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+    <property name="WalkType" value="2"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1500"/>
+    <property name="HandItem" value="meleeHandZombieStrong"/>
+	
+	<effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1450"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group> 
+	</entity_class>
+	
+    <entity_class name="zombieOakHeadHunter2" extends="zombieBossTemplate">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+    <property name="Mesh" value="#@modfolder:Resources/HeadHunter.unity3d?headhunter2"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+    <property name="WalkType" value="2"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1500"/>
+    <property name="HandItem" value="meleeHandZombieStrong"/>
+	
+	<effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1450"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group> 
+	</entity_class>
+	
+    <entity_class name="zombieOakHeadHunter3" extends="zombieBossTemplate">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+    <property name="Mesh" value="#@modfolder:Resources/HeadHunter.unity3d?headhunter3"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+    <property name="WalkType" value="2"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1500"/>
+    <property name="HandItem" value="meleeHandZombieStrong"/>
+	
+	<effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1450"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group> 
+	</entity_class>
+	
+    <entity_class name="zombieOakHeadHunter4" extends="zombieBossTemplate">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+    <property name="Mesh" value="#@modfolder:Resources/HeadHunter.unity3d?headhunter4"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+    <property name="WalkType" value="2"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1500"/>
+    <property name="HandItem" value="meleeHandZombieStrong"/>
+	
+	<effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1450"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group> 
+	</entity_class>
+	
+    <entity_class name="zombieOakHeadHunter5" extends="zombieBossTemplate">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,male,zombie,walker,feral,radiated,template"/>
+    <property name="Mesh" value="#@modfolder:Resources/HeadHunter.unity3d?headhunter5"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/>
+    <property name="WalkType" value="2"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1500"/>
+    <property name="HandItem" value="meleeHandZombieStrong"/>
+	
+	<effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1450"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group> 
+	</entity_class>
+	
+	</append>
+
+</configs>

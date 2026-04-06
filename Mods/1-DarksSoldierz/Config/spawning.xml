@@ -1,0 +1,54 @@
+<configs>
+
+	<append xpath="/spawning/biome[@name='pine_forest']">
+	
+		<spawn id="dnNationalGuard01" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn id="nnNationalGuard01" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn id="dnNationalGuard02" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn id="nnNationalGuard02" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn id="dnNationalGuard03" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS50" tags="downtown" />
+		<spawn id="nnNationalGuard03" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="downtown" />
+		<!-- <spawn maxcount="1" respawndelay="3.2" time="Any" entitygroup="EnemyAnimalsForest" spawnDeadChance="0" /> -->
+	</append>
+	
+	<append xpath="/spawning/biome[@name='burnt_forest']">
+		
+		<spawn id="dnNationalGuard01" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn id="nnNationalGuard01" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn id="dnNationalGuard02" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn id="nnNationalGuard02" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn id="dnNationalGuard03" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS50" tags="downtown" />
+		<spawn id="nnNationalGuard03" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="downtown" />
+	</append>
+	
+	<append xpath="/spawning/biome[@name='desert']">
+		
+		<spawn id="dnNationalGuard01" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn id="nnNationalGuard01" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn id="dnNationalGuard02" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn id="nnNationalGuard02" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn id="dnNationalGuard03" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS50" tags="downtown" />
+		<spawn id="nnNationalGuard03" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='snow']">
+
+		<spawn id="dnNationalGuard01" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn id="nnNationalGuard01" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn id="dnNationalGuard02" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn id="nnNationalGuard02" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn id="dnNationalGuard03" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS50" tags="downtown" />
+		<spawn id="nnNationalGuard03" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="downtown" />
+	</append>	
+	
+	<append xpath="/spawning/biome[@name='wasteland']">
+		
+		<spawn id="dnNationalGuard01" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" notags="commercial,industrial,downtown" />
+		<spawn id="nnNationalGuard01" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS50" notags="commercial,industrial,downtown" />
+		<spawn id="dnNationalGuard02" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS01" tags="commercial,industrial" notags="downtown" />
+		<spawn id="nnNationalGuard02" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="commercial,industrial" notags="downtown" />
+		<spawn id="dnNationalGuard03" maxcount="1" respawndelay="1" time="Day" entitygroup="npcNationalGuardGroupGS50" tags="downtown" />
+		<spawn id="nnNationalGuard03" maxcount="1" respawndelay="1" time="Night" entitygroup="npcNationalGuardGroupGS100" tags="downtown" />
+	</append>	
+	
+</configs>

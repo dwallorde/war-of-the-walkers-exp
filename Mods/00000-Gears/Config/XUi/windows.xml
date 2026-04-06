@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GearsMenu name="XUi_Menu/windows.xml">
+
+	<remove xpath="/windows/window[@name='ingameMenu']" />
+
+	<append xpath="/windows">
+		<window name="ingameMenu" anchor="LeftTop" pos="0,0" width="1920" height="1080" controller="Gears.UI.InGameMenu, Gears" cursor_area="true">
+			
+			<confirmation_prompt name="unstuckPrompt" pos="950, -400" width="400" height="220" />
+			
+			<grid name="buttons" pos="20, -20" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
+				<simplebutton name="btnInvite" depth="3" width="250" height="46" caption_key="xuiMenuInvite" font_size="40" />
+				<simplebutton name="btnOptions" depth="3" width="250" height="46" caption_key="xuiMenuOptions" font_size="40" />
+				<simplebutton name="btnHelp" depth="3" width="250" height="46" caption_key="xuiMenuHelp" font_size="40" />
+				<simplebutton name="btnMods" depth="3" width="250" height="46" caption_key="gearsUIModsButton" font_size="40"/>
+				<simplebutton name="btnSave" depth="3" width="250" height="46" caption_key="xuiMenuSave" font_size="40" />
+				<simplebutton name="btnExit" depth="3" width="250" height="46" caption_key="xuiMenuExit" font_size="40" />
+				<simplebutton name="btnExportPrefab" depth="3" width="250" height="46" caption_key="xuiMenuExportPrefab" font_size="40" />
+				<simplebutton name="btnTpPoi" depth="3" width="250" height="46" caption_key="xuiMenuTeleportPoiButton" font_size="40" />
+				<simplebutton name="btnOpenConsole" depth="3" width="250" height="46" caption_key="xuiOpenConsole" font_size="40" visible="true"/>
+				<simplebutton name="btnBugReport" depth="3" width="250" height="46" caption_key="xuiBugReportHeader" font_size="40" visible="{bug_reporting}"/>
+			</grid>
+			<label depth="4" pos="0,-925" width="500" height="40" text_key="lblAchievementsDisabled" color="[gold]" visible="{creativeenabled}" tooltip_key="ttAchievementsDisabled" platform="!PS5" pivot="bottomleft" effect="Outline8" effect_color="0,0,0,255" effect_distance="2,2"/>
+			<label depth="4" pos="0,-925" width="500" height="40" text_key="lblAchievementsDisabledPS5" color="[gold]" visible="{creativeenabled}" tooltip_key="ttAchievementsDisabledPS5" platform="PS5" pivot="bottomleft" effect="Outline8" effect_color="0,0,0,255" effect_distance="2,2"/>
+		</window>
+	</append>
+
+</GearsMenu>

@@ -1,0 +1,12 @@
+<configs>
+
+	<append xpath="/entity_classes/entity_class[@name='playerMale']">
+		<effect_group name="Fishing Harvest">
+			<passive_effect name="HarvestCount" operation="base_set" value="1" tags="FishingBaitHarvestT0"/>
+			<passive_effect name="HarvestCount" operation="base_set" value="0" tags="FishingBaitHarvestT1"/>
+			<passive_effect name="HarvestCount" operation="base_set" value="0" tags="FishingBaitHarvestT2"/>
+			<passive_effect name="HarvestCount" operation="base_set" value="0" tags="FishingBaitHarvestT3"/>
+		</effect_group>
+
+	</append>
+</configs>

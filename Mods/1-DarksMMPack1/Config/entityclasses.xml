@@ -1,0 +1,439 @@
+<configs>
+
+
+
+	<append xpath="/entity_classes">
+
+        <entity_class name="zombieSkeleton" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?SkeletonBaseDark"/> 
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="MMSkeletonStandard"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="DismemberMultiplierHead" value="0"/>
+                        <property name="DismemberMultiplierArms" value="0"/>
+                        <property name="DismemberMultiplierLegs" value="0"/>
+                        <property name="SurfaceCategory" value="stone"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		  
+		</entity_class>
+		
+                <entity_class name="zombieSkeletonAxe" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?SkeletonAxeDark"/> 
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="MMSkeletonStandard"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="DismemberMultiplierHead" value="0"/>
+                        <property name="DismemberMultiplierArms" value="0"/>
+                        <property name="DismemberMultiplierLegs" value="0"/>
+                        <property name="SurfaceCategory" value="stone"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		  
+		</entity_class>
+		
+                <entity_class name="zombieSkeletonSword" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?SkeletonSwordDark"/> 
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="MMSkeletonStandard"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="DismemberMultiplierHead" value="0"/>
+                        <property name="DismemberMultiplierArms" value="0"/>
+                        <property name="DismemberMultiplierLegs" value="0"/>
+                        <property name="SurfaceCategory" value="stone"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		  
+		</entity_class>
+                
+                <entity_class name="zombieDeathKnight" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?DeathKnightDark"/> 
+			<property name="SoundRandom" value="MMZombieRandom"/>
+	<property name="SoundAlert" value="MMZombieAlert"/>
+	<property name="SoundAttack" value="MMZombieAttack"/>
+	<property name="SoundHurt" value="MMZombieHurt"/>
+	<property name="SoundDeath" value="MMZombieDeath"/>
+	<property name="SoundSense" value="MMZombieSense"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="MMSkeletonStandard"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="AITask" value="
+	BreakBlock|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=4;duration=5|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|
+	"/>
+                        <property name="RightHandJointName" value="Head"/>
+                        <property name="HandItem" value="meleeHandZombieCop"/>
+                        <property name="DismemberMultiplierHead" value="0"/>
+                        <property name="DismemberMultiplierArms" value="0"/>
+                        <property name="DismemberMultiplierLegs" value="0"/>
+                        <property name="SurfaceCategory" value="stone"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		  
+		</entity_class>
+
+                 <entity_class name="zombieBase" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?ZombieBaseDark"/> 
+			<property name="SoundRandom" value="MMZombieRandom"/>
+	<property name="SoundAlert" value="MMZombieAlert"/>
+	<property name="SoundAttack" value="MMZombieAttack"/>
+	<property name="SoundHurt" value="MMZombieHurt"/>
+	<property name="SoundDeath" value="MMZombieDeath"/>
+	<property name="SoundSense" value="MMZombieSense"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+                        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		  
+		</entity_class>
+
+                 <entity_class name="zombieAxe" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?ZombieAxeDark"/> 
+			<property name="SoundRandom" value="MMZombieRandom"/>
+	<property name="SoundAlert" value="MMZombieAlert"/>
+	<property name="SoundAttack" value="MMZombieAttack"/>
+	<property name="SoundHurt" value="MMZombieHurt"/>
+	<property name="SoundDeath" value="MMZombieDeath"/>
+	<property name="SoundSense" value="MMZombieSense"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+                        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		  
+		</entity_class>
+
+                 <entity_class name="zombieArmor" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?ZombieArmorDark"/> 
+			<property name="SoundRandom" value="MMZombieRandom"/>
+	<property name="SoundAlert" value="MMZombieAlert"/>
+	<property name="SoundAttack" value="MMZombieAttack"/>
+	<property name="SoundHurt" value="MMZombieHurt"/>
+	<property name="SoundDeath" value="MMZombieDeath"/>
+	<property name="SoundSense" value="MMZombieSense"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+                        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		  
+		</entity_class>
+
+                 <entity_class name="zombieHelm" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?ZombieHelmDark"/> 
+		<property name="SoundRandom" value="MMZombieRandom"/>
+	<property name="SoundAlert" value="MMZombieAlert"/>
+	<property name="SoundAttack" value="MMZombieAttack"/>
+	<property name="SoundHurt" value="MMZombieHurt"/>
+	<property name="SoundDeath" value="MMZombieDeath"/>
+	<property name="SoundSense" value="MMZombieSense"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+                        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		  
+		</entity_class>
+
+                 <entity_class name="zombieSwordShield" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?ZombieSWSHDark"/> 
+			<property name="SoundRandom" value="MMZombieRandom"/>
+	<property name="SoundAlert" value="MMZombieAlert"/>
+	<property name="SoundAttack" value="MMZombieAttack"/>
+	<property name="SoundHurt" value="MMZombieHurt"/>
+	<property name="SoundDeath" value="MMZombieDeath"/>
+	<property name="SoundSense" value="MMZombieSense"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+                        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> --> 
+		</entity_class>
+
+                  <entity_class name="zombieGhoul" extends="zombieRegularTemplate">
+			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombieController"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?GhoulDark"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="SoundRandom" value="spiderroam"/>
+	                <property name="SoundAlert" value="spideralert"/>
+	                <property name="SoundAttack" value="spiderattack"/>
+	                <property name="SoundDeath" value="spiderdeath"/>
+	                <property name="SoundHurt" value="spiderpain"/>
+	                <property name="SoundSense" value="spidersense"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+                        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerLeg" data="target=RightLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> --> 
+		</entity_class>
+
+        <entity_class name="GiantRat" extends="animalTemplateHostile">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,animal,hostile,bear,perkAT03"/>
+        <property name="Mesh" value="#@modfolder:Resources/MMCritterz1.unity3d?GiantRatDark"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_bear"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_bear"/>
+	<property name="AvatarController" value="AvatarAnimalController"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="RootMotion" value="false"/>
+	<property name="RagdollOnDeathChance" value=".5"/>
+	<property name="PhysicsBody" value="bear"/>
+	<property name="Mass" value="50"/>
+        <property name="HandItem" value="meleeHandAnimalCoyote"/>
+	<property name="AITask-1" value="BreakBlock"/>
+	<property name="AITask-2" value="DestroyArea"/>
+	<property name="AITask-3" value="Territorial"/>
+	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,25,EntityBandit,25,EntityNPC,25,EntityAnimalStag,40,EntityZombie,30"/>
+	<property name="AITask-5" value="ApproachSpot"/>
+	<property name="AITask-6" value="Look"/>
+	<property name="AITask-7" value="Wander"/>
+	<property name="AITask-8" value=""/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+	<property name="AITarget-2" value="BlockingTargetTask"/>
+	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityBandit,0,-6,EntityNPC,13,8,EntityAnimalStag,0,0,EntityZombie,0,-6"/>
+	<property name="AITarget-4" value=""/>
+	<property name="SoundHurt" value="rabbitpain"/>
+	<property name="SoundDeath" value="rabbitdeath"/>
+	<!-- Gameplay  -->
+	<property name="PainResistPerHit" value="1"/>
+	<property name="ExperienceGain" value="50"/><!-- XP strong -->
+	<property name="DeadBodyHitPoints" value="50"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/> <!-- animalBear -->
+	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
+	<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="50"/>
+	</effect_group>
+	<property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_bear,clear_sleeper" />
+</entity_class>
+
+    </append>			
+  
+</configs>

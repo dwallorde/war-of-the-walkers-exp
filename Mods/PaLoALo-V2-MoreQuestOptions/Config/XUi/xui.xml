@@ -1,0 +1,9 @@
+<configs>
+
+	<append xpath="/xui/ruleset[@name='default']">
+		<window_group name="QuestToolTipGroup">
+			<window name="QuestToolTipWindow"/>
+		</window_group>
+	</append>
+
+</configs>

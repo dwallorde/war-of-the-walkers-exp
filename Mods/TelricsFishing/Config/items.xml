@@ -1,0 +1,1025 @@
+<configs>
+
+	<append xpath="/items">
+		<!-- crafting requirement items -->
+		<item name="resourceCraftingRequiresHoldingKnife">
+			<property name="Tags" value="equipment"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="" />
+
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Building"/>
+			<effect_group tiered="false">
+			</effect_group>
+		</item>
+
+		<!-- fishing poles -->
+		<item name="fishingPoleWood">
+			<property name="Tags" value="canHaveCosmetic,tool,FishingMasterPerks"/>
+			<property name="CustomIcon" value="FishingPoleWoodIcon2" />
+			<property name="DisplayType" value="FishingPoles"/>
+			<property name="HoldType" value="2"/>
+			<property name="Meshfile" value="#@modfolder:Resources/TelricsFishingA20.unity3d?FishingPoleWoodPrefab"/>
+			<property name="Material" value="Mwood"/>
+			<property name="DegradationBreaksAfter" value="true"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="FuelValue" value="250"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="ShowQuality" value="true"/>
+			<property class="Action0">
+				<requirement name="NotHasBuff" buff="buffFishingCast" />
+				<requirement name="HasBuff" buff="buffFishableWaterReady" />
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Sphere" value=".15"/>
+				<property name="Sound_start" value="FishingPoleCast"/>
+
+				<property name="GrazeStart" value=".25"/>
+				<property name="GrazeEnd" value=".35"/>
+				<property name="SwingDegrees" value="65"/>
+				<property name="SwingAngle" value="180"/>
+				<property name="UseGrazingHits" value="true"/>
+				<property name="UsePowerAttackAnimation" value="true"/>
+				<property name="IsHorizontalSwing" value="true"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="woodhitorganic"/>
+				</property>
+				<property class="GrazeSounds">
+					<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+				</property>
+			</property>
+			<property class="Action1">
+				<requirement name="HasBuff" buff="buffFishingComplete" />
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value=""/>
+				<property name="Consume" value="false"/>
+				<property name="Create_item" value="resourceRandomFishCollector"/>
+			</property>
+			<property name="Group" value="Tools/Traps"/>
+			<effect_group name="FishingPoleWood">
+				<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+				<!-- meleeToolPickaxeIron -->
+				<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="60"/>
+				<!-- Gazz change 55 to 65 -->
+				<passive_effect name="StaminaLoss" operation="base_set" value="12.9" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="10,6000" tier="1,6"/>
+				<!-- 75, 150 -->
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="MaxRange" operation="base_set" value=".5"/>
+				<passive_effect name="BlockRange" operation="base_set" value=".5"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="1" tags="EconomicValue"/>
+
+
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="terrGravel"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+			</effect_group>
+			<effect_group name="Additional Stuffs">
+				<display_value name="FishingBaseCatchChance" value=".04" />
+
+
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFishingCast" />
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFishingCatch" />
+
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFishingCast" target="self"/>
+
+
+				<triggered_effect trigger="onSelfItemActivate" action="ModifyCVar" cvar="FishingCatchTrigger" operation="add" value="randomint(1,7)">
+					<requirement name="HasBuff" buff="buffFishingCatch"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfItemActivate" action="PlaySound" sound="FishingReelShort">
+					<requirement name="HasBuff" buff="buffFishingCatch"/>
+				</triggered_effect>
+
+
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffFishingCast" />
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffFishingComplete" />
+			</effect_group>
+			<property name="RepairExpMultiplier" value="5.5"/>
+		</item>
+
+		<!-- crafting reagents -->
+		<item name="resourceIronHook">
+			<property name="Tags" value="resourceIronHook"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="IronHookIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Resources"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceFishingSpool">
+			<property name="Tags" value="resourceFishingSpool"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="FishingSpoolIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Resourcesod/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<!-- possible fish -->
+		<item name="resourceRandomFishCollector">
+			<property name="Extends" value="noteTestersDelightAdmin"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="FishingCacheIcon"/>
+			<property name="CustomIconTint" value="FFFFFF"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="DescriptionKey" value="resourceRandomFishCollectorDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="casinoCoin"/>
+				<property name="Create_item_count" value="0"/>
+				<property name="Random_item" value="resourceBluegilFish,resourceCatfish,resourceCrab,resourceCrappie,resourceGrouper,resourceLargeMouthBass,resourceMackerel,resourceOctopus,resourceRedSnapper,resourceShad,resourceShrimp,resourceStripedBass,resourceTrout,resourceTuna,resourceFishingCoin,resourceSeaweed,resourceOldBoot" />
+				<property name="Random_item_count" value="1,1,1"/>
+				<property name="Random_count" value="1"/>
+				<property name="Unique_random_only" value="false"/>
+			</property>
+		</item>
+
+		<item name="resourceBluegilFish">
+			<property name="Tags" value="resourceBluegilFish"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="BluegilIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceCatfish">
+			<property name="Tags" value="resourceCatfish"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="CatfishIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceCrab">
+			<property name="Tags" value="resourceCrab"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="CrabIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceCrappie">
+			<property name="Tags" value="resourceCrappie"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="CrappieIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceGrouper">
+			<property name="Tags" value="resourceGrouper"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="GrouperIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceLargeMouthBass">
+			<property name="Tags" value="resourceLargeMouthBass"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="LargeMouthBassIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceMackerel">
+			<property name="Tags" value="resourceMackerel"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="MackerelIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceOctopus">
+			<property name="Tags" value="resourceOctopus"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="OctopusIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceRedSnapper">
+			<property name="Tags" value="resourceRedSnapper"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="RedSnapperIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceShad">
+			<property name="Tags" value="resourceShad"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="ShadIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceShrimp">
+			<property name="Tags" value="resourceShrimp"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="ShrimpIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceStripedBass">
+			<property name="Tags" value="resourceStripedBass"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="StripedBassIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceTrout">
+			<property name="Tags" value="resourceTrout"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="TroutIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceTuna">
+			<property name="Tags" value="resourceTuna"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="TunaIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceFishingCoin">
+			<property name="Tags" value="resourceFishingCoin"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="FishingCoinIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceSeaweed">
+			<property name="Tags" value="resourceSeaweed"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="SeaweedIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<item name="resourceOldBoot">
+			<property name="Tags" value="resourceOldBoot"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="OldBootIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+		</item>
+
+		<!-- bait -->
+		<item name="resourceBaitWorm">
+			<property name="Tags" value="resourceBaitWorm,FishingBaitHarvestT0,FishingBaitHarvestT1,FishingBaitHarvestT2,FishingBaitHarvestT3"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="Earthworm2Icon" />
+			<property name="DisplayType" value="FishingBait"/>
+
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="150"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Building"/>
+			<effect_group tiered="false">
+				<display_value name="FishingCatchChance" value=".05" />
+				<display_value name="FishingBaitConsumeChance" value=".85" />
+
+
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="FishingBaitedCatchChance" operation="set" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="FishingBaitConsumeChance" operation="set" value="85"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFishingBaited" target="self"/>
+			</effect_group>
+		</item>
+
+		<item name="resourceBaitGrub">
+			<property name="Tags" value="resourceBaitGrub,FishingBaitHarvestT0,FishingBaitHarvestT1,FishingBaitHarvestT2,FishingBaitHarvestT3"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="GrubBaitIcon" />
+			<property name="DisplayType" value="FishingBait"/>
+
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="150"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Building"/>
+			<effect_group tiered="false">
+				<display_value name="FishingCatchChance" value=".09" />
+				<display_value name="FishingBaitConsumeChance" value=".65" />
+
+
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="FishingBaitedCatchChance" operation="set" value="9"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="FishingBaitConsumeChance" operation="set" value="65"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFishingBaited" target="self"/>
+			</effect_group>
+		</item>
+
+		<item name="resourceBaitDragonfly">
+			<property name="Tags" value="resourceBaitDragonfly,FishingBaitHarvestT0,FishingBaitHarvestT1,FishingBaitHarvestT2,FishingBaitHarvestT3"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="DragonflyBaitIcon" />
+			<property name="DisplayType" value="FishingBait"/>
+
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="150"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="0"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property name="Group" value="Building"/>
+			<effect_group tiered="false">
+				<display_value name="FishingCatchChance" value=".25" />
+				<display_value name="FishingBaitConsumeChance" value=".35" />
+
+
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="FishingBaitedCatchChance" operation="set" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="FishingBaitConsumeChance" operation="set" value="35"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFishingBaited" target="self"/>
+			</effect_group>
+		</item>
+
+		<!-- fish foods -->
+		<item name="resourceRawBluegilFishFillet">
+			<property name="Tags" value="resourceRawBluegilFishFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="BluegilRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawCatfishFillet">
+			<property name="Tags" value="resourceRawCatfishFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="CatfishRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawCrappieFillet">
+			<property name="Tags" value="resourceRawCrappieFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="CrappieRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawGrouperFillet">
+			<property name="Tags" value="resourceRawGrouperFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="GrouperRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawLargeMouthBassFillet">
+			<property name="Tags" value="resourceRawLargeMouthBassFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="LargeMouthBassRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawMackerelFillet">
+			<property name="Tags" value="resourceRawMackerelFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="MackerelRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawRedSnapperFillet">
+			<property name="Tags" value="resourceRawRedSnapperFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="RedSnapperRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawStripedBassFillet">
+			<property name="Tags" value="resourceRawStripedBassFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="StripedBassRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawTroutFillet">
+			<property name="Tags" value="resourceRawTroutFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="TroutRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawTunaFillet">
+			<property name="Tags" value="resourceRawTunaFillet"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="TunaRawFilletIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="resourceRawShadRoe">
+			<property name="Tags" value="resourceRawShadRoe"/>
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="ShadRoeRawIcon" />
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FuelValue" value="1"/>
+			<property name="UnlockedBy" value="resourceCraftingRequiresHoldingKnife"/>
+		</item>
+
+		<item name="foodGrilledFishFillet">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="FishFilletGrilledIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="7"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodMarinatedTunaSteak">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="MarinatedTunaSteakIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="27"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodFriedBluegil">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="FriedBluegilIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="19"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodFriedCatfish">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="FriedCatfishIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="19"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodGrilledCrabCake">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="GrilledCrabCakeIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodGlazedMackerel">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="GlazedMackerelIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="26"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodBlackenedRedSnapper">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="BlackenedRedSnapperIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="28"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="16"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodFriedShadRoeandBacon">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="ShadRoeAndBaconIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="36"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="23"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodGrilledOctopus">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="OctopusGrilledIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="24"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="7"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodFriedShrimp">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="ShrimpFriedIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodFriedTrout">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="FriedTroutIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodSearedBass">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="SearedBassIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="4"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodRoastedGrouper">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="RoastedGrouperIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+
+		<item name="foodFriedCrappieCake">
+			<property name="Tags" value="food"/>
+			<property name="CustomIcon" value="FriedCrappieCakeIcon" />
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="14"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+	</append>
+
+</configs>

@@ -1,0 +1,10 @@
+﻿<configs>
+
+  <insertafter xpath="/progression/crafting_skills/crafting_skill[@name='AL_CraftingSkill_ConstructionTools']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='AL_Item_StoneMallet']">
+    <passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,1000" value="1" tags="meleeToolFarmT1IronDensityHoe"/>
+  </insertafter>
+  <insertafter xpath="/progression/crafting_skills/crafting_skill[@name='AL_CraftingSkill_ConstructionTools']/effect_group/passive_effect[@name='CraftingTier' and @tags='AL_Item_StoneMallet']">
+    <passive_effect name="CraftingTier" operation="base_add" level="15,115,1000" value="1,32767,65535" tags="meleeToolFarmT1IronDensityHoe"/>
+  </insertafter>
+
+</configs>

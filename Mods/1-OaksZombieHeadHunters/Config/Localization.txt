@@ -1,0 +1,10 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+
+zombieOakNurse,entityclasses,Entity,,,Nurse Kylie,,,,,,,,,,,,,
+zombieOakFireNurse,entityclasses,Entity,,,Nurse Barbie,,,,,,,,,,,,,
+zombieOakRadNurse,entityclasses,Entity,,,Nurse Jazlyn,,,,,,,,,,,,,
+zombieOakHeadHunter1,entityclasses,Entity,,,Head Hunter Bazza,,,,,,,,,,,,,
+zombieOakHeadHunter2,entityclasses,Entity,,,Head Hunter Lazza,,,,,,,,,,,,,
+zombieOakHeadHunter3,entityclasses,Entity,,,Head Hunter Dazza,,,,,,,,,,,,,
+zombieOakHeadHunter4,entityclasses,Entity,,,Head Hunter Tezza,,,,,,,,,,,,,
+zombieOakHeadHunter5,entityclasses,Entity,,,Head Hunter Jezza,,,,,,,,,,,,,

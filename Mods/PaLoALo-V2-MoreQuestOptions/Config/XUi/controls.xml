@@ -1,0 +1,39 @@
+<config>
+
+	<!-- Remove the scroll in vanilla so quartz can do it -->
+	<set xpath="//response_entry/rect/@style">press, hover</set>
+
+	<!-- Add my own control entry to move certain buttons out of the main grid -->
+	<append xpath="/controls">
+		<response_entry_special>
+			<rect width="165" height="40" style="press, hover" enabled_color="[iconColor]" disabled_color="[disabledLabelColor]" hover_color="[hoverColor]" sound="[recipe_click]" controller="DialogResponseEntry" visible="{showresponse}" sound_play_on_hover="[default_hover]" use_selection_box="false">
+				<!-- bullet on the bottom buttons -->
+				<sprite depth="4" name="Icon" pos="0,-8" style="icon22px" foregroundlayer="true" color="{rowstatecolor}" sprite="ui_game_symbol_bullet_point" visible="{showBullets}"/>
+				<!-- Vanilla text binding and outline; sized to the cell -->
+				<label depth="6" name="Text" pos="30,-5" width="135" height="38" text="{response}" effect="outline" color="{rowstatecolor}" justify="left"/>
+			</rect>
+		</response_entry_special>
+	</append>
+	
+	<!-- Remove the bullet sprite in jobs dialog only, and replace it with numbering 
+	<setattribute xpath="controls/response_entry/rect/sprite[@name='Icon']" name="visible">{showBullets}</setattribute>
+	<append xpath="controls/response_entry/rect">
+		<label name="lblQuestNumber" pos="0,-6" depth="6" width="30" height="40" justify="right" text="{questNumber}" visible="{showNumbers}"/>
+	</append>
+	-->
+	<conditional>
+		<if cond="mod_loaded('MoreQuests') == 'true'">
+			<setattribute xpath="controls/response_entry/rect/sprite[@name='Icon']" name="visible">{showBullets}</setattribute>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('MoreQuestsNoScrollbar') == 'true'">
+			<setattribute xpath="controls/response_entry/rect/sprite[@name='Icon']" name="visible">{showBullets}</setattribute>
+		</if>
+	</conditional>
+
+	<!-- Adjust quest tracker window with new progress field -->
+	<set xpath="controls/quest_objective_tracker_entry/rect/@width">340</set>
+	<set xpath="controls/quest_objective_tracker_entry/rect/@height">30</set>
+
+</config>

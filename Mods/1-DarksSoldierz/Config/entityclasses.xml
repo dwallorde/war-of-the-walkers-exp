@@ -1,0 +1,1175 @@
+<configs>				
+		
+         <append xpath="/entity_classes">
+
+		<!--  Soldier model by Slayver purchased for use in NPC Mod -->
+
+		<entity_class name="npcSoldierEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />	
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+			<!--	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		-->
+			</effect_group>	
+			<!-- <property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat,@:Entities/Zombies/Zombies/Materials/HD_Arlene3.mat"/> -->	
+                        <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierClub" extends="npcAdvancedClubTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierBat" extends="npcAdvancedBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+			<!-- <property name="CanCollideWithLeader" value="false" /> -->
+		</entity_class>				
+		
+		<entity_class name="npcSoldierMachete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierM60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierDPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierAK47" extends="npcAdvancedAK47Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>		
+		
+		<entity_class name="npcSoldierSRifle" extends="npcAdvancedSRifleTemplate"> 
+            <property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+        </entity_class>  
+		
+		<entity_class name="npcSoldierPShotgun" extends="npcAdvancedPShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+ 		
+		<entity_class name="npcSoldierAShotgun" extends="npcAdvancedAShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 			
+		
+		<entity_class name="npcSoldierRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />	
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BaseSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 
+
+<entity_class name="npcSoldierBEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+                        <property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />		
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+			<!--	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		-->
+			</effect_group>	
+			<!-- <property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat,@:Entities/Zombies/Zombies/Materials/HD_Arlene3.mat"/> -->
+                        <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierBClub" extends="npcAdvancedClubTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierBKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierBBat" extends="npcAdvancedBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+			<!-- <property name="CanCollideWithLeader" value="false" /> -->
+		</entity_class>				
+		
+		<entity_class name="npcSoldierBMachete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierBAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierBSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierBM60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierBPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierBDPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierBAK47" extends="npcAdvancedAK47Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierBTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>		
+		
+		<entity_class name="npcSoldierBSRifle" extends="npcAdvancedSRifleTemplate"> 
+            <property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+        </entity_class>  
+		
+		<entity_class name="npcSoldierBPShotgun" extends="npcAdvancedPShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+ 		
+		<entity_class name="npcSoldierBAShotgun" extends="npcAdvancedAShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 			
+		
+		<entity_class name="npcSoldierBRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierBPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />		
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?BlackSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 
+
+<entity_class name="npcSoldierWEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />		
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+			<!--	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		-->
+			</effect_group>	
+			<!-- <property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat,@:Entities/Zombies/Zombies/Materials/HD_Arlene3.mat"/> -->
+                        <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>		
+		</entity_class>	
+
+		<entity_class name="npcSoldierWClub" extends="npcAdvancedClubTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierWKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierWBat" extends="npcAdvancedBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+			<!-- <property name="CanCollideWithLeader" value="false" /> -->
+		</entity_class>				
+		
+		<entity_class name="npcSoldierWMachete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierWAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierWSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierWM60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierWPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierWDPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierWAK47" extends="npcAdvancedAK47Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierWTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>		
+		
+		<entity_class name="npcSoldierWSRifle" extends="npcAdvancedSRifleTemplate"> 
+            <property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+        </entity_class>  
+		
+		<entity_class name="npcSoldierWPShotgun" extends="npcAdvancedPShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+ 		
+		<entity_class name="npcSoldierWAShotgun" extends="npcAdvancedAShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />					
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 			
+		
+		<entity_class name="npcSoldierWRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierWPickUpNPC" />
+			<property name="Names" value="Sgt Reese,Sgt Rock,Sgt Barnes,Sgt Hamilton,Sgt Benton,Sgt Knox,Sgt Dixon,Sgt Wolfe" />		
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?WhiteSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 
+
+<entity_class name="npcSoldierGEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />	
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+			<!--	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		-->
+			</effect_group>	
+			<!-- <property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat,@:Entities/Zombies/Zombies/Materials/HD_Arlene3.mat"/> -->	
+		</entity_class>	
+
+		<entity_class name="npcSoldierGClub" extends="npcAdvancedClubTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierGKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierGBat" extends="npcAdvancedBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+			<!-- <property name="CanCollideWithLeader" value="false" /> -->
+		</entity_class>				
+		
+		<entity_class name="npcSoldierGMachete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierGAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierGSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierGM60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierGPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierGDPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierGAK47" extends="npcAdvancedAK47Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierGTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>		
+		
+		<entity_class name="npcSoldierGSRifle" extends="npcAdvancedSRifleTemplate"> 
+            <property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+        </entity_class>  
+		
+		<entity_class name="npcSoldierGPShotgun" extends="npcAdvancedPShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+ 		
+		<entity_class name="npcSoldierGAShotgun" extends="npcAdvancedAShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 			
+		
+		<entity_class name="npcSoldierGRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="SoldierGPickUpNPC" />
+			<property name="Names" value="Pvt Brady,Pvt Vargas,Pvt Hayes,Pvt Pile,Pvt Terrell,Pvt King,Pvt Elliot" />	
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?GasmaskSoldierDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 
+
+<entity_class name="npcSoldierOEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />	
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+			<!--	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		-->
+			</effect_group>	
+			<!-- <property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Arlene2.mat,@:Entities/Zombies/Zombies/Materials/HD_Arlene3.mat"/> -->
+                        <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+
+		</entity_class>	
+
+		<entity_class name="npcSoldierOClub" extends="npcAdvancedClubTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierOKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierOBat" extends="npcAdvancedBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+			<!-- <property name="CanCollideWithLeader" value="false" /> -->
+		</entity_class>				
+		
+		<entity_class name="npcSoldierOMachete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierOAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierOSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierOM60" extends="npcAdvancedM60Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcSoldierOPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/>
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>				
+		
+		<entity_class name="npcSoldierODPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>	
+		
+		<entity_class name="npcSoldierOAK47" extends="npcAdvancedAK47Template"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+		
+		<entity_class name="npcSoldierOTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>		
+		
+		<entity_class name="npcSoldierOSRifle" extends="npcAdvancedSRifleTemplate"> 
+            <property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+        </entity_class>  
+		
+		<entity_class name="npcSoldierOPShotgun" extends="npcAdvancedPShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class>
+ 		
+		<entity_class name="npcSoldierOAShotgun" extends="npcAdvancedAShotgunTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/> 
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />				
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 			
+		
+		<entity_class name="npcSoldierORocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,SMG,M60,Pistol,DPistol,Ak47,TRifle,SRifle,PShotgun,AShotgun,RocketL"/>
+			<property name="Faction" value="whiteriver"/>  
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PickUpItem" value="OfficerPickUpNPC" />
+			<property name="Names" value="Lt Dan,Cpt Price,Lt Green,Cpt Easy,Lt Brooks,Cpt Hernandez,Lt Rollins,Cpt Clarke" />	
+			<property name="Mesh" value="#@modfolder:Resources/DarksSoldierz.unity3d?OfficerDark"/> 
+			<effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	                </effect_group>	
+		</entity_class> 
+
+          </append>
+
+	
+</configs>
