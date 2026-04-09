@@ -280,7 +280,7 @@
 <set xpath="/challenges/challenge[@name='eatCharredMeat']/@short_description_key">wotwEatCharredMeatShort</set>
 <set xpath="/challenges/challenge[@name='eatCharredMeat']/objective/@item">redMeatFried</set>
 
-<set xpath="/challenges/challenge[@name='placeDewCollector']/objective/@block">wotwDewCollector</set>
+<set xpath="/challenges/challenge[@name='placeDewCollector']/objective/@block">wotwDewCollectorV2</set>
 
 <set xpath="/challenges/challenge[@name='placeCementMixer']/@icon">ui_game_symbol_cementMixer</set>
 <set xpath="/challenges/challenge[@name='placeCementMixer']/@title_key">wotwChallengePlaceCementMixer</set>
@@ -1848,7 +1848,7 @@
 	<challenge name="wotwItemBirdnest" title_key="wotwItemBirdnest" icon="treeBirdnest" group="WotWItems"
 	short_description_key="wotwItemBirdnestShort" description_key="wotwItemBirdnestDesc"
 	reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
-		<objective type="Craft" item="wotwBirdnestNew" count="1"/>
+		<objective type="Craft" item="wotwBirdnestV2" count="1"/>
 	</challenge>
 	
 	<!-- War of the Walkers Food & Medical -->

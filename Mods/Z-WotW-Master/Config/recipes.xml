@@ -93,7 +93,7 @@
 <set xpath="/recipes/recipe[@name='medicalSplint']/ingredient[@name='resourceWood']/@name">wotwResourceWoodStick</set>
 <set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@name">wotwResourceWoodStick</set>
 
-<set xpath="/recipes/recipe[@name='cntDewCollector']/@name">wotwDewCollector</set>
+<set xpath="/recipes/recipe[@name='cntDewCollector']/@name">wotwDewCollectorV2</set>
 
 <set xpath="/recipes/recipe/ingredient[@name='resourceLeather']/@name">wotwResourceLeather</set>
 
@@ -833,6 +833,14 @@
 	<ingredient name="resourceGlue" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="3"/>
 	<ingredient name="resourceSpring" count="2"/>
+</recipe>
+
+<recipe name="modArmorNightVision" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="resourceForgedSteel" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceSewingKit" count="1"/>
+	<ingredient name="meleeToolFlashlight02" count="1"/>
 </recipe>
 
 <recipe name="modTurboSingle" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
@@ -2698,7 +2706,7 @@
 </recipe>
 
 <recipe name="whiteMeatGrilled" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable">
-	<ingredient name="rawWhiteMeat" count="1"/>
+	<ingredient name="rawWhiteMeat" count="2"/>
 </recipe>
 
 <recipe name="whiteMeatGrilled" count="1" craft_area="playerOven" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable,perkSurvivalistMastery">
@@ -2710,7 +2718,7 @@
 </recipe>
 
 <recipe name="redmeatGrilled" count="1" craft_area="playerOven" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable,perkSurvivalistMastery">
-	<ingredient name="foodRawMeat" count="2"/>
+	<ingredient name="foodRawMeat" count="1"/>
 </recipe>
 </append>
 
@@ -6701,53 +6709,11 @@
     </effect_group>
 </recipe>
 
-<recipe name="wotwBirdnestNew" count="1" craft_time="30" craft_area="workbench" tags="learnable,perkMasterChef">
+<recipe name="wotwBirdnestV2" count="1" craft_time="30" craft_area="workbench" tags="learnable,perkMasterChef">
 	<ingredient name="resourceWood" count="150"/>
 	<ingredient name="wotwResourceRope" count="20"/>
 	<ingredient name="resourceNail" count="25"/>
 	<ingredient name="resourceGlue" count="5"/>
-</recipe>
-
-<recipe name="wotwBirdnestFeed" craft_time="300" craft_area="wotwBirdnestNew" craft_tool="wotwAnimalCapturedChicken" count="0">
-	<ingredient name="foodCropCorn" count="1"/>
-	<effect_group name="Additional Output">
-		<triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="foodEgg" count="1">
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/>
-		</triggered_effect>
-		<triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="foodEgg" count="1">
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
-		</triggered_effect>
-		<triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="foodEgg" count="1">
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
-		</triggered_effect>
-		<triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="foodEgg" count="1">
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
-		</triggered_effect>
-		<triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="foodEgg" count="2">
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
-		</triggered_effect>
-        <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="resourceFeather" count="15">
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
-		</triggered_effect>
-		<triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="resourceFeather" count="10">
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
-		</triggered_effect>
-		<triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="resourceFeather" count="5">
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
-		</triggered_effect>
-    </effect_group>
-</recipe>
-
-<recipe name="drinkJarRiverWater" craft_time="1800" craft_area="wotwDewCollector" count="1">
-	<ingredient name="drinkJarEmpty" count="1"/>
-</recipe>
-
-<recipe name="drinkJarBoiledWater" craft_time="1800" craft_area="wotwDewCollector" craft_tool="toolDewFilter" count="1">
-	<ingredient name="drinkJarEmpty" count="1"/>
-</recipe>
-
-<recipe name="drinkJarBoiledWater" craft_time="1400" craft_area="wotwAdvDewCollectorNew" count="2">
-	<ingredient name="drinkJarEmpty" count="2"/>
 </recipe>
 
 <!-- <recipe name="wotwTrapRabbitEmpty" count="1" tags="learnable">

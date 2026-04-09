@@ -3135,8 +3135,8 @@
 </append>
 
 <insertBefore xpath="//lootgroup[@name='perkBooks']">
-<lootgroup name="harvestingToolsMagazines">
-	<item name="wotwHarvestingToolsT0SkillMagazine" loot_prob_template="ProbT0"/>
+<lootgroup name="harvestingToolsMagazines" count="1">
+	<item name="wotwHarvestingToolsT0SkillMagazine" loot_prob_template="ProbT0" force_prob="true"/>
 	<item name="wotwHarvestingToolsT1SkillMagazine" loot_prob_template="ProbT1"/>
 	<item name="wotwHarvestingToolsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwHarvestingToolsT3SkillMagazine" loot_prob_template="ProbT3"/>
@@ -3145,51 +3145,51 @@
 	<item name="wotwHarvestingToolsMechT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
-<lootgroup name="repairToolsMagazines">
-	<item name="wotwRepairToolsT0SkillMagazine" loot_prob_template="ProbT0"/>
+<lootgroup name="repairToolsMagazines" count="1">
+	<item name="wotwRepairToolsT0SkillMagazine" loot_prob_template="ProbT0" force_prob="true"/>
 	<item name="wotwRepairToolsT1SkillMagazine" loot_prob_template="ProbT1"/>
 	<item name="wotwRepairToolsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwRepairToolsT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
-<lootgroup name="salvageToolsMagazines">
-	<item name="wotwSalvageToolsT0SkillMagazine" loot_prob_template="ProbT0"/>
+<lootgroup name="salvageToolsMagazines" count="1">
+	<item name="wotwSalvageToolsT0SkillMagazine" loot_prob_template="ProbT0" force_prob="true"/>
 	<item name="wotwSalvageToolsT1SkillMagazine" loot_prob_template="ProbT1"/>
 	<item name="wotwSalvageToolsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwSalvageToolsT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
-<lootgroup name="bladesMagazines">
-	<item name="wotwBladesT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="bladesMagazines" count="1">
+	<item name="wotwBladesT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwBladesT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwBladesT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
-<lootgroup name="clubsMagazines">
-	<item name="wotwClubsT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="clubsMagazines" count="1">
+	<item name="wotwClubsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwClubsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwClubsT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
-<lootgroup name="sledgehammerMagazines">
-	<item name="wotwSledgehammersT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="sledgehammerMagazines" count="1">
+	<item name="wotwSledgehammersT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwSledgehammersT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwSledgehammersT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
-<lootgroup name="spearsMagazines">
-	<item name="wotwSpearsT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="spearsMagazines" count="1">
+	<item name="wotwSpearsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwSpearsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwSpearsT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
-<lootgroup name="knucklesMagazines">
-	<item name="wotwKnucklesT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="knucklesMagazines" count="1">
+	<item name="wotwKnucklesT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwKnucklesT2SkillMagazine" loot_prob_template="ProbT2"/>
 </lootgroup>
 
-<lootgroup name="roboticsMagazines">
-	<item name="wotwRoboticsT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="roboticsMagazines" count="1">
+	<item name="wotwRoboticsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwRoboticsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwRoboticsT3SkillMagazine" loot_prob_template="ProbT3"/>
 	<item name="wotwRoboticsT4SkillMagazine" loot_prob_template="ProbT3"/>
@@ -3198,40 +3198,40 @@
 	<item name="wotwRoboticsT7SkillMagazine" loot_prob_template="ProbT4"/>
 </lootgroup>
 
-<lootgroup name="handgunsMagazines">
-	<item name="wotwHandgunsT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="handgunsMagazines" count="1">
+	<item name="wotwHandgunsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwHandgunsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwHandgunsT3SkillMagazine" loot_prob_template="ProbT3"/>
 	<item name="wotwHandgunsT4SkillMagazine" loot_prob_template="ProbT4"/>
 	<item name="wotwHandgunsT5SkillMagazine" loot_prob_template="ProbT4"/>
 </lootgroup>
 
-<lootgroup name="shotgunsMagazines">
-	<item name="wotwShotgunsT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="shotgunsMagazines" count="1">
+	<item name="wotwShotgunsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwShotgunsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwShotgunsT3SkillMagazine" loot_prob_template="ProbT3"/>
 	<item name="wotwShotgunsT4SkillMagazine" loot_prob_template="ProbT4"/>
 	<item name="wotwShotgunsT5SkillMagazine" loot_prob_template="ProbT4"/>
 </lootgroup>
 
-<lootgroup name="riflesMagazines">
-	<item name="wotwRiflesT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="riflesMagazines" count="1">
+	<item name="wotwRiflesT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwRiflesT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwRiflesT3SkillMagazine" loot_prob_template="ProbT3"/>
 	<item name="wotwRiflesT4SkillMagazine" loot_prob_template="ProbT4"/>
 	<item name="wotwRiflesT5SkillMagazine" loot_prob_template="ProbT4"/>
 </lootgroup>
 
-<lootgroup name="machineGunsMagazines">
-	<item name="wotwMachineGunsT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="machineGunsMagazines" count="1">
+	<item name="wotwMachineGunsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwMachineGunsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwMachineGunsT3SkillMagazine" loot_prob_template="ProbT3"/>
 	<item name="wotwMachineGunsT4SkillMagazine" loot_prob_template="ProbT4"/>
 	<item name="wotwMachineGunsT5SkillMagazine" loot_prob_template="ProbT4"/>
 </lootgroup>
 
-<lootgroup name="bowsMagazines">
-	<item name="wotwBowsT1SkillMagazine" loot_prob_template="ProbT1"/>
+<lootgroup name="bowsMagazines" count="1">
+	<item name="wotwBowsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
 	<item name="wotwBowsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwBowsT3SkillMagazine" loot_prob_template="ProbT3"/>
 	<item name="wotwBowsT4SkillMagazine" loot_prob_template="ProbT4"/>
@@ -3286,21 +3286,21 @@
 <remove xpath="//lootgroup[@name='skillMagazines']/item[@name='roboticsSkillMagazine']"/>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupQuestRewardSkillMagazinesAll01']">
-	<item group="harvestingToolsMagazines"/>
-	<item group="repairToolsMagazines"/>
-	<item group="salvageToolsMagazines"/>
-	<item group="sledgehammerMagazines"/>
-	<item group="bowsMagazines"/>
-	<item group="spearsMagazines"/>
-	<item group="bladesMagazines"/>
-	<item group="clubsMagazines"/>
-	<item group="handgunsMagazines"/>
-	<item group="shotgunsMagazines"/>
-	<item group="riflesMagazines"/>
-	<item group="machineGunsMagazines"/>
-	<item group="armourMagazines"/>
-	<item group="knucklesMagazines"/>
-	<item group="roboticsMagazines"/>
+	<item group="harvestingToolsMagazines" count="2"/>
+	<item group="repairToolsMagazines" count="2"/>
+	<item group="salvageToolsMagazines" count="2"/>
+	<item group="sledgehammerMagazines" count="2"/>
+	<item group="bowsMagazines" count="2"/>
+	<item group="spearsMagazines" count="2"/>
+	<item group="bladesMagazines" count="2"/>
+	<item group="clubsMagazines" count="2"/>
+	<item group="handgunsMagazines" count="2"/>
+	<item group="shotgunsMagazines" count="2"/>
+	<item group="riflesMagazines" count="2"/>
+	<item group="machineGunsMagazines" count="2"/>
+	<item group="armourMagazines" count="2"/>
+	<item group="knucklesMagazines" count="2"/>
+	<item group="roboticsMagazines" count="2"/>
 	<item name="wotwAmmoSkillMagazine" count="2"/>
 	<item name="wotwConstructionSkillMagazine" count="2"/>
 	<item name="wotwResourcesSkillMagazine" count="2"/>
@@ -3322,27 +3322,6 @@
 <remove xpath="//lootgroup[@name='groupQuestRewardSkillMagazinesAll01']/item[@name='knucklesSkillMagazine']"/>
 <remove xpath="//lootgroup[@name='groupQuestRewardSkillMagazinesAll01']/item[@name='roboticsSkillMagazine']"/>
 
-<append xpath="/lootcontainers/lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']">
-	<item group="harvestingToolsMagazines"/>
-	<item group="repairToolsMagazines"/>
-	<item group="salvageToolsMagazines"/>
-	<item group="sledgehammerMagazines"/>
-	<item group="bowsMagazines"/>
-	<item group="spearsMagazines"/>
-	<item group="bladesMagazines"/>
-	<item group="clubsMagazines"/>
-	<item group="handgunsMagazines"/>
-	<item group="shotgunsMagazines"/>
-	<item group="riflesMagazines"/>
-	<item group="machineGunsMagazines"/>
-	<item group="armourMagazines"/>
-	<item group="knucklesMagazines"/>
-	<item group="roboticsMagazines"/>
-	<item name="wotwAmmoSkillMagazine" count="2"/>
-	<item name="wotwConstructionSkillMagazine" count="2"/>
-	<item name="wotwResourcesSkillMagazine" count="2"/>
-</append>
-
 <remove xpath="//lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']/item[@name='harvestingToolsSkillMagazine']"/>
 <remove xpath="//lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']/item[@name='repairToolsSkillMagazine']"/>
 <remove xpath="//lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']/item[@name='salvageToolsSkillMagazine']"/>
@@ -3358,6 +3337,27 @@
 <remove xpath="//lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']/item[@name='armorSkillMagazine']"/>
 <remove xpath="//lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']/item[@name='knucklesSkillMagazine']"/>
 <remove xpath="//lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']/item[@name='roboticsSkillMagazine']"/>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']">
+	<item group="harvestingToolsMagazines" count="2"/>
+	<item group="repairToolsMagazines" count="2"/>
+	<item group="salvageToolsMagazines" count="2"/>
+	<item group="sledgehammerMagazines" count="2"/>
+	<item group="bowsMagazines" count="2"/>
+	<item group="spearsMagazines" count="2"/>
+	<item group="bladesMagazines" count="2"/>
+	<item group="clubsMagazines" count="2"/>
+	<item group="handgunsMagazines" count="2"/>
+	<item group="shotgunsMagazines" count="2"/>
+	<item group="riflesMagazines" count="2"/>
+	<item group="machineGunsMagazines" count="2"/>
+	<item group="armourMagazines" count="2"/>
+	<item group="knucklesMagazines" count="2"/>
+	<item group="roboticsMagazines" count="2"/>
+	<item name="wotwAmmoSkillMagazine" count="2"/>
+	<item name="wotwConstructionSkillMagazine" count="2"/>
+	<item name="wotwResourcesSkillMagazine" count="2"/>
+</append>
 
 <append xpath="/lootcontainers/lootgroup[@name='weaponSkillMagazinesOnly']">
 	<item group="sledgehammerMagazines"/>

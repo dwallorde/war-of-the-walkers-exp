@@ -7752,7 +7752,7 @@
 		<property name="CraftingAreaRecipes" value="wotwDewCollector"/>
 	</property>
 	<property name="UnlockedBy" value="craftingWorkstations"/>
-	<property name="CreativeMode" value="Player"/>
+	<property name="CreativeMode" value="None"/>
 	<property name="DescriptionKey" value="wotwDewCollectorDesc"/>
 	<property name="WorkstationIcon" value="ui_game_symbol_water"/>
 	<property name="Stacknumber" value="1"/>
@@ -7781,7 +7781,7 @@
 	</property>
 	<drop event="Harvest" name="resourceScrapPolymers" count="10,15" tag="allHarvest,perkJunkMiner"/>
 	<drop event="Harvest" name="resourceMetalPipe" count="1,3" tag="allHarvest,perkJunkMiner"/>
-	<drop event="Destroy" name="resourceScrapPolymers" count="10,15"/>
+	<drop event="Destroy" name="wotwDewCollectorV2" count="1"/>
 	<property name="DestroyFX" value="blockdestroy_cloth,collector_destroy"/>
 	<property name="SortOrder1" value="B281"/>
 	<property name="SortOrder2" value="0100"/>
@@ -7790,6 +7790,73 @@
 	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 	<property name="SoundPickup" value="dewcollector_grab"/>
 	<property name="SoundPlace" value="dewcollector_place"/>
+</block>
+
+<block name="wotwDewCollectorV2">
+	<property name="CustomIcon" value="cntBinTrashPlasticEmptyWhite"/>
+	<property name="Class" value="Collector"/>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="ItemIconBackdrop" value="ui_game_symbol_water"/>
+	<property name="ItemBackgroundColor" value="202,190,33,255"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="LootLabelKey" value="xuiDewCollector"/>
+	<property name="DescriptionKey" value="wotwDewCollectorV2Desc"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/LootContainers/binTrashEmptyPrefab.prefab"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="77"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="RestrictSubmergedPlacement" value="true"/>
+	<property name="AllowedRotations" value="Basic90"/>
+	<property name="Path" value="solid"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="OpenSound" value="collector_open"/>
+	<property name="CloseSound" value="collector_close"/>
+	<property name="ConvertSound" value="collector_complete_item"/>
+	<property name="MinConvertTime" value="43200"/> <!-- 172800 Game Seconds = 48 Game Hours -->
+	<property name="MaxConvertTime" value="72000"/> <!-- 172800 Game Seconds = 48 Game Hours -->
+	<property name="ConvertToItem" value="drinkJarRiverWater"/>
+	<property name="ModdedConvertToItem" value="drinkJarBoiledWater"/>  <!-- not sure if meaningful for apiary -->
+	<property name="ModdedConvertSpeed" value="2"/>
+	<property name="ModdedConvertCount" value="2"/>
+	<property name="ModTransformEnableNames" value="1,2,3"/>
+	<property name="ModTypes" value="Speed,Count,Modify"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="MaxDamage" value="500"/>
+	<property name="HeatMapStrength" value=".4"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property class="RepairItems">
+		<property name="resourceScrapPolymers" value="50"/>
+	</property>
+	<drop event="Harvest" name="resourceScrapPolymers" count="10,15" tag="allHarvest,perkJunkMiner"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="1,3" tag="allHarvest,perkJunkMiner"/>
+	<drop event="Destroy" name="resourceWood" count="20,30"/>
+	<property name="DestroyFX" value="blockdestroy_cloth,collector_destroy"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0100"/>
+	<property name="Group" value="Food/Cooking,Building,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="dewcollector_grab"/>
+	<property name="SoundPlace" value="dewcollector_place"/>
+	<!-- fuel cost, additional fuel cost if a tool mod increases the quantity produced, fuel type 1, fuel type 2, ... -->
+	<property name="FuelTypes" value="1,1,drinkJarEmpty"/>
+	<property name="RequiredMods" value="toolDewGatherer,toolDewTarp,toolDewFilter"/>
+	<property name="RequiredModsOnly" value="true"/>
+	<property name="EmptyText" value="dewCollectorEmpty"/>
+	<property name="HasItem1Text" value="dewCollectorHasDirtyWater"/>
+	<property name="HasItem2Text" value="dewCollectorHasWater"/>
+	<property name="FuelGridHeight" value="2"/>
+	<property name="OutputGridHeight" value="2"/>
+	<property name="FuelTitleText" value="emptyJars"/>
+	<property name="FuelTitleSprite" value="ui_game_symbol_water"/>
+	<property name="FuelTitleSpriteAtlas" value="UIAtlas"/>
+	<property name="FuelTypesSprites" value="drinkJarGrey,ItemIconAtlasGreyscale"/>
 </block>
 
 <block name="wotwAdvDewCollectorNew">
@@ -15340,7 +15407,7 @@
 		<property name="CraftingAreaRecipes" value="wotwBirdnestNew"/>
 	</property>
 	<property name="UnlockedBy" value="survivalistCraftBirdnestTree"/>
-	<property name="CreativeMode" value="Player"/>
+	<property name="CreativeMode" value="None"/>
 	<property name="DescriptionKey" value="wotwBirdnestNewDesc"/>
 	<property name="WorkstationIcon" value="ui_game_symbol_food"/>
 	<property name="Stacknumber" value="1"/>
@@ -15369,7 +15436,7 @@
 	<drop event="Harvest" name="resourceWood" count="60,100" tag="allHarvest"/>
 	<drop event="Harvest" name="wotwResourceRope" count="5,10" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceNail" count="2,3" tag="allHarvest"/>
-	<drop event="Destroy" count="0"/>
+	<drop event="Destroy" name="wotwBirdnestV2" count="1"/>
 	<property name="DestroyFX" value="blockdestroy_cloth,collector_destroy"/>
 	<property name="SortOrder1" value="B281"/>
 	<property name="SortOrder2" value="0100"/>
@@ -15381,6 +15448,77 @@
 	
 	<!-- <modifier name="wotwChickenYoung" effect="ItemQuantity" value="foodEgg" secondary="3" thirdValue="4"/> -->
 	<!-- <modifier name="wotwChickenAdult" effect="RollsModifier" value="3"/> -->
+</block>
+
+<block name="wotwBirdnestV2">
+	<property name="CustomIcon" value="treeBirdnest"/>
+	<property name="Class" value="Collector"/>
+	<property name="UnlockedBy" value="survivalistCraftBirdnestTree"/>
+	<property name="ItemIconBackdrop" value="ui_game_symbol_water"/>
+	<property name="ItemBackgroundColor" value="255,165,0,255"/> <!-- FFA500 -->
+	<property name="CreativeMode" value="Player"/>
+	<property name="LootLabelKey" value="xuiBirdnest"/>
+	<property name="DescriptionKey" value="wotwBirdnestV2Desc"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/BirdnestTree.unity3d?BirdnestTreeLootPrefab"/>
+	<property name="MultiBlockDim" value="1,1,2"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="77"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="RestrictSubmergedPlacement" value="true"/>
+	<property name="AllowedRotations" value="Basic90"/>
+	<property name="Path" value="solid"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="OpenSound" value="collector_open"/>
+	<property name="CloseSound" value="collector_close"/>
+	<property name="ConvertSound" value="collector_complete_item"/>
+	<property name="MinConvertTime" value="86400"/> <!-- 172800 Game Seconds = 48 Game Hours -->
+	<property name="MaxConvertTime" value="86400"/> <!-- 172800 Game Seconds = 48 Game Hours -->
+	<property name="ConvertToItem" value="foodEgg"/>
+	<property name="ModdedConvertToItem" value="foodEgg"/>  <!-- not sure if meaningful for apiary -->
+	<property name="ModdedConvertSpeed" value="2"/>
+	<property name="ModdedConvertCount" value="2"/>
+	<property name="ModTransformEnableNames" value="2,3,1"/>
+	<property name="ModTransformDisableNames" value=",0,"/>
+	<property name="ModTypes" value="Speed,Count,Modify"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="MaxDamage" value="500"/>
+	<property name="HeatMapStrength" value=".2"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property class="RepairItems">
+		<property name="resourceWood" value="150"/>
+		<property name="wotwResourceRope" value="20"/>
+		<property name="resourceNail" value="5"/>
+		<property name="resourceGlue" value="5"/>
+	</property>
+	<drop event="Harvest" name="resourceWood" count="60,100" tag="allHarvest,perkJunkMiner"/>
+	<drop event="Harvest" name="wotwResourceRope" count="5,10" tag="allHarvest,perkJunkMiner"/>
+	<drop event="Harvest" name="resourceNail" count="2,3" tag="allHarvest,perkJunkMiner"/>
+	<drop event="Destroy" name="resourceWood" count="20,30"/>
+	<property name="DestroyFX" value="blockdestroy_cloth,collector_destroy"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0100"/>
+	<property name="Group" value="Food/Cooking,Building,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="SoundPickup" value="apiary_grab"/>
+	<property name="SoundPlace" value="apiary_place"/>
+	<!-- fuel cost, additional fuel cost if a tool mod increases the quantity produced, fuel type 1, fuel type 2, ... -->
+	<property name="FuelTypes" value="1,0,foodCropCorn,foodCropCorn,foodCropCorn"/>
+	<property name="RequiredMods" value="wotwAnimalCapturedChicken,wotwChickenYoung,wotwChickenAdult"/>
+	<property name="RequiredModsOnly" value="true"/>
+	<property name="EmptyText" value="dewCollectorEmpty"/>
+	<property name="HasItem1Text" value="birdnestHasEggs"/>
+	<property name="HasItem2Text" value="birdnestHasEggs"/>
+	<property name="FuelTitleText" value="xuiCorn"/>
+	<property name="FuelTitleSprite" value="ui_game_symbol_food"/>
+	<property name="FuelTitleSpriteAtlas" value="UIAtlas"/>
+	<property name="FuelTypesSprites" value="foodCropCorn,ItemIconAtlasGreyscale,foodCropCorn,ItemIconAtlasGreyscale,foodCropCorn,ItemIconAtlasGreyscale"/>
 </block>
 
 <!-- RabbitTrapFull -->

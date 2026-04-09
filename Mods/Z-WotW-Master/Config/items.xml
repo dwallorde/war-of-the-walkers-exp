@@ -9414,7 +9414,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?CleaverPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="EconomicValue" value="1500"/>
@@ -9537,7 +9537,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?KitchenKnifePrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="Weight" value="200"/>
@@ -9659,7 +9659,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?CombatKnifePrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="EconomicValue" value="5000"/>
@@ -9777,7 +9777,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?SwordPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="EconomicValue" value="5000"/>
@@ -9895,7 +9895,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?BattleAxePrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="TraderStageTemplate" value="baseTier70"/>
@@ -10009,7 +10009,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?BattleHammerPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -10114,7 +10114,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?BattleSwordPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -10224,7 +10224,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?BattleAxe2Prefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="TraderStageTemplate" value="baseTier80"/>
@@ -10339,7 +10339,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?BattleSword2Prefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="TraderStageTemplate" value="baseTier80"/>
@@ -10458,7 +10458,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?BroadSwordPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="TraderStageTemplate" value="baseTier80"/>
@@ -10577,7 +10577,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?Sword2Prefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="TraderStageTemplate" value="baseTier80"/>
@@ -10696,7 +10696,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?KatanaPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="EconomicValue" value="5000"/>
@@ -10815,7 +10815,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?BigSwordPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="EconomicValue" value="5000"/>
@@ -10934,7 +10934,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?DarkSwordPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="TraderStageTemplate" value="baseTier80"/>
@@ -11053,7 +11053,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/MeleeLoot.unity3d?ModernSwordPrefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="TraderStageTemplate" value="baseTier80"/>
@@ -11941,7 +11941,7 @@
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="166, 166, 166"/>
 	<property name="Weight" value="100"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="resourceMetalPipe"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -12295,7 +12295,7 @@
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="weapon_jam"/>
 	<property name="Weight" value="8"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="Group" value="Ammo/Weapons,Robotics"/>
 	<property name="Stacknumber" value="1"/>
@@ -12388,7 +12388,7 @@
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="107, 107, 71"/>
 	<property name="Weight" value="500"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="EconomicValue" value="7500"/>
@@ -12616,7 +12616,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/SteelTools.unity3d?IronHoePrefab" />
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="102, 0, 0"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitTool"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -12685,7 +12685,7 @@
 	<property name="Material" value="MmeleeToolAllSteel"/>
 	<property name="TintColor" value="102, 0, 0"/>
 	<property name="Weight" value="6"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitTool"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -23708,7 +23708,7 @@
 	<property name="Meshfile" value="@:Other/Items/Tools/hammerPrefab.prefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="TintColor" value="194, 116, 0"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitTool"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -31030,7 +31030,7 @@
 	<property name="Material" value="MJunkTurretParts"/>
 	<property name="TintColor" value="227, 127, 13"/>
 	<property name="Weight" value="7"/>
-	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
@@ -31291,6 +31291,7 @@
 </append>
 
 <set xpath="/items/item[@name='schematicMaster']/property[@name='ScrapTimeOverride']/@value">1</set>
+<set xpath="/items/item[@name='clothingMaster']/property[@name='ScrapTimeOverride']/@value">3</set>
 
 <set xpath="/items/item[@name='resourceBluegilFish']/property[@name='Stacknumber']/@value">50</set>
 <set xpath="/items/item[@name='resourceCatfish']/property[@name='Stacknumber']/@value">50</set>
@@ -34053,7 +34054,7 @@
 <!-- <set xpath="//item[contains(@name, 'armor')]/effect_group/display_value[@name='dAttributeLevel'][@value='.05,.1,.15,.2,.25,.5']/@value">.05,.1,.15,.2,.25,.5,.5</set> -->
 <set xpath="//item[@name='armorNerdOutfit']/effect_group/triggered_effect[@trigger='onSelfEquipStart']/@value">5</set>
 <set xpath="//item[@name='armorNerdOutfit']/effect_group/triggered_effect[@trigger='onSelfEquipUpdate']/@value">5</set>
-<append xpath="//item[@name='armorMinerBoots']">
+<append xpath="//item[@name='armorNerdOutfit']">
 	<effect_group>
 		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$nerdOutfitSkillPointChance" operation="set" value="5">
 			<requirement name="RequirementItemTier" operation="GTE" value="1"/>
@@ -34122,7 +34123,7 @@
 
 <!-- <set xpath="//item[contains(@name, 'armor')]/effect_group/display_value[@name='dNerdDamage'][@value='.1,.2,.3,.4,.5,.6']/@value">.1,.2,.3,.4,.5,.6,.6</set> -->
 <set xpath="//item[@name='armorMinerBoots']/effect_group/triggered_effect[@trigger='onSelfEquipStart']/@value">.01414</set>
-<append xpath="//item[@name='armorMinerBoots']">
+<append xpath="//item[@name='armorNerdBoots']">
 	<effect_group>
 		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$nerdBootFallDMG" operation="set" value=".01414" >
 			<requirement name="RequirementItemTier" operation="GTE" value="1"/>

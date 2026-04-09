@@ -342,7 +342,7 @@
 		npcRaiderBettyTRifle, .025
         npcRaiderBettySRifle, .025
 		npcRaiderBettySMG, .025
-		none, 50
+		none, 100
 	</entitygroup>
 	
 	<entitygroup name="DesertNPCs">
@@ -390,7 +390,7 @@
 		npcRaiderBettyTRifle, .025
         npcRaiderBettySRifle, .025
 		npcRaiderBettySMG, .025
-		none, 50
+		none, 100
 	</entitygroup>
 	
 	<entitygroup name="SnowNPCs">
@@ -408,7 +408,7 @@
 		npcSoldierOSRifle, .1
 		npcSoldierOPShotgun, .1
 		npcSoldierOAShotgun, .1
-		none, 50
+		none, 100
 	</entitygroup>
 	
 	<entitygroup name="ForestNPCs">
@@ -426,7 +426,7 @@
 		npcSoldierSRifle, .1
 		npcSoldierPShotgun, .1
 		npcSoldierAShotgun, .1
-		none, 50
+		none, 100
 	</entitygroup>
 	
 	<entitygroup name="EnemyNPCs">

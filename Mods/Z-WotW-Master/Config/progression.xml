@@ -622,7 +622,7 @@
 	</book>
 	<book name="perkDBNightVision" parent="skillDwallsBooks" max_level="1" base_skill_point_cost="0" name_key="perkDBNightVisionName" desc_key="perkDBNightVisionDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorHelmetNightVision"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorNightVision"/>
 		</effect_group>
 	</book>
 	<book name="perkDBSilentTrash" parent="skillDwallsBooks" max_level="1" base_skill_point_cost="0" name_key="perkDBSilentTrashName" desc_key="perkDBSilentTrashDesc">
@@ -7275,7 +7275,7 @@
 		<requirement name="ProgressionLevel" progression_name="attClassSurvivalistMaster" operation="GTE" value="1" desc_key="reqSurvivalistClass"/>
 	</level_requirements>
 	<effect_group>
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="wotwBirdnestNew"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="wotwBirdnestV2"/>
 		
 		<effect_description level="1" desc_key="survivalistCraftBirdnestTreeRank1Desc" long_desc_key="survivalistCraftBirdnestTreeRank1LongDesc"/>
 	</effect_group>
@@ -14546,10 +14546,13 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="63,100" value="1" tags="hdBatterybank"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="66,100" value="1" tags="solarbank"/>
 
-		<passive_effect name="CraftingTier" operation="base_add" level="15,18,21,24,27,100" value="1,2,3,4,5,5" tags="carBattery"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="42,45,48,51,54,100" value="1,2,3,4,5,5" tags="wotwECOBattery"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="72,75,78,81,84,100" value="1,2,3,4,5,5" tags="wotwHDBattery"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,87,90,93,95,100" value="1,2,3,4,5,6" tags="solarCell"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,15,18,21,24,27,100" value="0,0,200,300,400,500,599" tags="carBattery"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,15,18,21,24,27,100" value="0,0,200,300,400,500,600" tags="smallEngine"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,42,45,48,51,54,100" value="0,0,200,300,400,500,599" tags="wotwECOBattery"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,42,45,48,51,54,100" value="0,0,200,300,400,500,600" tags="wotwECOEngine"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,72,75,78,81,84,100" value="0,0,200,300,400,500,599" tags="wotwHDBattery"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,72,75,78,81,84,100" value="0,0,200,300,400,500,600" tags="wotwHDEngine"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,1,87,90,93,95,100" value="0,0,200,300,400,500,599" tags="solarCell"/>
 	</effect_group>
 </crafting_skill>
 
@@ -14563,7 +14566,7 @@
 		<unlock_entry item="workbench" unlock_tier="5" />
 	</display_entry>
 	<display_entry icon="cntBinTrashPlasticEmptyWhite,mortarandPestle,armourSmithingWorkstation,forgeStone" name_key="workstationsT2-1,workstationsT2-2,workstationsT2-3,workstationsT2-4" has_quality="false" unlock_level="15,18,21,24" >
-		<unlock_entry item="wotwDewCollector" unlock_tier="1" />
+		<unlock_entry item="wotwDewCollectorV2" unlock_tier="1" />
 		<unlock_entry item="mortarandPestle" unlock_tier="2" />
 		<unlock_entry item="armourSmithingWorkstation" unlock_tier="3" />
 		<unlock_entry item="forgeStone" unlock_tier="4" />
@@ -14595,7 +14598,7 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="9,65" value="1" tags="wotwCombineBench"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,65" value="1" tags="workbench"/>
 		
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,65" value="1" tags="wotwDewCollector"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,65" value="1" tags="wotwDewCollectorV2"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,65" value="1" tags="mortarandPestle"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,65" value="1" tags="armourSmithingWorkstation"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,65" value="1" tags="forgeStone"/>

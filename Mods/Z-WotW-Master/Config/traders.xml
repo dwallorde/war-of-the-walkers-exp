@@ -872,7 +872,7 @@
 			<item name="plantedTomato1"/>
 			<item name="plantedMoss1"/>
 			<item name="plantedGraceCorn1" prob="0.2"/>
-			<item name="wotwBirdnestNew"/>
+			<item name="wotwBirdnestV2"/>
 			<item name="wotwAnimalTrapV2"/>
 </append>
 

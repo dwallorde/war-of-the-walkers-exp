@@ -282,6 +282,9 @@
 		</item_property_overrides>
 </append>
 	
+<append xpath="//item_modifier[@name='modArmorNightVision']">
+		<property name="UnlockedBy" value="perkDBNightVision"/>
+</append>
 	<!-- To Do Update modArmorNightVision with its own recipe and tie to progression -->
 <insertAfter xpath="/item_modifiers/item_modifier[@name='modArmorNightVision']">
 	<!-- <item_modifier name="modArmorHelmetNightVision" installable_tags="head" modifier_tags="misc,modArmorHelmetLight" blocked_tags="noMods,clothing" type="attachment">
