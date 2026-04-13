@@ -966,6 +966,9 @@
 			<item name="wotwResourceDiesel" count="100,200" prob="0.6"/>
 			<item name="wotwResourceLeather" count="10,25"/>
 			<item name="kevlar" count="5,10"/>
+			<item name="resourceAcid" count="1" prob="0.9"/>
+			<item name="wotwResourceToolCraftingKit" count="2"/>
+			<item name="wotwResourceWeaponCraftingKit" count="2"/>
 </append>
 
 <insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">

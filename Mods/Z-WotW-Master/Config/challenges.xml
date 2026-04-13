@@ -298,7 +298,7 @@
 <!-- </append> -->
 <set xpath="/challenges/challenge[@name='harvestLeather']/objective/@item">wotwResourceLeather</set>
 
-<set xpath="/challenges/challenge[@name='healerBleeding']/objective/@count">10</set>
+<set xpath="/challenges/challenge[@name='healerBleeding']/objective/@count">5</set>
 <set xpath="/challenges/challenge[@name='healerInfection']/objective/@count">5</set>
 <set xpath="/challenges/challenge[@name='healerDysentery']/objective/@count">5</set>
 <set xpath="/challenges/challenge[@name='healerBrokenLeg']/objective/@count">2</set>
@@ -751,7 +751,7 @@
 	<challenge name="looterLootLegendaryParts" title_key="challengeLooterLootLegendaryParts" icon="ui_game_symbol_legendaryparts" group="Looter"
 		short_description_key="challengeLooterLootLegendaryPartsShort" description_key="challengeLooterLootLegendaryPartsDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="Gather" item="resourceLegendaryParts" count="25"/>
+		<objective type="Gather" item="resourceLegendaryParts" count="10"/>
 	</challenge>
 	
 	<challenge name="looterLootJunkItems" title_key="challengeLooterLootJunkItems" icon="ui_game_symbol_junkitems" group="Looter"
@@ -771,7 +771,7 @@
 	<challenge name="looterLootPartsItems" title_key="challengeLooterLootPartsItems" icon="ui_game_symbol_parts2" group="Looter"
 		short_description_key="challengeLooterLootPartsItemsShort" description_key="challengeLooterLootPartsItemsDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="GatherTags, SCore" item_tags="parts" count="500"/>
+		<objective type="GatherTags, SCore" item_tags="parts" count="250"/>
 		<!-- <objective type="GatherTags, SCore" loot_list="groupAmmoSmall" item_tags="parts" count="500"/> -->
 	</challenge>
 	

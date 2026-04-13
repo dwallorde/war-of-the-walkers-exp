@@ -212,8 +212,8 @@
 				</effect_group>
 				<effect_group name="Action Skills Archery Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_Archery_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 				<effect_group name="Action Skills Stealth Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_Stealth_XP" operation="Equals" value="0"/>
@@ -231,13 +231,13 @@
 				</effect_group>
 				<effect_group name="Action Skills Thrown Wpns Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_ThrownWeapons_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 				<effect_group name="Action Skills Fist Weapons Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_FistWeapons_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 			</attribute>
 			
@@ -255,8 +255,8 @@
 				</effect_group>
 				<effect_group name="Action Skills Light Armour Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_LightArmour_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 			</attribute>
 			
@@ -297,23 +297,23 @@
 				</effect_group>
 				<effect_group name="Action Skills Pistols Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_Pistols_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 				<effect_group name="Action Skills Rifles Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_Rifles_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 				<effect_group name="Action Skills Blade Wpns Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_BladeWeapons_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 				<effect_group name="Action Skills Medium Armour Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_MediumArmour_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 			</attribute>
 			
@@ -326,23 +326,23 @@
 				</effect_group>
 				<effect_group name="Action Skills Shotguns Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_Shotguns_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 				<effect_group name="Action Skills Machine Guns Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_MachineGuns_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 				<effect_group name="Action Skills Blunt Wpns Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_BluntWeapons_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 				<effect_group name="Action Skills Heavy Armour Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_HeavyArmour_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 			</attribute>
 			
@@ -369,8 +369,8 @@
 				</effect_group>
 				<effect_group name="Action Skills Robotic Wpns Lvl 0 Set">
 					<requirement name="CVarCompare" cvar="AS_RoboticJunk_XP" operation="Equals" value="0"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextAdd" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextTotal" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextAdd" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextTotal" operation="set" value="50"/>
 				</effect_group>
 			</attribute>
 			
@@ -8831,81 +8831,82 @@
 <!-- Iron Tools -->
 <crafting_skill name="craftingHarvestingToolsT1" max_level="24" base_skill_point_cost="1" parent="attCrafting" name_key="craftingHarvestingToolsT1Name" desc_key="craftingHarvestingToolsT1Desc" long_desc_key="craftingHarvestingToolsT1Desc" icon="ui_game_symbol_tool">
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality25-1" has_quality="false" unlock_level="1">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality50-2" has_quality="false" unlock_level="2">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality75-3" has_quality="false" unlock_level="3">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality100-4" has_quality="false" unlock_level="4">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality125-5" has_quality="false" unlock_level="5">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality150-6" has_quality="false" unlock_level="6">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality175-7" has_quality="false" unlock_level="7">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality200-8" has_quality="false" unlock_level="8">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality225-9" has_quality="false" unlock_level="9">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality250-10" has_quality="false" unlock_level="10">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality275-11" has_quality="false" unlock_level="11">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality300-12" has_quality="false" unlock_level="12">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality325-13" has_quality="false" unlock_level="13">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality350-14" has_quality="false" unlock_level="14">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality375-15" has_quality="false" unlock_level="15">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality400-16" has_quality="false" unlock_level="16">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality425-17" has_quality="false" unlock_level="17">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality450-18" has_quality="false" unlock_level="18">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality475-19" has_quality="false" unlock_level="19">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality500-20" has_quality="false" unlock_level="20">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality525-21" has_quality="false" unlock_level="21">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality550-22" has_quality="false" unlock_level="22">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality575-23" has_quality="false" unlock_level="23">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality600-24" has_quality="false" unlock_level="24">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
 	</display_entry>
 
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,24" value="1" tags="wotwMeleeToolStonePickaxe"/>
 		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24" value="24,49,74,99,124,149,174,199,224,249,274,299,324,349,374,399,424,449,474,499,524,549,574,599" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24" value="1,25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600" tags="meleeToolFarmT1IronDensityHoe"/>
 	</effect_group>
 </crafting_skill>
 
@@ -13686,6 +13687,7 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,24" value="1" tags="armorPrimitiveMaster"/>
 		<!-- Light Armour -->
 		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24" value="24,49,74,99,124,149,174,199,224,249,274,299,324,349,374,399,424,449,474,499,524,549,574,599" tags="armorLightMaster,armorHunterHelmet,armorHunterOutfit,armorHunterGloves,armorHunterBoots,armorLumberjackHelmet,armorLumberjackOutfit,armorLumberjackGloves,armorLumberjackBoots,armorPreacherHelmet,armorPreacherOutfit,armorPreacherGloves,armorPreacherBoots,armorRogueHelmet,armorRogueOutfit,armorRogueGloves,armorRogueBoots,armorAthleticHelmet,armorAthleticOutfit,armorAthleticGloves,armorAthleticBoots,armorEnforcerHelmet,armorEnforcerOutfit,armorEnforcerGloves,armorEnforcerBoots"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24" value="24,49,74,99,124,149,174,199,224,249,274,299,324,349,374,399,424,449,474,499,524,549,574,599" tags="clothingMaster,clothingHeadT1,clothingOutfitT1,clothingHandsT1,clothingFeetT1,clothingHeadT2,clothingOutfitT2,clothingHandsT2,clothingFeetT2,clothingHeadT3,clothingOutfitT3,clothingHandsT3,clothingFeetT3"/>
 	</effect_group>
 </crafting_skill>
 
@@ -14506,7 +14508,7 @@
 		<unlock_entry item="motionsensor,electrictimerrelay,pressureplate,pressureplateLong,speaker" unlock_tier="4" />
 		<unlock_entry item="vaultDoor01Player_Powered,vaultDoor01PlayerDouble_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered" unlock_tier="5" />
 	</display_entry>
-	<display_entry icon="carBattery" name_key="electricianT1-4" has_quality="true" unlock_level="15,15,18,21,24,27" >
+	<display_entry icon="carBattery" name_key="electricianT1-4" has_quality="true" unlock_level="15,18,21,24,27" >
 		<unlock_entry item="carBattery" unlock_tier="1" />
 	</display_entry>
 	<display_entry icon="ecoGeneratorbank,ceilingLight02Brass,wotwECOEngine,porchLight01,ecoBatterybank" name_key="electricianT2-1,electricianT2-2,electricianT2-5,electricianT2-6" has_quality="false" unlock_level="30,33,36,39" >
@@ -14546,13 +14548,13 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="63,100" value="1" tags="hdBatterybank"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="66,100" value="1" tags="solarbank"/>
 
-		<passive_effect name="CraftingTier" operation="base_add" level="0,15,18,21,24,27,100" value="0,0,200,300,400,500,599" tags="carBattery"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,15,18,21,24,27,100" value="0,0,200,300,400,500,600" tags="smallEngine"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,42,45,48,51,54,100" value="0,0,200,300,400,500,599" tags="wotwECOBattery"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,42,45,48,51,54,100" value="0,0,200,300,400,500,600" tags="wotwECOEngine"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,72,75,78,81,84,100" value="0,0,200,300,400,500,599" tags="wotwHDBattery"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,72,75,78,81,84,100" value="0,0,200,300,400,500,600" tags="wotwHDEngine"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,87,90,93,95,100" value="0,0,200,300,400,500,599" tags="solarCell"/>
+		<!-- <passive_effect name="CraftingTier" operation="base_add" level="0,15,18,21,24,27,100" value="0,0,200,300,400,500,599" tags="carBattery"/> -->
+		<!-- <passive_effect name="CraftingTier" operation="base_add" level="0,15,18,21,24,27,100" value="0,0,200,300,400,500,600" tags="smallEngine"/> -->
+		<!-- <passive_effect name="CraftingTier" operation="base_add" level="0,42,45,48,51,54,100" value="0,0,200,300,400,500,599" tags="wotwECOBattery"/> -->
+		<!-- <passive_effect name="CraftingTier" operation="base_add" level="0,42,45,48,51,54,100" value="0,0,200,300,400,500,600" tags="wotwECOEngine"/> -->
+		<!-- <passive_effect name="CraftingTier" operation="base_add" level="0,72,75,78,81,84,100" value="0,0,200,300,400,500,599" tags="wotwHDBattery"/> -->
+		<!-- <passive_effect name="CraftingTier" operation="base_add" level="0,72,75,78,81,84,100" value="0,0,200,300,400,500,600" tags="wotwHDEngine"/> -->
+		<!-- <passive_effect name="CraftingTier" operation="base_add" level="0,1,87,90,93,95,100" value="0,0,200,300,400,500,599" tags="solarCell"/> -->
 	</effect_group>
 </crafting_skill>
 
@@ -16258,9 +16260,18 @@
 	</level_requirements>
 
 	<effect_group>
-				<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="toolCookingPot,toolCookingGrill,toolAnvil,toolBellows,toolBeaker,toolForgeCrucible,calipers,rebarBender,weldingTool,hammerRounding,toolAndDieSet,toolBeaker,fryingPan,roastingPan,loafPan,toolCuttingBoard,wotwToolAdvancedPestle,wotwToolSmoothJawPliers,wotwToolScrewGun,wotwToolTapeMeasure,wotwToolPortableCNC,wotwToolBrassHammer,wotwToolSharpKnife,wotwToolSewingMachine,wotwToolReloadingPress,wotwToolSocketSet,wotwToolWSCarbideBlade,wotwToolWSHeatedRack,wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor,adcBigBarrel,adcLargeCatcher,toolDewFilter,toolDewGatherer,toolDewTarp"/>
-				<passive_effect name="CraftingTier" operation="base_add" level="0,5" value="599,599" tags="biomeWeatherItem1,biomeWeatherItem2,biomeWeatherItem3,biomeWeatherItem4"/>
-				
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="toolCookingPot,toolCookingGrill,toolAnvil,toolBeaker,calipers,rebarBender,weldingTool,hammerRounding,toolAndDieSet,toolBeaker,fryingPan,roastingPan,loafPan,toolCuttingBoard,wotwToolAdvancedPestle,wotwToolSmoothJawPliers,wotwToolScrewGun,wotwToolTapeMeasure,wotwToolPortableCNC,wotwToolBrassHammer,wotwToolSharpKnife,wotwToolSewingMachine,wotwToolReloadingPress,wotwToolSocketSet,wotwToolWSCarbideBlade,wotwToolWSHeatedRack,wotwWorkToolTunedEngine,wotwWorkToolBiggerDrums,wotwWorkToolDualMotor,adcBigBarrel,adcLargeCatcher,toolDewFilter,toolDewGatherer,toolDewTarp"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="0,199,299,399,499,599" tags="toolBellows,toolApiaryBroodBox,toolApiaryExtractor,toolApiarySmoker,toolForgeCrucible"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="0,5" value="599,599" tags="biomeWeatherItem1,biomeWeatherItem2,biomeWeatherItem3,biomeWeatherItem4"/>
+			
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="0,199,299,399,499,599" tags="carBattery"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="smallEngine"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="wotwECOBattery"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="wotwECOEngine"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="wotwHDBattery"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="wotwHDEngine"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="0,199,299,399,499,599" tags="solarCell"/>
+		
 		<effect_description level="1" desc_key="tradesmanCraftWorkstationRepairExpRank1Desc" long_desc_key="tradesmanCraftWorkstationRepairExpRank1LongDesc"/>
 		<effect_description level="2" desc_key="tradesmanCraftWorkstationRepairExpRank2Desc" long_desc_key="tradesmanCraftWorkstationRepairExpRank2LongDesc"/>
 		<effect_description level="3" desc_key="tradesmanCraftWorkstationRepairExpRank3Desc" long_desc_key="tradesmanCraftWorkstationRepairExpRank3LongDesc"/>

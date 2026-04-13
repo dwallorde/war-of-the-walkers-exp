@@ -15463,6 +15463,7 @@
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/BirdnestTree.unity3d?BirdnestTreeLootPrefab"/>
 	<property name="MultiBlockDim" value="1,1,2"/>
+	<property name="ModelOffset" value="0,0.5,-0.5"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="77"/>
 	<property name="WaterFlow" value="permitted"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
@@ -15515,6 +15516,7 @@
 	<property name="EmptyText" value="dewCollectorEmpty"/>
 	<property name="HasItem1Text" value="birdnestHasEggs"/>
 	<property name="HasItem2Text" value="birdnestHasEggs"/>
+	<property name="OutputGridHeight" value="2"/>
 	<property name="FuelTitleText" value="xuiCorn"/>
 	<property name="FuelTitleSprite" value="ui_game_symbol_food"/>
 	<property name="FuelTitleSpriteAtlas" value="UIAtlas"/>

@@ -5074,8 +5074,8 @@
 	<ingredient name="resourceDuctTape" count="16"/>
 </recipe>
 
-<recipe name="resourceAcid" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
-	<ingredient name="householdChemicals" count="20"/>
+<recipe name="resourceAcid" count="1" craft_area="chemistryStation" tags="perkAdvancedEngineering,learnable">
+	<ingredient name="householdChemicals" count="10"/>
 	<ingredient name="resourceOilShale" count="25"/>
 </recipe>
 
@@ -5424,8 +5424,6 @@
 
 <recipe name="armorPrimitiveOutfit" count="0" craft_time="3" craft_area="wotwCombineBench">
 	<ingredient name="blueprintPaper" count="1"/>
-	<ingredient name="resourceYuccaFibers" count="5"/>
-	<ingredient name="resourceWood" count="5"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwPrimitiveArmourSkillMagazine" count="1"/>
     </effect_group>
@@ -5433,9 +5431,6 @@
 
 <recipe name="wotwMeleeToolStonePickaxe" count="0" craft_time="3" craft_area="wotwCombineBench">
 	<ingredient name="blueprintPaper" count="1"/>
-	<ingredient name="resourceRockSmall" count="5"/>
-	<ingredient name="resourceYuccaFibers" count="5"/>
-	<ingredient name="wotwResourceWoodStick" count="5"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwPrimitiveToolSkillMagazine" count="1"/>
     </effect_group>
@@ -5443,25 +5438,13 @@
 
 <recipe name="meleeWpnClubT0WoodenClub" count="0" craft_time="3" craft_area="wotwCombineBench">
 	<ingredient name="blueprintPaper" count="1"/>
-	<ingredient name="wotwResourceWoodStick" count="5"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwPrimitiveWeaponsSkillMagazine" count="1"/>
     </effect_group>
 </recipe>
 
 <recipe name="wotwMeleeToolScrapIronPickaxe" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
-	<ingredient name="blueprintPaper" count="1"/>
-	<ingredient name="wotwResourceWoodStick" count="5"/>
-	<effect_group name="Additional Output">
-        <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHarvestingToolsT0SkillMagazine" count="1"/>
-    </effect_group>
-</recipe>
-
-<recipe name="wotwMeleeToolScrapIronPickaxe" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="2"/>
-	<ingredient name="resourceScrapIron" count="50"/>
-	<ingredient name="resourceYuccaFibers" count="25"/>
-	<ingredient name="wotwResourceWoodStick" count="20"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHarvestingToolsT0SkillMagazine" count="1"/>
     </effect_group>
@@ -5469,10 +5452,6 @@
 
 <recipe name="meleeToolPickT1IronPickaxe" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="resourceForgedIron" count="20"/>
-	<ingredient name="handlewood" count="1"/>
-	<ingredient name="wotwResourceLeather" count="5"/>
-	<ingredient name="resourceDuctTape" count="2"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHarvestingToolsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5480,10 +5459,6 @@
 
 <recipe name="meleeToolPickT2SteelPickaxe" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwPickPartHead" count="1"/>
-	<ingredient name="meleeToolAllSteelParts" count="1"/>
-	<ingredient name="handlemetal" count="1"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHarvestingToolsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5491,10 +5466,6 @@
 
 <recipe name="wotwMeleeToolTungstenPickaxe" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwPickPartHead" count="1"/>
-	<ingredient name="meleeToolAllSteelParts" count="4"/>
-	<ingredient name="handlefiberglass" count="1"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="4"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHarvestingToolsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5502,10 +5473,6 @@
 
 <recipe name="meleeToolPickT3Auger" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwAugerPartBlade" count="1"/>
-	<ingredient name="wotwAugerPartParts" count="6"/>
-	<ingredient name="vehicleBicycleHandlebars" count="1"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="6"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHarvestingToolsMechT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5513,10 +5480,6 @@
 
 <recipe name="wotwMeleeToolSteelAuger" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwAugerPartBlade" count="1"/>
-	<ingredient name="wotwAugerPartParts" count="12"/>
-	<ingredient name="vehicleBicycleHandlebars" count="1"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="12"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHarvestingToolsMechT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5524,10 +5487,6 @@
 
 <recipe name="wotwMeleeToolTungstenAuger" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwAugerPartBlade" count="1"/>
-	<ingredient name="wotwAugerPartParts" count="16"/>
-	<ingredient name="vehicleBicycleHandlebars" count="1"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="16"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHarvestingToolsMechT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5535,9 +5494,6 @@
 
 <recipe name="wotwMeleeToolScrapIronHammer" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="2"/>
-	<ingredient name="resourceScrapIron" count="50"/>
-	<ingredient name="resourceYuccaFibers" count="25"/>
-	<ingredient name="wotwResourceWoodStick" count="20"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRepairToolsT0SkillMagazine" count="1"/>
     </effect_group>
@@ -5545,10 +5501,6 @@
 
 <recipe name="meleeToolRepairT1ClawHammer" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="resourceForgedIron" count="20"/>
-	<ingredient name="handlewood" count="1"/>
-	<ingredient name="wotwResourceLeather" count="5"/>
-	<ingredient name="resourceDuctTape" count="2"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRepairToolsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5556,11 +5508,6 @@
 
 <recipe name="meleeToolRepairT3Nailgun" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwNailgunPartFrame" count="1"/>
-	<ingredient name="wotwNailgunPartParts" count="1"/>
-	<ingredient name="wotwNailgunPartReceiver" count="1"/>
-	<ingredient name="wotwNailgunPartBattery" count="1"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRepairToolsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5568,11 +5515,6 @@
 
 <recipe name="wotwMeleeToolHDNailgun" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwNailgunPartFrame" count="1"/>
-	<ingredient name="wotwNailgunPartParts" count="6"/>
-	<ingredient name="wotwNailgunPartReceiver" count="1"/>
-	<ingredient name="wotwNailgunPartBattery" count="1"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="6"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRepairToolsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5580,9 +5522,6 @@
 
 <recipe name="wotwMeleeToolScrewdriver" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="2"/>
-	<ingredient name="resourceScrapIron" count="50"/>
-	<ingredient name="resourceYuccaFibers" count="25"/>
-	<ingredient name="wotwResourceWoodStick" count="20"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSalvageToolsT0SkillMagazine" count="1"/>
     </effect_group>
@@ -5590,9 +5529,6 @@
 
 <recipe name="meleeToolSalvageT1Wrench" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="resourceForgedIron" count="20"/>
-	<ingredient name="resourceMechanicalParts" count="10"/>
-	<ingredient name="resourceDuctTape" count="5"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSalvageToolsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5600,9 +5536,6 @@
 
 <recipe name="meleeToolSalvageT2Ratchet" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="meleeToolAllSteelParts" count="1"/>
-	<ingredient name="handlemetal" count="1"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSalvageToolsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5610,9 +5543,6 @@
 
 <recipe name="meleeToolSalvageT3ImpactDriver" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="meleeToolAxeT3ChainsawParts" count="1"/>
-	<ingredient name="handlefiberglass" count="12"/>
-	<ingredient name="wotwResourceToolCraftingKit" count="12"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSalvageToolsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5620,10 +5550,6 @@
 
 <recipe name="meleeWpnBladeT1HuntingKnife" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwBladePartFrame" count="1"/>
-	<ingredient name="meleeWpnBladeT3MacheteParts" count="1"/>
-	<ingredient name="handlewood" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBladesT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5631,10 +5557,6 @@
 
 <recipe name="wotwMeleeWpnSteelHuntingKnife" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwBladePartFrame" count="1"/>
-	<ingredient name="meleeWpnBladeT3MacheteParts" count="2"/>
-	<ingredient name="handlemetal" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="2"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBladesT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5642,10 +5564,6 @@
 
 <recipe name="wotwMeleeWpnTungstenHuntingKnife" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwBladePartFrame" count="1"/>
-	<ingredient name="meleeWpnBladeT3MacheteParts" count="4"/>
-	<ingredient name="handlefiberglass" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="4"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBladesT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5653,10 +5571,6 @@
 
 <recipe name="wotwMeleeWpnClubIron" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwClubPartBody" count="1"/>
-	<ingredient name="meleeWpnClubT3SteelClubParts" count="1"/>
-	<ingredient name="handlewood" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwClubsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5664,10 +5578,6 @@
 
 <recipe name="meleeWpnClubT3SteelClub" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwClubPartBody" count="1"/>
-	<ingredient name="meleeWpnClubT3SteelClubParts" count="2"/>
-	<ingredient name="handlemetal" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="2"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwClubsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5675,11 +5585,6 @@
 
 <recipe name="wotwMeleeWpnClubTungsten" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwClubPartBody" count="1"/>
-	<ingredient name="meleeWpnClubT3SteelClubParts" count="4"/>
-	<ingredient name="handlefiberglass" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="4"/>
-	<ingredient name="kevlar" count="5"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwClubsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5687,10 +5592,6 @@
 
 <recipe name="meleeWpnSledgeT1IronSledgehammer" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwSledgePartHead" count="1"/>
-	<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
-	<ingredient name="handlewood" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSledgehammersT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5698,10 +5599,6 @@
 
 <recipe name="meleeWpnSledgeT3SteelSledgehammer" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwSledgePartHead" count="1"/>
-	<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="2"/>
-	<ingredient name="handlemetal" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="2"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSledgehammersT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5709,10 +5606,6 @@
 
 <recipe name="wotwMeleeWpnSledgehammerTungsten" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwSledgePartHead" count="1"/>
-	<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="4"/>
-	<ingredient name="handlefiberglass" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="4"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSledgehammersT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5720,10 +5613,6 @@
 
 <recipe name="meleeWpnSpearT1IronSpear" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwSpearPartHead" count="1"/>
-	<ingredient name="meleeWpnSpearT3SteelSpearParts" count="1"/>
-	<ingredient name="handlewood" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSpearsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5731,10 +5620,6 @@
 
 <recipe name="meleeWpnSpearT3SteelSpear" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwSpearPartHead" count="1"/>
-	<ingredient name="meleeWpnSpearT3SteelSpearParts" count="2"/>
-	<ingredient name="handlewood" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="2"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSpearsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5742,10 +5627,6 @@
 
 <recipe name="wotwMeleeWpnSpearTungsten" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwSpearPartHead" count="1"/>
-	<ingredient name="meleeWpnSpearT3SteelSpearParts" count="4"/>
-	<ingredient name="handlewood" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="4"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwSpearsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5753,10 +5634,6 @@
 
 <recipe name="meleeWpnKnucklesT1IronKnuckles" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="resourceForgedIron" count="12"/>
-	<ingredient name="resourceMechanicalParts" count="4"/>
-	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwKnucklesT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5764,10 +5641,6 @@
 
 <recipe name="meleeWpnKnucklesT3SteelKnuckles" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="meleeWpnKnucklesT3SteelKnucklesParts" count="1"/>
-	<ingredient name="resourceForgedSteel" count="10"/>
-	<ingredient name="resourceLeather" count="3"/>
-	<ingredient name="resourceDuctTape" count="3"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwKnucklesT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5775,10 +5648,6 @@
 
 <recipe name="gunBotT1JunkSledge" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="gunBotRoboticsParts" count="1"/>
-	<ingredient name="resourceForgedIron" count="40"/>
-	<ingredient name="resourceDuctTape" count="10"/>
-	<ingredient name="resourceSpring" count="10"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRoboticsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5786,10 +5655,6 @@
 
 <recipe name="meleeWpnBatonT2StunBaton" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="meleeWpnBatonT2StunBatonParts" count="1"/>
-	<ingredient name="resourceForgedIron" count="5"/>
-	<ingredient name="resourceDuctTape" count="2"/>
-	<ingredient name="resourceElectricParts" count="2"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRoboticsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5797,10 +5662,6 @@
 
 <recipe name="gunBotT2JunkTurret" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="gunBotRoboticsParts" count="1"/>
-	<ingredient name="resourceForgedSteel" count="40"/>
-	<ingredient name="resourceDuctTape" count="10"/>
-	<ingredient name="resourceSpring" count="10"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRoboticsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5808,10 +5669,6 @@
 
 <recipe name="gunBotT3JunkDrone" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="gunBotRoboticsParts" count="1"/>
-	<ingredient name="resourceForgedSteel" count="10"/>
-	<ingredient name="resourceDuctTape" count="10"/>
-	<ingredient name="resourceElectricParts" count="10"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRoboticsT4SkillMagazine" count="1"/>
     </effect_group>
@@ -5819,11 +5676,6 @@
 
 <recipe name="wotwMeleeWpnBatonTungsten" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="meleeWpnTungstenBatonParts" count="1"/>
-	<ingredient name="forgedTungsten" count="10"/>
-	<ingredient name="kevlar" count="4"/>
-	<ingredient name="resourceDuctTape" count="2"/>
-	<ingredient name="resourceElectricParts" count="4"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRoboticsT5SkillMagazine" count="1"/>
     </effect_group>
@@ -5831,11 +5683,6 @@
 
 <recipe name="junkSledgeHD" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="20"/>
-	<ingredient name="gunBotRoboticsParts" count="8"/>
-	<ingredient name="forgedTungsten" count="50"/>
-	<ingredient name="resourceDuctTape" count="10"/>
-	<ingredient name="resourceScrapPolymers" count="10"/>
-	<ingredient name="resourceSpring" count="10"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRoboticsT6SkillMagazine" count="1"/>
     </effect_group>
@@ -5843,11 +5690,6 @@
 
 <recipe name="junkTurretHD" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="20"/>
-	<ingredient name="gunBotRoboticsParts" count="8"/>
-	<ingredient name="forgedTungsten" count="50"/>
-	<ingredient name="resourceDuctTape" count="10"/>
-	<ingredient name="resourceScrapPolymers" count="10"/>
-	<ingredient name="resourceSpring" count="10"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRoboticsT7SkillMagazine" count="1"/>
     </effect_group>
@@ -5855,11 +5697,6 @@
 
 <recipe name="gunHandgunT1Pistol" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwHandgunPartBarrel" count="1"/>
-	<ingredient name="wotwHandgunPartGrip" count="1"/>
-	<ingredient name="gunHandgunT1PistolParts" count="1"/>
-	<ingredient name="wotwHandgunPartReceiver" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHandgunsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5867,11 +5704,6 @@
 
 <recipe name="gunHandgunT2Magnum44" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwHandgunPartBarrel" count="1"/>
-	<ingredient name="wotwHandgunPartGrip" count="1"/>
-	<ingredient name="gunHandgunT1PistolParts" count="6"/>
-	<ingredient name="wotwHandgunPartReceiver" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="6"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHandgunsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5879,11 +5711,6 @@
 
 <recipe name="gunHandgunT3DesertVulture" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwHandgunPartBarrel" count="1"/>
-	<ingredient name="wotwHandgunPartGrip" count="1"/>
-	<ingredient name="gunHandgunT1PistolParts" count="12"/>
-	<ingredient name="wotwHandgunPartReceiver" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="12"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHandgunsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5891,11 +5718,6 @@
 
 <recipe name="wotwGunPistolM1911" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="20"/>
-	<ingredient name="wotwHandgunPartBarrel" count="1"/>
-	<ingredient name="wotwHandgunPartGrip" count="1"/>
-	<ingredient name="gunHandgunT1PistolParts" count="16"/>
-	<ingredient name="wotwHandgunPartReceiver" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="16"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHandgunsT4SkillMagazine" count="1"/>
     </effect_group>
@@ -5903,11 +5725,6 @@
 
 <recipe name="wotwGunPistolMK23" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="25"/>
-	<ingredient name="wotwHandgunPartBarrel" count="1"/>
-	<ingredient name="wotwHandgunPartGrip" count="1"/>
-	<ingredient name="gunHandgunT1PistolParts" count="20"/>
-	<ingredient name="wotwHandgunPartReceiver" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="20"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwHandgunsT5SkillMagazine" count="1"/>
     </effect_group>
@@ -5915,11 +5732,6 @@
 
 <recipe name="gunShotgunT1DoubleBarrel" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwShotgunPartBarrel" count="2"/>
-	<ingredient name="gunShotgunT1DoubleBarrelParts" count="1"/>
-	<ingredient name="wotwShotgunPartReceiver" count="2"/>
-	<ingredient name="wotwShotgunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwShotgunsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5927,11 +5739,6 @@
 
 <recipe name="gunShotgunT2PumpShotgun" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwShotgunPartBarrel" count="1"/>
-	<ingredient name="gunShotgunT1DoubleBarrelParts" count="6"/>
-	<ingredient name="wotwShotgunPartReceiver" count="1"/>
-	<ingredient name="wotwShotgunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="6"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwShotgunsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5939,11 +5746,6 @@
 
 <recipe name="gunShotgunT3AutoShotgun" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwShotgunPartBarrel" count="1"/>
-	<ingredient name="gunShotgunT1DoubleBarrelParts" count="12"/>
-	<ingredient name="wotwShotgunPartReceiver" count="1"/>
-	<ingredient name="wotwShotgunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="12"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwShotgunsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -5951,11 +5753,6 @@
 
 <recipe name="wotwGunShotgunRemington870" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="20"/>
-	<ingredient name="wotwShotgunPartBarrel" count="1"/>
-	<ingredient name="gunShotgunT1DoubleBarrelParts" count="16"/>
-	<ingredient name="wotwShotgunPartReceiver" count="1"/>
-	<ingredient name="wotwShotgunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="16"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwShotgunsT4SkillMagazine" count="1"/>
     </effect_group>
@@ -5963,11 +5760,6 @@
 
 <recipe name="wotwGunShotgunUSAS12" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="25"/>
-	<ingredient name="wotwShotgunPartBarrel" count="1"/>
-	<ingredient name="gunShotgunT1DoubleBarrelParts" count="20"/>
-	<ingredient name="wotwShotgunPartReceiver" count="1"/>
-	<ingredient name="wotwShotgunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="20"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwShotgunsT5SkillMagazine" count="1"/>
     </effect_group>
@@ -5975,11 +5767,6 @@
 
 <recipe name="gunRifleT1HuntingRifle" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwRiflePartBarrel" count="1"/>
-	<ingredient name="wotwRiflePartBolt" count="1"/>
-	<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
-	<ingredient name="wotwRiflePartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRiflesT1SkillMagazine" count="1"/>
     </effect_group>
@@ -5987,11 +5774,6 @@
 
 <recipe name="gunRifleT2LeverActionRifle" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwRiflePartBarrel" count="1"/>
-	<ingredient name="wotwRiflePartBolt" count="1"/>
-	<ingredient name="gunRifleT1HuntingRifleParts" count="6"/>
-	<ingredient name="wotwRiflePartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="6"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRiflesT2SkillMagazine" count="1"/>
     </effect_group>
@@ -5999,11 +5781,6 @@
 
 <recipe name="gunRifleT3SniperRifle" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwRiflePartBarrel" count="1"/>
-	<ingredient name="wotwRiflePartBolt" count="1"/>
-	<ingredient name="gunRifleT1HuntingRifleParts" count="12"/>
-	<ingredient name="wotwRiflePartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="12"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRiflesT3SkillMagazine" count="1"/>
     </effect_group>
@@ -6011,11 +5788,6 @@
 
 <recipe name="wotwGunRifleFNScar" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="20"/>
-	<ingredient name="wotwRiflePartBarrel" count="1"/>
-	<ingredient name="wotwRiflePartBolt" count="1"/>
-	<ingredient name="gunRifleT1HuntingRifleParts" count="16"/>
-	<ingredient name="wotwRiflePartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="16"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRiflesT4SkillMagazine" count="1"/>
     </effect_group>
@@ -6023,11 +5795,6 @@
 
 <recipe name="wotwGunRifleSVDDragunov" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="25"/>
-	<ingredient name="wotwRiflePartBarrel" count="1"/>
-	<ingredient name="wotwRiflePartBolt" count="1"/>
-	<ingredient name="gunRifleT1HuntingRifleParts" count="20"/>
-	<ingredient name="wotwRiflePartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="20"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwRiflesT5SkillMagazine" count="1"/>
     </effect_group>
@@ -6035,11 +5802,6 @@
 
 <recipe name="gunMGT1AK47" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwMachineGunPartBarrel" count="1"/>
-	<ingredient name="gunMGT1AK47Parts" count="1"/>
-	<ingredient name="wotwMachineGunPartReceiver" count="1"/>
-	<ingredient name="wotwMachineGunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwMachineGunsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -6047,11 +5809,6 @@
 
 <recipe name="gunMGT2TacticalAR" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwMachineGunPartBarrel" count="1"/>
-	<ingredient name="gunMGT1AK47Parts" count="6"/>
-	<ingredient name="wotwMachineGunPartReceiver" count="1"/>
-	<ingredient name="wotwMachineGunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="6"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwMachineGunsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -6059,11 +5816,6 @@
 
 <recipe name="gunMGT3M60" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwMachineGunPartBarrel" count="1"/>
-	<ingredient name="gunMGT1AK47Parts" count="12"/>
-	<ingredient name="wotwMachineGunPartReceiver" count="1"/>
-	<ingredient name="wotwMachineGunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="12"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwMachineGunsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -6071,11 +5823,6 @@
 
 <recipe name="wotwGunMGUMP45" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="20"/>
-	<ingredient name="wotwMachineGunPartBarrel" count="1"/>
-	<ingredient name="gunMGT1AK47Parts" count="16"/>
-	<ingredient name="wotwMachineGunPartReceiver" count="1"/>
-	<ingredient name="wotwMachineGunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="16"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwMachineGunsT4SkillMagazine" count="1"/>
     </effect_group>
@@ -6083,11 +5830,6 @@
 
 <recipe name="wotwGunMGP90" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="25"/>
-	<ingredient name="wotwMachineGunPartBarrel" count="1"/>
-	<ingredient name="gunMGT1AK47Parts" count="20"/>
-	<ingredient name="wotwMachineGunPartReceiver" count="1"/>
-	<ingredient name="wotwMachineGunPartStock" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="20"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwMachineGunsT5SkillMagazine" count="1"/>
     </effect_group>
@@ -6095,11 +5837,6 @@
 
 <recipe name="gunBowT1WoodenBow" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="5"/>
-	<ingredient name="wotwBowPartBody" count="1"/>
-	<ingredient name="wotwBowPartGrip" count="1"/>
-	<ingredient name="gunBowT1WoodenBowParts" count="1"/>
-	<ingredient name="wotwBowPartString" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBowsT1SkillMagazine" count="1"/>
     </effect_group>
@@ -6107,11 +5844,6 @@
 
 <recipe name="gunBowT3CompoundBow" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="wotwBowPartBody" count="1"/>
-	<ingredient name="wotwBowPartGrip" count="1"/>
-	<ingredient name="gunBowT1WoodenBowParts" count="6"/>
-	<ingredient name="wotwBowPartString" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="6"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBowsT2SkillMagazine" count="1"/>
     </effect_group>
@@ -6119,11 +5851,6 @@
 
 <recipe name="gunBowT1IronCrossbow" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
-	<ingredient name="wotwBowPartBody" count="1"/>
-	<ingredient name="wotwBowPartGrip" count="1"/>
-	<ingredient name="gunBowT1WoodenBowParts" count="1"/>
-	<ingredient name="wotwBowPartString" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="1"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBowsT3SkillMagazine" count="1"/>
     </effect_group>
@@ -6131,11 +5858,6 @@
 
 <recipe name="gunBowT3CompoundCrossbow" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="20"/>
-	<ingredient name="wotwBowPartBody" count="1"/>
-	<ingredient name="wotwBowPartGrip" count="1"/>
-	<ingredient name="gunBowT1WoodenBowParts" count="12"/>
-	<ingredient name="wotwBowPartString" count="1"/>
-	<ingredient name="wotwResourceWeaponCraftingKit" count="12"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBowsT4SkillMagazine" count="1"/>
     </effect_group>
@@ -6143,8 +5865,6 @@
 
 <recipe name="armorLumberjackOutfit" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="resourceArmorCraftingKit" count="1"/>
-	<ingredient name="resourceCloth" count="5"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwArmourLightSkillMagazine" count="1"/>
     </effect_group>
@@ -6152,8 +5872,6 @@
 
 <recipe name="armorFarmerOutfit" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="resourceArmorCraftingKit" count="1"/>
-	<ingredient name="resourceLeather" count="5"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwArmourMedSkillMagazine" count="1"/>
     </effect_group>
@@ -6161,8 +5879,6 @@
 
 <recipe name="armorMinerOutfit" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
-	<ingredient name="resourceArmorCraftingKit" count="1"/>
-	<ingredient name="resourceLeather" count="5"/>
 	<effect_group name="Additional Output">
         <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwArmourHeavySkillMagazine" count="1"/>
     </effect_group>
@@ -11532,8 +11248,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11547,8 +11263,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11562,8 +11278,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11577,8 +11293,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11592,8 +11308,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11607,8 +11323,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11622,8 +11338,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11637,8 +11353,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11652,8 +11368,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11667,8 +11383,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11682,8 +11398,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11697,8 +11413,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11712,8 +11428,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11727,8 +11443,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11742,8 +11458,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11757,8 +11473,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11772,8 +11488,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11787,8 +11503,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11802,8 +11518,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11817,8 +11533,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="resourceCloth"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11834,8 +11550,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11849,8 +11565,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11864,8 +11580,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11879,8 +11595,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11894,8 +11610,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11909,8 +11625,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11924,8 +11640,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11939,8 +11655,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11954,8 +11670,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11969,8 +11685,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11984,8 +11700,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -11999,8 +11715,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12014,8 +11730,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12029,8 +11745,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12044,8 +11760,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12059,8 +11775,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12074,8 +11790,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12089,8 +11805,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12104,8 +11820,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12119,8 +11835,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12134,8 +11850,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12149,8 +11865,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12164,8 +11880,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12179,8 +11895,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12194,8 +11910,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12209,8 +11925,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12224,8 +11940,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12239,8 +11955,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12256,8 +11972,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12271,8 +11987,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12286,8 +12002,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12301,8 +12017,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12316,8 +12032,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12331,8 +12047,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12346,8 +12062,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12361,8 +12077,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12376,8 +12092,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12391,8 +12107,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12406,8 +12122,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12421,8 +12137,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12436,8 +12152,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12451,8 +12167,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12466,8 +12182,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12481,8 +12197,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12496,8 +12212,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12511,8 +12227,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12526,8 +12242,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
@@ -12541,8 +12257,8 @@
 	<ingredient name="resourceForgedSteel" count="0"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
-		<passive_effect name="CraftingIngredientCount" level="2,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
+		<passive_effect name="CraftingIngredientCount" level="200,600" operation="base_add" value="1,5" tags="resourceArmorCraftingKit"/>
+		<passive_effect name="CraftingIngredientCount" level="200,300,400,500,600" operation="base_add" value="5,10,15,20,20" tags="wotwResourceLeather"/>
 		<passive_effect name="CraftingIngredientCount" level="300,400,500,600" operation="base_add" value="5,10,25,25" tags="resourceForgedIron"/>
 		<passive_effect name="CraftingIngredientCount" level="500,600" operation="base_add" value="10,25" tags="resourceForgedSteel"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>

@@ -86,16 +86,16 @@
 		zombieFemaleTutorialT7, 0.0125
 		zombieFemaleTutorialT22, 0.0125
 	</csv>
-	<!-- <csv xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/text()" delim="\n" op="add" > -->
-		<!-- zombieFemaleTutorialT1, 0.125 -->
-		<!-- zombieFemaleTutorialT2, 0.125 -->
-		<!-- zombieFemaleTutorialT3, 0.125 -->
-		<!-- zombieFemaleTutorialT21, 0.125 -->
-		<!-- zombieFemaleTutorialT5, 0.125 -->
-		<!-- zombieFemaleTutorialT6, 0.125 -->
-		<!-- zombieFemaleTutorialT7, 0.125 -->
-		<!-- zombieFemaleTutorialT22, 0.125		 -->
-	<!-- </csv> -->
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHorde')]/text()" delim="\n" op="add">
+		zombieFemaleTutorialT1, 0.125
+		zombieFemaleTutorialT2, 0.125
+		zombieFemaleTutorialT3, 0.125
+		zombieFemaleTutorialT21, 0.125
+		zombieFemaleTutorialT5, 0.125
+		zombieFemaleTutorialT6, 0.125
+		zombieFemaleTutorialT7, 0.125
+		zombieFemaleTutorialT22, 0.125		
+	</csv>
 
 	<!--
         Sleeper Volume Entity Groups

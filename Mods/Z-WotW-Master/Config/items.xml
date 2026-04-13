@@ -260,7 +260,7 @@
 
 <item name="wotwAnimalTrapBaitSmallGame">
 	<property name="Extends" value="questRewardBundleMaster"/>
-	<property name="CustomIcon" value="foodCornMeal" />
+	<property name="CustomIcon" value="foodRawMeatBundle" />
 	<property name="ItemTypeIcon" value="bundle"/>
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -280,9 +280,7 @@
 </item>
 
 <item name="wotwAnimalTrapBaitSmallGameIngredient">
-	<property name="Extends" value="questRewardBundleMaster"/>
 	<property name="CustomIcon" value="foodCornMeal" />
-	<property name="ItemTypeIcon" value="bundle"/>
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -292,16 +290,10 @@
 	<property name="EconomicBundleSize" value="5"/>
 	<property name="CraftingIngredientTime" value="5"/>
 	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-	<property class="Action0">
-		<property name="Class" value="OpenLootBundle"/>
-		<property name="Delay" value="0"/>
-		<property name="Sound_start" value="close_garbage"/>
-		<property name="LootList" value="groupAnimalTrapMediumGameAll"/>
-	</property>
 </item>
 
 <item name="wotwAnimalTrapBaitMedGameIngredient">
-	<property name="CustomIcon" value="foodCornMeal" />
+	<property name="CustomIcon" value="foodRawMeat" />
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -418,7 +410,10 @@
 </item>
 
 <item name="wotwAnimalTrapBaitMediumGame">
-	<property name="CustomIcon" value="foodRawMeat" />
+	<property name="Extends" value="questRewardBundleMaster"/>
+	<property name="CustomIcon" value="foodRawMeatBundle" />
+	<property name="CustomIconTint" value="FF0000"/>
+	<property name="ItemTypeIcon" value="bundle"/>
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -428,6 +423,12 @@
 	<property name="EconomicBundleSize" value="5"/>
 	<property name="CraftingIngredientTime" value="5"/>
 	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+	<property class="Action0">
+		<property name="Class" value="OpenLootBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="LootList" value="animalMediumGame"/>
+	</property>
 </item>
 
 <item name="wotwAnimalCapturedBoar">
@@ -5731,6 +5732,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwGunPistolMK23"> <!-- Handgun T5 -->
@@ -5838,6 +5840,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwGunShotgunRemington870">  <!-- Shotgun T4 -->
@@ -5943,6 +5946,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwGunShotgunUSAS12"> <!-- Shotgun T5 -->
@@ -6047,6 +6051,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwGunRifleFNScar"> <!-- Rifle T4 -->
@@ -6156,6 +6161,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwGunRifleSVDDragunov"> <!-- Rifle T5 -->
@@ -6265,6 +6271,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwGunMGUMP45"> <!-- Machine Gun T4 -->
@@ -6376,6 +6383,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwGunMGP90">  <!-- Machine Gun T5 -->
@@ -6485,6 +6493,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwGunRPG7RocketLauncher">  <!-- Rocket Launcher T5 -->
@@ -6587,6 +6596,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </item>
 
 <item name="wotwAmmoRP7RocketHE">
@@ -7768,6 +7778,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnTungstenMachete">
@@ -7883,6 +7894,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnLegendaryMachete">
@@ -7998,6 +8010,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnClubIron">
@@ -8100,6 +8113,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnClubTungsten">
@@ -8208,6 +8222,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnClubLegendary">
@@ -8434,6 +8449,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnTungstenHuntingKnife">
@@ -8552,6 +8568,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnLegendaryKnife">
@@ -8775,6 +8792,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSpearLegendary">
@@ -8984,6 +9002,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSledgehammerLegendary">
@@ -9192,6 +9211,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnBatBaseballTungsten">
@@ -9299,6 +9319,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnBatBaseballLegendary">
@@ -9527,6 +9548,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnKnifeKitchen"> 
@@ -9649,6 +9671,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnKnifeCombat">
@@ -9767,6 +9790,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSword">
@@ -9885,6 +9909,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnAxeBattle">
@@ -9999,6 +10024,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnHammerBattle">
@@ -10104,6 +10130,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSwordBattle">
@@ -10214,6 +10241,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnAxeBattle2">
@@ -10329,6 +10357,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSwordBattle2">
@@ -10448,6 +10477,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSwordBroad">
@@ -10567,6 +10597,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSword2">
@@ -10686,6 +10717,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnKatana">
@@ -10805,6 +10837,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSwordBig">
@@ -10924,6 +10957,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSwordDark">
@@ -11043,6 +11077,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnSwordModern">
@@ -11162,6 +11197,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnKnifeThrowingBlue">
@@ -11279,6 +11315,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnKnifeThrowingBlack">
@@ -11396,6 +11433,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnKnifeThrowingMetal">
@@ -11513,6 +11551,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnAxeThrowing">
@@ -11625,6 +11664,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnBatonTungsten">
@@ -11929,6 +11969,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnPipeIron">
@@ -12038,6 +12079,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <!-- To Do Remove?? -->
@@ -12280,6 +12322,7 @@
 		</triggered_effect>
 		<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_RoboticJunk_XP" operation="add" value="32"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <item name="junkTurretHD">
@@ -12375,6 +12418,7 @@
 		</triggered_effect>
 		<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_RoboticJunk_XP" operation="add" value="36"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </item>
 
 <!-- Legendary Weapons -->
@@ -12674,6 +12718,7 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="metal"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolSteelHoe">
@@ -12743,6 +12788,7 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="metal"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="meleeToolRepairT0StoneAxe">
@@ -12835,6 +12881,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="10"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="meleeToolRepairT0TazasStoneAxe">
@@ -12871,6 +12918,7 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.33" tags="stone"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolStonePickaxe">
@@ -12961,6 +13009,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="10"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolsScrapIronAxe">
@@ -13053,6 +13102,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="12"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolScrapIronPickaxe">
@@ -13145,6 +13195,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="12"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolScrapIronShovel">
@@ -13212,6 +13263,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="12"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolTungstenPickaxe">
@@ -13290,6 +13342,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="18"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolTungstenFireaxe">
@@ -13383,6 +13436,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="18"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolTungstenShovel">
@@ -13474,6 +13528,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="18"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolLegendaryPickaxe">
@@ -13811,6 +13866,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_PowerTools_XP" operation="add" value="10"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolTungstenAuger">
@@ -13896,6 +13952,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_PowerTools_XP" operation="add" value="15"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolLegendaryAuger">
@@ -14060,6 +14117,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_PowerTools_XP" operation="add" value="10"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolTungstenChainsaw">
@@ -14144,6 +14202,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_PowerTools_XP" operation="add" value="15"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolLegendaryChainsaw">
@@ -14388,6 +14447,7 @@
 		<passive_effect name="BlockDamage" operation="perc_add" value="1.5" tags="secondary"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="55.1" tags="secondary"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolIronSickle">
@@ -14463,6 +14523,7 @@
 		<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkLivingOffTheLand"/>
 		<passive_effect name="HarvestCount" operation="base_add" value="1" tags="sickleHarvest"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolSteelSickle">
@@ -14546,6 +14607,7 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="stone"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="metal"/> -->
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolStoneHammer">
@@ -14617,6 +14679,7 @@
 		<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="10"/>
 		<triggered_effect trigger="onSelfRepairBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="10"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolScrapIronHammer">
@@ -14687,6 +14750,7 @@
 		<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="12"/>
 		<triggered_effect trigger="onSelfRepairBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="12"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolHDNailgun">
@@ -14745,6 +14809,7 @@
 		<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="20"/>
 		<triggered_effect trigger="onSelfRepairBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="20"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeToolLegendaryNailgun">
@@ -14906,6 +14971,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_Wrenching_XP" operation="add" value="12"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnCrowbarSteel">
@@ -14988,6 +15054,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_Wrenching_XP" operation="add" value="16"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 
 <item name="wotwMeleeWpnCrowbarTungsten">
@@ -15052,6 +15119,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_Wrenching_XP" operation="add" value="20"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </item>
 </append>
 
@@ -23545,6 +23613,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_Wrenching_XP" operation="add" value="14"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolSalvageT2Ratchet']">
@@ -23621,6 +23690,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_Wrenching_XP" operation="add" value="16"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolSalvageT3ImpactDriver']">
@@ -23699,6 +23769,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_Wrenching_XP" operation="add" value="18"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolRepairT1ClawHammer']">
@@ -23768,6 +23839,7 @@
 		<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="14"/>
 		<triggered_effect trigger="onSelfRepairBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="14"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolRepairT3Nailgun']">
@@ -23847,6 +23919,7 @@
 		<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="18"/>
 		<triggered_effect trigger="onSelfRepairBlock" action="ModifyCVar" cvar="AS_Construction_XP" operation="add" value="18"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolShovelT0StoneShovel']">
@@ -23912,6 +23985,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="10"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolAxeT1IronFireaxe']">
@@ -24003,6 +24077,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="14"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolPickT1IronPickaxe']">
@@ -24079,6 +24154,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="14"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolShovelT1IronShovel']">
@@ -24139,6 +24215,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="14"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolAxeT2SteelAxe']">
@@ -24190,6 +24267,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="16"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolPickT2SteelPickaxe']">
@@ -24253,6 +24331,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="16"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolShovelT2SteelShovel']">
@@ -24315,6 +24394,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="add" value="16"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolPickT3Auger']">
@@ -24401,6 +24481,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_PowerTools_XP" operation="add" value="5"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeToolAxeT3Chainsaw']">
@@ -24487,6 +24568,7 @@
 	<effect_group name="Action Skills">
 		<triggered_effect trigger="onSelfHarvestBlock" action="ModifyCVar" cvar="AS_PowerTools_XP" operation="add" value="5"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardToolsModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnClubT0WoodenClub']">
@@ -24589,6 +24671,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnClubT1BaseballBat']">
@@ -24694,6 +24777,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnClubT3SteelClub']">
@@ -24799,6 +24883,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnSledgeT0StoneSledgehammer']">
@@ -24908,6 +24993,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnSledgeT1IronSledgehammer']">
@@ -25019,6 +25105,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammer']">
@@ -25131,6 +25218,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnBladeT0BoneKnife']">
@@ -25248,6 +25336,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnBladeT1HuntingKnife']">
@@ -25369,6 +25458,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnBladeT3Machete']">
@@ -25491,6 +25581,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnSpearT0StoneSpear']">
@@ -25594,6 +25685,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnSpearT1IronSpear']">
@@ -25675,6 +25767,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnSpearT3SteelSpear']">
@@ -25753,6 +25846,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnKnucklesT0LeatherKnuckles']">
@@ -25851,6 +25945,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnKnucklesT1IronKnuckles']">
@@ -25960,6 +26055,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']">
@@ -26038,6 +26134,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnBatonT0PipeBaton']">
@@ -26129,6 +26226,7 @@
 		</triggered_effect>
 		<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_RoboticJunk_XP" operation="add" value="16"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='meleeWpnBatonT2StunBaton']">
@@ -26458,6 +26556,7 @@
 		</triggered_effect>
 		<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_RoboticJunk_XP" operation="add" value="28"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardMeleeWpnModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunHandgunT0PipePistol']">
@@ -26562,6 +26661,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunHandgunT1Pistol']">
@@ -26670,6 +26770,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunHandgunT3SMG5']">
@@ -26777,6 +26878,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunHandgunT2Magnum44']">
@@ -26886,6 +26988,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunHandgunT3DesertVulture']">
@@ -26990,6 +27093,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunShotgunT0PipeShotgun']">
@@ -27087,6 +27191,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunShotgunT1DoubleBarrel']">
@@ -27188,6 +27293,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunShotgunT2PumpShotgun']">
@@ -27290,6 +27396,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunShotgunT3AutoShotgun']">
@@ -27392,6 +27499,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunRifleT0PipeRifle']">
@@ -27496,6 +27604,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunRifleT1HuntingRifle']">
@@ -27607,6 +27716,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunRifleT2LeverActionRifle']">
@@ -27716,6 +27826,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunRifleT3SniperRifle']">
@@ -27824,6 +27935,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunMGT0PipeMachineGun']">
@@ -27919,6 +28031,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunMGT1AK47']">
@@ -28021,6 +28134,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunMGT2TacticalAR']">
@@ -28122,6 +28236,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunMGT3M60']">
@@ -28224,6 +28339,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunExplosivesT3RocketLauncher']">
@@ -28328,6 +28444,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunBotT1JunkSledge']">
@@ -28468,6 +28585,7 @@
 		</triggered_effect>
 		<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_RoboticJunk_XP" operation="add" value="24"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunBotT2JunkTurret']">
@@ -28568,6 +28686,7 @@
 		</triggered_effect>
 		<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_RoboticJunk_XP" operation="add" value="28"/>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunBotT3JunkDrone']">
@@ -28760,6 +28879,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunBowT1WoodenBow']">
@@ -28889,6 +29009,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunBowT3CompoundBow']">
@@ -29008,6 +29129,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunBowT1IronCrossbow']">
@@ -29119,6 +29241,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <set xpath="//item[@name='gunBowT3CompoundCrossbow']">
@@ -29237,6 +29360,7 @@
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardGunModSettingsWotW"/>
 </set>
 
 <!-- Melee Weapon Club/Baseball Rebalance -->
@@ -30018,6 +30142,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorPrimitiveOutfit']">
@@ -30026,6 +30151,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorPrimitiveGloves']">
@@ -30034,6 +30160,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorPrimitiveBoots']">
@@ -30042,6 +30169,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorLumberjackHelmet']">
@@ -30050,6 +30178,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorLumberjackOutfit']">
@@ -30058,6 +30187,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorLumberjackGloves']">
@@ -30066,6 +30196,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorLumberjackBoots']">
@@ -30074,6 +30205,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorPreacherHelmet']">
@@ -30082,6 +30214,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorPreacherOutfit']">
@@ -30090,6 +30223,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorPreacherGloves']">
@@ -30098,6 +30232,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorPreacherBoots']">
@@ -30106,6 +30241,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRogueHelmet']">
@@ -30114,6 +30250,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRogueOutfit']">
@@ -30122,6 +30259,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRogueGloves']">
@@ -30130,6 +30268,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRogueBoots']">
@@ -30138,6 +30277,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorAthleticHelmet']">
@@ -30146,6 +30286,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorAthleticOutfit']">
@@ -30154,6 +30295,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorAthleticGloves']">
@@ -30162,6 +30304,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorAthleticBoots']">
@@ -30170,6 +30313,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorEnforcerHelmet']">
@@ -30178,6 +30322,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorEnforcerOutfit']">
@@ -30186,6 +30331,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorEnforcerGloves']">
@@ -30194,6 +30340,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorEnforcerBoots']">
@@ -30202,6 +30349,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorFarmerHelmet']">
@@ -30210,6 +30358,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorFarmerOutfit']">
@@ -30218,6 +30367,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorFarmerGloves']">
@@ -30226,6 +30376,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorFarmerBoots']">
@@ -30234,6 +30385,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorBikerHelmet']">
@@ -30242,6 +30394,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorBikerOutfit']">
@@ -30250,6 +30403,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorBikerGloves']">
@@ -30258,6 +30412,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorBikerBoots']">
@@ -30266,6 +30421,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorScavengerHelmet']">
@@ -30274,6 +30430,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorScavengerOutfit']">
@@ -30282,6 +30439,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorScavengerGloves']">
@@ -30290,6 +30448,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorScavengerBoots']">
@@ -30298,6 +30457,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRangerHelmet']">
@@ -30307,6 +30467,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRangerOutfit']">
@@ -30316,6 +30477,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRangerGloves']">
@@ -30325,6 +30487,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRangerBoots']">
@@ -30334,6 +30497,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorCommandoHelmet']">
@@ -30342,6 +30506,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorCommandoOutfit']">
@@ -30350,6 +30515,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorCommandoGloves']">
@@ -30358,6 +30524,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorCommandoBoots']">
@@ -30374,6 +30541,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorAssassinOutfit']">
@@ -30382,6 +30550,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorAssassinGloves']">
@@ -30390,6 +30559,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorAssassinBoots']">
@@ -30398,6 +30568,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorMinerHelmet']">
@@ -30406,6 +30577,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorMinerOutfit']">
@@ -30414,6 +30586,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorMinerGloves']">
@@ -30422,6 +30595,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorMinerBoots']">
@@ -30430,6 +30604,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorNomadHelmet']">
@@ -30438,6 +30613,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorNomadOutfit']">
@@ -30446,6 +30622,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorNomadGloves']">
@@ -30454,6 +30631,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorNomadBoots']">
@@ -30462,6 +30640,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorNerdHelmet']">
@@ -30470,6 +30649,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorNerdOutfit']">
@@ -30478,6 +30658,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorNerdGloves']">
@@ -30486,6 +30667,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorNerdBoots']">
@@ -30494,6 +30676,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRaiderHelmet']">
@@ -30502,6 +30685,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRaiderOutfit']">
@@ -30510,6 +30694,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRaiderGloves']">
@@ -30518,6 +30703,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <append xpath="/items/item[@name='armorRaiderBoots']">
@@ -30526,6 +30712,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </append>
 
 <set xpath="/items/item[(contains(@name, 'armor'))and not(contains(@name, 'armorPrimitive'))]/property[@name='RepairTools']/@value">repairKitArmour</set>
@@ -30590,6 +30777,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </item>
 
 		<!-- *** HUNTER_OUTFIT -->
@@ -30642,6 +30830,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </item>
 
 		<!-- *** HUNTER_GLOVES -->
@@ -30696,6 +30885,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </item>
 
 		<!-- *** HUNTER_BOOTS -->
@@ -30748,6 +30938,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </item>
 
 <!-- Construction Armour -->
@@ -30815,6 +31006,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </item>
 
 <!-- Construction Outfit -->
@@ -30871,6 +31063,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </item>
 
 <!-- Construction Gloves -->
@@ -30926,6 +31119,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </item>
 
 <!-- Construction Boots -->
@@ -31019,6 +31213,7 @@
 			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 		</triggered_effect>
 	</effect_group>
+	<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 </item>
 
 <item name="gunBotT3JunkDroneQuest">
@@ -31292,6 +31487,10 @@
 
 <set xpath="/items/item[@name='schematicMaster']/property[@name='ScrapTimeOverride']/@value">1</set>
 <set xpath="/items/item[@name='clothingMaster']/property[@name='ScrapTimeOverride']/@value">3</set>
+<set xpath="/items/item[@name='armorPrimitiveMaster']/property[@name='ScrapTimeOverride']/@value">3</set>
+<set xpath="/items/item[@name='armorLightMaster']/property[@name='ScrapTimeOverride']/@value">3</set>
+<set xpath="/items/item[@name='armorMediumMaster']/property[@name='ScrapTimeOverride']/@value">3</set>
+<set xpath="/items/item[@name='armorHeavyMaster']/property[@name='ScrapTimeOverride']/@value">3</set>
 
 <set xpath="/items/item[@name='resourceBluegilFish']/property[@name='Stacknumber']/@value">50</set>
 <set xpath="/items/item[@name='resourceCatfish']/property[@name='Stacknumber']/@value">50</set>
@@ -34378,5 +34577,85 @@
 
 <remove xpath="//item[@name='foodHoney']/property[@class='Action0']/property[@name='Create_item']"/>
 <remove xpath="//item[@name='foodHoney']/property[@class='Action0']/property[@name='Use_jar_refund']"/>
+
+<append xpath="//item[(contains(@name, 'tool'))and not(contains(@name, 'admin'))and not(contains(@name, 'PaintTool'))and not(contains(@name, 'mod'))]">
+		<effect_group name="Quality Loss 0">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 1">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 2">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 3">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="Quality Loss 4">
+			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="2"/>
+			</triggered_effect>
+		</effect_group>
+        <effect_group name="DamageHooks Degrade 0">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 1">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 2">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 3">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="1"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 4">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="2"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+		<effect_group name="DamageHooks Degrade 5">
+			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="3"/>
+			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
+		</effect_group>
+</append>
+
+<!-- <set xpath="//item[contains(@name, 'armor')] -->
+	
+	<!-- [(contains(@name, 'armor'))and not(contains(@name, 'armorPrimitive'))] -->
 
 </config>

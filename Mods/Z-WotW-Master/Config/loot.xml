@@ -7023,7 +7023,7 @@
 </lootcontainer>
 
 <!-- Lootcontainer Boxes Pallet Loot -->
-<lootcontainer name="BoxesPallet" count="0,2" size="5,3" destroy_on_close="empty" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" buff="buffScavengingServerHack,buffScavengingSkillXPTick">
+<lootcontainer name="BoxesPallet" count="1,2" size="5,3" destroy_on_close="empty" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" buff="buffScavengingServerHack,buffScavengingSkillXPTick">
 	<item group="groupJunkNoBMats" count="1,2"/>
 	<item group="partsAll" count="1,2"/>
 	<item group="skillMagazines" count="1"/>

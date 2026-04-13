@@ -123,18 +123,21 @@
 	<Snippet label="StandardToolsModSettingsWotW">
 		<effect_group name="Quality Loss 0">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
 				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
 			</triggered_effect>
 		</effect_group>
 		<effect_group name="Quality Loss 1">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
 				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="1"/>
 			</triggered_effect>
 		</effect_group>
 		<effect_group name="Quality Loss 2">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
 				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="Equals" value="2"/>
 				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="0"/>
@@ -142,12 +145,14 @@
 		</effect_group>
 		<effect_group name="Quality Loss 3">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
 				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="1"/>
 			</triggered_effect>
 		</effect_group>
 		<effect_group name="Quality Loss 4">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
+				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				<requirement name="ProgressionLevel" progression_name="tradesmanCraftRepairExp" operation="Equals" value="2"/>
 			</triggered_effect>
@@ -195,7 +200,7 @@
 		<effect_group name="Quality Loss 0">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
 				<requirement name="CompareItemProperty, SCore" item_property="Quality" operation="GT" value="1"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
 				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
 			</triggered_effect>
 		</effect_group>
@@ -266,7 +271,7 @@
 	<Snippet label="StandardArmourActiveModSettingsWotW">
 		<effect_group name="Quality Loss 0">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
 				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
 			</triggered_effect>
 		</effect_group>
@@ -343,7 +348,7 @@
 	<Snippet label="StandardGunModSettingsWotW">
 		<effect_group name="Quality Loss 0">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
 				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
 			</triggered_effect>
 		</effect_group>
@@ -414,7 +419,7 @@
 	<Snippet label="StandardMeleeWpnModSettingsWotW">
 		<effect_group name="Quality Loss 0">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
 				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
 			</triggered_effect>
 		</effect_group>
@@ -485,7 +490,7 @@
 	<Snippet label="StandardVehicleModSettingsWotW">
 		<effect_group name="Quality Loss 0">
 			<triggered_effect trigger="onSelfItemRepaired" action="ModifyItem, SCore">
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
 				<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="LTE" value="0"/>
 			</triggered_effect>
 		</effect_group>

@@ -53,39 +53,38 @@
             Wander|
         </set>		
 		
+
+		
+		
+		<set xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='AITask']/@value">
+			BreakBlock|DestroyArea|Territorial|ApproachDistraction|ApproachAndAttackTarget class=EntityPlayer,25,EntityBandit,25,EntityNPC,0,EntityAnimalStag,40,EntityZombie,30|ApproachSpot|Look|Wander|
+		</set>	
+		
+		<set xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='AITarget']/@value">
+			SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityNPC,EntityEnemyAnimal|BlockingTargetTask|SetNearestCorpseAsTarget flags=edible|SetNearestEntityAsTarget class=EntityPlayer,13,9,EntityBandit,0,-6,EntityAnimalStag,0,0,EntityZombie,0,-6,EntityNPC,0,0|
+		</set>
+		
+		<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='AITask']/@value">
+			BreakBlock|DestroyArea|Territorial|ApproachDistraction|ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityAnimalStag,0|ApproachSpot|Look|Wander|
+		</set>	
+		
+		<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='AITarget']/@value">
+			SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityNPC,EntityEnemyAnimal|BlockingTargetTask|SetNearestCorpseAsTarget flags=edible|SetNearestEntityAsTarget class=EntityPlayer,23,17,EntityBandit,0,-8,EntityAnimalStag,0,0,EntityNPC,0,0|
+		</set>		
+		
+		
+		
+		
+		
+		
 		<set xpath="//entity_class[starts-with(@name, 'animalTemplateTimid')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC,EntityBandit</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,20,15,EntityZombie,15,10,EntityNPC,0,0,EntityBandit,0,0</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,20,EntityZombie,20,EntityNPC,20,EntityBandit,20</set>
+		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,20,EntityBandit,20,EntityNPC,20,EntityBandit,20</set>
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalRabbit')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC,EntityBandit;safeDistance=20</set> 
 		
-		<!-- <set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityNPC,25,EntityBandit,25</set>  -->
-		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@name='AITask']/@value">BreakBlock|
-	DestroyArea|
-	Territorial|
-	ApproachAndAttackTarget class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityNPC,25,EntityBandit,25|
-	ApproachSpot|
-	Look|
-	Wander|</set>
-		<!-- <set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,0,0,EntityBandit,0,0</set>  -->
-		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@name='AITarget']/@value">SetAsTargetIfHurt|
-	BlockingTargetTask|
-	SetNearestEntityAsTarget class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,0,0,EntityBandit,0,0|</set>
-		<!-- <set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,20,EntityPlayer,15,EntityBandit,15,EntityNPC,15</set>  -->
-		<set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@name='AITask']/@value">BreakBlock|
-	DestroyArea|
-	Territorial|
-	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityAnimalStag,20,EntityPlayer,15,EntityBandit,15,EntityNPC,15|
-	ApproachSpot|
-	Look|
-	Wander|</set>
-		<!-- <set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,18,13,EntityAnimalStag,0,0,EntityNPC,0,0,EntityBandit,0,0</set>  -->
-		<set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@name='AITarget']/@value">SetAsTargetIfHurt|
-	BlockingTargetTask|
-	SetNearestEntityAsTarget class=EntityPlayer,18,13,EntityAnimalStag,0,0,EntityNPC,0,0,EntityBandit,0,0|</set>
 		<set xpath="//entity_class[starts-with(@name, 'animalWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,20,EntityPlayer,15,EntityZombie,20,EntityNPC,15,EntityBandit,15</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,0,0,EntityBandit,0,0</set> 
@@ -380,7 +379,7 @@
 				
 			<effect_group> 
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
-				<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>
+				<passive_effect name="HealthMax" operation="base_set" value="^healthSlim"/>
 				
 				<passive_effect name="HealthMax" operation="perc_add" value="-.15,.15"/>
 				
