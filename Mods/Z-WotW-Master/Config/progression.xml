@@ -2721,7 +2721,7 @@
 	</level_requirements>
 
 	<effect_group>
-		<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkAdvancedEngineering"/><!-- fake crafting perk that is used to scale resources -->
+		<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkAdvancedEngineering"/> <!-- fake crafting perk that is used to scale resources -->
 		<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.05,-0.25" tags="perkAdvancedEngineering"/>
 		<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.05,-0.25" tags="perkAdvancedEngineering2"/> <!-- For recipes that craft with quality -->
 		
@@ -14412,10 +14412,10 @@
 	<display_entry icon="wotwToolAdvancedPestle" unlock_level="74" name_key="resources5-2" has_quality="false" >
 		<unlock_entry item="wotwToolAdvancedPestle,wotwToolSmoothJawPliers,wotwToolScrewGun,wotwToolTapeMeasure,wotwToolPortableCNC,wotwToolBrassHammer,wotwToolSharpKnife,wotwToolSewingMachine,wotwToolReloadingPress,wotwToolSocketSet,wotwToolWSCarbideBlade,wotwToolWSHeatedRack" unlock_tier="1" />
 	</display_entry>
-	<display_entry icon="meleeWpnTungstenClubParts,resourceAcid,toolDewFilter" unlock_level="77,80,83" name_key="resources5-3,resources5-4,resources5-5" has_quality="false" >
-		<unlock_entry item="meleeWpnTungstenClubParts" unlock_tier="1" />
-		<unlock_entry item="resourceAcid,wotwResourceKerosene" unlock_tier="2" />
-		<unlock_entry item="toolDewFilter,wotwResourceDieselBundle,wotwResourceKeroseneBundle" unlock_tier="3" />
+	<display_entry icon="resourceAcid,toolDewFilter" unlock_level="80,83" name_key="resources5-4,resources5-5" has_quality="false" >
+		<!-- <unlock_entry item="meleeWpnTungstenClubParts" unlock_tier="1" /> -->
+		<unlock_entry item="resourceAcid,wotwResourceKerosene" unlock_tier="1" />
+		<unlock_entry item="toolDewFilter,wotwResourceDieselBundle,wotwResourceKeroseneBundle" unlock_tier="2" />
 	</display_entry>
 	<display_entry icon="toolDewGatherer,wotwDrinkJarEmpty,wotwWorkToolTunedEngine" unlock_level="86,89,92" name_key="resources6-1,resources6-2,resources6-2" has_quality="false" >
 		<unlock_entry item="toolDewGatherer,toolDewTarp" unlock_tier="1" />
@@ -14449,7 +14449,7 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="68,92" value="1" tags="oilBundle,ammoGasCanBundle,forgedIronBundle,forgedSteelBundle,forgedTungstenBundle,crushedSandBundle,headlightBundle,sewingKitBundle,paperBundle"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="71,92" value="1" tags="calipers,rebarBender,weldingTool,hammerRounding,toolAndDieSet,toolBeaker,fryingPan,roastingPan,loafPan,toolCuttingBoard"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="74,92" value="1" tags="wotwToolAdvancedPestle,wotwToolSmoothJawPliers,wotwToolScrewGun,wotwToolTapeMeasure,wotwToolPortableCNC,wotwToolBrassHammer,wotwToolSharpKnife,wotwToolSewingMachine,wotwToolReloadingPress,wotwToolSocketSet,wotwToolWSCarbideBlade,wotwToolWSHeatedRack"/>
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="77,92" value="1" tags="meleeWpnTungstenClubParts"/>
+		<!-- <passive_effect name="RecipeTagUnlocked" operation="base_set" level="77,92" value="1" tags="meleeWpnTungstenClubParts"/> -->
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,92" value="1" tags="resourceAcid,wotwResourceKerosene"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="83,92" value="1" tags="toolDewFilter,wotwResourceDieselBundle,wotwResourceKeroseneBundle"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="86,92" value="1" tags="toolDewGatherer,toolDewTarp"/>
@@ -15074,7 +15074,7 @@
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modGunBarrelExtender"/>
 		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modGunBarrelExtender"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="1,6" value="599,599" tags="modGunBarrelExtender"/>
+		<!-- <passive_effect name="CraftingTier" operation="base_add" level="1,6" value="599,599" tags="modGunBarrelExtender"/> -->
 		<passive_effect name="CraftingTier" operation="base_add" level="1,6" value="599,599" tags="modMeleeDiamondTip"/>
 		<passive_effect name="CraftingTier" operation="base_add" level="1,6" value="599,599" tags="modMeleeFiremansAxeMod"/>
 		<passive_effect name="CraftingTier" operation="base_add" level="1,6" value="599,599" tags="modArmorStealthBoots"/>
@@ -15088,7 +15088,7 @@
 	<display_entry item="modHDGunBarrelExtender" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDGunBarrelExtender"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDGunBarrelExtender"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDGunBarrelExtender"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15249,7 +15249,7 @@
 	<display_entry item="modHDGunShotgunTubeExtenderMagazine" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDGunShotgunTubeExtenderMagazine"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDGunShotgunTubeExtenderMagazine"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDGunShotgunTubeExtenderMagazine"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15276,7 +15276,7 @@
 	<display_entry item="modHDGunMagazineExtender" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDGunMagazineExtender"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDGunMagazineExtender"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDGunMagazineExtender"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15293,7 +15293,7 @@
 	<display_entry item="modHDGunDrumMagazineExtender" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDGunDrumMagazineExtender"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDGunDrumMagazineExtender"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDGunDrumMagazineExtender"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15311,7 +15311,7 @@
 	<display_entry item="LMGBeltBag" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="LMGBeltBag"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,199,299,399,499,599" tags="LMGBeltBag"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="LMGBeltBag"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15365,7 +15365,7 @@
 	<display_entry item="modHDMeleeTemperedBlade" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDMeleeTemperedBlade"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDMeleeTemperedBlade"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDMeleeTemperedBlade"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15383,7 +15383,7 @@
 	<display_entry item="modHDMeleeSerratedBlade" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDMeleeSerratedBlade"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDMeleeSerratedBlade"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDMeleeSerratedBlade"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15419,7 +15419,7 @@
 	<display_entry item="modHDMeleeErgonomicGrip" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDMeleeErgonomicGrip"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDMeleeErgonomicGrip"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDMeleeErgonomicGrip"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15446,7 +15446,7 @@
 	<display_entry item="modMeleeHDClubBarbedWire" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modMeleeHDClubBarbedWire"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modMeleeHDClubBarbedWire"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modMeleeHDClubBarbedWire"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15472,7 +15472,7 @@
 	<display_entry item="modHDMeleeClubMetalChain" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDMeleeClubMetalChain"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDMeleeClubMetalChain"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDMeleeClubMetalChain"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15490,7 +15490,7 @@
 	<display_entry item="modHDMeleeGraveDigger" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDMeleeGraveDigger"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDMeleeGraveDigger"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDMeleeGraveDigger"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15508,7 +15508,7 @@
 	<display_entry item="modHDMeleeBunkerBuster" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDMeleeBunkerBuster"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDMeleeBunkerBuster"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDMeleeBunkerBuster"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15526,7 +15526,7 @@
 	<display_entry item="modHDMeleeIronBreaker" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDMeleeIronBreaker"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDMeleeIronBreaker"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDMeleeIronBreaker"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15544,7 +15544,7 @@
 	<display_entry item="modHDMeleeWoodSplitter" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDMeleeWoodSplitter"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDMeleeWoodSplitter"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDMeleeWoodSplitter"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15562,7 +15562,7 @@
 	<display_entry item="modMeleeHandleSelfPropelled" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modMeleeHandleSelfPropelled"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modMeleeHandleSelfPropelled"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modMeleeHandleSelfPropelled"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15571,7 +15571,7 @@
 	<display_entry item="modMuscipSlayer" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modMuscipSlayer"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modMuscipSlayer"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modMuscipSlayer"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15589,7 +15589,7 @@
 	<display_entry item="modMotherLode" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modMotherLode"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modMotherLode"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modMotherLode"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15598,7 +15598,7 @@
 	<display_entry item="modBonusExp" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modBonusExp"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modBonusExp"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modBonusExp"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15625,7 +15625,7 @@
 	<display_entry item="modArmorHDFittings" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modArmorHDFittings"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modArmorHDFittings"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorHDFittings"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15652,7 +15652,7 @@
 	<display_entry item="modArmorPlatingHD" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modArmorPlatingHD"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modArmorPlatingHD"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorPlatingHD"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15697,7 +15697,7 @@
 	<display_entry item="modArmorQuintStoragePocket" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modArmorQuintStoragePocket"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modArmorQuintStoragePocket"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorQuintStoragePocket"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15742,7 +15742,7 @@
 	<display_entry item="modHDArmorBandolier" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modHDArmorBandolier"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modHDArmorBandolier"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modHDArmorBandolier"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15769,7 +15769,7 @@
 	<display_entry item="modArmorHelmetLightHD" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modArmorHelmetLightHD"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modArmorHelmetLightHD"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorHelmetLightHD"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15778,7 +15778,7 @@
 	<display_entry item="modReducedJumping" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modReducedJumping"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modReducedJumping"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modReducedJumping"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15787,7 +15787,7 @@
 	<display_entry item="wotwModArmorInsulatedLinerT1" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="wotwModArmorInsulatedLinerT1"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="wotwModArmorInsulatedLinerT1"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="wotwModArmorInsulatedLinerT1"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15796,7 +15796,7 @@
 	<display_entry item="wotwModArmorInsulatedLinerT2" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="wotwModArmorInsulatedLinerT2"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="wotwModArmorInsulatedLinerT2"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="wotwModArmorInsulatedLinerT2"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15805,7 +15805,7 @@
 	<display_entry item="modArmorHDInsulatedLiner" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modArmorHDInsulatedLiner"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modArmorHDInsulatedLiner"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorHDInsulatedLiner"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15814,7 +15814,7 @@
 	<display_entry item="wotwModArmorCoolingMeshT1" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="wotwModArmorCoolingMeshT1"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="wotwModArmorCoolingMeshT1"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="wotwModArmorCoolingMeshT1"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15823,7 +15823,7 @@
 	<display_entry item="wotwModArmorCoolingMeshT2" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="wotwModArmorCoolingMeshT2"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="wotwModArmorCoolingMeshT2"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="wotwModArmorCoolingMeshT2"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15832,7 +15832,7 @@
 	<display_entry item="modArmorHDCoolingMesh" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modArmorHDCoolingMesh"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modArmorHDCoolingMesh"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorHDCoolingMesh"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15855,7 +15855,7 @@
 	<display_entry item="modArmorBurntProtectionHands" unlock_level="1,2,3,4,5" />
 	<display_entry item="modArmorBurntProtectionFeet" unlock_level="1,2,3,4,5" />
 	<effect_group>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="modArmorBurntProtectionHead,modArmorBurntProtectionChest,modArmorBurntProtectionHands,modArmorBurntProtectionFeet"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorBurntProtectionHead,modArmorBurntProtectionChest,modArmorBurntProtectionHands,modArmorBurntProtectionFeet"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15866,7 +15866,7 @@
 	<display_entry item="modArmorDesertProtectionHands" unlock_level="1,2,3,4,5" />
 	<display_entry item="modArmorDesertProtectionFeet" unlock_level="1,2,3,4,5" />
 	<effect_group>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="modArmorDesertProtectionHead,modArmorDesertProtectionChest,modArmorDesertProtectionHands,modArmorDesertProtectionFeet"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorDesertProtectionHead,modArmorDesertProtectionChest,modArmorDesertProtectionHands,modArmorDesertProtectionFeet"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15877,7 +15877,7 @@
 	<display_entry item="modArmorSnowProtectionHands" unlock_level="1,2,3,4,5" />
 	<display_entry item="modArmorSnowProtectionFeet" unlock_level="1,2,3,4,5" />
 	<effect_group>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="modArmorSnowProtectionHead,modArmorSnowProtectionChest,modArmorSnowProtectionHands,modArmorSnowProtectionFeet"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorSnowProtectionHead,modArmorSnowProtectionChest,modArmorSnowProtectionHands,modArmorSnowProtectionFeet"/>
 	</effect_group>
 </crafting_skill>
 
@@ -15888,7 +15888,7 @@
 	<display_entry item="modArmorRadiationProtectionHands" unlock_level="1,2,3,4,5" />
 	<display_entry item="modArmorRadiationProtectionFeet" unlock_level="1,2,3,4,5" />
 	<effect_group>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5" value="1,200,300,400,500,600" tags="modArmorRadiationProtectionHead,modArmorRadiationProtectionChest,modArmorRadiationProtectionHands,modArmorRadiationProtectionFeet"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modArmorRadiationProtectionHead,modArmorRadiationProtectionChest,modArmorRadiationProtectionHands,modArmorRadiationProtectionFeet"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16032,7 +16032,7 @@
 	<display_entry item="modTurboSingle" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modTurboSingle"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modTurboSingle"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modTurboSingle"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16041,7 +16041,7 @@
 	<display_entry item="modTurboTwin" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modTurboTwin"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modTurboTwin"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modTurboTwin"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16050,7 +16050,7 @@
 	<display_entry item="modTuneupMinor" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modTuneupMinor"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modTuneupMinor"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modTuneupMinor"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16059,7 +16059,7 @@
 	<display_entry item="modTuneupMajor" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modTuneupMajor"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modTuneupMajor"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modTuneupMajor"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16068,7 +16068,7 @@
 	<display_entry item="modBumperSpikesSteel" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modBumperSpikesSteel"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modBumperSpikesSteel"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modBumperSpikesSteel"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16077,7 +16077,7 @@
 	<display_entry item="modBumperSpikesTungsten" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modBumperSpikesTungsten"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modBumperSpikesTungsten"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modBumperSpikesTungsten"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16086,7 +16086,7 @@
 	<display_entry item="modRollBarSteel" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modRollBarSteel"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modRollBarSteel"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modRollBarSteel"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16095,7 +16095,7 @@
 	<display_entry item="modRollBarTungsten" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modRollBarTungsten"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modRollBarTungsten"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modRollBarTungsten"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16104,7 +16104,7 @@
 	<display_entry item="modLightsHID" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modLightsHID"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modLightsHID"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modLightsHID"/>
 	</effect_group>
 </crafting_skill>
 
@@ -16113,7 +16113,7 @@
 	<display_entry item="modLightsLED" unlock_level="1,2,3,4,5,6" />
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,6" value="1" tags="modLightsLED"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6" value="1,1,200,300,400,500,600" tags="modLightsLED"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6" value="0,199,299,399,499,599" tags="modLightsLED"/>
 	</effect_group>
 </crafting_skill>
 		</insertAfter>

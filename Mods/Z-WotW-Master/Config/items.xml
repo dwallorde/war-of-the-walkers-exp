@@ -5668,9 +5668,8 @@
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value="gunPistol1911_reload"/>
-		<property name="Particles_muzzle_fire" value="gunfire_desertvulture"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_desertvulture_fpv"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol_desertvulture"/>
 		<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
 		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
 		<property name="triggerEffectShootDualsense" value="PistolShoot"/>
@@ -5776,9 +5775,7 @@
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value="gunPistol1911_reload"/>
 		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="gunfire_desertvulture"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_desertvulture_fpv"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol_desertvulture"/>
 		<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
 		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
 		<property name="triggerEffectShootDualsense" value="PistolShoot"/>
@@ -5884,14 +5881,10 @@
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value="dryfire"/>
-		<property name="Particles_muzzle_fire" value="gunfire_shotgun"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_shotgun_fpv"/>
-		<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
-		<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
+		<property name="Particles_muzzle_fire" value="gunfire_SG_pump"/>
 		<property name="ScopeOffset" value="-.00062,.088,.065"/>
 		<property name="SideOffset" value="0,0,0"/>
 		<property name="BarrelOffset" value="0,0,0"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
 		<property name="triggerEffectTriggerPullDualsense" value="ShotgunTrigger"/>
 		<property name="triggerEffectTriggerPullXbox" value="ShotgunTrigger"/>
 		<property name="triggerEffectShootDualsense" value="ShotgunShoot"/>
@@ -5991,12 +5984,10 @@
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value="dryfire"/>
-		<property name="Particles_muzzle_fire" value="gunfire_autoshotgun"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_autoshotgun_fpv"/>
+		<property name="Particles_muzzle_fire" value="gunfire_SG_auto"/>
 		<property name="ScopeOffset" value="-.00062,.088,.065"/>
 		<property name="SideOffset" value="0,0,0"/>
 		<property name="BarrelOffset" value="0,0,0"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
 		<property name="triggerEffectTriggerPullDualsense" value="ShotgunTrigger"/>
 		<property name="triggerEffectTriggerPullXbox" value="ShotgunTrigger"/>
 		<property name="triggerEffectShootDualsense" value="ShotgunShoot"/>
@@ -6096,9 +6087,8 @@
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value="dryfire"/>
-		<property name="Particles_muzzle_fire" value="gunfire_sniper"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_sniper_fpv"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_rifle_hunting"/>
 		<property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
 		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
 		<property name="triggerEffectTriggerShootDualsense" value="RifleShoot"/>
@@ -6206,9 +6196,8 @@
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value="dryfire"/>
-		<property name="Particles_muzzle_fire" value="gunfire_sniper"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_sniper_fpv"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_rifle_lever"/>
 		<property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
 		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
 		<property name="triggerEffectTriggerShootDualsense" value="RifleShoot"/>
@@ -6313,12 +6302,11 @@
 		<property name="Sound_end" value="mp5_fire_end"/>
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value="wotwGunMGUMP45_reload"/>
-		<property name="Particles_muzzle_fire" value="gunfire_SMG"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_SMG_fpv"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_MG_AR"/>
 		<property name="ScopeOffset" value="-.000525,.1449,-.2"/>
 		<property name="SideOffset" value="0,0,0"/>
 		<property name="BarrelOffset" value="-.062,.062,.16"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
 		<property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
 		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
 		<property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
@@ -6425,12 +6413,11 @@
 		<property name="Sound_end" value="mp5_fire_end"/>
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value="wotwGunMGP90_reload"/>
-		<property name="Particles_muzzle_fire" value="gunfire_SMG"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_SMG_fpv"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_MG_AR"/>
 		<property name="ScopeOffset" value="-.000525,.1449,-.2"/>
 		<property name="SideOffset" value="0,0,0"/>
 		<property name="BarrelOffset" value="-.062,.062,.16"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
 		<property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
 		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
 		<property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
@@ -6443,7 +6430,7 @@
 		<property name="SightsCameraOffset" value="0,-0.016,0"/>
 		<property name="ScopeCameraOffset" value="-.0002,.0075,-.00205"/>
 		<!-- <property name="ScopeCameraOffset" value="-.0002,.0075,-.00205"/> -->
-		<property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+		<property name="zoomTriggerEffectTriggerPullDualsense" value="RifleZoom"/>
 		<property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
 	</property>
 	<effect_group name="wotwGunMGP90">
@@ -8124,9 +8111,9 @@
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="Meshfile" value="#@modfolder:Resources/Clubs.unity3d?IronClubPrefab" />
 	<property name="HoldType" value="2"/>
-	<property name="Material" value="meleeWpnTungstenClubParts" />
+	<property name="Material" value="MmeleeWpnClubParts" />
 	<property name="TintColor" value="166, 166, 166"/>
-	<property name="Weight" value="1"/>
+	<property name="Weight" value="2"/>
 	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon" />
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -8234,9 +8221,9 @@
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="Meshfile" value="#@modfolder:Resources/Clubs.unity3d?IronClubPrefab" />
 	<property name="HoldType" value="2"/>
-	<property name="Material" value="meleeWpnTungstenClubParts" />
+	<property name="Material" value="MmeleeWpnClubParts" />
 	<property name="TintColor" value="166, 166, 166"/>
-	<property name="Weight" value="1"/>
+	<property name="Weight" value="4"/>
 	<property name="ScrapTimeOverride" value="5.0"/>
 	<property name="RepairTools" value="repairKitWeapon" />
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -19774,6 +19761,7 @@
 	<set xpath="/items/item[@name='resourceLeather']/property[@name='Stacknumber']/@value">500</set>
 	<set xpath="/items/item[@name='resourceTestosteroneExtract']/property[@name='Stacknumber']/@value">50</set>
 	<set xpath="/items/item[@name='resourceScrapLead']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceScrapBrass']/property[@name='Stacknumber']/@value">10000</set>
 	<set xpath="/items/item[@name='resourceClayLump']/property[@name='Stacknumber']/@value">10000</set>
 	<set xpath="/items/item[@name='resourceCobblestones']/property[@name='Stacknumber']/@value">10000</set>
 	<set xpath="/items/item[@name='resourceCement']/property[@name='Stacknumber']/@value">10000</set>
@@ -22073,6 +22061,7 @@
 	<property name="DescriptionKey" value="wotwPrimitiveArmourSkillMagazineDesc"/>
 	<property name="Unlocks" value="craftingPrimitiveArmor"/>
 	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="Weight" value="1"/>
 	
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingPrimitiveArmor" level="1"/> <!-- level="-1" sets a perk to max level -->
@@ -22094,6 +22083,7 @@
 	<property name="DescriptionKey" value="wotwPrimitiveToolSkillMagazineDesc"/>
 	<property name="Unlocks" value="craftingPrimitiveTools"/>
 	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="Weight" value="1"/>
 	
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingPrimitiveTools" level="1"/> <!-- level="-1" sets a perk to max level -->
@@ -22115,6 +22105,7 @@
 	<property name="DescriptionKey" value="wotwPrimitiveWeaponsSkillMagazineDesc"/>
 	<property name="Unlocks" value="craftingPrimitiveWeapons"/>
 	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="Weight" value="1"/>
 	
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingPrimitiveWeapons" level="1"/> <!-- level="-1" sets a perk to max level -->
@@ -22136,6 +22127,7 @@
 	<property name="DescriptionKey" value="wotwHarvestingToolsT0SkillMagazineDesc"/>
 	<property name="Unlocks" value="craftingHarvestingToolsT0"/>
 	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="Weight" value="1"/>
 	
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHarvestingToolsT0" level="1"/> <!-- level="-1" sets a perk to max level -->
@@ -22283,6 +22275,7 @@
 	<property name="DescriptionKey" value="wotwRepairToolsT0SkillMagazineDesc"/>
 	<property name="Unlocks" value="craftingRepairToolsT0"/>
 	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="Weight" value="1"/>
 	
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairToolsT0" level="1"/> <!-- level="-1" sets a perk to max level -->
@@ -22367,6 +22360,7 @@
 	<property name="DescriptionKey" value="wotwSalvageToolsT0SkillMagazineDesc"/>
 	<property name="Unlocks" value="craftingSalvageToolsT0"/>
 	<property name="TraderStageTemplate" value="midTier0"/>
+	<property name="Weight" value="1"/>
 	
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageToolsT0" level="1"/> <!-- level="-1" sets a perk to max level -->
@@ -30728,14 +30722,14 @@
 <append xpath="/items">
 		<!-- *** HUNTER_HELMET -->
 <item name="armorHunterHelmet">
-	<property name="Extends" value="armorMediumMaster" param1="CustomIcon"/>
+	<property name="Extends" value="armorLightMaster" param1="CustomIcon"/>
 	<property name="CustomIcon" value="armorRangerHelmet"/>
 	<property name="CustomIconTint" value="210,0,210"/>
 	<property name="UnlockedBy" value="hunterCraftHunterArmour"/>
 	<property name="DescriptionKey" value="armorHunterHelmetDesc"/>
 	<property name="DisplayType" value="armorHunterHelmet"/>
 	<property name="ArmorGroup" value="groupHunter"/>
-	<property name="Tags" value="head,armor,armorHead,mediumArmor,mediumArmorPenalty,canHaveCosmetic,mediumArmorDeg,armorMediumSkill,armorHunterBonus"/>
+	<property name="Tags" value="head,armor,armorHead,lightArmor,canHaveCosmetic,lightArmorDeg,armorLightSkill,armorHunterBonus"/>
 	<property name="EquipSlot" value="Head"/>
 	<property name="SoundPickup" value="headwear_cloth_grab"/>
 	<property name="SoundPlace" value="headwear_cloth_place"/>
@@ -30782,14 +30776,14 @@
 
 		<!-- *** HUNTER_OUTFIT -->
 <item name="armorHunterOutfit"> 
-	<property name="Extends" value="armorMediumMaster" param1="CustomIcon"/>
+	<property name="Extends" value="armorLightMaster" param1="CustomIcon"/>
 	<property name="CustomIcon" value="armorRangerOutfit"/>
 	<property name="CustomIconTint" value="210,0,210"/>
 	<property name="UnlockedBy" value="hunterCraftHunterArmour"/>
 	<property name="DescriptionKey" value="armorHunterOutfitDesc"/>
 	<property name="DisplayType" value="armorHunterOutfit"/>
 	<property name="ArmorGroup" value="groupHunter"/>
-	<property name="Tags" value="upperbody,chest,armor,armorChest,mediumArmor,mediumArmorPenalty,canHaveCosmetic,mediumArmorDeg,armorMediumSkill,armorHunterBonus"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorDeg,armorLightSkill,armorHunterBonus"/>
 	<property name="EquipSlot" value="Chest"/>
 	<property name="SoundPickup" value="outfit_leather_grab"/>
 	<property name="SoundPlace" value="outfit_leather_place"/>
@@ -30835,14 +30829,14 @@
 
 		<!-- *** HUNTER_GLOVES -->
 <item name="armorHunterGloves">
-	<property name="Extends" value="armorMediumMaster" param1="CustomIcon"/>
+	<property name="Extends" value="armorLightMaster" param1="CustomIcon"/>
 	<property name="CustomIcon" value="armorRangerGloves"/>
 	<property name="CustomIconTint" value="210,0,210"/>
 	<property name="UnlockedBy" value="hunterCraftHunterArmour"/>
 	<property name="DescriptionKey" value="armorHunterGlovesDesc"/>
 	<property name="DisplayType" value="armorHunterGloves"/>
 	<property name="ArmorGroup" value="groupHunter"/>
-	<property name="Tags" value="upperbody,hands,armor,armorHands,mediumArmor,mediumArmorPenalty,canHaveCosmetic,mediumArmorDeg,armorMediumSkill,armorHunterBonus"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,lightArmorDeg,armorLightSkill,armorHunterBonus"/>
 	<property name="EquipSlot" value="Hands"/>
 	<property name="SoundPickup" value="gloves_leather_grab"/>
 	<property name="SoundPlace" value="gloves_leather_place"/>
@@ -30890,14 +30884,14 @@
 
 		<!-- *** HUNTER_BOOTS -->
 <item name="armorHunterBoots">
-	<property name="Extends" value="armorMediumMaster" param1="CustomIcon"/>
+	<property name="Extends" value="armorLightMaster" param1="CustomIcon"/>
 	<property name="CustomIcon" value="armorRangerBoots"/>
 	<property name="CustomIconTint" value="210,0,210"/>
 	<property name="UnlockedBy" value="hunterCraftHunterArmour"/>
 	<property name="DescriptionKey" value="armorHunterBootsDesc"/>
 	<property name="DisplayType" value="armorHunterBoots"/>
 	<property name="ArmorGroup" value="groupHunter"/>
-	<property name="Tags" value="lowerbody,feet,armor,armorFeet,mediumArmor,mediumArmorPenalty,canHaveCosmetic,mediumArmorDeg,armorMediumSkill,armorHunterBonus"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorDeg,armorLightSkill,armorHunterBonus"/>
 	<property name="EquipSlot" value="Feet"/>
 	<property name="SoundPickup" value="footwear_leather_grab"/>
 	<property name="SoundPlace" value="footwear_leather_place"/>
@@ -31427,7 +31421,7 @@
 		<property name="Create_item" value="resourcePaper"/>
 		<property name="Create_item_count" value="0"/>
 		<property name="Random_item" value="wotwHDEngine,wotwHDBattery"/>
-		<property name="Random_item_count" value="1,1"/>
+		<property name="Random_item_count" value="500,500"/>
 		<property name="Random_count" value="1"/>
 		<property name="Unique_random_only" value="true"/>
 	</property>
@@ -34657,5 +34651,15 @@
 <!-- <set xpath="//item[contains(@name, 'armor')] -->
 	
 	<!-- [(contains(@name, 'armor'))and not(contains(@name, 'armorPrimitive'))] -->
+	
+<append xpath="//item[@name='toughGuyShirtAdmin']">
+	<effect_group tiered="false">
+	<requirement name="IsEquipped"/>
+		<passive_effect name="LootStage" operation="base_add" value="200"/>
+		<display_value name="dLootStage" value="200"/>
+		<passive_effect name="TraderStage" operation="base_add" value="300"/>
+		<display_value name="dTraderStage" operation="base_add" value="300"/>
+	</effect_group>
+</append>
 
 </config>

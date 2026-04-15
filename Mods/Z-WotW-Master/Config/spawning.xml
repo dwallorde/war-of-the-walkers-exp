@@ -2,9 +2,15 @@
 
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='dz01']/@entitygroup">ForestZombies</set>
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='nz01']/@entitygroup">NightForestZombies</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='dz01']/@maxcount">2</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='nz01']/@maxcount">2</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='dz01']/@respawndelay">2</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='nz01']/@respawndelay">2.5</set>
 
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='dz02']/@entitygroup">ForestZombies</set>
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='nz02']/@entitygroup">NightForestZombies</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='dz02']/@maxcount">3</set>
+<set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='nz02']/@maxcount">3</set>
 
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='dz03']/@maxcount">3</set>
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='nz03']/@maxcount">4</set>
@@ -17,7 +23,7 @@
 <set xpath="/spawning/biome[@name='pine_forest']/spawn[@id='ne01']/@respawndelay">1.1</set>
 
 <insertAfter xpath="/spawning/biome[@name='pine_forest']/spawn[@id='ne01']">
-		<spawn id="be01" maxcount="1" respawndelay="7" time="Any" entitygroup="ForestNPCs" />
+		<spawn id="be01" maxcount="1" respawndelay="3" time="Day" entitygroup="ForestNPCs" notags="commercial,industrial,downtown" />
 </insertAfter>
 
 <remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='nnHarley01']"/>
@@ -26,8 +32,15 @@
 <remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='dnHarley03']"/>
 <remove xpath="/spawning/biome[@name='pine_forest']/spawn[@id='nnHarley03']"/>
 
+<set xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='dz01']/@maxcount">2</set>
+<set xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='nz04']/@maxcount">2</set>
+
 <set xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='dz03']/@maxcount">3</set>
 <set xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='nz03']/@maxcount">4</set>
+
+<insertAfter xpath="/spawning/biome[@name='burnt_forest']/spawn[@id='ne01']">
+		<spawn id="be01" maxcount="1" respawndelay="3" time="Day" entitygroup="ForestNPCs" notags="commercial,industrial,downtown" />
+</insertAfter>
 
 <set xpath="/spawning/biome[@name='desert']/spawn[@id='dz02']/@maxcount">4</set>
 <set xpath="/spawning/biome[@name='desert']/spawn[@id='nz02']/@maxcount">5</set>
@@ -39,7 +52,7 @@
 <set xpath="/spawning/biome[@name='desert']/spawn[@id='ae01']/@entitygroup">EnemyAnimalsDesert2</set>
 
 <insertAfter xpath="/spawning/biome[@name='desert']/spawn[@id='ne01']">
-		<spawn id="be01" maxcount="1" respawndelay="7" time="Any" entitygroup="DesertNPCs" />
+		<spawn id="be01" maxcount="1" respawndelay="3" time="Any" entitygroup="DesertNPCs" />
 </insertAfter>
 
 <set xpath="/spawning/biome[@name='snow']/spawn[@id='nz01']/@entitygroup">SnowZombiesNight</set>
@@ -58,7 +71,7 @@
 <set xpath="/spawning/biome[@name='snow']/spawn[@id='ae01']/@entitygroup">EnemyAnimalsSnow2</set>
 
 <insertAfter xpath="/spawning/biome[@name='snow']/spawn[@id='ne01']">
-		<spawn id="be01" maxcount="1" respawndelay="7" time="Any" entitygroup="SnowNPCs" />
+		<spawn id="be01" maxcount="1" respawndelay="3" time="Any" entitygroup="SnowNPCs" />
 </insertAfter>
 
 <set xpath="/spawning/biome[@name='wasteland']/spawn[@id='dz01']/@respawndelay">1</set>
@@ -80,7 +93,7 @@
 <set xpath="/spawning/biome[@name='wasteland']/spawn[@id='ne01']/@respawndelay">0.9</set>
 
 <insertAfter xpath="/spawning/biome[@name='wasteland']/spawn[@id='ne01']">
-		<spawn id="be01" maxcount="1" respawndelay="7" time="Any" entitygroup="WastelandNPCs" />
+		<spawn id="be01" maxcount="1" respawndelay="3" time="Any" entitygroup="WastelandNPCs" />
 </insertAfter>
 
 <set xpath="/spawning/biome[@name='wasteland']/spawn[@id='doakszhhd01']/@maxcount">2</set>
@@ -205,5 +218,70 @@
 		  </day>
     </entityspawner>
 </append>
+
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='dnFriendlyCore01']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='nnFriendlyCore01']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='dnFriendlyCore02']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='nnFriendlyCore02']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='dnFriendlyCore03']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='nnFriendlyCore03']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='dnNationalGuard01']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='nnNationalGuard01']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='dnNationalGuard02']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='nnNationalGuard02']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='dnNationalGuard03']"/>
+<remove xpath="//biome[@name='pine_forest']/spawn[@id='nnNationalGuard03']"/>
+
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='dnFriendlyCore01']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='nnFriendlyCore01']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='dnFriendlyCore02']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='nnFriendlyCore02']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='dnFriendlyCore03']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='nnFriendlyCore03']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='dnNationalGuard01']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='nnNationalGuard01']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='dnNationalGuard02']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='nnNationalGuard02']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='dnNationalGuard03']"/>
+<remove xpath="//biome[@name='burnt_forest']/spawn[@id='nnNationalGuard03']"/>
+
+<remove xpath="//biome[@name='desert']/spawn[@id='dnFriendlyCore01']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='nnFriendlyCore01']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='dnFriendlyCore02']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='nnFriendlyCore02']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='dnFriendlyCore03']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='nnFriendlyCore03']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='dnNationalGuard01']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='nnNationalGuard01']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='dnNationalGuard02']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='nnNationalGuard02']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='dnNationalGuard03']"/>
+<remove xpath="//biome[@name='desert']/spawn[@id='nnNationalGuard03']"/>
+
+<remove xpath="//biome[@name='snow']/spawn[@id='dnFriendlyCore01']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='nnFriendlyCore01']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='dnFriendlyCore02']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='nnFriendlyCore02']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='dnFriendlyCore03']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='nnFriendlyCore03']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='dnNationalGuard01']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='nnNationalGuard01']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='dnNationalGuard02']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='nnNationalGuard02']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='dnNationalGuard03']"/>
+<remove xpath="//biome[@name='snow']/spawn[@id='nnNationalGuard03']"/>
+
+<remove xpath="//biome[@name='wasteland']/spawn[@id='dnFriendlyCore01']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='nnFriendlyCore01']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='dnFriendlyCore02']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='nnFriendlyCore02']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='dnFriendlyCore03']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='nnFriendlyCore03']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='dnNationalGuard01']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='nnNationalGuard01']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='dnNationalGuard02']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='nnNationalGuard02']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='dnNationalGuard03']"/>
+<remove xpath="//biome[@name='wasteland']/spawn[@id='nnNationalGuard03']"/>
 
 </config>

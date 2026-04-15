@@ -8042,6 +8042,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classBarterVendingMachine">
@@ -8066,6 +8067,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classBuilderVendingMachinePOI">
@@ -8082,6 +8084,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classBuilderVendingMachine">
@@ -8106,6 +8109,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classCovertVendingMachinePOI">
@@ -8122,6 +8126,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classCovertVendingMachine">
@@ -8146,6 +8151,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classFighterVendingMachinePOI">
@@ -8162,6 +8168,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classFighterVendingMachine">
@@ -8186,6 +8193,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classHunterVendingMachinePOI">
@@ -8202,6 +8210,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classHunterVendingMachine">
@@ -8226,6 +8235,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classLooterVendingMachinePOI">
@@ -8242,6 +8252,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classLooterVendingMachine">
@@ -8266,6 +8277,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classMedicVendingMachinePOI">
@@ -8282,6 +8294,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classMedicVendingMachine">
@@ -8306,6 +8319,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classRangerVendingMachinePOI">
@@ -8322,6 +8336,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classRangerVendingMachine">
@@ -8346,6 +8361,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classSoldierVendingMachinePOI">
@@ -8362,6 +8378,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classSoldierVendingMachine">
@@ -8386,6 +8403,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classSurvivalistVendingMachinePOI">
@@ -8402,6 +8420,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classSurvivalistVendingMachine">
@@ -8426,6 +8445,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classTechnicianVendingMachinePOI">
@@ -8442,6 +8462,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classTechnicianVendingMachine">
@@ -8466,6 +8487,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classTradesmanVendingMachinePOI">
@@ -8482,6 +8504,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="DescriptionKey" value="classVendingMachinePOIDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <block name="classTradesmanVendingMachine">
@@ -8506,6 +8529,7 @@
 	<drop event="Destroy" name="resourceElectricParts" count="105"/>
 	<property name="DescriptionKey" value="classVendingMachineDesc" />
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <!-- Jay Vending Machine -->
@@ -8541,6 +8565,7 @@
 	<property name="SortOrder2" value="0000"/>
 	<property name="Group" value="Science,TCScience"/>
 	<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <!-- Bill Vending Machine -->
@@ -8576,6 +8601,7 @@
 	<property name="SortOrder2" value="0000"/>
 	<property name="Group" value="Science,TCScience"/>
 	<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+	<property name="StabilitySupport" value="true"/>
 </block>
 
 <!-- FARM PLANTS START -->
@@ -15302,16 +15328,16 @@
 	<property name="OpenSound" value="collector_open"/>
 	<property name="CloseSound" value="collector_close"/>
 	<property name="ConvertSound" value="collector_complete_item"/>
-	<property name="MinConvertTime" value="172800"/> <!-- 172800 Game Seconds = 48 Game Hours -->
+	<property name="MinConvertTime" value="86400"/> <!-- 86400 Game Seconds = 48 Game Hours -->
 	<property name="MaxConvertTime" value="172800"/> <!-- 172800 Game Seconds = 48 Game Hours -->
 	<property name="ConvertToItem" value="wotwAnimalTrapBaitSmallGame"/>
 	<property name="ModdedConvertToItem" value="wotwAnimalTrapBaitMediumGame"/>
 	<property name="ModdedConvertSpeed" value="2"/>
 	<property name="ModdedConvertCount" value="2"/>
-	<property name="ModTransformEnableNames" value="2,3,1"/>
-	<property name="ModTransformDisableNames" value=",0,"/>
-	<property name="ModTypes" value="Speed,Count,Modify"/>
-	<property name="EconomicValue" value="5"/>
+	<property name="ModTransformEnableNames" value="1,2,3"/>
+	<!-- <property name="ModTransformDisableNames" value=",0,"/> -->
+	<property name="ModTypes" value="Speed,Count,Type"/>
+	<property name="EconomicValue" value="1000"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="MaxDamage" value="200"/>
@@ -15484,7 +15510,7 @@
 	<property name="ModTransformEnableNames" value="2,3,1"/>
 	<property name="ModTransformDisableNames" value=",0,"/>
 	<property name="ModTypes" value="Speed,Count,Modify"/>
-	<property name="EconomicValue" value="5"/>
+	<property name="EconomicValue" value="1000"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="MaxDamage" value="500"/>
@@ -16288,7 +16314,7 @@
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="MeltTimePerUnit" value=".6"/>
 	<property name="Weight" value="100"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="CanPickup" value="true" /> 
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
@@ -16302,7 +16328,7 @@
 	<property name="Model" value="#@modfolder:Resources/Furniture3.unity3d?SportTrophyDiamondPrefab" />
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Weight" value="100"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="CanPickup" value="true" /> 
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
@@ -16316,7 +16342,7 @@
 	<property name="Model" value="#@modfolder:Resources/Furniture3.unity3d?SportTrophyGoldPrefab" />
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Weight" value="100"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="CanPickup" value="true" /> 
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
@@ -16331,7 +16357,7 @@
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="MeltTimePerUnit" value=".6"/>
 	<property name="Weight" value="100"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="CanPickup" value="true" /> 
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
@@ -16346,7 +16372,7 @@
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="MeltTimePerUnit" value=".6"/>
 	<property name="Weight" value="100"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="CanPickup" value="true" /> 
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
@@ -16360,7 +16386,7 @@
 	<property name="Model" value="#@modfolder:Resources/Furniture3.unity3d?SportTrophySilverPrefab" />
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Weight" value="100"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="CanPickup" value="true" /> 
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
@@ -16373,7 +16399,7 @@
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Furniture3.unity3d?StackedRocksPrefab" />
 	<property name="Weight" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
 	<property name="EconomicValue" value="400"/>
@@ -16386,7 +16412,7 @@
 <block name="globeWorld">
 	<property name="CustomIcon" value="globeWorld" />
 	<property name="Material" value="Mmetal_thin"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Furniture3.unity3d?WorldGlobePrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16403,7 +16429,7 @@
 <block name="bearTeddy">
 	<property name="CustomIcon" value="bearTeddy" />
 	<property name="Material" value="MclothStable"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Furniture3.unity3d?TeddyBearPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16423,7 +16449,7 @@
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Toys.unity3d?ToyRetroCarPrefab" />
 	<property name="Weight" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
 	<property name="EconomicValue" value="400"/>
@@ -16439,7 +16465,7 @@
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Toys.unity3d?toyDiceBluePrefab" />
 	<property name="Weight" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
 	<property name="EconomicValue" value="400"/>
@@ -16455,7 +16481,7 @@
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Toys.unity3d?toyDiceRedPrefab" />
 	<property name="Weight" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
 	<property name="EconomicValue" value="400"/>
@@ -16471,7 +16497,7 @@
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Toys.unity3d?toyDiceWhitePrefab" />
 	<property name="Weight" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
 	<property name="EconomicValue" value="400"/>
@@ -16487,7 +16513,7 @@
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Toys.unity3d?toyDuckYellowPrefab" />
 	<property name="Weight" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
 	<property name="EconomicValue" value="400"/>
@@ -16503,7 +16529,7 @@
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Toys.unity3d?toyDuckGreenPrefab" />
 	<property name="Weight" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
 	<property name="EconomicValue" value="400"/>
@@ -16519,7 +16545,7 @@
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Toys.unity3d?toyDuckBluePrefab" />
 	<property name="Weight" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/> 
 	<property name="EconomicValue" value="400"/>
@@ -16533,7 +16559,7 @@
 	<property name="CustomIcon" value="boxChristmas1" />
 	<property name="Material" value="MclothStable"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas1Prefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16550,7 +16576,7 @@
 	<property name="CustomIcon" value="boxChristmas2" />
 	<property name="Material" value="MclothStable"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas2Prefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16567,7 +16593,7 @@
 	<property name="CustomIcon" value="boxChristmas3" />
 	<property name="Material" value="MclothStable"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas3Prefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16584,7 +16610,7 @@
 	<property name="CustomIcon" value="boxChristmas4" />
 	<property name="Material" value="MclothStable"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas4Prefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16601,7 +16627,7 @@
 	<property name="CustomIcon" value="boxChristmas5" />
 	<property name="Material" value="MclothStable"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas5Prefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16618,7 +16644,7 @@
 	<property name="CustomIcon" value="boxChristmas6" />
 	<property name="Material" value="MclothStable"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?boxChristmas6Prefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16646,7 +16672,7 @@
 	<property name="CustomIcon" value="christmasSnowman" />
 	<property name="Material" value="MresourceSnowBall"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?christmasSnowmanPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16663,7 +16689,7 @@
 	<property name="CustomIcon" value="decorationChristmasBall" />
 	<property name="Material" value="MresourceScrapPolymers"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?decorationChristmasBallPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16680,7 +16706,7 @@
 	<property name="CustomIcon" value="decorationChristmasBell" />
 	<property name="Material" value="MresourceScrapBrassSmall"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?decorationChristmasBellPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16697,7 +16723,7 @@
 	<property name="CustomIcon" value="decorationChristmasGarland" />
 	<property name="Material" value="MresourceScrapPolymers"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?decorationChristmasGarlandPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16714,7 +16740,7 @@
 	<property name="CustomIcon" value="decorationChristmasSnowman" />
 	<property name="Material" value="MresourceScrapPolymers"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?decorationChristmasSnowmanPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16731,7 +16757,7 @@
 	<property name="CustomIcon" value="decorationChristmasWreath" />
 	<property name="Material" value="MresourceScrapPolymers"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?decorationChristmasWreathPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16815,7 +16841,7 @@
 	<property name="CustomIcon" value="stockingChristmas" />
 	<property name="Material" value="Mcloth"/>
 	<property name="MaxDamage" value="50"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?stockingChristmasPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16832,7 +16858,7 @@
 	<property name="CustomIcon" value="treeChristmas1Small" />
 	<property name="Material" value="MtreeWoodSmall"/>
 	<property name="MaxDamage" value="250"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?treeChristmas1SmallPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16849,7 +16875,7 @@
 	<property name="CustomIcon" value="treeChristmas1Small" />
 	<property name="Material" value="MtreeWoodSmall"/>
 	<property name="MaxDamage" value="250"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?treeChristmas2MediumPrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16866,7 +16892,7 @@
 	<property name="CustomIcon" value="treeChristmas1Small" />
 	<property name="Material" value="MtreeWoodSmall"/>
 	<property name="MaxDamage" value="250"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/ChristmasItems.unity3d?treeChristmas3LargePrefab" />
 	<property name="OnlySimpleRotations" value="true"/>
@@ -16886,7 +16912,7 @@
 	<property name="Class" value="Loot"/>
 	<property name="DisplayType" value="blockHardened"/>
 	<property name="Material" value="Mleather"/>
-	<property name="StabilitySupport" value="false"/>
+	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#@modfolder:Resources/Furniture3.unity3d?BriefcasePrefab" />
 	<property name="IsTerrainDecoration" value="true"/>

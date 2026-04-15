@@ -1951,7 +1951,7 @@
 
 <conditional>
 	<if cond="mod_loaded('sphereii_item_mod_degradation') == true">
-		<append xpath="//item_modifier[not(contains(@name, 'modClothingCLB'))and not(contains(@name, 'wotwModArmorInsulatedLinerT0'))and not(contains(@name, 'wotwModArmorCoolingMeshT0'))]/effect_group[passive_effect]">
+		<append xpath="//item_modifier[not(contains(@name, 'modClothingCLB'))and not(contains(@name, 'wotwModArmorInsulatedLinerT0'))and not(contains(@name, 'wotwModArmorCoolingMeshT0'))and not(contains(@name, 'modArmorWaterPurifier'))]/effect_group[passive_effect]">
 			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
 		</append>
 		<append xpath="//item_modifier[not(contains(@name, 'modDye'))and not(contains(@name, 'modGeneralMaster'))and not(contains(@name, 'wotwModArmorInsulatedLinerT0'))and not(contains(@name, 'wotwModArmorCoolingMeshT0'))and not(contains(@name, 'modBicycleChain'))and not(contains(@name, 'modClothingCLB'))and not(contains(@name, 'modBrushlessMotor'))and not(contains(@name, 'modCandyCane'))and not(contains(@name, 'modClothingFishing'))]">

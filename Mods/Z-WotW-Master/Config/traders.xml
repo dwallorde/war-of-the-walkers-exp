@@ -249,16 +249,26 @@
 		</traderstage_template>
 		
 		<traderstage_template name="modsTier1">
-			<entry min="1" max="999999" quality="0"/>
+			<entry min="999999" max="999999" quality="1"/> <!-- Don't show Q1 items -->
+			<entry min="1" max="99" quality="100"/>
+			<entry min="100" max="199" quality="300"/>
+			<entry min="200" max="299" quality="400"/>
+			<entry min="300" max="999999" quality="500"/>
 		</traderstage_template>
 		<traderstage_template name="modsTier2">
-			<entry min="100" max="999999" quality="0"/>
+			<entry min="999999" max="999999" quality="1"/> <!-- Don't show Q1 items -->
+			<entry min="150" max="199" quality="300"/>
+			<entry min="200" max="299" quality="400"/>
+			<entry min="300" max="999999" quality="500"/>
 		</traderstage_template>
 		<traderstage_template name="modsTier3">
-			<entry min="200" max="999999" quality="0"/>
+			<entry min="999999" max="999999" quality="1"/> <!-- Don't show Q1 items -->
+			<entry min="200" max="299" quality="400"/>
+			<entry min="300" max="999999" quality="500"/>
 		</traderstage_template>
 		<traderstage_template name="modsTier4">
-			<entry min="300" max="999999" quality="0"/>
+			<entry min="999999" max="999999" quality="1"/> <!-- Don't show Q1 items -->
+			<entry min="300" max="999999" quality="500"/>
 		</traderstage_template>
 		
 		<traderstage_template name="electricTier1">
@@ -2014,17 +2024,15 @@
 		
 		<!-- *** SPECIALTY -->
 		<trader_items count="all">
-			<item group="groupArmorMods" count="4,6"/>
-			<item group="groupArmorLight" count="3,5"/>
-			<item group="groupArmorMedium" count="3,5"/>
-			<item group="groupArmorHeavy" count="3,5"/>
-			<item name="armorParts" count="3,5"/>
+			<item group="groupArmorMods" count="6,8"/>
+			<item group="groupArmorLight" count="4,6"/>
+			<item group="groupArmorMedium" count="4,6"/>
+			<item group="groupArmorHeavy" count="4,6"/>
+			<item name="armorParts" count="4,7"/>
 			<item name="resourceSewingKit" count="3,5"/>
 			<item name="wotwArmourHeavySkillMagazine" count="1,2"/>
 			<item name="wotwArmourLightSkillMagazine" count="1,2"/>
 			<item name="wotwArmourMedSkillMagazine" count="1,2"/>
-			<!-- <item name="wotwDrugAntiRadMinor" count="1,2"/> -->
-			<!-- <item name="wotwDrugAntiRadMajor" count="1,2"/> -->
 			<item name="wotwTraderSafetyPass" count="1,2" prob="0.65"/>
 		</trader_items>
 		
@@ -2032,11 +2040,11 @@
 		<trader_items count="all">
 			<item group="traderAlways"/>
 			<item group="traderGeneral" count="3,6"/>
-			<item group="groupModsAll" count="4,8"/>
+			<item group="groupModsAll" count="20"/>
 			<item group="generalResources" count="4,6"/>
 			<item group="skillMagazines" count="3,5"/>
 			<item group="books" unique_only="true" count="3,4"/>
-			<item group="groupDyeMods" count="5"/>
+			<item group="groupDyeMods" count="2"/>
 			<item group="tools" prob="0.1" count="1,2"/>
 			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
 			<item group="groupRangedAll" prob="0.1" count="1,2"/>
@@ -2064,10 +2072,10 @@
 	<trader_info id="6" reset_interval="1">
 		<!-- *** SPECIALTY -->
 		<trader_items count="all">
-			<item group="groupVehicles" count="6,10"/>
-			<item group="groupMeleeMods" count="2,4"/>
-			<item group="tools" count="8,10"/>
-			<item group="rareTools" unique_only="true" count="2,3"/>
+			<item group="groupVehicles" count="8,14"/>
+			<item group="groupMeleeMods" count="5,10"/>
+			<item group="tools" count="10"/>
+			<item group="rareTools" unique_only="true" count="2,4"/>
 			<item group="traderElectrical" count="6,12"/>
 			<item group="toolParts" count="2,4"/>
 			<item name="wotwTraderSafetyPass" count="1,2" prob="0.65"/>
@@ -2075,14 +2083,14 @@
 		
 		<!-- *** GENERAL -->
 		<trader_items count="all">
-			<item group="traderAlways"/>
+			<item group="traderAlways" count="5,10"/>
 			<item group="traderGeneral" count="3,6"/>
-			<item group="groupModsAll" count="4,6"/>
+			<item group="groupModsAll" count="15"/>
 			<item group="generalResources" count="5,8"/>
 			<item group="skillMagazines" count="3,5"/>
 			<item group="books" unique_only="true" count="3,4"/>
-			<item group="groupDyeMods" count="5"/>
-			<item group="tools" prob="0.1" count="1,2"/>
+			<item group="groupDyeMods" count="2"/>
+			<item group="tools" count="5,10"/>
 			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
 			<item group="groupRangedAll" prob="0.1" count="1,2"/>
 			<item group="weaponsGunParts" count="3,6"/>
@@ -2113,12 +2121,10 @@
 			<item group="medicine" count="6,8"/>
 			<item group="rareMedicine" count="2,5"/>
 			<item group="ultraRareMedicine" prob="0.7" count="2,3"/>
-			<item group="skillMagazines" count="5,9"/>
-			<item group="commonBooks" count="2,4"/>
-			<item group="rareBooks" count="1,3"/>
-			<item group="perkBooks" count="1,3"/>
-			<!-- <item name="wotwDrugAntiRadMinor" count="1,2"/> -->
-			<!-- <item name="wotwDrugAntiRadMajor" count="1,2"/> -->
+			<item group="skillMagazines" count="8,16"/>
+			<item group="commonBooks" count="3,6"/>
+			<item group="rareBooks" count="2,4"/>
+			<item group="perkBooks" count="2,4"/>
 			<item name="wotwChickenYoung" count="1"/>
 			<item name="wotwChickenAdult" count="1" prob="0.25"/>
 			<item name="wotwScentBlocker" count="1"/>
@@ -2136,8 +2142,8 @@
 			<item group="generalResources" count="5,8"/>
 			<item group="skillMagazines" count="3,5"/>
 			<item group="books" unique_only="true" count="3,4"/>
-			<item group="groupDyeMods" count="5"/>
-			<item group="tools" prob="0.1" count="1,2"/>
+			<item group="groupDyeMods" count="2"/>
+			<item group="tools" prob="0.4" count="1,2"/>
 			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
 			<item group="groupRangedAll" prob="0.1" count="1,2"/>
 			<item group="weaponsGunParts" count="3,6"/>
@@ -2166,10 +2172,10 @@
 		<trader_items count="all">
 			<item group="groupAllAmmo" count="2,4"/>
 			<item group="ammoSupplies" count="2,3"/>
-			<item group="groupRangedAll" count="4,6"/>
-			<item group="groupMeleeAll" count="4,6"/>
-			<item group="weaponsGunParts" count="3,6"/>
-			<item group="groupRangedMods" count="1,2"/>
+			<item group="groupRangedAll" count="8,10"/>
+			<item group="groupMeleeAll" count="8,10"/>
+			<item group="weaponsGunParts" count="5,10"/>
+			<item group="groupRangedMods" count="2,4"/>
 			<item name="wotwTraderSafetyPass" count="1,2" prob="0.65"/>
 		</trader_items>
 		
@@ -2177,14 +2183,14 @@
 		<trader_items count="all">
 			<item group="traderAlways"/>
 			<item group="traderGeneral" count="3,6"/>
-			<item group="groupModsAll" count="4,6"/>
+			<item group="groupModsAll" count="15"/>
 			<item group="generalResources" count="5,8"/>
 			<item group="skillMagazines" count="3,5"/>
 			<item group="books" unique_only="true" count="3,4"/>
-			<item group="groupDyeMods" count="5"/>
+			<item group="groupDyeMods" count="2"/>
 			<item group="tools" prob="0.1" count="1,2"/>
-			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
-			<item group="groupRangedAll" prob="0.1" count="1,2"/>
+			<item group="groupMeleeAll" count="2,6"/>
+			<item group="groupRangedAll" count="2,6"/>
 			<item group="weaponsGunParts" count="3,6"/>
 			<item group="toolParts" count="2,4"/>
 			<item group="traderElectrical" prob="0.5" count="4,8"/>
@@ -2225,11 +2231,11 @@
 		<trader_items count="all">
 			<item group="traderAlways"/>
 			<item group="traderGeneral" count="3,6"/>
-			<item group="groupModsAll" count="4,6"/>
+			<item group="groupModsAll" count="10"/>
 			<item group="generalResources" count="5,8"/>
-			<item group="skillMagazines" count="3,5"/>
+			<item group="skillMagazines" count="4,6"/>
 			<item group="books" unique_only="true" count="3,4"/>
-			<item group="groupDyeMods" count="5"/>
+			<item group="groupDyeMods" count="2"/>
 			<item group="tools" prob="0.1" count="1,2"/>
 			<item group="groupMeleeAll" prob="0.1" count="1,2"/>
 			<item group="groupRangedAll" prob="0.1" count="1,2"/>

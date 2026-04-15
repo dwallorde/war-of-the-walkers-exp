@@ -1,17 +1,17 @@
 ﻿<configs>
 
 	<insertAfter xpath="/entitygroups/entitygroup[last()]">
-		<entitygroup name="AnimalSwiming">
-			fishStingRay, 1
-			fishTurtle, 1
-			fishSardine, 1 
-			fishClownfish, 1 
-			fishSalmon, 1
-			fishOctopus, 1
-			fishPerch, 1
-			fishPike, 1
-			fishBabyShark, 1
-			none, 91
+		<entitygroup name="SABLAnimalSwimming">
+			fishStingRay, 9
+			fishTurtle, 9
+			fishSardine, 9
+			fishClownfish, 9
+			fishSalmon, 9
+			fishOctopus, 9
+			fishPerch, 9
+			fishPike, 9
+			fishBabyShark, 9
+			none, 19
 		</entitygroup>
 	</insertAfter>
 </configs>

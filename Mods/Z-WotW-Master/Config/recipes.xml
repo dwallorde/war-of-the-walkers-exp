@@ -34,7 +34,7 @@
 <!-- <recipe name="toolPartsTungsten" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
 <!-- <recipe name="toolPartsAdvancedMotor" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
 <!-- <recipe name="meleeWpnTungstenSledgehammerParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
-<recipe name="meleeWpnTungstenClubParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
+<!-- <recipe name="meleeWpnTungstenClubParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
 <!-- <recipe name="meleeWpnTungstenSpearParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
 <!-- <recipe name="meleeWpnTungstenMacheteParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
 <recipe name="meleeWpnTungstenBatonParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
@@ -606,7 +606,7 @@
 </append>
 
 <append xpath="/recipes">
-<recipe name="modReducedJumping" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modReducedJumping" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
 	<ingredient name="resourceDuctTape" count="2"/>
@@ -614,35 +614,35 @@
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDMeleeGraveDigger" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDMeleeGraveDigger" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDMeleeBunkerBuster" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDMeleeBunkerBuster" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDMeleeIronBreaker" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDMeleeIronBreaker" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDMeleeWoodSplitter" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDMeleeWoodSplitter" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modArmorQuintStoragePocket" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorQuintStoragePocket" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="kevlar" count="10"/>
 	<ingredient name="resourceDuctTape" count="6"/>
@@ -650,7 +650,7 @@
 	<ingredient name="resourceSewingKit" count="6"/>
 </recipe>
 
-<recipe name="modHDArmorBandolier" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDArmorBandolier" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="kevlar" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="4"/>
 	<ingredient name="wotwResourceLeather" count="30"/>
@@ -658,7 +658,7 @@
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="modArmorPlatingHD" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorPlatingHD" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="20"/>
 	<ingredient name="resourceDuctTape" count="4"/>
@@ -666,7 +666,7 @@
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="modArmorHDFittings" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorHDFittings" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="kevlar" count="8"/>
 	<ingredient name="resourceDuctTape" count="4"/>
@@ -679,33 +679,33 @@
 	<ingredient name="wotwResourceRope" count="4"/>
 </recipe>
 
-<recipe name="wotwModArmorInsulatedLinerT1" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="wotwModArmorInsulatedLinerT1" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceCloth" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="4"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="wotwModArmorInsulatedLinerT2" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="wotwModArmorInsulatedLinerT2" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="wotwResourceLeather" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="8"/>
 	<ingredient name="resourceDuctTape" count="4"/>
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="modArmorHDInsulatedLiner" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorHDInsulatedLiner" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="kevlar" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="12"/>
 	<ingredient name="resourceDuctTape" count="8"/>
 	<ingredient name="resourceSewingKit" count="4"/>
 </recipe>
 
-<recipe name="wotwModArmorCoolingMeshT0" count="1" tags="perkAdvancedEngineering">
+<recipe name="wotwModArmorCoolingMeshT0" count="1" tags="workbenchCrafting">
 	<ingredient name="resourceYuccaFibers" count="15"/>
 	<ingredient name="wotwResourceRope" count="5"/>
 </recipe>
 
-<recipe name="wotwModArmorCoolingMeshT1" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="wotwModArmorCoolingMeshT1" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceScrapPolymers" count="20"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceOil" count="5"/>
@@ -713,7 +713,7 @@
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="wotwModArmorCoolingMeshT2" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="wotwModArmorCoolingMeshT2" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="5"/>
 	<ingredient name="resourceOil" count="10"/>
@@ -721,7 +721,7 @@
 	<ingredient name="resourceSewingKit" count="4"/>
 </recipe>
 
-<recipe name="modArmorHDCoolingMesh" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorHDCoolingMesh" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceScrapPolymers" count="80"/>
 	<ingredient name="resourceDuctTape" count="10"/>
 	<ingredient name="resourceOil" count="20"/>
@@ -729,77 +729,77 @@
 	<ingredient name="resourceSewingKit" count="8"/>
 </recipe>
 
-<recipe name="modMeleeHDClubBarbedWire" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modMeleeHDClubBarbedWire" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDMeleeClubMetalChain" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDMeleeClubMetalChain" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDMeleeErgonomicGrip" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDMeleeErgonomicGrip" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDMeleeSerratedBlade" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDMeleeSerratedBlade" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDMeleeTemperedBlade" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDMeleeTemperedBlade" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDGunShotgunTubeExtenderMagazine" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDGunShotgunTubeExtenderMagazine" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDGunDrumMagazineExtender" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDGunDrumMagazineExtender" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="20"/>
 	<ingredient name="resourceScrapPolymers" count="20"/>
 	<ingredient name="resourceOil" count="8"/>
 	<ingredient name="resourceMechanicalParts" count="8"/>
 </recipe>
 
-<recipe name="modHDGunMagazineExtender" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDGunMagazineExtender" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modHDGunBarrelExtender" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modHDGunBarrelExtender" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="10"/>
 	<ingredient name="resourceOil" count="4"/>
 	<ingredient name="resourceMechanicalParts" count="4"/>
 </recipe>
 
-<recipe name="modMeleeHandleSelfPropelled" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modMeleeHandleSelfPropelled" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modMuscipSlayer" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modMuscipSlayer" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
@@ -807,35 +807,35 @@
 	<ingredient name="resourceTestosteroneExtract" count="2"/>
 </recipe>
 
-<recipe name="modBrushlessMotor" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modBrushlessMotor" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modMotherLode" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modMotherLode" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modBonusExp" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modBonusExp" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modBicycleChain" count="1" tags="perkAdvancedEngineering">
+<recipe name="modBicycleChain" count="1" tags="workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="3"/>
 	<ingredient name="resourceSpring" count="2"/>
 </recipe>
 
-<recipe name="modArmorNightVision" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorNightVision" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
 	<ingredient name="resourceDuctTape" count="2"/>
@@ -843,77 +843,77 @@
 	<ingredient name="meleeToolFlashlight02" count="1"/>
 </recipe>
 
-<recipe name="modTurboSingle" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modTurboSingle" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modTurboTwin" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modTurboTwin" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modTuneupMinor" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modTuneupMinor" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modTuneupMajor" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modTuneupMajor" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modBumperSpikesSteel" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modBumperSpikesSteel" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modBumperSpikesTungsten" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modBumperSpikesTungsten" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modRollBarSteel" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modRollBarSteel" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modRollBarTungsten" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modRollBarTungsten" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modLightsHID" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modLightsHID" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modLightsLED" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modLightsLED" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modArmorHelmetLightHD" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorHelmetLightHD" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="4"/>
 	<ingredient name="resourceDuctTape" count="4"/>
@@ -921,7 +921,7 @@
 	<ingredient name="meleeToolFlashlight02" count="2"/>
 </recipe>
 
-<recipe name="modArmorBurntProtectionHead" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorBurntProtectionHead" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="25"/>
 	<ingredient name="resourceScrapPolymers" count="20"/>
 	<ingredient name="resourceDuctTape" count="5"/>
@@ -930,7 +930,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="2"/>
 </recipe>
 
-<recipe name="modArmorBurntProtectionChest" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorBurntProtectionChest" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="25"/>
 	<ingredient name="resourceScrapPolymers" count="20"/>
 	<ingredient name="resourceDuctTape" count="5"/>
@@ -939,7 +939,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="2"/>
 </recipe>
 
-<recipe name="modArmorBurntProtectionHands" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorBurntProtectionHands" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="25"/>
 	<ingredient name="resourceScrapPolymers" count="20"/>
 	<ingredient name="resourceDuctTape" count="5"/>
@@ -948,7 +948,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="2"/>
 </recipe>
 
-<recipe name="modArmorBurntProtectionFeet" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorBurntProtectionFeet" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="25"/>
 	<ingredient name="resourceScrapPolymers" count="20"/>
 	<ingredient name="resourceDuctTape" count="5"/>
@@ -957,7 +957,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="2"/>
 </recipe>
 
-<recipe name="modArmorDesertProtectionHead" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorDesertProtectionHead" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="50"/>
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
@@ -966,7 +966,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="3"/>
 </recipe>
 
-<recipe name="modArmorDesertProtectionChest" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorDesertProtectionChest" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="50"/>
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
@@ -975,7 +975,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="3"/>
 </recipe>
 
-<recipe name="modArmorDesertProtectionHands" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorDesertProtectionHands" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="50"/>
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
@@ -984,7 +984,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="3"/>
 </recipe>
 
-<recipe name="modArmorDesertProtectionFeet" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorDesertProtectionFeet" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="50"/>
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
@@ -993,7 +993,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="3"/>
 </recipe>
 
-<recipe name="modArmorSnowProtectionHead" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorSnowProtectionHead" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="50"/>
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
@@ -1002,7 +1002,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="4"/>
 </recipe>
 
-<recipe name="modArmorSnowProtectionChest" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorSnowProtectionChest" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="50"/>
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
@@ -1011,7 +1011,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="4"/>
 </recipe>
 
-<recipe name="modArmorSnowProtectionHands" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorSnowProtectionHands" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="50"/>
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
@@ -1020,7 +1020,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="4"/>
 </recipe>
 
-<recipe name="modArmorSnowProtectionFeet" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorSnowProtectionFeet" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="50"/>
 	<ingredient name="resourceScrapPolymers" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
@@ -1029,7 +1029,7 @@
 	<ingredient name="resourceArmorCraftingKit" count="3"/>
 </recipe>
 
-<recipe name="modArmorRadiationProtectionHead" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorRadiationProtectionHead" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="50"/>
 	<ingredient name="resourceDuctTape" count="10"/>
 	<ingredient name="resourceSewingKit" count="8"/>
@@ -1038,7 +1038,7 @@
 	<ingredient name="resourceLegendaryParts" count="1"/>
 </recipe>
 
-<recipe name="modArmorRadiationProtectionChest" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorRadiationProtectionChest" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="50"/>
 	<ingredient name="resourceDuctTape" count="10"/>
 	<ingredient name="resourceSewingKit" count="8"/>
@@ -1047,7 +1047,7 @@
 	<ingredient name="resourceLegendaryParts" count="1"/>
 </recipe>
 
-<recipe name="modArmorRadiationProtectionHands" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorRadiationProtectionHands" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="50"/>
 	<ingredient name="resourceDuctTape" count="10"/>
 	<ingredient name="resourceSewingKit" count="8"/>
@@ -1056,7 +1056,7 @@
 	<ingredient name="resourceLegendaryParts" count="1"/>
 </recipe>
 
-<recipe name="modArmorRadiationProtectionFeet" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="modArmorRadiationProtectionFeet" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="50"/>
 	<ingredient name="resourceDuctTape" count="10"/>
 	<ingredient name="resourceSewingKit" count="8"/>
@@ -1065,7 +1065,7 @@
 	<ingredient name="resourceLegendaryParts" count="1"/>
 </recipe>
 
-<recipe name="modClothingFishingT1" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" tags="learnable,perkAdvancedEngineering">
+<recipe name="modClothingFishingT1" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="50"/>
 	<ingredient name="resourceGlue" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="20"/>
@@ -1073,7 +1073,7 @@
 	<ingredient name="resourceSpring" count="15"/>
 </recipe>
 
-<recipe name="modClothingFishingT2" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" tags="learnable,perkAdvancedEngineering">
+<recipe name="modClothingFishingT2" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="50"/>
 	<ingredient name="resourceGlue" count="15"/>
 	<ingredient name="resourceMechanicalParts" count="25"/>
@@ -1081,7 +1081,7 @@
 	<ingredient name="resourceSpring" count="25"/>
 </recipe>
 
-<recipe name="modClothingFishingT3" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" tags="learnable,perkAdvancedEngineering">
+<recipe name="modClothingFishingT3" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" tags="learnable,workbenchCrafting">
 	<ingredient name="forgedTungsten" count="50"/>
 	<ingredient name="resourceGlue" count="20"/>
 	<ingredient name="resourceMechanicalParts" count="40"/>
@@ -1089,7 +1089,7 @@
 	<ingredient name="resourceSpring" count="40"/>
 </recipe>
 
-<recipe name="LMGBeltBag" count="1" craft_area="toolWorkstation" tags="learnable,perkAdvancedEngineering">
+<recipe name="LMGBeltBag" count="1" craft_area="toolWorkstation" tags="learnable,workbenchCrafting">
 	<ingredient name="carBattery" count="1"/>
 	<ingredient name="resourceForgedIron" count="35"/>
 	<ingredient name="resourceMechanicalParts" count="40"/>
@@ -5845,14 +5845,14 @@
 <recipe name="gunBowT3CompoundBow" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="10"/>
 	<effect_group name="Additional Output">
-        <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBowsT2SkillMagazine" count="1"/>
+        <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBowsT3SkillMagazine" count="1"/>
     </effect_group>
 </recipe>
 
 <recipe name="gunBowT1IronCrossbow" count="0" craft_time="3" craft_area="wotwCombineBench" tags="learnable">
 	<ingredient name="blueprintPaper" count="15"/>
 	<effect_group name="Additional Output">
-        <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBowsT3SkillMagazine" count="1"/>
+        <triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="wotwBowsT2SkillMagazine" count="1"/>
     </effect_group>
 </recipe>
 
@@ -7281,13 +7281,13 @@
 </recipe>
 
 <!-- Tungsten Club Parts -->
-<recipe name="meleeWpnTungstenClubParts" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" craft_time="3" tags="learnable,perkAdvancedEngineering">
-	<ingredient name="forgedTungsten" count="5"/>
-	<ingredient name="resourceMechanicalParts" count="10"/>
-	<ingredient name="resourceOil" count="4"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSpring" count="4"/>
-</recipe>
+<!-- <recipe name="meleeWpnTungstenClubParts" count="1" craft_area="toolWorkstation" craft_tool="hammerRounding" craft_time="3" tags="learnable,perkAdvancedEngineering"> -->
+	<!-- <ingredient name="forgedTungsten" count="5"/> -->
+	<!-- <ingredient name="resourceMechanicalParts" count="10"/> -->
+	<!-- <ingredient name="resourceOil" count="4"/> -->
+	<!-- <ingredient name="resourceDuctTape" count="1"/> -->
+	<!-- <ingredient name="resourceSpring" count="4"/> -->
+<!-- </recipe> -->
 
 <!-- Tungsten Baton Parts -->
 <recipe name="meleeWpnTungstenBatonParts" count="1" craft_area="gunSmithingWorkstation" craft_tool="calipers" craft_time="3" tags="learnable,perkAdvancedEngineering">

@@ -24,5 +24,12 @@
     <append xpath="//item_modifier[@name='modArmorWaterPurifier']/effect_group/passive_effect[@name='BuffResistance']">
         <requirement name="ItemPercentUsed, SCore" operation="LT" value="1" />
     </append>
+	
+	<!-- <append xpath="//item_modifier[@name='modArmorWaterPurifier']/effect_group/triggered_effect[@trigger='onSelfEquipStart']"> -->
+        <!-- <requirement name="ItemPercentUsed, SCore" operation="LT" value="1" /> -->
+    <!-- </append> -->
+	<!-- <append xpath="//item_modifier[@name='modArmorWaterPurifier']/effect_group/triggered_effect[@trigger='onSelfEquipStop']"> -->
+        <!-- <requirement name="ItemPercentUsed, SCore" operation="LT" value="1" /> -->
+    <!-- </append> -->
 
 </configs>

@@ -2691,6 +2691,11 @@
 				<requirement name="InBiome" biome="08"/> <!-- Wasteland -->
 			</passive_effect>
 		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffairdrophorde">
+				<requirement name="HasBuff" buff="buffairdrophorde"/>
+			</triggered_effect>
+		</effect_group>
 </append>
 
 <append xpath="/buffs">
