@@ -2691,11 +2691,6 @@
 				<requirement name="InBiome" biome="08"/> <!-- Wasteland -->
 			</passive_effect>
 		</effect_group>
-		<effect_group>
-			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffairdrophorde">
-				<requirement name="HasBuff" buff="buffairdrophorde"/>
-			</triggered_effect>
-		</effect_group>
 </append>
 
 <append xpath="/buffs">
@@ -5231,80 +5226,29 @@
 
 <append xpath="/buffs/buff[@name='buffStatusCheck01']">
 		<effect_group>
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_sheltered"/> -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_shaded"/> -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="$wetness"/> -->
-			
-			<!-- Weather Survival HOT -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddOrRemoveBuff" buff="buffElementHot"> -->
-				<!-- <requirement name="!HasBuff" buff="god"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_coretemp" operation="GT" value="10"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_coretemp" operation="LT" value="30"/> -->
-			<!-- </triggered_effect> -->
-
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddOrRemoveBuff" buff="buffElementSweltering"> -->
-				<!-- <requirement name="!HasBuff" buff="god"/> -->
-				<!-- <requirement name="ProgressionLevel" progression_name="perkWellInsulated" operation="LT" value="3"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_coretemp" operation="GTE" value="30"/> -->
-			<!-- </triggered_effect> -->
-
-			<!-- Weather Survival COLD -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddOrRemoveBuff" buff="buffElementCold"> -->
-				<!-- <requirement name="!HasBuff" buff="god"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_coretemp" operation="LT" value="-10"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_coretemp" operation="GT" value="-30"/> -->
-			<!-- </triggered_effect> -->
-
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddOrRemoveBuff" buff="buffElementFreezing"> -->
-				<!-- <requirement name="!HasBuff" buff="god"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_coretemp" operation="LTE" value="-30"/> -->
-				<!-- <requirement name="ProgressionLevel" progression_name="perkWellInsulated" operation="LT" value="3"/> -->
-			<!-- </triggered_effect> -->
-
-			<!-- Weather Survival WETNESS -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffElementWet"> -->
-				<!-- <requirement name="CVarCompare" cvar="$wetness" operation="GT" value=".05"/> -->
-			<!-- </triggered_effect> -->
-			
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$wetness" operation="set" value="0"> -->
-				<!-- <requirement name="CVarCompare" cvar="$wetness" operation="LT" value="0"/> -->
-			<!-- </triggered_effect> -->
-			
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$RainGearWorn" operation="set" value="0"> -->
-				<!-- <requirement name="CVarCompare" cvar="$RainGearWorn" operation="LT" value="0"/> -->
-			<!-- </triggered_effect> -->
-			
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$RainGearWorn" operation="set" value="0"> -->
-				<!-- <requirement name="!HasBuff" buff="buffRaingearProtHead"/> -->
-				<!-- <requirement name="!HasBuff" buff="buffRaingearProtChest"/> -->
-				<!-- <requirement name="!HasBuff" buff="buffRaingearProtBoots"/> -->
-				<!-- <requirement name="!HasBuff" buff="buffRaingearProtGloves"/> -->
-			<!-- </triggered_effect> -->
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffairdrophorde">
+				<requirement name="HasBuff" buff="buffairdrophorde"/>
+			</triggered_effect>
 		</effect_group>
 		
-		<effect_group><!-- Wetnesss increases when you enter water -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$wetness" operation="add" value="0.02"> -->
-				<!-- <requirement name="CVarCompare" cvar="$wetness" operation="LT" value="1"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="0.2"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_underwater" operation="LT" value="0.4"/> -->
-			<!-- </triggered_effect> -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$wetness" operation="add" value="0.05"> -->
-				<!-- <requirement name="CVarCompare" cvar="$wetness" operation="LT" value="1"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="0.4"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_underwater" operation="LT" value="0.6"/> -->
-			<!-- </triggered_effect> -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$wetness" operation="add" value="0.075"> -->
-				<!-- <requirement name="CVarCompare" cvar="$wetness" operation="LT" value="1"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="0.6"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_underwater" operation="LT" value="0.8"/> -->
-			<!-- </triggered_effect> -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$wetness" operation="add" value="0.1"> -->
-				<!-- <requirement name="CVarCompare" cvar="$wetness" operation="LT" value="1"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="0.8"/> -->
-			<!-- </triggered_effect> -->
-			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$wetness" operation="set" value="1"> -->
-				<!-- <requirement name="CVarCompare" cvar="$wetness" operation="GT" value="1"/> -->
-				<!-- <requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="0.1"/> -->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RepairQualityLoss" operation="set" value="0.1">
+				<requirement name="ProgressionLevel" progression_name="technicianCraftRepairQualityLoss" operation="Equals" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RepairQualityLoss" operation="set" value="0.08">
+				<requirement name="ProgressionLevel" progression_name="technicianCraftRepairQualityLoss" operation="Equals" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RepairQualityLoss" operation="set" value="0.06">
+				<requirement name="ProgressionLevel" progression_name="technicianCraftRepairQualityLoss" operation="Equals" value="2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RepairQualityLoss" operation="set" value="0.04">
+				<requirement name="ProgressionLevel" progression_name="technicianCraftRepairQualityLoss" operation="Equals" value="3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RepairQualityLoss" operation="set" value="0.02">
+				<requirement name="ProgressionLevel" progression_name="technicianCraftRepairQualityLoss" operation="Equals" value="4"/>
+			</triggered_effect>
+			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RepairQualityLoss" operation="set" value="0"> -->
+				<!-- <requirement name="ProgressionLevel" progression_name="technicianCraftRepairQualityLoss" operation="Equals" value="5"/> -->
 			<!-- </triggered_effect> -->
 		</effect_group>
 		

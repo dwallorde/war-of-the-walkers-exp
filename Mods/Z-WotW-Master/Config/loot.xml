@@ -5952,6 +5952,7 @@
 <!-- <set xpath="/lootcontainers/lootcontainer[@name='heroChest']/@size">5,9</set> -->
 
 <set xpath="/lootcontainers/lootcontainer[@name='nightstand']/@size">5,2</set>
+<set xpath="/lootcontainers/lootcontainer[@name='nightstand']/@loot_quality_template">qualBaseTemplate</set>
 
 <set xpath="/lootcontainers/lootcontainer[@name='nightstandNOPOP']/@size">5,2</set>
 <removeattribute xpath="/lootcontainers/lootcontainer[@name='nightstandNOPOP']/@buff"/>
@@ -6169,6 +6170,7 @@
 <set xpath="/lootcontainers/lootcontainer[@name='ammoDisplay']/@size">5,2</set>
 
 <set xpath="/lootcontainers/lootcontainer[@name='shoes']/@size">5,2</set>
+<set xpath="/lootcontainers/lootcontainer[@name='shoes']/@loot_quality_template">qualBaseTemplate</set>
 
 <set xpath="/lootcontainers/lootcontainer[@name='bookPile']/@size">5,2</set>
 

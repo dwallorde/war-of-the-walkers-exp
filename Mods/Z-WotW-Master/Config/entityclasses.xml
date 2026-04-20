@@ -682,11 +682,15 @@
 	Look|
 	Wander|</set>
 <set xpath="/entity_classes/entity_class[@name='zombieChuck']/property[@name='HandItem']/@value">wotwMeleeHandZombieFrostclaw</set>
+<append xpath="//entity_class[@name='zombieChuck']">
+	<property name="SpreadFire" value="false" />
+</append>
 
 <append xpath="/entity_classes/entity_class[@name='zombieChuckFeral']/property[@name='Tags']/@value">,perkZT02,perkZT03</append>
 <append xpath="/entity_classes/entity_class[@name='zombieChuckFeral']">
 	<property name="MapIcon" value="ui_game_symbol_zombie"/>
 	<property name="TrackerIcon" value="ui_game_symbol_zombie"/>
+	<property name="SpreadFire" value="false" />
 </append>
 <set xpath="/entity_classes/entity_class[@name='zombieChuckFeral']/property[@name='LootDropProb']/@value">.1</set>
 <set xpath="/entity_classes/entity_class[@name='zombieChuckFeral']/property[@name='HandItem']/@value">wotwMeleeHandZombieFrostclawFeral</set>
@@ -696,12 +700,14 @@
 	<property name="MapIcon" value="ui_game_symbol_zombie"/>
 	<property name="TrackerIcon" value="ui_game_symbol_zombie"/>
 	<property name="LootDropProb" value=".1"/> <!-- Radiated -->
+	<property name="SpreadFire" value="false" />
 </append>
 
 <append xpath="/entity_classes/entity_class[@name='zombieChuckCharged']/property[@name='Tags']/@value">,perkZT03</append>
 <append xpath="/entity_classes/entity_class[@name='zombieChuckCharged']">
 	<property name="MapIcon" value="ui_game_symbol_zombie"/>
 	<property name="TrackerIcon" value="ui_game_symbol_zombie"/>
+	<property name="SpreadFire" value="false" />
 </append>
 <set xpath="/entity_classes/entity_class[@name='zombieChuckCharged']/property[@name='HandItem']/@value">wotwMeleeHandZombieFrostclawCharged</set>
 
@@ -709,6 +715,7 @@
 <append xpath="/entity_classes/entity_class[@name='zombieChuckInfernal']">
 	<property name="MapIcon" value="ui_game_symbol_zombie"/>
 	<property name="TrackerIcon" value="ui_game_symbol_zombie"/>
+	<property name="SpreadFire" value="false" />
 </append>
 <set xpath="/entity_classes/entity_class[@name='zombieChuckInfernal']/property[@name='HandItem']/@value">wotwMeleeHandZombieFrostclawInfernal</set>
 
@@ -723,6 +730,7 @@
 	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
 	<property name="LootDropProb" value=".3"/>
+	<property name="SpreadFire" value="false" />
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="^healthSturdyBrute"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>

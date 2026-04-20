@@ -708,7 +708,7 @@
 		</effect_group>
 	</item_modifier>
 	
-	<item_modifier name="modHDMeleeTemperedBlade" installable_tags="perkDeepCuts,axe,shovel,perkBrawler,perkJavelinMaster" modifier_tags="damage" blocked_tags="noMods" type="attachment">
+	<item_modifier name="modHDMeleeTemperedBlade" installable_tags="tool,perkBrawler,perkJavelinMaster,perkDeepCuts" modifier_tags="damage,durability" blocked_tags="noMods,noBlades" type="attachment">
 		<property name="Extends" value="modGeneralMaster"/>
 		<property name="UnlockedBy" value="modHDMeleeTemperedBladeSchematic"/>
 		<property name="CustomIcon" value="modHDMeleeTemperedBlade"/>

@@ -7737,6 +7737,7 @@
 	<property name="EmptyText" value="dewCollectorEmpty"/>
 	<property name="HasItem1Text" value="oilPumpHasOil"/>
 	<property name="HasItem2Text" value="oilPumpHasOil"/>
+	<property name="OutputGridHeight" value="3"/>
 	<property name="FuelTitleText" value="xuiOilPumpFuel"/>
 	<property name="FuelTitleSprite" value="ui_game_symbol_gas"/>
 	<property name="FuelTitleSpriteAtlas" value="UIAtlas"/>
@@ -7822,7 +7823,7 @@
 	<property name="ModdedConvertSpeed" value="2"/>
 	<property name="ModdedConvertCount" value="2"/>
 	<property name="ModTransformEnableNames" value="1,2,3"/>
-	<property name="ModTypes" value="Speed,Count,Modify"/>
+	<property name="ModTypes" value="Speed,Count,Type"/>
 	<property name="EconomicValue" value="5"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
@@ -8889,7 +8890,7 @@
 	<drop event="Harvest" name="blackberries" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="advancedCrops,traderPlaceable,challenge_farming"/>
 </block>
 
 <block name="plantedBlackberry3HarvestRandomHelper">
@@ -14109,7 +14110,7 @@
 	<property name="DowngradeBlock" value="carAmbulance1Harvested"/>
 	<property name="SortOrder1" value="B852"/>
 	<property name="SortOrder2" value="0030"/>
-	<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_sinks"/>
+	<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_sinks,traderPlaceable"/>
 	<property name="FilterTags" value="MC_building,SC_automotive"/>
 </block>
 
@@ -14181,7 +14182,7 @@
 	<property name="DowngradeBlock" value="carECOSedanHarvested"/>
 	<property name="SortOrder1" value="B852"/>
 	<property name="SortOrder2" value="0031"/>
-	<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_sinks"/>
+	<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_sinks,traderPlaceable"/>
 	<property name="FilterTags" value="MC_building,SC_automotive"/>
 </block>
 
@@ -14351,7 +14352,7 @@
 	<property name="SortOrder1" value="B853"/>
 	<property name="SortOrder2" value="0040"/>
 	<property name="FilterTags" value="MC_building,SC_automotive"/>
-	<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_sinks"/>
+	<property name="Tags" value="challenge_cars,challenge_elec_parts,challenge_mech_parts,challenge_sinks,traderPlaceable"/>
 	<property name="IndexName" value="challenge_cars"/>
 </block>
 
@@ -35453,5 +35454,18 @@
 <!-- <set xpath="//block[@name='cntDewCollector']/property[@name='RequiredMods']/@value">toolDewGatherer,toolDewTarp,toolDewFilter</set> -->
 <!-- <set xpath="//block[@name='cntDewCollector']/property[@name='ModTransformEnableNames']/@value">1,2,3</set> -->
 <!-- <set xpath="//block[@name='cntDewCollector']/property[@name='ModTypes']/@value">Speed,Speed,Type</set> -->
+<set xpath="//block[@name='cntDewCollector']/property[@name='MultiBlockDim']/@value">2,2,2</set>
+
+<set xpath="//block[@name='DecorationTackleBoxRedLoot']/property[@name='Model']/@value">@:Entities/LootContainers/metalToolBoxClosedPrefab.prefab</set>
+<append xpath="//block[@name='DecorationTackleBoxRedLoot']">
+	<property name="TintColor" value="7F6868"/>
+</append>
+
+<set xpath="//block[@name='DecorationTackleBoxBlueLoot']/property[@name='Model']/@value">@:Entities/LootContainers/metalToolBoxClosedPrefab.prefab</set>
+<append xpath="//block[@name='DecorationTackleBoxRedLoot']">
+	<property name="TintColor" value="73858D"/>
+</append>
+
+<!-- <set xpath="//block[@name='cropsGrowingMaster']/property[@name='PlantGrowing.GrowthRate']/@value">2</set> -->
 
 </configs>

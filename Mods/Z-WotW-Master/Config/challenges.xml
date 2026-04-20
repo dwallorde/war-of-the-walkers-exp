@@ -1754,7 +1754,7 @@
 	<challenge name="wotwFarmingAdvancedCrops" title_key="wotwFarmingAdvancedCrops" icon="seedApple" group="AdvFarming"
 	short_description_key="wotwFarmingAdvancedCropsShort" description_key="wotwFarmingAdvancedCropsDesc"
 	reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
-		<objective type="Harvest, SCore" count="25" block_tags="AdvancedCrops" />
+		<objective type="Harvest, SCore" count="25" block_tags="advancedCrops" />
 	</challenge>
 	
 	<challenge name="wotwFarmingFertilizedCrops" title_key="wotwFarmingFertilizedCrops" icon="seedBlueberryFert" group="AdvFarming"

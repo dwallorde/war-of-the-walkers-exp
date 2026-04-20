@@ -8831,82 +8831,82 @@
 <!-- Iron Tools -->
 <crafting_skill name="craftingHarvestingToolsT1" max_level="24" base_skill_point_cost="1" parent="attCrafting" name_key="craftingHarvestingToolsT1Name" desc_key="craftingHarvestingToolsT1Desc" long_desc_key="craftingHarvestingToolsT1Desc" icon="ui_game_symbol_tool">
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality25-1" has_quality="false" unlock_level="1">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality50-2" has_quality="false" unlock_level="2">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality75-3" has_quality="false" unlock_level="3">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality100-4" has_quality="false" unlock_level="4">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality125-5" has_quality="false" unlock_level="5">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality150-6" has_quality="false" unlock_level="6">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality175-7" has_quality="false" unlock_level="7">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality200-8" has_quality="false" unlock_level="8">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality225-9" has_quality="false" unlock_level="9">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality250-10" has_quality="false" unlock_level="10">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality275-11" has_quality="false" unlock_level="11">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality300-12" has_quality="false" unlock_level="12">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality325-13" has_quality="false" unlock_level="13">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality350-14" has_quality="false" unlock_level="14">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality375-15" has_quality="false" unlock_level="15">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality400-16" has_quality="false" unlock_level="16">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality425-17" has_quality="false" unlock_level="17">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality450-18" has_quality="false" unlock_level="18">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality475-19" has_quality="false" unlock_level="19">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality500-20" has_quality="false" unlock_level="20">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality525-21" has_quality="false" unlock_level="21">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality550-22" has_quality="false" unlock_level="22">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality575-23" has_quality="false" unlock_level="23">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="quality600-24" has_quality="false" unlock_level="24">
-		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe"/>
+		<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood" unlock_tier="1" recipes="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe,meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</display_entry>
 
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,24" value="1" tags="wotwMeleeToolStonePickaxe"/>
 		<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24" value="24,49,74,99,124,149,174,199,224,249,274,299,324,349,374,399,424,449,474,499,524,549,574,599" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe,wotwMeleeToolIronHoe"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24" value="1,25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600" tags="meleeToolFarmT1IronDensityHoe"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24" value="1,25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600" tags="meleeToolFarmT1IronDensityHoe,fishingPoleWood"/>
 	</effect_group>
 </crafting_skill>
 
@@ -10288,7 +10288,7 @@
 </crafting_skill>
 
 <!-- Steel Clubs -->
-<crafting_skill name="craftingClubsT2" max_level="24" base_skill_point_cost="1" parent="attCrafting" name_key="Clubs T2 Steel" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_club">
+<crafting_skill name="craftingClubsT2" max_level="24" base_skill_point_cost="1" parent="attCrafting" name_key="craftingClubsT2Name" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_club">
 	<display_entry icon="meleeWpnClubT3SteelClub" name_key="quality25-1" has_quality="false" unlock_level="1">
 		<unlock_entry item="meleeWpnClubT3SteelClub,wotwMeleeWpnBatBaseballSteel" unlock_tier="1" recipes="meleeWpnClubT3SteelClub,wotwMeleeWpnBatBaseballSteel"/>
 	</display_entry>
@@ -10531,7 +10531,7 @@
 </crafting_skill>
 
 <!-- Steel Sledgehammer -->
-<crafting_skill name="craftingSledgehammersT2" max_level="24" base_skill_point_cost="1" parent="attCrafting" name_key="Sledgehammers T2 Steel" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_sledge">
+<crafting_skill name="craftingSledgehammersT2" max_level="24" base_skill_point_cost="1" parent="attCrafting" name_key="craftingSledgehammersT2Name" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_sledge">
 	<display_entry icon="meleeWpnSledgeT3SteelSledgehammer" name_key="quality25-1" has_quality="false" unlock_level="1">
 		<unlock_entry item="meleeWpnSledgeT3SteelSledgehammer" unlock_tier="1" recipes="meleeWpnSledgeT3SteelSledgehammer"/>
 	</display_entry>
@@ -14639,7 +14639,7 @@
 		<unlock_entry item="vehicleRaftFrame,vehicleRaftSail" unlock_tier="4" />
 	</display_entry>
 	<display_entry icon="vehicleTruck4x4Placeable,WorkTruck,Rat,vehicleDinghyPlaceable" name_key="vehiclesT3-1,vehiclesT3-2,vehiclesT3-3,vehiclesT3-4" has_quality="false" unlock_level="24,27,30,33" >
-		<unlock_entry item="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories" unlock_tier="1" />
+		<unlock_entry item="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories,vehicleTrophyTruckbody,vehicleTrophyTruckchassis" unlock_tier="1" />
 		<unlock_entry item="vehicleWorkTruckchassis,vehicleWorkTruckaccessories,wotwHDVehicleWheels" unlock_tier="2" />
 		<unlock_entry item="vehicleRatChassis,vehicleRatbars" unlock_tier="3" />
 		<unlock_entry item="vehicleDinghyFrame,vehicleDinghyAccessories" unlock_tier="4" />
@@ -14687,7 +14687,7 @@
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,100" value="1" tags="vehicleGolfCartaccessories,vehicleGolfCartchassis"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,100" value="1" tags="vehicleRaftFrame,vehicleRaftSail"/>
 		
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,100" value="1" tags="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,100" value="1" tags="vehicleTruck4x4Chassis,vehicleTruck4x4Accessories,vehicleTrophyTruckbody,vehicleTrophyTruckchassis"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="vehicleWorkTruckchassis,vehicleWorkTruckaccessories,wotwHDVehicleWheels"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="vehicleRatChassis,vehicleRatbars"/>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="33,100" value="1" tags="vehicleDinghyFrame,vehicleDinghyAccessories"/>
@@ -16211,7 +16211,7 @@
 		</insertAfter>
 		
 		<insertAfter xpath="/progression/perks/perk[@name='technicianCraftAirConditioner']">
-<!-- Melee Weapon Mods Expertise -->
+<!-- Vehicle Mods Expertise -->
 <perk name="technicianCraftRepairExp" max_level="3" parent="skillTechnician3" name_key="technicianCraftRepairExpName" desc_key="technicianCraftRepairExpDesc" icon="ui_game_symbol_mods">
 	<level_requirements level="1">
 		<requirement name="ProgressionLevel" progression_name="perkBasicRepairExp" operation="GTE" value="2" desc_key="reqBasicRepairExp2"/>
@@ -16231,6 +16231,38 @@
 		<effect_description level="1" desc_key="technicianCraftRepairExpRank1Desc" long_desc_key="technicianCraftRepairExpRank1LongDesc"/>
 		<effect_description level="2" desc_key="technicianCraftRepairExpRank2Desc" long_desc_key="technicianCraftRepairExpRank2LongDesc"/>
 		<effect_description level="3" desc_key="technicianCraftRepairExpRank3Desc" long_desc_key="technicianCraftRepairExpRank3LongDesc"/>
+	</effect_group>
+</perk>
+
+<!-- Vehicle Mods Expertise -->
+<perk name="technicianCraftRepairQualityLoss" max_level="4" parent="skillTechnician3" name_key="technicianCraftRepairQualityLossName" desc_key="technicianCraftRepairQualityLossDesc" icon="ui_game_symbol_benefits">
+	<level_requirements level="1">
+		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="1" desc_key="reqTechnicianClass"/>
+		<requirement name="PlayerLevel" target="self" operation="GTE" value="40" desc_key="reqPlayer40"/>
+	</level_requirements>
+	<level_requirements level="2">
+		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="2" desc_key="reqTechnicianClass2"/>
+		<requirement name="PlayerLevel" target="self" operation="GTE" value="60" desc_key="reqPlayer60"/>
+	</level_requirements>
+	<level_requirements level="3">
+		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="2" desc_key="reqTechnicianClass2"/>
+		<requirement name="PlayerLevel" target="self" operation="GTE" value="80" desc_key="reqPlayer80"/>
+	</level_requirements>
+	<level_requirements level="4">
+		<requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="3" desc_key="reqTechnicianClass3"/>
+		<requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayer100"/>
+	</level_requirements>
+	<!-- <level_requirements level="5"> -->
+		<!-- <requirement name="ProgressionLevel" progression_name="attClassTechnicianMaster" operation="GTE" value="3" desc_key="reqTechnicianClass3"/> -->
+		<!-- <requirement name="PlayerLevel" target="self" operation="GTE" value="125" desc_key="reqPlayer125"/> -->
+	<!-- </level_requirements> -->
+	
+	<effect_group>
+		<effect_description level="1" desc_key="technicianCraftRepairQualityLossRank1Desc" long_desc_key="technicianCraftRepairQualityLossRank1LongDesc"/>
+		<effect_description level="2" desc_key="technicianCraftRepairQualityLossRank2Desc" long_desc_key="technicianCraftRepairQualityLossRank2LongDesc"/>
+		<effect_description level="3" desc_key="technicianCraftRepairQualityLossRank3Desc" long_desc_key="technicianCraftRepairQualityLossRank3LongDesc"/>
+		<effect_description level="4" desc_key="technicianCraftRepairQualityLossRank4Desc" long_desc_key="technicianCraftRepairQualityLossRank4LongDesc"/>
+		<!-- <effect_description level="5" desc_key="technicianCraftRepairQualityLossRank5Desc" long_desc_key="technicianCraftRepairQualityLossRank5LongDesc"/> -->
 	</effect_group>
 </perk>
 		</insertAfter>

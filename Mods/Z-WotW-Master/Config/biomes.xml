@@ -869,7 +869,7 @@
 			</decorations>
 		</subbiome>
 		
-		<subbiome noise=".045, 0, .55"> <!-- Ore Sub Biome: * sulfur -->
+		<subbiome noise=".045, 0, .6"> <!-- Ore Sub Biome: * sulfur -->
 			<layers>
 				<layer depth="2" blockname="terrDestroyedStone"/>
 				<layer depth="2" blockname="terrDirt"/>
@@ -886,7 +886,7 @@
 				<layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations>
-				<decoration type="prefab" name="wotw_deco_SulfurOre" 					prob=".00857" checkresource="-7" onslopes="true" rotatemax="3"/>
+				<decoration type="prefab" name="wotw_deco_SulfurOre" 					prob=".01457" checkresource="-7" onslopes="true" rotatemax="3"/>
 				<decoration type="block" blockname="resourceRock01" 					prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="resourceRock02" 					prob=".00033" rotatemax="3"/>
 				<decoration type="block" blockname="oreWastelandBoulder1" 				prob=".00033" rotatemax="3"/>
