@@ -5278,7 +5278,7 @@ wotwCntDewCollector,blocks,Block,,,Deprecated Dew Collector,
 wotwCntDewCollectorDesc,blocks,Block,,,"Discontinued dew collector, check recipes for conversion recipe to new block",
 wotwDewCollector,blocks,Block,,,Dew Collector,
 wotwDewCollectorDesc,blocks,Block,,,"A dew collector will gather murky water.  With a filter mod installed can get clean water.  Requires empty jars in order to get water.",
-wotwDewCollectorV2,blocks,Block,,,Dew Collector
+wotwDewCollectorV2,blocks,Block,,,Primitive Dew Collector
 wotwDewCollectorV2Desc,blocks,Block,,,"A dew collector will gather murky water.  With a filter mod installed can get clean water.  Requires empty jars in order to get water."
 wotwAdvDewCollector,blocks,Block,,,Deprecated Adv Dew Collector,
 wotwAdvDewCollectorDesc,blocks,Block,,,"Discontinued advanced dew collector, check recipes for conversion recipe to new block",

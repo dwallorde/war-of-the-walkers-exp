@@ -8876,7 +8876,7 @@
 	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedBlackberry3HarvestPlayer">
@@ -8890,7 +8890,7 @@
 	<drop event="Harvest" name="blackberries" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
-	<property name="Tags" value="advancedCrops,traderPlaceable,challenge_farming"/>
+	<property name="Tags" value="advancedCrops,challenge_farming"/>
 </block>
 
 <block name="plantedBlackberry3HarvestRandomHelper">
@@ -8939,7 +8939,7 @@
 	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedBlackberryFert1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedBlackberryFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Blackberry -->
@@ -8982,7 +8982,7 @@
 	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedNBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedNBlackberry1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Blackberry Fertilized -->
@@ -9024,7 +9024,7 @@
 	<drop event="Harvest" name="blackberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedNBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedBlackberryFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedStrawberry1">
@@ -9060,7 +9060,7 @@
 	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="plantedStrawberry1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedStrawberry3HarvestPlayer">
@@ -9075,7 +9075,7 @@
 	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedStrawberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedStrawberry1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedStrawberry3HarvestRandomHelper">
@@ -9125,7 +9125,7 @@
 	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedStrawberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedStrawberryFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Strawberry -->
@@ -9167,7 +9167,7 @@
 	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedStrawberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedStrawberry1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Strawberry Fertilized -->
@@ -9210,7 +9210,7 @@
 	<drop event="Harvest" name="strawberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedStrawberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedStrawberryFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedCarrot1">
@@ -9247,7 +9247,7 @@
 	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedCarrot3HarvestPlayer">
@@ -9262,7 +9262,7 @@
 	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCarrot1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCarrot1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedCarrot3HarvestRandomHelper">
@@ -9312,7 +9312,7 @@
 	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedCarrot1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedCarrotFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Carrot -->
@@ -9355,7 +9355,7 @@
 	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCarrot1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCarrot1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Carrot Fertilized -->
@@ -9398,7 +9398,7 @@
 	<drop event="Harvest" name="carrot" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedCarrot1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedCarrotFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedWheat1">
@@ -9435,7 +9435,7 @@
 	<drop event="Harvest" name="plantedWheat1" prob="0.1" count="1" tag="DBWildCropHarvest"/>
 	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedWheat3HarvestPlayer">
@@ -9449,7 +9449,7 @@
 	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedWheat1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedWheat1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedWheat3HarvestRandomHelper">
@@ -9499,7 +9499,7 @@
 	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedWheat1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedWheatFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Wheat -->
@@ -9542,7 +9542,7 @@
 	<drop event="Harvest" name="wheat" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedWheat1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedWheat1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Wheat Fertilized -->
@@ -9621,7 +9621,7 @@
 	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedTomato3HarvestPlayer">
@@ -9635,7 +9635,7 @@
 	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedTomato1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedTomato1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedTomato3HarvestRandomHelper">
@@ -9685,7 +9685,7 @@
 	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedTomato1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedTomatoFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Tomato -->
@@ -9728,7 +9728,7 @@
 	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedTomato1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedTomato1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Tomato Fertilized -->
@@ -9771,7 +9771,7 @@
 	<drop event="Harvest" name="tomato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedTomato1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedTomatoFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedCucumber1">
@@ -9808,7 +9808,7 @@
 	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedCucumber3HarvestPlayer">
@@ -9822,7 +9822,7 @@
 	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCucumber1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCucumber1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedCucumber3HarvestRandomHelper">
@@ -9871,7 +9871,7 @@
 	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedCucumber1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedCucumberFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Cucumber -->
@@ -9914,7 +9914,7 @@
 	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCucumber1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCucumber1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Cucumber Fertilized -->
@@ -9956,7 +9956,7 @@
 	<drop event="Harvest" name="cucumber" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedCucumber1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedCucumberFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedLeek1">
@@ -9993,7 +9993,7 @@
 	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedLeek3HarvestPlayer">
@@ -10007,7 +10007,7 @@
 	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedLeek1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedLeek1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedLeek3HarvestRandomHelper">
@@ -10057,7 +10057,7 @@
 	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedLeek1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedLeekFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Leek -->
@@ -10100,7 +10100,7 @@
 	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedLeek1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedLeek1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Leek Fertilized -->
@@ -10143,7 +10143,7 @@
 	<drop event="Harvest" name="leek" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedLeek1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedLeekFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedLettuce1">
@@ -10180,7 +10180,7 @@
 	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedLettuce3HarvestPlayer">
@@ -10194,7 +10194,7 @@
 	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedLettuce1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedLettuce1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedLettuce3HarvestRandomHelper">
@@ -10243,7 +10243,7 @@
 	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedLettuce1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedLettuceFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Lettuce -->
@@ -10286,7 +10286,7 @@
 	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedLettuce1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedLettuce1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Lettuce Fertilized -->
@@ -10328,7 +10328,7 @@
 	<drop event="Harvest" name="lettuce" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedLettuce1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedLettuceFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedMelon1">
@@ -10365,7 +10365,7 @@
 	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedMelon3HarvestPlayer">
@@ -10379,7 +10379,7 @@
 	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedMelon1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedMelon1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedMelon3HarvestRandomHelper">
@@ -10429,7 +10429,7 @@
 	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedMelon1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedMelonFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Melon -->
@@ -10473,7 +10473,7 @@
 	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedMelon1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedMelon1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Melon Fertilized -->
@@ -10517,7 +10517,7 @@
 	<drop event="Harvest" name="melon" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedMelon1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedMelonFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedOnion1">
@@ -10554,7 +10554,7 @@
 	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedOnion3HarvestPlayer">
@@ -10568,7 +10568,7 @@
 	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedOnion1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedOnion1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedOnion3HarvestRandomHelper">
@@ -10618,7 +10618,7 @@
 	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedOnion1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedOnionFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Onion -->
@@ -10661,7 +10661,7 @@
 	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedOnion1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedOnion1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Onion Fertilized -->
@@ -10704,7 +10704,7 @@
 	<drop event="Harvest" name="onion" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedOnion1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedOnionFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedCocoa1">
@@ -10741,7 +10741,7 @@
 	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedCocoa3HarvestPlayer">
@@ -10755,7 +10755,7 @@
 	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCocoa1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedCocoa1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedCocoa3HarvestRandomHelper">
@@ -10805,7 +10805,7 @@
 	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedCocoa1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedCocoaFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Cocoa -->
@@ -10848,7 +10848,7 @@
 	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCocoa1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCocoa1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Cocoa Fertilized -->
@@ -10891,7 +10891,7 @@
 	<drop event="Harvest" name="cocoaBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedCocoa1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedCocoaFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedPepper1">
@@ -10928,7 +10928,7 @@
 	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedPepper3HarvestPlayer">
@@ -10942,7 +10942,7 @@
 	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedPepper1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedPepper1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedPepper3HarvestRandomHelper">
@@ -10992,7 +10992,7 @@
 	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedPepper1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedPepperFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Pepper -->
@@ -11035,7 +11035,7 @@
 	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedPepper1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedPepper1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Pepper Fertilized -->
@@ -11078,7 +11078,7 @@
 	<drop event="Harvest" name="pepper" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedPepper1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedPepperFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedAppleTree1">
@@ -11147,7 +11147,7 @@
 	<property name="DowngradeBlock" value="plantedAppleTreeDepleted"/>
 	<drop event="Harvest" name="apple" count="2" tag="cropHarvest"/>
 	<drop event="Destroy" name="apple" count="0"/>
-    <property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+    <property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedAppleTreeDepleted">
@@ -11224,7 +11224,7 @@
 	<drop event="Harvest" name="apple" count="4" tag="cropHarvest"/>
 	<drop event="Destroy" name="apple" count="0"/>
     <property name="ParticleOnDeath" value="treeGib_dead_01"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <block name="plantedAppleTreeFertDepleted">
@@ -11282,7 +11282,7 @@
 	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="wildMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="wildMowingBonus" tool_category="CropHarvester"/>
 	<property name="Group" value="Food/Cooking"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedMoss3HarvestPlayer">
@@ -11297,7 +11297,7 @@
 	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedMoss1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="plantedMoss1" count="1" prob="0.5"/>
-	<property name="Tags" value="AdvancedCrops,traderPlaceable"/>
+	<property name="Tags" value="AdvancedCrops"/>
 </block>
 
 <block name="plantedMoss3HarvestRandomHelper">
@@ -11353,7 +11353,7 @@
 	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedMoss1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedMossFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Moss -->
@@ -11402,7 +11402,7 @@
 	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedMoss1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedMoss1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Moss Fertilized -->
@@ -11450,7 +11450,7 @@
 	<drop event="Harvest" name="hangingMoss" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="wotwNLPlantedMoss1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedMossFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <!-- Fertilized Vanilla Crops -->
@@ -11502,7 +11502,7 @@
 	<drop event="Harvest" name="foodCropMushrooms" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedMushroomFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Mushroom -->
@@ -11557,7 +11557,7 @@
 	<drop event="Harvest" name="foodCropMushrooms" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<drop event="Destroy" name="wotwNLPlantedMushroom1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Mushroom Fertilized -->
@@ -11611,7 +11611,7 @@
 	<drop event="Harvest" name="foodCropMushrooms" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="wotwNLPlantedMushroomFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedYuccaFert1">
@@ -11652,7 +11652,7 @@
 	<drop event="Harvest" name="foodCropYuccaFruit" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<property name="DowngradeBlock" value="plantedYuccaFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Yucca -->
@@ -11696,7 +11696,7 @@
 	<drop event="Harvest" name="foodCropYuccaFruit" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<!-- <drop event="Destroy" name="plantedBlackberry1" count="1" prob="0.375" tag="lawnMowing" tool_category="CropHarvester"/> -->
 	<drop event="Destroy" name="wotwNLPlantedYucca1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Yucca Fertilized -->
@@ -11740,7 +11740,7 @@
 	<drop event="Harvest" name="foodCropYuccaFruit" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropYuccaFruit" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedYuccaFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedCottonFert1">
@@ -11779,7 +11779,7 @@
 	<drop event="Harvest" name="resourceCropCottonPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedCottonFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Cotton -->
@@ -11822,7 +11822,7 @@
 	<drop event="Harvest" name="resourceCropCottonPlant" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCotton1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Cotton Fertilized -->
@@ -11865,7 +11865,7 @@
 	<drop event="Harvest" name="resourceCropCottonPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedCottonFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedCoffeeFert1">
@@ -11904,7 +11904,7 @@
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedCoffeeFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Coffee -->
@@ -11948,7 +11948,7 @@
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCoffee1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Coffee Fertilized -->
@@ -11991,7 +11991,7 @@
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedCoffeeFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedGoldenrodFert1">
@@ -12027,7 +12027,7 @@
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedGoldenrodFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Goldenrod -->
@@ -12067,7 +12067,7 @@
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedGoldenrod1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Goldenrod Fertilized -->
@@ -12107,7 +12107,7 @@
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedGoldenrodFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedAloeFert1">
@@ -12146,7 +12146,7 @@
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedAloeFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Aloe -->
@@ -12189,7 +12189,7 @@
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedAloe1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Aloe Fertilized -->
@@ -12232,7 +12232,7 @@
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedAloeFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedBlueberryFert1">
@@ -12271,7 +12271,7 @@
 	<drop event="Harvest" name="foodCropBlueberries" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropBlueberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedBlueberryFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Blueberry -->
@@ -12314,7 +12314,7 @@
 	<drop event="Harvest" name="foodCropBlueberries" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropBlueberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedBlueberry1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Blueberry Fertilized -->
@@ -12357,7 +12357,7 @@
 	<drop event="Harvest" name="foodCropBlueberries" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropBlueberries" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedBlueberryFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedPotatoFert1">
@@ -12396,7 +12396,7 @@
 	<drop event="Harvest" name="foodCropPotato" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropPotato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedPotatoFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Potato -->
@@ -12439,7 +12439,7 @@
 	<drop event="Harvest" name="foodCropPotato" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropPotato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedPotato1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Potato Fertilized -->
@@ -12482,7 +12482,7 @@
 	<drop event="Harvest" name="foodCropPotato" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropPotato" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedPotatoFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedChrysanthemumFert1">
@@ -12518,7 +12518,7 @@
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedChrysanthemumFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Chrysanthemum -->
@@ -12558,7 +12558,7 @@
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedChrysanthemum1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Chrysanthemum Fertilized -->
@@ -12598,7 +12598,7 @@
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedChrysanthemumFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedCornFert1">
@@ -12645,7 +12645,7 @@
 	<drop event="Harvest" name="foodCropCorn" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedCornFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Corn -->
@@ -12696,7 +12696,7 @@
 	<drop event="Harvest" name="foodCropCorn" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedCorn1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Corn Fertilized -->
@@ -12748,7 +12748,7 @@
 	<drop event="Harvest" name="foodCropCorn" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedCornFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedGraceCornFert1">
@@ -12796,7 +12796,7 @@
 	<drop event="Harvest" name="foodCropGraceCorn" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropGraceCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedGraceCornFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Grace Corn -->
@@ -12847,7 +12847,7 @@
 	<drop event="Harvest" name="foodCropGraceCorn" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropGraceCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedGraceCorn1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Grace Corn Fertilized -->
@@ -12899,7 +12899,7 @@
 	<drop event="Harvest" name="foodCropGraceCorn" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropGraceCorn" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwPlantedGraceCornFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedHopFert1">
@@ -12938,7 +12938,7 @@
 	<drop event="Harvest" name="resourceCropHopsFlower" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedHopFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Hop -->
@@ -12981,7 +12981,7 @@
 	<drop event="Harvest" name="resourceCropHopsFlower" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedHop1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Hop Fertilized -->
@@ -13024,7 +13024,7 @@
 	<drop event="Harvest" name="resourceCropHopsFlower" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedHopFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedPumpkinFert1">
@@ -13064,7 +13064,7 @@
 	<drop event="Harvest" name="foodCropPumpkin" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropPumpkin" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="plantedPumpkinFert1"/>
-	<property name="Tags" value="FertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="FertilizedCrops"/>
 </block>
 
 <!-- NL Pumpkin -->
@@ -13107,7 +13107,7 @@
 	<drop event="Harvest" name="foodCropPumpkin" count="2" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropPumpkin" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<drop event="Destroy" name="wotwNLPlantedPumpkin1" count="1" prob="0.5"/>
-	<property name="Tags" value="NLCrops,traderPlaceable"/>
+	<property name="Tags" value="NLCrops"/>
 </block>
 
 <!-- NL Pumpkin Fertilized -->
@@ -13151,7 +13151,7 @@
 	<drop event="Harvest" name="foodCropPumpkin" count="3" prob="0.775" tag="grownMowing" tool_category="CropHarvester"/>
 	<drop event="Harvest" name="foodCropPumpkin" count="1" prob="0.775" tag="grownMowingBonus" tool_category="CropHarvester"/>
 	<property name="DowngradeBlock" value="wotwNLPlantedPumpkinFert1"/>
-	<property name="Tags" value="NLFertilizedCrops,traderPlaceable"/>
+	<property name="Tags" value="NLFertilizedCrops"/>
 </block>
 
 <block name="plantedMystery1">
@@ -35286,35 +35286,35 @@
 <!-- </append> -->
 
 <append xpath="//block[contains(@name, 'planted')]/property[@name='Tags']/@value">,traderPlaceable</append>
-<append xpath="//block[contains(@name, '3Harvest')]">
-	<property name="Tags" value="traderPlaceable"/>
-</append>
+<!-- <append xpath="//block[contains(@name, '3Harvest')]"> -->
+	<!-- <property name="Tags" value="traderPlaceable"/> -->
+<!-- </append> -->
 <append xpath="//block[contains(@name, 'treeGrassMaster')]/property[@name='Tags']/@value">,traderPlaceable</append>
 <append xpath="//block[contains(@name, 'treeMaster')]/property[@name='Tags']/@value">,traderPlaceable</append>
 <append xpath="//block[contains(@name, 'CornDead')]">
 	<property name="Tags" value="traderPlaceable"/>
 </append>
-<append xpath="//block[contains(@name, 'plantedPotatoDead')]">
-	<property name="Tags" value="traderPlaceable"/>
-</append>
-<append xpath="//block[contains(@name, 'plantedBlueberryDead')]">
-	<property name="Tags" value="traderPlaceable"/>
-</append>
-<append xpath="//block[contains(@name, 'plantedAloeDead')]">
-	<property name="Tags" value="traderPlaceable"/>
-</append>
-<append xpath="//block[contains(@name, 'plantedCoffeeDead')]">
-	<property name="Tags" value="traderPlaceable"/>
-</append>
-<append xpath="//block[contains(@name, 'plantedCottonDead')]">
-	<property name="Tags" value="traderPlaceable"/>
-</append>
-<append xpath="//block[contains(@name, 'plantedYuccaDead')]">
-	<property name="Tags" value="traderPlaceable"/>
-</append>
-<append xpath="//block[contains(@name, 'plantedHopDead')]">
-	<property name="Tags" value="traderPlaceable"/>
-</append>
+<!-- <append xpath="//block[contains(@name, 'plantedPotatoDead')]"> -->
+	<!-- <property name="Tags" value="traderPlaceable"/> -->
+<!-- </append> -->
+<!-- <append xpath="//block[contains(@name, 'plantedBlueberryDead')]"> -->
+	<!-- <property name="Tags" value="traderPlaceable"/> -->
+<!-- </append> -->
+<!-- <append xpath="//block[contains(@name, 'plantedAloeDead')]"> -->
+	<!-- <property name="Tags" value="traderPlaceable"/> -->
+<!-- </append> -->
+<!-- <append xpath="//block[contains(@name, 'plantedCoffeeDead')]"> -->
+	<!-- <property name="Tags" value="traderPlaceable"/> -->
+<!-- </append> -->
+<!-- <append xpath="//block[contains(@name, 'plantedCottonDead')]"> -->
+	<!-- <property name="Tags" value="traderPlaceable"/> -->
+<!-- </append> -->
+<!-- <append xpath="//block[contains(@name, 'plantedYuccaDead')]"> -->
+	<!-- <property name="Tags" value="traderPlaceable"/> -->
+<!-- </append> -->
+<!-- <append xpath="//block[contains(@name, 'plantedHopDead')]"> -->
+	<!-- <property name="Tags" value="traderPlaceable"/> -->
+<!-- </append> -->
 <append xpath="//block[contains(@name, 'hayBale')]">
 	<property name="Tags" value="traderPlaceable"/>
 </append>
@@ -35455,16 +35455,20 @@
 <!-- <set xpath="//block[@name='cntDewCollector']/property[@name='ModTransformEnableNames']/@value">1,2,3</set> -->
 <!-- <set xpath="//block[@name='cntDewCollector']/property[@name='ModTypes']/@value">Speed,Speed,Type</set> -->
 <set xpath="//block[@name='cntDewCollector']/property[@name='MultiBlockDim']/@value">2,2,2</set>
+<set xpath="//block[@name='cntDewCollector']/property[@name='FuelGridHeight']/@value">2</set>
+<set xpath="//block[@name='cntDewCollector']/property[@name='OutputGridHeight']/@value">3</set>
 
 <set xpath="//block[@name='DecorationTackleBoxRedLoot']/property[@name='Model']/@value">@:Entities/LootContainers/metalToolBoxClosedPrefab.prefab</set>
 <append xpath="//block[@name='DecorationTackleBoxRedLoot']">
 	<property name="TintColor" value="7F6868"/>
 </append>
+<set xpath="//block[@name='DecorationTackleBoxRedLoot']/property[@name='LootList']/@value">playerStorageS</set>
 
 <set xpath="//block[@name='DecorationTackleBoxBlueLoot']/property[@name='Model']/@value">@:Entities/LootContainers/metalToolBoxClosedPrefab.prefab</set>
 <append xpath="//block[@name='DecorationTackleBoxRedLoot']">
 	<property name="TintColor" value="73858D"/>
 </append>
+<set xpath="//block[@name='DecorationTackleBoxBlueLoot']/property[@name='LootList']/@value">playerStorageS</set>
 
 <!-- <set xpath="//block[@name='cropsGrowingMaster']/property[@name='PlantGrowing.GrowthRate']/@value">2</set> -->
 

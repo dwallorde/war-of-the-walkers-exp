@@ -4741,8 +4741,7 @@
 <remove xpath="/lootcontainers/lootgroup[@name='groupRobotics']/item[@name='gunBotT2JunkTurret']"/>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupMoPowerShelves']">
-	<item group="ClassFragmentsDrop" count="1" loot_prob_template="veryLow"/>
-	<item group="roboticsMagazines"/>
+	<item group="ClassFragmentsDrop" loot_prob_template="veryLow" force_prob="true"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupMoPower02']">

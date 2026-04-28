@@ -33,6 +33,72 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 [ Change Log ]
 
+Version: 2.6.44.742
+	[ Repair - Flat Quality Levels Loss - Cvar Support ]
+		- RepairQualityLossLevels can now be set via player cvar (e.g. from a buff or progression),
+		  matching the existing cvar support for RepairQualityLoss. Stored as a whole integer;
+		  0 is treated as unset and falls through to per-item or global XML config.
+		- Priority order (highest wins): player cvar → per-item XML → global XML.
+			CVar name is: RepairQualityLossLevels
+
+Version: 2.6.43.925
+	[ NPC - Prevent Storing NPC Inside Another NPC's Inventory ]
+		- DialogActionPickUpNPC now blocks pickup of any NPC whose hand inventory, HarvestManager bag,
+		  or loot container contains an item with EntityClassId metadata (i.e. another stored NPC).
+		  Previously, picking up the outer NPC would serialize the inner NPC item via
+		  SerializeItemStackArray, which does not preserve ItemValue metadata. On deploy the inner
+		  NPC item would have no EntityClassId and could never be placed, producing the log warning
+		  "ItemActionDeployNPCSDX: No EntityClass defined for this item."
+		- XUiC_ItemStack_SlotTags.IsStackAllowedInContainer now runs the NoStorage metadata check
+		  before the xui.lootContainer null guard. Previously, drag-and-drop into entity-based
+		  containers (which have no world block position and may leave lootContainer null) bypassed
+		  the NoStorage gate entirely.
+		- EntitySyncUtils.GetNPCItemValue now stamps NoStorage = 1 on every NPC pickup item,
+		  activating the existing XUiC_ItemStack_SlotTags gate to prevent NPC items from being
+		  dragged into any container through the UI.
+		- Added localization keys npcHasItems and npcContainsNPC to 0-SCore/Config/Localization.txt.
+
+	[ Repair - Simultaneous Repair Queue Bug Fix ]
+		- Fixed a bug where repairing two items at the same time caused the second item to not
+		  lose any quality. Root cause: the patch used a single static _pendingOriginalQuality
+		  field and enforced only one RepairItem event subscription via -= then +=. When two
+		  repairs were queued back-to-back, the second Prefix call overwrote the static field
+		  and reused the single subscription. The first repair fired and unsubscribed the handler,
+		  leaving the second repair with no handler and no quality loss applied.
+		- Fixed by replacing the static int with a Queue<int>. Each Prefix call enqueues the
+		  pre-repair quality and adds one subscription (+=, no preceding -=). Each OnRepairItem
+		  call removes one subscription, reads quality from item metadata (preferred, item-specific)
+		  or dequeues from the queue (fallback, FIFO order matches repair queue order).
+
+	[ Repair - Flat Quality Levels Loss ]
+		- Added RepairQualityLossLevels support. When set, each repair loses exactly N quality
+		  levels regardless of the item's current quality. Takes priority over the existing
+		  percentage-based RepairQualityLoss path.
+		- Resolved from three sources in priority order (highest wins):
+		    1. Player cvar  RepairQualityLossLevels  — whole integer (2 = lose 2 levels).
+		       0 is treated as unset (falls through to item/global config).
+		    2. Per-item XML property  RepairQualityLossLevels  in items.xml.
+		    3. Global default  RepairQualityLossLevels  in AdvancedItemFeatures (blocks.xml).
+
+		Configuration examples:
+		    <property name="RepairQualityLossLevels" value="2"/>   <!-- lose exactly 2 levels per repair -->
+		    <set_cvar name="RepairQualityLossLevels" value="1"/>   <!-- 1 level loss while buff is active -->
+
+	[ ChallengeObjectiveHarvest - Clone Fix ]
+		- Clone() now copies isDebug and blockName fields. Previously both were dropped on clone,
+		  causing debug mode to silently turn off and block name filters to stop working after the
+		  challenge objective was cloned internally by the challenge system.
+
+Version: 2.6.40.647
+	[ EntityAliveSDX - Backpack Drop on Death ]
+		- Fixed backpack not dropping when an NPC dies. EntityAliveSDX extends EntityTrader, so the
+		  player-accessible bag is stored in HarvestManager rather than lootContainer. SetDead() now
+		  checks HarvestManager first and falls back to lootContainer for non-trader entities.
+		- Added null guard when creating the backpack entity to prevent a silent NullReferenceException
+		  if neither "BackpackNPC" nor "Backpack" entity class is found.
+		- HarvestManager.Remove() is now called on NPC death to clean up the harvest container,
+		  consistent with the pickup (collect) flow.
+
 Version: 2.6.35.1852
 	[ Repair - Quality Loss ]
 		- Added ItemActionEntryRepairQualityLoss patch: replaces vanilla's flat −1 quality-per-repair

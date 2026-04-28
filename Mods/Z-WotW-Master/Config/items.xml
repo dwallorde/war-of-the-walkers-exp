@@ -4624,7 +4624,7 @@
 <item name="oilExtractorBundle">
 	<property name="Extends" value="resourceRockSmallBundle"/>
 	<property name="CustomIcon" value="resourceOilShale"/>
-	<property name="CustomIconTint" value="F5F5DC"/>
+	<property name="CustomIconTint" value="FFA500"/>
 	<property class="Action0">
 		<property name="Create_item" value="resourceOilShale"/>
 		<property name="Create_item_count" value="100"/>

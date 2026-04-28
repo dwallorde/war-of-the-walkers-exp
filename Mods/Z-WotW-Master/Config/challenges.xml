@@ -1713,7 +1713,7 @@
 		<objective type="Gather" item="guppFireExtinguisherItem" count="1"/>
 	</challenge>
 	
-	<challenge name="wotwGatherFlares" title_key="wotwGatherFlares" icon="flareSmallWeaponsSupply" group="Resources"
+	<challenge name="wotwGatherFlares" title_key="wotwGatherFlares" icon="flareHealthandArmorSupply" group="Resources"
 		short_description_key="wotwGatherFlaresShort" description_key="wotwGatherFlaresDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
 		<objective type="GatherTags, SCore" item_tags="SupplyFlare" override_text_key="xuiSupplyFlare" count="1"/>
