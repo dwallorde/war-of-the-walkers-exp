@@ -981,7 +981,7 @@
 				<property name="Sound_end" value="smg_fire_end"/>
 				<property name="Sound_empty" value="dryfire"/>
 				<property name="Sound_reload" value="Weapons/Ranged/MP5/mp5_reload" />
-				<property name="Particles_muzzle_fire" value="gunfire_pistol_SMG"/>
+				<property name="Particles_muzzle_fire" value="gunfire_MG_SMG"/>
 				<property name="DamageEntity" value="5"/> <!--  This is base damage per ray that hits) -->
 				<property name="DamageBlock" value="5"/>
 				<!--<requirement name="CVarCompare" cvar="_underwater" operation="LTE" value="0"/> -->
@@ -2623,13 +2623,13 @@
 				<property name="Infinite_ammo" value="true" />
 				<property name="Single_magazine_usage" value="false"/>
 				<property name="Bullet_icon" value="uzi" />
-				<property name="Sound_start" value="bow2_fire"/>
+				<property name="Sound_start" value="crossbow_fire"/>
 				<property name="Sound_repeat" value=""/>
 				<property name="Sound_end" value=""/>
 				<property name="Sound_empty" value="dryfire"/>
-				<property name="Sound_reload" value="bow_unquiver"/>
-				<property name="Sound_draw" value="bow2_draw"/>
-				<property name="Sound_cancel" value="bow_fire_cancel"/>	
+				<property name="Sound_reload" value="crossbow_reload"/>
+				<!-- <property name="Sound_draw" value="bow2_draw"/> -->
+				<!-- <property name="Sound_cancel" value="bow_fire_cancel"/>	 -->
 				<property name="SoundDestroy" value="wooddestroy1"/>
 				<property name="DamageEntity" value="10"/> 
 				<property name="DamageBlock" value="10"/> 				

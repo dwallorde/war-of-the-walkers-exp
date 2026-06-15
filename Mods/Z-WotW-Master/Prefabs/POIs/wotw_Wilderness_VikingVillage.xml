@@ -29,12 +29,12 @@
   <property name="TriggerVolumeTriggers" value="1#2#3#4#5#6#8" />
   <property name="Zoning" value="wilderness" />
   <property class="Stats">
-    <property name="LightsVolume" value="98553.9" />
-    <property name="TotalVertices" value="1988337" />
-    <property name="TotalTriangles" value="1134312" />
+    <property name="LightsVolume" value="98553.89" />
+    <property name="TotalVertices" value="1990773" />
+    <property name="TotalTriangles" value="1135360" />
     <property class="BlockEntities">
-      <property name="Vertices" value="1738312" />
-      <property name="Triangles" value="941797" />
+      <property name="Vertices" value="1740748" />
+      <property name="Triangles" value="942845" />
     </property>
     <property class="ChunkMeshes0">
       <property name="Vertices" value="208245" />

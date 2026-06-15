@@ -1650,7 +1650,18 @@
 		short_description_key="wotwHarvestCopperZincShort" description_key="wotwHarvestCopperZincDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
 		<objective type="Harvest" item="copperFragment" count="250"/>
+	</challenge>
+	
+	<challenge name="wotwHarvestZinc" title_key="wotwHarvestZinc" icon="zincFragment" group="RawResources"
+		short_description_key="wotwHarvestZincShort" description_key="wotwHarvestZincDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
 		<objective type="Harvest" item="zincFragment" count="250"/>
+	</challenge>
+	
+	<challenge name="wotwHarvestTin" title_key="wotwHarvestTin" icon="wotwResourceTin" group="RawResources"
+		short_description_key="wotwHarvestTinShort" description_key="wotwHarvestTinDesc"
+		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+		<objective type="Harvest" item="wotwResourceTin" count="250"/>
 	</challenge>
 	
 	<challenge name="wotwHarvestBrimstone" title_key="wotwHarvestBrimstone" icon="wotwResourceBrimstone" group="RawResources"

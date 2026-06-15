@@ -35,32 +35,12 @@
 	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="packStarter"/>
 	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="packStarter"/>
 
-	<effect_group name="Action Skills Effects">
-		<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="AS_Athletics_XP" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfRun" action="ModifyCVar" cvar="AS_Athletics_XP" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfWalk" action="ModifyCVar" cvar="AS_Athletics_XP" operation="add" value="5"/>
-		
-		<triggered_effect trigger="onSelfSwimRun" action="ModifyCVar" cvar="AS_Athletics_XP" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfSwimStart" action="ModifyCVar" cvar="AS_Athletics_XP" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfWaterSubmerge" action="ModifyCVar" cvar="AS_Athletics_XP" operation="add" value="5"/>
-		
-		<triggered_effect trigger="onSelfCrouchRun" action="ModifyCVar" cvar="AS_Stealth_XP" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfCrouchWalk" action="ModifyCVar" cvar="AS_Stealth_XP" operation="add" value="5"/>
-	</effect_group>
+	
 	<effect_group name="Dwalls Books">
 		<passive_effect name="HarvestCount" operation="base_set" value="0" tags="DBChickenEggsHarvest,DBExpCardsHarvest,DBWildCropHarvest,perkBuilderMastery,perkHunterMastery,LegendaryFishBait,perkTradesmanMastery"/>
 	</effect_group>
 	<effect_group name="IntroCompleteCVarSet">
 		<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="IntroComplete" operation="set" value="1"/>
-	</effect_group>
-	<effect_group name="Action Skills">
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="AS_Hunter_XP" operation="add" value="16">
-			<requirement name="EntityTagCompare" target="other" tags="animal"/>
-			<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
-		</triggered_effect>
-		<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="AS_Hunter_XP" operation="add" value="32">
-			<requirement name="EntityTagCompare" target="other" tags="animal"/>
-		</triggered_effect>
 	</effect_group>
 	<effect_group name="Medic Mastery Healing">
 		<triggered_effect trigger="onSelfCrouch" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">

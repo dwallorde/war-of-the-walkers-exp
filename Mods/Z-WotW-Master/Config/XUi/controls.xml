@@ -249,6 +249,12 @@
 <set xpath="/controls/ingredient_row/rect[@name='row']/rect/sprite[@name='icon']/@width">35</set>
 <set xpath="/controls/ingredient_row/rect[@name='row']/rect/sprite[@name='icon']/@height">35</set>
 
+<!-- <set xpath="/controls/recipe_entry/rect/sprite[@name='itemtypeicon']/@width">50</set> -->
+<!-- <set xpath="/controls/recipe_entry/rect/sprite[@name='itemtypeicon']/@height">50</set> -->
+
+<set xpath="/controls/recipe_entry/rect/sprite[@name='Unlocked']/@size">35,35</set>
+<set xpath="/controls/recipe_entry/rect/sprite[@name='Unlocked']/@pos">352,-5</set>
+
 <conditional>
 	<if cond="mod_loaded('zSMXui') == true">
 		<set xpath="/controls/smx_skills_book_entry/rect/sprite[@name='groupIcon']/@atlas">uiAtlas</set>

@@ -939,13 +939,13 @@
 		</effect_group> -->
 
 		<effect_group name="Scavenging Level Up">
+			<requirement name="ProgressionLevel" progression_name="perkASScavenging" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="AS_Scavenging_Lvl" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="AS_Scavenging_XP" operation="GTE" value="@AS_Scavenging_LvlNextTotal"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="AS_Scavenging_LvlNextAdd" operation="multiply" value="@AS_XP_Mult"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="AS_Scavenging_LvlNextTotal" operation="add" value="@AS_Scavenging_LvlNextAdd"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="AS_Scavenging_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="AS_Scavenging_XP" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddProgressionLevel" progression_name="perkASScavenging" level="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Scavenging level increased"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message_key="buffASScavengingLevel"/>
 			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="levelup" play_in_head="true"/>
 		</effect_group>
 	</buff>
@@ -5334,6 +5334,326 @@
 			<!-- <triggered_effect trigger="onSelfRespawn" action="PlaySound" target="self" sound="PlayerSpawn"/> -->
 			<!-- <triggered_effect trigger="onSelfEnteredGame" action="PlaySound" target="self" sound="PlayerSpawn"/> -->
 			<triggered_effect trigger="onSelfTeleported" action="PlaySound" target="self" sound="PlayerSpawn"/>
+		</effect_group>
+		
+		<effect_group name="Action Skills Athletics Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Athletics_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Athletics_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Athletics Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASAthletics" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Athletics_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Athletics_XP" operation="GTE" value="@AS_Athletics_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASAthletics" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASAthletics" level="1">
+				<requirement name="ProgressionLevel" progression_name="perkCovertMastery" operation="GTE" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Athletics_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Athletics_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Athletics_Lvl" operation="add" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkCovertMastery" operation="GTE" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASAtheleticsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Stealth Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Stealth_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Stealth_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Stealth Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASStealth" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Stealth_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Stealth_XP" operation="GTE" value="@AS_Stealth_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASStealth" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Stealth_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Stealth_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASStealthLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Archery Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Archery_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Archery_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Archery Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASArchery" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Archery_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Archery_XP" operation="GTE" value="@AS_Archery_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Archery_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Archery_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASArchery" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASArcheryLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Construction_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Construction_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Construction Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASConstruction" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Construction_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Construction_XP" operation="GTE" value="@AS_Construction_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Construction_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Construction_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASConstruction" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASConstructionLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Quester_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Quester_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Quester">
+			<requirement name="ProgressionLevel" progression_name="perkASQuester" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Quester_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Quester_XP" operation="GTE" value="@AS_Quester_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Quester_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Quester_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASConstruction" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASQuesterLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Fist Weapons Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_FistWeapons_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_FistWeapons_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS FistWeapons Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASFistWeapons" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_FistWeapons_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_FistWeapons_XP" operation="GTE" value="@AS_FistWeapons_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_FistWeapons_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_FistWeapons_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASFistWeapons" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASFistWeaponsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Thrown Wpns Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_ThrownWeapons_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_ThrownWeapons_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS ThrownWeapons Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASThrownWeapons" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_ThrownWeapons_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_ThrownWeapons_XP" operation="GTE" value="@AS_ThrownWeapons_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_ThrownWeapons_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_ThrownWeapons_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASThrownWeapons" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASThrownWeaponsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Hunter Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Hunter_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Hunter_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Hunter Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASHunter" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Hunter_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Hunter_XP" operation="GTE" value="@AS_Hunter_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Hunter_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Hunter_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASHunter" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASHunterLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Light Armour Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_LightArmour_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_LightArmour_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS LightArmour Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASLightArmour" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_LightArmour_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_LightArmour_XP" operation="GTE" value="@AS_LightArmour_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_LightArmour_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_LightArmour_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASLightArmour" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASLightArmourLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Scavenging Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Scavenging_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Scavenging_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="Action Skills Medicine Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Medicine_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Medicine_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Medicine Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASMedicine" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Medicine_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Medicine_XP" operation="GTE" value="@AS_Medicine_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Medicine_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Medicine_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASMedicine" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASMedicineLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Pistols Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Pistols_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Pistols_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Handguns Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASPistols" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Pistols_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Pistols_XP" operation="GTE" value="@AS_Pistols_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Pistols_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Pistols_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASPistols" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASHandgunsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Rifles Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Rifles_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Rifles_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Rifles Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASRifles" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Rifles_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Rifles_XP" operation="GTE" value="@AS_Rifles_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Rifles_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Rifles_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASRifles" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASRiflesLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Blade Wpns Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_BladeWeapons_XP" operation="Equals" value="0"/>\
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BladeWeapons_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS BladeWeapons Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASBladeWeapons" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_BladeWeapons_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_BladeWeapons_XP" operation="GTE" value="@AS_BladeWeapons_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_BladeWeapons_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_BladeWeapons_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASBladeWeapons" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASBladeWeaponsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Medium Armour Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_MediumArmour_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MediumArmour_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS MediumArmour Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASMediumArmour" operation="LT" value="100"/>
+			<requirement name="WornItems" tags="mediumArmorPenalty" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="AS_MediumArmour_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_MediumArmour_XP" operation="GTE" value="@AS_MediumArmour_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_MediumArmour_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_MediumArmour_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASMediumArmour" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASMediumArmourLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Shotguns Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Shotguns_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Shotguns_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Shotguns Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASShotguns" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Shotguns_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Shotguns_XP" operation="GTE" value="@AS_Shotguns_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Shotguns_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Shotguns_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASShotguns" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASShotgunsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Machine Guns Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_MachineGuns_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MachineGuns_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Machine Guns Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASMachineGuns" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_MachineGuns_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_MachineGuns_XP" operation="GTE" value="@AS_MachineGuns_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_MachineGuns_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_MachineGuns_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASMachineGuns" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASMachineGunsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Blunt Wpns Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_BluntWeapons_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_BluntWeapons_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS BluntWeapons Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASBluntWeapons" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_BluntWeapons_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_BluntWeapons_XP" operation="GTE" value="@AS_BluntWeapons_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_BluntWeapons_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_BluntWeapons_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASBluntWeapons" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASBluntWeaponsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Heavy Armour Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_HeavyArmour_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_HeavyArmour_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS HeavyArmour Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASHeavyArmour" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_HeavyArmour_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_HeavyArmour_XP" operation="GTE" value="@AS_HeavyArmour_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_HeavyArmour_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_HeavyArmour_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASHeavyArmour" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASHeavyArmourLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Wrenching Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_Wrenching_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_Wrenching_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Wrenching Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASWrenching" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Wrenching_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_Wrenching_XP" operation="GTE" value="@AS_Wrenching_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Wrenching_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_Wrenching_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASWrenching" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASWrenchingLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Robotic Wpns Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_RoboticJunk_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_RoboticJunk_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS RoboticJunk Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASRoboticJunk" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_RoboticJunk_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_RoboticJunk_XP" operation="GTE" value="@AS_RoboticJunk_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_RoboticJunk_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_RoboticJunk_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASRoboticJunk" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASJunkWpnsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Mining Tools Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_MiningTools_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_MiningTools_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Mining Tools Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASMiningTools" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_MiningTools_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_MiningTools_XP" operation="GTE" value="@AS_MiningTools_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_MiningTools_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_MiningTools_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASMiningTools" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASMiningToolsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
+		</effect_group>
+		<effect_group name="Action Skills Power Tools Lvl 0 Set">
+			<requirement name="CVarCompare" cvar="AS_PowerTools_XP" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="AS_PowerTools_LvlNextTotal" operation="set" value="100"/>
+		</effect_group>
+		<effect_group name="AS Power Tools Lvl Increase">
+			<requirement name="ProgressionLevel" progression_name="perkASPowerTools" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_PowerTools_Lvl" operation="LT" value="100"/>
+			<requirement name="CVarCompare" cvar="AS_PowerTools_XP" operation="GTE" value="@AS_PowerTools_LvlNextTotal"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_PowerTools_Lvl" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AS_PowerTools_XP" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="perkASPowerTools" level="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffASPowerToolsLevel"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="levelup" play_in_head="true"/>
 		</effect_group>
 </append>
 

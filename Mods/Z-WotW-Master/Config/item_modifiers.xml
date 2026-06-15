@@ -1951,10 +1951,10 @@
 
 <conditional>
 	<if cond="mod_loaded('sphereii_item_mod_degradation') == true">
-		<append xpath="//item_modifier[not(contains(@name, 'modClothingCLB'))and not(contains(@name, 'wotwModArmorInsulatedLinerT0'))and not(contains(@name, 'wotwModArmorCoolingMeshT0'))and not(contains(@name, 'modArmorWaterPurifier'))]/effect_group[passive_effect]">
+		<append xpath="//item_modifier[not(contains(@name, 'modClothingCLB'))and not(contains(@name, 'wotwModArmorInsulatedLinerT0'))and not(contains(@name, 'wotwModArmorCoolingMeshT0'))and not(contains(@name, 'modArmorWaterPurifier'))and not(contains(@name, 'modVehicleExpandedSeat'))]/effect_group[passive_effect]">
 			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
 		</append>
-		<append xpath="//item_modifier[not(contains(@name, 'modDye'))and not(contains(@name, 'modGeneralMaster'))and not(contains(@name, 'wotwModArmorInsulatedLinerT0'))and not(contains(@name, 'wotwModArmorCoolingMeshT0'))and not(contains(@name, 'modBicycleChain'))and not(contains(@name, 'modClothingCLB'))and not(contains(@name, 'modBrushlessMotor'))and not(contains(@name, 'modCandyCane'))and not(contains(@name, 'modClothingFishing'))]">
+		<append xpath="//item_modifier[not(contains(@name, 'modDye'))and not(contains(@name, 'modGeneralMaster'))and not(contains(@name, 'wotwModArmorInsulatedLinerT0'))and not(contains(@name, 'wotwModArmorCoolingMeshT0'))and not(contains(@name, 'modBicycleChain'))and not(contains(@name, 'modClothingCLB'))and not(contains(@name, 'modBrushlessMotor'))and not(contains(@name, 'modCandyCane'))and not(contains(@name, 'modClothingFishing'))and not(contains(@name, 'modVehicleExpandedSeat'))]">
 			<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardModSettingsWotW"/>
 		</append>
 		
@@ -2110,11 +2110,7 @@
 			<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
 		</append>
 		
-		<append xpath="//item_modifier[@name='modArmorNightVision']">
-			<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourModSettingsWotW"/>
-		</append>
-		
-		<append xpath="//item_modifier[starts-with(@name,'modVehicle')]">
+		<append xpath="//item_modifier[starts-with(@name,'modVehicle')and not(contains(@name, 'modVehicleExpandedSeat'))]">
 			<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardVehicleModSettingsWotW"/>
 		</append>
 		
@@ -2506,37 +2502,12 @@
 				<!-- <triggered_effect trigger="onSelfRoutineUpdate" action="DegradeItemValueMod, SCore"/> -->
 			<!-- </effect_group> -->
 		</append>
-
-		<append xpath="//item_modifier[@name='modArmorHelmetLightHD']">
-			<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardArmourActiveModSettingsWotW"/>
-			<property name="RepairTools" value="wotwRepairKitBatteries"/>
-			<effect_group name="BrokenHooks">
-				<requirement name="ItemPercentUsed, SCore" operation="GTE" value="1"/>
-				<requirement name="IsEquipped"/>
-				<triggered_effect trigger="onSelfRoutineUpdate" action="AddBuff" buff="buffStatusModBroken"/>
-			</effect_group>
-			<effect_group name="EquipHooks">
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffStatusModBroken"/>
-				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="buffStatusModBroken">
-					<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
-				</triggered_effect>
-			</effect_group>
-			<!-- <effect_group name="DamageHooks Deactivate"> -->
-				<!-- <requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/> -->
-				<!-- <requirement name="IsItemActive"/> -->
-				<!-- <triggered_effect trigger="onSelfRoutineUpdate" action="SetPartActive" part="HeadLight" active="false" /> -->
-			<!-- </effect_group> -->
-		</append>
-
-		<append xpath="//item_modifier[@name='modArmorHelmetLightHD']/effect_group/triggered_effect[@trigger='onSelfItemActivate']">
-			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1" />
-		</append>
 		
 		<append xpath="//item_modifier[@name='LMGBeltBag']/effect_group[passive_effect]">
 			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
 		</append>
 		<append xpath="//item_modifier[@name='LMGBeltBag']">
-			<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardSettingsWotW, StandardArmourModSettingsWotW"/>
+			<ref_file snippet="ItemDegradationSettings/StandardSettings.xml" label="StandardModSettingsWotW, StandardArmourModSettingsWotW"/>
 		</append>
 		
 		<!-- <append xpath="//item_modifier[@name='modArmorBurntProtectionHead']/effect_group/triggered_effect[@trigger='onSelfEquipStart'][@action='AddBuff']"> -->

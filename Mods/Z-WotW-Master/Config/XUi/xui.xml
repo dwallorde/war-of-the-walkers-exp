@@ -797,7 +797,7 @@
 				<window name="windowOutput"/>
 				<window name="windowCraftingQueue"/>
 				<window name="windowFuel" />
-				<window name="windowToolsForge"/>
+				<window name="windowToolsForge2"/>
 				<window name="windowNonPagingHeader"/>
 			</window_group>
 		</append>

@@ -31,18 +31,12 @@
 <recipe name="scrapTungsten" count="1" craft_time="0" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
 <recipe name="scrapCopper" count="1" craft_time="0" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="kevlar" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
-<!-- <recipe name="toolPartsTungsten" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
-<!-- <recipe name="toolPartsAdvancedMotor" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
-<!-- <recipe name="meleeWpnTungstenSledgehammerParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
-<!-- <recipe name="meleeWpnTungstenClubParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
-<!-- <recipe name="meleeWpnTungstenSpearParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
-<!-- <recipe name="meleeWpnTungstenMacheteParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
 <recipe name="meleeWpnTungstenBatonParts" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
 <recipe name="wotwResourceHardwoodPlank" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
 <recipe name="wotwResourceWoodStick" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
 <recipe name="wotwResourceHardwoodLog" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
-<!-- <recipe name="wotwResourceWoodLog" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe> -->
 <recipe name="wotwResourceHardwoodStick" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
+<recipe name="wotwResourceForgedBronze" count="1" craft_time="0" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">	<wildcard_forge_category /> </recipe>
 </insertAfter>
 
 <set xpath="/recipes/recipe[@name='meleeWpnSledgeT0StoneSledgehammer']/ingredient[@name='resourceWood']/@name">wotwResourceWoodStick</set>
@@ -406,6 +400,8 @@
 <remove xpath="/recipes/recipe[@name='meleeToolPickT3Auger']"/>
 <remove xpath="/recipes/recipe[@name='meleeToolAxeT3Chainsaw']"/>
 
+<remove xpath="/recipes/recipe[@name='toolForgeCrucible']"/>
+
 <remove xpath="/recipes/recipe[@name='meleeToolRepairT0StoneAxe']"/>
 
 <remove xpath="/recipes/recipe[@name='meleeToolRepairT1ClawHammer']"/>
@@ -574,18 +570,35 @@
 	<ingredient name="resourceRocketCasing" count="1"/>
 </recipe>
 
+<recipe name="wotwAmmoArrowBronze" count="1" craft_area="ammoWorkstation" tags="learnable,ammoWorkstation">
+    <ingredient name="wotwAmmoArrowHeadBronze" count="1"/>
+    <ingredient name="wotwResourceWoodStick" count="1"/>
+    <ingredient name="resourceFeather" count="1"/>
+</recipe>
+
 <recipe name="wotwAmmoArrowTungsten" count="1" craft_area="ammoWorkstation" tags="learnable,ammoWorkstation">
     <ingredient name="wotwAmmoArrowHeadTungsten" count="1"/>
     <ingredient name="wotwResourceHardwoodStick" count="1"/>
     <ingredient name="resourceFeather" count="1"/>
 </recipe>
 
-<recipe name="wotwAmmoArrowHeadTungsten" count="1" craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="learnable,ammoWorkstation">
+<recipe name="wotwAmmoCrossbowBoltBronze" count="1" craft_area="ammoWorkstation" tags="learnable,ammoWorkstation">
+    <ingredient name="wotwAmmoArrowHeadBronze" count="1"/>
+    <ingredient name="wotwResourceWoodStick" count="1"/>
+    <ingredient name="resourceFeather" count="1"/>
+</recipe>
+
+<recipe name="wotwAmmoArrowHeadTungsten" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldTungstenArrowHead" tags="learnable,ammoWorkstation">
 	<ingredient name="scrapTungsten" count="3"/>
 	<ingredient name="resourceClayLump" count="2"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.177,.12" tags="scrapTungsten"/>
 	</effect_group>
+</recipe>
+
+<recipe name="wotwAmmoArrowHeadBronze" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldBronzeArrowHead" tags="learnable,ammoWorkstation">
+	<ingredient name="wotwResourceForgedBronze" count="1"/>
+	<ingredient name="resourceClayLump" count="1"/>
 </recipe>
 
 <recipe name="wotwAmmoCrossbowBoltTungsten" count="1" craft_area="ammoWorkstation" tags="learnable,ammoWorkstation">
@@ -594,7 +607,7 @@
     <ingredient name="resourceFeather" count="1"/>
 </recipe>
 
-<recipe name="tungstenDart" count="1" craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="learnable,ammoWorkstation">
+<recipe name="tungstenDart" count="1" craft_area="forgeAmmo" tags="learnable,ammoWorkstation">
 	<ingredient name="scrapTungsten" count="5"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -602,7 +615,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="wotwAmmoHPBulletTip" count="1" craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="learnable,ammoWorkstation">
+<recipe name="wotwAmmoHPBulletTip" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldBulletTips" tags="learnable,ammoWorkstation">
 	<ingredient name="resourceScrapLead" count="3"/> 
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -610,7 +623,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="wotwAmmoHPBulletTipBundle" count="1" craft_time="240" craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="learnable,ammoWorkstation">
+<recipe name="wotwAmmoHPBulletTipBundle" count="1" craft_time="240" craft_area="forgeAmmo" craft_tool="wotwToolMouldBulletTips" tags="learnable,ammoWorkstation">
 	<ingredient name="resourceScrapLead" count="2400"/> 
 	<ingredient name="resourceClayLump" count="800"/>
 	<effect_group>
@@ -3290,7 +3303,7 @@
 <remove xpath="//recipe[@name='drinkJarEmpty']"/>
 <!-- T0 Beverages -->
 <append xpath="/recipes">
-<recipe name="drinkJarEmpty" count="1" craft_time="5" craft_area="forgeStone" tags="perkAdvancedEngineering,learnable">
+<recipe name="drinkJarEmpty" count="1" craft_time="5" craft_area="forgeStone" craft_tool="wotwToolMouldEmptyJar" tags="perkAdvancedEngineering,learnable">
 	<ingredient name="resourceCrushedSand" count="25"/>
 	<ingredient name="resourceClayLump" count="2"/>
 	<effect_group>
@@ -4476,11 +4489,11 @@
 </recipe>
 
 <recipe name="wotwMeleeToolScrapIronHammer" count="1" tags="perkMiner69r,learnable">
-	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
 	<ingredient name="resourceYuccaFibers" count="25"/>
 	<ingredient name="wotwResourceWoodStick" count="20"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="resourceScrapIron,resourceYuccaFibers,wotwResourceWoodStick"/>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="wotwResourceForgedBronze,resourceYuccaFibers,wotwResourceWoodStick"/>
 	</effect_group>
 </recipe>
 
@@ -4576,11 +4589,11 @@
 </recipe>
 
 <recipe name="wotwMeleeToolsScrapIronAxe" count="1" tags="perkMiner69r,learnable">
-	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
 	<ingredient name="resourceYuccaFibers" count="25"/>
 	<ingredient name="wotwResourceWoodStick" count="20"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="resourceScrapIron,resourceYuccaFibers,wotwResourceWoodStick"/>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="wotwResourceForgedBronze,resourceYuccaFibers,wotwResourceWoodStick"/>
 	</effect_group>
 </recipe>
 
@@ -4659,11 +4672,11 @@
 </recipe>
 
 <recipe name="wotwMeleeToolScrapIronPickaxe" count="1" tags="perkMiner69r,learnable">
-	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
 	<ingredient name="resourceYuccaFibers" count="25"/>
 	<ingredient name="wotwResourceWoodStick" count="20"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="resourceScrapIron,resourceYuccaFibers,wotwResourceWoodStick"/>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="wotwResourceForgedBronze,resourceYuccaFibers,wotwResourceWoodStick"/>
 	</effect_group>
 </recipe>
 
@@ -4733,11 +4746,11 @@
 </recipe>
 
 <recipe name="wotwMeleeToolScrapIronShovel" count="1" tags="perkMiner69r,learnable">
-	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
 	<ingredient name="resourceYuccaFibers" count="25"/>
 	<ingredient name="wotwResourceWoodStick" count="20"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="resourceScrapIron,resourceYuccaFibers,wotwResourceWoodStick"/>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="wotwResourceForgedBronze,resourceYuccaFibers,wotwResourceWoodStick"/>
 	</effect_group>
 </recipe>
 
@@ -4971,11 +4984,11 @@
 </recipe>
 
 <recipe name="wotwMeleeToolScrewdriver" count="1" tags="perkSalvageOperations,learnable">
-	<ingredient name="resourceScrapIron" count="50"/>
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
 	<ingredient name="resourceYuccaFibers" count="25"/>
 	<ingredient name="wotwResourceWoodStick" count="20"/>
 	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="resourceScrapIron,resourceYuccaFibers,wotwResourceWoodStick"/>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="wotwResourceForgedBronze,resourceYuccaFibers,wotwResourceWoodStick"/>
 	</effect_group>
 </recipe>
 
@@ -5130,7 +5143,16 @@
 	<ingredient name="resourceClayLump" count="1"/>
 </recipe>
 
-<recipe name="forgedTungsten" count="1" craft_area="tungstenForge" craft_tool="toolForgeCrucible" tags="learnable,perkAdvancedEngineering">
+<recipe name="wotwResourceForgedBronze" count="1" craft_area="forge" craft_tool="wotwToolMouldBronze" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="copperFragment" count="10"/>
+	<ingredient name="wotwResourceTin" count="10"/>
+	<ingredient name="resourceClayLump" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4,5" value="0,-.05,-.1,-.15,-.2,-.25" tags="resourceClayLump,copperFragment,wotwResourceTin"/>
+	</effect_group>
+</recipe>
+
+<recipe name="forgedTungsten" count="1" craft_area="tungstenForge" craft_tool="wotwToolMouldTungsten" tags="learnable,perkAdvancedEngineering">
 	<ingredient name="scrapTungsten" count="10"/>
 	<ingredient name="resourceClayLump" count="10"/>
 	<effect_group>
@@ -5138,11 +5160,20 @@
 	</effect_group>
 </recipe>
 
-<recipe name="forgedTungstenBundle" count="1" craft_time="240" craft_area="tungstenForge" craft_tool="toolForgeCrucible" tags="learnable,perkAdvancedEngineering">
+<recipe name="forgedTungstenBundle" count="1" craft_time="240" craft_area="tungstenForge" craft_tool="wotwToolMouldTungsten" tags="learnable,perkAdvancedEngineering">
 	<ingredient name="scrapTungsten" count="4000"/>
 	<ingredient name="resourceClayLump" count="4000"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4,5" value="0,-.05,-.1,-.15,-.2,-.25" tags="resourceClayLump,scrapTungsten"/>
+	</effect_group>
+</recipe>
+
+<recipe name="wotwResourceForgedBronzeBundle" count="1" craft_time="240" craft_area="forge" craft_tool="wotwToolMouldBronze" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="copperFragment" count="4000"/>
+	<ingredient name="wotwResourceTin" count="4000"/>
+	<ingredient name="resourceClayLump" count="4000"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4,5" value="0,-.05,-.1,-.15,-.2,-.25" tags="resourceClayLump,copperFragment,wotwResourceTin"/>
 	</effect_group>
 </recipe>
 
@@ -7862,6 +7893,28 @@
 	</effect_group>
 </recipe>
 
+<recipe name="wotwGunBowT0BronzeBow" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArchery,perkAdvancedEngineering2">
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
+	<ingredient name="wotwResourceWoodStick" count="5"/>
+	<ingredient name="resourceLeather" count="1"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="wotwResourceRope" count="2"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="wotwResourceForgedBronze,wotwResourceWoodStick,resourceLeather,resourceDuctTape,wotwResourceRope"/>
+	</effect_group>
+</recipe>
+
+<recipe name="wotwGunBowT0BronzeCrossbow" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArchery,perkAdvancedEngineering2">
+	<ingredient name="wotwResourceForgedBronze" count="20"/>
+	<ingredient name="wotwResourceWoodStick" count="10"/>
+	<ingredient name="resourceLeather" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="wotwResourceRope" count="4"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="wotwResourceForgedBronze,wotwResourceWoodStick,resourceLeather,resourceDuctTape,wotwResourceRope"/>
+	</effect_group>
+</recipe>
+
 <recipe name="gunBowT1WoodenBow" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArchery,perkAdvancedEngineering2">
 	<ingredient name="wotwBowPartBody" count="1"/>
 	<ingredient name="wotwBowPartGrip" count="1"/>
@@ -7937,6 +7990,22 @@
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="gunBowT1WoodenBowParts,wotwResourceWeaponCraftingKit"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+<recipe name="wotwMeleeWpnClubBronze" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkPummelPete,perkAdvancedEngineering2">
+	<ingredient name="wotwResourceWoodStick" count="1"/>
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="wotwResourceWoodStick"/>
+	</effect_group>
+</recipe>
+
+<recipe name="wotwMeleeWpnClubBronze" count="1" craft_time="60" craft_area="gunSmithingWorkstation" tags="learnable,perkPummelPete,perkAdvancedEngineering2">
+	<ingredient name="wotwResourceWoodStick" count="1"/>
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="wotwResourceWoodStick"/>
 	</effect_group>
 </recipe>
 
@@ -8134,6 +8203,24 @@
 	</effect_group>
 </recipe>
 
+<recipe name="wotwMeleeWpnSledgehammerBronze" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkSkullCrusher,perkAdvancedEngineering2">
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
+	<ingredient name="resourceYuccaFibers" count="10"/>
+	<ingredient name="resourceWood" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="wotwResourceForgedBronze,resourceYuccaFibers,resourceWood"/>
+	</effect_group>
+</recipe>
+
+<recipe name="wotwMeleeWpnSledgehammerBronze" count="1" craft_time="60" craft_area="gunSmithingWorkstation" tags="learnable,perkSkullCrusher,perkAdvancedEngineering2">
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
+	<ingredient name="resourceYuccaFibers" count="10"/>
+	<ingredient name="resourceWood" count="10"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="wotwResourceForgedBronze,resourceYuccaFibers,resourceWood"/>
+	</effect_group>
+</recipe>
+
 <recipe name="meleeWpnSledgeT1IronSledgehammer" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkSkullCrusher,perkAdvancedEngineering2">
 	<ingredient name="wotwSledgePartHead" count="1"/>
 	<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
@@ -8182,6 +8269,26 @@
 	</effect_group>
 </recipe>
 
+<recipe name="wotwMeleeWpnKnucklesT0BronzeKnuckles" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkBrawler,perkAdvancedEngineering2">
+	<ingredient name="wotwResourceForgedBronze" count="12"/>
+	<ingredient name="resourceMechanicalParts" count="4"/>
+	<ingredient name="resourceLeather" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="wotwResourceForgedBronze,resourceMechanicalParts,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+</recipe>
+
+<recipe name="wotwMeleeWpnKnucklesT0BronzeKnuckles" count="1" craft_time="60" craft_area="gunSmithingWorkstation" tags="learnable,perkBrawler,perkAdvancedEngineering2">
+	<ingredient name="wotwResourceForgedBronze" count="12"/>
+	<ingredient name="resourceMechanicalParts" count="4"/>
+	<ingredient name="resourceLeather" count="2"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="wotwResourceForgedBronze,resourceMechanicalParts,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+</recipe>
+
 <recipe name="meleeWpnKnucklesT1IronKnuckles" count="1" craft_time="60" craft_area="gunSmithingWorkstation" tags="learnable,perkBrawler,perkAdvancedEngineering2">
 	<ingredient name="resourceForgedIron" count="12"/>
 	<ingredient name="resourceMechanicalParts" count="4"/>
@@ -8202,6 +8309,18 @@
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="meleeWpnKnucklesT3SteelKnucklesParts,resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape"/>
+		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+<recipe name="wotwMeleeWpnKnucklesT4TungstenKnuckles" count="1" craft_time="60" craft_area="gunSmithingWorkstation" craft_tool="toolAndDieSet" tags="learnable,perkBrawler,workbenchCrafting,perkAdvancedEngineering2">
+	<ingredient name="meleeWpnKnucklesT3SteelKnucklesParts" count="1"/>
+	<ingredient name="forgedTungsten" count="10"/>
+	<ingredient name="kevlar" count="3"/>
+	<ingredient name="resourceDuctTape" count="3"/>
+	<ingredient name="resourceLegendaryParts" count="0"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="meleeWpnKnucklesT3SteelKnucklesParts,forgedTungsten,resourceWood,resourceLeather,resourceDuctTape"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
 	</effect_group>
 </recipe>
@@ -8239,6 +8358,15 @@
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,600" operation="base_add" value="1,5" tags="meleeWpnSpearT3SteelSpearParts,wotwResourceWeaponCraftingKit"/>
 		<passive_effect name="CraftingIngredientCount" level="600" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+<recipe name="wotwMeleeWpnSpearBronze" count="1" craft_area="workbench" tags="perkJavelinMaster,craftingSpears,learnable">
+	<ingredient name="wotwResourceForgedBronze" count="10"/>
+	<ingredient name="resourceYuccaFibers" count="3"/>
+	<ingredient name="wotwResourceWoodStick" count="3"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,600" operation="perc_add" value=".5,2.5" tags="wotwResourceForgedBronze,resourceYuccaFibers,wotwResourceWoodStick"/>
 	</effect_group>
 </recipe>
 
@@ -8365,6 +8493,10 @@
 
 <recipe name="forgedTungstenBundle" count="1" craft_time="5" craft_area="workbench" craft_exp_gain="0" tags="learnable,perkAdvancedEngineering">
 	<ingredient name="forgedTungsten" count="500"/>
+</recipe>
+
+<recipe name="wotwResourceForgedBronzeBundle" count="1" craft_time="5" craft_area="workbench" craft_exp_gain="0" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="wotwResourceForgedBronze" count="500"/>
 </recipe>
 
 <recipe name="metalPipeBundle" count="1" craft_time="5" craft_area="workbench" craft_exp_gain="0" tags="learnable,perkAdvancedEngineering">
@@ -8658,6 +8790,18 @@
 
 <recipe name="scrapTungstenBundle" count="1" craft_time="1" craft_exp_gain="0" tags="learnable,perkAdvancedEngineering">
 	<ingredient name="scrapTungsten" count="6000"/>
+</recipe>
+
+<recipe name="wotwResourceTinBundle" count="1" craft_time="1" craft_exp_gain="0" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="wotwResourceTin" count="6000"/>
+</recipe>
+
+<recipe name="wotwResourceZincBundle" count="1" craft_time="1" craft_exp_gain="0" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="zincFragment" count="6000"/>
+</recipe>
+
+<recipe name="wotwResourceCopperBundle" count="1" craft_time="1" craft_exp_gain="0" tags="learnable,perkAdvancedEngineering">
+	<ingredient name="copperFragment" count="6000"/>
 </recipe>
 
 <recipe name="resourceClayLumpBundle" count="1" craft_time="1" craft_exp_gain="0" tags="learnable,perkAdvancedEngineering">
@@ -9037,7 +9181,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceArrowHeadIron" count="1" craft_area="forgeAmmo" tags="ammoWorkstation">
+<recipe name="resourceArrowHeadIron" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldIronArrowHead" tags="ammoWorkstation">
 	<ingredient name="resourceScrapIron" count="2"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -9045,7 +9189,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceArrowHeadSteelAP" count="1"  craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="ammoWorkstation">
+<recipe name="resourceArrowHeadSteelAP" count="1"  craft_area="forgeAmmo" craft_tool="wotwToolMouldSteelArrowHead" tags="ammoWorkstation">
 	<ingredient name="resourceScrapIron" count="5"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -9053,7 +9197,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBuckshot" count="1" craft_area="forgeAmmo" tags="ammoWorkstation">
+<recipe name="resourceBuckshot" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldBuckshot" tags="ammoWorkstation">
 	<ingredient name="resourceScrapLead" count="3"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -9061,7 +9205,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="buckshotBundle" count="1" craft_time="240" craft_area="forgeAmmo" tags="ammoWorkstation,learnable">
+<recipe name="buckshotBundle" count="1" craft_time="240" craft_area="forgeAmmo" craft_tool="wotwToolMouldBuckshot" tags="ammoWorkstation,learnable">
 	<ingredient name="resourceScrapLead" count="2400"/>
 	<ingredient name="resourceClayLump" count="800"/>
 	<effect_group>
@@ -9069,7 +9213,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBulletCasing" count="1" craft_area="forgeAmmo" tags="ammoWorkstation">
+<recipe name="resourceBulletCasing" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldBulletCasings" tags="ammoWorkstation">
 	<ingredient name="resourceScrapBrass" count="5"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -9077,7 +9221,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="bulletCasingBundle" count="1" craft_time="240" craft_area="forgeAmmo" tags="ammoWorkstation,learnable">
+<recipe name="bulletCasingBundle" count="1" craft_time="240" craft_area="forgeAmmo" craft_tool="wotwToolMouldBulletCasings" tags="ammoWorkstation,learnable">
 	<ingredient name="resourceScrapBrass" count="4000"/>
 	<ingredient name="resourceClayLump" count="800"/>
 	<effect_group>
@@ -9085,7 +9229,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBulletTip" count="1" craft_area="forgeAmmo" tags="ammoWorkstation">
+<recipe name="resourceBulletTip" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldBulletTips" tags="ammoWorkstation">
 	<ingredient name="resourceScrapLead" count="2"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -9093,7 +9237,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="bulletTipBundle" count="1" craft_time="240" craft_area="forgeAmmo" tags="ammoWorkstation,learnable">
+<recipe name="bulletTipBundle" count="1" craft_time="240" craft_area="forgeAmmo" craft_tool="wotwToolMouldBulletTips" tags="ammoWorkstation,learnable">
 	<ingredient name="resourceScrapLead" count="1600"/>
 	<ingredient name="resourceClayLump" count="800"/>
 	<effect_group>
@@ -9101,7 +9245,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceRocketCasing" count="1" craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="learnable,ammoWorkstation">
+<recipe name="resourceRocketCasing" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldRocketCasing" tags="learnable,ammoWorkstation">
 	<ingredient name="resourceScrapIron" count="50"/>
 	<ingredient name="resourceClayLump" count="30"/>
 	<effect_group>
@@ -9109,7 +9253,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceRocketTip" count="1" craft_area="forgeAmmo" craft_tool="toolAndDieSet" tags="learnable,ammoWorkstation">
+<recipe name="resourceRocketTip" count="1" craft_area="forgeAmmo" craft_tool="wotwToolMouldRocketTip" tags="learnable,ammoWorkstation">
 	<ingredient name="resourceScrapLead" count="50"/>
 	<ingredient name="resourceClayLump" count="30"/>
 	<effect_group>
@@ -9128,6 +9272,87 @@
 <remove xpath="/recipes/recipe[@name='toolCookingPot']"/>
 <remove xpath="/recipes/recipe[@name='metalFenceRailingTrellisSheetBlockVariantHelper']"/>
 <append xpath="/recipes">
+<recipe name="wotwToolMouldBronze" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="wotwResourceForgedBronze" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldBronze" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="copperFragment" count="10"/>
+	<ingredient name="wotwResourceTin" count="10"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldIron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceForgedIron" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldIron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceScrapIron" count="10"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldSteel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldTungsten" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="forgedTungsten" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldBulletCasings" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBulletCasing" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldBulletTips" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldBuckshot" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBuckshot" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldIronArrowHead" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceArrowHeadIron" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldSteelArrowHead" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldBronzeArrowHead" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="wotwAmmoArrowHeadBronze" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldTungstenArrowHead" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="wotwAmmoArrowHeadTungsten" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldRocketTip" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceRocketTip" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldRocketCasing" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceRocketCasing" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
+<recipe name="wotwToolMouldEmptyJar" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="drinkJarEmpty" count="1"/>
+	<ingredient name="resourceClayLump" count="5"/>
+</recipe>
+
 <recipe name="metalTrussingIBeamBlockVariantHelper" count="1" craft_area="forge" tags="construction">
 	<ingredient name="resourceScrapIron" count="40"/>
 	<ingredient name="resourceClayLump" count="5"/>
@@ -9136,7 +9361,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceForgedIron" count="1" craft_area="forge" tags="perkAdvancedEngineering,learnable">
+<recipe name="resourceForgedIron" count="1" craft_area="forge" craft_tool="wotwToolMouldIron" tags="perkAdvancedEngineering,learnable">
 	<ingredient name="resourceScrapIron" count="10"/>
 	<ingredient name="resourceClayLump" count="5"/>
 	<effect_group>
@@ -9144,7 +9369,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="forgedIronBundle" count="1" craft_time="240" craft_area="forge" tags="perkAdvancedEngineering,learnable">
+<recipe name="forgedIronBundle" count="1" craft_time="240" craft_area="forge" craft_tool="wotwToolMouldIron" tags="perkAdvancedEngineering,learnable">
 	<ingredient name="resourceScrapIron" count="4000"/>
 	<ingredient name="resourceClayLump" count="2000"/>
 	<effect_group>
@@ -9152,7 +9377,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceForgedSteel" count="1" craft_area="forge" tags="perkAdvancedEngineering,learnable" craft_tool="toolForgeCrucible">
+<recipe name="resourceForgedSteel" count="1" craft_area="forge" tags="perkAdvancedEngineering,learnable" craft_tool="wotwToolMouldSteel">
 	<ingredient name="resourceForgedIron" count="1"/>
 	<ingredient name="wotwResourceBrimstone" count="5"/>
 	<ingredient name="resourceClayLump" count="10"/>
@@ -9161,7 +9386,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="forgedSteelBundle" count="1" craft_time="240" craft_area="forge" tags="perkAdvancedEngineering,learnable" craft_tool="toolForgeCrucible">
+<recipe name="forgedSteelBundle" count="1" craft_time="240" craft_area="forge" craft_tool="wotwToolMouldSteel" tags="perkAdvancedEngineering,learnable">
 	<ingredient name="resourceForgedIron" count="400"/>
 	<ingredient name="wotwResourceBrimstone" count="2000"/>
 	<ingredient name="resourceClayLump" count="4000"/>
@@ -9483,7 +9708,7 @@
 	<ingredient name="resourceCandleStick" count="1"/>
 </recipe>
 
-<recipe name="resourceScrapBrass" count="250" craft_time="1" craft_area="recyclerWorkstation" tags="perkAdvancedEngineering">
+<recipe name="resourceScrapBrass" count="100" craft_time="1" craft_area="recyclerWorkstation" tags="perkAdvancedEngineering">
 	<ingredient name="resourceRadiator" count="1"/>
 </recipe>
 

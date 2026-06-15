@@ -391,9 +391,12 @@
 			<item name="wotwMeleeWpnTungstenMachete" quality="100,500"/>
 			<item name="wotwMeleeWpnClubIron" quality="100,500"/>
 			<item name="wotwMeleeWpnClubTungsten" quality="100,500"/>
+			<item name="wotwMeleeWpnSpearBronze" quality="100,500"/>
 			<item name="wotwMeleeWpnSteelHuntingKnife" quality="100,500"/>
 			<item name="wotwMeleeWpnTungstenHuntingKnife" quality="100,500"/>
 			<item name="wotwMeleeWpnSpearTungsten" quality="100,500"/>
+			<item name="wotwMeleeWpnKnucklesT0BronzeKnuckles" quality="100,500"/>
+			<item name="wotwMeleeWpnSledgehammerBronze" quality="100,500"/>
 			<item name="wotwMeleeWpnSledgehammerTungsten" quality="100,500"/>
 			<item name="wotwMeleeWpnBatBaseballSteel" quality="100,500"/>
 			<item name="wotwMeleeWpnBatBaseballTungsten" quality="100,500"/>
@@ -722,17 +725,22 @@
 			<item name="wotwBladesT1SkillMagazine"/>
 			<item name="wotwBladesT2SkillMagazine"/>
 			<item name="wotwBladesT3SkillMagazine"/>
+			<item name="wotwClubsT0SkillMagazine"/>
 			<item name="wotwClubsT1SkillMagazine"/>
 			<item name="wotwClubsT2SkillMagazine"/>
 			<item name="wotwClubsT3SkillMagazine"/>
+			<item name="wotwSledgehammersT0SkillMagazine"/>
 			<item name="wotwSledgehammersT1SkillMagazine"/>
 			<item name="wotwSledgehammersT2SkillMagazine"/>
 			<item name="wotwSledgehammersT3SkillMagazine"/>
+			<item name="wotwSpearsT0SkillMagazine"/>
 			<item name="wotwSpearsT1SkillMagazine"/>
 			<item name="wotwSpearsT2SkillMagazine"/>
 			<item name="wotwSpearsT3SkillMagazine"/>
+			<item name="wotwKnucklesT0SkillMagazine"/>
 			<item name="wotwKnucklesT1SkillMagazine"/>
 			<item name="wotwKnucklesT2SkillMagazine"/>
+			<item name="wotwKnucklesT4SkillMagazine"/>
 			<item name="wotwRoboticsT1SkillMagazine"/>
 			<item name="wotwRoboticsT2SkillMagazine"/>
 			<item name="wotwRoboticsT3SkillMagazine"/>
@@ -760,6 +768,7 @@
 			<item name="wotwMachineGunsT3SkillMagazine"/>
 			<item name="wotwMachineGunsT4SkillMagazine"/>
 			<item name="wotwMachineGunsT5SkillMagazine"/>
+			<item name="wotwBowsT0SkillMagazine"/>
 			<item name="wotwBowsT1SkillMagazine"/>
 			<item name="wotwBowsT2SkillMagazine"/>
 			<item name="wotwBowsT3SkillMagazine"/>
@@ -1006,6 +1015,7 @@
 
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']/item[@name='meleeToolPickT3Auger']"/>
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']/item[@name='meleeToolAxeT3Chainsaw']"/>
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']/item[@name='toolForgeCrucible']"/>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">
 			<item group="ultraRareTools" prob="0.5"/>
@@ -1026,6 +1036,8 @@
 			<item name="wotwChainsawPartParts" count="1,4"/>
 			<item name="wotwECOBattery"/>
 			<item name="wotwECOEngine"/>
+			<item name="wotwToolMouldSteel"/>
+			<item name="wotwToolMouldTungsten"/>
 </append>
 
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='tools']/item[@name='resourceRepairKit']"/>
@@ -1061,6 +1073,8 @@
 			<item name="wotwAugerPartParts" count="1,4"/>
 			<item name="wotwChainsawPartBlade"/>
 			<item name="wotwChainsawPartParts" count="1,4"/>
+			<item name="wotwToolMouldBronze"/>
+			<item name="wotwToolMouldIron"/>
 </append>
 
 <insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
@@ -1375,7 +1389,6 @@
 			<item name="toolBeaker" prob="0.7"/>
 			<item name="toolAnvil"/>
 			<item name="toolBellows"/>
-			<item name="toolForgeCrucible" prob="0.6"/>
 			<item name="calipers" prob="0.5"/>
 			<item name="toolAndDieSet" prob="0.4"/>
 			<item name="rebarBender" prob="0.4"/>
@@ -1534,7 +1547,6 @@
 		<trader_item_group name="builderTools">
 			<item name="toolAnvil"/>
 			<item name="toolBellows"/>
-			<item name="toolForgeCrucible" prob="0.6"/>
 			<item name="rebarBender" prob="0.4"/>
 			<item name="weldingTool" prob="0.3"/>
 			<item name="wotwToolTapeMeasure" prob="0.5"/>
@@ -1573,6 +1585,7 @@
 		</trader_item_group>
 		
 		<trader_item_group name="covertMagazines">
+			<item name="wotwBowsT0SkillMagazine" count="1,2"/>
 			<item name="wotwBowsT1SkillMagazine" count="1,2"/>
 			<item name="wotwBowsT2SkillMagazine" count="1,2"/>
 			<item name="wotwBowsT3SkillMagazine" count="1,2"/>
@@ -1585,8 +1598,10 @@
 		
 		<!-- Fighter Class -->
 		<trader_item_group name="fighterMagazines">
+			<item name="wotwKnucklesT0SkillMagazine" count="1,2"/>
 			<item name="wotwKnucklesT1SkillMagazine" count="1,2"/>
 			<item name="wotwKnucklesT2SkillMagazine" count="1,2"/>
+			<item name="wotwKnucklesT4SkillMagazine" count="1,2"/>
 			<item name="explosivesSkillMagazine" count="1,3"/>
 			<item name="wotwSpearsT1SkillMagazine" count="1,2"/>
 			<item name="wotwSpearsT2SkillMagazine" count="1,2"/>
@@ -1745,9 +1760,11 @@
 			<item name="wotwMachineGunsT3SkillMagazine" count="1,2"/>
 			<item name="wotwMachineGunsT4SkillMagazine" count="1,2"/>
 			<item name="wotwMachineGunsT5SkillMagazine" count="1,2"/>
+			<item name="wotwClubsT0SkillMagazine" count="1,2"/>
 			<item name="wotwClubsT1SkillMagazine" count="1,2"/>
 			<item name="wotwClubsT2SkillMagazine" count="1,2"/>
 			<item name="wotwClubsT3SkillMagazine" count="1,2"/>
+			<item name="wotwSledgehammersT0SkillMagazine" count="1,2"/>
 			<item name="wotwSledgehammersT1SkillMagazine" count="1,2"/>
 			<item name="wotwSledgehammersT2SkillMagazine" count="1,2"/>
 			<item name="wotwSledgehammersT3SkillMagazine" count="1,2"/>

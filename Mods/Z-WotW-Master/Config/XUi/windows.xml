@@ -38,7 +38,7 @@
 <append xpath="/windows/window[@name='ingameMenu']">
 	<rect name="wotwmenu_version_control">
 		<label name="wotwmenu_edition_info" depth="9" pos="60,-460" size="250,33" style="smx_label_normal" text="WotW Exp Version:" font_size="18" pivot="center" justify="center" upper_case="true" color="255,255,255,150" />
-		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="2.6.3.5" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
+		<label name="wotwmenu_version_info" depth="9" pos="60,-480" size="250,33" style="smx_label_normal" text="2.6.3.6" font_size="18" pivot="center" justify="center" upper_case="false" overflow="ShrinkContent" color="255,255,255,255" />
 	</rect>
 	<rect name="npcmenu_image">
 		<sprite name="WOTWingameMenuPoweredLogo" depth="4" pos="60,100" size="248,66" atlas="uiAtlas" sprite="wotw_POWERED_LOGO_inGameMenu" pivot="bottom" globalopacitymod="1.5" />
@@ -395,6 +395,27 @@
 	</if>
 </conditional>
 
+<!-- WOTW Forge Workstation -->
+<conditional>
+	<if cond="mod_loaded('zSMXui') == false">
+		<append xpath="/windows">
+			<window name="windowToolsForge2" width="228" height="242" panel="Right" cursor_area="true" >
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+					<label style="header.name" text="TOOLS" text_key="xuiTools" />
+				</panel>
+
+				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+					<grid name="inventory" rows="2" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,wotwToolMouldBronze,wotwToolMouldIron,wotwToolMouldSteel,wotwToolMouldEmpty" required_tools_only="true">
+						<item_stack controller="RequiredItemStack" name="0"/>
+					</grid>
+				</rect>
+			</window>
+		</append>
+	</if>
+</conditional>
+
 <!-- WOTW Tungsten Forge Workstation -->
 <conditional>
 	<if cond="mod_loaded('zSMXui') == false">
@@ -407,7 +428,7 @@
 
 				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
-					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
+					<grid name="inventory" rows="2" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,wotwToolMouldBronze,wotwToolMouldIron,wotwToolMouldSteel,wotwToolMouldTungsten" required_tools_only="true">
 						<item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -421,7 +442,7 @@
 		<append xpath="/windows">
 			<window name="windowToolsTungstenForge" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
 				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
-					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
+					<grid name="inventory" rows="3" cols="2" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,wotwToolMouldBronze,wotwToolMouldIron,wotwToolMouldSteel,wotwToolMouldTungsten" required_tools_only="true">
 						<general_item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -442,7 +463,7 @@
 
 				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
-					<grid name="inventory" rows="1" cols="2" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil" required_tools_only="true">
+					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,wotwToolMouldEmptyJar" required_tools_only="true">
 						<item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -456,7 +477,7 @@
 		<append xpath="/windows">
 			<window name="windowToolsStoneForge" depth="4" pos="-475,150" width="610" height="101" anchor="CenterCenter" cursor_area="true">
 				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
-					<grid name="inventory" rows="2" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil" required_tools_only="true">
+					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,wotwToolMouldEmptyJar" required_tools_only="true">
 						<general_item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -477,7 +498,7 @@
 
 				<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
-					<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolAndDieSet" required_tools_only="true">
+					<grid name="inventory" rows="3" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolMouldBulletCasings,wotwToolMouldBulletTips,wotwToolMouldBuckshot,wotwToolMouldBronzeArrowHead,wotwToolMouldIronArrowHead,wotwToolMouldSteelArrowHead,wotwToolMouldTungstenArrowHead,wotwToolMouldRocketTip,wotwToolMouldRocketCasing" required_tools_only="true">
 						<item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>
@@ -491,7 +512,7 @@
 		<append xpath="/windows">	
 			<window name="windowToolsAmmoForge" depth="4" pos="-475,250" width="610" height="101" anchor="CenterCenter" cursor_area="true">
 				<rect name="content" depth="0" pos="86,-342" width="505" disablefallthrough="true">
-					<grid name="inventory" rows="3" cols="1" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBellows,toolAnvil,toolAndDieSet" required_tools_only="true">
+					<grid name="inventory" rows="3" cols="3" pos="100,-44" cell_width="101" cell_height="101" controller="WorkstationToolGrid" repeat_content="true" required_tools="wotwToolMouldBulletCasings,wotwToolMouldBulletTips,wotwToolMouldBuckshot,wotwToolMouldBronzeArrowHead,wotwToolMouldIronArrowHead,wotwToolMouldSteelArrowHead,wotwToolMouldTungstenArrowHead,wotwToolMouldRocketTip,wotwToolMouldRocketCasing" required_tools_only="true">
 						<general_item_stack controller="RequiredItemStack" name="0"/>
 					</grid>
 				</rect>

@@ -3166,26 +3166,31 @@
 </lootgroup>
 
 <lootgroup name="clubsMagazines" count="1">
-	<item name="wotwClubsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
+	<item name="wotwClubsT0SkillMagazine" loot_prob_template="ProbT0" force_prob="true"/>
+	<item name="wotwClubsT1SkillMagazine" loot_prob_template="ProbT1"/>
 	<item name="wotwClubsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwClubsT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
 <lootgroup name="sledgehammerMagazines" count="1">
-	<item name="wotwSledgehammersT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
+	<item name="wotwSledgehammersT0SkillMagazine" loot_prob_template="Probt0" force_prob="true"/>
+	<item name="wotwSledgehammersT1SkillMagazine" loot_prob_template="ProbT1"/>
 	<item name="wotwSledgehammersT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwSledgehammersT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
 <lootgroup name="spearsMagazines" count="1">
-	<item name="wotwSpearsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
+	<item name="wotwSpearsT0SkillMagazine" loot_prob_template="ProbT0" force_prob="true"/>
+	<item name="wotwSpearsT1SkillMagazine" loot_prob_template="ProbT1"/>
 	<item name="wotwSpearsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwSpearsT3SkillMagazine" loot_prob_template="ProbT3"/>
 </lootgroup>
 
 <lootgroup name="knucklesMagazines" count="1">
-	<item name="wotwKnucklesT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
+	<item name="wotwKnucklesT0SkillMagazine" loot_prob_template="ProbT0" force_prob="true"/>
+	<item name="wotwKnucklesT1SkillMagazine" loot_prob_template="ProbT1"/>
 	<item name="wotwKnucklesT2SkillMagazine" loot_prob_template="ProbT2"/>
+	<item name="wotwKnucklesT4SkillMagazine" loot_prob_template="ProbT4"/>
 </lootgroup>
 
 <lootgroup name="roboticsMagazines" count="1">
@@ -3231,7 +3236,8 @@
 </lootgroup>
 
 <lootgroup name="bowsMagazines" count="1">
-	<item name="wotwBowsT1SkillMagazine" loot_prob_template="ProbT1" force_prob="true"/>
+	<item name="wotwBowsT0SkillMagazine" loot_prob_template="ProbT0" force_prob="true"/>
+	<item name="wotwBowsT1SkillMagazine" loot_prob_template="ProbT1"/>
 	<item name="wotwBowsT2SkillMagazine" loot_prob_template="ProbT2"/>
 	<item name="wotwBowsT3SkillMagazine" loot_prob_template="ProbT3"/>
 	<item name="wotwBowsT4SkillMagazine" loot_prob_template="ProbT4"/>
@@ -3621,7 +3627,13 @@
 </lootgroup>
 </insertAfter>
 
+<remove xpath="/lootcontainers/lootgroup[@name='workstationToolsScaled']/item[@name='toolForgeCrucible']"/>
+
 <append xpath="/lootcontainers/lootgroup[@name='workstationToolsScaled']">
+	<item name="wotwToolMouldBronze"/>
+	<item name="wotwToolMouldIron" loot_prob_template="ProbT1Cap"/>
+	<item name="wotwToolMouldSteel" loot_prob_template="ProbT2Cap"/>
+	<item name="wotwToolMouldTungsten" loot_prob_template="ProbT3"/>
 	<item name="calipers" loot_prob_template="ProbT4"/>
 	<item name="rebarBender" loot_prob_template="ProbT4"/>
 	<item name="weldingTool" loot_prob_template="ProbT4"/>
@@ -3745,7 +3757,6 @@
 	<item name="toolCookingGrill"/>
 	<item name="toolBeaker" prob="0.7"/>
 	<item name="toolAnvil"/>
-	<item name="toolForgeCrucible" prob="0.6"/>
 	<item name="calipers" prob="0.5"/>
 	<item name="toolAndDieSet" prob="0.4"/>
 	<item name="rebarBender" prob="0.4"/>
@@ -4125,6 +4136,11 @@
 	<item name="wotwResourceWeaponCraftingKit"/>
 </append>
 
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT1']">
+	<item name="wotwMeleeWpnSledgehammerBronze"/>
+	<item name="wotwMeleeWpnKnucklesT0BronzeKnuckles"/>
+</append>
+
 <insertAfter xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT3']">
 <lootgroup name="groupQuestToolsT4" loot_quality_template="questT4QualTemplate">
 	<item name="wotwMeleeToolTungstenPickaxe"/>
@@ -4141,6 +4157,10 @@
 
 <append xpath="/lootcontainers/lootgroup[@name='groupQuestTools']">
 	<item group="groupQuestToolsT4" loot_prob_template="QuestT4Prob"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsMeleeT1']">
+	<item name="wotwMeleeWpnSpearBronze"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsMeleeT2']">
@@ -5750,6 +5770,33 @@
 <lootgroup name="groupAnimalTrapMediumGameAll" count="all">
 	<item group="groupAnimalTrapMediumGame"/>
 </lootgroup>
+
+<lootgroup name="groupTablesawLoot01">
+	<item name="resourceWood" count="20,50"/>
+	<item name="wotwResourceWoodLog" count="10,20"/>
+	<item name="wotwResourceWoodStick" count="15,40"/>
+</lootgroup>
+
+<lootgroup name="groupTablesawLoot02">
+	<item name="wotwResourceHardwoodPlank" count="10,30"/>
+	<item name="wotwResourceHardwoodLog" count="5,15"/>
+	<item name="wotwResourceHardwoodStick" count="10,30"/>
+</lootgroup>
+
+<lootgroup name="groupTablesawLoot03">
+	<item name="smallEngine" prob="0.2"/>
+	<item name="wotwToolWSCarbideBlade" prob="0.1"/>
+	<item name="workstationSkillMagazine" loot_prob_template="high"/>
+</lootgroup>
+
+<lootgroup name="groupTablesawLoot" count="all">
+	<item group="groupTablesawLoot01" count="1"/>
+	<item group="groupTablesawLoot02" loot_prob_template="medLow" force_prob="true"/>
+	<item group="groupTablesawLoot03" loot_prob_template="low" force_prob="true"/>
+	<item name="workstationSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
+	</item>
+</lootgroup>
 </insertAfter>
 
 <remove xpath="/lootcontainers/lootgroup[@name='twitch_foodT1']/item[@name='foodGrilledMeat']"/>
@@ -7099,6 +7146,11 @@
 <!-- Animal Small Game Bundle -->
 <lootcontainer name="animalMediumGame" count="1" size="5,1" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" unique_item="true" ignore_loot_abundance="true">
 	<item group="groupAnimalTrapMediumGameAll"/>
+</lootcontainer>
+
+<!-- Tablesaw -->
+<lootcontainer name="collapsedTablesaw" count="1" size="7,4" sound_open="open_workbench" sound_close="close_workbench" loot_quality_template="qualBaseTemplate">
+	<item group="groupTablesawLoot"/>
 </lootcontainer>
 </append>
 

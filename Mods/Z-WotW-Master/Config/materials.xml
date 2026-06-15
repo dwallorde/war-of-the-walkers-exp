@@ -203,6 +203,20 @@
 	<property name="Experience" value="5"/>
 </material>
 
+<!-- Bronze Material -->
+<material id="bronze">
+	<property name="damage_category" value="metal" />
+	<property name="surface_category" value="metal" />
+	<property name="forge_category" value="bronze" />
+	<property name="Hardness" type="float" value="1" />
+	<property name="stepsound" value="metal" />
+	<property name="stability_glue" value="40" />
+	<property name="Mass" type="int" value="5" />
+	<property name="explosionresistance" value="0.4" />
+	<property name="MaxDamage" value="25" />
+	<property name="Experience" value="5.0"/>
+</material>
+
 <!-- Tungsten Material -->
 <material id="tungsten">
 	<property name="damage_category" value="metal" />

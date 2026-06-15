@@ -98,13 +98,8 @@
 		<property name="ShowQuality" value="true"/>
 		<property name="RepairTools" value="repairKitTool"/>
 		<property name="DegradationMaxUse" value="500,5000" param1="1,600"/>
-		<property name="DegradationPerUse" value="1"/>
+		<property name="DegradationPerUse" value="20"/>
 		<property name="DegradationBreaksAfter" value="false"/>
-
-		<!-- <effect_group name="DamageHooks Degrade">
-			<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
-			<triggered_effect trigger="onSelfItemDegrade" action="DegradeItemValueMod, SCore"/>
-		</effect_group> -->
 		
 		<effect_group name="BrokenHooks">
 			<requirement name="ItemPercentUsed, SCore" operation="GTE" value="1"/>
